@@ -2,6 +2,8 @@
 
 Wholesale customers order the way they talk: a WhatsApp message, a voice note, a photo of a handwritten list. CatOrder reads them with Gemma served on AMD, matches every line to the catalogue, resolves "the usual" from the customer's order history, checks what they ask for against their agreed terms, and hands the order desk a draft order where every line points to the words it came from. A person confirms; nothing is sent.
 
+From the order history it then predicts what comes next. `catorder-nbr`, a small PyTorch model we trained on an AMD Radeon Pro W7900D with ROCm, tells the seller which customers are late, what each one will order and what is missing from the draft in front of them (`model/`).
+
 Built at the AMD Developer Hackathon ACT III (17–18 October 2026, Milan), Track 3 · Reinvent Commerce. Synthetic data only. MIT. `PRODUCT.md` is the product, `SPEC.md` the build specification.
 
 ## Stack
@@ -81,6 +83,17 @@ Replies go back the same way: after a read, "Reply to …" (or "Ask the customer
 | email | 2 | 3/3 | 3/3 | 2/2 | n/a | 1/1 | 0 | 0 |
 
 84k tokens in and 6.6k out for the 20 orders; 21 s mean per message on the live run (photos make two calls). Voice notes are read from committed transcripts: Token Factory has no speech-to-text model yet. The false flag is "olio 5lt" in a photo, marked as ambiguous where the expected answer has one product. The model outputs are cached in `data/cache/`, so the eval and the demo replay them without calling the endpoint.
+
+Next-order model (`model/README.md`), trained on an AMD Radeon Pro W7900D in 169 s on 905 synthetic customers, tested on 135 it never saw, against the strongest simple method (each customer's own top items, median cadence):
+
+| | model | simple method |
+|---|---|---|
+| basket F1 | **0.823** | 0.803 |
+| basket recall | **0.898** | 0.850 |
+| next-date error | 2.81 days | 2.82 days |
+| churn AUC | 0.939 | **0.962** |
+
+Synthetic data: the gain shows what the model can learn, not a result on a real distributor.
 
 ## Golden tests
 
