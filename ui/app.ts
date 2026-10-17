@@ -659,7 +659,8 @@ function traceEl(id: string): HTMLElement | false {
   return h('section', { id: S.sel === id ? 'trace' : null, 'data-trace': id, class: 'trace', 'aria-label': 'What CatOrder did' },
     !t.done && h('p', { class: 'th toon' }, cat(true), 'CatOrder is reading', scribble('read')),
     t.done && h('button', { type: 'button', class: 'tsum', 'aria-expanded': String(open), onclick: () => { t.open = !t.open; paintTrace(id, false); showTrace(id); } }, cat(false), (ms >= 100 ? 'Read in ' + secs(ms) + ' · ' : '') + t.steps.length + ' steps · ', h('u', {}, open ? 'Hide steps' : 'Show steps')),
-    open && h('ol', { class: 'tl' }, rows));
+    open && h('ol', { class: 'tl' }, rows),
+    t.done && last.kind === 'error' && S.sel === id && !S.busy && h('button', { type: 'button', class: 'pick', style: 'margin-top:10px', onclick: doRead }, 'Retry'));
 }
 // opened BEFORE the read is posted; resolves when the server says done/idle or the stream fails
 // fresh: skip a finished read and wait for the next one; onOpen fires once the stream is listening (or after 1.5 s)

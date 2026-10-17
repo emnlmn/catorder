@@ -214,6 +214,7 @@ export async function readMessage(db: Db, svc: Services, messageId: string, forc
     return out;
   } catch (e) {
     const error = e instanceof ReadError ? e.message : "The read failed.";
+    if (!(e instanceof ReadError)) console.error("read failed for", messageId, e);
     step({ kind: "error", status: "warn", title: error });
     trace.finish(messageId, { order_id: null, error });
     keep();
@@ -317,7 +318,9 @@ function openDraft(db: Db, message: Message): { draft: OpenDraft; ids: string[];
   const i = segs.findIndex((s) => s.message_id === message.id);
   if (i >= 0) segs = segs.slice(0, i); // a re-read: only what precedes this message
   if (!segs.length) return null;
-  const at = segs.map((s) => (db.prepare("SELECT received_at FROM messages WHERE id=?").get(s.message_id) as { received_at: string }).received_at);
+  const found = segs.map((s) => db.prepare("SELECT received_at FROM messages WHERE id=?").get(s.message_id) as { received_at: string } | undefined);
+  if (found.some((f) => !f)) return null; // a draft pointing at a deleted message cannot be extended
+  const at = found.map((f) => f!.received_at);
   if (at.some((a) => a >= message.received_at)) return null;
   const texts = segs.map((s) => o.reading.slice(s.start, s.end));
   const view = orders.orderView(db, o.id)!;
