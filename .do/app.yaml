@@ -27,6 +27,8 @@ services:
         value: AMD Instinct via AMD Token Factory
       - key: CATORDER_TODAY
         value: "2026-10-18"
+      - key: CATORDER_NO_SAMPLES
+        value: "1"
       - key: MODEL_API_KEY
         type: SECRET
       - key: PUBLIC_URL

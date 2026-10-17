@@ -52,10 +52,18 @@ const MIME: Record<string, string> = {
   ".jpeg": "image/jpeg", ".mp3": "audio/mpeg", ".ogg": "audio/ogg", ".amr": "audio/amr", ".webp": "image/webp", ".ico": "image/x-icon", ".map": "application/json", ".woff2": "font/woff2",
 };
 
-function sendFile(path: string): Response | null {
+// range: iOS Safari will not play audio or video unless the server answers byte ranges with 206
+function sendFile(path: string, range?: string | null): Response | null {
   try {
     if (!statSync(path).isFile()) return null;
-    return new Response(readFileSync(path), { headers: { "content-type": MIME[extname(path).toLowerCase()] ?? "application/octet-stream" } });
+    const buf = readFileSync(path), headers: Record<string, string> = { "content-type": MIME[extname(path).toLowerCase()] ?? "application/octet-stream", "accept-ranges": "bytes", "content-length": String(buf.length) };
+    const m = /^bytes=(\d*)-(\d*)$/.exec(range ?? "");
+    if (m && (m[1] || m[2])) {
+      const start = m[1] ? Number(m[1]) : Math.max(0, buf.length - Number(m[2])), end = m[1] && m[2] ? Math.min(Number(m[2]), buf.length - 1) : buf.length - 1;
+      if (start > end || start >= buf.length) return new Response(null, { status: 416, headers: { "content-range": `bytes */${buf.length}` } });
+      return new Response(buf.subarray(start, end + 1), { status: 206, headers: { ...headers, "content-range": `bytes ${start}-${end}/${buf.length}`, "content-length": String(end - start + 1) } });
+    }
+    return new Response(buf, { headers });
   } catch { return null; }
 }
 
@@ -83,7 +91,7 @@ const INVALID = "The request is not valid.";
 export function createApp(cfg: Config, svc?: Services, download: Download = downloadMedia, sendWa?: SendWhatsApp | null): Hono & { db: DatabaseSync } {
   const services = svc ?? buildServices(cfg);
   const conn = connect(cfg.db);
-  loadData(conn, cfg.dataDir);
+  loadData(conn, cfg.dataDir, !cfg.noSamples);
   ensureUnknownSender(conn);
   const todayStr = () => cfg.today || new Date().toLocaleDateString("sv"); // sv = YYYY-MM-DD in local time
   const app = new Hono() as Hono & { db: DatabaseSync };
@@ -183,6 +191,20 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
   });
 
   app.post("/api/messages/:id/read", async (c) => c.json(await readMessage(conn, services, c.req.param("id"))));
+
+  // empties one customer's chat (messages, orders, reads, replies) so the demo can start over; the number stays assigned
+  app.delete("/api/customers/:id/messages", (c) => {
+    const ids = rows<{ id: string }>(conn, "SELECT id FROM messages WHERE customer_id=?", c.req.param("id")).map((m) => m.id);
+    const marks = ids.map(() => "?").join(",");
+    if (ids.length) {
+      const oids = "SELECT id FROM orders WHERE message_id IN (" + marks + ")";
+      conn.prepare("DELETE FROM lines WHERE order_id IN (" + oids + ")").run(...ids);
+      conn.prepare("DELETE FROM order_messages WHERE message_id IN (" + marks + ") OR order_id IN (" + oids + ")").run(...ids, ...ids);
+      for (const t of ["orders", "replies", "runs", "senders", "traces"]) conn.prepare("DELETE FROM " + t + " WHERE " + "message_id" + " IN (" + marks + ")").run(...ids);
+      conn.prepare("DELETE FROM messages WHERE id IN (" + marks + ")").run(...ids);
+    }
+    return c.json({ cleared: ids.length });
+  });
 
   app.post("/api/messages/:id/assign", async (c) => {
     const { customer_id } = await c.req.json().catch(() => ({})) as { customer_id?: string };
@@ -322,7 +344,7 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
 
   // the reply to the customer: drafted by the model, edited and sent by the operator
   const send = sendWa !== undefined ? sendWa
-    : cfg.twilioAccountSid && cfg.twilioAuthToken ? twilioSender(cfg.twilioAccountSid, cfg.twilioAuthToken, cfg.whatsappFrom ?? "+14155238886") : null;
+    : cfg.twilioAccountSid && cfg.twilioAuthToken ? twilioSender(cfg.twilioAccountSid, cfg.twilioAuthToken, cfg.whatsappFrom ?? "+14155238886", cfg.whatsappContentSid) : null;
   const numberOf = (cid: string) => Object.entries(cfg.whatsappPhoneMap ?? {}).find(([, id]) => id === cid)?.[0];
   app.post("/api/messages/:id/reply", async (c) => c.json(await draftReply(conn, services, c.req.param("id"))));
   app.patch("/api/replies/:id", async (c) => {
@@ -355,7 +377,7 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
     const file = basename(c.req.param("file"));
     const ext = extname(file);
     const res = ext === ".json" || ext === ".txt" ? null
-      : sendFile(join(cfg.dataDir, "messages", file)) ?? sendFile(join(inboxOf(cfg), file));
+      : sendFile(join(cfg.dataDir, "messages", file), c.req.header("range")) ?? sendFile(join(inboxOf(cfg), file), c.req.header("range"));
     return res ?? err(c, 404, "No such file.");
   });
 

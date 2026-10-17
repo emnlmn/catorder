@@ -269,6 +269,7 @@ export interface Metrics {
 }
 
 export interface Config {
+  noSamples?: boolean; // true = the sample messages are not loaded: the inbox starts empty
   modelBaseUrl: string;
   modelApiKey: string;
   modelName: string;
@@ -291,6 +292,7 @@ export interface Config {
   twilioAuthToken?: string; // "" = the webhook is off
   publicUrl?: string; // https origin Twilio posts to
   whatsappPhoneMap?: Record<string, string>; // E.164 -> customer id
+  whatsappContentSid?: string; // HX… template that carries the reply as {{1}}
   whatsappFrom?: string; // E.164 number replies are sent from
   predictBaseUrl?: string; // model/serve.py on the MI300X; "" = cached predictions only
   predictToken?: string;

@@ -53,13 +53,13 @@ function loadMessages(db: Db, data: string): void {
   }
 }
 
-export function loadData(db: Db, dataDir: string): void {
+export function loadData(db: Db, dataDir: string, samples = true): void {
   db.exec("BEGIN");
   try {
     loadProducts(db, dataDir);
     loadCustomers(db, dataDir);
     loadHistory(db, dataDir);
-    loadMessages(db, dataDir);
+    if (samples) loadMessages(db, dataDir);
     db.exec("COMMIT");
   } catch (e) {
     db.exec("ROLLBACK");

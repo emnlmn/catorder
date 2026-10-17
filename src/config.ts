@@ -39,6 +39,7 @@ export function loadConfig(): Config {
     transcribeModel: env("TRANSCRIBE_MODEL"),
     db: env("CATORDER_DB", "./catorder.db"),
     today: env("CATORDER_TODAY"),
+    noSamples: env("CATORDER_NO_SAMPLES") === "1",
     offline: env("CATORDER_OFFLINE") === "1",
     refresh: env("CATORDER_REFRESH") === "1",
     mock: env("CATORDER_MOCK") === "1" || !baseUrl,
@@ -49,6 +50,7 @@ export function loadConfig(): Config {
     twilioAuthToken: env("TWILIO_AUTH_TOKEN"),
     publicUrl: env("PUBLIC_URL").replace(/\/+$/, ""),
     whatsappFrom: env("TWILIO_WHATSAPP_FROM", "+14155238886"), // the sandbox number replies go out from
+    whatsappContentSid: env("TWILIO_CONTENT_SID"), // a twilio/text template whose body is {{1}}; the sandbox refuses a plain Body without it
     whatsappPhoneMap: parsePhoneMap(env("WHATSAPP_PHONE_MAP")),
     predictBaseUrl: env("PREDICT_BASE_URL"),
     predictToken: env("PREDICT_TOKEN"),

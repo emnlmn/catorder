@@ -10,6 +10,7 @@ delete from orders where id in (select order_id from o);
 delete from replies where message_id like 'wa-live-%';
 delete from runs where message_id like 'wa-live-%';
 delete from senders where message_id like 'wa-live-%';
+delete from traces where message_id like 'wa-live-%';
 delete from messages where id like 'wa-live-%';
 delete from phones;"
 rm -f "${CATORDER_INBOX_DIR:-data/inbox}"/*

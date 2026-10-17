@@ -503,16 +503,35 @@ function streamIn(el, on) {
     }
     return el;
 }
+// one shared <audio> per voice note; playing one pauses the others, and the small play marks in the thread follow it
+function audioFor(id, url) {
+    let a = audios[id];
+    if (a)
+        return a;
+    a = audios[id] = h('audio', { src: url, preload: 'metadata' });
+    for (const ev of ['play', 'pause', 'ended', 'loadedmetadata', 'timeupdate', 'seeked'])
+        a.addEventListener(ev, () => paintPlay());
+    a.addEventListener('play', () => { for (const [k, o] of Object.entries(audios))
+        if (k !== id)
+            o.pause(); });
+    for (const ev of ['play', 'pause', 'ended'])
+        a.addEventListener(ev, () => {
+            for (const b of document.querySelectorAll('.vm-b[data-vm="' + id + '"]'))
+                b.replaceChildren(glyph('', audios[id].paused ? 'play' : 'pause'));
+        });
+    a.addEventListener('ended', () => { audios[id].currentTime = 0; });
+    if (url)
+        void loadPeaks(id, url);
+    return a;
+}
+function toggleAudio(a) {
+    if (a.paused)
+        a.play().catch(() => toast('The voice note could not be played.'));
+    else
+        a.pause();
+}
 function player(m) {
-    let a = audios[m.id];
-    if (!a) {
-        a = audios[m.id] = h('audio', { src: m.media_url, preload: 'metadata' });
-        for (const ev of ['play', 'pause', 'ended', 'loadedmetadata', 'timeupdate', 'seeked'])
-            a.addEventListener(ev, () => paintPlay());
-        a.addEventListener('ended', () => { a.currentTime = 0; });
-        if (m.media_url)
-            void loadPeaks(m.id, m.media_url);
-    }
+    const a = audioFor(m.id, m.media_url);
     const au = a;
     const wave = h('div', { class: 'vp-wave', 'aria-hidden': 'true', onclick: (e) => {
             if (!isFinite(au.duration))
@@ -520,10 +539,7 @@ function player(m) {
             const r = e.currentTarget.getBoundingClientRect();
             au.currentTime = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * au.duration;
         } }, Array.from({ length: BARS }, () => h('i', {})));
-    playEl = h('div', { class: 'vp' }, h('button', { type: 'button', class: 'vp-btn', onclick: () => { if (au.paused)
-            au.play().catch(() => toast('The voice note could not be played.'));
-        else
-            au.pause(); } }), wave, h('span', { class: 'vp-t' }));
+    playEl = h('div', { class: 'vp' }, h('button', { type: 'button', class: 'vp-btn', onclick: () => toggleAudio(au) }), wave, h('span', { class: 'vp-t' }));
     paintPlay(true);
     return [playEl, au];
 }
@@ -598,10 +614,11 @@ function segWords(p, o) {
 }
 // a voice note that is not open still shows what it is: a small play mark and its own shape, so nobody has to click to find out
 function miniVoice(p) {
-    if (!peaks[p.id] && p.media_url)
-        void loadPeaks(p.id, p.media_url);
     const pk = peaks[p.id] || seededPeaks(p.id);
-    return h('span', { class: 'vm', 'aria-label': 'Voice note', role: 'img' }, glyph('vm-b', 'play'), h('span', { class: 'vm-w' }, Array.from({ length: 24 }, (_, i) => h('i', { style: 'height:' + Math.round(pk[Math.floor(i * BARS / 24)] * 100) + '%' }))));
+    const a = audioFor(p.id, p.media_url);
+    const b = h('button', { type: 'button', class: 'vm-b', 'data-vm': p.id, 'aria-label': 'Play the voice note', onclick: () => toggleAudio(a) });
+    b.append(glyph('', a.paused ? 'play' : 'pause'));
+    return h('span', { class: 'vm' }, b, h('span', { class: 'vm-w' }, Array.from({ length: 24 }, (_, i) => h('i', { style: 'height:' + Math.round(pk[Math.floor(i * BARS / 24)] * 100) + '%' }))));
 }
 function bubble(p, o = null, solo = true) {
     const media = p.channel === 'whatsapp' ? '' : CHANNEL[p.channel] || '';
@@ -781,6 +798,23 @@ function startTrace(id, fresh = false, onOpen) {
     });
 }
 const PILL = { unread: 'New', clean: 'Ready', check: 'Check', confirmed: 'Confirmed' };
+// start the demo over with this customer: two clicks, the second one deletes every message, order and reply of the chat
+function clearBtn(cid) {
+    const b = h('button', { type: 'button', class: 'clr' }, 'Clear chat');
+    let t;
+    b.onclick = async () => {
+        if (!b.classList.toggle('sure')) {
+            clearTimeout(t);
+            await send('DELETE', '/customers/' + cid + '/messages').catch((e) => toast(errMsg(e)));
+            goWaiting();
+            await loadMessages();
+            return;
+        }
+        b.textContent = 'Delete all messages?';
+        t = setTimeout(() => { b.classList.remove('sure'); b.textContent = 'Clear chat'; }, 4000);
+    };
+    return b;
+}
 // a number we do not know: pick the customer once, every message from it (now and later) follows
 let custChoices = null;
 function whoIsIt(m) {
@@ -833,7 +867,7 @@ function orderScreen(d, asked) {
     const delivery = o && o.delivery_date && 'Deliver ' + fmtDay(o.delivery_date);
     const total = o && orderTotal(o);
     return h('div', { class: 'scr' }, h('section', { class: 'conv' }, m.customer_id === 'unknown-sender' && m.id.startsWith('wa-live-') ? whoIsIt(m)
-        : h('header', { class: 'conv-h' }, h('h1', { class: 'toon' }, who.name), m.customer_id && h('div', { class: 'meta cust' }, custLine(m.customer_id))), threadEl(m, o, open)), h('aside', { class: 'panel', 'aria-label': 'Order' }, h('header', { class: 'panel-h' }, h('h2', { class: 'toon' }, 'Order', nMsgs > 1 && h('span', { class: 'nmsg' }, ' · ' + nMsgs + ' messages')), h('span', { class: 'pill ' + pill.toLowerCase() }, pill)), routeBtn && h('button', { type: 'button', class: 'route', onclick: () => { void doRead(routeBtn.to); } }, routeBtn.label), o ? [
+        : h('header', { class: 'conv-h' }, h('h1', { class: 'toon' }, who.name), m.customer_id && h('div', { class: 'meta cust' }, custLine(m.customer_id)), m.customer_id && clearBtn(m.customer_id)), threadEl(m, o, open)), h('aside', { class: 'panel', 'aria-label': 'Order' }, h('header', { class: 'panel-h' }, h('h2', { class: 'toon' }, 'Order', nMsgs > 1 && h('span', { class: 'nmsg' }, ' · ' + nMsgs + ' messages')), h('span', { class: 'pill ' + pill.toLowerCase() }, pill)), routeBtn && h('button', { type: 'button', class: 'route', onclick: () => { void doRead(routeBtn.to); } }, routeBtn.label), o ? [
         delivery && h('p', { class: 'deliver' }, delivery),
         list(o, asked, fresh),
         o.status === 'draft' && m.customer_id && suggestions(o, m.customer_id),

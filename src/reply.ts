@@ -16,16 +16,16 @@ export class ReplyError extends Error { constructor(public status: number, msg: 
 /** Sends a WhatsApp text. Injected so tests need no network. */
 export type SendWhatsApp = (to: string, body: string) => Promise<void>;
 
-export function twilioSender(sid: string, token: string, from: string): SendWhatsApp {
+export function twilioSender(sid: string, token: string, from: string, contentSid?: string): SendWhatsApp {
   return async (to, body) => {
     const r = await fetch(`https://api.twilio.com/2010-04-01/Accounts/${sid}/Messages.json`, {
       method: "POST",
       headers: { authorization: "Basic " + Buffer.from(`${sid}:${token}`).toString("base64"), "content-type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({ From: `whatsapp:${from}`, To: `whatsapp:${to}`, Body: body }),
+      body: new URLSearchParams({ From: `whatsapp:${from}`, To: `whatsapp:${to}`, ...(contentSid ? { ContentSid: contentSid, ContentVariables: JSON.stringify({ 1: body }) } : { Body: body }) }),
       signal: AbortSignal.timeout(15_000),
     });
     if (!r.ok) {
-      const why = await r.json().then((j: { code?: number; message?: string }) => ` Twilio ${j.code}: ${j.message}`, () => "");
+      const why = await r.json().then((j) => { const e = j as { code?: number; message?: string }; return ` Twilio ${e.code}: ${e.message}`; }, () => "");
       throw new ReplyError(502, `WhatsApp did not take the message (${r.status}).${why}`);
     }
   };

@@ -483,7 +483,9 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 
 /* unopened voice note: a small play mark and its waveform in place of the label */
 .vm{display:flex;align-items:center;gap:10px;margin-bottom:2px}
-.vm-b{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper)}
+.vm-b{position:relative;flex:none;display:grid;place-items:center;width:30px;height:30px;padding:0;border:0;border-radius:50%;background:var(--ink);color:var(--paper)}
+.vm-b::after{content:"";position:absolute;inset:-7px} /* a 44px target around the 30px disc */
+.vm-b span{display:grid;place-items:center}
 .vm-b svg{width:12px;height:12px;fill:currentColor;stroke:none}
 .vm-w{display:flex;align-items:center;gap:2px;height:20px;width:120px}
 .vm-w i{flex:1;min-width:2px;max-width:3px;border-radius:2px;background:color-mix(in srgb,var(--ink) 28%,var(--paper))}
@@ -492,3 +494,25 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .conv-h.who .who-l{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .who-b{min-height:36px;padding:0 14px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer}
 .who-b:hover{background:var(--wash);border-color:var(--ink)}
+/* phone hardening: pinned top bar, a backdrop behind the open inbox, 44px touch targets, 16px fields (iOS zooms smaller ones), notch and home-bar insets */
+@media (max-width:700px){
+  html{scroll-padding-top:104px}
+  button,a,.irow{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  .side{position:sticky;top:0;z-index:7;padding-top:max(12px,env(safe-area-inset-top));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+  .side:has(#inbox:not([hidden]))::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(15,23,25,.4)}
+  .home{min-height:44px}
+  .navi{min-width:44px;min-height:44px;justify-content:center}
+  .inbox{max-height:calc(100dvh - 128px);overscroll-behavior:contain}
+  .msgs{max-height:52dvh;overscroll-behavior:contain}
+  .conv-h h1,.col h1{overflow-wrap:anywhere}
+  .panel .row{min-height:44px;align-items:center}
+  .field,.msg.out.draft textarea{font-size:16px}
+  .band{max-height:70dvh;overscroll-behavior:contain;padding-bottom:max(12px,env(safe-area-inset-bottom));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+  #toast{bottom:calc(var(--band-h,0px) + 16px + env(safe-area-inset-bottom))}
+}
+
+.conv-h{position:relative}
+.clr{position:absolute;top:14px;right:28px;min-height:32px;padding:0 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--muted);font:inherit;font-size:13px;cursor:pointer}
+.clr:hover{color:var(--ink);border-color:var(--line-strong)}
+.clr.sure{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+@media (max-width:700px){.clr{right:16px;top:12px}}

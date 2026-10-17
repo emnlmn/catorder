@@ -109,6 +109,15 @@ describe("POST /webhook/whatsapp", () => {
     for (const id of ["SM6", "SM7"]) expect((await t.json("/api/messages/wa-live-" + id)).message.customer.id).toBe("deli-mulino");
     expect((await t.app.request("/api/messages/wa-live-SM6/assign", { method: "POST", body: JSON.stringify({ customer_id: "unknown-sender" }) })).status).toBe(400);
   });
+  it("clears one customer's chat and keeps the others", async () => {
+    const t = setup();
+    await t.post(msg("SM8"));
+    await t.app.request("/api/messages/wa-live-SM8/read", { method: "POST" });
+    const r = await t.app.request("/api/customers/deli-mulino/messages", { method: "DELETE" });
+    expect(await r.json()).toEqual({ cleared: 1 });
+    expect(count(t.db, "wa-live-SM8")).toBe(0);
+    expect((t.db.prepare("SELECT COUNT(*) n FROM orders").get() as { n: number }).n).toBe(0);
+  });
   it("sends the operator's reply back to the number the message came from, even an unknown one", async () => {
     const sent: [string, string][] = [];
     const t = setup({ send: async (to, body) => { sent.push([to, body]); } });
