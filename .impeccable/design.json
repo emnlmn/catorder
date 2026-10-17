@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T11:01:08Z",
+  "title": "Design System: CatOrder",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Felix Ink",
+        "canonical": "#0F1719",
+        "tonalRamp": [
+          "#000000",
+          "#040707",
+          "#090D0E",
+          "#0D1415",
+          "#31383A",
+          "#767A7C",
+          "#BABDBD",
+          "#FFFFFF"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#000000",
+          "#494949",
+          "#929292",
+          "#DBDBDB",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      },
+      "cat-eye-green": {
+        "role": "primary",
+        "displayName": "Cat-Eye Green",
+        "canonical": "#A0E249",
+        "tonalRamp": [
+          "#000000",
+          "#2E4115",
+          "#5B812A",
+          "#89C23F",
+          "#AEE663",
+          "#C9EE97",
+          "#E4F7CB",
+          "#FFFFFF"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Pencil Grey",
+        "canonical": "#5A6163",
+        "tonalRamp": [
+          "#000000",
+          "#1A1C1C",
+          "#333739",
+          "#4D5355",
+          "#727879",
+          "#A1A5A6",
+          "#D0D2D2",
+          "#FFFFFF"
+        ]
+      },
+      "muted-on-ink": {
+        "role": "neutral",
+        "displayName": "Ghost Grey on Ink",
+        "canonical": "#B9C1C2",
+        "tonalRamp": [
+          "#000000",
+          "#353737",
+          "#6A6E6F",
+          "#9FA5A6",
+          "#C3CACB",
+          "#D7DCDC",
+          "#EBEDEE",
+          "#FFFFFF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Waiting-screen invitation; Titan One."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Customer name on an order."
+      },
+      "question": {
+        "displayName": "Question",
+        "purpose": "The decision band question; 40px, 32px mid, 26px long."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Brand name and line quantities."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Customer words, line names, band buttons; Rubik."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Pills, list label, alternatives; 16px bold."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "wipe",
+        "value": "220ms ease-out, background-size 0 to 100%",
+        "purpose": "Green fill on asked words and the asked row."
+      },
+      {
+        "name": "rise",
+        "value": "200ms ease-out, 8px",
+        "purpose": "Rows entering."
+      },
+      {
+        "name": "lift",
+        "value": "300ms ease-out, 16px",
+        "purpose": "Order screen entering."
+      },
+      {
+        "name": "fade",
+        "value": "150ms ease-out",
+        "purpose": "Generic fade."
+      },
+      {
+        "name": "pulse",
+        "value": "2.4s ease-in-out infinite, opacity to 0.3",
+        "purpose": "Live dot."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "420px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px"
+      },
+      {
+        "name": "stack",
+        "value": "900px"
+      },
+      {
+        "name": "wide",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pick Button",
+      "kind": "button",
+      "refersTo": "button-pick",
+      "description": "Paper answer button on the black band.",
+      "html": "<div style=\"background:#0F1719;padding:16px\"><button class=\"ds-pick\">Rosso Toscana</button></div>",
+      "css": ".ds-pick{background:var(--paper,#fff);color:var(--ink,#0F1719);min-height:60px;padding:0 28px;border:0;border-radius:18px;font:700 24px Rubik,ui-sans-serif,system-ui,sans-serif;cursor:pointer}.ds-pick:hover{background:color-mix(in srgb,#0F1719 12%,#fff)}.ds-pick:active{transform:translateY(1px)}.ds-pick:focus-visible{outline:3px solid #A0E249;outline-offset:3px}"
+    },
+    {
+      "name": "Quantity Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Paper field with Set button, only inside the band.",
+      "html": "<div style=\"background:#0F1719;padding:16px;display:flex;gap:12px\"><input class=\"ds-field\" type=\"number\" placeholder=\"cases\" aria-label=\"Quantity\"></div>",
+      "css": ".ds-field{min-height:60px;padding:0 20px;border:0;border-radius:18px;background:#fff;color:#0F1719;font:24px Rubik,ui-sans-serif,system-ui,sans-serif;width:200px}.ds-field::placeholder{color:#5A6163;opacity:1}.ds-field:focus-visible{outline:3px solid #A0E249;outline-offset:3px}"
+    },
+    {
+      "name": "Inbox Pill",
+      "kind": "chip",
+      "refersTo": "pill-outline",
+      "description": "Outlined round pill that opens the inbox; inverts when open.",
+      "html": "<button class=\"ds-pill\">3 messages</button>",
+      "css": ".ds-pill{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:2.5px solid #0F1719;border-radius:999px;background:#fff;color:#0F1719;font:700 16px Rubik,ui-sans-serif,system-ui,sans-serif;cursor:pointer}.ds-pill:hover{background:color-mix(in srgb,#0F1719 8%,#fff)}.ds-pill:focus-visible{outline:3px solid #0F1719;outline-offset:3px}"
+    },
+    {
+      "name": "Play Pill",
+      "kind": "chip",
+      "refersTo": "play-pill",
+      "description": "Ink pill with a paper disc to play the voice note.",
+      "html": "<button class=\"ds-play\"><span class=\"ds-disc\"><svg viewBox=\"0 0 12 12\" width=\"12\" height=\"12\"><path d=\"M3 1.5v9l7.5-4.5z\" fill=\"currentColor\"/></svg></span>Play <span class=\"ds-dur\">0:14</span></button>",
+      "css": ".ds-play{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0 15px 0 5px;border:0;border-radius:999px;background:#0F1719;color:#fff;font:700 16px Rubik,ui-sans-serif,system-ui,sans-serif;cursor:pointer}.ds-disc{width:28px;height:28px;border-radius:50%;background:#fff;color:#0F1719;display:grid;place-items:center}.ds-dur{font-weight:400;color:#B9C1C2}.ds-play:focus-visible{outline:3px solid #0F1719;outline-offset:3px}"
+    },
+    {
+      "name": "Number Plate",
+      "kind": "custom",
+      "refersTo": "number-plate",
+      "description": "The WhatsApp number on a black plate with the pulsing green dot.",
+      "html": "<div class=\"ds-num\"><i class=\"ds-eye\"></i>+39 02 1234 5678</div>",
+      "css": ".ds-num{display:inline-flex;align-items:center;gap:22px;padding:18px 40px 20px;border-radius:22px;background:#0F1719;color:#fff;font:400 40px 'Titan One',ui-rounded,system-ui,sans-serif;line-height:1;white-space:nowrap}.ds-eye{width:18px;height:18px;border-radius:50%;background:#A0E249;animation:ds-pulse 2.4s ease-in-out infinite}@keyframes ds-pulse{50%{opacity:.3}}"
+    },
+    {
+      "name": "Decision Band",
+      "kind": "custom",
+      "refersTo": "band",
+      "description": "The one black bar that asks the next question.",
+      "html": "<div class=\"ds-band\"><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"28\" height=\"28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 19V5M5.5 11.5 12 5l6.5 6.5\"/></svg></span><div class=\"ds-words\"><p class=\"ds-q\">Which prosecco?</p><p class=\"ds-sub\">2 of 3</p></div><button class=\"ds-bpick\">Brut 75cl</button><button class=\"ds-bpick\">Extra Dry 75cl</button></div>",
+      "css": ".ds-band{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;padding:14px 24px;background:#0F1719;color:#fff}.ds-arrow{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fff;color:#0F1719}.ds-words{flex:1;min-width:240px}.ds-q{margin:0;font:400 40px/1.15 'Titan One',ui-rounded,system-ui,sans-serif;letter-spacing:.01em}.ds-sub{margin:6px 0 0;font:16px Rubik,ui-sans-serif,system-ui,sans-serif;color:#B9C1C2}.ds-bpick{min-height:60px;padding:0 28px;border:0;border-radius:18px;background:#fff;color:#0F1719;font:700 24px Rubik,ui-sans-serif,system-ui,sans-serif;cursor:pointer}.ds-bpick:hover{background:color-mix(in srgb,#0F1719 12%,#fff)}.ds-bpick:focus-visible{outline:3px solid #A0E249;outline-offset:3px}"
+    },
+    {
+      "name": "Order Row",
+      "kind": "custom",
+      "refersTo": "asked-words",
+      "description": "List row: quantity, product, note; the asked row wipes green.",
+      "html": "<div class=\"ds-row ds-now\"><span class=\"ds-n\">6</span><span>Prosecco Brut<span class=\"ds-note\">from \\\"quello rosso\\\"</span></span></div>",
+      "css": ".ds-row{display:grid;grid-template-columns:56px 1fr;align-items:baseline;padding:2px 12px;border-radius:12px;font:24px/1.45 Rubik,ui-sans-serif,system-ui,sans-serif;color:#0F1719}.ds-now{background:#A0E249}.ds-n{font:400 26px 'Titan One',ui-rounded,system-ui,sans-serif}.ds-note{display:block;font-size:16px;line-height:1.35;color:#0F1719}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cartoon Sign",
+    "overview": "CatOrder looks like a 1920s-30s Felix the Cat cartoon turned into a wayfinding sign: ink on paper, round shapes, thick outlines, and exactly one question on screen at a time. The customer's own words sit on top, the order is a plain list below them, and a single black band pinned to the bottom asks the next decision. The cat logo is the only picture in the product.\n\nEverything is two-tone. Ink and paper carry every surface, and the cat's green eyes appear only where the person should look. Titan One speaks (names, questions, numbers); Rubik reads (everything else).",
+    "keyCharacteristics": [
+      "Ink on paper; one green accent reserved for \"look here\".",
+      "One black decision band, fixed at the bottom, asking one question.",
+      "Titan One for names, questions and numbers; Rubik for text.",
+      "Round forms: pills, discs, soft-cornered buttons, a 24% rounded logo with an ink outline.",
+      "Flat: depth comes from inversion (black against white), never from shadow.",
+      "Large type for a counter-side read: 24px body, 40px question, 64px number."
+    ],
+    "rules": [
+      {
+        "name": "The Look-Here Rule",
+        "body": "Green marks the one thing to look at: asked words, the matching line, the live dot. If two things are green and they are not the same question, one is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Tone Rule",
+        "body": "Every surface is ink or paper. Grey is for text only, never for surfaces or borders.",
+        "section": "colors"
+      },
+      {
+        "name": "The Speak/Read Rule",
+        "body": "Titan One is for what the product says or counts; Rubik is for what the customer said and what is listed. Never set running text in Titan One, and never set it in bold synthesis (font-synthesis is off).",
+        "section": "typography"
+      },
+      {
+        "name": "The Outline-Not-Shadow Rule",
+        "body": "A thing that floats gets a 2.5px ink outline and a paper fill. A thing that matters gets an ink fill.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep every surface ink or paper; use grey only for text.",
+      "Do use Cat-Eye Green only to mark where to look, always under ink text.",
+      "Do ask one question at a time in the band, in Titan One, with white answer buttons.",
+      "Do outline floating or quiet controls at 2.5px ink; fill the ones that matter with ink.",
+      "Do keep touch targets at 44px or more (60px on the band).",
+      "Do keep the logo the only picture; the customer's photo is content, not decoration."
+    ],
+    "donts": [
+      "Don't add shadows, gradients, blurs or a second accent color.",
+      "Don't use green for buttons, borders, icons or decoration.",
+      "Don't set running text in Titan One, or fake its bold.",
+      "Don't build a three-column inbox/message/order layout or a chat thread.",
+      "Don't add a second persistent bar or a modal for decisions; the band is the only place the product asks.",
+      "Don't show a guess as fact: doubt is a question in the band."
+    ]
+  }
+}

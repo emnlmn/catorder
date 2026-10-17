@@ -47,22 +47,28 @@ class Predictor:
         orders.sort(key=lambda o: o["date"])
         enc = encode_history(orders, self.vidx)
         i = len(orders) - 1
-        ins = make_inputs(enc, i, today.toordinal(), kind_id(kind))
-        t = [torch.tensor(np.asarray(x)[None], dtype=torch.long if k == 4 else torch.float32).to(self.dev)
-             for k, x in enumerate(ins)]
-        with torch.no_grad():
-            o = self.net(*t)
+        last = dt.date.fromordinal(int(enc["dates"][-1]))
+
+        def run(at):
+            ins = make_inputs(enc, i, at, kind_id(kind))
+            t = [torch.tensor(np.asarray(x)[None], dtype=torch.long if k == 4 else torch.float32).to(self.dev)
+                 for k, x in enumerate(ins)]
+            with torch.no_grad():
+                return self.net(*t)
+        # gap and basket are trained as of the last order (offset 0): "when did we expect them, with what";
+        # churn is trained at offsets after it, so it is read as of today
+        o = run(last.toordinal())
+        oc = o if today == last else run(today.toordinal())
         gap = float(o["mu"].exp()[0])
         p = torch.sigmoid(o["logit"])[0].cpu().numpy()
         q = torch.expm1(o["logq"])[0].clamp(min=0).cpu().numpy()
-        last = dt.date.fromordinal(int(enc["dates"][-1]))
         since = (today - last).days
         basket = [{"sku": self.vocab[j], "qty": round_qty(float(q[j]), self.units[j]), "p": round(float(p[j]), 3)}
                   for j in np.argsort(-p) if p[j] >= 0.5]
         return {"next_order_date": (last + dt.timedelta(days=max(1, round(gap)))).isoformat(),
                 "expected_gap_days": round(gap, 2), "days_since_last": since,
                 "days_overdue": max(0, since - round(gap)),
-                "p_churn": round(float(torch.sigmoid(o["churn"])[0]), 4), "basket": basket,
+                "p_churn": round(float(torch.sigmoid(oc["churn"])[0]), 4), "basket": basket,
                 "model": MODEL_NAME, "device": self.dname, "latency_ms": int((time.time() - t0) * 1000)}
 
 
