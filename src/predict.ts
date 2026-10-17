@@ -46,7 +46,7 @@ export class Predictor {
   async predict(customer: { id: string; kind: string }, history: HistoryOrder[], today: string,
     products: Record<string, Product>): Promise<Prediction> {
     const body = JSON.stringify({ today, customer: { id: customer.id, kind: customer.kind }, history });
-    const r = await cachedCall(this.cache, "predict", "catorder-nbr", sha(customer.id), sha(body), async () => {
+    const r = await cachedCall(this.cache, "predict", "catorder-nbr-v1-w7900d", sha(customer.id), sha(body), async () => {
       if (!this.baseUrl) throw new ModelError(0, "PREDICT_BASE_URL is not set");
       let res: Response;
       try {
