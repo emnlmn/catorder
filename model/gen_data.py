@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
-START, END = dt.date(2025, 10, 1), dt.date(2026, 10, 17)
+START, END = dt.date(2024, 10, 1), dt.date(2026, 10, 17)  # two years: closures and peaks repeat, so they can be learned
 SEED = 20261017
 N_CUSTOMERS = 400
 SUMMER_CATS = {"water", "beer", "soft drink"}
@@ -101,6 +101,68 @@ def gen_customer(rng, kind, catalog, by_cat):
     return orders
 
 
+def in_closed(d, closed):
+    md = d.strftime("%m-%d")
+    for c in closed:
+        f, t = c["from"], c["to"]
+        if (f <= md <= t) if f <= t else (md >= f or md <= t):
+            return True
+    return False
+
+
+def gen_profile(rng, p, catalog, by_sku):
+    """One customer from a written profile (model/profiles): closures, summer/December, events, trend, churn, adopt, drop."""
+    core = {c["sku"]: (c["qty"], c["prob"], by_sku[c["sku"]]["category"], by_sku[c["sku"]]["sell_unit"]) for c in p["core"]}
+    se = p.get("season") or {}
+    summer, dec = se.get("summer", 0.0), se.get("december", 0.0)
+    events = [(dt.date.fromisoformat(e["date"]), e["mult"]) for e in p.get("events", [])]
+    trend = p.get("trend", 0.0)
+    churn_at = dt.date.fromisoformat(p["churn"]["start"]) if p.get("churn") else None
+    adopt = (p["adopt"]["sku"], dt.date.fromisoformat(p["adopt"]["from"])) if p.get("adopt") else None
+    drop = (p["drop"]["sku"], dt.date.fromisoformat(p["drop"]["from"])) if p.get("drop") else None
+    wd, closed, extras = p.get("weekdays", []), p.get("closed", []), p.get("extras_rate", 0.2)
+    d = START + dt.timedelta(days=rng.randint(0, 30))
+    orders, stretch, n_after, adopted = [], 1.0, 0, 0
+    while d <= END:
+        if in_closed(d, closed):
+            d += dt.timedelta(days=1)
+            continue
+        s = season(d)
+        tm = (1 + trend) ** ((d - START).days / 365)
+        ev = max([m for (ed, m) in events if abs((ed - d).days) <= 3] or [1.0])
+        dm = 1 + dec if d.month == 12 else 1.0
+        lines = {}
+        for sku, (base, prob, cat, u) in core.items():
+            if drop and sku == drop[0] and d >= drop[1]:
+                continue
+            sm = max(0.2, 1 + summer * s) if cat in SUMMER_CATS else 1.0
+            if rng.random() < min(0.99, prob * (sm if sm < 1 else 1)):
+                lines[sku] = snap_qty(base * sm * dm * tm * ev * math.exp(rng.gauss(0, 0.18)), u)
+        if adopt and d >= adopt[1]:
+            adopted += 1
+            if rng.random() < min(0.9, 0.25 * adopted):
+                u = by_sku[adopt[0]]["sell_unit"]
+                lines[adopt[0]] = snap_qty(tm * math.exp(rng.gauss(0, 0.2)) * (2 if u != "kg" else 1), u)
+        if rng.random() < extras:
+            for q in rng.sample(catalog, rng.choice([1, 1, 2])):
+                lines.setdefault(q["sku"], snap_qty(1, q["sell_unit"]))
+        if lines:
+            orders.append({"date": d.isoformat(), "lines": [{"sku": k, "qty": v} for k, v in lines.items()]})
+        gap = p["cadence_days"] * math.exp(rng.gauss(0, 0.15))
+        if churn_at and d >= churn_at:
+            n_after += 1
+            stretch *= 1.35
+            gap *= stretch
+            if n_after > rng.randint(2, 4):
+                break
+        nxt = d + dt.timedelta(days=max(1, round(gap)))
+        if wd:
+            nxt = min((nxt + dt.timedelta(days=k) for k in range(-3, 4) if (nxt + dt.timedelta(days=k)).weekday() in wd),
+                      key=lambda x: abs((x - nxt).days), default=nxt)
+        d = nxt if nxt > d else d + dt.timedelta(days=1)
+    return orders
+
+
 def main():
     rng = random.Random(SEED)
     catalog = json.load(open(REPO / "data" / "catalog.json"))
@@ -114,6 +176,19 @@ def main():
         orders = gen_customer(rng, kind, catalog, by_cat)
         if len(orders) >= 2:
             out[f"syn-{i:04d}"] = {"kind": kind, "orders": orders}
+    from check_profiles import problems
+    by_sku = {p["sku"]: p for p in catalog}
+    n_prof = n_bad = 0
+    for f in sorted(glob.glob(str(ROOT / "profiles" / "batch_*.json"))):
+        for prof in json.load(open(f)):
+            if problems(prof):
+                n_bad += 1
+                continue
+            orders = gen_profile(rng, prof, catalog, by_sku)
+            if len(orders) >= 2:
+                out[f"pf-{prof['id']}"] = {"kind": prof["kind"], "orders": orders}
+                n_prof += 1
+    print(f"profiles: {n_prof} used, {n_bad} invalid skipped")
     for f in sorted(glob.glob(str(REPO / "data" / "customers" / "*.json"))):
         c = json.load(open(f))
         hp = REPO / "data" / "history" / f"{c['id']}.json"

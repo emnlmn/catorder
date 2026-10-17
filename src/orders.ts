@@ -1,7 +1,7 @@
 // Storing, viewing, editing, confirming and exporting orders (SPEC §14).
 import type { SQLInputValue } from "node:sqlite";
 import { getCatalog, getCustomer, historyOrders, newId, nowIso, row, rows, type Db } from "./db.ts";
-import { g, isClean, lineState, recomputeLine, unitPrice } from "./resolve.ts";
+import { g, isClean, makeFlag, lineState, recomputeLine, unitPrice } from "./resolve.ts";
 import type {
   Candidate, Flag, FlagKind, Line, Order, PatchLineBody, Product, Reading, ResolveResult, StoredLine,
 } from "./types.ts";
@@ -129,6 +129,24 @@ export function patchLine(db: Db, lineId: string, body: PatchLineBody): Order {
   db.prepare("UPDATE lines SET sku=?, qty=?, state=?, flags=?, edited=1 WHERE id=?")
     .run(ln.sku, ln.qty, ln.state, JSON.stringify(ln.flags), lineId);
   return orderView(db, r.order_id)!;
+}
+
+/** Add a line to a draft: a product the forecast model suggests, stored like a usual line. */
+export function addLine(db: Db, orderId: string, body: { sku?: unknown; qty?: unknown }): Order {
+  const o = orderRow(db, orderId);
+  if (o.status !== "draft") throw new OrderError(409, "Only a draft order can be edited.");
+  const products = Object.fromEntries(getCatalog(db).map((p) => [p.sku, p]));
+  if (typeof body.sku !== "string" || !Object.hasOwn(products, body.sku))
+    throw new OrderError(400, "That product is not in the catalogue.");
+  if (typeof body.qty !== "number" || !Number.isFinite(body.qty) || body.qty <= 0)
+    throw new OrderError(400, "The quantity must be a number.");
+  const p = products[body.sku]!;
+  const pos = (row<{ m: number | null }>(db, "SELECT MAX(pos) AS m FROM lines WHERE order_id=?", orderId)?.m ?? -1) + 1;
+  const flags = [makeFlag("suggested")];
+  db.prepare(`INSERT INTO lines (id, order_id, pos, origin, product_text, sku, qty, unit_text, state, candidates, flags,
+      quote, quote_start, quote_end, proposed_sku, proposed_qty, edited) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`)
+    .run(newId(), orderId, pos, "usual", p.name, p.sku, body.qty, null, "ok", "[]", JSON.stringify(flags), "", 0, 0, p.sku, body.qty, 1);
+  return orderView(db, orderId)!;
 }
 
 export function confirmReasons(view: Order, acknowledged: readonly FlagKind[]): string[] {

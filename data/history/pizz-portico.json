@@ -362,34 +362,5 @@
     "qty": 2
    }
   ]
- },
- {
-  "date": "2026-09-28",
-  "lines": [
-   {
-    "sku": "FAR-00-5K",
-    "qty": 4
-   },
-   {
-    "sku": "FOR-MOZ-FIO",
-    "qty": 3
-   },
-   {
-    "sku": "POM-PEL-2.5",
-    "qty": 2
-   },
-   {
-    "sku": "OLI-EVO-5L",
-    "qty": 1
-   },
-   {
-    "sku": "BIR-LAG-33",
-    "qty": 2
-   },
-   {
-    "sku": "BEV-COL-33",
-    "qty": 3
-   }
-  ]
  }
 ]

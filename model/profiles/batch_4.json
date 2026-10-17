@@ -1,0 +1,6718 @@
+[
+ {
+  "id": "b4-001",
+  "kind": "grocery",
+  "name": "Minimarket Caputo",
+  "story": "Drogheria with a counter of cheese and cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 0.5,
+    "prob": 0.56
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 2,
+    "prob": 0.66
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.77
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 6,
+    "prob": 0.58
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.57
+   }
+  ],
+  "cadence_days": 9,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.26,
+   "december": 0.81
+  },
+  "events": [
+   {
+    "date": "2025-01-27",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-03-06",
+    "mult": 1.7
+   }
+  ],
+  "trend": 0.19,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.12
+ },
+ {
+  "id": "b4-002",
+  "kind": "grocery",
+  "name": "Alimentari Lodi",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.79
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2.5,
+    "prob": 0.95
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4,
+    "prob": 0.53
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.88
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.52,
+   "december": 1.08
+  },
+  "events": [
+   {
+    "date": "2025-08-09",
+    "mult": 3.8
+   },
+   {
+    "date": "2025-11-28",
+    "mult": 3.0
+   }
+  ],
+  "trend": -0.28,
+  "churn": null,
+  "adopt": {
+   "sku": "CAF-ORZ-500",
+   "from": "2025-09-19"
+  },
+  "drop": null,
+  "extras_rate": 0.43
+ },
+ {
+  "id": "b4-003",
+  "kind": "grocery",
+  "name": "Minimarket Franchi",
+  "story": "Small corner shop; daily top-ups of water and bread staples, big Saturday restock.",
+  "core": [
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2.5,
+    "prob": 0.33
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.94
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.79
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.66
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 2,
+    "prob": 0.33
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.65
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   5,
+   6
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.71,
+   "december": 0.75
+  },
+  "events": [],
+  "trend": 0.23,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.01
+ },
+ {
+  "id": "b4-004",
+  "kind": "grocery",
+  "name": "Bottega Testa",
+  "story": "Shop with a coffee corner; milk, coffee beans and biscuits are the core.",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 4,
+    "prob": 0.64
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.82
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 2,
+    "prob": 0.69
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.84
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 4,
+    "prob": 0.52
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.31
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 4,
+    "prob": 0.94
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.53
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "prob": 0.96
+   }
+  ],
+  "cadence_days": 9,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.71,
+   "december": 0.31
+  },
+  "events": [
+   {
+    "date": "2024-12-28",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-02-13",
+    "mult": 3.0
+   },
+   {
+    "date": "2025-06-27",
+    "mult": 3.0
+   },
+   {
+    "date": "2026-08-23",
+    "mult": 3.8
+   }
+  ],
+  "trend": -0.11,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "DIS-ROT-6",
+   "from": "2025-06-03"
+  },
+  "extras_rate": 0.11
+ },
+ {
+  "id": "b4-005",
+  "kind": "grocery",
+  "name": "Minimarket Marchetti",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 1,
+    "prob": 0.41
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3,
+    "prob": 0.5
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 1,
+    "prob": 0.76
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.88,
+   "december": 0.96
+  },
+  "events": [
+   {
+    "date": "2025-06-27",
+    "mult": 1.6
+   }
+  ],
+  "trend": -0.11,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b4-006",
+  "kind": "grocery",
+  "name": "Minimarket Costa",
+  "story": "Small corner shop; daily top-ups of water and bread staples, big Saturday restock.",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 5,
+    "prob": 0.37
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.63
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 2,
+    "prob": 0.64
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 4,
+    "prob": 0.88
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.43
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.95
+   }
+  ],
+  "cadence_days": 13,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.17,
+   "december": 1.13
+  },
+  "events": [
+   {
+    "date": "2025-09-22",
+    "mult": 2.0
+   }
+  ],
+  "trend": 0.02,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.01
+ },
+ {
+  "id": "b4-007",
+  "kind": "grocery",
+  "name": "Drogheria Ghirardi",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 4,
+    "prob": 0.41
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 4,
+    "prob": 0.73
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3,
+    "prob": 0.55
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 5,
+    "prob": 0.78
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.85,
+   "december": 0.5
+  },
+  "events": [],
+  "trend": -0.1,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.28
+ },
+ {
+  "id": "b4-008",
+  "kind": "grocery",
+  "name": "Negozio Moretti",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 3,
+    "prob": 0.71
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.56
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.73
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.19,
+   "december": 0.65
+  },
+  "events": [
+   {
+    "date": "2025-03-24",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-08-23",
+    "mult": 3.6
+   }
+  ],
+  "trend": 0.1,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.47
+ },
+ {
+  "id": "b4-009",
+  "kind": "grocery",
+  "name": "Alimentari Parisi",
+  "story": "Village alimentari; deliveries on Tuesday and Friday, cheese on demand.",
+  "core": [
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1.5,
+    "prob": 0.63
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "BEV-CHI-20",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1,
+    "prob": 0.71
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 1,
+    "prob": 0.67
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   6
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.04,
+   "december": 1.0
+  },
+  "events": [
+   {
+    "date": "2026-04-10",
+    "mult": 1.9
+   }
+  ],
+  "trend": 0.07,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "ACQ-NAT-1L",
+   "from": "2026-06-30"
+  },
+  "extras_rate": 0.43
+ },
+ {
+  "id": "b4-010",
+  "kind": "grocery",
+  "name": "Alimentare Caputo",
+  "story": "Discount minimarket; prefers cases of water and cola, pushes volume in summer.",
+  "core": [
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1.5,
+    "prob": 0.33
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 3,
+    "prob": 0.67
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 3,
+    "prob": 0.93
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 3,
+    "prob": 0.35
+   }
+  ],
+  "cadence_days": 9,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.94,
+   "december": 0.95
+  },
+  "events": [],
+  "trend": -0.13,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b4-011",
+  "kind": "grocery",
+  "name": "Bottega Pagano",
+  "story": "Small corner shop; daily top-ups of water and bread staples, big Saturday restock.",
+  "core": [
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 1,
+    "prob": 0.96
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 4,
+    "prob": 0.34
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 3,
+    "prob": 0.74
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 1,
+    "prob": 0.73
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.78
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.08,
+   "december": 0.12
+  },
+  "events": [
+   {
+    "date": "2025-08-29",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-05-17",
+    "mult": 3.1
+   },
+   {
+    "date": "2026-05-25",
+    "mult": 3.0
+   },
+   {
+    "date": "2026-08-12",
+    "mult": 2.2
+   }
+  ],
+  "trend": -0.26,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b4-012",
+  "kind": "grocery",
+  "name": "Alimentari Grassi",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "SAL-SPE",
+    "qty": 0.5,
+    "prob": 0.7
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 3,
+    "prob": 0.97
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.96
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.7
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 5,
+    "prob": 0.95
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1,
+    "prob": 0.51
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.96
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 3,
+    "prob": 0.79
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 5,
+    "prob": 0.73
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.55
+   }
+  ],
+  "cadence_days": 13,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.03,
+   "december": 0.28
+  },
+  "events": [
+   {
+    "date": "2025-03-30",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-07-15",
+    "mult": 3.6
+   }
+  ],
+  "trend": 0.59,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.02
+ },
+ {
+  "id": "b4-013",
+  "kind": "grocery",
+  "name": "Alimentari Cortesi",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.56
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 4,
+    "prob": 0.57
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 1,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.93,
+   "december": 0.12
+  },
+  "events": [],
+  "trend": -0.06,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.5
+ },
+ {
+  "id": "b4-014",
+  "kind": "grocery",
+  "name": "Market Esposito",
+  "story": "Village alimentari; deliveries on Tuesday and Friday, cheese on demand.",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 3,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3,
+    "prob": 0.56
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2,
+    "prob": 0.6
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.61
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2,
+    "prob": 0.45
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": -0.3,
+   "december": 0.53
+  },
+  "events": [
+   {
+    "date": "2025-11-21",
+    "mult": 2.3
+   },
+   {
+    "date": "2026-08-17",
+    "mult": 2.3
+   }
+  ],
+  "trend": 0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b4-015",
+  "kind": "grocery",
+  "name": "Emporio Ottolini",
+  "story": "Village alimentari; deliveries on Tuesday and Friday, cheese on demand.",
+  "core": [
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.79
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "prob": 0.98
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.91
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.94
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.59,
+   "december": 0.62
+  },
+  "events": [
+   {
+    "date": "2026-06-21",
+    "mult": 2.0
+   }
+  ],
+  "trend": -0.01,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.26
+ },
+ {
+  "id": "b4-016",
+  "kind": "grocery",
+  "name": "Alimentari Neri",
+  "story": "Old-style bottega; still buys flour by the sack for home-made fresh pasta on sale days.",
+  "core": [
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.44
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.67
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 5,
+    "prob": 0.83
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 6,
+    "prob": 0.39
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 5,
+    "prob": 0.94
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   3,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.88,
+   "december": 0.94
+  },
+  "events": [],
+  "trend": 0.15,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.22
+ },
+ {
+  "id": "b4-017",
+  "kind": "grocery",
+  "name": "Emporio Esposito",
+  "story": "Market-stall grocer; buys what sells that week, lots of variety in small amounts.",
+  "core": [
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 0.5,
+    "prob": 0.3
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.52
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 3,
+    "prob": 0.88
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.49
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 1,
+    "prob": 0.76
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.46
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   4,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.16,
+   "december": 1.02
+  },
+  "events": [
+   {
+    "date": "2024-10-15",
+    "mult": 2.8
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.0
+   },
+   {
+    "date": "2025-08-31",
+    "mult": 2.4
+   },
+   {
+    "date": "2026-05-11",
+    "mult": 2.5
+   }
+  ],
+  "trend": -0.22,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b4-018",
+  "kind": "grocery",
+  "name": "Negozio Ferrante",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 4,
+    "prob": 0.35
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2.5,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1.5,
+    "prob": 0.81
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 3,
+    "prob": 0.35
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.88
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.48,
+   "december": 0.88
+  },
+  "events": [
+   {
+    "date": "2024-11-05",
+    "mult": 1.9
+   },
+   {
+    "date": "2025-01-19",
+    "mult": 1.9
+   },
+   {
+    "date": "2025-10-20",
+    "mult": 3.8
+   },
+   {
+    "date": "2026-01-10",
+    "mult": 2.8
+   }
+  ],
+  "trend": 0.26,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.43
+ },
+ {
+  "id": "b4-019",
+  "kind": "grocery",
+  "name": "Minimarket Santini",
+  "story": "Busy minimarket near the station; fast-moving soft drinks and bottled water.",
+  "core": [
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 3,
+    "prob": 0.91
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.84
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 4,
+    "prob": 0.86
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1,
+    "prob": 0.95
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.78
+   }
+  ],
+  "cadence_days": 9,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.07,
+   "december": 0.22
+  },
+  "events": [
+   {
+    "date": "2026-04-29",
+    "mult": 3.7
+   }
+  ],
+  "trend": 0.02,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.41
+ },
+ {
+  "id": "b4-020",
+  "kind": "grocery",
+  "name": "Drogheria Lombardi",
+  "story": "Drogheria with a counter of cheese and cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.7
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.42,
+   "december": 0.72
+  },
+  "events": [
+   {
+    "date": "2026-02-16",
+    "mult": 3.0
+   }
+  ],
+  "trend": 0.13,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "PAS-RIS-1K",
+   "from": "2026-07-16"
+  },
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b4-021",
+  "kind": "grocery",
+  "name": "Minimarket Lodi",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "BEV-TON-20",
+    "qty": 5,
+    "prob": 0.55
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2.5,
+    "prob": 0.82
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 5,
+    "prob": 0.49
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.82
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2,
+    "prob": 0.65
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.78
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1.5,
+    "prob": 0.36
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.82
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   4
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": -0.09,
+   "december": 0.46
+  },
+  "events": [
+   {
+    "date": "2026-08-24",
+    "mult": 2.5
+   }
+  ],
+  "trend": -0.19,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.11
+ },
+ {
+  "id": "b4-022",
+  "kind": "grocery",
+  "name": "Negozio Lodi",
+  "story": "Small corner shop; daily top-ups of water and bread staples, big Saturday restock.",
+  "core": [
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.53
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 2,
+    "prob": 0.78
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.81
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 2,
+    "prob": 0.34
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.81
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.33,
+   "december": 0.91
+  },
+  "events": [],
+  "trend": -0.22,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b4-023",
+  "kind": "grocery",
+  "name": "Drogheria Vitali",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 5,
+    "prob": 0.67
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 3,
+    "prob": 0.85
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 1,
+    "prob": 0.34
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 1,
+    "prob": 0.92
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.87,
+   "december": 1.17
+  },
+  "events": [],
+  "trend": -0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.25
+ },
+ {
+  "id": "b4-024",
+  "kind": "grocery",
+  "name": "Alimentari Pellegrini",
+  "story": "Discount minimarket; prefers cases of water and cola, pushes volume in summer.",
+  "core": [
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 2,
+    "prob": 0.67
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5,
+    "prob": 0.42
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.48
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 1.5,
+    "prob": 0.54
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2,
+    "prob": 0.72
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1.5,
+    "prob": 0.89
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 3,
+    "prob": 0.37
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 3,
+    "prob": 0.37
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1.5,
+    "prob": 0.89
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.85,
+   "december": 1.17
+  },
+  "events": [
+   {
+    "date": "2025-03-17",
+    "mult": 3.2
+   },
+   {
+    "date": "2026-01-02",
+    "mult": 2.9
+   },
+   {
+    "date": "2026-01-23",
+    "mult": 2.8
+   }
+  ],
+  "trend": -0.01,
+  "churn": null,
+  "adopt": {
+   "sku": "BEV-LAT-1L",
+   "from": "2025-10-20"
+  },
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b4-025",
+  "kind": "grocery",
+  "name": "Alimentare Neri",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 4,
+    "prob": 0.79
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "prob": 0.48
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.82
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.34
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 5,
+    "prob": 0.56
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 3,
+    "prob": 0.4
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.68,
+   "december": 1.19
+  },
+  "events": [
+   {
+    "date": "2025-12-01",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-01-03",
+    "mult": 2.2
+   },
+   {
+    "date": "2026-05-25",
+    "mult": 3.3
+   }
+  ],
+  "trend": -0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.45
+ },
+ {
+  "id": "b4-026",
+  "kind": "grocery",
+  "name": "Alimentare Fontana",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 4,
+    "prob": 0.53
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 4,
+    "prob": 0.95
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.71
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.62
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 2.5,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 2,
+    "prob": 0.76
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.53,
+   "december": 0.15
+  },
+  "events": [
+   {
+    "date": "2025-02-13",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-11-23",
+    "mult": 3.7
+   }
+  ],
+  "trend": 0.28,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.32
+ },
+ {
+  "id": "b4-027",
+  "kind": "grocery",
+  "name": "Emporio Neri",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "SAL-COT",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 3,
+    "prob": 0.85
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 2,
+    "prob": 0.92
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2.5,
+    "prob": 0.6
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 1,
+    "prob": 0.33
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2,
+    "prob": 0.42
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 4,
+    "prob": 0.86
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.72
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   5,
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.08,
+   "december": 0.17
+  },
+  "events": [],
+  "trend": -0.19,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.44
+ },
+ {
+  "id": "b4-028",
+  "kind": "grocery",
+  "name": "Market Ferrante",
+  "story": "Discount minimarket; prefers cases of water and cola, pushes volume in summer.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.71
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.34
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.76
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.37,
+   "december": 0.85
+  },
+  "events": [
+   {
+    "date": "2024-12-01",
+    "mult": 3.3
+   },
+   {
+    "date": "2025-11-30",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-04-23",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-08-18",
+    "mult": 1.7
+   }
+  ],
+  "trend": -0.02,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.42
+ },
+ {
+  "id": "b4-029",
+  "kind": "grocery",
+  "name": "Negozio Donati",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.64
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 4,
+    "prob": 0.45
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.89
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 4,
+    "prob": 0.59
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 2,
+    "prob": 0.7
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.13,
+   "december": 0.14
+  },
+  "events": [],
+  "trend": 0.52,
+  "churn": {
+   "start": "2025-08-14"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.29
+ },
+ {
+  "id": "b4-030",
+  "kind": "grocery",
+  "name": "Bottega Ottolini",
+  "story": "Shop with a coffee corner; milk, coffee beans and biscuits are the core.",
+  "core": [
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3,
+    "prob": 0.79
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 3,
+    "prob": 0.9
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 1,
+    "prob": 0.59
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.58,
+   "december": 1.1
+  },
+  "events": [
+   {
+    "date": "2024-12-12",
+    "mult": 2.5
+   }
+  ],
+  "trend": -0.03,
+  "churn": null,
+  "adopt": {
+   "sku": "DIS-TOV-40",
+   "from": "2026-05-10"
+  },
+  "drop": null,
+  "extras_rate": 0.45
+ },
+ {
+  "id": "b4-031",
+  "kind": "grocery",
+  "name": "Drogheria Grassi",
+  "story": "Busy minimarket near the station; fast-moving soft drinks and bottled water.",
+  "core": [
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 5,
+    "prob": 0.52
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1.5,
+    "prob": 0.45
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.32
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.71
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.03,
+   "december": 0.75
+  },
+  "events": [
+   {
+    "date": "2026-03-19",
+    "mult": 3.0
+   },
+   {
+    "date": "2026-08-09",
+    "mult": 3.4
+   },
+   {
+    "date": "2026-10-02",
+    "mult": 3.1
+   }
+  ],
+  "trend": -0.16,
+  "churn": {
+   "start": "2025-08-17"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.09
+ },
+ {
+  "id": "b4-032",
+  "kind": "grocery",
+  "name": "Emporio Marchetti",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 2,
+    "prob": 0.54
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "prob": 0.49
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 2,
+    "prob": 0.91
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1,
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.16,
+   "december": 0.36
+  },
+  "events": [],
+  "trend": -0.16,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b4-033",
+  "kind": "grocery",
+  "name": "Negozio Vitali",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 4,
+    "prob": 0.98
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.95
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 4,
+    "prob": 0.64
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4,
+    "prob": 0.71
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 4,
+    "prob": 0.74
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.84
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 1,
+    "prob": 0.31
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 5,
+    "prob": 0.67
+   },
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 3,
+    "prob": 0.89
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.19,
+   "december": 0.43
+  },
+  "events": [
+   {
+    "date": "2025-05-03",
+    "mult": 3.5
+   },
+   {
+    "date": "2025-09-23",
+    "mult": 2.0
+   },
+   {
+    "date": "2025-10-30",
+    "mult": 1.7
+   },
+   {
+    "date": "2026-04-22",
+    "mult": 2.1
+   }
+  ],
+  "trend": -0.14,
+  "churn": null,
+  "adopt": {
+   "sku": "BEV-COL-33",
+   "from": "2025-10-03"
+  },
+  "drop": null,
+  "extras_rate": 0.21
+ },
+ {
+  "id": "b4-034",
+  "kind": "grocery",
+  "name": "Drogheria Fontana",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 2,
+    "prob": 0.89
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 4,
+    "prob": 0.37
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 1,
+    "prob": 0.56
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 5,
+    "prob": 0.32
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 5,
+    "prob": 0.7
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 4,
+    "prob": 0.45
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   6
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.79,
+   "december": 0.76
+  },
+  "events": [
+   {
+    "date": "2025-05-17",
+    "mult": 3.9
+   },
+   {
+    "date": "2025-06-16",
+    "mult": 2.2
+   },
+   {
+    "date": "2026-03-21",
+    "mult": 1.5
+   }
+  ],
+  "trend": 0.48,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.28
+ },
+ {
+  "id": "b4-035",
+  "kind": "grocery",
+  "name": "Drogheria Pagano",
+  "story": "Market-stall grocer; buys what sells that week, lots of variety in small amounts.",
+  "core": [
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 1,
+    "prob": 0.96
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.63
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 4,
+    "prob": 0.9
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.37
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.78,
+   "december": 0.53
+  },
+  "events": [
+   {
+    "date": "2025-05-11",
+    "mult": 1.7
+   }
+  ],
+  "trend": -0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b4-036",
+  "kind": "grocery",
+  "name": "Emporio Gallo",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "SAL-SPE",
+    "qty": 1.5,
+    "prob": 0.42
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2,
+    "prob": 0.81
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 4,
+    "prob": 0.98
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 3,
+    "prob": 0.84
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 2,
+    "prob": 0.95
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3,
+    "prob": 0.92
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 5,
+    "prob": 0.65
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 4,
+    "prob": 0.73
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4,
+    "prob": 0.85
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.42
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.35,
+   "december": 1.16
+  },
+  "events": [
+   {
+    "date": "2024-10-09",
+    "mult": 2.8
+   },
+   {
+    "date": "2024-11-20",
+    "mult": 2.8
+   }
+  ],
+  "trend": 0.12,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.26
+ },
+ {
+  "id": "b4-037",
+  "kind": "grocery",
+  "name": "Drogheria Caputo",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 3,
+    "prob": 0.4
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.71
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 2,
+    "prob": 0.5
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 5,
+    "prob": 0.74
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 2,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.6
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 3,
+    "prob": 0.61
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 2,
+    "prob": 0.38
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 1,
+    "prob": 0.87
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.18,
+   "december": 0.58
+  },
+  "events": [],
+  "trend": -0.12,
+  "churn": null,
+  "adopt": {
+   "sku": "PAS-SPA-500",
+   "from": "2025-08-06"
+  },
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b4-038",
+  "kind": "grocery",
+  "name": "Alimentare Riva",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 3,
+    "prob": 0.39
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 1,
+    "prob": 0.56
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2.5,
+    "prob": 0.49
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5,
+    "prob": 0.48
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.74
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 2,
+    "prob": 0.87
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.96,
+   "december": 0.09
+  },
+  "events": [
+   {
+    "date": "2024-12-23",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-03-04",
+    "mult": 3.3
+   },
+   {
+    "date": "2025-05-28",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-07-23",
+    "mult": 3.3
+   }
+  ],
+  "trend": -0.13,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b4-039",
+  "kind": "grocery",
+  "name": "Negozio Marchetti",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 2,
+    "prob": 0.95
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 4,
+    "prob": 0.9
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 3,
+    "prob": 0.89
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.43
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 2,
+    "prob": 0.97
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 1,
+    "prob": 0.63
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 1,
+    "prob": 0.52
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.07,
+   "december": 0.45
+  },
+  "events": [
+   {
+    "date": "2024-11-26",
+    "mult": 3.9
+   },
+   {
+    "date": "2025-02-09",
+    "mult": 3.7
+   },
+   {
+    "date": "2025-04-15",
+    "mult": 3.4
+   },
+   {
+    "date": "2025-10-22",
+    "mult": 2.7
+   }
+  ],
+  "trend": 0.01,
+  "churn": {
+   "start": "2026-04-07"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b4-040",
+  "kind": "grocery",
+  "name": "Drogheria Santini",
+  "story": "Family alimentari; weekly staples order on Monday and a mid-week top-up.",
+  "core": [
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 5,
+    "prob": 0.43
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.37
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 3,
+    "prob": 0.96
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 3,
+    "prob": 0.66
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.23,
+   "december": 0.35
+  },
+  "events": [
+   {
+    "date": "2025-05-25",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-03-03",
+    "mult": 2.0
+   },
+   {
+    "date": "2026-08-14",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-08-21",
+    "mult": 1.7
+   }
+  ],
+  "trend": -0.14,
+  "churn": {
+   "start": "2026-05-23"
+  },
+  "adopt": null,
+  "drop": {
+   "sku": "BEV-COL-33",
+   "from": "2026-05-05"
+  },
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b4-041",
+  "kind": "grocery",
+  "name": "Market Gallo",
+  "story": "Family alimentari; weekly staples order on Monday and a mid-week top-up.",
+  "core": [
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 1,
+    "prob": 0.56
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 3,
+    "prob": 0.69
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 2,
+    "prob": 0.86
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.81,
+   "december": 0.09
+  },
+  "events": [
+   {
+    "date": "2025-01-04",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-01-29",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-04-03",
+    "mult": 2.2
+   },
+   {
+    "date": "2026-05-16",
+    "mult": 3.8
+   }
+  ],
+  "trend": -0.01,
+  "churn": null,
+  "adopt": {
+   "sku": "FOR-PEC",
+   "from": "2025-06-30"
+  },
+  "drop": null,
+  "extras_rate": 0.12
+ },
+ {
+  "id": "b4-042",
+  "kind": "grocery",
+  "name": "Negozio Orsini",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "SAL-MOR",
+    "qty": 1.5,
+    "prob": 0.54
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.42
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 3,
+    "prob": 0.3
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 0.5,
+    "prob": 0.88
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2.5,
+    "prob": 0.76
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.8
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": -0.14,
+   "december": 0.19
+  },
+  "events": [
+   {
+    "date": "2024-11-09",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-06-20",
+    "mult": 3.8
+   }
+  ],
+  "trend": -0.19,
+  "churn": null,
+  "adopt": {
+   "sku": "CAF-DEC-500",
+   "from": "2025-11-30"
+  },
+  "drop": null,
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b4-043",
+  "kind": "grocery",
+  "name": "Alimentari Marchetti",
+  "story": "Old-style bottega; still buys flour by the sack for home-made fresh pasta on sale days.",
+  "core": [
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 3,
+    "prob": 0.67
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 3,
+    "prob": 0.53
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 4,
+    "prob": 0.65
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 1,
+    "prob": 0.34
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 3,
+    "prob": 0.97
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 4,
+    "prob": 0.31
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.36,
+   "december": 0.17
+  },
+  "events": [
+   {
+    "date": "2026-07-06",
+    "mult": 2.5
+   }
+  ],
+  "trend": 0.16,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.4
+ },
+ {
+  "id": "b4-044",
+  "kind": "grocery",
+  "name": "Alimentari Riva",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 0.5,
+    "prob": 0.41
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1.5,
+    "prob": 0.83
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.68
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 4,
+    "prob": 0.59
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.67
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 0.5,
+    "prob": 0.42
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.91
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 3,
+    "prob": 0.81
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2,
+    "prob": 0.5
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.95
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.2,
+   "december": 0.99
+  },
+  "events": [
+   {
+    "date": "2024-10-14",
+    "mult": 2.0
+   },
+   {
+    "date": "2026-01-30",
+    "mult": 3.9
+   },
+   {
+    "date": "2026-08-05",
+    "mult": 2.4
+   }
+  ],
+  "trend": -0.08,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.16
+ },
+ {
+  "id": "b4-045",
+  "kind": "grocery",
+  "name": "Market Lodi",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "BEV-TON-20",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 5,
+    "prob": 0.7
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 3,
+    "prob": 0.64
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.61
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.41,
+   "december": 0.27
+  },
+  "events": [
+   {
+    "date": "2024-12-03",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-08-07",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-01-05",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-03-04",
+    "mult": 3.3
+   }
+  ],
+  "trend": 0.03,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "FAR-00-25K",
+   "from": "2025-12-14"
+  },
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b4-046",
+  "kind": "grocery",
+  "name": "Drogheria Parisi",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.45
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.43
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.56
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.73
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.32,
+   "december": 0.7
+  },
+  "events": [
+   {
+    "date": "2025-12-30",
+    "mult": 1.8
+   },
+   {
+    "date": "2026-03-07",
+    "mult": 3.7
+   },
+   {
+    "date": "2026-03-08",
+    "mult": 2.5
+   }
+  ],
+  "trend": -0.25,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.16
+ },
+ {
+  "id": "b4-047",
+  "kind": "grocery",
+  "name": "Bottega Greco",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 4,
+    "prob": 0.52
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3,
+    "prob": 0.7
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 1,
+    "prob": 0.92
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.76,
+   "december": 1.14
+  },
+  "events": [
+   {
+    "date": "2024-11-30",
+    "mult": 1.8
+   },
+   {
+    "date": "2025-04-01",
+    "mult": 3.8
+   }
+  ],
+  "trend": 0.12,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "DIS-ROT-6",
+   "from": "2025-05-09"
+  },
+  "extras_rate": 0.25
+ },
+ {
+  "id": "b4-048",
+  "kind": "grocery",
+  "name": "Market Sartori",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "prob": 0.76
+   },
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 5,
+    "prob": 0.56
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 1,
+    "prob": 0.79
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.68
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.57,
+   "december": 0.1
+  },
+  "events": [
+   {
+    "date": "2025-07-29",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-02-25",
+    "mult": 3.8
+   }
+  ],
+  "trend": -0.17,
+  "churn": {
+   "start": "2025-12-15"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.0
+ },
+ {
+  "id": "b4-049",
+  "kind": "grocery",
+  "name": "Emporio Lombardi",
+  "story": "Old-style bottega; still buys flour by the sack for home-made fresh pasta on sale days.",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1,
+    "prob": 0.42
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.83
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 0.5,
+    "prob": 0.71
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.99
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 1,
+    "prob": 0.65
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.14,
+   "december": 0.75
+  },
+  "events": [
+   {
+    "date": "2025-07-16",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-06-11",
+    "mult": 1.7
+   }
+  ],
+  "trend": -0.24,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.27
+ },
+ {
+  "id": "b4-050",
+  "kind": "grocery",
+  "name": "Alimentari Pagano",
+  "story": "Alimentari run by two brothers; orders on fixed weekdays, never runs out of pasta.",
+  "core": [
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 4,
+    "prob": 0.74
+   },
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 4,
+    "prob": 0.78
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 1,
+    "prob": 0.83
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.41,
+   "december": 0.14
+  },
+  "events": [
+   {
+    "date": "2025-02-02",
+    "mult": 2.8
+   },
+   {
+    "date": "2025-11-25",
+    "mult": 2.9
+   },
+   {
+    "date": "2026-01-03",
+    "mult": 3.6
+   }
+  ],
+  "trend": -0.07,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "CAF-GRA-1K",
+   "from": "2026-05-10"
+  },
+  "extras_rate": 0.12
+ },
+ {
+  "id": "b4-051",
+  "kind": "grocery",
+  "name": "Minimarket Bruno",
+  "story": "Shop with a coffee corner; milk, coffee beans and biscuits are the core.",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.71
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 3,
+    "prob": 0.59
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 2.5,
+    "prob": 0.62
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2.5,
+    "prob": 0.63
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.3
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2,
+    "prob": 0.8
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.38
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.62
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   3,
+   5,
+   6
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.33,
+   "december": 1.03
+  },
+  "events": [
+   {
+    "date": "2025-03-06",
+    "mult": 1.7
+   },
+   {
+    "date": "2026-02-06",
+    "mult": 2.0
+   }
+  ],
+  "trend": -0.27,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.33
+ },
+ {
+  "id": "b4-052",
+  "kind": "grocery",
+  "name": "Drogheria Pellegrini",
+  "story": "Small corner shop; daily top-ups of water and bread staples, big Saturday restock.",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 5,
+    "prob": 0.68
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2.5,
+    "prob": 0.54
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.88
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2,
+    "prob": 0.75
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": -0.25,
+   "december": 0.39
+  },
+  "events": [
+   {
+    "date": "2024-11-12",
+    "mult": 3.1
+   }
+  ],
+  "trend": 0.0,
+  "churn": {
+   "start": "2026-03-02"
+  },
+  "adopt": {
+   "sku": "SAL-PRC",
+   "from": "2025-08-06"
+  },
+  "drop": {
+   "sku": "PAS-TAG-250",
+   "from": "2026-03-16"
+  },
+  "extras_rate": 0.22
+ },
+ {
+  "id": "b4-053",
+  "kind": "grocery",
+  "name": "Minimarket Iannone",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.94
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 1,
+    "prob": 0.39
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.38
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.4
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.19,
+   "december": 0.19
+  },
+  "events": [
+   {
+    "date": "2026-07-11",
+    "mult": 3.6
+   },
+   {
+    "date": "2026-09-30",
+    "mult": 1.9
+   }
+  ],
+  "trend": 0.14,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-BIA-004",
+   "from": "2025-10-04"
+  },
+  "drop": null,
+  "extras_rate": 0.41
+ },
+ {
+  "id": "b4-054",
+  "kind": "grocery",
+  "name": "Bottega Fontana",
+  "story": "Small corner shop; daily top-ups of water and bread staples, big Saturday restock.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 3,
+    "prob": 0.32
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.83
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.81
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.1,
+   "december": 0.4
+  },
+  "events": [],
+  "trend": 0.08,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.07
+ },
+ {
+  "id": "b4-055",
+  "kind": "grocery",
+  "name": "Market Barbieri",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 5,
+    "prob": 0.53
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 5,
+    "prob": 0.8
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 3,
+    "prob": 0.74
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.83
+   }
+  ],
+  "cadence_days": 9,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.79,
+   "december": 0.17
+  },
+  "events": [
+   {
+    "date": "2025-10-08",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-09-14",
+    "mult": 2.3
+   }
+  ],
+  "trend": -0.11,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.5
+ },
+ {
+  "id": "b4-056",
+  "kind": "grocery",
+  "name": "Market Zanetti",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 1,
+    "prob": 0.37
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "prob": 0.81
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 3,
+    "prob": 0.98
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 3,
+    "prob": 0.94
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.63
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 1.16,
+   "december": 0.52
+  },
+  "events": [],
+  "trend": -0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.13
+ },
+ {
+  "id": "b4-057",
+  "kind": "grocery",
+  "name": "Negozio Mancini",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3,
+    "prob": 0.77
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2.5,
+    "prob": 0.79
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.76
+   }
+  ],
+  "cadence_days": 9,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.17,
+   "december": 0.37
+  },
+  "events": [
+   {
+    "date": "2025-01-21",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-10-19",
+    "mult": 2.7
+   },
+   {
+    "date": "2025-11-29",
+    "mult": 3.6
+   },
+   {
+    "date": "2026-03-17",
+    "mult": 1.6
+   }
+  ],
+  "trend": -0.02,
+  "churn": null,
+  "adopt": {
+   "sku": "FOR-MOZ-BUF",
+   "from": "2025-05-17"
+  },
+  "drop": null,
+  "extras_rate": 0.28
+ },
+ {
+  "id": "b4-058",
+  "kind": "grocery",
+  "name": "Negozio Costa",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.32
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 4,
+    "prob": 0.32
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 3,
+    "prob": 0.68
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 3,
+    "prob": 0.4
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.92
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 4,
+    "prob": 0.7
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.75
+   }
+  ],
+  "cadence_days": 9,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.56,
+   "december": 0.63
+  },
+  "events": [
+   {
+    "date": "2024-10-18",
+    "mult": 3.7
+   },
+   {
+    "date": "2025-01-19",
+    "mult": 2.0
+   },
+   {
+    "date": "2025-04-16",
+    "mult": 3.8
+   },
+   {
+    "date": "2026-06-02",
+    "mult": 1.5
+   }
+  ],
+  "trend": -0.21,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-GUA",
+   "from": "2026-02-08"
+  },
+  "drop": null,
+  "extras_rate": 0.13
+ },
+ {
+  "id": "b4-059",
+  "kind": "grocery",
+  "name": "Negozio Esposito",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 3,
+    "prob": 0.95
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5,
+    "prob": 0.76
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.31
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.99
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 2,
+    "prob": 0.63
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 1.13,
+   "december": 1.0
+  },
+  "events": [],
+  "trend": -0.1,
+  "churn": null,
+  "adopt": {
+   "sku": "FOR-GOR-DOL",
+   "from": "2026-02-24"
+  },
+  "drop": {
+   "sku": "CAF-GRA-1K",
+   "from": "2025-04-09"
+  },
+  "extras_rate": 0.44
+ },
+ {
+  "id": "b4-060",
+  "kind": "grocery",
+  "name": "Bottega Ferrante",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 6,
+    "prob": 0.51
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 1,
+    "prob": 0.54
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 3,
+    "prob": 0.91
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.45
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.2,
+   "december": 0.3
+  },
+  "events": [
+   {
+    "date": "2025-11-27",
+    "mult": 3.6
+   }
+  ],
+  "trend": 0.15,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b4-061",
+  "kind": "grocery",
+  "name": "Market Costa",
+  "story": "Busy minimarket near the station; fast-moving soft drinks and bottled water.",
+  "core": [
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 5,
+    "prob": 0.38
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.3
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 3,
+    "prob": 0.75
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4,
+    "prob": 0.95
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.35
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 3,
+    "prob": 0.48
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "prob": 0.97
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 5,
+    "prob": 0.88
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.73
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.81,
+   "december": 0.45
+  },
+  "events": [
+   {
+    "date": "2025-03-26",
+    "mult": 3.8
+   },
+   {
+    "date": "2026-01-10",
+    "mult": 3.2
+   },
+   {
+    "date": "2026-06-01",
+    "mult": 2.0
+   },
+   {
+    "date": "2026-07-25",
+    "mult": 2.9
+   }
+  ],
+  "trend": 0.14,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.29
+ },
+ {
+  "id": "b4-062",
+  "kind": "grocery",
+  "name": "Alimentare Ghirardi",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.91
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.96
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.81
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.37
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "prob": 0.68
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   6
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.09,
+   "december": 0.45
+  },
+  "events": [
+   {
+    "date": "2026-03-22",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-05-02",
+    "mult": 2.3
+   }
+  ],
+  "trend": 0.57,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.13
+ },
+ {
+  "id": "b4-063",
+  "kind": "grocery",
+  "name": "Minimarket Vitali",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 3,
+    "prob": 0.31
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 4,
+    "prob": 0.41
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.96
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 3,
+    "prob": 0.68
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 1,
+    "prob": 0.81
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.39
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.43
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.63
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": -0.0,
+   "december": 1.14
+  },
+  "events": [
+   {
+    "date": "2024-11-02",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 2.2
+   }
+  ],
+  "trend": -0.24,
+  "churn": {
+   "start": "2025-10-31"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.24
+ },
+ {
+  "id": "b4-064",
+  "kind": "grocery",
+  "name": "Bottega Bruno",
+  "story": "Market-stall grocer; buys what sells that week, lots of variety in small amounts.",
+  "core": [
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.78
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 4,
+    "prob": 0.63
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 2,
+    "prob": 0.77
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 6,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 0.5,
+    "prob": 0.46
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 4,
+    "prob": 0.6
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.35
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 5,
+    "prob": 0.93
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 1.04,
+   "december": 0.67
+  },
+  "events": [
+   {
+    "date": "2024-10-19",
+    "mult": 3.9
+   },
+   {
+    "date": "2025-01-31",
+    "mult": 1.9
+   },
+   {
+    "date": "2025-12-03",
+    "mult": 2.5
+   }
+  ],
+  "trend": 0.13,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.25
+ },
+ {
+  "id": "b4-065",
+  "kind": "grocery",
+  "name": "Market Cortesi",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 4,
+    "prob": 0.4
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.63
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.69
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.81,
+   "december": 0.04
+  },
+  "events": [],
+  "trend": -0.24,
+  "churn": null,
+  "adopt": {
+   "sku": "FOR-TAL",
+   "from": "2026-05-26"
+  },
+  "drop": null,
+  "extras_rate": 0.4
+ },
+ {
+  "id": "b4-066",
+  "kind": "grocery",
+  "name": "Alimentare Ottolini",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 5,
+    "prob": 0.78
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2,
+    "prob": 0.76
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 0.5,
+    "prob": 0.61
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.64
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2,
+    "prob": 0.49
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.64
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.93,
+   "december": 0.02
+  },
+  "events": [
+   {
+    "date": "2024-11-06",
+    "mult": 2.0
+   },
+   {
+    "date": "2025-05-27",
+    "mult": 3.2
+   },
+   {
+    "date": "2026-04-20",
+    "mult": 3.7
+   }
+  ],
+  "trend": -0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "FOR-PRO-DOL",
+   "from": "2026-07-14"
+  },
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b4-067",
+  "kind": "grocery",
+  "name": "Emporio Ghirardi",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.71
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 3,
+    "prob": 0.75
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 3,
+    "prob": 0.5
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.58
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 4,
+    "prob": 0.81
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.32,
+   "december": 0.08
+  },
+  "events": [
+   {
+    "date": "2025-04-02",
+    "mult": 2.7
+   },
+   {
+    "date": "2025-04-22",
+    "mult": 2.5
+   },
+   {
+    "date": "2025-06-05",
+    "mult": 2.9
+   },
+   {
+    "date": "2026-10-11",
+    "mult": 1.8
+   }
+  ],
+  "trend": -0.3,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b4-068",
+  "kind": "grocery",
+  "name": "Negozio Greco",
+  "story": "Market-stall grocer; buys what sells that week, lots of variety in small amounts.",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.7
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 5,
+    "prob": 0.48
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1.5,
+    "prob": 0.67
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.44
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.7
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 3,
+    "prob": 0.31
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 3,
+    "prob": 0.9
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.31,
+   "december": 0.74
+  },
+  "events": [
+   {
+    "date": "2026-02-24",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-07-18",
+    "mult": 2.4
+   }
+  ],
+  "trend": -0.1,
+  "churn": null,
+  "adopt": {
+   "sku": "BIR-LAG-33",
+   "from": "2026-06-18"
+  },
+  "drop": null,
+  "extras_rate": 0.26
+ },
+ {
+  "id": "b4-069",
+  "kind": "grocery",
+  "name": "Bottega Parisi",
+  "story": "Discount minimarket; prefers cases of water and cola, pushes volume in summer.",
+  "core": [
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 3,
+    "prob": 0.79
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 0.5,
+    "prob": 0.65
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.34
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 0.5,
+    "prob": 0.66
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 6,
+    "prob": 0.84
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1,
+    "prob": 0.84
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.3,
+   "december": 0.67
+  },
+  "events": [
+   {
+    "date": "2025-06-15",
+    "mult": 3.3
+   }
+  ],
+  "trend": 0.3,
+  "churn": null,
+  "adopt": {
+   "sku": "CAF-MIS-1K",
+   "from": "2025-06-21"
+  },
+  "drop": null,
+  "extras_rate": 0.24
+ },
+ {
+  "id": "b4-070",
+  "kind": "grocery",
+  "name": "Minimarket Orsini",
+  "story": "Busy minimarket near the station; fast-moving soft drinks and bottled water.",
+  "core": [
+   {
+    "sku": "SAL-SPE",
+    "qty": 1.5,
+    "prob": 0.5
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.58
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 3,
+    "prob": 0.41
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": -0.33,
+   "december": 0.29
+  },
+  "events": [
+   {
+    "date": "2025-09-09",
+    "mult": 2.0
+   }
+  ],
+  "trend": -0.14,
+  "churn": null,
+  "adopt": {
+   "sku": "PAS-RIG-500",
+   "from": "2025-12-01"
+  },
+  "drop": null,
+  "extras_rate": 0.32
+ },
+ {
+  "id": "b4-071",
+  "kind": "grocery",
+  "name": "Alimentari Ghirardi",
+  "story": "Busy minimarket near the station; fast-moving soft drinks and bottled water.",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 5,
+    "prob": 0.81
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2.5,
+    "prob": 0.9
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 4,
+    "prob": 0.57
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 3,
+    "prob": 0.7
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.59
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.18,
+   "december": 0.34
+  },
+  "events": [
+   {
+    "date": "2025-11-09",
+    "mult": 3.5
+   },
+   {
+    "date": "2026-03-08",
+    "mult": 2.9
+   },
+   {
+    "date": "2026-05-20",
+    "mult": 3.5
+   }
+  ],
+  "trend": 0.25,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b4-072",
+  "kind": "grocery",
+  "name": "Emporio Rossetti",
+  "story": "Alimentari run by two brothers; orders on fixed weekdays, never runs out of pasta.",
+  "core": [
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 3,
+    "prob": 0.51
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2.5,
+    "prob": 0.96
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.52
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 1,
+    "prob": 0.5
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": -0.36,
+   "december": 0.53
+  },
+  "events": [
+   {
+    "date": "2024-10-23",
+    "mult": 3.3
+   },
+   {
+    "date": "2025-03-30",
+    "mult": 1.5
+   },
+   {
+    "date": "2025-05-25",
+    "mult": 2.3
+   },
+   {
+    "date": "2026-03-25",
+    "mult": 1.9
+   }
+  ],
+  "trend": -0.1,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "SAL-MOR",
+   "from": "2025-04-22"
+  },
+  "extras_rate": 0.15
+ },
+ {
+  "id": "b4-073",
+  "kind": "grocery",
+  "name": "Alimentare Bruno",
+  "story": "Family alimentari; weekly staples order on Monday and a mid-week top-up.",
+  "core": [
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 2,
+    "prob": 0.62
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.31
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 6,
+    "prob": 0.66
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 1,
+    "prob": 0.47
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 1,
+    "prob": 0.44
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 2,
+    "prob": 0.39
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.36
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 5,
+    "prob": 0.97
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.95,
+   "december": 0.77
+  },
+  "events": [
+   {
+    "date": "2025-01-23",
+    "mult": 3.1
+   },
+   {
+    "date": "2025-10-28",
+    "mult": 3.4
+   },
+   {
+    "date": "2026-05-23",
+    "mult": 1.8
+   },
+   {
+    "date": "2026-06-28",
+    "mult": 3.9
+   }
+  ],
+  "trend": 0.21,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.16
+ },
+ {
+  "id": "b4-074",
+  "kind": "grocery",
+  "name": "Alimentare Greco",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 2,
+    "prob": 0.45
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 4,
+    "prob": 0.43
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.84
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 3,
+    "prob": 0.73
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 3,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.79
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.16,
+   "december": 0.05
+  },
+  "events": [
+   {
+    "date": "2025-04-29",
+    "mult": 3.1
+   },
+   {
+    "date": "2026-05-26",
+    "mult": 2.4
+   }
+  ],
+  "trend": -0.07,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.18
+ },
+ {
+  "id": "b4-075",
+  "kind": "grocery",
+  "name": "Emporio Bruno",
+  "story": "Discount minimarket; prefers cases of water and cola, pushes volume in summer.",
+  "core": [
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.59
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 2,
+    "prob": 0.91
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 3,
+    "prob": 0.69
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 4,
+    "prob": 0.47
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 2,
+    "prob": 0.36
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.62
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.92
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   3,
+   5
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.81,
+   "december": 0.52
+  },
+  "events": [
+   {
+    "date": "2025-05-31",
+    "mult": 2.9
+   }
+  ],
+  "trend": -0.12,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b4-076",
+  "kind": "grocery",
+  "name": "Minimarket Sanna",
+  "story": "Busy minimarket near the station; fast-moving soft drinks and bottled water.",
+  "core": [
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.34
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.83
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.32
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5,
+    "prob": 0.65
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.96
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 2,
+    "prob": 0.31
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3,
+    "prob": 0.87
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.07,
+   "december": 1.2
+  },
+  "events": [],
+  "trend": 0.07,
+  "churn": null,
+  "adopt": {
+   "sku": "DOL-BIS-CAF",
+   "from": "2025-09-01"
+  },
+  "drop": null,
+  "extras_rate": 0.36
+ },
+ {
+  "id": "b4-077",
+  "kind": "grocery",
+  "name": "Bottega Franchi",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2,
+    "prob": 0.44
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 1,
+    "prob": 0.46
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 2,
+    "prob": 0.58
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 5,
+    "prob": 0.35
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 4,
+    "prob": 0.71
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.93
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.16,
+   "december": 0.49
+  },
+  "events": [
+   {
+    "date": "2025-01-13",
+    "mult": 3.4
+   }
+  ],
+  "trend": 0.07,
+  "churn": {
+   "start": "2025-11-28"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b4-078",
+  "kind": "grocery",
+  "name": "Emporio Donati",
+  "story": "Discount minimarket; prefers cases of water and cola, pushes volume in summer.",
+  "core": [
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.84
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 3,
+    "prob": 0.75
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 5,
+    "prob": 0.44
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 6,
+    "prob": 0.52
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 5,
+    "prob": 0.51
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 4,
+    "prob": 0.46
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   3,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.96,
+   "december": 0.63
+  },
+  "events": [
+   {
+    "date": "2025-08-29",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-05-14",
+    "mult": 2.3
+   },
+   {
+    "date": "2026-05-22",
+    "mult": 1.8
+   }
+  ],
+  "trend": -0.12,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "PAS-SPA-500",
+   "from": "2025-09-05"
+  },
+  "extras_rate": 0.01
+ },
+ {
+  "id": "b4-079",
+  "kind": "grocery",
+  "name": "Bottega Caputo",
+  "story": "Alimentari run by two brothers; orders on fixed weekdays, never runs out of pasta.",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.77
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.64
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.46
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 4,
+    "prob": 0.86
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 4,
+    "prob": 0.65
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.34
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 6,
+    "prob": 0.41
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.87
+   }
+  ],
+  "cadence_days": 13,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.98,
+   "december": 0.38
+  },
+  "events": [
+   {
+    "date": "2025-04-13",
+    "mult": 3.5
+   },
+   {
+    "date": "2026-04-29",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-05-30",
+    "mult": 2.7
+   }
+  ],
+  "trend": 0.03,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "OLI-EVO-1L",
+   "from": "2025-06-13"
+  },
+  "extras_rate": 0.22
+ },
+ {
+  "id": "b4-080",
+  "kind": "grocery",
+  "name": "Emporio Fabbri",
+  "story": "Alimentari run by two brothers; orders on fixed weekdays, never runs out of pasta.",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 5,
+    "prob": 0.67
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 3,
+    "prob": 0.92
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 0.5,
+    "prob": 0.44
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1.5,
+    "prob": 0.34
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2,
+    "prob": 0.35
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3,
+    "prob": 0.92
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 4,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2,
+    "prob": 0.66
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.99,
+   "december": 0.09
+  },
+  "events": [
+   {
+    "date": "2026-01-21",
+    "mult": 3.2
+   }
+  ],
+  "trend": -0.24,
+  "churn": {
+   "start": "2026-06-04"
+  },
+  "adopt": null,
+  "drop": {
+   "sku": "SAL-COT",
+   "from": "2025-12-18"
+  },
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b4-081",
+  "kind": "grocery",
+  "name": "Drogheria Sartori",
+  "story": "Market-stall grocer; buys what sells that week, lots of variety in small amounts.",
+  "core": [
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 5,
+    "prob": 0.4
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 4,
+    "prob": 0.81
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 4,
+    "prob": 0.53
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.81
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.85,
+   "december": 0.42
+  },
+  "events": [
+   {
+    "date": "2024-10-30",
+    "mult": 3.6
+   },
+   {
+    "date": "2026-05-19",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-07-18",
+    "mult": 3.5
+   }
+  ],
+  "trend": 0.21,
+  "churn": null,
+  "adopt": {
+   "sku": "DIS-TOV-40",
+   "from": "2026-06-15"
+  },
+  "drop": {
+   "sku": "PAS-SPA-500",
+   "from": "2026-07-18"
+  },
+  "extras_rate": 0.3
+ },
+ {
+  "id": "b4-082",
+  "kind": "grocery",
+  "name": "Drogheria Barbieri",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 4,
+    "prob": 0.92
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.71
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2.5,
+    "prob": 0.86
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.57
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": -0.35,
+   "december": 0.21
+  },
+  "events": [],
+  "trend": 0.52,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.49
+ },
+ {
+  "id": "b4-083",
+  "kind": "grocery",
+  "name": "Negozio Franchi",
+  "story": "Discount minimarket; prefers cases of water and cola, pushes volume in summer.",
+  "core": [
+   {
+    "sku": "SAL-PAN",
+    "qty": 3,
+    "prob": 0.52
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "prob": 0.43
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2.5,
+    "prob": 0.73
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 4,
+    "prob": 0.63
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": -0.15,
+   "december": 0.63
+  },
+  "events": [],
+  "trend": 0.08,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.09
+ },
+ {
+  "id": "b4-084",
+  "kind": "grocery",
+  "name": "Drogheria Gallo",
+  "story": "New shop finding its footing; quantities creep up each month.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.32
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 4,
+    "prob": 0.69
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 0.5,
+    "prob": 0.32
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3,
+    "prob": 0.71
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1.5,
+    "prob": 0.67
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.96
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 3,
+    "prob": 0.42
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.38,
+   "december": 0.22
+  },
+  "events": [
+   {
+    "date": "2025-06-15",
+    "mult": 3.7
+   }
+  ],
+  "trend": 0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.1
+ },
+ {
+  "id": "b4-085",
+  "kind": "grocery",
+  "name": "Bottega Ghirardi",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 0.5,
+    "prob": 0.75
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.63
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 1,
+    "prob": 0.43
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 3,
+    "prob": 0.6
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 5,
+    "prob": 0.38
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.86
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.72,
+   "december": 0.71
+  },
+  "events": [
+   {
+    "date": "2025-07-21",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-02-16",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-07-17",
+    "mult": 1.8
+   }
+  ],
+  "trend": -0.05,
+  "churn": {
+   "start": "2026-04-29"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.48
+ },
+ {
+  "id": "b4-086",
+  "kind": "grocery",
+  "name": "Alimentare Rinaldi",
+  "story": "Minimarket with a cleaning aisle; orders bags, detergent and kitchen roll weekly.",
+  "core": [
+   {
+    "sku": "POM-CON-800",
+    "qty": 4,
+    "prob": 0.93
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "prob": 0.73
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 1,
+    "prob": 0.87
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 2,
+    "prob": 0.81
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 1,
+    "prob": 0.95
+   }
+  ],
+  "cadence_days": 11,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.51,
+   "december": 1.19
+  },
+  "events": [
+   {
+    "date": "2025-05-01",
+    "mult": 2.3
+   },
+   {
+    "date": "2025-06-30",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-07-12",
+    "mult": 3.0
+   },
+   {
+    "date": "2025-10-13",
+    "mult": 2.6
+   }
+  ],
+  "trend": -0.03,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.29
+ },
+ {
+  "id": "b4-087",
+  "kind": "grocery",
+  "name": "Negozio Zanetti",
+  "story": "Discount minimarket; prefers cases of water and cola, pushes volume in summer.",
+  "core": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 3,
+    "prob": 0.53
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 3,
+    "prob": 0.31
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 4,
+    "prob": 0.75
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 5,
+    "prob": 0.48
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 1,
+    "prob": 0.75
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 1,
+    "prob": 0.6
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": -0.05,
+   "december": 0.24
+  },
+  "events": [
+   {
+    "date": "2025-02-24",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-08-23",
+    "mult": 3.3
+   }
+  ],
+  "trend": -0.27,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.44
+ },
+ {
+  "id": "b4-088",
+  "kind": "grocery",
+  "name": "Negozio Pagano",
+  "story": "Shop with a coffee corner; milk, coffee beans and biscuits are the core.",
+  "core": [
+   {
+    "sku": "SAL-COT",
+    "qty": 1.5,
+    "prob": 0.99
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.54
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1.5,
+    "prob": 0.52
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.81
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.29,
+   "december": 1.09
+  },
+  "events": [
+   {
+    "date": "2025-02-17",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-08-30",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-09-12",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-11-19",
+    "mult": 3.5
+   }
+  ],
+  "trend": -0.06,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.21
+ },
+ {
+  "id": "b4-089",
+  "kind": "grocery",
+  "name": "Alimentari Santini",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 5,
+    "prob": 0.55
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2.5,
+    "prob": 0.61
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 2,
+    "prob": 0.31
+   }
+  ],
+  "cadence_days": 13,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.19,
+   "december": 0.49
+  },
+  "events": [
+   {
+    "date": "2024-12-31",
+    "mult": 2.7
+   },
+   {
+    "date": "2025-05-13",
+    "mult": 3.5
+   },
+   {
+    "date": "2025-12-09",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-08-25",
+    "mult": 3.3
+   }
+  ],
+  "trend": -0.05,
+  "churn": {
+   "start": "2025-07-10"
+  },
+  "adopt": {
+   "sku": "SAL-MOR",
+   "from": "2026-05-17"
+  },
+  "drop": null,
+  "extras_rate": 0.19
+ },
+ {
+  "id": "b4-090",
+  "kind": "grocery",
+  "name": "Minimarket Gallo",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 4,
+    "prob": 0.67
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 2,
+    "prob": 0.67
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 3,
+    "prob": 0.93
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.51
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.52,
+   "december": 0.31
+  },
+  "events": [
+   {
+    "date": "2025-03-27",
+    "mult": 1.8
+   },
+   {
+    "date": "2026-01-05",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-01-08",
+    "mult": 3.5
+   }
+  ],
+  "trend": -0.24,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.05
+ },
+ {
+  "id": "b4-091",
+  "kind": "grocery",
+  "name": "Alimentare Zanetti",
+  "story": "Busy minimarket near the station; fast-moving soft drinks and bottled water.",
+  "core": [
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 2,
+    "prob": 0.53
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 4,
+    "prob": 0.46
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 4,
+    "prob": 0.44
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.16,
+   "december": 0.22
+  },
+  "events": [
+   {
+    "date": "2025-05-26",
+    "mult": 3.5
+   }
+  ],
+  "trend": 0.28,
+  "churn": {
+   "start": "2026-04-27"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.02
+ },
+ {
+  "id": "b4-092",
+  "kind": "grocery",
+  "name": "Alimentare Vitali",
+  "story": "Neighbourhood grocer; buys pasta and tinned tomatoes in bulk before holidays.",
+  "core": [
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.88
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 2,
+    "prob": 0.76
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 1,
+    "prob": 0.67
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 1.19,
+   "december": 0.93
+  },
+  "events": [
+   {
+    "date": "2025-03-04",
+    "mult": 1.9
+   },
+   {
+    "date": "2025-03-19",
+    "mult": 3.1
+   },
+   {
+    "date": "2026-06-21",
+    "mult": 3.9
+   }
+  ],
+  "trend": 0.06,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.12
+ },
+ {
+  "id": "b4-093",
+  "kind": "grocery",
+  "name": "Emporio Lodi",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "BEV-COL-33",
+    "qty": 4,
+    "prob": 0.57
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 4,
+    "prob": 0.9
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 5,
+    "prob": 0.77
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 2,
+    "prob": 0.73
+   }
+  ],
+  "cadence_days": 9,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 1.15,
+   "december": 0.42
+  },
+  "events": [
+   {
+    "date": "2025-10-16",
+    "mult": 2.6
+   }
+  ],
+  "trend": 0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.02
+ },
+ {
+  "id": "b4-094",
+  "kind": "grocery",
+  "name": "Negozio Fontana",
+  "story": "Village alimentari; deliveries on Tuesday and Friday, cheese on demand.",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.42
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6,
+    "prob": 0.67
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 6,
+    "prob": 0.63
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.83
+   }
+  ],
+  "cadence_days": 13,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.28,
+   "december": 0.03
+  },
+  "events": [],
+  "trend": 0.26,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.32
+ },
+ {
+  "id": "b4-095",
+  "kind": "grocery",
+  "name": "Negozio Sartori",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 2,
+    "prob": 0.32
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3,
+    "prob": 0.54
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.91
+   },
+   {
+    "sku": "BEV-CHI-20",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 1,
+    "prob": 0.84
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 2,
+    "prob": 0.46
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.72,
+   "december": 0.5
+  },
+  "events": [],
+  "trend": 0.23,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b4-096",
+  "kind": "grocery",
+  "name": "Emporio Greco",
+  "story": "Corner shop open late; keeps beer and wine chilled, reorders often.",
+  "core": [
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 4,
+    "prob": 0.79
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 2,
+    "prob": 0.77
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.55
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 5,
+    "prob": 0.8
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.48,
+   "december": 0.93
+  },
+  "events": [
+   {
+    "date": "2025-07-21",
+    "mult": 2.9
+   },
+   {
+    "date": "2025-07-28",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-04-25",
+    "mult": 2.8
+   }
+  ],
+  "trend": -0.01,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-SAL",
+   "from": "2025-11-20"
+  },
+  "drop": null,
+  "extras_rate": 0.0
+ },
+ {
+  "id": "b4-097",
+  "kind": "grocery",
+  "name": "Minimarket Rinaldi",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "SAL-PAN",
+    "qty": 0.5,
+    "prob": 0.82
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3,
+    "prob": 0.52
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.87
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.46
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.53,
+   "december": 0.51
+  },
+  "events": [
+   {
+    "date": "2025-04-02",
+    "mult": 2.2
+   },
+   {
+    "date": "2025-06-19",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-05-15",
+    "mult": 2.4
+   }
+  ],
+  "trend": 0.41,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.47
+ },
+ {
+  "id": "b4-098",
+  "kind": "grocery",
+  "name": "Emporio Franchi",
+  "story": "Village alimentari; deliveries on Tuesday and Friday, cheese on demand.",
+  "core": [
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 3,
+    "prob": 0.71
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.42
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 4,
+    "prob": 0.83
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 3,
+    "prob": 0.37
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 4,
+    "prob": 0.6
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   3
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.14,
+   "december": 0.04
+  },
+  "events": [],
+  "trend": 0.22,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.22
+ },
+ {
+  "id": "b4-099",
+  "kind": "grocery",
+  "name": "Bottega Santini",
+  "story": "Alimentari run by two brothers; orders on fixed weekdays, never runs out of pasta.",
+  "core": [
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2,
+    "prob": 0.61
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.31
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.54
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 6,
+    "prob": 0.43
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.81
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.33,
+   "december": 1.07
+  },
+  "events": [
+   {
+    "date": "2025-12-12",
+    "mult": 1.7
+   },
+   {
+    "date": "2026-03-18",
+    "mult": 2.0
+   },
+   {
+    "date": "2026-10-01",
+    "mult": 3.7
+   }
+  ],
+  "trend": -0.2,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.27
+ },
+ {
+  "id": "b4-100",
+  "kind": "grocery",
+  "name": "Bottega Mancini",
+  "story": "Local emporio; premium oils and aged cheeses, steady small orders.",
+  "core": [
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 6,
+    "prob": 0.3
+   },
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 4,
+    "prob": 0.91
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 2,
+    "prob": 0.47
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.34
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 4,
+    "prob": 0.62
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 1.14,
+   "december": 0.33
+  },
+  "events": [
+   {
+    "date": "2024-12-07",
+    "mult": 2.7
+   },
+   {
+    "date": "2025-10-08",
+    "mult": 2.2
+   },
+   {
+    "date": "2026-04-10",
+    "mult": 4.0
+   }
+  ],
+  "trend": 0.16,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.18
+ }
+]

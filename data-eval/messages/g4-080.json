@@ -1,0 +1,8 @@
+{
+ "id": "g4-080",
+ "customer_id": "deli-mulino",
+ "channel": "email",
+ "received_at": "2026-10-16T09:20:00+02:00",
+ "sender": "Rina",
+ "text": "Oggetto: ordine\n\nBuongiorno Marta, confermo ordine con consegna 13 ottobre: 3 kg cotto, 2 kg speck.\nRina"
+}

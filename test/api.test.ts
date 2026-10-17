@@ -264,3 +264,29 @@ describe("API", () => {
     expect((await c.patch("/api/lines/x", [1])).status).toBe(422);
   });
 });
+
+describe("suggestions", () => {
+  it("adds a forecast-suggested line to a draft, refuses bad input and confirmed orders, counts feedback", async () => {
+    const c = client(new FakeModel([JSON.stringify(WA_ANSWER)]));
+    await c.post("/api/messages/wa-1/read");
+    const oid = (await c.get("/api/messages/wa-1")).json.order.id as string;
+    const before = (await c.get("/api/messages/wa-1")).json.order.lines.length;
+    const r = await c.post(`/api/orders/${oid}/lines`, { sku: "PRC1", qty: 2 });
+    expect(r.status).toBe(200);
+    expect(r.json.lines).toHaveLength(before + 1);
+    expect(r.json.lines.at(-1)).toMatchObject({ sku: "PRC1", qty: 2, state: "ok", origin: "usual" });
+    expect(r.json.lines.at(-1).flags[0].message).toBe("Suggested by the forecast model");
+    expect((await c.post(`/api/orders/${oid}/lines`, { sku: "NOPE", qty: 1 })).status).toBe(400);
+    expect((await c.post(`/api/orders/${oid}/lines`, { sku: "PRC1", qty: 0 })).status).toBe(400);
+    expect((await c.get("/api/suggestions/feedback/count")).json).toEqual({ added: 0, dismissed: 0, total: 0 });
+    const fb = { customer_id: "bar", order_id: oid, sku: "PRC1", qty: 2, p: 0.7 };
+    expect((await c.post("/api/suggestions/feedback", { ...fb, action: "added" })).status).toBe(200);
+    expect((await c.post("/api/suggestions/feedback", { ...fb, action: "dismissed" })).status).toBe(200);
+    expect((await c.post("/api/suggestions/feedback", { ...fb, action: "maybe" })).status).toBe(422);
+    expect((await c.get("/api/suggestions/feedback/count")).json).toEqual({ added: 1, dismissed: 1, total: 2 });
+    await c.patch(`/api/lines/${r.json.lines[0].id}`, { removed: true });
+    for (const l of r.json.lines.slice(1)) if (l.state !== "ok") await c.patch(`/api/lines/${l.id}`, { removed: true });
+    const cf = await c.post(`/api/orders/${oid}/confirm`, { acknowledged: ["discount_beyond_terms", "unusual_quantity", "price_below_terms"] });
+    if (cf.status === 200) expect((await c.post(`/api/orders/${oid}/lines`, { sku: "PRC1", qty: 1 })).status).toBe(409);
+  });
+});

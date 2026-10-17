@@ -1,0 +1,14 @@
+device: cuda (AMD Radeon Pro W7900D)  torch 2.13.0+rocm10.0.0
+customers train/val/test 630/135/135; examples 141457/32883 (7.4s)
+params: 122,285
+ep   1 train 2.696 | val loss 1.329 gapMAE 1.50d churnAUC 0.426 F1 0.000  [8s]
+ep   5 train -0.116 | val loss 0.345 gapMAE 1.46d churnAUC 0.772 F1 0.760  [25s]
+ep  10 train -0.427 | val loss 0.033 gapMAE 1.46d churnAUC 0.913 F1 0.801  [46s]
+ep  15 train -0.718 | val loss 0.706 gapMAE 1.45d churnAUC 0.926 F1 0.803  [67s]
+ep  20 train -0.978 | val loss 1.005 gapMAE 1.44d churnAUC 0.901 F1 0.806  [87s]
+ep  25 train -1.156 | val loss 1.449 gapMAE 1.44d churnAUC 0.864 F1 0.808  [108s]
+ep  30 train -1.347 | val loss 1.713 gapMAE 1.45d churnAUC 0.804 F1 0.806  [128s]
+ep  35 train -1.446 | val loss 2.070 gapMAE 1.45d churnAUC 0.798 F1 0.808  [149s]
+ep  40 train -1.479 | val loss 2.155 gapMAE 1.45d churnAUC 0.792 F1 0.808  [169s]
+trained in 169s on AMD Radeon Pro W7900D; best epoch 21; val {'loss': 1.1098709106445312, 'gap_mae_days': 1.4345983266830444, 'churn_auc': 0.9256011076442373, 'basket_f1': 0.8094083070755005, 'gap': 0.3468465507030487, 'churn': 0.014452795498073101, 'bce': 0.7142466306686401, 'qty': 0.017162425443530083, 'epoch': 21}
+weights: 0.50 MB

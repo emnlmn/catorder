@@ -1,0 +1,8 @@
+{
+ "id": "g2-020",
+ "customer_id": "bar-ponterosso",
+ "channel": "email",
+ "received_at": "2026-10-14T07:20:00+02:00",
+ "sender": "Giulia",
+ "text": "Oggetto: ordine\n\nciao marta,\n3 cartoni di bicchierini caffe\n2 cartoni di tovaglioli 33\n1 cs di aranciata\n\ngiulia"
+}

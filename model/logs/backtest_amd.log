@@ -1,0 +1,18 @@
+
+== last_order (n=135 baskets, test customers) ==
+method                          recall_at_5      precision         recall             f1      qty_exact        qty_mae  date_mae_days date_within_2d
+model                                 0.911          0.786          0.898          0.823          0.596          0.529          2.807          0.674
+P-TopFreq + median cadence            0.904          0.790          0.850          0.803          0.590          0.548          2.822          0.659
+
+== last_3_cutoffs (n=405 baskets, test customers) ==
+method                          recall_at_5      precision         recall             f1      qty_exact        qty_mae  date_mae_days date_within_2d
+model                                 0.907          0.786          0.888          0.819          0.597          0.559          2.232          0.726
+P-TopFreq + median cadence            0.900          0.801          0.849          0.808          0.596          0.564          2.220          0.719
+
+== summer_orders (n=790 baskets, test customers) ==
+method                          recall_at_5      precision         recall             f1      qty_exact        qty_mae  date_mae_days date_within_2d
+model                                 0.888          0.776          0.863          0.803          0.554          0.655          1.365          0.815
+P-TopFreq + median cadence            0.882          0.784          0.839          0.795          0.521          0.831          1.371          0.806
+
+== churn (n=12401 snapshots, 652 positive) ==
+AUC model 0.939 | baseline (days since last / median gap) 0.962

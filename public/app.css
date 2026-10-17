@@ -278,10 +278,6 @@ button.bub:hover{background:color-mix(in srgb,var(--ink) 6%,var(--paper))}
 .bm{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin-top:2px;font-size:12px;line-height:1.2;color:var(--muted)}
 .day{align-self:center;margin:12px 0 4px;padding:2px 10px;border-radius:8px;background:color-mix(in srgb,var(--ink) 7%,var(--paper));font-size:12px;font-weight:600;color:var(--muted)}
 .day:first-child{margin-top:0}
-.chip{align-self:flex-start;margin:0 0 14px 6px;padding:1px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:12px;font-weight:500;line-height:1.5}
-.chip.none{border-color:transparent;padding-left:4px;color:var(--muted)}
-.chip.confirmed{background:var(--eye)}
-.chip.check{background:var(--ink);color:var(--paper)}
 /* our side of the chat: the reply, right-aligned; ink when sent, a dashed paper draft while the operator can still change it */
 .msg.out{align-items:flex-end}
 .msg.out .bub{background:var(--ink);color:var(--paper);border-radius:10px 16px 4px 16px;cursor:default}
@@ -375,9 +371,6 @@ button.bub:hover{background:color-mix(in srgb,var(--ink) 6%,var(--paper))}
   .msg .bub{max-width:88%}
   .panel{padding:16px}
 }
-.og{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-left:10px}
-.og::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:3px;border-radius:2px;background:var(--ink)}
-.og.confirmed::before{background:#A0E249}
 .nmsg{font-size:14px;font-weight:400;color:var(--muted)}
 .route{align-self:flex-start;margin:0 0 8px;padding:2px 0;border:0;background:none;font:inherit;font-size:14px;color:var(--ink);text-decoration:underline;cursor:pointer}
 
@@ -417,3 +410,52 @@ button.bub:hover{background:color-mix(in srgb,var(--ink) 6%,var(--paper))}
 .pick{font-weight:500;box-shadow:inset 0 0 0 1px var(--line)}
 .xmenu{box-shadow:0 12px 32px rgba(15,23,25,.18)}
 :focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+/* order ticket: the stub a conversation tears off. An elbow hooks it to the words it came from;
+   bubbles that built one order share the rail that runs down into it */
+.ticket{--tk:var(--muted);--tk-bg:var(--paper);position:relative;display:inline-grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:12px;align-self:flex-start;min-width:280px;max-width:min(440px,100%);margin:6px 0 18px 26px;padding:10px 18px 10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--tk-bg);color:var(--ink);font-size:13px;line-height:1.3;text-align:left;
+  -webkit-mask:radial-gradient(circle 6px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 6px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;
+  box-shadow:0 1px 2px rgba(15,23,25,.05);transition:border-color .15s,transform .15s cubic-bezier(.2,.7,.2,1)}
+.ticket:hover{border-color:var(--line-strong);transform:translateX(2px)}
+.tk-ic{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--tk);color:var(--paper)}
+.tk-ic svg{width:15px;height:15px;stroke-width:2.6}
+.tk-t{display:flex;flex-direction:column;min-width:0}
+.tk-t b{font-size:14px;font-weight:600}
+.tk-t span{color:var(--muted);font-variant-numeric:tabular-nums}
+.tk-st{align-self:stretch;display:grid;place-items:center;min-width:92px;padding-left:16px;border-left:1.5px dashed var(--line);white-space:nowrap;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--tk);text-align:center}
+.ticket.confirmed{--tk:#3F7A12;--tk-bg:color-mix(in srgb,var(--eye) 14%,var(--paper));border-color:color-mix(in srgb,var(--eye) 70%,var(--line))}
+.ticket.confirmed .tk-ic{background:var(--eye);color:var(--ink)}
+.ticket.check{--tk:var(--ink)}
+.ticket.draft{border-style:dashed}
+.ticket.draft .tk-ic{background:none;color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line-strong)}
+/* the hook: from the bubble's foot into the ticket's side; the ticket's mask would clip it, so it hangs off the message (or the group) behind the bubbles */
+.msg:has(> .ticket){position:relative}
+.msg > .ticket{margin-top:2px}
+.msg:has(> .ticket)::before,.og::before{content:"";position:absolute;left:12px;width:14px;border:1.5px solid var(--line-strong);border-top:0;border-right:0;border-bottom-left-radius:10px;pointer-events:none}
+.msg:has(> .ticket)::before{bottom:26px;height:40px}
+.og{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.og::before{top:28px;bottom:26px}
+.og > .msg::before{display:none}
+.og.confirmed::before,.msg:has(> .ticket.confirmed)::before{border-color:color-mix(in srgb,var(--eye) 80%,var(--ink) 10%)}
+.noorder{align-self:flex-start;margin:0 0 14px 14px;font-size:12px;color:var(--muted)}
+.noorder::before{content:"–  "}
+@media (prefers-reduced-motion:reduce){.ticket{transition:none}.ticket:hover{transform:none}}
+/* a long order folds: a stack of paper edges standing for the hidden messages */
+.fold{position:relative;display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin:4px 0 8px;padding:8px 14px 8px 8px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--muted);font-size:13px;box-shadow:0 3px 0 -1px var(--paper),0 3px 0 0 var(--line),0 6px 0 -1px var(--paper),0 6px 0 0 var(--line)}
+.fold:hover{color:var(--ink);border-color:var(--line-strong)}
+.fold-n{display:grid;place-items:center;min-width:28px;height:22px;padding:0 6px;border-radius:6px;background:var(--wash);color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.og{align-self:stretch;isolation:isolate}
+.og > .msg{align-self:stretch}
+.msg:has(> .ticket){isolation:isolate}
+.og::before,.msg:has(> .ticket)::before{z-index:-1}
+
+/* suggestions from the forecast model: quiet rows under the order, the green eye marks where to look */
+.sugs{margin:14px 0 0;padding-top:10px;border-top:1px solid var(--line)}
+.sugs-h{margin:0 0 4px;font-size:13px;color:var(--muted)}
+.sugrow{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:15px}
+.sugrow .what{flex:1;display:flex;align-items:center;gap:8px;min-width:0}
+.sugrow .eye{width:10px;height:10px}
+.sug-add{font:inherit;font-size:14px;padding:3px 12px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);color:var(--ink);cursor:pointer}
+.sug-add:hover{background:#A0E249}
+.sug-x{font:inherit;font-size:18px;line-height:1;padding:2px 8px;border:0;background:none;color:var(--muted);cursor:pointer}
+.sug-x:hover{color:var(--ink)}

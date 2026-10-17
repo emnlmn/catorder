@@ -131,6 +131,8 @@ const ICONS = {
     email: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
     arrow: '<svg viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>',
     check: '<svg viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7"/></svg>',
+    alert: '<svg viewBox="0 0 24 24"><path d="M12 7v6M12 17h.01"/></svg>',
+    draft: '<svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></svg>',
     send: '<svg viewBox="0 0 24 24"><path d="M4 12 20 4l-4 16-4.5-6.5zM11.5 13.5 20 4"/></svg>',
     play: '<svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg>',
     pause: '<svg viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>',
@@ -542,14 +544,14 @@ async function loadThread(cid) {
     }
     catch { /* no thread: the message screen stays as it was */ }
 }
-// the chip under a bubble that produced an order; a message with no order gets none
-function chip(o, n = 1) {
+// the order a message turned into, docked under it as a ticket stub hooked to its words; a message with no order gets a quiet note
+function chip(o, n = 1, id = '') {
     if (!o)
         return false;
     const st = o.status === 'confirmed' ? 'Confirmed' : o.clean ? 'Draft' : 'Check';
     if (!o.lines && o.status !== 'confirmed')
-        return h('p', { class: 'chip none' }, 'Nothing to order');
-    return h('p', { class: 'chip ' + st.toLowerCase() }, 'Order · ' + o.lines + (o.lines === 1 ? ' line · ' : ' lines · ') + (n > 1 ? n + ' messages · ' : '') + st);
+        return h('p', { class: 'noorder' }, 'No order in this message');
+    return h('button', { type: 'button', class: 'ticket ' + st.toLowerCase(), title: 'Open this order', onclick: id ? () => { void select(id, true); } : null }, glyph('tk-ic', st === 'Confirmed' ? 'check' : st === 'Check' ? 'alert' : 'draft'), h('span', { class: 'tk-t' }, h('b', null, 'Order'), h('span', null, o.lines + (o.lines === 1 ? ' line' : ' lines') + (n > 1 ? ' · from ' + n + ' messages' : ''))), h('span', { class: 'tk-st' }, st === 'Check' ? 'To check' : st));
 }
 const pastOf = (m, o) => ({ id: m.id, channel: m.channel, received_at: m.received_at, text: m.text, media_url: m.media_url || null, order: o ? { id: o.id, status: o.status, lines: lines(o).filter((l) => l.state !== 'removed').length, clean: !!o.clean, message_ids: o.message_ids } : null });
 // WhatsApp-style: the time sits in the bubble, the day once above the messages of that day
@@ -568,6 +570,7 @@ function dayLabel(iso) {
 }
 // the words of a bubble that belongs to the selected order: its slice of the combined reading, with the quotes that fall in it lit
 let curAsked = '';
+const unfolded = new Set(); // orders whose long thread the operator opened
 function segWords(p, o) {
     const sg = o && p.order && p.order.id === o.id && (o.segments || []).find((x) => x.message_id === p.id);
     if (!o || !sg)
@@ -577,7 +580,7 @@ function segWords(p, o) {
 }
 function bubble(p, o = null, solo = true) {
     const media = p.channel === 'whatsapp' ? '' : CHANNEL[p.channel] || '';
-    return h('div', { class: 'msg', 'data-msg': p.id }, h('button', { type: 'button', class: 'bub', title: 'Open this message', onclick: () => { void select(p.id, true); } }, media && h('b', { class: 'bl' }, media), p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order));
+    return h('div', { class: 'msg', 'data-msg': p.id }, h('button', { type: 'button', class: 'bub', title: 'Open this message', onclick: () => { void select(p.id, true); } }, media && h('b', { class: 'bl' }, media), p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order, 1, p.id));
 }
 // the whole conversation, oldest first; the open message is its full self (quotes lit, player, photo), the rest are one click away
 function threadEl(m, o, open) {
@@ -603,10 +606,26 @@ function threadEl(m, o, open) {
     };
     return h('div', { id: 'msgs', class: 'msgs', role: 'log', 'aria-label': 'Conversation' }, groups.map((g) => {
         const solo = g.length === 1, ord = g[g.length - 1].order;
-        const items = g.map((p) => [day(p), ...(p.id === m.id ? open(solo) : [bubble(p, o, solo), p.reply && p.reply.status === 'sent' && replyEl(p.reply, p.id)])]);
+        const item = (p) => [day(p), ...(p.id === m.id ? open(solo) : [bubble(p, o, solo), p.reply && p.reply.status === 'sent' && replyEl(p.reply, p.id)])];
         if (solo)
-            return items;
-        return h('div', { class: 'og ' + (ord && ord.status === 'confirmed' ? 'confirmed' : 'draft') }, items, chip(ord, Math.max(g.length, (ord && ord.message_ids || []).length)));
+            return g.map(item);
+        // a long order folds to its first and last two messages (and the open one); the fold says how many it holds
+        const oid = ord ? ord.id : '', keep = (i) => g.length <= 5 || unfolded.has(oid) || i < 2 || i >= g.length - 2 || g[i].id === m.id;
+        const items = [];
+        for (let i = 0; i < g.length; i++) {
+            if (keep(i)) {
+                items.push(item(g[i]));
+                continue;
+            }
+            let j = i;
+            while (j < g.length && !keep(j))
+                j++;
+            const n = j - i;
+            g.slice(i, j).forEach(day); // the days inside the fold are passed, not shown
+            items.push(h('button', { type: 'button', class: 'fold', onclick: () => { unfolded.add(oid); renderScreen(); } }, h('span', { class: 'fold-n' }, '+' + n), n === 1 ? '1 more message in this order' : n + ' more messages in this order'));
+            i = j - 1;
+        }
+        return h('div', { class: 'og ' + (!ord ? '' : ord.status === 'confirmed' ? 'confirmed' : ord.clean ? 'draft' : 'check') }, items, chip(ord, Math.max(g.length, (ord && ord.message_ids || []).length), g[g.length - 1].id));
     }));
 }
 // our side of the chat, on the right: the reply being written, the draft to edit, or what was sent
@@ -743,10 +762,32 @@ function orderScreen(d, asked) {
     return h('div', { class: 'scr' }, h('section', { class: 'conv' }, h('header', { class: 'conv-h' }, h('h1', { class: 'toon' }, who.name), m.customer_id && h('div', { class: 'meta cust' }, custLine(m.customer_id))), threadEl(m, o, open)), h('aside', { class: 'panel', 'aria-label': 'Order' }, h('header', { class: 'panel-h' }, h('h2', { class: 'toon' }, 'Order', nMsgs > 1 && h('span', { class: 'nmsg' }, ' · ' + nMsgs + ' messages')), h('span', { class: 'pill ' + pill.toLowerCase() }, pill)), routeBtn && h('button', { type: 'button', class: 'route', onclick: () => { void doRead(routeBtn.to); } }, routeBtn.label), o ? [
         delivery && h('p', { class: 'deliver' }, delivery),
         list(o, asked, fresh),
+        o.status === 'draft' && m.customer_id && suggestions(o, m.customer_id),
         !!total && h('p', { class: 'total' }, h('span', {}, 'Total'), h('b', { class: 'toon' }, eur(total))),
         h('div', { class: 'foot' }, infos.map((f) => h('p', {}, f.message))),
         o.status === 'confirmed' && erp(o, who.name),
     ] : h('p', { class: 'none' }, reading ? 'Reading the message…' : 'Not read yet.')));
+}
+const SUG = {}; // per customer id; null = fetching or failed, nothing shown
+const SUGGONE = new Set(); // order id + sku, answered
+function suggestions(o, cid) {
+    if (!(cid in SUG)) {
+        SUG[cid] = null;
+        api('/customers/' + cid + '/prediction').then((x) => { SUG[cid] = x.basket.filter((b) => b.p >= 0.5); if (S.detail && S.detail.message.customer_id === cid)
+            renderScreen(); }, () => { });
+    }
+    const have = new Set(lines(o).filter((l) => l.state !== 'removed').map((l) => l.sku));
+    const left = (SUG[cid] || []).filter((b) => !have.has(b.sku) && !SUGGONE.has(o.id + b.sku)).slice(0, 3);
+    if (!left.length)
+        return false;
+    const answer = (b, action) => {
+        SUGGONE.add(o.id + b.sku);
+        void send('POST', '/suggestions/feedback', { customer_id: cid, order_id: o.id, sku: b.sku, qty: b.qty, p: b.p, action }).catch(() => { });
+        if (action === 'dismissed')
+            return renderScreen();
+        send('POST', '/orders/' + o.id + '/lines', { sku: b.sku, qty: b.qty }).then(() => loadDetail(), (e) => { SUGGONE.delete(o.id + b.sku); toast(errMsg(e)); });
+    };
+    return h('section', { class: 'sugs', 'aria-label': 'Suggested by the forecast model' }, h('p', { class: 'sugs-h' }, 'Usually also takes · forecast model'), left.map((b) => h('div', { class: 'sugrow' }, h('span', { class: 'what' }, h('i', { class: 'eye' }), b.qty + ' × ' + b.name), h('button', { type: 'button', class: 'sug-add', onclick: () => answer(b, 'added') }, 'Add'), h('button', { type: 'button', class: 'sug-x', 'aria-label': 'Dismiss ' + b.name, onclick: () => answer(b, 'dismissed') }, '×'))));
 }
 function list(o, asked, fresh) {
     const ls = lines(o);

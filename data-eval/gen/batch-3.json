@@ -1,0 +1,3405 @@
+{
+ "messages": [
+  {
+   "id": "g3-001",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T18:05:00+02:00",
+   "sender": "Giulia",
+   "text": "ciao marta, mi servono 3 cs di gran crema e 2 cs di weiss per giovedi, grazie!"
+  },
+  {
+   "id": "g3-002",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T11:30:00+02:00",
+   "sender": "Rina",
+   "text": "marta x martedi 5 kg di crudo, 3 di cotto e 2 kg di bresaola"
+  },
+  {
+   "id": "g3-003",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T07:40:00+02:00",
+   "sender": "Nicola",
+   "text": "buongiorno, 2 sacchi di farina 25 kg e 1 latta olio 5 lt per mercoledi"
+  },
+  {
+   "id": "g3-004",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T09:20:00+02:00",
+   "sender": "Davide",
+   "text": "buongiorno marta, per sabato: 2 cs di roccafiera, 1 cs di rosato e 2 cs di punta calma. grazie"
+  },
+  {
+   "id": "g3-005",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T06:45:00+02:00",
+   "sender": "Luca",
+   "text": "mi mandi 4 cs di brivio friz, 6 di brivio nat e 1 cs di carta asciugamani?"
+  },
+  {
+   "id": "g3-006",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T10:00:00+02:00",
+   "sender": "Sara",
+   "text": "buongiorno, sono sara dell'emporio. mi serve 1 cs di orzo, 2 cs di decaf e 3 di zucchero bustine"
+  },
+  {
+   "id": "g3-007",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T12:10:00+02:00",
+   "sender": "Ciro",
+   "text": "3 cs ciliegino, 2 cs doppio concentrato, 1 cs passata. mercoledi grazie"
+  },
+  {
+   "id": "g3-008",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T07:55:00+02:00",
+   "sender": "Giulia",
+   "text": "x domani: 2 cs aranciata, 1 cs chinotto valsorda, 1 di gazzosa"
+  },
+  {
+   "id": "g3-009",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T11:15:00+02:00",
+   "sender": "Chiara",
+   "text": "Per sabato: 4 kg di fiordilatte, 3 kg di taleggio, 2 kg di gorgonzola e 1 kg di ricotta"
+  },
+  {
+   "id": "g3-010",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T20:00:00+02:00",
+   "sender": "Marco",
+   "text": "sabato c'è la festa del paese: 6 cs di tonica, 3 cs di succo di pera e 2 cs di cola"
+  },
+  {
+   "id": "g3-011",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T08:20:00+02:00",
+   "sender": "Rina",
+   "text": "6 bt olio evo e una latta di olio 5 l"
+  },
+  {
+   "id": "g3-012",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T16:30:00+02:00",
+   "sender": "Nicola",
+   "text": "per la serata: 3 cs di lager, 1 cs di rossa, 1 cs di weiss"
+  },
+  {
+   "id": "g3-013",
+   "customer_id": "bar-ponterosso",
+   "channel": "email",
+   "received_at": "2026-10-15T10:12:00+02:00",
+   "sender": "Giulia",
+   "text": "Oggetto: ordine pulizie\n\nBuongiorno Marta,\nmi servono: 2 cs di sacchi neri, 1 cs di carta asciugamani, 1 detersivo piatti, 1 cs di guanti nitrile e 2 rotoli di pellicola alimentare.\nGrazie,\nGiulia - Bar Ponte Rosso"
+  },
+  {
+   "id": "g3-014",
+   "customer_id": "deli-mulino",
+   "channel": "email",
+   "received_at": "2026-10-17T18:30:00+02:00",
+   "sender": "Rina",
+   "text": "Oggetto: materiale\n\nCiao Marta, per martedi 2 rotoli di alluminio, 3 rotoli di pellicola e 1 cs di tovaglioli grandi.\nRina"
+  },
+  {
+   "id": "g3-015",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T08:05:00+02:00",
+   "sender": "Enzo",
+   "text": "domani 6 sacchi di semola rimacinata e 2 di manitoba"
+  },
+  {
+   "id": "g3-016",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T17:30:00+02:00",
+   "sender": "Luca",
+   "text": "mi servono 2 cs di terrealte e 2 cs di rosso colline per sabato"
+  },
+  {
+   "id": "g3-017",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T21:15:00+02:00",
+   "sender": "Davide",
+   "text": "per giovedi: 3 cs di bianco fiorito, 1 cs di cascina orsola e 2 cs di ca serena"
+  },
+  {
+   "id": "g3-018",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T19:20:00+02:00",
+   "sender": "Ciro",
+   "text": "zeffiro cola 6 cs e 2 cs di lunaria tonica"
+  },
+  {
+   "id": "g3-019",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "email",
+   "received_at": "2026-10-16T12:40:00+02:00",
+   "sender": "Anwar",
+   "text": "Oggetto: ordine settimana\n\nBuongiorno,\nvorrei ordinare 3 cs di pelati 2,5, 2 cs di passata di pomodoro e 1 cs di succo ace.\nGrazie mille\nAnwar"
+  },
+  {
+   "id": "g3-020",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T11:00:00+02:00",
+   "sender": "Chiara",
+   "text": "ciao marta, scusa avete il tartufo? se si mi dici quanto costa al kg, grazie"
+  },
+  {
+   "id": "g3-021",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T13:30:00+02:00",
+   "sender": "Ciro",
+   "text": "le lattine di cola dell'ultima consegna erano ammaccate, mi fate la nota di credito?"
+  },
+  {
+   "id": "g3-022",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T10:05:00+02:00",
+   "sender": "Franco",
+   "text": "marta 2 kg di guanciale, 2 kg di pancetta, 3 kg di salame nostrano"
+  },
+  {
+   "id": "g3-023",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T10:40:00+02:00",
+   "sender": "Nicola",
+   "text": "mozzarella di bufala 3 kg e 5 kg di fiordilatte per sabato"
+  },
+  {
+   "id": "g3-024",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T08:50:00+02:00",
+   "sender": "Sara",
+   "text": "ciao sara qui, 6 bottiglie di prosecco per il compleanno + 2 cs di cola"
+  },
+  {
+   "id": "g3-025",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T12:00:00+02:00",
+   "sender": "Giulia",
+   "text": "il solito + 2 cs di prosecco per sabato"
+  },
+  {
+   "id": "g3-026",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T16:00:00+02:00",
+   "sender": "Chiara",
+   "text": "per sabato 12 bottiglie di vallecorta e 2 kg di ricotta"
+  },
+  {
+   "id": "g3-027",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T13:20:00+02:00",
+   "sender": "Marco",
+   "text": "2 cs di succo e 3 cs di cola per giovedi"
+  },
+  {
+   "id": "g3-028",
+   "customer_id": "rist-gelsomino",
+   "channel": "email",
+   "received_at": "2026-10-15T14:00:00+02:00",
+   "sender": "Davide",
+   "text": "Oggetto: vino per il fine settimana\n\nBuongiorno Marta,\nper sabato vorremmo 4 cs di vino rosso e 2 kg di grana.\nGrazie,\nDavide"
+  },
+  {
+   "id": "g3-029",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T09:30:00+02:00",
+   "sender": "Luca",
+   "text": "mandami 1 cs di acqua e 1 cs di cola per domani"
+  },
+  {
+   "id": "g3-030",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T09:50:00+02:00",
+   "sender": "Chiara",
+   "text": "per sabato anche 2 cs di acqua 50cl per i tavoli fuori, il resto come sempre"
+  },
+  {
+   "id": "g3-031",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T10:10:00+02:00",
+   "sender": "Rina",
+   "text": "il solito + 2 kg di prosciutto"
+  },
+  {
+   "id": "g3-032",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T17:20:00+02:00",
+   "sender": "Sara",
+   "text": "1 cs di pomodori e 2 cs di penne per lunedi"
+  },
+  {
+   "id": "g3-033",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T18:00:00+02:00",
+   "sender": "Franco",
+   "text": "3 kg di prosciutto e 2 kg di speck per sabato"
+  },
+  {
+   "id": "g3-034",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T13:00:00+02:00",
+   "sender": "Enzo",
+   "text": "domani 2 cs di succo e 4 sacchi di farina 00 5kg"
+  },
+  {
+   "id": "g3-035",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T11:00:00+02:00",
+   "sender": "Anwar",
+   "text": "ciao, vorrei 2 cs di prosecco brut"
+  },
+  {
+   "id": "g3-036",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T10:20:00+02:00",
+   "sender": "Giulia",
+   "text": "per lunedi 6 cs di vino rosso"
+  },
+  {
+   "id": "g3-037",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T08:30:00+02:00",
+   "sender": "Chiara",
+   "text": "2 kg di burrata e 3 kg di fiordilatte per sabato"
+  },
+  {
+   "id": "g3-038",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T18:10:00+02:00",
+   "sender": "Giulia",
+   "text": "il solito + 1 cs di gin"
+  },
+  {
+   "id": "g3-039",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T09:30:00+02:00",
+   "sender": "Enzo",
+   "text": "3 kg di lievito di birra e 2 cs di cola"
+  },
+  {
+   "id": "g3-040",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T14:30:00+02:00",
+   "sender": "Sara",
+   "text": "mi servono 2 barattoli di olive nere e 3 cs di penne"
+  },
+  {
+   "id": "g3-041",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T10:05:00+02:00",
+   "sender": "Rina",
+   "text": "1 culatello intero e 4 kg di speck, venerdi"
+  },
+  {
+   "id": "g3-042",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T17:30:00+02:00",
+   "sender": "Davide",
+   "text": "2 kg di porcini e 2 cs di spaghetti"
+  },
+  {
+   "id": "g3-043",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T12:00:00+02:00",
+   "sender": "Luca",
+   "text": "una cassa di lambrusco e 2 cs di tonica"
+  },
+  {
+   "id": "g3-044",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T13:15:00+02:00",
+   "sender": "Nicola",
+   "text": "5 kg di salsiccia e 4 sacchi di farina 00"
+  },
+  {
+   "id": "g3-045",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T19:00:00+02:00",
+   "sender": "Anwar",
+   "text": "ciao, 3 pacchi di pane carasau e 2 cs di riso"
+  },
+  {
+   "id": "g3-046",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T09:00:00+02:00",
+   "sender": "Marco",
+   "text": "6 sacchi di ghiaccio per sabato e 2 cs di tonica"
+  },
+  {
+   "id": "g3-047",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T20:10:00+02:00",
+   "sender": "Chiara",
+   "text": "1 cs di champagne per il compleanno di sabato e 2 kg di grana"
+  },
+  {
+   "id": "g3-048",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "email",
+   "received_at": "2026-10-18T09:00:00+02:00",
+   "sender": "Sara",
+   "text": "Oggetto: ordine\n\nBuongiorno,\nci servono 2 cs di ipa e 3 cs di acqua naturale per martedi.\nGrazie, Sara"
+  },
+  {
+   "id": "g3-049",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T12:00:00+02:00",
+   "sender": "Franco",
+   "text": "2 kg di nduja e 3 kg di grana"
+  },
+  {
+   "id": "g3-050",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T06:50:00+02:00",
+   "sender": "Giulia",
+   "text": "ciao marta, come sempre per giovedi"
+  },
+  {
+   "id": "g3-051",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T06:40:00+02:00",
+   "sender": "Luca",
+   "text": "il solito ma niente cola stavolta"
+  },
+  {
+   "id": "g3-052",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T19:10:00+02:00",
+   "sender": "Giulia",
+   "text": "il solito + 2 cs di aranciata per martedi"
+  },
+  {
+   "id": "g3-053",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T20:00:00+02:00",
+   "sender": "Marco",
+   "text": "il solito, però 4 cs di cola invece di 2"
+  },
+  {
+   "id": "g3-054",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T09:15:00+02:00",
+   "sender": "Giulia",
+   "text": "come sempre e in più 3 cs di lager"
+  },
+  {
+   "id": "g3-055",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T21:30:00+02:00",
+   "sender": "Marco",
+   "text": "il solito senza il caffe e senza zucchero"
+  },
+  {
+   "id": "g3-056",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T07:50:00+02:00",
+   "sender": "Rina",
+   "text": "buongiorno il solito per martedi, solo che il taleggio lo salto questa settimana"
+  },
+  {
+   "id": "g3-057",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T16:40:00+02:00",
+   "sender": "Franco",
+   "text": "il solito + 2 kg di bresaola e 1 kg di mortadella"
+  },
+  {
+   "id": "g3-058",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T08:00:00+02:00",
+   "sender": "Rina",
+   "text": "come sempre ma senza olio che ne ho ancora"
+  },
+  {
+   "id": "g3-059",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T18:45:00+02:00",
+   "sender": "Rina",
+   "text": "il solito, grana 6 kg questa volta"
+  },
+  {
+   "id": "g3-060",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T15:00:00+02:00",
+   "sender": "Nicola",
+   "text": "il solito per sabato, niente birre"
+  },
+  {
+   "id": "g3-061",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T20:20:00+02:00",
+   "sender": "Enzo",
+   "text": "il solito + 2 sacchi di farina manitoba"
+  },
+  {
+   "id": "g3-062",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T11:20:00+02:00",
+   "sender": "Ciro",
+   "text": "come sempre, solo 2 cs di pelati invece di 3"
+  },
+  {
+   "id": "g3-063",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T08:30:00+02:00",
+   "sender": "Nicola",
+   "text": "il solito per giovedi + 6 cs di acqua naturale"
+  },
+  {
+   "id": "g3-064",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T08:45:00+02:00",
+   "sender": "Davide",
+   "text": "come la volta scorsa per sabato"
+  },
+  {
+   "id": "g3-065",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T07:30:00+02:00",
+   "sender": "Chiara",
+   "text": "il solito ma senza frizzante"
+  },
+  {
+   "id": "g3-066",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T16:50:00+02:00",
+   "sender": "Davide",
+   "text": "il solito per giovedi, aggiungi 2 cs di vermentino"
+  },
+  {
+   "id": "g3-067",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T18:30:00+02:00",
+   "sender": "Davide",
+   "text": "il solito ma il barbera 4 cs invece di 2"
+  },
+  {
+   "id": "g3-068",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T07:30:00+02:00",
+   "sender": "Anwar",
+   "text": "buongiorno il solito per lunedi + 2 cs di biscotti"
+  },
+  {
+   "id": "g3-069",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T12:45:00+02:00",
+   "sender": "Sara",
+   "text": "come sempre grazie! sara"
+  },
+  {
+   "id": "g3-070",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T13:50:00+02:00",
+   "sender": "Anwar",
+   "text": "vorrei il solito ma con 6 cs di acqua frizzante"
+  },
+  {
+   "id": "g3-071",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T15:00:00+02:00",
+   "sender": "Marco",
+   "text": "il solito + 3 cs del rosso dell'ultima volta"
+  },
+  {
+   "id": "g3-072",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T14:25:00+02:00",
+   "sender": "Davide",
+   "text": "come la volta scorsa ma senza vino"
+  },
+  {
+   "id": "g3-073",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T10:00:00+02:00",
+   "sender": "Rina",
+   "text": "il solito senza il cotto"
+  },
+  {
+   "id": "g3-074",
+   "customer_id": "pizz-portico",
+   "channel": "email",
+   "received_at": "2026-10-16T17:00:00+02:00",
+   "sender": "Nicola",
+   "text": "Oggetto: ordine\n\nCiao Marta,\nil solito per sabato, però senza mozzarella perché la prendo dal caseificio.\nGrazie\nNicola"
+  },
+  {
+   "id": "g3-075",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T11:11:00+02:00",
+   "sender": "Rina",
+   "text": "stavolta solo 3 kg di crudo e 2 kg di speck, la mortadella ce l'ho ancora"
+  },
+  {
+   "id": "g3-076",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T06:55:00+02:00",
+   "sender": "Giulia",
+   "text": "stavolta niente caffe che ne ho ancora, mandami 6 cs di acqua naturale e 4 di frizzante"
+  },
+  {
+   "id": "g3-077",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T09:00:00+02:00",
+   "sender": "Enzo",
+   "text": "4 sacchi di farina 00 5 kg e 3 cs di lager. la mozzarella l'ho presa altrove"
+  },
+  {
+   "id": "g3-078",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T14:00:00+02:00",
+   "sender": "Rina",
+   "text": "l'ultima volta il gorgonzola era troppo piccante, non lo voglio più. il resto come sempre per martedi"
+  },
+  {
+   "id": "g3-079",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T16:10:00+02:00",
+   "sender": "Sara",
+   "text": "ho ancora l'olio della volta scorsa quindi niente olio. mi servono 2 cs di penne e 3 cs di spaghetti"
+  },
+  {
+   "id": "g3-080",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T22:00:00+02:00",
+   "sender": "Ciro",
+   "text": "se potete mandatemi la solita roba ma niente pelati che ne ho una montagna"
+  },
+  {
+   "id": "g3-081",
+   "customer_id": "rist-gelsomino",
+   "channel": "email",
+   "received_at": "2026-10-16T18:10:00+02:00",
+   "sender": "Davide",
+   "text": "Oggetto: ordine sabato\n\nBuongiorno Marta,\nper sabato mi servono 3 kg di grana e 2 cs di acqua frizzante. grazie, Davide\n\n--- messaggio inoltrato ---\nDa: Ristorante Il Gelsomino\nData: 8 ottobre\n> 4 sacchi di farina 00 5 kg\n> 3 cs di pelati\n> 2 cs di olio"
+  },
+  {
+   "id": "g3-082",
+   "customer_id": "bar-ponterosso",
+   "channel": "email",
+   "received_at": "2026-10-17T08:40:00+02:00",
+   "sender": "Giulia",
+   "text": "Oggetto: ordine lunedi\n\nCiao Marta, per lunedi 4 cs di acqua frizzante e 2 cs di tonica. Giulia\n\n> Il giorno 8 ottobre Marta ha scritto:\n> ordine confermato: 6 cs acqua naturale, 3 cs di caffè miscela, 3 cs di cola"
+  },
+  {
+   "id": "g3-083",
+   "customer_id": "deli-mulino",
+   "channel": "email",
+   "received_at": "2026-10-14T09:30:00+02:00",
+   "sender": "Rina",
+   "text": "Oggetto: Re: conferma ordine\n\nBuongiorno,\nmi aggiungete 2 kg di provolone e 1 kg di ricotta all'ordine che abbiamo già fatto?\n\n> Ordine confermato:\n> 4 kg cotto\n> 3 kg crudo\n> 2 kg speck"
+  },
+  {
+   "id": "g3-084",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "email",
+   "received_at": "2026-10-18T11:20:00+02:00",
+   "sender": "Anwar",
+   "text": "Oggetto: ordine\n\nBuongiorno,\nvorrei 3 cs di rigatoni e 2 cs di passata.\nAnwar\n\n--- messaggio inoltrato ---\nDa: Emporio Nuovo Borgo\nData: 24 settembre\n> 4 cs acqua naturale\n> 3 cs spaghetti\n> 6 olio"
+  },
+  {
+   "id": "g3-085",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T11:40:00+02:00",
+   "sender": "Chiara",
+   "text": "24 bottiglie di roccafiera per sabato"
+  },
+  {
+   "id": "g3-086",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T07:05:00+02:00",
+   "sender": "Giulia",
+   "text": "12 bt di rosso colline"
+  },
+  {
+   "id": "g3-087",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T11:40:00+02:00",
+   "sender": "Anwar",
+   "text": "10 bottiglie di barbera e 2 cs di aranciata"
+  },
+  {
+   "id": "g3-088",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T18:20:00+02:00",
+   "sender": "Enzo",
+   "text": "24 lattine di cola e 3 sacchi di farina"
+  },
+  {
+   "id": "g3-089",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T19:00:00+02:00",
+   "sender": "Davide",
+   "text": "8 bt di vermentino e 2 cs di rosato"
+  },
+  {
+   "id": "g3-090",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T09:10:00+02:00",
+   "sender": "Giulia",
+   "text": "ciao marta 2 cs di lager, anzi 3. poi 1 cs di cola"
+  },
+  {
+   "id": "g3-091",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T09:20:00+02:00",
+   "sender": "Rina",
+   "text": "5 kg di grana, no scusa 4 kg, e 2 kg di taleggio"
+  },
+  {
+   "id": "g3-092",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T10:00:00+02:00",
+   "sender": "Davide",
+   "text": "mi servono 6 cs di acqua naturale... anzi no, facciamo 8"
+  },
+  {
+   "id": "g3-093",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T12:30:00+02:00",
+   "sender": "Nicola",
+   "text": "ciao, 4 cs di cola e 2 di lager. anzi no, togli le birre"
+  },
+  {
+   "id": "g3-094",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T16:10:00+02:00",
+   "sender": "Marco",
+   "text": "mettimi 2 cs di tonica e 1 di succo ace... no il succo ace no, lascia stare"
+  },
+  {
+   "id": "g3-095",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-18T16:00:00+02:00",
+   "sender": "Sara",
+   "text": "3 cs di penne, anzi 4, e 1 cs di fusilli anzi no lasciamo stare i fusilli"
+  },
+  {
+   "id": "g3-096",
+   "customer_id": "pizz-portico",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T13:40:00+02:00",
+   "sender": "Enzo",
+   "text": "6 sacchi di farina 00 da 5 kg... scusa volevo dire da 25 kg, 1 sacco"
+  },
+  {
+   "id": "g3-097",
+   "customer_id": "rist-gelsomino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-17T14:15:00+02:00",
+   "sender": "Chiara",
+   "text": "vermentino 2 cs, no aspetta, prendo il bianco fiorito, 2 cs"
+  },
+  {
+   "id": "g3-098",
+   "customer_id": "groc-nuovoborgo",
+   "channel": "whatsapp",
+   "received_at": "2026-10-16T08:05:00+02:00",
+   "sender": "Anwar",
+   "text": "2 cs naturale e 2 cs frizzante, poi togli la frizzante, mi basta la naturale"
+  },
+  {
+   "id": "g3-099",
+   "customer_id": "bar-ponterosso",
+   "channel": "whatsapp",
+   "received_at": "2026-10-15T10:40:00+02:00",
+   "sender": "Giulia",
+   "text": "marta la fattura di settembre non la trovo, me la rimandi?"
+  },
+  {
+   "id": "g3-100",
+   "customer_id": "deli-mulino",
+   "channel": "whatsapp",
+   "received_at": "2026-10-14T16:05:00+02:00",
+   "sender": "Rina",
+   "text": "ok grazie, tutto arrivato. a presto!"
+  }
+ ],
+ "expected": {
+  "g3-001": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "CAF-GRA-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BIR-BIA-33",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-15",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-002": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-PRC",
+     "qty": 5
+    },
+    {
+     "sku": "SAL-COT",
+     "qty": 3
+    },
+    {
+     "sku": "SAL-BRE",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-20",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-003": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-25K",
+     "qty": 2
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-21",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-004": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-ROS-007",
+     "qty": 2
+    },
+    {
+     "sku": "VIN-ROT-001",
+     "qty": 1
+    },
+    {
+     "sku": "VIN-BIA-004",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-005": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "DIS-ROT-6",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-006": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "CAF-ORZ-500",
+     "qty": 1
+    },
+    {
+     "sku": "CAF-DEC-500",
+     "qty": 2
+    },
+    {
+     "sku": "CAF-ZUC-1K",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-007": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "POM-CIL-400",
+     "qty": 3
+    },
+    {
+     "sku": "POM-CON-800",
+     "qty": 2
+    },
+    {
+     "sku": "POM-PAS-700",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-21",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-008": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-ARA-20",
+     "qty": 2
+    },
+    {
+     "sku": "BEV-CHI-20",
+     "qty": 1
+    },
+    {
+     "sku": "BEV-GAZ-1L",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-15",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-009": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4
+    },
+    {
+     "sku": "FOR-TAL",
+     "qty": 3
+    },
+    {
+     "sku": "FOR-GOR-DOL",
+     "qty": 2
+    },
+    {
+     "sku": "FOR-RIC",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-010": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-TON-20",
+     "qty": 6
+    },
+    {
+     "sku": "BEV-SUC-20",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-011": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "OLI-EVO-1L",
+     "qty": 6
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-012": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 3
+    },
+    {
+     "sku": "BIR-ROS-33",
+     "qty": 1
+    },
+    {
+     "sku": "BIR-BIA-33",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-013": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "DIS-SAC-70",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-ROT-6",
+     "qty": 1
+    },
+    {
+     "sku": "DIS-DET-5L",
+     "qty": 1
+    },
+    {
+     "sku": "DIS-GUA-M",
+     "qty": 1
+    },
+    {
+     "sku": "DIS-PEL-300",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-014": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "DIS-ALU-150",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-PEL-300",
+     "qty": 3
+    },
+    {
+     "sku": "DIS-TOV-40",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-20",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-015": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-SEM-5K",
+     "qty": 6
+    },
+    {
+     "sku": "FAR-MAN-5K",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-19",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-016": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-SPU-001",
+     "qty": 2
+    },
+    {
+     "sku": "VIN-ROS-005",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-017": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-BIA-003",
+     "qty": 3
+    },
+    {
+     "sku": "VIN-ROS-009",
+     "qty": 1
+    },
+    {
+     "sku": "VIN-ROT-001",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-15",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-018": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-COL-33",
+     "qty": 6
+    },
+    {
+     "sku": "BEV-TON-20",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-019": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "POM-PAS-700",
+     "qty": 2
+    },
+    {
+     "sku": "BEV-SUC-AC",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-020": {
+   "order": false,
+   "lines": [],
+   "flags": []
+  },
+  "g3-021": {
+   "order": false,
+   "lines": [],
+   "flags": []
+  },
+  "g3-022": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-GUA",
+     "qty": 2
+    },
+    {
+     "sku": "SAL-PAN",
+     "qty": 2
+    },
+    {
+     "sku": "SAL-SAL",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-023": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-MOZ-BUF",
+     "qty": 3
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 5
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-024": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [
+    {
+     "text_contains": "prosecco",
+     "skus": [
+      "VIN-PRO-002",
+      "VIN-PRO-003"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "6 bottiglie di prosecco"
+   ]
+  },
+  "g3-025": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "CAF-MIS-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [
+    {
+     "text_contains": "prosecco",
+     "skus": [
+      "VIN-PRO-002",
+      "VIN-PRO-003"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "2 cs di prosecco"
+   ]
+  },
+  "g3-026": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-RIC",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [
+    {
+     "text_contains": "vallecorta",
+     "skus": [
+      "VIN-PRO-002",
+      "VIN-PRO-003",
+      "VIN-BIA-003"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "12 bottiglie di vallecorta"
+   ]
+  },
+  "g3-027": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-COL-33",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-15",
+   "candidates": [
+    {
+     "text_contains": "succo",
+     "skus": [
+      "BEV-SUC-20",
+      "BEV-SUC-AC"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "2 cs di succo"
+   ]
+  },
+  "g3-028": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [
+    {
+     "text_contains": "vino rosso",
+     "skus": [
+      "VIN-ROS-009",
+      "VIN-ROS-007",
+      "VIN-ROS-005"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "4 cs di vino rosso"
+   ]
+  },
+  "g3-029": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-COL-33",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-19",
+   "candidates": [
+    {
+     "text_contains": "acqua",
+     "skus": [
+      "ACQ-NAT-1L",
+      "ACQ-FRIZ-1L"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "1 cs di acqua"
+   ]
+  },
+  "g3-030": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 5
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 3
+    },
+    {
+     "sku": "PAS-SPA-500",
+     "qty": 4
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 2
+    },
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 3.0
+    },
+    {
+     "sku": "VIN-ROS-009",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [
+    {
+     "text_contains": "acqua 50cl",
+     "skus": [
+      "ACQ-NAT-50",
+      "ACQ-FRIZ-50"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "2 cs di acqua 50cl"
+   ]
+  },
+  "g3-031": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-COT",
+     "qty": 4.0
+    },
+    {
+     "sku": "SAL-PRC",
+     "qty": 3.0
+    },
+    {
+     "sku": "SAL-SPE",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-TAL",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3.0
+    },
+    {
+     "sku": "FOR-GOR-DOL",
+     "qty": 2.0
+    },
+    {
+     "sku": "OLI-EVO-1L",
+     "qty": 6
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [
+    {
+     "text_contains": "prosciutto",
+     "skus": [
+      "SAL-PRC",
+      "SAL-COT"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "2 kg di prosciutto"
+   ]
+  },
+  "g3-032": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "PAS-PEN-500",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-19",
+   "candidates": [
+    {
+     "text_contains": "pomodori",
+     "skus": [
+      "POM-CIL-400",
+      "POM-PAS-700",
+      "POM-PEL-2.5"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "1 cs di pomodori"
+   ]
+  },
+  "g3-033": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-SPE",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [
+    {
+     "text_contains": "prosciutto",
+     "skus": [
+      "SAL-PRC",
+      "SAL-COT"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "3 kg di prosciutto"
+   ]
+  },
+  "g3-034": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-19",
+   "candidates": [
+    {
+     "text_contains": "succo",
+     "skus": [
+      "BEV-SUC-20",
+      "BEV-SUC-AC"
+     ]
+    }
+   ],
+   "flags": [
+    {
+     "kind": "ambiguous_product"
+    }
+   ],
+   "quotes": [
+    "2 cs di succo"
+   ]
+  },
+  "g3-035": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-PRO-002",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-036": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-ROS-005",
+     "qty": 6
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-19",
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "6 cs di vino rosso"
+   ]
+  },
+  "g3-037": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "2 kg di burrata"
+   ]
+  },
+  "g3-038": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "CAF-MIS-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "1 cs di gin"
+   ]
+  },
+  "g3-039": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "3 kg di lievito di birra"
+   ]
+  },
+  "g3-040": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "PAS-PEN-500",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "2 barattoli di olive nere"
+   ]
+  },
+  "g3-041": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-SPE",
+     "qty": 4
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-16",
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "1 culatello intero"
+   ]
+  },
+  "g3-042": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "PAS-SPA-500",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "2 kg di porcini"
+   ]
+  },
+  "g3-043": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-TON-20",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "una cassa di lambrusco"
+   ]
+  },
+  "g3-044": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "5 kg di salsiccia"
+   ]
+  },
+  "g3-045": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "PAS-RIS-1K",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "3 pacchi di pane carasau"
+   ]
+  },
+  "g3-046": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-TON-20",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "6 sacchi di ghiaccio"
+   ]
+  },
+  "g3-047": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "1 cs di champagne"
+   ]
+  },
+  "g3-048": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-20",
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "2 cs di ipa"
+   ]
+  },
+  "g3-049": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "unknown_product"
+    }
+   ],
+   "quotes": [
+    "2 kg di nduja"
+   ]
+  },
+  "g3-050": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "CAF-MIS-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-15",
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "come sempre"
+   ]
+  },
+  "g3-051": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "CAF-MIS-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    }
+   ],
+   "removed": [
+    "BEV-COL-33"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "niente cola stavolta"
+   ]
+  },
+  "g3-052": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "CAF-MIS-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    },
+    {
+     "sku": "BEV-ARA-20",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-20",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-053": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "CAF-MIS-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 4
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "4 cs di cola invece di 2"
+   ]
+  },
+  "g3-054": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "CAF-MIS-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 5
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "in più 3 cs di lager"
+   ]
+  },
+  "g3-055": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    }
+   ],
+   "removed": [
+    "CAF-MIS-1K"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "senza il caffe"
+   ]
+  },
+  "g3-056": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-COT",
+     "qty": 4.0
+    },
+    {
+     "sku": "SAL-PRC",
+     "qty": 3.0
+    },
+    {
+     "sku": "SAL-SPE",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3.0
+    },
+    {
+     "sku": "FOR-GOR-DOL",
+     "qty": 2.0
+    },
+    {
+     "sku": "OLI-EVO-1L",
+     "qty": 6
+    }
+   ],
+   "removed": [
+    "FOR-TAL"
+   ],
+   "delivery_date": "2026-10-20",
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "il taleggio lo salto"
+   ]
+  },
+  "g3-057": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-COT",
+     "qty": 4.0
+    },
+    {
+     "sku": "SAL-PRC",
+     "qty": 3.0
+    },
+    {
+     "sku": "SAL-SPE",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-TAL",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3.0
+    },
+    {
+     "sku": "FOR-GOR-DOL",
+     "qty": 2.0
+    },
+    {
+     "sku": "OLI-EVO-1L",
+     "qty": 6
+    },
+    {
+     "sku": "SAL-BRE",
+     "qty": 2
+    },
+    {
+     "sku": "SAL-MOR",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-058": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-COT",
+     "qty": 4.0
+    },
+    {
+     "sku": "SAL-PRC",
+     "qty": 3.0
+    },
+    {
+     "sku": "SAL-SPE",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-TAL",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3.0
+    },
+    {
+     "sku": "FOR-GOR-DOL",
+     "qty": 2.0
+    }
+   ],
+   "removed": [
+    "OLI-EVO-1L"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "senza olio"
+   ]
+  },
+  "g3-059": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-COT",
+     "qty": 4.0
+    },
+    {
+     "sku": "SAL-PRC",
+     "qty": 3.0
+    },
+    {
+     "sku": "SAL-SPE",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 6
+    },
+    {
+     "sku": "FOR-TAL",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3.0
+    },
+    {
+     "sku": "FOR-GOR-DOL",
+     "qty": 2.0
+    },
+    {
+     "sku": "OLI-EVO-1L",
+     "qty": 6
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "grana 6 kg questa volta"
+   ]
+  },
+  "g3-060": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 5
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 1
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 3
+    }
+   ],
+   "removed": [
+    "BIR-LAG-33"
+   ],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "niente birre"
+   ]
+  },
+  "g3-061": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 5
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 1
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 3
+    },
+    {
+     "sku": "FAR-MAN-5K",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-062": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 5
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 2
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 1
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "solo 2 cs di pelati invece di 3"
+   ]
+  },
+  "g3-063": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 5
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 1
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 3
+    },
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-22",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-064": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 5
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 3
+    },
+    {
+     "sku": "PAS-SPA-500",
+     "qty": 4
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 2
+    },
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 3.0
+    },
+    {
+     "sku": "VIN-ROS-009",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "come la volta scorsa"
+   ]
+  },
+  "g3-065": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 5
+    },
+    {
+     "sku": "PAS-SPA-500",
+     "qty": 4
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 2
+    },
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 3.0
+    },
+    {
+     "sku": "VIN-ROS-009",
+     "qty": 2
+    }
+   ],
+   "removed": [
+    "ACQ-FRIZ-1L"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "senza frizzante"
+   ]
+  },
+  "g3-066": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 5
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 3
+    },
+    {
+     "sku": "PAS-SPA-500",
+     "qty": 4
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 2
+    },
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 3.0
+    },
+    {
+     "sku": "VIN-ROS-009",
+     "qty": 2
+    },
+    {
+     "sku": "VIN-BIA-004",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-22",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-067": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 5
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 3
+    },
+    {
+     "sku": "PAS-SPA-500",
+     "qty": 4
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 2
+    },
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 3.0
+    },
+    {
+     "sku": "VIN-ROS-009",
+     "qty": 4
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "il barbera 4 cs invece di 2"
+   ]
+  },
+  "g3-068": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "DOL-BIS-CAF",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-19",
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "no_history"
+    }
+   ],
+   "quotes": [
+    "il solito"
+   ]
+  },
+  "g3-069": {
+   "order": true,
+   "lines": [],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "no_history"
+    }
+   ],
+   "quotes": [
+    "come sempre"
+   ]
+  },
+  "g3-070": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 6
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "no_history"
+    }
+   ],
+   "quotes": [
+    "il solito"
+   ]
+  },
+  "g3-071": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "CAF-MIS-1K",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 2
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 2
+    },
+    {
+     "sku": "DIS-CUP-CAF",
+     "qty": 1
+    },
+    {
+     "sku": "VIN-ROS-005",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "3 cs del rosso dell'ultima volta"
+   ]
+  },
+  "g3-072": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 5
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 3
+    },
+    {
+     "sku": "PAS-SPA-500",
+     "qty": 4
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 2
+    },
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 3.0
+    }
+   ],
+   "removed": [
+    "VIN-ROS-009"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "senza vino"
+   ]
+  },
+  "g3-073": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-PRC",
+     "qty": 3.0
+    },
+    {
+     "sku": "SAL-SPE",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-TAL",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3.0
+    },
+    {
+     "sku": "FOR-GOR-DOL",
+     "qty": 2.0
+    },
+    {
+     "sku": "OLI-EVO-1L",
+     "qty": 6
+    }
+   ],
+   "removed": [
+    "SAL-COT"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "senza il cotto"
+   ]
+  },
+  "g3-074": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 5
+    },
+    {
+     "sku": "POM-PEL-2.5",
+     "qty": 3
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 1
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 3
+    }
+   ],
+   "removed": [
+    "FOR-MOZ-FIO"
+   ],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "senza mozzarella"
+   ]
+  },
+  "g3-075": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-PRC",
+     "qty": 3
+    },
+    {
+     "sku": "SAL-SPE",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "la mortadella ce l'ho ancora"
+   ]
+  },
+  "g3-076": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 6
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "niente caffe che ne ho ancora"
+   ]
+  },
+  "g3-077": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 4
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "la mozzarella l'ho presa altrove"
+   ]
+  },
+  "g3-078": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "SAL-COT",
+     "qty": 4.0
+    },
+    {
+     "sku": "SAL-PRC",
+     "qty": 3.0
+    },
+    {
+     "sku": "SAL-SPE",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 4.0
+    },
+    {
+     "sku": "FOR-TAL",
+     "qty": 2.0
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3.0
+    },
+    {
+     "sku": "OLI-EVO-1L",
+     "qty": 6
+    }
+   ],
+   "removed": [
+    "FOR-GOR-DOL"
+   ],
+   "delivery_date": "2026-10-20",
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "non lo voglio più"
+   ]
+  },
+  "g3-079": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "PAS-PEN-500",
+     "qty": 2
+    },
+    {
+     "sku": "PAS-SPA-500",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "niente olio"
+   ]
+  },
+  "g3-080": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-5K",
+     "qty": 5
+    },
+    {
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4.0
+    },
+    {
+     "sku": "OLI-EVO-5L",
+     "qty": 1
+    },
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 3
+    }
+   ],
+   "removed": [
+    "POM-PEL-2.5"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "niente pelati"
+   ]
+  },
+  "g3-081": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 3
+    },
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-082": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4
+    },
+    {
+     "sku": "BEV-TON-20",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-19",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-083": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-PRO-DOL",
+     "qty": 2
+    },
+    {
+     "sku": "FOR-RIC",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "all'ordine che abbiamo già fatto"
+   ]
+  },
+  "g3-084": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "PAS-RIG-500",
+     "qty": 3
+    },
+    {
+     "sku": "POM-PAS-700",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-085": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-ROS-007",
+     "qty": 4
+    }
+   ],
+   "removed": [],
+   "delivery_date": "2026-10-17",
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-086": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-ROS-005",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-087": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-ROS-009",
+     "qty": 10
+    },
+    {
+     "sku": "BEV-ARA-20",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "pack_mismatch"
+    }
+   ],
+   "quotes": [
+    "10 bottiglie di barbera"
+   ]
+  },
+  "g3-088": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-COL-33",
+     "qty": 1
+    },
+    {
+     "sku": "FAR-00-5K",
+     "qty": 3
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": []
+  },
+  "g3-089": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-BIA-004",
+     "qty": 8
+    },
+    {
+     "sku": "VIN-ROT-001",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [
+    {
+     "kind": "pack_mismatch"
+    }
+   ],
+   "quotes": [
+    "8 bt di vermentino"
+   ]
+  },
+  "g3-090": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BIR-LAG-33",
+     "qty": 3
+    },
+    {
+     "sku": "BEV-COL-33",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "2 cs di lager, anzi 3"
+   ]
+  },
+  "g3-091": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FOR-GRA-24",
+     "qty": 4
+    },
+    {
+     "sku": "FOR-TAL",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "5 kg di grana, no scusa 4 kg"
+   ]
+  },
+  "g3-092": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 8
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "6 cs di acqua naturale... anzi no, facciamo 8"
+   ]
+  },
+  "g3-093": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-COL-33",
+     "qty": 4
+    }
+   ],
+   "removed": [
+    "BIR-LAG-33"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "anzi no, togli le birre"
+   ]
+  },
+  "g3-094": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "BEV-TON-20",
+     "qty": 2
+    }
+   ],
+   "removed": [
+    "BEV-SUC-AC"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "no il succo ace no, lascia stare"
+   ]
+  },
+  "g3-095": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "PAS-PEN-500",
+     "qty": 4
+    }
+   ],
+   "removed": [
+    "PAS-FUS-500"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "3 cs di penne, anzi 4",
+    "lasciamo stare i fusilli"
+   ]
+  },
+  "g3-096": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "FAR-00-25K",
+     "qty": 1
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "scusa volevo dire da 25 kg, 1 sacco"
+   ]
+  },
+  "g3-097": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "VIN-BIA-003",
+     "qty": 2
+    }
+   ],
+   "removed": [],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "no aspetta, prendo il bianco fiorito, 2 cs"
+   ]
+  },
+  "g3-098": {
+   "order": true,
+   "lines": [
+    {
+     "sku": "ACQ-NAT-1L",
+     "qty": 2
+    }
+   ],
+   "removed": [
+    "ACQ-FRIZ-1L"
+   ],
+   "delivery_date": null,
+   "candidates": [],
+   "flags": [],
+   "quotes": [
+    "togli la frizzante"
+   ]
+  },
+  "g3-099": {
+   "order": false,
+   "lines": [],
+   "flags": []
+  },
+  "g3-100": {
+   "order": false,
+   "lines": [],
+   "flags": []
+  }
+ }
+}

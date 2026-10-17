@@ -1,0 +1,6919 @@
+[
+  {
+    "id": "b1-001",
+    "kind": "restaurant",
+    "name": "Osteria Gorla",
+    "story": "Osteria in Gorla with a small wine list, orders ahead of the weekend covers.",
+    "core": [
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 3,
+        "prob": 0.59
+      },
+      {
+        "sku": "PAS-TAG-250",
+        "qty": 3,
+        "prob": 0.71
+      },
+      {
+        "sku": "FOR-PEC",
+        "qty": 4.0,
+        "prob": 0.51
+      },
+      {
+        "sku": "OLI-EVO-5L",
+        "qty": 2,
+        "prob": 0.65
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 3,
+        "prob": 0.46
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 2.5,
+        "prob": 0.72
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-03",
+        "to": "08-24"
+      },
+      {
+        "from": "12-25",
+        "to": "12-25"
+      }
+    ],
+    "season": {
+      "summer": 0.25,
+      "december": 0.77
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 2.22
+      },
+      {
+        "date": "2025-12-31",
+        "mult": 1.8
+      }
+    ],
+    "trend": 0.06,
+    "churn": {
+      "start": "2026-06-26"
+    },
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.14
+  },
+  {
+    "id": "b1-002",
+    "kind": "bar",
+    "name": "Snack Bar Solari",
+    "story": "Lunch and espresso bar near Solari, toasts and panini for the office crowd on weekdays.",
+    "core": [
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 4,
+        "prob": 0.88
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 2,
+        "prob": 0.7
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.84
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 1,
+        "prob": 0.68
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 4,
+        "prob": 0.63
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 3,
+        "prob": 0.81
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 1,
+        "prob": 0.81
+      },
+      {
+        "sku": "FOR-PRO-DOL",
+        "qty": 4.0,
+        "prob": 0.91
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "12-24",
+        "to": "01-01"
+      }
+    ],
+    "season": {
+      "summer": 0.26,
+      "december": -0.02
+    },
+    "events": [
+      {
+        "date": "2026-02-21",
+        "mult": 1.53
+      }
+    ],
+    "trend": 0.18,
+    "churn": {
+      "start": "2025-10-10"
+    },
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-003",
+    "kind": "bar",
+    "name": "Bar Sport Certosa",
+    "story": "Late bar in Certosa with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 1,
+        "prob": 0.95
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 2,
+        "prob": 0.95
+      },
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 2,
+        "prob": 0.74
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 3,
+        "prob": 0.75
+      },
+      {
+        "sku": "BEV-COL-33",
+        "qty": 3,
+        "prob": 0.48
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 1,
+        "prob": 0.92
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 1,
+        "prob": 0.74
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 4,
+        "prob": 0.69
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 1,
+        "prob": 0.97
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.55,
+      "december": 1.13
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 3.2
+      }
+    ],
+    "trend": 0.02,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "BIR-ROS-33",
+      "from": "2025-10-14"
+    },
+    "extras_rate": 0.11
+  },
+  {
+    "id": "b1-004",
+    "kind": "bar",
+    "name": "Aperitivo Fabio",
+    "story": "Aperitivo spot in Fabio that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "FOR-PEC",
+        "qty": 1.5,
+        "prob": 0.49
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 1,
+        "prob": 0.73
+      },
+      {
+        "sku": "DIS-TOV-40",
+        "qty": 3,
+        "prob": 0.47
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 4,
+        "prob": 0.53
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 3,
+        "prob": 0.93
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 4,
+        "prob": 0.59
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.81,
+      "december": 0.47
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 3.14
+      },
+      {
+        "date": "2026-04-22",
+        "mult": 2.74
+      },
+      {
+        "date": "2025-04-09",
+        "mult": 3.13
+      },
+      {
+        "date": "2026-02-21",
+        "mult": 2.71
+      }
+    ],
+    "trend": -0.08,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.19
+  },
+  {
+    "id": "b1-005",
+    "kind": "bar",
+    "name": "Bar Tabacchi Leda",
+    "story": "Nightlife bar in Leda, quiet midweek, Friday and Saturday spikes for beer and mixers.",
+    "core": [
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 2,
+        "prob": 0.83
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 3,
+        "prob": 0.94
+      },
+      {
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 1,
+        "prob": 0.69
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.53
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 3,
+        "prob": 0.9
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.62,
+      "december": 0.94
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 3.21
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 3.47
+      }
+    ],
+    "trend": -0.2,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.19
+  },
+  {
+    "id": "b1-006",
+    "kind": "bar",
+    "name": "Bistrot Ornella",
+    "story": "Espresso bar in the office quarter around Ornella, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 4,
+        "prob": 0.64
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 1,
+        "prob": 0.93
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 2,
+        "prob": 0.61
+      },
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 1,
+        "prob": 0.51
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 4,
+        "prob": 0.67
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 2,
+        "prob": 0.69
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.69
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": -0.27,
+      "december": 0.13
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 2.17
+      }
+    ],
+    "trend": -0.14,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.15
+  },
+  {
+    "id": "b1-007",
+    "kind": "bar",
+    "name": "Bar Pasticceria Franca",
+    "story": "Office-district bar near Franca, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 2,
+        "prob": 0.68
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 3,
+        "prob": 0.62
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 3,
+        "prob": 0.93
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 1,
+        "prob": 0.69
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 4,
+        "prob": 0.65
+      },
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 1,
+        "prob": 0.57
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 1,
+        "prob": 0.69
+      },
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 4,
+        "prob": 0.46
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 4,
+        "prob": 0.82
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.27,
+      "december": 0.13
+    },
+    "events": [],
+    "trend": -0.16,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.12
+  },
+  {
+    "id": "b1-008",
+    "kind": "restaurant",
+    "name": "Trattoria Tortona",
+    "story": "Trattoria in Tortona, closed Sundays, orders fresh cheese and pasta for dinner service.",
+    "core": [
+      {
+        "sku": "POM-CIL-400",
+        "qty": 2,
+        "prob": 0.9
+      },
+      {
+        "sku": "POM-PAS-700",
+        "qty": 2,
+        "prob": 0.81
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 2,
+        "prob": 0.59
+      },
+      {
+        "sku": "PAS-FUS-500",
+        "qty": 1,
+        "prob": 0.83
+      },
+      {
+        "sku": "POM-PEL-2.5",
+        "qty": 1,
+        "prob": 0.92
+      },
+      {
+        "sku": "FOR-RIC",
+        "qty": 2.5,
+        "prob": 0.81
+      },
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 4,
+        "prob": 0.58
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-03",
+        "to": "08-24"
+      },
+      {
+        "from": "12-25",
+        "to": "12-25"
+      }
+    ],
+    "season": {
+      "summer": 0.26,
+      "december": 0.66
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 2.23
+      }
+    ],
+    "trend": -0.06,
+    "churn": null,
+    "adopt": {
+      "sku": "SAL-SAL",
+      "from": "2025-09-29"
+    },
+    "drop": null,
+    "extras_rate": 0.25
+  },
+  {
+    "id": "b1-009",
+    "kind": "grocery",
+    "name": "Emporio Solari",
+    "story": "Small emporio in Solari, pasta, tins and oil, orders ahead of Christmas.",
+    "core": [
+      {
+        "sku": "FAR-SEM-5K",
+        "qty": 2,
+        "prob": 0.86
+      },
+      {
+        "sku": "FAR-MAN-5K",
+        "qty": 3,
+        "prob": 0.52
+      },
+      {
+        "sku": "OLI-EVO-1L",
+        "qty": 2,
+        "prob": 0.84
+      },
+      {
+        "sku": "POM-PEL-2.5",
+        "qty": 1,
+        "prob": 0.53
+      },
+      {
+        "sku": "OLI-SEM-10L",
+        "qty": 3,
+        "prob": 0.5
+      }
+    ],
+    "cadence_days": 8,
+    "weekdays": [
+      0,
+      3
+    ],
+    "closed": [
+      {
+        "from": "12-25",
+        "to": "12-26"
+      }
+    ],
+    "season": {
+      "summer": -0.11,
+      "december": 0.67
+    },
+    "events": [],
+    "trend": -0.16,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.26
+  },
+  {
+    "id": "b1-010",
+    "kind": "bar",
+    "name": "Bistrot San Siro",
+    "story": "Aperitivo spot in San Siro that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "FOR-TAL",
+        "qty": 1.0,
+        "prob": 0.91
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 1,
+        "prob": 0.84
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 3,
+        "prob": 0.92
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 2.5,
+        "prob": 0.94
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 2,
+        "prob": 0.79
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.75,
+      "december": 0.73
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 2.33
+      },
+      {
+        "date": "2025-02-22",
+        "mult": 2.77
+      },
+      {
+        "date": "2026-02-21",
+        "mult": 1.91
+      }
+    ],
+    "trend": 0.0,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.15
+  },
+  {
+    "id": "b1-011",
+    "kind": "bar",
+    "name": "Bar Gianni",
+    "story": "Aperitivo spot in Gianni that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 1,
+        "prob": 0.68
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 1,
+        "prob": 0.76
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 4,
+        "prob": 0.59
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 4,
+        "prob": 0.9
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 3,
+        "prob": 0.77
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 2,
+        "prob": 0.54
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.91
+      },
+      {
+        "sku": "FOR-TAL",
+        "qty": 2.5,
+        "prob": 0.54
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      3,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.96,
+      "december": 0.69
+    },
+    "events": [
+      {
+        "date": "2026-04-22",
+        "mult": 1.97
+      },
+      {
+        "date": "2025-02-22",
+        "mult": 2.35
+      }
+    ],
+    "trend": -0.18,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.35
+  },
+  {
+    "id": "b1-012",
+    "kind": "bar",
+    "name": "Aperitivo Tonino",
+    "story": "Late bar in Tonino with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 3,
+        "prob": 0.63
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 4,
+        "prob": 0.55
+      },
+      {
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 3,
+        "prob": 0.83
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 4,
+        "prob": 0.52
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 2,
+        "prob": 0.68
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.81,
+      "december": 0.85
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 2.06
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 3.5
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 3.38
+      }
+    ],
+    "trend": 0.23,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.12
+  },
+  {
+    "id": "b1-013",
+    "kind": "bar",
+    "name": "Bar Ripamonti",
+    "story": "Office-district bar near Ripamonti, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.84
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 4,
+        "prob": 0.94
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 4,
+        "prob": 0.57
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 2,
+        "prob": 0.88
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 1,
+        "prob": 0.47
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 3,
+        "prob": 0.49
+      },
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 3,
+        "prob": 0.82
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 1,
+        "prob": 0.86
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.25,
+      "december": 0.21
+    },
+    "events": [],
+    "trend": 0.18,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.29
+  },
+  {
+    "id": "b1-014",
+    "kind": "bar",
+    "name": "Snack Bar Da Lella",
+    "story": "Neighbourhood bar in Da Lella, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "ACQ-NAT-1L",
+        "qty": 4,
+        "prob": 0.83
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 3,
+        "prob": 0.58
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 2.0,
+        "prob": 0.63
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 2,
+        "prob": 0.54
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 2,
+        "prob": 0.66
+      },
+      {
+        "sku": "BEV-COL-33",
+        "qty": 1,
+        "prob": 0.95
+      },
+      {
+        "sku": "SAL-COT",
+        "qty": 3.5,
+        "prob": 0.93
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 4,
+        "prob": 0.9
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      1,
+      2,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": 0.41,
+      "december": 0.19
+    },
+    "events": [],
+    "trend": -0.15,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.13
+  },
+  {
+    "id": "b1-015",
+    "kind": "bar",
+    "name": "Bar Sport Moscova",
+    "story": "Aperitivo bar in Moscova, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "BEV-TON-20",
+        "qty": 3,
+        "prob": 0.59
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 1,
+        "prob": 0.76
+      },
+      {
+        "sku": "FOR-PEC",
+        "qty": 3.0,
+        "prob": 0.97
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 1,
+        "prob": 0.93
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 1,
+        "prob": 0.66
+      },
+      {
+        "sku": "VIN-ROS-009",
+        "qty": 4,
+        "prob": 0.58
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 1,
+        "prob": 0.52
+      },
+      {
+        "sku": "DIS-TOV-40",
+        "qty": 1,
+        "prob": 0.91
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.62,
+      "december": 0.49
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 2.13
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 2.38
+      },
+      {
+        "date": "2025-02-22",
+        "mult": 2.92
+      }
+    ],
+    "trend": -0.18,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.2
+  },
+  {
+    "id": "b1-016",
+    "kind": "bar",
+    "name": "Bar Sport Cadorna",
+    "story": "Aperitivo bar in Cadorna, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "BIR-ANA-33",
+        "qty": 1,
+        "prob": 0.97
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 2,
+        "prob": 0.53
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.77
+      },
+      {
+        "sku": "BEV-CHI-20",
+        "qty": 4,
+        "prob": 0.48
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 2.0,
+        "prob": 0.69
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.71,
+      "december": 0.76
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 3.45
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 3.44
+      }
+    ],
+    "trend": 0.18,
+    "churn": null,
+    "adopt": {
+      "sku": "BEV-SUC-AC",
+      "from": "2025-06-25"
+    },
+    "drop": null,
+    "extras_rate": 0.32
+  },
+  {
+    "id": "b1-017",
+    "kind": "bar",
+    "name": "Bar Sport Bisceglie",
+    "story": "Office-district bar near Bisceglie, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 4,
+        "prob": 0.71
+      },
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 4,
+        "prob": 0.64
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 3,
+        "prob": 0.51
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 2,
+        "prob": 0.74
+      },
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 1,
+        "prob": 0.5
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 4,
+        "prob": 0.48
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      0,
+      2,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": -0.18,
+      "december": 0.11
+    },
+    "events": [],
+    "trend": 0.1,
+    "churn": null,
+    "adopt": {
+      "sku": "DIS-SGR-750",
+      "from": "2025-07-28"
+    },
+    "drop": {
+      "sku": "ACQ-NAT-50",
+      "from": "2026-02-03"
+    },
+    "extras_rate": 0.29
+  },
+  {
+    "id": "b1-018",
+    "kind": "bar",
+    "name": "Bar Pasticceria Bovisa",
+    "story": "Late bar in Bovisa with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "BEV-COL-33",
+        "qty": 4,
+        "prob": 0.68
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.54
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 4,
+        "prob": 0.81
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 3,
+        "prob": 0.58
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 4,
+        "prob": 0.84
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 4,
+        "prob": 0.46
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 2,
+        "prob": 0.58
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.79
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.51,
+      "december": 1.09
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 3.9
+      },
+      {
+        "date": "2025-12-31",
+        "mult": 2.17
+      }
+    ],
+    "trend": -0.03,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.32
+  },
+  {
+    "id": "b1-019",
+    "kind": "bar",
+    "name": "Bistrot Chiesa Rossa",
+    "story": "Espresso bar in the office quarter around Chiesa Rossa, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 2,
+        "prob": 0.71
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 3,
+        "prob": 0.89
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 1,
+        "prob": 0.88
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 1,
+        "prob": 0.75
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 4,
+        "prob": 0.63
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 2,
+        "prob": 0.75
+      },
+      {
+        "sku": "CAF-ZUC-1K",
+        "qty": 1,
+        "prob": 0.84
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 2,
+        "prob": 0.92
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      0,
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.33,
+      "december": 0.09
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 1.57
+      }
+    ],
+    "trend": 0.1,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "ACQ-NAT-50",
+      "from": "2025-12-11"
+    },
+    "extras_rate": 0.24
+  },
+  {
+    "id": "b1-020",
+    "kind": "bar",
+    "name": "Bar San Siro",
+    "story": "Espresso bar in the office quarter around San Siro, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 4,
+        "prob": 0.74
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 1,
+        "prob": 0.54
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 2,
+        "prob": 0.54
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 3,
+        "prob": 0.92
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 2,
+        "prob": 0.82
+      },
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 1,
+        "prob": 0.62
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 2,
+        "prob": 0.87
+      },
+      {
+        "sku": "DOL-CRO-SUR",
+        "qty": 1,
+        "prob": 0.86
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.28,
+      "december": 0.1
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 1.86
+      }
+    ],
+    "trend": -0.06,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.07
+  },
+  {
+    "id": "b1-021",
+    "kind": "bar",
+    "name": "Aperitivo Sempione",
+    "story": "Espresso bar in the office quarter around Sempione, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 1,
+        "prob": 0.76
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.8
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 2,
+        "prob": 0.51
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 3,
+        "prob": 0.95
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 2,
+        "prob": 0.58
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 3,
+        "prob": 0.61
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 4,
+        "prob": 0.67
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 2,
+        "prob": 0.78
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.17,
+      "december": 0.19
+    },
+    "events": [],
+    "trend": -0.03,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.14
+  },
+  {
+    "id": "b1-022",
+    "kind": "bar",
+    "name": "Cafè Ornato",
+    "story": "Aperitivo bar in Ornato, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 4,
+        "prob": 0.83
+      },
+      {
+        "sku": "VIN-BIA-004",
+        "qty": 1,
+        "prob": 0.87
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 3.5,
+        "prob": 0.54
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 2,
+        "prob": 0.59
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 2,
+        "prob": 0.58
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.6,
+      "december": 0.55
+    },
+    "events": [
+      {
+        "date": "2026-02-21",
+        "mult": 3.44
+      },
+      {
+        "date": "2025-04-09",
+        "mult": 2.62
+      },
+      {
+        "date": "2025-12-31",
+        "mult": 2.59
+      }
+    ],
+    "trend": 0.08,
+    "churn": null,
+    "adopt": {
+      "sku": "BEV-LAT-1L",
+      "from": "2025-07-05"
+    },
+    "drop": null,
+    "extras_rate": 0.18
+  },
+  {
+    "id": "b1-023",
+    "kind": "bar",
+    "name": "Aperitivo Garibaldi",
+    "story": "Espresso bar in the office quarter around Garibaldi, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 4,
+        "prob": 0.9
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 2,
+        "prob": 0.7
+      },
+      {
+        "sku": "CAF-ZUC-1K",
+        "qty": 1,
+        "prob": 0.85
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 3,
+        "prob": 0.89
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 3,
+        "prob": 0.67
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 4,
+        "prob": 0.64
+      },
+      {
+        "sku": "DOL-CRO-SUR",
+        "qty": 4,
+        "prob": 0.77
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 4,
+        "prob": 0.95
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.25,
+      "december": 0.19
+    },
+    "events": [],
+    "trend": -0.19,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.28
+  },
+  {
+    "id": "b1-024",
+    "kind": "bar",
+    "name": "Aperitivo Bande Nere",
+    "story": "Office-district bar near Bande Nere, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "CAF-ZUC-1K",
+        "qty": 4,
+        "prob": 0.45
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 3,
+        "prob": 0.64
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.69
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 3,
+        "prob": 0.94
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 1,
+        "prob": 0.8
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 3,
+        "prob": 0.46
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.51
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 2,
+        "prob": 0.63
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 4,
+        "prob": 0.56
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      3,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.24,
+      "december": 0.02
+    },
+    "events": [
+      {
+        "date": "2025-04-09",
+        "mult": 1.85
+      }
+    ],
+    "trend": -0.07,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.1
+  },
+  {
+    "id": "b1-025",
+    "kind": "bar",
+    "name": "Bar Sport Da Ettore",
+    "story": "Aperitivo bar in Da Ettore, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 3,
+        "prob": 0.58
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 1.5,
+        "prob": 0.54
+      },
+      {
+        "sku": "SAL-SPE",
+        "qty": 2.0,
+        "prob": 0.47
+      },
+      {
+        "sku": "BIR-ANA-33",
+        "qty": 1,
+        "prob": 0.72
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 3,
+        "prob": 0.46
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 2,
+        "prob": 0.53
+      },
+      {
+        "sku": "SAL-SAL",
+        "qty": 3.5,
+        "prob": 0.88
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      3,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.82,
+      "december": 0.64
+    },
+    "events": [
+      {
+        "date": "2026-02-21",
+        "mult": 1.98
+      },
+      {
+        "date": "2025-04-09",
+        "mult": 3.21
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 2.32
+      },
+      {
+        "date": "2026-09-22",
+        "mult": 3.36
+      }
+    ],
+    "trend": -0.07,
+    "churn": null,
+    "adopt": {
+      "sku": "VIN-BIA-003",
+      "from": "2025-06-24"
+    },
+    "drop": null,
+    "extras_rate": 0.11
+  },
+  {
+    "id": "b1-026",
+    "kind": "bar",
+    "name": "Cafè Navigli",
+    "story": "Espresso bar in the office quarter around Navigli, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 2,
+        "prob": 0.65
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 2,
+        "prob": 0.89
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 1,
+        "prob": 0.86
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 4,
+        "prob": 0.89
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 4,
+        "prob": 0.49
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 3,
+        "prob": 0.73
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      0,
+      2
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.16,
+      "december": 0.28
+    },
+    "events": [],
+    "trend": -0.19,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "BEV-SUC-20",
+      "from": "2025-08-02"
+    },
+    "extras_rate": 0.33
+  },
+  {
+    "id": "b1-027",
+    "kind": "bar",
+    "name": "Bar Sport Stadera",
+    "story": "Nightlife bar in Stadera, quiet midweek, Friday and Saturday spikes for beer and mixers.",
+    "core": [
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 1,
+        "prob": 0.82
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 2,
+        "prob": 0.59
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 3,
+        "prob": 0.91
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 2,
+        "prob": 0.7
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 1,
+        "prob": 0.47
+      },
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 3,
+        "prob": 0.56
+      },
+      {
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 3,
+        "prob": 0.76
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 4,
+        "prob": 0.74
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 1,
+        "prob": 0.46
+      }
+    ],
+    "cadence_days": 7,
+    "weekdays": [
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.73,
+      "december": 0.94
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 3.57
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 3.01
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 2.77
+      },
+      {
+        "date": "2025-02-22",
+        "mult": 3.96
+      }
+    ],
+    "trend": 0.11,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.12
+  },
+  {
+    "id": "b1-028",
+    "kind": "bar",
+    "name": "Caffè Silvana",
+    "story": "Neighbourhood bar in Silvana, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 2,
+        "prob": 0.71
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 1,
+        "prob": 0.85
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 1,
+        "prob": 0.53
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 3.5,
+        "prob": 0.51
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 2,
+        "prob": 0.69
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": 0.57,
+      "december": 0.0
+    },
+    "events": [],
+    "trend": 0.09,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.16
+  },
+  {
+    "id": "b1-029",
+    "kind": "bar",
+    "name": "Bar Sport Zara",
+    "story": "Aperitivo spot in Zara that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 0.5,
+        "prob": 0.56
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 0.5,
+        "prob": 0.89
+      },
+      {
+        "sku": "VIN-ROS-009",
+        "qty": 2,
+        "prob": 0.96
+      },
+      {
+        "sku": "FOR-PEC",
+        "qty": 2.0,
+        "prob": 0.84
+      },
+      {
+        "sku": "FOR-TAL",
+        "qty": 1.5,
+        "prob": 0.57
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 1,
+        "prob": 0.56
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.86,
+      "december": 0.74
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 1.98
+      },
+      {
+        "date": "2026-02-21",
+        "mult": 3.0
+      }
+    ],
+    "trend": 0.03,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.11
+  },
+  {
+    "id": "b1-030",
+    "kind": "grocery",
+    "name": "Alimentari Turati",
+    "story": "Small emporio in Turati, pasta, tins and oil, orders ahead of Christmas.",
+    "core": [
+      {
+        "sku": "FAR-00-25K",
+        "qty": 3,
+        "prob": 0.64
+      },
+      {
+        "sku": "PAS-FUS-500",
+        "qty": 1,
+        "prob": 0.7
+      },
+      {
+        "sku": "OLI-EVO-1L",
+        "qty": 1,
+        "prob": 0.46
+      },
+      {
+        "sku": "SAL-FIN-1K",
+        "qty": 3,
+        "prob": 0.54
+      },
+      {
+        "sku": "PAS-SPA-500",
+        "qty": 1,
+        "prob": 0.65
+      },
+      {
+        "sku": "POM-CIL-400",
+        "qty": 1,
+        "prob": 0.87
+      },
+      {
+        "sku": "OLI-EVO-5L",
+        "qty": 2,
+        "prob": 0.48
+      }
+    ],
+    "cadence_days": 11,
+    "weekdays": [
+      2,
+      5
+    ],
+    "closed": [
+      {
+        "from": "12-25",
+        "to": "12-26"
+      }
+    ],
+    "season": {
+      "summer": -0.07,
+      "december": 1.15
+    },
+    "events": [],
+    "trend": -0.14,
+    "churn": null,
+    "adopt": {
+      "sku": "BEV-TON-20",
+      "from": "2026-03-07"
+    },
+    "drop": null,
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-031",
+    "kind": "bar",
+    "name": "Bistrot Gianni",
+    "story": "Espresso bar in the office quarter around Gianni, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 4,
+        "prob": 0.6
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 2,
+        "prob": 0.66
+      },
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 4,
+        "prob": 0.85
+      },
+      {
+        "sku": "DOL-CRO-SUR",
+        "qty": 3,
+        "prob": 0.59
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 3,
+        "prob": 0.53
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 1,
+        "prob": 0.94
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      3,
+      4
+    ],
+    "closed": [
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.27,
+      "december": 0.01
+    },
+    "events": [],
+    "trend": -0.19,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "DOL-CRO-SUR",
+      "from": "2025-07-26"
+    },
+    "extras_rate": 0.13
+  },
+  {
+    "id": "b1-032",
+    "kind": "bar",
+    "name": "Cafè Cordusio",
+    "story": "Lunch and espresso bar near Cordusio, toasts and panini for the office crowd on weekdays.",
+    "core": [
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 4,
+        "prob": 0.84
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 3,
+        "prob": 0.65
+      },
+      {
+        "sku": "SAL-MOR",
+        "qty": 3.5,
+        "prob": 0.63
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.87
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 0.5,
+        "prob": 0.93
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 2,
+        "prob": 0.61
+      },
+      {
+        "sku": "FOR-PRO-DOL",
+        "qty": 2.0,
+        "prob": 0.71
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 1,
+        "prob": 0.72
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      1,
+      3,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-01"
+      }
+    ],
+    "season": {
+      "summer": 0.45,
+      "december": 0.13
+    },
+    "events": [],
+    "trend": 0.22,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.19
+  },
+  {
+    "id": "b1-033",
+    "kind": "bar",
+    "name": "Caffè Corso Como",
+    "story": "Office-district bar near Corso Como, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 2,
+        "prob": 0.91
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 2,
+        "prob": 0.95
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 3,
+        "prob": 0.72
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 2,
+        "prob": 0.9
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 3,
+        "prob": 0.93
+      },
+      {
+        "sku": "CAF-ZUC-1K",
+        "qty": 1,
+        "prob": 0.74
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 1,
+        "prob": 0.67
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      1,
+      3,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.35,
+      "december": 0.17
+    },
+    "events": [],
+    "trend": 0.15,
+    "churn": null,
+    "adopt": {
+      "sku": "FOR-TAL",
+      "from": "2026-06-18"
+    },
+    "drop": null,
+    "extras_rate": 0.28
+  },
+  {
+    "id": "b1-034",
+    "kind": "restaurant",
+    "name": "Ristorante Lambrate",
+    "story": "Trattoria in Lambrate, closed Sundays, orders fresh cheese and pasta for dinner service.",
+    "core": [
+      {
+        "sku": "POM-PAS-700",
+        "qty": 2,
+        "prob": 0.53
+      },
+      {
+        "sku": "SAL-FIN-1K",
+        "qty": 2,
+        "prob": 0.85
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.79
+      },
+      {
+        "sku": "POM-CIL-400",
+        "qty": 1,
+        "prob": 0.86
+      },
+      {
+        "sku": "FAR-00-25K",
+        "qty": 2,
+        "prob": 0.65
+      },
+      {
+        "sku": "PAS-SPA-500",
+        "qty": 4,
+        "prob": 0.78
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.88
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 1,
+        "prob": 0.58
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      2,
+      3
+    ],
+    "closed": [
+      {
+        "from": "12-25",
+        "to": "12-25"
+      }
+    ],
+    "season": {
+      "summer": 0.27,
+      "december": 0.99
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 1.61
+      },
+      {
+        "date": "2025-04-09",
+        "mult": 2.45
+      }
+    ],
+    "trend": -0.2,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.1
+  },
+  {
+    "id": "b1-035",
+    "kind": "restaurant",
+    "name": "Trattoria Sempione",
+    "story": "Osteria in Sempione with a small wine list, orders ahead of the weekend covers.",
+    "core": [
+      {
+        "sku": "FOR-PEC",
+        "qty": 0.5,
+        "prob": 0.69
+      },
+      {
+        "sku": "VIN-BIA-003",
+        "qty": 4,
+        "prob": 0.92
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 4,
+        "prob": 0.6
+      },
+      {
+        "sku": "FOR-RIC",
+        "qty": 1.5,
+        "prob": 0.91
+      },
+      {
+        "sku": "SAL-PAN",
+        "qty": 1.0,
+        "prob": 0.62
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [
+      {
+        "from": "12-25",
+        "to": "12-25"
+      }
+    ],
+    "season": {
+      "summer": 0.29,
+      "december": 0.65
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 1.85
+      },
+      {
+        "date": "2025-12-31",
+        "mult": 2.05
+      }
+    ],
+    "trend": 0.07,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.26
+  },
+  {
+    "id": "b1-036",
+    "kind": "bar",
+    "name": "Aperitivo Cascina Gobba",
+    "story": "Lunch and espresso bar near Cascina Gobba, toasts and panini for the office crowd on weekdays.",
+    "core": [
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 2.0,
+        "prob": 0.46
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 2,
+        "prob": 0.57
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 3,
+        "prob": 0.74
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 4,
+        "prob": 0.69
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.66
+      },
+      {
+        "sku": "SAL-COT",
+        "qty": 3.5,
+        "prob": 0.87
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 4,
+        "prob": 0.93
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      3,
+      4
+    ],
+    "closed": [
+      {
+        "from": "12-24",
+        "to": "01-01"
+      }
+    ],
+    "season": {
+      "summer": 0.22,
+      "december": -0.08
+    },
+    "events": [
+      {
+        "date": "2026-04-22",
+        "mult": 1.74
+      }
+    ],
+    "trend": -0.01,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "BEV-ARA-20",
+      "from": "2025-11-03"
+    },
+    "extras_rate": 0.21
+  },
+  {
+    "id": "b1-037",
+    "kind": "grocery",
+    "name": "Emporio Sempione",
+    "story": "Neighbourhood alimentari in Sempione, stocks pantry staples and restocks weekly before holidays.",
+    "core": [
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 1,
+        "prob": 0.58
+      },
+      {
+        "sku": "SAL-FIN-1K",
+        "qty": 4,
+        "prob": 0.53
+      },
+      {
+        "sku": "POM-CON-800",
+        "qty": 2,
+        "prob": 0.96
+      },
+      {
+        "sku": "OLI-EVO-1L",
+        "qty": 1,
+        "prob": 0.77
+      },
+      {
+        "sku": "POM-PEL-2.5",
+        "qty": 4,
+        "prob": 0.5
+      }
+    ],
+    "cadence_days": 8,
+    "weekdays": [
+      1,
+      4
+    ],
+    "closed": [
+      {
+        "from": "12-25",
+        "to": "12-26"
+      }
+    ],
+    "season": {
+      "summer": -0.07,
+      "december": 1.15
+    },
+    "events": [],
+    "trend": 0.09,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.05
+  },
+  {
+    "id": "b1-038",
+    "kind": "bar",
+    "name": "Bar Sport Carmela",
+    "story": "Espresso bar in the office quarter around Carmela, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.87
+      },
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 4,
+        "prob": 0.94
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 3,
+        "prob": 0.85
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 1,
+        "prob": 0.45
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 2,
+        "prob": 0.69
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 1,
+        "prob": 0.72
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 4,
+        "prob": 0.83
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 1,
+        "prob": 0.62
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 1,
+        "prob": 0.89
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.31,
+      "december": 0.09
+    },
+    "events": [],
+    "trend": -0.14,
+    "churn": null,
+    "adopt": {
+      "sku": "POM-PEL-2.5",
+      "from": "2025-11-11"
+    },
+    "drop": null,
+    "extras_rate": 0.33
+  },
+  {
+    "id": "b1-039",
+    "kind": "bar",
+    "name": "Caffè Venezia",
+    "story": "Office-district bar near Venezia, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 4,
+        "prob": 0.47
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 2,
+        "prob": 0.5
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 3,
+        "prob": 0.61
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 1,
+        "prob": 0.91
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 4,
+        "prob": 0.77
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 2,
+        "prob": 0.87
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.5
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": -0.17,
+      "december": 0.11
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 1.8
+      }
+    ],
+    "trend": -0.16,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.22
+  },
+  {
+    "id": "b1-040",
+    "kind": "restaurant",
+    "name": "Trattoria Gorla",
+    "story": "Trattoria in Gorla, closed Sundays, orders fresh cheese and pasta for dinner service.",
+    "core": [
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 1,
+        "prob": 0.6
+      },
+      {
+        "sku": "POM-PAS-700",
+        "qty": 1,
+        "prob": 0.8
+      },
+      {
+        "sku": "OLI-EVO-5L",
+        "qty": 2,
+        "prob": 0.66
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 1,
+        "prob": 0.93
+      },
+      {
+        "sku": "SAL-GUA",
+        "qty": 0.5,
+        "prob": 0.75
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 1.0,
+        "prob": 0.64
+      },
+      {
+        "sku": "PAS-PEN-500",
+        "qty": 4,
+        "prob": 0.53
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      2,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-03",
+        "to": "08-24"
+      },
+      {
+        "from": "12-25",
+        "to": "12-25"
+      }
+    ],
+    "season": {
+      "summer": 0.24,
+      "december": 0.67
+    },
+    "events": [],
+    "trend": -0.07,
+    "churn": null,
+    "adopt": {
+      "sku": "DIS-SAC-70",
+      "from": "2026-01-31"
+    },
+    "drop": null,
+    "extras_rate": 0.05
+  },
+  {
+    "id": "b1-041",
+    "kind": "bar",
+    "name": "Snack Bar Chiesa Rossa",
+    "story": "Neighbourhood bar in Chiesa Rossa, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "FOR-ASI",
+        "qty": 3.5,
+        "prob": 0.49
+      },
+      {
+        "sku": "ACQ-NAT-1L",
+        "qty": 4,
+        "prob": 0.66
+      },
+      {
+        "sku": "SAL-COT",
+        "qty": 1.0,
+        "prob": 0.62
+      },
+      {
+        "sku": "BEV-COL-33",
+        "qty": 3,
+        "prob": 0.68
+      },
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 1,
+        "prob": 0.92
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      1,
+      2,
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.49,
+      "december": 0.19
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 1.87
+      }
+    ],
+    "trend": -0.1,
+    "churn": null,
+    "adopt": {
+      "sku": "POM-CIL-400",
+      "from": "2026-05-18"
+    },
+    "drop": null,
+    "extras_rate": 0.05
+  },
+  {
+    "id": "b1-042",
+    "kind": "bar",
+    "name": "Bar Tabacchi Lodi",
+    "story": "Espresso bar in the office quarter around Lodi, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "DOL-CRO-SUR",
+        "qty": 2,
+        "prob": 0.75
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.7
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 1,
+        "prob": 0.79
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 4,
+        "prob": 0.56
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 3,
+        "prob": 0.72
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 1,
+        "prob": 0.62
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.81
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": -0.28,
+      "december": 0.13
+    },
+    "events": [],
+    "trend": 0.13,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.24
+  },
+  {
+    "id": "b1-043",
+    "kind": "bar",
+    "name": "Caffè Missori",
+    "story": "Nightlife bar in Missori, quiet midweek, Friday and Saturday spikes for beer and mixers.",
+    "core": [
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.86
+      },
+      {
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 1,
+        "prob": 0.66
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 4,
+        "prob": 0.67
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 2,
+        "prob": 0.97
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 4,
+        "prob": 0.57
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 4,
+        "prob": 0.59
+      }
+    ],
+    "cadence_days": 7,
+    "weekdays": [
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.81,
+      "december": 0.87
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 2.08
+      },
+      {
+        "date": "2026-09-22",
+        "mult": 2.61
+      },
+      {
+        "date": "2025-02-22",
+        "mult": 3.11
+      },
+      {
+        "date": "2025-04-09",
+        "mult": 2.74
+      }
+    ],
+    "trend": -0.18,
+    "churn": {
+      "start": "2026-01-19"
+    },
+    "adopt": {
+      "sku": "POM-CIL-400",
+      "from": "2025-10-20"
+    },
+    "drop": null,
+    "extras_rate": 0.3
+  },
+  {
+    "id": "b1-044",
+    "kind": "bar",
+    "name": "Bar Sport Vittoria",
+    "story": "Aperitivo spot in Vittoria that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "BIR-ANA-33",
+        "qty": 4,
+        "prob": 0.56
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 4,
+        "prob": 0.54
+      },
+      {
+        "sku": "FOR-GOR-DOL",
+        "qty": 1.0,
+        "prob": 0.92
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 2,
+        "prob": 0.82
+      },
+      {
+        "sku": "VIN-ROS-009",
+        "qty": 4,
+        "prob": 0.78
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.8,
+      "december": 0.7
+    },
+    "events": [
+      {
+        "date": "2025-02-22",
+        "mult": 2.82
+      }
+    ],
+    "trend": -0.08,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "DIS-SAC-70",
+      "from": "2025-04-25"
+    },
+    "extras_rate": 0.08
+  },
+  {
+    "id": "b1-045",
+    "kind": "bar",
+    "name": "Bistrot Vittoria",
+    "story": "Espresso bar in the office quarter around Vittoria, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.92
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 4,
+        "prob": 0.84
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 4,
+        "prob": 0.79
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 4,
+        "prob": 0.69
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 2,
+        "prob": 0.46
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 2,
+        "prob": 0.6
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 2,
+        "prob": 0.96
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 2,
+        "prob": 0.7
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": -0.23,
+      "december": 0.24
+    },
+    "events": [],
+    "trend": 0.17,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.1
+  },
+  {
+    "id": "b1-046",
+    "kind": "bar",
+    "name": "Bar Pasticceria Bande Nere",
+    "story": "Late bar in Bande Nere with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 4,
+        "prob": 0.79
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 4,
+        "prob": 0.63
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 2,
+        "prob": 0.85
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.66
+      },
+      {
+        "sku": "ACQ-FRIZ-50",
+        "qty": 4,
+        "prob": 0.56
+      }
+    ],
+    "cadence_days": 7,
+    "weekdays": [
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.64,
+      "december": 0.82
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 3.38
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 2.66
+      },
+      {
+        "date": "2025-02-22",
+        "mult": 3.74
+      }
+    ],
+    "trend": 0.15,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "BEV-GAZ-1L",
+      "from": "2025-11-02"
+    },
+    "extras_rate": 0.2
+  },
+  {
+    "id": "b1-047",
+    "kind": "deli",
+    "name": "Salumeria Lodi",
+    "story": "Salumeria in Lodi selling affettati by weight, steady orders on Monday and Thursday.",
+    "core": [
+      {
+        "sku": "FOR-PEC",
+        "qty": 3.0,
+        "prob": 0.83
+      },
+      {
+        "sku": "FOR-ASI",
+        "qty": 2.5,
+        "prob": 0.51
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 1,
+        "prob": 0.84
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 1.5,
+        "prob": 0.52
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 0.5,
+        "prob": 0.49
+      },
+      {
+        "sku": "FOR-MOZ-BUF",
+        "qty": 2.0,
+        "prob": 0.73
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 3.0,
+        "prob": 0.68
+      }
+    ],
+    "cadence_days": 7,
+    "weekdays": [
+      1,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.23,
+      "december": 0.76
+    },
+    "events": [],
+    "trend": 0.02,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.16
+  },
+  {
+    "id": "b1-048",
+    "kind": "bar",
+    "name": "Cafè Varesine",
+    "story": "Office-district bar near Varesine, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.65
+      },
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 3,
+        "prob": 0.47
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 2,
+        "prob": 0.49
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 3,
+        "prob": 0.65
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 2,
+        "prob": 0.96
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 4,
+        "prob": 0.52
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 4,
+        "prob": 0.92
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 1,
+        "prob": 0.79
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 4,
+        "prob": 0.92
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      0,
+      2
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": -0.23,
+      "december": 0.02
+    },
+    "events": [],
+    "trend": 0.13,
+    "churn": null,
+    "adopt": {
+      "sku": "DOL-CRO-SUR",
+      "from": "2025-03-25"
+    },
+    "drop": null,
+    "extras_rate": 0.31
+  },
+  {
+    "id": "b1-049",
+    "kind": "deli",
+    "name": "Salumeria Chiesa Rossa",
+    "story": "Salumeria in Chiesa Rossa selling affettati by weight, steady orders on Monday and Thursday.",
+    "core": [
+      {
+        "sku": "FOR-RIC",
+        "qty": 4.0,
+        "prob": 0.85
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 1,
+        "prob": 0.68
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 3.0,
+        "prob": 0.71
+      },
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 1,
+        "prob": 0.75
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 0.5,
+        "prob": 0.71
+      },
+      {
+        "sku": "SAL-GUA",
+        "qty": 1.0,
+        "prob": 0.92
+      },
+      {
+        "sku": "FOR-GOR-DOL",
+        "qty": 0.5,
+        "prob": 0.68
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 2.0,
+        "prob": 0.96
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-01",
+        "to": "08-15"
+      }
+    ],
+    "season": {
+      "summer": 0.16,
+      "december": 0.73
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 1.51
+      }
+    ],
+    "trend": 0.18,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.25
+  },
+  {
+    "id": "b1-050",
+    "kind": "bar",
+    "name": "Bar Sport Fabio",
+    "story": "Aperitivo bar in Fabio, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "SAL-BRE",
+        "qty": 3.5,
+        "prob": 0.51
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 1.0,
+        "prob": 0.97
+      },
+      {
+        "sku": "VIN-BIA-004",
+        "qty": 1,
+        "prob": 0.93
+      },
+      {
+        "sku": "VIN-ROS-009",
+        "qty": 1,
+        "prob": 0.84
+      },
+      {
+        "sku": "BIR-ANA-33",
+        "qty": 3,
+        "prob": 0.51
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.7,
+      "december": 0.48
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 2.99
+      }
+    ],
+    "trend": -0.15,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.24
+  },
+  {
+    "id": "b1-051",
+    "kind": "bar",
+    "name": "Caffè Garibaldi",
+    "story": "Late bar in Garibaldi with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 3,
+        "prob": 0.69
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 4,
+        "prob": 0.75
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.74
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 3,
+        "prob": 0.66
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 2,
+        "prob": 0.55
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.67
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 1,
+        "prob": 0.93
+      }
+    ],
+    "cadence_days": 7,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.75,
+      "december": 1.11
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 2.35
+      }
+    ],
+    "trend": -0.04,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.12
+  },
+  {
+    "id": "b1-052",
+    "kind": "bar",
+    "name": "Bar Da Gino",
+    "story": "Espresso bar in the office quarter around Da Gino, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 1,
+        "prob": 0.93
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 3,
+        "prob": 0.48
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 3,
+        "prob": 0.8
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 4,
+        "prob": 0.76
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 3,
+        "prob": 0.89
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": -0.26,
+      "december": 0.01
+    },
+    "events": [],
+    "trend": -0.15,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "BEV-SUC-AC",
+      "from": "2025-05-19"
+    },
+    "extras_rate": 0.3
+  },
+  {
+    "id": "b1-053",
+    "kind": "bar",
+    "name": "Snack Bar Buenos Aires",
+    "story": "Aperitivo bar in Buenos Aires, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 3,
+        "prob": 0.56
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 4,
+        "prob": 0.54
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 1,
+        "prob": 0.77
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 3.5,
+        "prob": 0.46
+      },
+      {
+        "sku": "BEV-CHI-20",
+        "qty": 2,
+        "prob": 0.57
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.95
+      },
+      {
+        "sku": "FOR-TAL",
+        "qty": 1.5,
+        "prob": 0.74
+      },
+      {
+        "sku": "SAL-SPE",
+        "qty": 2.0,
+        "prob": 0.61
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 2,
+        "prob": 0.68
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.78,
+      "december": 0.43
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 3.23
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 2.6
+      },
+      {
+        "date": "2026-02-21",
+        "mult": 2.22
+      },
+      {
+        "date": "2025-02-22",
+        "mult": 1.85
+      }
+    ],
+    "trend": 0.05,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.26
+  },
+  {
+    "id": "b1-054",
+    "kind": "bar",
+    "name": "Caffè Stadera",
+    "story": "Neighbourhood bar in Stadera, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 2,
+        "prob": 0.58
+      },
+      {
+        "sku": "FOR-PRO-DOL",
+        "qty": 3.5,
+        "prob": 0.93
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 1,
+        "prob": 0.97
+      },
+      {
+        "sku": "ACQ-NAT-1L",
+        "qty": 3,
+        "prob": 0.81
+      },
+      {
+        "sku": "BEV-COL-33",
+        "qty": 2,
+        "prob": 0.69
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      1,
+      2,
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.33,
+      "december": 0.11
+    },
+    "events": [],
+    "trend": 0.06,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.32
+  },
+  {
+    "id": "b1-055",
+    "kind": "bar",
+    "name": "Bar Pasticceria Da Dino",
+    "story": "Aperitivo bar in Da Dino, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 4,
+        "prob": 0.7
+      },
+      {
+        "sku": "VIN-BIA-004",
+        "qty": 4,
+        "prob": 0.61
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 1,
+        "prob": 0.58
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 4,
+        "prob": 0.57
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 3,
+        "prob": 0.62
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.61,
+      "december": 0.6
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 3.44
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 3.01
+      }
+    ],
+    "trend": -0.05,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-056",
+    "kind": "bar",
+    "name": "Aperitivo Certosa",
+    "story": "Lunch and espresso bar near Certosa, toasts and panini for the office crowd on weekdays.",
+    "core": [
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.54
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 3.0,
+        "prob": 0.46
+      },
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 1,
+        "prob": 0.72
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 3,
+        "prob": 0.85
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 1,
+        "prob": 0.49
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.85
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      1,
+      2,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-01"
+      }
+    ],
+    "season": {
+      "summer": 0.23,
+      "december": 0.08
+    },
+    "events": [
+      {
+        "date": "2026-02-21",
+        "mult": 1.6
+      }
+    ],
+    "trend": 0.23,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-057",
+    "kind": "bar",
+    "name": "Bar Brera",
+    "story": "Neighbourhood bar in Brera, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 1.0,
+        "prob": 0.95
+      },
+      {
+        "sku": "SAL-COT",
+        "qty": 4.0,
+        "prob": 0.79
+      },
+      {
+        "sku": "ACQ-NAT-1L",
+        "qty": 4,
+        "prob": 0.64
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 1,
+        "prob": 0.92
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 1,
+        "prob": 0.96
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 1,
+        "prob": 0.67
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      3,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.42,
+      "december": -0.06
+    },
+    "events": [],
+    "trend": 0.17,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-058",
+    "kind": "bar",
+    "name": "Bistrot Da Pino",
+    "story": "Aperitivo spot in Da Pino that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 1,
+        "prob": 0.53
+      },
+      {
+        "sku": "FOR-TAL",
+        "qty": 3.5,
+        "prob": 0.55
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 2,
+        "prob": 0.74
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 4,
+        "prob": 0.83
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 1,
+        "prob": 0.9
+      },
+      {
+        "sku": "BEV-CHI-20",
+        "qty": 3,
+        "prob": 0.46
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 2,
+        "prob": 0.69
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 1,
+        "prob": 0.5
+      },
+      {
+        "sku": "FOR-PEC",
+        "qty": 0.5,
+        "prob": 0.94
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.66,
+      "december": 0.56
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 2.17
+      }
+    ],
+    "trend": -0.02,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-059",
+    "kind": "bar",
+    "name": "Caffè Sempione",
+    "story": "Aperitivo spot in Sempione that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 1,
+        "prob": 0.92
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 2,
+        "prob": 0.97
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 2,
+        "prob": 0.63
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 1,
+        "prob": 0.54
+      },
+      {
+        "sku": "SAL-SAL",
+        "qty": 2.0,
+        "prob": 0.59
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 3,
+        "prob": 0.64
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 3,
+        "prob": 0.84
+      },
+      {
+        "sku": "BEV-CHI-20",
+        "qty": 2,
+        "prob": 0.86
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 1,
+        "prob": 0.78
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.63,
+      "december": 0.68
+    },
+    "events": [
+      {
+        "date": "2026-04-22",
+        "mult": 2.19
+      },
+      {
+        "date": "2026-09-22",
+        "mult": 2.87
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 3.3
+      }
+    ],
+    "trend": 0.16,
+    "churn": {
+      "start": "2026-01-30"
+    },
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.22
+  },
+  {
+    "id": "b1-060",
+    "kind": "grocery",
+    "name": "Drogheria Corvetto",
+    "story": "Neighbourhood alimentari in Corvetto, stocks pantry staples and restocks weekly before holidays.",
+    "core": [
+      {
+        "sku": "POM-CON-800",
+        "qty": 1,
+        "prob": 0.73
+      },
+      {
+        "sku": "FAR-00-25K",
+        "qty": 1,
+        "prob": 0.76
+      },
+      {
+        "sku": "ACQ-NAT-1L",
+        "qty": 3,
+        "prob": 0.94
+      },
+      {
+        "sku": "FAR-MAN-5K",
+        "qty": 2,
+        "prob": 0.59
+      },
+      {
+        "sku": "PAS-FUS-500",
+        "qty": 1,
+        "prob": 0.71
+      },
+      {
+        "sku": "PAS-RIS-1K",
+        "qty": 1,
+        "prob": 0.67
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.58
+      },
+      {
+        "sku": "PAS-RIG-500",
+        "qty": 2,
+        "prob": 0.73
+      }
+    ],
+    "cadence_days": 8,
+    "weekdays": [
+      0,
+      3
+    ],
+    "closed": [
+      {
+        "from": "12-25",
+        "to": "12-26"
+      }
+    ],
+    "season": {
+      "summer": -0.07,
+      "december": 0.73
+    },
+    "events": [],
+    "trend": -0.09,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.16
+  },
+  {
+    "id": "b1-061",
+    "kind": "bar",
+    "name": "Bar Pasticceria Pasubio",
+    "story": "Nightlife bar in Pasubio, quiet midweek, Friday and Saturday spikes for beer and mixers.",
+    "core": [
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 2,
+        "prob": 0.84
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 1,
+        "prob": 0.83
+      },
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 1,
+        "prob": 0.57
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 2,
+        "prob": 0.7
+      },
+      {
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 1,
+        "prob": 0.66
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 2,
+        "prob": 0.96
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.78
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 4,
+        "prob": 0.48
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 3,
+        "prob": 0.56
+      }
+    ],
+    "cadence_days": 7,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.63,
+      "december": 1.07
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 3.49
+      },
+      {
+        "date": "2025-02-22",
+        "mult": 2.12
+      }
+    ],
+    "trend": 0.24,
+    "churn": {
+      "start": "2025-12-01"
+    },
+    "adopt": null,
+    "drop": {
+      "sku": "DIS-SAC-70",
+      "from": "2025-04-21"
+    },
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-062",
+    "kind": "bar",
+    "name": "Cafè Moscova",
+    "story": "Late bar in Moscova with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 1,
+        "prob": 0.86
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 3,
+        "prob": 0.54
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 2,
+        "prob": 0.57
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.88
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 2,
+        "prob": 0.51
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 1,
+        "prob": 0.76
+      },
+      {
+        "sku": "BEV-COL-33",
+        "qty": 1,
+        "prob": 0.68
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.85,
+      "december": 1.28
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 3.4
+      },
+      {
+        "date": "2026-02-21",
+        "mult": 2.18
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 2.4
+      }
+    ],
+    "trend": -0.18,
+    "churn": {
+      "start": "2026-06-03"
+    },
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.31
+  },
+  {
+    "id": "b1-063",
+    "kind": "bar",
+    "name": "Caffè Ornella",
+    "story": "Aperitivo spot in Ornella that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 4.0,
+        "prob": 0.91
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 2,
+        "prob": 0.86
+      },
+      {
+        "sku": "SAL-SPE",
+        "qty": 1.0,
+        "prob": 0.88
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 4,
+        "prob": 0.71
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.94
+      },
+      {
+        "sku": "FOR-GOR-DOL",
+        "qty": 2.0,
+        "prob": 0.83
+      },
+      {
+        "sku": "VIN-BIA-004",
+        "qty": 1,
+        "prob": 0.8
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.95,
+      "december": 0.59
+    },
+    "events": [
+      {
+        "date": "2025-04-09",
+        "mult": 3.03
+      },
+      {
+        "date": "2026-04-22",
+        "mult": 2.67
+      }
+    ],
+    "trend": -0.12,
+    "churn": {
+      "start": "2026-05-29"
+    },
+    "adopt": null,
+    "drop": {
+      "sku": "FOR-GOR-DOL",
+      "from": "2026-05-01"
+    },
+    "extras_rate": 0.25
+  },
+  {
+    "id": "b1-064",
+    "kind": "bar",
+    "name": "Bistrot Bande Nere",
+    "story": "Neighbourhood bar in Bande Nere, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.53
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 3,
+        "prob": 0.91
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 4,
+        "prob": 0.54
+      },
+      {
+        "sku": "ACQ-NAT-1L",
+        "qty": 1,
+        "prob": 0.83
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 3,
+        "prob": 0.97
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      1,
+      3,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.21,
+      "december": 0.13
+    },
+    "events": [],
+    "trend": 0.02,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.28
+  },
+  {
+    "id": "b1-065",
+    "kind": "bar",
+    "name": "Snack Bar Da Dino",
+    "story": "Office-district bar near Da Dino, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 2,
+        "prob": 0.97
+      },
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 3,
+        "prob": 0.78
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 4,
+        "prob": 0.8
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 4,
+        "prob": 0.95
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 2,
+        "prob": 0.81
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 2,
+        "prob": 0.75
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      0,
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.32,
+      "december": 0.28
+    },
+    "events": [
+      {
+        "date": "2026-04-22",
+        "mult": 1.61
+      }
+    ],
+    "trend": 0.13,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.23
+  },
+  {
+    "id": "b1-066",
+    "kind": "deli",
+    "name": "Salumeria e Formaggi Venezia",
+    "story": "Cheese and cured meat counter in Venezia, buys in kilos for the lunch counter.",
+    "core": [
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 1,
+        "prob": 0.55
+      },
+      {
+        "sku": "SAL-SAL",
+        "qty": 1.0,
+        "prob": 0.73
+      },
+      {
+        "sku": "FOR-PEC",
+        "qty": 1.0,
+        "prob": 0.89
+      },
+      {
+        "sku": "SAL-SPE",
+        "qty": 4.0,
+        "prob": 0.63
+      },
+      {
+        "sku": "FOR-ASI",
+        "qty": 2.5,
+        "prob": 0.54
+      },
+      {
+        "sku": "SAL-MOR",
+        "qty": 2.0,
+        "prob": 0.46
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 0.5,
+        "prob": 0.74
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 2.5,
+        "prob": 0.65
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 3.0,
+        "prob": 0.59
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.24,
+      "december": 0.76
+    },
+    "events": [
+      {
+        "date": "2025-02-22",
+        "mult": 1.59
+      }
+    ],
+    "trend": -0.17,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.3
+  },
+  {
+    "id": "b1-067",
+    "kind": "bar",
+    "name": "Caffè Moscova",
+    "story": "Neighbourhood bar in Moscova, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 1,
+        "prob": 0.72
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 4,
+        "prob": 0.59
+      },
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 3,
+        "prob": 0.74
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 3,
+        "prob": 0.55
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 4,
+        "prob": 0.87
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 2,
+        "prob": 0.91
+      },
+      {
+        "sku": "SAL-MOR",
+        "qty": 1.5,
+        "prob": 0.83
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.26,
+      "december": 0.11
+    },
+    "events": [],
+    "trend": 0.06,
+    "churn": null,
+    "adopt": {
+      "sku": "PAS-RIS-1K",
+      "from": "2025-08-30"
+    },
+    "drop": null,
+    "extras_rate": 0.15
+  },
+  {
+    "id": "b1-068",
+    "kind": "bar",
+    "name": "Bar Tabacchi Tonino",
+    "story": "Aperitivo spot in Tonino that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 2,
+        "prob": 0.85
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 4,
+        "prob": 0.57
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 1,
+        "prob": 0.56
+      },
+      {
+        "sku": "DIS-TOV-40",
+        "qty": 2,
+        "prob": 0.72
+      },
+      {
+        "sku": "SAL-SPE",
+        "qty": 2.0,
+        "prob": 0.47
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.83
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.75
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.87,
+      "december": 0.55
+    },
+    "events": [
+      {
+        "date": "2026-02-21",
+        "mult": 1.88
+      },
+      {
+        "date": "2025-12-31",
+        "mult": 3.42
+      },
+      {
+        "date": "2026-09-22",
+        "mult": 3.04
+      }
+    ],
+    "trend": 0.24,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.32
+  },
+  {
+    "id": "b1-069",
+    "kind": "grocery",
+    "name": "Emporio Da Lella",
+    "story": "Small emporio in Da Lella, pasta, tins and oil, orders ahead of Christmas.",
+    "core": [
+      {
+        "sku": "PAS-FUS-500",
+        "qty": 4,
+        "prob": 0.95
+      },
+      {
+        "sku": "SAL-FIN-1K",
+        "qty": 2,
+        "prob": 0.7
+      },
+      {
+        "sku": "FAR-00-25K",
+        "qty": 1,
+        "prob": 0.84
+      },
+      {
+        "sku": "POM-PEL-2.5",
+        "qty": 1,
+        "prob": 0.96
+      },
+      {
+        "sku": "OLI-EVO-5L",
+        "qty": 1,
+        "prob": 0.65
+      },
+      {
+        "sku": "PAS-RIS-1K",
+        "qty": 1,
+        "prob": 0.68
+      },
+      {
+        "sku": "PAS-SPA-500",
+        "qty": 4,
+        "prob": 0.62
+      },
+      {
+        "sku": "POM-CIL-400",
+        "qty": 4,
+        "prob": 0.95
+      },
+      {
+        "sku": "ACE-VIN-1L",
+        "qty": 2,
+        "prob": 0.95
+      }
+    ],
+    "cadence_days": 14,
+    "weekdays": [
+      1,
+      4
+    ],
+    "closed": [
+      {
+        "from": "12-25",
+        "to": "12-26"
+      }
+    ],
+    "season": {
+      "summer": 0.08,
+      "december": 0.91
+    },
+    "events": [],
+    "trend": 0.19,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.18
+  },
+  {
+    "id": "b1-070",
+    "kind": "bar",
+    "name": "Caffè Pasubio",
+    "story": "Late bar in Pasubio with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 2,
+        "prob": 0.5
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 1,
+        "prob": 0.67
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 3,
+        "prob": 0.96
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 1,
+        "prob": 0.81
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 3,
+        "prob": 0.52
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.74,
+      "december": 0.85
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 3.61
+      }
+    ],
+    "trend": -0.14,
+    "churn": {
+      "start": "2026-04-11"
+    },
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.12
+  },
+  {
+    "id": "b1-071",
+    "kind": "grocery",
+    "name": "Drogheria Peppino",
+    "story": "Neighbourhood alimentari in Peppino, stocks pantry staples and restocks weekly before holidays.",
+    "core": [
+      {
+        "sku": "PAS-FUS-500",
+        "qty": 2,
+        "prob": 0.75
+      },
+      {
+        "sku": "POM-CIL-400",
+        "qty": 4,
+        "prob": 0.58
+      },
+      {
+        "sku": "PAS-PEN-500",
+        "qty": 1,
+        "prob": 0.52
+      },
+      {
+        "sku": "PAS-RIS-1K",
+        "qty": 2,
+        "prob": 0.5
+      },
+      {
+        "sku": "ACE-VIN-1L",
+        "qty": 1,
+        "prob": 0.57
+      },
+      {
+        "sku": "POM-PEL-2.5",
+        "qty": 4,
+        "prob": 0.76
+      },
+      {
+        "sku": "OLI-EVO-5L",
+        "qty": 1,
+        "prob": 0.64
+      },
+      {
+        "sku": "FAR-SEM-5K",
+        "qty": 1,
+        "prob": 0.64
+      },
+      {
+        "sku": "SAL-FIN-1K",
+        "qty": 4,
+        "prob": 0.5
+      }
+    ],
+    "cadence_days": 13,
+    "weekdays": [
+      2,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": -0.11,
+      "december": 0.86
+    },
+    "events": [],
+    "trend": 0.24,
+    "churn": {
+      "start": "2025-12-27"
+    },
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.07
+  },
+  {
+    "id": "b1-072",
+    "kind": "deli",
+    "name": "Salumeria e Formaggi Turati",
+    "story": "Cheese and cured meat counter in Turati, buys in kilos for the lunch counter.",
+    "core": [
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 3.5,
+        "prob": 0.96
+      },
+      {
+        "sku": "FOR-TAL",
+        "qty": 1.5,
+        "prob": 0.67
+      },
+      {
+        "sku": "FOR-ASI",
+        "qty": 1.5,
+        "prob": 0.49
+      },
+      {
+        "sku": "SAL-SPE",
+        "qty": 3.5,
+        "prob": 0.77
+      },
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 2,
+        "prob": 0.74
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 2.0,
+        "prob": 0.46
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.92
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.85
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 3.5,
+        "prob": 0.81
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.13,
+      "december": 0.75
+    },
+    "events": [],
+    "trend": 0.1,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.16
+  },
+  {
+    "id": "b1-073",
+    "kind": "bar",
+    "name": "Bar Sport Garibaldi",
+    "story": "Espresso bar in the office quarter around Garibaldi, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 1,
+        "prob": 0.89
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 2,
+        "prob": 0.57
+      },
+      {
+        "sku": "CAF-ZUC-1K",
+        "qty": 3,
+        "prob": 0.65
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.54
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 2,
+        "prob": 0.68
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 3,
+        "prob": 0.9
+      },
+      {
+        "sku": "CAF-ORZ-500",
+        "qty": 1,
+        "prob": 0.5
+      },
+      {
+        "sku": "DOL-BIS-CAF",
+        "qty": 4,
+        "prob": 0.95
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": -0.35,
+      "december": 0.14
+    },
+    "events": [],
+    "trend": 0.03,
+    "churn": {
+      "start": "2025-11-23"
+    },
+    "adopt": {
+      "sku": "BEV-CHI-20",
+      "from": "2026-02-23"
+    },
+    "drop": null,
+    "extras_rate": 0.3
+  },
+  {
+    "id": "b1-074",
+    "kind": "bar",
+    "name": "Bar Pasticceria Ticinese",
+    "story": "Aperitivo bar in Ticinese, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 1,
+        "prob": 0.66
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 0.5,
+        "prob": 0.82
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 4,
+        "prob": 0.9
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 2,
+        "prob": 0.93
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 3,
+        "prob": 0.84
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 1,
+        "prob": 0.51
+      },
+      {
+        "sku": "SAL-SPE",
+        "qty": 3.5,
+        "prob": 0.69
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 2,
+        "prob": 0.85
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 4,
+        "prob": 0.46
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      3,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.87,
+      "december": 0.57
+    },
+    "events": [
+      {
+        "date": "2025-02-22",
+        "mult": 3.33
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 2.08
+      },
+      {
+        "date": "2026-04-22",
+        "mult": 2.06
+      }
+    ],
+    "trend": 0.22,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.11
+  },
+  {
+    "id": "b1-075",
+    "kind": "bar",
+    "name": "Bistrot Bisceglie",
+    "story": "Late bar in Bisceglie with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 2,
+        "prob": 0.76
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 2,
+        "prob": 0.91
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 1,
+        "prob": 0.68
+      },
+      {
+        "sku": "BEV-COL-33",
+        "qty": 3,
+        "prob": 0.66
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 3,
+        "prob": 0.78
+      },
+      {
+        "sku": "ACQ-FRIZ-50",
+        "qty": 1,
+        "prob": 0.79
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.67,
+      "december": 0.85
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 3.11
+      }
+    ],
+    "trend": 0.07,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.15
+  },
+  {
+    "id": "b1-076",
+    "kind": "bar",
+    "name": "Bistrot Silvana",
+    "story": "Aperitivo spot in Silvana that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "VIN-PRO-002",
+        "qty": 1,
+        "prob": 0.47
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 3,
+        "prob": 0.48
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.86
+      },
+      {
+        "sku": "FOR-GOR-DOL",
+        "qty": 3.0,
+        "prob": 0.73
+      },
+      {
+        "sku": "FOR-PEC",
+        "qty": 3.5,
+        "prob": 0.5
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 4,
+        "prob": 0.65
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.8,
+      "december": 0.78
+    },
+    "events": [
+      {
+        "date": "2025-02-22",
+        "mult": 2.59
+      },
+      {
+        "date": "2025-04-09",
+        "mult": 2.43
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 3.12
+      },
+      {
+        "date": "2026-09-22",
+        "mult": 3.19
+      }
+    ],
+    "trend": -0.04,
+    "churn": null,
+    "adopt": {
+      "sku": "BEV-SUC-20",
+      "from": "2025-12-31"
+    },
+    "drop": null,
+    "extras_rate": 0.21
+  },
+  {
+    "id": "b1-077",
+    "kind": "restaurant",
+    "name": "Ristorante Da Sandro",
+    "story": "Osteria in Da Sandro with a small wine list, orders ahead of the weekend covers.",
+    "core": [
+      {
+        "sku": "FOR-RIC",
+        "qty": 1.0,
+        "prob": 0.69
+      },
+      {
+        "sku": "VIN-BIA-003",
+        "qty": 1,
+        "prob": 0.63
+      },
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 4,
+        "prob": 0.9
+      },
+      {
+        "sku": "SAL-FIN-1K",
+        "qty": 2,
+        "prob": 0.85
+      },
+      {
+        "sku": "POM-PEL-2.5",
+        "qty": 3,
+        "prob": 0.83
+      },
+      {
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 1,
+        "prob": 0.82
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-03",
+        "to": "08-24"
+      },
+      {
+        "from": "12-25",
+        "to": "12-25"
+      }
+    ],
+    "season": {
+      "summer": 0.25,
+      "december": 0.97
+    },
+    "events": [],
+    "trend": 0.05,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.27
+  },
+  {
+    "id": "b1-078",
+    "kind": "deli",
+    "name": "Salumeria Bovisa",
+    "story": "Salumeria in Bovisa selling affettati by weight, steady orders on Monday and Thursday.",
+    "core": [
+      {
+        "sku": "SAL-PAN",
+        "qty": 1.0,
+        "prob": 0.87
+      },
+      {
+        "sku": "FOR-PRO-DOL",
+        "qty": 3.5,
+        "prob": 0.9
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 2.0,
+        "prob": 0.63
+      },
+      {
+        "sku": "SAL-GUA",
+        "qty": 2.5,
+        "prob": 0.78
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 1,
+        "prob": 0.53
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.27,
+      "december": 0.84
+    },
+    "events": [
+      {
+        "date": "2025-04-09",
+        "mult": 1.93
+      }
+    ],
+    "trend": -0.11,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.33
+  },
+  {
+    "id": "b1-079",
+    "kind": "bar",
+    "name": "Bar Sport Varesine",
+    "story": "Office-district bar near Varesine, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 2,
+        "prob": 0.67
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 4,
+        "prob": 0.66
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 2,
+        "prob": 0.74
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 4,
+        "prob": 0.81
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 1,
+        "prob": 0.89
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      0,
+      2
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      }
+    ],
+    "season": {
+      "summer": -0.32,
+      "december": 0.15
+    },
+    "events": [],
+    "trend": -0.14,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.27
+  },
+  {
+    "id": "b1-080",
+    "kind": "bar",
+    "name": "Bar Tabacchi Mercato",
+    "story": "Neighbourhood bar in Mercato, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 1,
+        "prob": 0.67
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 4,
+        "prob": 0.72
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 1,
+        "prob": 0.65
+      },
+      {
+        "sku": "FOR-PRO-DOL",
+        "qty": 1.0,
+        "prob": 0.55
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      2,
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.23,
+      "december": 0.16
+    },
+    "events": [],
+    "trend": 0.23,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.25
+  },
+  {
+    "id": "b1-081",
+    "kind": "bar",
+    "name": "Bar Pasticceria Gianni",
+    "story": "Lunch and espresso bar near Gianni, toasts and panini for the office crowd on weekdays.",
+    "core": [
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 3,
+        "prob": 0.5
+      },
+      {
+        "sku": "SAL-COT",
+        "qty": 1.5,
+        "prob": 0.64
+      },
+      {
+        "sku": "BEV-COL-33",
+        "qty": 2,
+        "prob": 0.7
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 3.0,
+        "prob": 0.9
+      },
+      {
+        "sku": "FOR-PRO-DOL",
+        "qty": 2.0,
+        "prob": 0.52
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.26,
+      "december": 0.12
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 1.93
+      }
+    ],
+    "trend": 0.17,
+    "churn": {
+      "start": "2025-09-10"
+    },
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.11
+  },
+  {
+    "id": "b1-082",
+    "kind": "bar",
+    "name": "Bar Sport Melchiorre",
+    "story": "Espresso bar in the office quarter around Melchiorre, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 4,
+        "prob": 0.69
+      },
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 1,
+        "prob": 0.72
+      },
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 4,
+        "prob": 0.64
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 4,
+        "prob": 0.46
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 4,
+        "prob": 0.64
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 3,
+        "prob": 0.61
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 1,
+        "prob": 0.46
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 4,
+        "prob": 0.81
+      },
+      {
+        "sku": "DOL-CRO-SUR",
+        "qty": 2,
+        "prob": 0.52
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      0,
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-08",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.39,
+      "december": 0.23
+    },
+    "events": [],
+    "trend": 0.07,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.27
+  },
+  {
+    "id": "b1-083",
+    "kind": "bar",
+    "name": "Aperitivo Lodi",
+    "story": "Lunch and espresso bar near Lodi, toasts and panini for the office crowd on weekdays.",
+    "core": [
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 3,
+        "prob": 0.61
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 2,
+        "prob": 0.48
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 3,
+        "prob": 0.64
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 3,
+        "prob": 0.84
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 2,
+        "prob": 0.79
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      3,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.38,
+      "december": 0.01
+    },
+    "events": [
+      {
+        "date": "2025-04-09",
+        "mult": 1.66
+      }
+    ],
+    "trend": 0.12,
+    "churn": null,
+    "adopt": {
+      "sku": "ACE-VIN-1L",
+      "from": "2025-08-16"
+    },
+    "drop": {
+      "sku": "DIS-SAC-70",
+      "from": "2025-10-21"
+    },
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-084",
+    "kind": "bar",
+    "name": "Bar Sport Forlanini",
+    "story": "Aperitivo bar in Forlanini, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 3,
+        "prob": 0.84
+      },
+      {
+        "sku": "VIN-PRO-002",
+        "qty": 2,
+        "prob": 0.65
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.6
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 3.5,
+        "prob": 0.55
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 2,
+        "prob": 0.75
+      },
+      {
+        "sku": "VIN-BIA-004",
+        "qty": 3,
+        "prob": 0.85
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 3.5,
+        "prob": 0.8
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 2,
+        "prob": 0.72
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 1,
+        "prob": 0.82
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      3,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.86,
+      "december": 0.43
+    },
+    "events": [
+      {
+        "date": "2026-04-22",
+        "mult": 3.08
+      }
+    ],
+    "trend": 0.07,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.21
+  },
+  {
+    "id": "b1-085",
+    "kind": "bar",
+    "name": "Cafè Pasubio",
+    "story": "Aperitivo spot in Pasubio that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "FOR-TAL",
+        "qty": 1.0,
+        "prob": 0.56
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 1.0,
+        "prob": 0.93
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 3.5,
+        "prob": 0.95
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 2,
+        "prob": 0.92
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 4,
+        "prob": 0.73
+      },
+      {
+        "sku": "DIS-TOV-40",
+        "qty": 2,
+        "prob": 0.53
+      },
+      {
+        "sku": "VIN-PRO-002",
+        "qty": 1,
+        "prob": 0.53
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 1,
+        "prob": 0.92
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.94,
+      "december": 0.4
+    },
+    "events": [
+      {
+        "date": "2025-04-09",
+        "mult": 3.23
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 2.71
+      },
+      {
+        "date": "2026-04-22",
+        "mult": 3.47
+      }
+    ],
+    "trend": 0.13,
+    "churn": null,
+    "adopt": {
+      "sku": "BIR-ANA-33",
+      "from": "2025-03-10"
+    },
+    "drop": null,
+    "extras_rate": 0.17
+  },
+  {
+    "id": "b1-086",
+    "kind": "bar",
+    "name": "Aperitivo Naviglio",
+    "story": "Aperitivo spot in Naviglio that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 2,
+        "prob": 0.66
+      },
+      {
+        "sku": "BIR-ROS-33",
+        "qty": 3,
+        "prob": 0.47
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 4,
+        "prob": 0.62
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 3.0,
+        "prob": 0.5
+      },
+      {
+        "sku": "VIN-BIA-004",
+        "qty": 4,
+        "prob": 0.91
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.74,
+      "december": 0.73
+    },
+    "events": [
+      {
+        "date": "2026-04-22",
+        "mult": 3.4
+      },
+      {
+        "date": "2026-02-21",
+        "mult": 2.65
+      },
+      {
+        "date": "2025-04-09",
+        "mult": 2.33
+      }
+    ],
+    "trend": 0.13,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "SAL-PRC",
+      "from": "2025-05-04"
+    },
+    "extras_rate": 0.28
+  },
+  {
+    "id": "b1-087",
+    "kind": "bar",
+    "name": "Bar Pasticceria Brera",
+    "story": "Late bar in Brera with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 1,
+        "prob": 0.88
+      },
+      {
+        "sku": "BEV-COL-33",
+        "qty": 4,
+        "prob": 0.45
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 3,
+        "prob": 0.96
+      },
+      {
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 2,
+        "prob": 0.45
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.53
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 3,
+        "prob": 0.95
+      },
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 1,
+        "prob": 0.91
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 1,
+        "prob": 0.5
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.63,
+      "december": 1.1
+    },
+    "events": [
+      {
+        "date": "2026-02-21",
+        "mult": 3.2
+      },
+      {
+        "date": "2026-04-22",
+        "mult": 2.4
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 2.67
+      },
+      {
+        "date": "2024-12-31",
+        "mult": 2.3
+      }
+    ],
+    "trend": 0.09,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.2
+  },
+  {
+    "id": "b1-088",
+    "kind": "grocery",
+    "name": "Alimentari Lodi",
+    "story": "Neighbourhood alimentari in Lodi, stocks pantry staples and restocks weekly before holidays.",
+    "core": [
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.56
+      },
+      {
+        "sku": "OLI-SEM-10L",
+        "qty": 1,
+        "prob": 0.68
+      },
+      {
+        "sku": "POM-CON-800",
+        "qty": 3,
+        "prob": 0.46
+      },
+      {
+        "sku": "VIN-ROS-005",
+        "qty": 3,
+        "prob": 0.67
+      },
+      {
+        "sku": "FAR-00-5K",
+        "qty": 3,
+        "prob": 0.88
+      }
+    ],
+    "cadence_days": 9,
+    "weekdays": [
+      1,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": -0.03,
+      "december": 0.91
+    },
+    "events": [],
+    "trend": -0.12,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.08
+  },
+  {
+    "id": "b1-089",
+    "kind": "grocery",
+    "name": "Alimentari Ornato",
+    "story": "Neighbourhood alimentari in Ornato, stocks pantry staples and restocks weekly before holidays.",
+    "core": [
+      {
+        "sku": "FAR-SEM-5K",
+        "qty": 1,
+        "prob": 0.49
+      },
+      {
+        "sku": "SAL-FIN-1K",
+        "qty": 1,
+        "prob": 0.49
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 1,
+        "prob": 0.93
+      },
+      {
+        "sku": "FAR-MAN-5K",
+        "qty": 3,
+        "prob": 0.92
+      },
+      {
+        "sku": "VIN-ROS-005",
+        "qty": 4,
+        "prob": 0.59
+      },
+      {
+        "sku": "ACE-VIN-1L",
+        "qty": 1,
+        "prob": 0.77
+      },
+      {
+        "sku": "PAS-RIG-500",
+        "qty": 1,
+        "prob": 0.6
+      },
+      {
+        "sku": "PAS-FUS-500",
+        "qty": 1,
+        "prob": 0.5
+      },
+      {
+        "sku": "PAS-TAG-250",
+        "qty": 2,
+        "prob": 0.96
+      }
+    ],
+    "cadence_days": 9,
+    "weekdays": [
+      0,
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.07,
+      "december": 1.18
+    },
+    "events": [],
+    "trend": 0.05,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.24
+  },
+  {
+    "id": "b1-090",
+    "kind": "bar",
+    "name": "Bistrot Repubblica",
+    "story": "Office-district bar near Repubblica, busy at 8am and at lunch, shut on weekends.",
+    "core": [
+      {
+        "sku": "DIS-ROT-6",
+        "qty": 4,
+        "prob": 0.49
+      },
+      {
+        "sku": "CAF-DEC-500",
+        "qty": 4,
+        "prob": 0.45
+      },
+      {
+        "sku": "BEV-SUC-AC",
+        "qty": 4,
+        "prob": 0.85
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 3,
+        "prob": 0.52
+      },
+      {
+        "sku": "CAF-ZUC-1K",
+        "qty": 1,
+        "prob": 0.65
+      },
+      {
+        "sku": "CAF-GRA-1K",
+        "qty": 3,
+        "prob": 0.5
+      },
+      {
+        "sku": "ACQ-NAT-50",
+        "qty": 4,
+        "prob": 0.89
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 1,
+        "prob": 0.55
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      0,
+      2
+    ],
+    "closed": [
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.28,
+      "december": 0.02
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 1.53
+      }
+    ],
+    "trend": -0.1,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.3
+  },
+  {
+    "id": "b1-091",
+    "kind": "bar",
+    "name": "Caffè Porta Romana",
+    "story": "Nightlife bar in Porta Romana, quiet midweek, Friday and Saturday spikes for beer and mixers.",
+    "core": [
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 2,
+        "prob": 0.72
+      },
+      {
+        "sku": "DIS-SGR-750",
+        "qty": 1,
+        "prob": 0.47
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 3,
+        "prob": 0.56
+      },
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 1,
+        "prob": 0.46
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 4,
+        "prob": 0.83
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 4,
+        "prob": 0.92
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.7,
+      "december": 1.08
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 3.97
+      }
+    ],
+    "trend": 0.01,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.16
+  },
+  {
+    "id": "b1-092",
+    "kind": "bar",
+    "name": "Cafè Gorla",
+    "story": "Nightlife bar in Gorla, quiet midweek, Friday and Saturday spikes for beer and mixers.",
+    "core": [
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 2,
+        "prob": 0.96
+      },
+      {
+        "sku": "VIN-SPU-001",
+        "qty": 4,
+        "prob": 0.79
+      },
+      {
+        "sku": "BIR-BIA-33",
+        "qty": 2,
+        "prob": 0.67
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 1,
+        "prob": 0.59
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 3,
+        "prob": 0.77
+      },
+      {
+        "sku": "VIN-PRO-003",
+        "qty": 1,
+        "prob": 0.79
+      },
+      {
+        "sku": "ACQ-FRIZ-50",
+        "qty": 4,
+        "prob": 0.66
+      },
+      {
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 4,
+        "prob": 0.73
+      },
+      {
+        "sku": "BIR-LAG-33",
+        "qty": 3,
+        "prob": 0.84
+      }
+    ],
+    "cadence_days": 7,
+    "weekdays": [
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.79,
+      "december": 0.83
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 2.73
+      }
+    ],
+    "trend": -0.15,
+    "churn": null,
+    "adopt": {
+      "sku": "ACQ-NAT-50",
+      "from": "2025-09-04"
+    },
+    "drop": null,
+    "extras_rate": 0.26
+  },
+  {
+    "id": "b1-093",
+    "kind": "bar",
+    "name": "Caffè Fiera",
+    "story": "Espresso bar in the office quarter around Fiera, orders stay steady on weekdays and drop in August.",
+    "core": [
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 1,
+        "prob": 0.62
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 4,
+        "prob": 0.63
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 1,
+        "prob": 0.58
+      },
+      {
+        "sku": "BEV-SUC-20",
+        "qty": 4,
+        "prob": 0.85
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 3,
+        "prob": 0.76
+      }
+    ],
+    "cadence_days": 4,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [
+      {
+        "from": "12-24",
+        "to": "01-02"
+      }
+    ],
+    "season": {
+      "summer": -0.15,
+      "december": 0.15
+    },
+    "events": [],
+    "trend": 0.15,
+    "churn": null,
+    "adopt": {
+      "sku": "DIS-DET-5L",
+      "from": "2025-10-29"
+    },
+    "drop": null,
+    "extras_rate": 0.2
+  },
+  {
+    "id": "b1-094",
+    "kind": "deli",
+    "name": "Salumeria e Formaggi Moscova",
+    "story": "Salumeria in Moscova selling affettati by weight, steady orders on Monday and Thursday.",
+    "core": [
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 3,
+        "prob": 0.56
+      },
+      {
+        "sku": "FOR-GOR-DOL",
+        "qty": 1.5,
+        "prob": 0.73
+      },
+      {
+        "sku": "SAL-COT",
+        "qty": 4.0,
+        "prob": 0.93
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 4.0,
+        "prob": 0.67
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 1.0,
+        "prob": 0.85
+      },
+      {
+        "sku": "FOR-PRO-DOL",
+        "qty": 1.5,
+        "prob": 0.49
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 3.0,
+        "prob": 0.54
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 3.0,
+        "prob": 0.73
+      }
+    ],
+    "cadence_days": 7,
+    "weekdays": [
+      0,
+      3
+    ],
+    "closed": [
+      {
+        "from": "08-01",
+        "to": "08-15"
+      }
+    ],
+    "season": {
+      "summer": 0.29,
+      "december": 0.51
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 1.65
+      }
+    ],
+    "trend": -0.06,
+    "churn": {
+      "start": "2026-01-08"
+    },
+    "adopt": {
+      "sku": "FAR-SEM-5K",
+      "from": "2025-07-14"
+    },
+    "drop": null,
+    "extras_rate": 0.34
+  },
+  {
+    "id": "b1-095",
+    "kind": "bar",
+    "name": "Bar Pasticceria Missori",
+    "story": "Aperitivo bar in Missori, spritz hour Thursday to Saturday, orders the cured meat boards.",
+    "core": [
+      {
+        "sku": "VIN-ROT-001",
+        "qty": 3,
+        "prob": 0.67
+      },
+      {
+        "sku": "BEV-CHI-20",
+        "qty": 4,
+        "prob": 0.87
+      },
+      {
+        "sku": "VIN-BIA-004",
+        "qty": 3,
+        "prob": 0.59
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 1.0,
+        "prob": 0.81
+      },
+      {
+        "sku": "SAL-SAL",
+        "qty": 2.5,
+        "prob": 0.75
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      3,
+      4,
+      5
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.61,
+      "december": 0.43
+    },
+    "events": [
+      {
+        "date": "2026-09-22",
+        "mult": 2.86
+      },
+      {
+        "date": "2026-02-21",
+        "mult": 3.33
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 2.25
+      }
+    ],
+    "trend": -0.09,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.16
+  },
+  {
+    "id": "b1-096",
+    "kind": "bar",
+    "name": "Aperitivo Sarpi",
+    "story": "Neighbourhood bar in Sarpi, weekday lunch rush, quiet in August.",
+    "core": [
+      {
+        "sku": "DIS-PEL-300",
+        "qty": 1,
+        "prob": 0.82
+      },
+      {
+        "sku": "SAL-MOR",
+        "qty": 1.5,
+        "prob": 0.57
+      },
+      {
+        "sku": "FOR-ASI",
+        "qty": 3.5,
+        "prob": 0.94
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 3,
+        "prob": 0.45
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 4,
+        "prob": 0.65
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 1,
+        "prob": 0.54
+      },
+      {
+        "sku": "FOR-MOZ-FIO",
+        "qty": 3.5,
+        "prob": 0.8
+      }
+    ],
+    "cadence_days": 3,
+    "weekdays": [
+      1,
+      3
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.38,
+      "december": 0.07
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 1.81
+      }
+    ],
+    "trend": 0.25,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "SAL-MOR",
+      "from": "2025-09-18"
+    },
+    "extras_rate": 0.06
+  },
+  {
+    "id": "b1-097",
+    "kind": "bar",
+    "name": "Caffè Turati",
+    "story": "Lunch and espresso bar near Turati, toasts and panini for the office crowd on weekdays.",
+    "core": [
+      {
+        "sku": "BEV-LAT-1L",
+        "qty": 2,
+        "prob": 0.9
+      },
+      {
+        "sku": "FOR-ASI",
+        "qty": 2.5,
+        "prob": 0.95
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 1,
+        "prob": 0.68
+      },
+      {
+        "sku": "CAF-MIS-1K",
+        "qty": 3,
+        "prob": 0.66
+      },
+      {
+        "sku": "DIS-CUP-CAF",
+        "qty": 3,
+        "prob": 0.54
+      },
+      {
+        "sku": "FOR-PRO-DOL",
+        "qty": 1.5,
+        "prob": 0.52
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-24"
+      },
+      {
+        "from": "12-24",
+        "to": "01-01"
+      }
+    ],
+    "season": {
+      "summer": 0.43,
+      "december": 0.08
+    },
+    "events": [
+      {
+        "date": "2026-02-21",
+        "mult": 1.5
+      }
+    ],
+    "trend": 0.04,
+    "churn": null,
+    "adopt": null,
+    "drop": {
+      "sku": "BEV-LAT-1L",
+      "from": "2026-03-11"
+    },
+    "extras_rate": 0.14
+  },
+  {
+    "id": "b1-098",
+    "kind": "bar",
+    "name": "Caffè Da Dino",
+    "story": "Aperitivo spot in Da Dino that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "ACQ-FRIZ-50",
+        "qty": 4,
+        "prob": 0.72
+      },
+      {
+        "sku": "BEV-ARA-20",
+        "qty": 2,
+        "prob": 0.64
+      },
+      {
+        "sku": "DIS-DET-5L",
+        "qty": 1,
+        "prob": 0.96
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 4,
+        "prob": 0.9
+      },
+      {
+        "sku": "BEV-TON-20",
+        "qty": 2,
+        "prob": 0.62
+      },
+      {
+        "sku": "BIR-ANA-33",
+        "qty": 2,
+        "prob": 0.94
+      },
+      {
+        "sku": "SAL-SAL",
+        "qty": 0.5,
+        "prob": 0.84
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [
+      {
+        "from": "08-05",
+        "to": "08-25"
+      }
+    ],
+    "season": {
+      "summer": 0.74,
+      "december": 0.48
+    },
+    "events": [
+      {
+        "date": "2025-12-31",
+        "mult": 3.04
+      }
+    ],
+    "trend": 0.04,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.31
+  },
+  {
+    "id": "b1-099",
+    "kind": "bar",
+    "name": "Bar Porta Romana",
+    "story": "Aperitivo spot in Porta Romana that runs on cold beer and prosecco, bigger orders before design week.",
+    "core": [
+      {
+        "sku": "FOR-TAL",
+        "qty": 1.0,
+        "prob": 0.76
+      },
+      {
+        "sku": "DIS-TOV-40",
+        "qty": 3,
+        "prob": 0.46
+      },
+      {
+        "sku": "SAL-BRE",
+        "qty": 1.0,
+        "prob": 0.51
+      },
+      {
+        "sku": "DIS-SAC-70",
+        "qty": 4,
+        "prob": 0.68
+      },
+      {
+        "sku": "DIS-GUA-M",
+        "qty": 2,
+        "prob": 0.53
+      },
+      {
+        "sku": "SAL-PRC",
+        "qty": 0.5,
+        "prob": 0.66
+      },
+      {
+        "sku": "ACQ-FRIZ-50",
+        "qty": 4,
+        "prob": 0.57
+      },
+      {
+        "sku": "BEV-CHI-20",
+        "qty": 1,
+        "prob": 0.74
+      },
+      {
+        "sku": "FOR-GRA-24",
+        "qty": 4.0,
+        "prob": 0.48
+      }
+    ],
+    "cadence_days": 6,
+    "weekdays": [
+      2,
+      4
+    ],
+    "closed": [],
+    "season": {
+      "summer": 0.93,
+      "december": 0.67
+    },
+    "events": [
+      {
+        "date": "2025-09-23",
+        "mult": 1.93
+      },
+      {
+        "date": "2026-04-22",
+        "mult": 3.47
+      },
+      {
+        "date": "2026-09-22",
+        "mult": 2.61
+      }
+    ],
+    "trend": 0.03,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.2
+  },
+  {
+    "id": "b1-100",
+    "kind": "bar",
+    "name": "Bar Stadera",
+    "story": "Late bar in Stadera with a DJ on weekends, stock runs out on Saturdays.",
+    "core": [
+      {
+        "sku": "BEV-COL-33",
+        "qty": 2,
+        "prob": 0.64
+      },
+      {
+        "sku": "BEV-GAZ-1L",
+        "qty": 4,
+        "prob": 0.83
+      },
+      {
+        "sku": "DIS-ALU-150",
+        "qty": 2,
+        "prob": 0.76
+      },
+      {
+        "sku": "DIS-TOV-33",
+        "qty": 1,
+        "prob": 0.55
+      },
+      {
+        "sku": "DIS-BIC-200",
+        "qty": 2,
+        "prob": 0.6
+      }
+    ],
+    "cadence_days": 5,
+    "weekdays": [
+      5
+    ],
+    "closed": [
+      {
+        "from": "08-10",
+        "to": "08-20"
+      }
+    ],
+    "season": {
+      "summer": 0.87,
+      "december": 0.88
+    },
+    "events": [
+      {
+        "date": "2024-12-31",
+        "mult": 2.58
+      },
+      {
+        "date": "2025-09-23",
+        "mult": 2.62
+      }
+    ],
+    "trend": -0.14,
+    "churn": null,
+    "adopt": null,
+    "drop": null,
+    "extras_rate": 0.27
+  }
+]

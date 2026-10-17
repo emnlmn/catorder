@@ -1,0 +1,8564 @@
+[
+ {
+  "id": "b2-001",
+  "kind": "restaurant",
+  "name": "Trattoria Corte Bassa Bergamo",
+  "story": "osteria with aperitivo, large beer and prosecco volume",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 3,
+    "prob": 0.92
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 3,
+    "prob": 0.36
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.97
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 2,
+    "prob": 0.71
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.42
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 3,
+    "prob": 0.46
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 2,
+    "prob": 0.78
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.7,
+   "december": 0.65
+  },
+  "events": [
+   {
+    "date": "2024-10-06",
+    "mult": 2.4
+   }
+  ],
+  "trend": 0.21,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b2-002",
+  "kind": "restaurant",
+  "name": "Pizzeria del Naviglio",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2,
+    "prob": 0.4
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 2,
+    "prob": 0.36
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.97
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.76
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2,
+    "prob": 0.75
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3,
+    "prob": 0.73
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 3,
+    "prob": 0.59
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 2,
+    "prob": 0.71
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-04",
+    "to": "08-18"
+   }
+  ],
+  "season": {
+   "summer": 0.51,
+   "december": 0.63
+  },
+  "events": [
+   {
+    "date": "2026-09-04",
+    "mult": 2.1
+   }
+  ],
+  "trend": 0.56,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b2-003",
+  "kind": "restaurant",
+  "name": "Taverna del Borgo",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.57
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 1.5,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1.5,
+    "prob": 0.82
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 4,
+    "prob": 0.36
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.54
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 4,
+    "prob": 0.61
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.38
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-26"
+   }
+  ],
+  "season": {
+   "summer": 0.4,
+   "december": 0.36
+  },
+  "events": [
+   {
+    "date": "2026-04-14",
+    "mult": 3.2
+   },
+   {
+    "date": "2025-08-21",
+    "mult": 3.4
+   },
+   {
+    "date": "2025-04-28",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-08-23",
+    "mult": 2.0
+   }
+  ],
+  "trend": -0.27,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b2-004",
+  "kind": "restaurant",
+  "name": "Ristorante San Giorgio",
+  "story": "busy pizzeria with delivery apps, high water and beer use",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.51
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.52
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2,
+    "prob": 0.35
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.87
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 4,
+    "prob": 0.55
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 1,
+    "prob": 0.82
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-09",
+    "to": "08-27"
+   }
+  ],
+  "season": {
+   "summer": -0.01,
+   "december": 0.9
+  },
+  "events": [
+   {
+    "date": "2025-01-17",
+    "mult": 1.9
+   },
+   {
+    "date": "2024-10-20",
+    "mult": 4.0
+   },
+   {
+    "date": "2024-11-27",
+    "mult": 2.7
+   }
+  ],
+  "trend": 0.16,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.33
+ },
+ {
+  "id": "b2-005",
+  "kind": "restaurant",
+  "name": "Locanda Sant'Eustorgio Milano",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.46
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.42
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.9
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 0.5,
+    "prob": 0.89
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1,
+    "prob": 0.7
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 4,
+    "prob": 0.96
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.92
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.48
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 2,
+    "prob": 0.39
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-04",
+    "to": "08-28"
+   },
+   {
+    "from": "01-08",
+    "to": "01-21"
+   }
+  ],
+  "season": {
+   "summer": 0.47,
+   "december": 0.57
+  },
+  "events": [],
+  "trend": -0.44,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-COT",
+   "from": "2025-10-12"
+  },
+  "drop": {
+   "sku": "FOR-GRA-24",
+   "from": "2025-06-24"
+  },
+  "extras_rate": 0.07
+ },
+ {
+  "id": "b2-006",
+  "kind": "restaurant",
+  "name": "Locanda del Borgo Cremona",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.63
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 0.5,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 1.5,
+    "prob": 0.95
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.64
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 1,
+    "prob": 0.9
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.32,
+   "december": 0.02
+  },
+  "events": [
+   {
+    "date": "2026-03-14",
+    "mult": 3.3
+   },
+   {
+    "date": "2024-12-19",
+    "mult": 3.5
+   },
+   {
+    "date": "2025-10-16",
+    "mult": 2.1
+   }
+  ],
+  "trend": -0.44,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "FOR-MOZ-FIO",
+   "from": "2026-07-19"
+  },
+  "extras_rate": 0.11
+ },
+ {
+  "id": "b2-007",
+  "kind": "restaurant",
+  "name": "Hosteria Alla Torre Cremona",
+  "story": "country trattoria, heavy on cured meats and cheeses",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.79
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 3,
+    "prob": 0.41
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.76
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 4,
+    "prob": 0.74
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 1.5,
+    "prob": 0.36
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 5,
+    "prob": 0.98
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 5,
+    "prob": 0.79
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 1,
+    "prob": 0.94
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.38
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-06",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": -0.23,
+   "december": 0.51
+  },
+  "events": [
+   {
+    "date": "2025-03-21",
+    "mult": 1.7
+   }
+  ],
+  "trend": 0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b2-008",
+  "kind": "restaurant",
+  "name": "Hosteria dei Navigli",
+  "story": "osteria with aperitivo, large beer and prosecco volume",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.86
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 4,
+    "prob": 0.7
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 0.5,
+    "prob": 0.38
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 1,
+    "prob": 0.73
+   },
+   {
+    "sku": "DIS-TOV-33",
+    "qty": 1,
+    "prob": 0.57
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.7,
+   "december": 1.12
+  },
+  "events": [
+   {
+    "date": "2024-11-11",
+    "mult": 3.4
+   },
+   {
+    "date": "2026-09-22",
+    "mult": 3.5
+   },
+   {
+    "date": "2026-01-02",
+    "mult": 1.8
+   }
+  ],
+  "trend": 0.19,
+  "churn": {
+   "start": "2025-01-19"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.14
+ },
+ {
+  "id": "b2-009",
+  "kind": "restaurant",
+  "name": "Ristorante Da Franca Varese",
+  "story": "upscale restaurant, wine list driven, orders wine by the case",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.96
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2,
+    "prob": 0.61
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 4,
+    "prob": 0.59
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 2,
+    "prob": 0.66
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 3,
+    "prob": 0.52
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.56
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 1,
+    "prob": 0.36
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 1,
+    "prob": 0.93
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-08",
+    "to": "01-22"
+   }
+  ],
+  "season": {
+   "summer": 0.61,
+   "december": 0.02
+  },
+  "events": [],
+  "trend": 0.35,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b2-010",
+  "kind": "restaurant",
+  "name": "Ristorante Alla Torre",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 3,
+    "prob": 0.74
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.71
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 0.5,
+    "prob": 0.99
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.96
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 4,
+    "prob": 0.69
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 3,
+    "prob": 0.74
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.79
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.71
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   6
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.56,
+   "december": 0.59
+  },
+  "events": [
+   {
+    "date": "2025-09-24",
+    "mult": 3.2
+   }
+  ],
+  "trend": 0.33,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.01
+ },
+ {
+  "id": "b2-011",
+  "kind": "restaurant",
+  "name": "Pizzeria Da Franca",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 3,
+    "prob": 0.57
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.71
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.43
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 3,
+    "prob": 0.81
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 0.5,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2.5,
+    "prob": 0.48
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1,
+    "prob": 0.84
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.71
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 3,
+    "prob": 0.59
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-07",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.76,
+   "december": 0.57
+  },
+  "events": [
+   {
+    "date": "2026-03-04",
+    "mult": 3.1
+   }
+  ],
+  "trend": -0.47,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.43
+ },
+ {
+  "id": "b2-012",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Bergamasca",
+  "story": "new restaurant ramping up, ordering more each month",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.92
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2.5,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2.5,
+    "prob": 0.66
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 0.5,
+    "prob": 0.59
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 3,
+    "prob": 0.63
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.94
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 3,
+    "prob": 0.5
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 2,
+    "prob": 0.87
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.97
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-06",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": -0.19,
+   "december": 1.16
+  },
+  "events": [
+   {
+    "date": "2026-05-18",
+    "mult": 2.9
+   },
+   {
+    "date": "2024-10-12",
+    "mult": 3.5
+   },
+   {
+    "date": "2024-11-07",
+    "mult": 3.5
+   },
+   {
+    "date": "2026-08-19",
+    "mult": 2.2
+   }
+  ],
+  "trend": -0.34,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.0
+ },
+ {
+  "id": "b2-013",
+  "kind": "restaurant",
+  "name": "Pizzeria Il Caminetto",
+  "story": "hotel-adjacent restaurant, consistent weekly stock",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.82
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 5,
+    "prob": 0.54
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 1,
+    "prob": 0.52
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1.5,
+    "prob": 0.46
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.58
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.36
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 3,
+    "prob": 0.43
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.37
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-09",
+    "to": "08-30"
+   }
+  ],
+  "season": {
+   "summer": 0.14,
+   "december": 1.22
+  },
+  "events": [],
+  "trend": 0.49,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "FOR-MOZ-BUF",
+   "from": "2026-04-03"
+  },
+  "extras_rate": 0.13
+ },
+ {
+  "id": "b2-014",
+  "kind": "restaurant",
+  "name": "Locanda del Lago Como",
+  "story": "family trattoria, handmade pasta daily, steady small orders",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 4,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 0.5,
+    "prob": 0.6
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 0.5,
+    "prob": 0.83
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.7
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.61
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "BEV-SUC-AC",
+    "qty": 3,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   0
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.09,
+   "december": 0.23
+  },
+  "events": [
+   {
+    "date": "2025-07-28",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-06-04",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-02-09",
+    "mult": 2.4
+   }
+  ],
+  "trend": 0.08,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b2-015",
+  "kind": "restaurant",
+  "name": "Pizzeria Lo Scalo",
+  "story": "rustic restaurant, buys in bulk for the season",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.37
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 1,
+    "prob": 0.83
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 0.5,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2,
+    "prob": 0.69
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.49
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.76
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 1,
+    "prob": 0.52
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-05",
+    "to": "01-17"
+   }
+  ],
+  "season": {
+   "summer": 0.37,
+   "december": 1.28
+  },
+  "events": [
+   {
+    "date": "2025-05-04",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-03-12",
+    "mult": 1.8
+   },
+   {
+    "date": "2024-11-13",
+    "mult": 1.8
+   },
+   {
+    "date": "2026-02-01",
+    "mult": 3.7
+   }
+  ],
+  "trend": -0.42,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.1
+ },
+ {
+  "id": "b2-016",
+  "kind": "restaurant",
+  "name": "Hosteria Da Nino",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 0.5,
+    "prob": 0.56
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3,
+    "prob": 0.56
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 3,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.43
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.72
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 2,
+    "prob": 0.79
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.9
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-04",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": -0.2,
+   "december": 0.65
+  },
+  "events": [
+   {
+    "date": "2026-01-04",
+    "mult": 3.3
+   },
+   {
+    "date": "2025-01-07",
+    "mult": 1.9
+   },
+   {
+    "date": "2025-10-03",
+    "mult": 2.7
+   }
+  ],
+  "trend": 0.52,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.44
+ },
+ {
+  "id": "b2-017",
+  "kind": "restaurant",
+  "name": "Osteria Il Gallo Bergamo",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.74
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 2.5,
+    "prob": 0.43
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 4,
+    "prob": 0.68
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.4
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 3,
+    "prob": 0.45
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.75
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 2,
+    "prob": 0.52
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   1
+  ],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-19"
+   },
+   {
+    "from": "01-04",
+    "to": "01-17"
+   }
+  ],
+  "season": {
+   "summer": 0.55,
+   "december": 0.28
+  },
+  "events": [
+   {
+    "date": "2026-05-18",
+    "mult": 2.4
+   }
+  ],
+  "trend": -0.03,
+  "churn": null,
+  "adopt": {
+   "sku": "FAR-00-25K",
+   "from": "2025-06-03"
+  },
+  "drop": null,
+  "extras_rate": 0.33
+ },
+ {
+  "id": "b2-018",
+  "kind": "restaurant",
+  "name": "Trattoria Gli Archi",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 0.5,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2.5,
+    "prob": 0.98
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.63
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.53
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 1,
+    "prob": 0.94
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 1,
+    "prob": 0.9
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1
+  ],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-26"
+   }
+  ],
+  "season": {
+   "summer": 0.56,
+   "december": 0.34
+  },
+  "events": [],
+  "trend": 0.47,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.48
+ },
+ {
+  "id": "b2-019",
+  "kind": "restaurant",
+  "name": "Taverna Valle Verde Bergamo",
+  "story": "hotel-adjacent restaurant, consistent weekly stock",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.43
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.99
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 2,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 3,
+    "prob": 0.58
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2.5,
+    "prob": 0.96
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.62
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 2,
+    "prob": 0.57
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-07",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.66,
+   "december": 0.74
+  },
+  "events": [
+   {
+    "date": "2024-10-01",
+    "mult": 3.1
+   },
+   {
+    "date": "2026-07-26",
+    "mult": 3.4
+   },
+   {
+    "date": "2025-09-25",
+    "mult": 3.3
+   }
+  ],
+  "trend": 0.32,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.45
+ },
+ {
+  "id": "b2-020",
+  "kind": "restaurant",
+  "name": "Trattoria Bergamasca Mantova",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.47
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.82
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 5,
+    "prob": 0.94
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2.5,
+    "prob": 0.84
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 4,
+    "prob": 0.55
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.61
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 3,
+    "prob": 0.76
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 1,
+    "prob": 0.7
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-19"
+   }
+  ],
+  "season": {
+   "summer": 0.22,
+   "december": 0.93
+  },
+  "events": [
+   {
+    "date": "2024-10-25",
+    "mult": 3.5
+   },
+   {
+    "date": "2024-12-23",
+    "mult": 1.7
+   },
+   {
+    "date": "2025-07-27",
+    "mult": 2.6
+   }
+  ],
+  "trend": 0.09,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.42
+ },
+ {
+  "id": "b2-021",
+  "kind": "restaurant",
+  "name": "Trattoria La Vigna Como",
+  "story": "rustic restaurant, buys in bulk for the season",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.79
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.36
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 0.5,
+    "prob": 0.78
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 3,
+    "prob": 0.93
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 4,
+    "prob": 0.85
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.77
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   0
+  ],
+  "closed": [
+   {
+    "from": "01-08",
+    "to": "01-17"
+   }
+  ],
+  "season": {
+   "summer": -0.06,
+   "december": 0.53
+  },
+  "events": [],
+  "trend": 0.52,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.1
+ },
+ {
+  "id": "b2-022",
+  "kind": "restaurant",
+  "name": "Trattoria Il Campanile",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.76
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 4,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.55
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.95
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3,
+    "prob": 0.54
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 1,
+    "prob": 0.52
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 1,
+    "prob": 0.58
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.37,
+   "december": 0.58
+  },
+  "events": [
+   {
+    "date": "2025-04-05",
+    "mult": 2.5
+   },
+   {
+    "date": "2026-08-03",
+    "mult": 3.3
+   }
+  ],
+  "trend": 0.12,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.15
+ },
+ {
+  "id": "b2-023",
+  "kind": "restaurant",
+  "name": "Locanda Lo Scalo",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 3,
+    "prob": 0.55
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 5,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2.5,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2,
+    "prob": 0.84
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.88
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 3,
+    "prob": 0.64
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 2,
+    "prob": 0.88
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 1,
+    "prob": 0.95
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 1.02,
+   "december": 0.8
+  },
+  "events": [],
+  "trend": -0.18,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "POM-PAS-700",
+   "from": "2025-09-26"
+  },
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b2-024",
+  "kind": "restaurant",
+  "name": "Ristorante Il Gallo Mantova",
+  "story": "rustic restaurant, buys in bulk for the season",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.94
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 0.5,
+    "prob": 0.96
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1.5,
+    "prob": 0.58
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 0.5,
+    "prob": 0.66
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.6
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.51
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 2,
+    "prob": 0.49
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.41
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   2,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.14,
+   "december": 0.44
+  },
+  "events": [
+   {
+    "date": "2026-04-27",
+    "mult": 3.0
+   }
+  ],
+  "trend": 0.1,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b2-025",
+  "kind": "restaurant",
+  "name": "Ristorante Il Pozzo",
+  "story": "hotel-adjacent restaurant, consistent weekly stock",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 5,
+    "prob": 0.73
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 5,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 2.5,
+    "prob": 0.46
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.87
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 2,
+    "prob": 0.57
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 1,
+    "prob": 0.54
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   6
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-16"
+   },
+   {
+    "from": "12-24",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.84,
+   "december": 0.52
+  },
+  "events": [
+   {
+    "date": "2024-11-04",
+    "mult": 3.5
+   },
+   {
+    "date": "2026-03-22",
+    "mult": 2.7
+   },
+   {
+    "date": "2024-10-01",
+    "mult": 2.8
+   }
+  ],
+  "trend": -0.08,
+  "churn": null,
+  "adopt": {
+   "sku": "ACQ-NAT-1L",
+   "from": "2025-01-18"
+  },
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b2-026",
+  "kind": "restaurant",
+  "name": "Trattoria Valle Verde",
+  "story": "new restaurant ramping up, ordering more each month",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.48
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 4,
+    "prob": 0.95
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1.5,
+    "prob": 0.83
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 4,
+    "prob": 0.94
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.38
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 2,
+    "prob": 0.39
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 2,
+    "prob": 0.47
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   6
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.34,
+   "december": 0.08
+  },
+  "events": [
+   {
+    "date": "2025-11-15",
+    "mult": 3.1
+   }
+  ],
+  "trend": -0.01,
+  "churn": {
+   "start": "2025-07-28"
+  },
+  "adopt": {
+   "sku": "VIN-ROS-005",
+   "from": "2026-03-03"
+  },
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b2-027",
+  "kind": "restaurant",
+  "name": "Pizzeria Valle Verde",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.73
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.5
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.44
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 5,
+    "prob": 0.55
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 0.5,
+    "prob": 0.89
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 4,
+    "prob": 0.61
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.68
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.66
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   2,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-09",
+    "to": "08-30"
+   },
+   {
+    "from": "01-05",
+    "to": "01-13"
+   }
+  ],
+  "season": {
+   "summer": 0.19,
+   "december": 0.62
+  },
+  "events": [
+   {
+    "date": "2026-03-11",
+    "mult": 2.6
+   }
+  ],
+  "trend": 0.49,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.23
+ },
+ {
+  "id": "b2-028",
+  "kind": "restaurant",
+  "name": "Osteria La Rosa Varese",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.57
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 5,
+    "prob": 0.61
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 2.5,
+    "prob": 0.46
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 5,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1,
+    "prob": 0.69
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 3,
+    "prob": 0.36
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 3,
+    "prob": 0.5
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.93
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-06",
+    "to": "08-27"
+   }
+  ],
+  "season": {
+   "summer": 0.08,
+   "december": 0.21
+  },
+  "events": [
+   {
+    "date": "2025-05-10",
+    "mult": 3.8
+   }
+  ],
+  "trend": 0.42,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.0
+ },
+ {
+  "id": "b2-029",
+  "kind": "restaurant",
+  "name": "Osteria San Giorgio",
+  "story": "hotel-adjacent restaurant, consistent weekly stock",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.79
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "prob": 0.77
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2.5,
+    "prob": 0.95
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2.5,
+    "prob": 0.75
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 0.5,
+    "prob": 0.77
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2,
+    "prob": 0.57
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.61
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.76
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.06,
+   "december": 0.73
+  },
+  "events": [],
+  "trend": -0.26,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.41
+ },
+ {
+  "id": "b2-030",
+  "kind": "restaurant",
+  "name": "Antica Trattoria dei Mercanti Varese",
+  "story": "pizzeria, big pizza nights, weekly deliveries of cheese and flour",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.36
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 4,
+    "prob": 0.79
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 5,
+    "prob": 0.39
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.52
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 3,
+    "prob": 0.95
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.79
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 3,
+    "prob": 0.68
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.56
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.61,
+   "december": 0.68
+  },
+  "events": [
+   {
+    "date": "2024-12-24",
+    "mult": 4.0
+   }
+  ],
+  "trend": 0.05,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b2-031",
+  "kind": "restaurant",
+  "name": "Trattoria del Naviglio Mantova",
+  "story": "busy pizzeria with delivery apps, high water and beer use",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 3,
+    "prob": 0.62
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 3,
+    "prob": 0.77
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 0.5,
+    "prob": 0.87
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1.5,
+    "prob": 0.7
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.76
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.35
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 3,
+    "prob": 0.83
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 1,
+    "prob": 0.77
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.1,
+   "december": 0.34
+  },
+  "events": [
+   {
+    "date": "2025-10-18",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-02-27",
+    "mult": 2.4
+   },
+   {
+    "date": "2026-02-25",
+    "mult": 2.5
+   },
+   {
+    "date": "2024-12-22",
+    "mult": 1.8
+   }
+  ],
+  "trend": 0.5,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-FIN-1K",
+   "from": "2026-08-23"
+  },
+  "drop": null,
+  "extras_rate": 0.09
+ },
+ {
+  "id": "b2-032",
+  "kind": "restaurant",
+  "name": "Taverna Da Franca",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 4,
+    "prob": 0.83
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 4,
+    "prob": 0.64
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 3,
+    "prob": 0.79
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "BEV-CHI-20",
+    "qty": 3,
+    "prob": 0.46
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.07,
+   "december": 0.6
+  },
+  "events": [],
+  "trend": 0.05,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "PAS-PEN-500",
+   "from": "2025-02-25"
+  },
+  "extras_rate": 0.21
+ },
+ {
+  "id": "b2-033",
+  "kind": "restaurant",
+  "name": "Ristorante Valle Verde",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.81
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.36
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 5,
+    "prob": 0.73
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 5,
+    "prob": 0.96
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 0.5,
+    "prob": 0.52
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.6
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 3,
+    "prob": 0.64
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-06",
+    "to": "08-27"
+   }
+  ],
+  "season": {
+   "summer": -0.3,
+   "december": 1.26
+  },
+  "events": [
+   {
+    "date": "2026-08-27",
+    "mult": 2.9
+   },
+   {
+    "date": "2025-09-26",
+    "mult": 2.8
+   },
+   {
+    "date": "2024-11-23",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-01-01",
+    "mult": 3.2
+   }
+  ],
+  "trend": 0.51,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "FOR-ASI",
+   "from": "2025-04-04"
+  },
+  "extras_rate": 0.32
+ },
+ {
+  "id": "b2-034",
+  "kind": "restaurant",
+  "name": "Ristorante Corte Bassa",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.84
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.89
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 3,
+    "prob": 0.61
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 3,
+    "prob": 0.94
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2.5,
+    "prob": 0.91
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.91
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 2,
+    "prob": 0.63
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.87
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 1,
+    "prob": 0.58
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-02",
+    "to": "08-20"
+   }
+  ],
+  "season": {
+   "summer": 0.75,
+   "december": 0.28
+  },
+  "events": [
+   {
+    "date": "2025-10-04",
+    "mult": 2.4
+   },
+   {
+    "date": "2024-12-21",
+    "mult": 2.7
+   }
+  ],
+  "trend": 0.39,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b2-035",
+  "kind": "restaurant",
+  "name": "Hosteria Bella Brera Monza",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.76
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.52
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 5,
+    "prob": 0.85
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.5
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 3,
+    "prob": 0.89
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 1,
+    "prob": 0.75
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 2,
+    "prob": 0.71
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-08",
+    "to": "08-22"
+   },
+   {
+    "from": "01-06",
+    "to": "01-18"
+   }
+  ],
+  "season": {
+   "summer": -0.02,
+   "december": 0.0
+  },
+  "events": [
+   {
+    "date": "2024-10-22",
+    "mult": 1.7
+   }
+  ],
+  "trend": 0.58,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "SAL-SPE",
+   "from": "2025-06-03"
+  },
+  "extras_rate": 0.39
+ },
+ {
+  "id": "b2-036",
+  "kind": "restaurant",
+  "name": "Ristorante Da Nino Como",
+  "story": "rustic restaurant, buys in bulk for the season",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.51
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2.5,
+    "prob": 0.43
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 5,
+    "prob": 0.86
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1.5,
+    "prob": 0.97
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.42
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.54
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.67
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 1,
+    "prob": 0.69
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-31"
+   },
+   {
+    "from": "12-24",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": -0.09,
+   "december": 0.62
+  },
+  "events": [
+   {
+    "date": "2026-03-14",
+    "mult": 3.4
+   },
+   {
+    "date": "2026-07-23",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-03-18",
+    "mult": 2.9
+   }
+  ],
+  "trend": -0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.16
+ },
+ {
+  "id": "b2-037",
+  "kind": "restaurant",
+  "name": "Osteria Da Gino",
+  "story": "old-school trattoria slowly reducing its menu",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.58
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4,
+    "prob": 0.91
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1,
+    "prob": 0.73
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.62
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.44
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3,
+    "prob": 0.65
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 2,
+    "prob": 0.71
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0
+  ],
+  "closed": [
+   {
+    "from": "01-07",
+    "to": "01-18"
+   }
+  ],
+  "season": {
+   "summer": -0.5,
+   "december": 1.22
+  },
+  "events": [
+   {
+    "date": "2025-10-18",
+    "mult": 2.0
+   },
+   {
+    "date": "2024-10-11",
+    "mult": 1.6
+   }
+  ],
+  "trend": 0.07,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b2-038",
+  "kind": "restaurant",
+  "name": "Ristorante Il Gallo",
+  "story": "seafood-leaning trattoria, prefers fresh and local, Friday peaks",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 0.5,
+    "prob": 0.6
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1,
+    "prob": 0.88
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 1,
+    "prob": 0.41
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.36
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 2,
+    "prob": 0.8
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 3,
+    "prob": 0.35
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [
+   1
+  ],
+  "closed": [
+   {
+    "from": "01-08",
+    "to": "01-22"
+   }
+  ],
+  "season": {
+   "summer": 0.68,
+   "december": 0.81
+  },
+  "events": [],
+  "trend": -0.21,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b2-039",
+  "kind": "restaurant",
+  "name": "Taverna Il Campanile",
+  "story": "osteria with aperitivo, large beer and prosecco volume",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.61
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 3,
+    "prob": 0.77
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 0.5,
+    "prob": 0.6
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 3,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 0.5,
+    "prob": 0.59
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.6
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.48
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.82
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.88
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-29"
+   },
+   {
+    "from": "12-24",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.57,
+   "december": 0.67
+  },
+  "events": [
+   {
+    "date": "2025-12-11",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-08-13",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-12-17",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-03-19",
+    "mult": 2.3
+   }
+  ],
+  "trend": -0.02,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.48
+ },
+ {
+  "id": "b2-040",
+  "kind": "restaurant",
+  "name": "Trattoria Da Gino Cremona",
+  "story": "pizzeria, big pizza nights, weekly deliveries of cheese and flour",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.56
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.76
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 0.5,
+    "prob": 0.89
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2,
+    "prob": 0.49
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 3,
+    "prob": 0.79
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.46
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 3,
+    "prob": 0.92
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.92
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-06",
+    "to": "08-27"
+   }
+  ],
+  "season": {
+   "summer": 0.24,
+   "december": 0.36
+  },
+  "events": [
+   {
+    "date": "2025-12-22",
+    "mult": 3.2
+   }
+  ],
+  "trend": 0.24,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.33
+ },
+ {
+  "id": "b2-041",
+  "kind": "restaurant",
+  "name": "Antica Trattoria dei Mercanti",
+  "story": "country trattoria, heavy on cured meats and cheeses",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.46
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2.5,
+    "prob": 0.53
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 3,
+    "prob": 0.71
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 3,
+    "prob": 0.66
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-04",
+    "to": "08-28"
+   }
+  ],
+  "season": {
+   "summer": 0.66,
+   "december": 0.79
+  },
+  "events": [
+   {
+    "date": "2026-10-05",
+    "mult": 2.5
+   },
+   {
+    "date": "2024-11-26",
+    "mult": 3.5
+   },
+   {
+    "date": "2026-05-16",
+    "mult": 2.1
+   }
+  ],
+  "trend": 0.03,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b2-042",
+  "kind": "restaurant",
+  "name": "Taverna Le Logge",
+  "story": "old-school trattoria slowly reducing its menu",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.88
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 3,
+    "prob": 0.49
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 0.5,
+    "prob": 0.77
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 0.5,
+    "prob": 0.96
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.58
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 3,
+    "prob": 0.96
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.53
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   3,
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-07",
+    "to": "08-21"
+   },
+   {
+    "from": "01-07",
+    "to": "01-15"
+   }
+  ],
+  "season": {
+   "summer": 0.03,
+   "december": 0.57
+  },
+  "events": [
+   {
+    "date": "2024-10-22",
+    "mult": 3.8
+   }
+  ],
+  "trend": -0.4,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-BRE",
+   "from": "2025-03-07"
+  },
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b2-043",
+  "kind": "restaurant",
+  "name": "Osteria dei Mercanti",
+  "story": "busy pizzeria with delivery apps, high water and beer use",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 3,
+    "prob": 0.82
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.39
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 3,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 0.5,
+    "prob": 0.41
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.97
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 3,
+    "prob": 0.75
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 3,
+    "prob": 0.47
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.81,
+   "december": 0.42
+  },
+  "events": [
+   {
+    "date": "2026-08-06",
+    "mult": 3.9
+   }
+  ],
+  "trend": 0.46,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b2-044",
+  "kind": "restaurant",
+  "name": "Hosteria Corte Bassa Pavia",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2.5,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 5,
+    "prob": 0.79
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2.5,
+    "prob": 0.37
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 3,
+    "prob": 0.58
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.64
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 3,
+    "prob": 0.69
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 3,
+    "prob": 0.37
+   },
+   {
+    "sku": "BEV-CHI-20",
+    "qty": 2,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   1
+  ],
+  "closed": [
+   {
+    "from": "08-03",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.09,
+   "december": 0.7
+  },
+  "events": [
+   {
+    "date": "2026-06-20",
+    "mult": 3.2
+   }
+  ],
+  "trend": -0.01,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.42
+ },
+ {
+  "id": "b2-045",
+  "kind": "restaurant",
+  "name": "Locanda Lo Scalo Milano",
+  "story": "new restaurant ramping up, ordering more each month",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 3,
+    "prob": 0.41
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.47
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 3,
+    "prob": 0.9
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 1,
+    "prob": 0.87
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 1,
+    "prob": 0.57
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-03",
+    "to": "08-21"
+   }
+  ],
+  "season": {
+   "summer": 0.01,
+   "december": 1.15
+  },
+  "events": [
+   {
+    "date": "2026-05-28",
+    "mult": 2.7
+   }
+  ],
+  "trend": -0.21,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.47
+ },
+ {
+  "id": "b2-046",
+  "kind": "restaurant",
+  "name": "Taverna Da Gino",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.57
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.67
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.77
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1.5,
+    "prob": 0.35
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 4,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1.5,
+    "prob": 0.44
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.63
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.95
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.58
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.37
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.09,
+   "december": 0.35
+  },
+  "events": [
+   {
+    "date": "2026-05-16",
+    "mult": 2.4
+   }
+  ],
+  "trend": 0.01,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.1
+ },
+ {
+  "id": "b2-047",
+  "kind": "restaurant",
+  "name": "Hosteria Il Porto",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.58
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "prob": 0.9
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 4,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1,
+    "prob": 0.99
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2.5,
+    "prob": 0.65
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.43
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.66,
+   "december": 0.99
+  },
+  "events": [
+   {
+    "date": "2026-10-16",
+    "mult": 2.4
+   }
+  ],
+  "trend": 0.29,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.1
+ },
+ {
+  "id": "b2-048",
+  "kind": "restaurant",
+  "name": "Trattoria Il Caminetto",
+  "story": "rustic restaurant, buys in bulk for the season",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.95
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.86
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 2.5,
+    "prob": 0.69
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1,
+    "prob": 0.39
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 0.5,
+    "prob": 0.73
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1,
+    "prob": 0.56
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.53
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 2,
+    "prob": 0.67
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.85
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   3,
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-19"
+   },
+   {
+    "from": "01-06",
+    "to": "01-19"
+   }
+  ],
+  "season": {
+   "summer": 0.59,
+   "december": 0.02
+  },
+  "events": [],
+  "trend": -0.44,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.01
+ },
+ {
+  "id": "b2-049",
+  "kind": "restaurant",
+  "name": "Trattoria Corte Bassa",
+  "story": "old-school trattoria slowly reducing its menu",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.75
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.96
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4,
+    "prob": 0.51
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 1.5,
+    "prob": 0.7
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 0.5,
+    "prob": 0.89
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.51
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 3,
+    "prob": 0.54
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.59
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 2,
+    "prob": 0.82
+   },
+   {
+    "sku": "DIS-TOV-40",
+    "qty": 2,
+    "prob": 0.91
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   6
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.47,
+   "december": 0.72
+  },
+  "events": [
+   {
+    "date": "2025-09-04",
+    "mult": 3.7
+   }
+  ],
+  "trend": -0.07,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.31
+ },
+ {
+  "id": "b2-050",
+  "kind": "restaurant",
+  "name": "Trattoria Mezzaluna",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.56
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.45
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.82
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 1,
+    "prob": 0.37
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.88
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 4,
+    "prob": 0.83
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   6
+  ],
+  "closed": [
+   {
+    "from": "01-05",
+    "to": "01-13"
+   }
+  ],
+  "season": {
+   "summer": 0.22,
+   "december": 1.17
+  },
+  "events": [
+   {
+    "date": "2026-01-27",
+    "mult": 3.0
+   },
+   {
+    "date": "2025-05-09",
+    "mult": 3.9
+   }
+  ],
+  "trend": 0.11,
+  "churn": {
+   "start": "2026-04-27"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.29
+ },
+ {
+  "id": "b2-051",
+  "kind": "restaurant",
+  "name": "Antica Trattoria del Duomo",
+  "story": "seafood-leaning trattoria, prefers fresh and local, Friday peaks",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.39
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.41
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.82
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3,
+    "prob": 0.99
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1.5,
+    "prob": 0.95
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.52
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.54
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 1,
+    "prob": 0.59
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-02",
+    "to": "08-20"
+   }
+  ],
+  "season": {
+   "summer": 0.81,
+   "december": 0.25
+  },
+  "events": [
+   {
+    "date": "2024-10-15",
+    "mult": 2.5
+   }
+  ],
+  "trend": -0.34,
+  "churn": {
+   "start": "2025-06-12"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.42
+ },
+ {
+  "id": "b2-052",
+  "kind": "restaurant",
+  "name": "Pizzeria del Lago",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.41
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1.5,
+    "prob": 0.82
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 2.5,
+    "prob": 0.59
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 0.5,
+    "prob": 0.54
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 3,
+    "prob": 0.39
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 4,
+    "prob": 0.7
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 3,
+    "prob": 0.89
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.04,
+   "december": 0.82
+  },
+  "events": [
+   {
+    "date": "2024-12-03",
+    "mult": 3.8
+   },
+   {
+    "date": "2025-05-23",
+    "mult": 2.0
+   }
+  ],
+  "trend": 0.01,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-COT",
+   "from": "2025-03-02"
+  },
+  "drop": null,
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b2-053",
+  "kind": "restaurant",
+  "name": "Antica Trattoria La Vigna Milano",
+  "story": "osteria with aperitivo, large beer and prosecco volume",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.75
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2,
+    "prob": 0.68
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2.5,
+    "prob": 0.68
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 4,
+    "prob": 0.74
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.46
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 2,
+    "prob": 0.44
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 3,
+    "prob": 0.94
+   },
+   {
+    "sku": "DIS-BIC-200",
+    "qty": 2,
+    "prob": 0.35
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-01",
+    "to": "08-19"
+   }
+  ],
+  "season": {
+   "summer": 0.63,
+   "december": 0.58
+  },
+  "events": [
+   {
+    "date": "2024-10-10",
+    "mult": 2.5
+   }
+  ],
+  "trend": 0.3,
+  "churn": {
+   "start": "2026-08-05"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.39
+ },
+ {
+  "id": "b2-054",
+  "kind": "restaurant",
+  "name": "Taverna Sant'Eustorgio",
+  "story": "old-school trattoria slowly reducing its menu",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.41
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 5,
+    "prob": 0.75
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 3,
+    "prob": 0.88
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.71
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.44
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 2,
+    "prob": 0.75
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 3,
+    "prob": 0.79
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.19,
+   "december": 0.45
+  },
+  "events": [
+   {
+    "date": "2024-12-21",
+    "mult": 3.1
+   }
+  ],
+  "trend": 0.19,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.18
+ },
+ {
+  "id": "b2-055",
+  "kind": "restaurant",
+  "name": "Ristorante Alla Stazione Varese",
+  "story": "rustic restaurant, buys in bulk for the season",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.48
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.39
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 5,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.79
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 2,
+    "prob": 0.53
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 3,
+    "prob": 0.56
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 1,
+    "prob": 0.85
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.23,
+   "december": 0.18
+  },
+  "events": [],
+  "trend": 0.07,
+  "churn": {
+   "start": "2025-04-05"
+  },
+  "adopt": {
+   "sku": "DIS-GUA-M",
+   "from": "2025-06-16"
+  },
+  "drop": null,
+  "extras_rate": 0.39
+ },
+ {
+  "id": "b2-056",
+  "kind": "restaurant",
+  "name": "Locanda Valle Verde",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 2,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2.5,
+    "prob": 0.9
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1.5,
+    "prob": 0.69
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.39
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 2,
+    "prob": 0.63
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-09",
+    "to": "08-31"
+   },
+   {
+    "from": "01-02",
+    "to": "01-18"
+   }
+  ],
+  "season": {
+   "summer": -0.04,
+   "december": 1.04
+  },
+  "events": [
+   {
+    "date": "2026-09-17",
+    "mult": 2.8
+   }
+  ],
+  "trend": 0.56,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.31
+ },
+ {
+  "id": "b2-057",
+  "kind": "restaurant",
+  "name": "Ristorante La Vigna Pavia",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.69
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.68
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.87
+   },
+   {
+    "sku": "BEV-SUC-20",
+    "qty": 1,
+    "prob": 0.81
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.36,
+   "december": 0.15
+  },
+  "events": [
+   {
+    "date": "2025-10-09",
+    "mult": 3.0
+   },
+   {
+    "date": "2024-10-18",
+    "mult": 1.7
+   }
+  ],
+  "trend": -0.45,
+  "churn": {
+   "start": "2025-09-01"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.31
+ },
+ {
+  "id": "b2-058",
+  "kind": "restaurant",
+  "name": "Hosteria Da Nino",
+  "story": "family trattoria, handmade pasta daily, steady small orders",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2.5,
+    "prob": 0.44
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1.5,
+    "prob": 0.59
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.56
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.44
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.76
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 3,
+    "prob": 0.46
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 2,
+    "prob": 0.96
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.5
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   0
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.22,
+   "december": 0.53
+  },
+  "events": [],
+  "trend": -0.28,
+  "churn": {
+   "start": "2026-01-01"
+  },
+  "adopt": null,
+  "drop": {
+   "sku": "OLI-SEM-10L",
+   "from": "2025-02-06"
+  },
+  "extras_rate": 0.19
+ },
+ {
+  "id": "b2-059",
+  "kind": "restaurant",
+  "name": "Pizzeria Mezzaluna Cremona",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.46
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.54
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1.5,
+    "prob": 0.52
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 5,
+    "prob": 0.38
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 4,
+    "prob": 0.79
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 3,
+    "prob": 0.99
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.47
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 1,
+    "prob": 0.63
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.07,
+   "december": 0.98
+  },
+  "events": [
+   {
+    "date": "2025-07-09",
+    "mult": 1.7
+   },
+   {
+    "date": "2025-01-28",
+    "mult": 2.8
+   },
+   {
+    "date": "2025-05-04",
+    "mult": 3.8
+   }
+  ],
+  "trend": -0.3,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.26
+ },
+ {
+  "id": "b2-060",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Bergamasca",
+  "story": "osteria with aperitivo, large beer and prosecco volume",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 3,
+    "prob": 0.92
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 4,
+    "prob": 0.94
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.68
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1.5,
+    "prob": 0.96
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.4
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 2,
+    "prob": 0.48
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 3,
+    "prob": 0.65
+   },
+   {
+    "sku": "BEV-CHI-20",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "DIS-TOV-40",
+    "qty": 1,
+    "prob": 0.43
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-08",
+    "to": "08-31"
+   }
+  ],
+  "season": {
+   "summer": -0.07,
+   "december": 0.17
+  },
+  "events": [
+   {
+    "date": "2026-07-05",
+    "mult": 3.8
+   },
+   {
+    "date": "2026-06-17",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-10-17",
+    "mult": 4.0
+   }
+  ],
+  "trend": -0.28,
+  "churn": null,
+  "adopt": {
+   "sku": "FAR-SEM-5K",
+   "from": "2026-03-17"
+  },
+  "drop": null,
+  "extras_rate": 0.39
+ },
+ {
+  "id": "b2-061",
+  "kind": "restaurant",
+  "name": "Trattoria Da Gino",
+  "story": "family trattoria, handmade pasta daily, steady small orders",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.82
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.92
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2.5,
+    "prob": 0.37
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1.5,
+    "prob": 0.42
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2,
+    "prob": 0.49
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.36
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.47
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "BEV-CHI-20",
+    "qty": 2,
+    "prob": 0.41
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   3,
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-01",
+    "to": "08-15"
+   },
+   {
+    "from": "01-02",
+    "to": "01-18"
+   }
+  ],
+  "season": {
+   "summer": 0.3,
+   "december": 0.59
+  },
+  "events": [
+   {
+    "date": "2026-07-26",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-07-22",
+    "mult": 1.8
+   },
+   {
+    "date": "2024-10-01",
+    "mult": 1.6
+   }
+  ],
+  "trend": 0.08,
+  "churn": {
+   "start": "2026-09-07"
+  },
+  "adopt": {
+   "sku": "VIN-PRO-003",
+   "from": "2026-04-16"
+  },
+  "drop": {
+   "sku": "OLI-EVO-5L",
+   "from": "2026-04-12"
+  },
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b2-062",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Il Faro Bergamo",
+  "story": "new restaurant ramping up, ordering more each month",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.59
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.61
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.83
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 5,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1.5,
+    "prob": 0.82
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 5,
+    "prob": 0.59
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1,
+    "prob": 0.99
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.41
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 4,
+    "prob": 0.69
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 1,
+    "prob": 0.5
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-29"
+   }
+  ],
+  "season": {
+   "summer": -0.13,
+   "december": 0.17
+  },
+  "events": [
+   {
+    "date": "2024-11-03",
+    "mult": 2.0
+   },
+   {
+    "date": "2024-12-07",
+    "mult": 2.4
+   },
+   {
+    "date": "2024-12-04",
+    "mult": 4.0
+   }
+  ],
+  "trend": -0.29,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.36
+ },
+ {
+  "id": "b2-063",
+  "kind": "restaurant",
+  "name": "Hosteria La Cascina",
+  "story": "osteria with aperitivo, large beer and prosecco volume",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 3,
+    "prob": 0.42
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 3,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2.5,
+    "prob": 0.7
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.62
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 2,
+    "prob": 0.61
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 2,
+    "prob": 0.75
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 3,
+    "prob": 0.89
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   0
+  ],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-19"
+   }
+  ],
+  "season": {
+   "summer": -0.15,
+   "december": 0.84
+  },
+  "events": [],
+  "trend": 0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b2-064",
+  "kind": "restaurant",
+  "name": "Trattoria Il Mulino Bergamo",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.66
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.91
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 3,
+    "prob": 0.42
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 0.5,
+    "prob": 0.66
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.74
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 1,
+    "prob": 0.99
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.43
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2,
+    "prob": 0.58
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-03",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": -0.38,
+   "december": 0.13
+  },
+  "events": [
+   {
+    "date": "2025-06-02",
+    "mult": 3.7
+   },
+   {
+    "date": "2026-08-28",
+    "mult": 3.5
+   }
+  ],
+  "trend": 0.11,
+  "churn": null,
+  "adopt": {
+   "sku": "BIR-LAG-33",
+   "from": "2026-01-28"
+  },
+  "drop": {
+   "sku": "FOR-MOZ-FIO",
+   "from": "2025-06-04"
+  },
+  "extras_rate": 0.23
+ },
+ {
+  "id": "b2-065",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Il Campanile",
+  "story": "upscale restaurant, wine list driven, orders wine by the case",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.99
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 3,
+    "prob": 0.37
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 4,
+    "prob": 0.7
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.82
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 2,
+    "prob": 0.44
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3,
+    "prob": 0.9
+   },
+   {
+    "sku": "BEV-SUC-20",
+    "qty": 2,
+    "prob": 0.53
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 2,
+    "prob": 0.84
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   2,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-08",
+    "to": "08-29"
+   }
+  ],
+  "season": {
+   "summer": 0.51,
+   "december": 1.18
+  },
+  "events": [],
+  "trend": 0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.39
+ },
+ {
+  "id": "b2-066",
+  "kind": "restaurant",
+  "name": "Locanda Il Porto Milano",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.71
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 3,
+    "prob": 0.78
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2.5,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.87
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.96
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.88
+   },
+   {
+    "sku": "BEV-SUC-AC",
+    "qty": 3,
+    "prob": 0.69
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-19"
+   },
+   {
+    "from": "01-03",
+    "to": "01-19"
+   }
+  ],
+  "season": {
+   "summer": 0.66,
+   "december": 1.2
+  },
+  "events": [],
+  "trend": -0.09,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.02
+ },
+ {
+  "id": "b2-067",
+  "kind": "restaurant",
+  "name": "Antica Trattoria San Giorgio Cremona",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.79
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.62
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 4,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1.5,
+    "prob": 0.77
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.66
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3,
+    "prob": 0.48
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.85
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.08,
+   "december": 1.09
+  },
+  "events": [
+   {
+    "date": "2026-05-11",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-05-19",
+    "mult": 2.6
+   },
+   {
+    "date": "2024-10-03",
+    "mult": 3.8
+   },
+   {
+    "date": "2025-11-05",
+    "mult": 2.5
+   }
+  ],
+  "trend": 0.25,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-BIA-004",
+   "from": "2025-01-28"
+  },
+  "drop": {
+   "sku": "VIN-ROS-009",
+   "from": "2026-05-01"
+  },
+  "extras_rate": 0.11
+ },
+ {
+  "id": "b2-068",
+  "kind": "restaurant",
+  "name": "Osteria La Rosa",
+  "story": "osteria with aperitivo, large beer and prosecco volume",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.5
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.44
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 3,
+    "prob": 0.96
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1.5,
+    "prob": 0.99
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 0.5,
+    "prob": 0.82
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 3,
+    "prob": 0.58
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 3,
+    "prob": 0.37
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 1,
+    "prob": 0.94
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-03",
+    "to": "08-17"
+   }
+  ],
+  "season": {
+   "summer": 0.68,
+   "december": 0.0
+  },
+  "events": [],
+  "trend": 0.22,
+  "churn": null,
+  "adopt": {
+   "sku": "CAF-DEC-500",
+   "from": "2026-08-10"
+  },
+  "drop": null,
+  "extras_rate": 0.32
+ },
+ {
+  "id": "b2-069",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Corte Bassa",
+  "story": "family trattoria, handmade pasta daily, steady small orders",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.87
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3,
+    "prob": 0.42
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2.5,
+    "prob": 0.53
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.42
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 1,
+    "prob": 0.73
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "BEV-SUC-20",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 1,
+    "prob": 0.75
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.29,
+   "december": 1.29
+  },
+  "events": [
+   {
+    "date": "2025-03-01",
+    "mult": 2.8
+   },
+   {
+    "date": "2024-12-18",
+    "mult": 2.4
+   }
+  ],
+  "trend": -0.28,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.18
+ },
+ {
+  "id": "b2-070",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Il Gallo Brescia",
+  "story": "rustic restaurant, buys in bulk for the season",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.91
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 5,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 0.5,
+    "prob": 0.88
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 5,
+    "prob": 0.63
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 2,
+    "prob": 0.88
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 2,
+    "prob": 0.8
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.48
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.04,
+   "december": 1.13
+  },
+  "events": [],
+  "trend": -0.39,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.24
+ },
+ {
+  "id": "b2-071",
+  "kind": "restaurant",
+  "name": "Taverna Il Campanile",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 5,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2,
+    "prob": 0.65
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.58
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.62
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 1,
+    "prob": 0.75
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-06",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.44,
+   "december": 0.14
+  },
+  "events": [
+   {
+    "date": "2024-11-21",
+    "mult": 3.1
+   },
+   {
+    "date": "2024-12-15",
+    "mult": 3.7
+   },
+   {
+    "date": "2025-03-23",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-04-17",
+    "mult": 3.0
+   }
+  ],
+  "trend": 0.26,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.28
+ },
+ {
+  "id": "b2-072",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Da Nino Varese",
+  "story": "rustic restaurant, buys in bulk for the season",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.63
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.54
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1.5,
+    "prob": 0.81
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4,
+    "prob": 0.46
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 1.5,
+    "prob": 0.99
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.55
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 2,
+    "prob": 0.66
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [
+   2
+  ],
+  "closed": [
+   {
+    "from": "01-08",
+    "to": "01-20"
+   }
+  ],
+  "season": {
+   "summer": 0.77,
+   "december": 0.74
+  },
+  "events": [
+   {
+    "date": "2024-11-08",
+    "mult": 2.0
+   },
+   {
+    "date": "2024-10-08",
+    "mult": 1.8
+   },
+   {
+    "date": "2026-03-28",
+    "mult": 2.6
+   }
+  ],
+  "trend": -0.2,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.49
+ },
+ {
+  "id": "b2-073",
+  "kind": "restaurant",
+  "name": "Ristorante del Lago Cremona",
+  "story": "family trattoria, handmade pasta daily, steady small orders",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2,
+    "prob": 0.96
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 5,
+    "prob": 0.83
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 0.5,
+    "prob": 0.9
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 4,
+    "prob": 0.78
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 3,
+    "prob": 0.83
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.87
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.44
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-03",
+    "to": "08-17"
+   }
+  ],
+  "season": {
+   "summer": 0.77,
+   "december": 0.88
+  },
+  "events": [],
+  "trend": -0.01,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b2-074",
+  "kind": "restaurant",
+  "name": "Hosteria Il Forno",
+  "story": "family trattoria, handmade pasta daily, steady small orders",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.77
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.72
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1.5,
+    "prob": 0.39
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.86
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 5,
+    "prob": 0.52
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.45
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2,
+    "prob": 0.51
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-07",
+    "to": "01-18"
+   }
+  ],
+  "season": {
+   "summer": 0.4,
+   "december": 0.78
+  },
+  "events": [
+   {
+    "date": "2025-07-06",
+    "mult": 3.1
+   },
+   {
+    "date": "2025-08-03",
+    "mult": 3.6
+   }
+  ],
+  "trend": 0.51,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b2-075",
+  "kind": "restaurant",
+  "name": "Hosteria Al Corso",
+  "story": "hotel-adjacent restaurant, consistent weekly stock",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 2.5,
+    "prob": 0.41
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 5,
+    "prob": 0.78
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.88
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 3,
+    "prob": 0.49
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 1,
+    "prob": 0.36
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.06,
+   "december": 0.2
+  },
+  "events": [
+   {
+    "date": "2025-04-19",
+    "mult": 3.2
+   }
+  ],
+  "trend": -0.39,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.38
+ },
+ {
+  "id": "b2-076",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Sant'Ambrogio",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.62
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 0.5,
+    "prob": 0.65
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 3,
+    "prob": 0.69
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 1,
+    "prob": 0.56
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-01",
+    "to": "08-19"
+   },
+   {
+    "from": "12-24",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.95,
+   "december": 1.06
+  },
+  "events": [
+   {
+    "date": "2025-06-16",
+    "mult": 1.8
+   },
+   {
+    "date": "2024-11-14",
+    "mult": 2.2
+   },
+   {
+    "date": "2024-12-06",
+    "mult": 3.0
+   },
+   {
+    "date": "2025-06-06",
+    "mult": 2.8
+   }
+  ],
+  "trend": -0.24,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.21
+ },
+ {
+  "id": "b2-077",
+  "kind": "restaurant",
+  "name": "Taverna del Naviglio",
+  "story": "hotel-adjacent restaurant, consistent weekly stock",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.52
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.84
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4,
+    "prob": 0.74
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1.5,
+    "prob": 0.49
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.52
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.46
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.4
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 3,
+    "prob": 0.58
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.58
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   1
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.04,
+   "december": 1.25
+  },
+  "events": [
+   {
+    "date": "2025-04-18",
+    "mult": 2.2
+   },
+   {
+    "date": "2024-10-14",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-05-07",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-09-18",
+    "mult": 3.7
+   }
+  ],
+  "trend": -0.08,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.14
+ },
+ {
+  "id": "b2-078",
+  "kind": "restaurant",
+  "name": "Osteria del Borgo Monza",
+  "story": "old-school trattoria slowly reducing its menu",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.53
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 3,
+    "prob": 0.42
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 5,
+    "prob": 0.58
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.99
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.37
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2,
+    "prob": 0.69
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-05",
+    "to": "08-26"
+   }
+  ],
+  "season": {
+   "summer": 0.15,
+   "december": 0.45
+  },
+  "events": [],
+  "trend": 0.56,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.28
+ },
+ {
+  "id": "b2-079",
+  "kind": "restaurant",
+  "name": "Taverna Il Pozzo",
+  "story": "seafood-leaning trattoria, prefers fresh and local, Friday peaks",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 3,
+    "prob": 0.54
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.38
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 3,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 4,
+    "prob": 0.87
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1.5,
+    "prob": 0.39
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1,
+    "prob": 0.99
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 2,
+    "prob": 0.56
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.95
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 3,
+    "prob": 0.53
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.65,
+   "december": 0.04
+  },
+  "events": [
+   {
+    "date": "2025-10-28",
+    "mult": 3.7
+   },
+   {
+    "date": "2026-08-26",
+    "mult": 2.2
+   }
+  ],
+  "trend": -0.45,
+  "churn": null,
+  "adopt": {
+   "sku": "FOR-MOZ-FIO",
+   "from": "2025-01-14"
+  },
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b2-080",
+  "kind": "restaurant",
+  "name": "Taverna Mezzaluna",
+  "story": "pizzeria, big pizza nights, weekly deliveries of cheese and flour",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.97
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.73
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.95
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1.5,
+    "prob": 0.97
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1.5,
+    "prob": 0.42
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.72
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 3,
+    "prob": 0.51
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.88
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0
+  ],
+  "closed": [
+   {
+    "from": "08-09",
+    "to": "08-27"
+   }
+  ],
+  "season": {
+   "summer": -0.4,
+   "december": 0.14
+  },
+  "events": [
+   {
+    "date": "2024-11-06",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-06-19",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-01-03",
+    "mult": 2.9
+   },
+   {
+    "date": "2025-05-09",
+    "mult": 3.4
+   }
+  ],
+  "trend": 0.47,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.11
+ },
+ {
+  "id": "b2-081",
+  "kind": "restaurant",
+  "name": "Hosteria Il Forno Varese",
+  "story": "new restaurant ramping up, ordering more each month",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.88
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 3,
+    "prob": 0.68
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 3,
+    "prob": 0.46
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 4,
+    "prob": 0.69
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 5,
+    "prob": 0.51
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.36
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.51
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 3,
+    "prob": 0.8
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 3,
+    "prob": 0.43
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-04",
+    "to": "01-17"
+   }
+  ],
+  "season": {
+   "summer": 0.7,
+   "december": 0.34
+  },
+  "events": [
+   {
+    "date": "2026-05-21",
+    "mult": 3.7
+   },
+   {
+    "date": "2026-03-23",
+    "mult": 3.1
+   },
+   {
+    "date": "2025-02-16",
+    "mult": 2.7
+   }
+  ],
+  "trend": 0.19,
+  "churn": null,
+  "adopt": {
+   "sku": "PAS-SPA-500",
+   "from": "2025-02-17"
+  },
+  "drop": {
+   "sku": "FOR-PRO-DOL",
+   "from": "2025-03-26"
+  },
+  "extras_rate": 0.29
+ },
+ {
+  "id": "b2-082",
+  "kind": "restaurant",
+  "name": "Taverna Bergamasca Como",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.36
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 4,
+    "prob": 0.67
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.59
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.72
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 3,
+    "prob": 0.8
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.4
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 1,
+    "prob": 0.49
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   2,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-03",
+    "to": "08-24"
+   },
+   {
+    "from": "01-04",
+    "to": "01-22"
+   }
+  ],
+  "season": {
+   "summer": 0.58,
+   "december": 1.25
+  },
+  "events": [
+   {
+    "date": "2024-11-04",
+    "mult": 1.9
+   },
+   {
+    "date": "2024-12-22",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-08-01",
+    "mult": 2.0
+   },
+   {
+    "date": "2024-10-09",
+    "mult": 2.5
+   }
+  ],
+  "trend": 0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.26
+ },
+ {
+  "id": "b2-083",
+  "kind": "restaurant",
+  "name": "Locanda Il Mulino",
+  "story": "upscale restaurant, wine list driven, orders wine by the case",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.37
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1.5,
+    "prob": 0.79
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 4,
+    "prob": 0.36
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1,
+    "prob": 0.82
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.68
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 1,
+    "prob": 0.87
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.87
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   1
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-31"
+   }
+  ],
+  "season": {
+   "summer": 1.12,
+   "december": 0.47
+  },
+  "events": [
+   {
+    "date": "2026-10-01",
+    "mult": 3.7
+   },
+   {
+    "date": "2024-12-09",
+    "mult": 3.0
+   }
+  ],
+  "trend": -0.25,
+  "churn": {
+   "start": "2026-01-10"
+  },
+  "adopt": {
+   "sku": "SAL-FIN-1K",
+   "from": "2026-07-25"
+  },
+  "drop": null,
+  "extras_rate": 0.21
+ },
+ {
+  "id": "b2-084",
+  "kind": "restaurant",
+  "name": "Ristorante Mezzaluna",
+  "story": "pizza al taglio shop, flour-heavy, quick turnover",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.66
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2,
+    "prob": 0.52
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1.5,
+    "prob": 0.89
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2.5,
+    "prob": 0.82
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1.5,
+    "prob": 0.58
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2.5,
+    "prob": 0.71
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.77
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 1,
+    "prob": 0.55
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.49
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.73
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.81,
+   "december": 0.49
+  },
+  "events": [],
+  "trend": 0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.49
+ },
+ {
+  "id": "b2-085",
+  "kind": "restaurant",
+  "name": "Taverna Da Franca",
+  "story": "hotel-adjacent restaurant, consistent weekly stock",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.47
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3,
+    "prob": 0.7
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 4,
+    "prob": 0.51
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.81
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 2,
+    "prob": 0.78
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 1,
+    "prob": 0.52
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-03",
+    "to": "01-13"
+   },
+   {
+    "from": "12-24",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.91,
+   "december": 0.97
+  },
+  "events": [
+   {
+    "date": "2024-12-06",
+    "mult": 3.7
+   }
+  ],
+  "trend": 0.33,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "SAL-PRC",
+   "from": "2025-02-23"
+  },
+  "extras_rate": 0.19
+ },
+ {
+  "id": "b2-086",
+  "kind": "restaurant",
+  "name": "Hosteria Valle Verde",
+  "story": "lunch-heavy, closed Mondays, orders big on weekends",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.64
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 4,
+    "prob": 0.76
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2,
+    "prob": 0.91
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 1,
+    "prob": 0.54
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.99
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-09",
+    "to": "08-23"
+   }
+  ],
+  "season": {
+   "summer": 0.94,
+   "december": 1.2
+  },
+  "events": [
+   {
+    "date": "2025-04-08",
+    "mult": 2.8
+   }
+  ],
+  "trend": -0.22,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.38
+ },
+ {
+  "id": "b2-087",
+  "kind": "restaurant",
+  "name": "Locanda Sant'Ambrogio",
+  "story": "old-school trattoria slowly reducing its menu",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 3,
+    "prob": 0.6
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "prob": 0.76
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 5,
+    "prob": 0.89
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 5,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 0.5,
+    "prob": 0.95
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 4,
+    "prob": 0.48
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 3,
+    "prob": 0.42
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 2,
+    "prob": 0.93
+   }
+  ],
+  "cadence_days": 8,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-02",
+    "to": "01-14"
+   }
+  ],
+  "season": {
+   "summer": 0.66,
+   "december": 0.06
+  },
+  "events": [
+   {
+    "date": "2024-10-14",
+    "mult": 2.6
+   },
+   {
+    "date": "2026-03-15",
+    "mult": 3.2
+   }
+  ],
+  "trend": 0.49,
+  "churn": {
+   "start": "2025-02-21"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.07
+ },
+ {
+  "id": "b2-088",
+  "kind": "restaurant",
+  "name": "Trattoria Da Nino",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.88
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.9
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 1,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1.5,
+    "prob": 0.8
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1.5,
+    "prob": 0.77
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 3,
+    "prob": 0.77
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.82
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4,
+    "prob": 0.73
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.75
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.53,
+   "december": 0.36
+  },
+  "events": [
+   {
+    "date": "2024-10-08",
+    "mult": 3.3
+   }
+  ],
+  "trend": -0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.39
+ },
+ {
+  "id": "b2-089",
+  "kind": "restaurant",
+  "name": "Ristorante Valle Verde",
+  "story": "busy pizzeria with delivery apps, high water and beer use",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 3,
+    "prob": 0.56
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.62
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 2,
+    "prob": 0.7
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.56
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 3,
+    "prob": 0.51
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 2,
+    "prob": 0.96
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-08",
+    "to": "08-29"
+   },
+   {
+    "from": "12-24",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.35,
+   "december": 0.14
+  },
+  "events": [
+   {
+    "date": "2025-01-14",
+    "mult": 4.0
+   },
+   {
+    "date": "2026-08-09",
+    "mult": 3.2
+   }
+  ],
+  "trend": 0.45,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.16
+ },
+ {
+  "id": "b2-090",
+  "kind": "restaurant",
+  "name": "Ristorante Sant'Eustorgio",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 3,
+    "prob": 0.69
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 0.5,
+    "prob": 0.75
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 5,
+    "prob": 0.92
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 3,
+    "prob": 0.79
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 3,
+    "prob": 0.9
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 3,
+    "prob": 0.75
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.7
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   3,
+   6
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-31"
+   }
+  ],
+  "season": {
+   "summer": 0.35,
+   "december": 0.84
+  },
+  "events": [
+   {
+    "date": "2026-09-28",
+    "mult": 2.9
+   }
+  ],
+  "trend": -0.01,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.05
+ },
+ {
+  "id": "b2-091",
+  "kind": "restaurant",
+  "name": "Hosteria delle Rose",
+  "story": "family trattoria, handmade pasta daily, steady small orders",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.92
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 0.5,
+    "prob": 0.39
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2.5,
+    "prob": 0.43
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2.5,
+    "prob": 0.85
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.37
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3,
+    "prob": 0.46
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.39
+   },
+   {
+    "sku": "BEV-LAT-1L",
+    "qty": 1,
+    "prob": 0.48
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-01",
+    "to": "08-22"
+   },
+   {
+    "from": "01-08",
+    "to": "01-16"
+   },
+   {
+    "from": "12-24",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": -0.17,
+   "december": 1.2
+  },
+  "events": [],
+  "trend": 0.01,
+  "churn": null,
+  "adopt": {
+   "sku": "FOR-GOR-DOL",
+   "from": "2025-03-22"
+  },
+  "drop": null,
+  "extras_rate": 0.01
+ },
+ {
+  "id": "b2-092",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Da Nino",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.68
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.57
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 5,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.45
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 1,
+    "prob": 0.51
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 3,
+    "prob": 0.96
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.95
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.41
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 3,
+    "prob": 0.96
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-03",
+    "to": "08-27"
+   },
+   {
+    "from": "01-04",
+    "to": "01-18"
+   }
+  ],
+  "season": {
+   "summer": 0.15,
+   "december": 0.08
+  },
+  "events": [
+   {
+    "date": "2026-10-05",
+    "mult": 2.0
+   },
+   {
+    "date": "2024-11-15",
+    "mult": 3.1
+   },
+   {
+    "date": "2026-06-22",
+    "mult": 1.5
+   },
+   {
+    "date": "2024-10-13",
+    "mult": 3.3
+   }
+  ],
+  "trend": 0.39,
+  "churn": null,
+  "adopt": {
+   "sku": "CAF-DEC-500",
+   "from": "2026-06-08"
+  },
+  "drop": null,
+  "extras_rate": 0.26
+ },
+ {
+  "id": "b2-093",
+  "kind": "restaurant",
+  "name": "Locanda Il Caminetto Lecco",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.88
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 3,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 5,
+    "prob": 0.61
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 3,
+    "prob": 0.78
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2.5,
+    "prob": 0.42
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 1,
+    "prob": 0.95
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-03",
+    "to": "08-24"
+   }
+  ],
+  "season": {
+   "summer": 0.85,
+   "december": 0.37
+  },
+  "events": [
+   {
+    "date": "2025-11-07",
+    "mult": 2.6
+   }
+  ],
+  "trend": 0.39,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.14
+ },
+ {
+  "id": "b2-094",
+  "kind": "restaurant",
+  "name": "Hosteria Bergamasca Cremona",
+  "story": "busy pizzeria with delivery apps, high water and beer use",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.76
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.42
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2.5,
+    "prob": 0.36
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 2.5,
+    "prob": 0.6
+   },
+   {
+    "sku": "OLI-SEM-10L",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 3,
+    "prob": 0.6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.68
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.36
+   }
+  ],
+  "cadence_days": 12,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.34,
+   "december": 0.78
+  },
+  "events": [
+   {
+    "date": "2026-03-20",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-04-25",
+    "mult": 4.0
+   }
+  ],
+  "trend": 0.39,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.25
+ },
+ {
+  "id": "b2-095",
+  "kind": "restaurant",
+  "name": "Ristorante Alla Stazione",
+  "story": "new restaurant ramping up, ordering more each month",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 3,
+    "prob": 0.48
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 3,
+    "prob": 0.88
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1.5,
+    "prob": 0.98
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 5,
+    "prob": 0.72
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1.5,
+    "prob": 0.96
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.35
+   },
+   {
+    "sku": "FAR-SEM-5K",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.64
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-31"
+   }
+  ],
+  "season": {
+   "summer": 0.24,
+   "december": 0.7
+  },
+  "events": [
+   {
+    "date": "2026-03-09",
+    "mult": 2.0
+   }
+  ],
+  "trend": 0.34,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b2-096",
+  "kind": "restaurant",
+  "name": "Pizzeria Il Mulino Pavia",
+  "story": "upscale restaurant, wine list driven, orders wine by the case",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.48
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1.5,
+    "prob": 0.7
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2.5,
+    "prob": 0.59
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 1,
+    "prob": 0.59
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4,
+    "prob": 0.92
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.52
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 2,
+    "prob": 0.86
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.9
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.02,
+   "december": 0.62
+  },
+  "events": [
+   {
+    "date": "2024-11-28",
+    "mult": 2.4
+   },
+   {
+    "date": "2025-09-04",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-08-05",
+    "mult": 3.1
+   },
+   {
+    "date": "2026-01-11",
+    "mult": 3.2
+   }
+  ],
+  "trend": 0.22,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-SPU-001",
+   "from": "2026-10-01"
+  },
+  "drop": null,
+  "extras_rate": 0.44
+ },
+ {
+  "id": "b2-097",
+  "kind": "restaurant",
+  "name": "Trattoria delle Rose Cremona",
+  "story": "neighbourhood osteria, buys little but often",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 3,
+    "prob": 0.9
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 5,
+    "prob": 0.46
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2,
+    "prob": 0.44
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2.5,
+    "prob": 0.37
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 1,
+    "prob": 0.94
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.76
+   },
+   {
+    "sku": "BEV-SUC-AC",
+    "qty": 1,
+    "prob": 0.61
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.6,
+   "december": 0.25
+  },
+  "events": [],
+  "trend": -0.31,
+  "churn": null,
+  "adopt": {
+   "sku": "BIR-LAG-33",
+   "from": "2025-07-28"
+  },
+  "drop": {
+   "sku": "OLI-EVO-5L",
+   "from": "2026-05-14"
+  },
+  "extras_rate": 0.3
+ },
+ {
+  "id": "b2-098",
+  "kind": "restaurant",
+  "name": "Antica Trattoria Il Caminetto",
+  "story": "bistro with a small bar, coffee-driven mornings",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.7
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.54
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2.5,
+    "prob": 0.45
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 3,
+    "prob": 0.47
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.77
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 4,
+    "prob": 0.46
+   },
+   {
+    "sku": "FAR-MAN-5K",
+    "qty": 4,
+    "prob": 0.86
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.59
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-06",
+    "to": "08-20"
+   }
+  ],
+  "season": {
+   "summer": -0.03,
+   "december": 0.32
+  },
+  "events": [
+   {
+    "date": "2024-12-03",
+    "mult": 3.8
+   },
+   {
+    "date": "2024-11-26",
+    "mult": 2.3
+   },
+   {
+    "date": "2024-11-21",
+    "mult": 2.5
+   }
+  ],
+  "trend": 0.18,
+  "churn": {
+   "start": "2025-05-25"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.3
+ },
+ {
+  "id": "b2-099",
+  "kind": "restaurant",
+  "name": "Trattoria Lo Scalo",
+  "story": "upscale restaurant, wine list driven, orders wine by the case",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.62
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.51
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.64
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 2,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1.5,
+    "prob": 0.67
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.49
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 3,
+    "prob": 0.78
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 3,
+    "prob": 0.49
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 2,
+    "prob": 0.41
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-02",
+    "to": "08-20"
+   },
+   {
+    "from": "01-05",
+    "to": "01-12"
+   }
+  ],
+  "season": {
+   "summer": -0.29,
+   "december": 0.92
+  },
+  "events": [
+   {
+    "date": "2024-10-13",
+    "mult": 2.3
+   }
+  ],
+  "trend": 0.39,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "SAL-GUA",
+   "from": "2025-07-24"
+  },
+  "extras_rate": 0.36
+ },
+ {
+  "id": "b2-100",
+  "kind": "restaurant",
+  "name": "Osteria Il Forno",
+  "story": "country trattoria, heavy on cured meats and cheeses",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.82
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 3,
+    "prob": 0.45
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 4,
+    "prob": 0.5
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 0.5,
+    "prob": 0.94
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 4,
+    "prob": 0.74
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "prob": 0.81
+   },
+   {
+    "sku": "FAR-00-25K",
+    "qty": 2,
+    "prob": 0.42
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.36
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 1,
+    "prob": 0.81
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-08",
+    "to": "01-15"
+   }
+  ],
+  "season": {
+   "summer": 0.06,
+   "december": 0.2
+  },
+  "events": [
+   {
+    "date": "2026-03-08",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-05-14",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-09-05",
+    "mult": 1.7
+   }
+  ],
+  "trend": 0.11,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.18
+ }
+]

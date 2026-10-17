@@ -43,16 +43,18 @@ th{border-bottom:1px solid var(--line);font-weight:600}
 <main class="ref">
   <h1 class="toon">Forecast</h1>
   <p class="lede" id="lede">Who orders next, and what.</p>
+  <p class="none" id="fb" hidden></p>
   <div id="out">Loading…</div>
 </main>
 <script>
+fetch('/api/suggestions/feedback/count').then((r) => r.ok ? r.json() : Promise.reject()).then((c) => { const el = document.getElementById('fb'); el.textContent = c.total + (c.total === 1 ? ' seller answer' : ' seller answers') + ' collected for the next training run'; el.hidden = false; }).catch(() => {});
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const day = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
 const basket = (p) => p.basket.map((b) => `${b.qty} × ${esc(b.name)}`).join(' · ');
 const draw = ([f, cs]) => {
   const name = Object.fromEntries(cs.map((c) => [c.id, c.name]));
   const any = f.customers[0];
-  if (any) document.getElementById('lede').textContent = `Predicted by ${any.model} on ${any.device || 'unknown device'} · today ${day(f.today)}`;
+  if (any) document.getElementById('lede').textContent = `Predicted by ${any.model} on ${any.device || 'unknown device'} · today ${day(f.today)} · trained on synthetic data`;
   const late = f.customers.filter((p) => p.days_overdue > 0);
   const soon = f.customers.filter((p) => p.days_overdue === 0);
   document.getElementById('out').innerHTML =

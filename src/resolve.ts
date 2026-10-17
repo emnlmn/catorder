@@ -30,6 +30,7 @@ const FLAG_TABLE: Record<FlagKind, [Flag["level"], Flag["severity"], string]> = 
   no_history: ["order", "medium", "No order history: «the usual» cannot be computed."],
   not_in_order: ["order", "info", "The customer asked to remove {product_text}; it was not in the order."],
   discount_as_agreed: ["order", "info", "The customer mentions {asked}, as agreed."],
+  suggested: ["line", "info", "Suggested by the forecast model"],
   converted: ["line", "info", "{orig_qty} {unit_text} = {qty} cases ({pack_label})."],
 };
 

@@ -8,7 +8,7 @@ const CONT = /\b(anche|aggiung\w*|togli\w*|anzi|invece|pure|in più|e poi|ancora
 const NEW = /\b(altro|nuovo|un secondo)\s+ordine\b/i;
 const NOT_ORDER = /\?\s*$|^\s*(grazie|ok|perfetto)\b/i;
 
-const SYSTEM = `You route a customer's new WhatsApp message (Italian, informal) for a cat-food shop.
+const SYSTEM = `You route a customer's new WhatsApp message (Italian, informal) for a food and beverage distributor.
 Given the customer's open draft order (messages, lines, minutes since its last message) and the NEW message, answer only JSON:
 {"action":"attach|new|none","quote":"exact words from the NEW message that justify it, or null","reason":"<12 words"}
 attach = continues or changes the open order ("e anche i tovaglioli", "togli il prosciutto", "anzi 6").

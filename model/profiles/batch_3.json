@@ -1,0 +1,6957 @@
+[
+ {
+  "id": "b3-001",
+  "kind": "deli",
+  "name": "Delicatessen Fontana Antica",
+  "story": "Small deli in a tourist area, quieter in winter, busy in summer.",
+  "core": [
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 2.5,
+    "prob": 0.86
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 2,
+    "prob": 0.84
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "prob": 0.35
+   },
+   {
+    "sku": "DIS-BIC-200",
+    "qty": 4,
+    "prob": 0.42
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 2,
+    "prob": 0.9
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1.5,
+    "prob": 0.63
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1.5,
+    "prob": 0.96
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 4,
+    "prob": 0.33
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": -0.2,
+   "december": 1.0
+  },
+  "events": [],
+  "trend": 0.18,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.26
+ },
+ {
+  "id": "b3-002",
+  "kind": "deli",
+  "name": "Formaggi Valente Gourmet",
+  "story": "Slow steady shop, same list every week, rarely changes.",
+  "core": [
+   {
+    "sku": "FOR-PEC",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.4
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 3,
+    "prob": 0.88
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3,
+    "prob": 0.75
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 2,
+    "prob": 0.98
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 4,
+    "prob": 0.85
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2.5,
+    "prob": 0.33
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 3,
+    "prob": 0.45
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.19,
+   "december": 1.32
+  },
+  "events": [
+   {
+    "date": "2024-12-10",
+    "mult": 3.2
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 2.9
+   }
+  ],
+  "trend": -0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b3-003",
+  "kind": "deli",
+  "name": "Formaggi Costa e Figli",
+  "story": "Slow steady shop, same list every week, rarely changes.",
+  "core": [
+   {
+    "sku": "SAL-MOR",
+    "qty": 4,
+    "prob": 0.82
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 5,
+    "prob": 0.61
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2,
+    "prob": 0.92
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.77
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 6,
+    "prob": 0.46
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": -0.35,
+   "december": 1.2
+  },
+  "events": [],
+  "trend": -0.41,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.38
+ },
+ {
+  "id": "b3-004",
+  "kind": "deli",
+  "name": "Latteria Rossi di Via Bel Vedere",
+  "story": "Slow steady shop, same list every week, rarely changes.",
+  "core": [
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 4,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.43
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 3,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 3,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2,
+    "prob": 0.95
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 6,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 3,
+    "prob": 0.95
+   }
+  ],
+  "cadence_days": 28,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.47,
+   "december": 1.49
+  },
+  "events": [
+   {
+    "date": "2024-10-24",
+    "mult": 2.2
+   },
+   {
+    "date": "2024-12-10",
+    "mult": 2.5
+   },
+   {
+    "date": "2025-12-12",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-07-10",
+    "mult": 1.7
+   }
+  ],
+  "trend": 0.55,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "VIN-ROS-009",
+   "from": "2025-07-16"
+  },
+  "extras_rate": 0.1
+ },
+ {
+  "id": "b3-005",
+  "kind": "deli",
+  "name": "Salumeria Costa Antica",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "prob": 0.65
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 8,
+    "prob": 0.71
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 2,
+    "prob": 0.47
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 3,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 3,
+    "prob": 0.81
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": -0.59,
+   "december": 1.27
+  },
+  "events": [
+   {
+    "date": "2025-03-18",
+    "mult": 2.5
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.4
+   }
+  ],
+  "trend": -0.4,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b3-006",
+  "kind": "deli",
+  "name": "Formaggi Ricci al Castello",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "SAL-PAN",
+    "qty": 1.5,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 2.5,
+    "prob": 0.66
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "prob": 0.41
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 4,
+    "prob": 0.69
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 3,
+    "prob": 0.56
+   },
+   {
+    "sku": "DIS-TOV-40",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 4,
+    "prob": 0.8
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.43
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.74,
+   "december": 1.15
+  },
+  "events": [
+   {
+    "date": "2025-04-18",
+    "mult": 1.8
+   },
+   {
+    "date": "2025-12-23",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 1.8
+   }
+  ],
+  "trend": 0.13,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.18
+ },
+ {
+  "id": "b3-007",
+  "kind": "grocery",
+  "name": "Salumeria Donati di Via Torre",
+  "story": "Panettone and gift-box peak each December, quiet in summer.",
+  "core": [
+   {
+    "sku": "POM-CON-800",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 3,
+    "prob": 0.45
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 8,
+    "prob": 0.83
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 6,
+    "prob": 0.93
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 5,
+    "prob": 0.39
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.51
+   }
+  ],
+  "cadence_days": 28,
+  "weekdays": [
+   1,
+   5
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": -0.01,
+   "december": 1.22
+  },
+  "events": [
+   {
+    "date": "2025-12-10",
+    "mult": 3.6
+   }
+  ],
+  "trend": -0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.23
+ },
+ {
+  "id": "b3-008",
+  "kind": "deli",
+  "name": "Latteria Gallo Gourmet",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 4,
+    "prob": 0.32
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1.5,
+    "prob": 0.79
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1.5,
+    "prob": 0.38
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 2,
+    "prob": 0.42
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 4,
+    "prob": 0.82
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.16,
+   "december": 1.02
+  },
+  "events": [
+   {
+    "date": "2025-04-14",
+    "mult": 2.3
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-11-15",
+    "mult": 3.0
+   }
+  ],
+  "trend": 0.42,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b3-009",
+  "kind": "deli",
+  "name": "Gastronomia Benedetti Antica",
+  "story": "Small deli in a tourist area, quieter in winter, busy in summer.",
+  "core": [
+   {
+    "sku": "SAL-SPE",
+    "qty": 6,
+    "prob": 0.83
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 0.5,
+    "prob": 0.37
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 4,
+    "prob": 0.64
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 1,
+    "prob": 0.91
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.22,
+   "december": 1.33
+  },
+  "events": [
+   {
+    "date": "2026-07-13",
+    "mult": 2.7
+   }
+  ],
+  "trend": -0.29,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b3-010",
+  "kind": "deli",
+  "name": "Formaggi Conti & Co.",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.49
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 0.5,
+    "prob": 0.52
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 4,
+    "prob": 0.87
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 2,
+    "prob": 0.32
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2.5,
+    "prob": 0.65
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   1
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": -0.24,
+   "december": 1.18
+  },
+  "events": [
+   {
+    "date": "2025-12-23",
+    "mult": 3.0
+   }
+  ],
+  "trend": 0.09,
+  "churn": {
+   "start": "2026-03-12"
+  },
+  "adopt": {
+   "sku": "SAL-SAL",
+   "from": "2025-07-31"
+  },
+  "drop": {
+   "sku": "SAL-PRC",
+   "from": "2025-07-31"
+  },
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b3-011",
+  "kind": "grocery",
+  "name": "Latteria Mancini di Via San Lorenzo",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.39
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 2,
+    "prob": 0.52
+   },
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 3,
+    "prob": 0.48
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 4,
+    "prob": 0.39
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 0.5,
+    "prob": 0.77
+   }
+  ],
+  "cadence_days": 28,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": -0.41,
+   "december": 1.26
+  },
+  "events": [
+   {
+    "date": "2025-12-11",
+    "mult": 3.9
+   }
+  ],
+  "trend": 0.54,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "BIR-BIA-33",
+   "from": "2025-07-25"
+  },
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b3-012",
+  "kind": "restaurant",
+  "name": "Delicatessen Ferraro al Vittoria",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 2,
+    "prob": 0.95
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3,
+    "prob": 0.6
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.63
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 1,
+    "prob": 0.37
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   1,
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.78,
+   "december": 1.09
+  },
+  "events": [
+   {
+    "date": "2024-12-17",
+    "mult": 2.9
+   },
+   {
+    "date": "2025-12-20",
+    "mult": 3.5
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 2.4
+   }
+  ],
+  "trend": 0.04,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.31
+ },
+ {
+  "id": "b3-013",
+  "kind": "deli",
+  "name": "Latteria Bruno di Via del Duomo",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 4,
+    "prob": 0.89
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 3,
+    "prob": 0.98
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.54
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 5,
+    "prob": 0.61
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 3,
+    "prob": 0.43
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4,
+    "prob": 0.83
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 0.5,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.49,
+   "december": 1.21
+  },
+  "events": [
+   {
+    "date": "2024-12-13",
+    "mult": 2.5
+   },
+   {
+    "date": "2025-03-29",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 2.0
+   }
+  ],
+  "trend": -0.28,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-ROT-001",
+   "from": "2025-02-23"
+  },
+  "drop": null,
+  "extras_rate": 0.14
+ },
+ {
+  "id": "b3-014",
+  "kind": "deli",
+  "name": "Salumeria Bruno di Via Colle",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "FOR-RIC",
+    "qty": 2.5,
+    "prob": 0.39
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.84
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1.5,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 4,
+    "prob": 0.61
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 0.5,
+    "prob": 0.5
+   },
+   {
+    "sku": "BEV-SUC-20",
+    "qty": 2,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 5,
+    "prob": 0.58
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   1,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": 0.91,
+   "december": 1.17
+  },
+  "events": [],
+  "trend": 0.42,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-COT",
+   "from": "2025-08-30"
+  },
+  "drop": {
+   "sku": "SAL-BRE",
+   "from": "2025-08-30"
+  },
+  "extras_rate": 0.11
+ },
+ {
+  "id": "b3-015",
+  "kind": "deli",
+  "name": "Latteria Testa e Figli",
+  "story": "Family-run cheese corner, buys fresh stock for the weekend rush.",
+  "core": [
+   {
+    "sku": "FOR-RIC",
+    "qty": 1.5,
+    "prob": 0.82
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.72
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1.5,
+    "prob": 0.75
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 5,
+    "prob": 0.67
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 4,
+    "prob": 0.75
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 4,
+    "prob": 0.4
+   },
+   {
+    "sku": "BEV-SUC-20",
+    "qty": 1,
+    "prob": 0.63
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   2,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.19,
+   "december": 1.37
+  },
+  "events": [
+   {
+    "date": "2024-12-01",
+    "mult": 2.3
+   },
+   {
+    "date": "2024-12-10",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-12-22",
+    "mult": 1.8
+   }
+  ],
+  "trend": -0.2,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.15
+ },
+ {
+  "id": "b3-016",
+  "kind": "deli",
+  "name": "Bottega Benedetti Antica",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 2,
+    "prob": 0.97
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 3,
+    "prob": 0.5
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.88
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2.5,
+    "prob": 0.54
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3,
+    "prob": 0.82
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 3,
+    "prob": 0.46
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 5,
+    "prob": 0.39
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": -0.52,
+   "december": 1.18
+  },
+  "events": [
+   {
+    "date": "2024-12-21",
+    "mult": 2.9
+   }
+  ],
+  "trend": 0.15,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.27
+ },
+ {
+  "id": "b3-017",
+  "kind": "deli",
+  "name": "Bottega Barbieri Antica",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 4,
+    "prob": 0.39
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 5,
+    "prob": 0.87
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.8
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "prob": 0.39
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 4,
+    "prob": 0.88
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 8,
+    "prob": 0.95
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 1,
+    "prob": 0.54
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   },
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 0.96,
+   "december": 1.03
+  },
+  "events": [
+   {
+    "date": "2024-12-07",
+    "mult": 2.9
+   },
+   {
+    "date": "2024-12-10",
+    "mult": 2.8
+   },
+   {
+    "date": "2024-12-15",
+    "mult": 2.4
+   },
+   {
+    "date": "2026-05-19",
+    "mult": 2.2
+   }
+  ],
+  "trend": 0.02,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b3-018",
+  "kind": "deli",
+  "name": "Salumeria Orlando e Figli",
+  "story": "Panettone and gift-box peak each December, quiet in summer.",
+  "core": [
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 1,
+    "prob": 0.98
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.33
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 0.5,
+    "prob": 0.92
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   1,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 1.4,
+   "december": 1.43
+  },
+  "events": [
+   {
+    "date": "2025-12-11",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-12-14",
+    "mult": 2.4
+   }
+  ],
+  "trend": -0.19,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-SAL",
+   "from": "2025-05-30"
+  },
+  "drop": {
+   "sku": "SAL-SPE",
+   "from": "2025-05-30"
+  },
+  "extras_rate": 0.48
+ },
+ {
+  "id": "b3-019",
+  "kind": "restaurant",
+  "name": "Formaggi Serra & Co.",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "SAL-GUA",
+    "qty": 0.5,
+    "prob": 0.57
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 4,
+    "prob": 0.59
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 5,
+    "prob": 0.61
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 3,
+    "prob": 0.54
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.56
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 1,
+    "prob": 0.4
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   3,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.6,
+   "december": 1.06
+  },
+  "events": [
+   {
+    "date": "2024-11-08",
+    "mult": 1.5
+   },
+   {
+    "date": "2024-12-12",
+    "mult": 1.9
+   },
+   {
+    "date": "2024-12-17",
+    "mult": 2.7
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.0
+   }
+  ],
+  "trend": 0.37,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.13
+ },
+ {
+  "id": "b3-020",
+  "kind": "deli",
+  "name": "Salumeria Testa & Co.",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 4,
+    "prob": 0.34
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 4,
+    "prob": 0.88
+   },
+   {
+    "sku": "DIS-BIC-200",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.73
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2.5,
+    "prob": 0.68
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 5,
+    "prob": 0.64
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   3,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.44,
+   "december": 1.19
+  },
+  "events": [
+   {
+    "date": "2024-12-18",
+    "mult": 3.7
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 1.9
+   }
+  ],
+  "trend": 0.07,
+  "churn": null,
+  "adopt": {
+   "sku": "PAS-PEN-500",
+   "from": "2025-09-05"
+  },
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b3-021",
+  "kind": "deli",
+  "name": "Alimentari Bruno & Co.",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "SAL-SPE",
+    "qty": 4,
+    "prob": 0.55
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "prob": 0.49
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 4,
+    "prob": 0.71
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 4,
+    "prob": 0.41
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   0,
+   1,
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.39,
+   "december": 1.21
+  },
+  "events": [],
+  "trend": 0.31,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.33
+ },
+ {
+  "id": "b3-022",
+  "kind": "deli",
+  "name": "Formaggi Moretti al del Duomo",
+  "story": "Slow steady shop, same list every week, rarely changes.",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.31
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 6,
+    "prob": 0.64
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 2.5,
+    "prob": 0.65
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2,
+    "prob": 0.38
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 6,
+    "prob": 0.85
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "prob": 0.7
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   2
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": -0.32,
+   "december": 1.22
+  },
+  "events": [
+   {
+    "date": "2025-04-18",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-12-23",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 1.6
+   }
+  ],
+  "trend": -0.17,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-PRC",
+   "from": "2025-07-14"
+  },
+  "drop": {
+   "sku": "SAL-SPE",
+   "from": "2025-07-14"
+  },
+  "extras_rate": 0.16
+ },
+ {
+  "id": "b3-023",
+  "kind": "deli",
+  "name": "Gastronomia Serra Gourmet",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "SAL-GUA",
+    "qty": 1.5,
+    "prob": 0.57
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 2.5,
+    "prob": 0.91
+   },
+   {
+    "sku": "DIS-TOV-33",
+    "qty": 3,
+    "prob": 0.47
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 3,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 5,
+    "prob": 0.78
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 6,
+    "prob": 0.38
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 1,
+    "prob": 0.42
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 2,
+    "prob": 0.96
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 3,
+    "prob": 0.69
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.0,
+   "december": 1.23
+  },
+  "events": [
+   {
+    "date": "2025-04-14",
+    "mult": 2.4
+   }
+  ],
+  "trend": 0.41,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-PAN",
+   "from": "2025-05-21"
+  },
+  "drop": {
+   "sku": "SAL-GUA",
+   "from": "2025-05-21"
+  },
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b3-024",
+  "kind": "deli",
+  "name": "Alimentari Marchetti Antica",
+  "story": "Small deli in a tourist area, quieter in winter, busy in summer.",
+  "core": [
+   {
+    "sku": "SAL-COT",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 2.5,
+    "prob": 0.99
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 4,
+    "prob": 0.82
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 0.5,
+    "prob": 0.56
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 1.29,
+   "december": 1.08
+  },
+  "events": [
+   {
+    "date": "2024-11-01",
+    "mult": 2.4
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 1.7
+   },
+   {
+    "date": "2025-11-18",
+    "mult": 1.7
+   }
+  ],
+  "trend": 0.53,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.45
+ },
+ {
+  "id": "b3-025",
+  "kind": "deli",
+  "name": "Delicatessen Mancini al Rialto",
+  "story": "Family-run cheese corner, buys fresh stock for the weekend rush.",
+  "core": [
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.83
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 6,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2,
+    "prob": 0.3
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.39
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.5,
+   "december": 1.07
+  },
+  "events": [],
+  "trend": -0.45,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-ROS-007",
+   "from": "2025-09-25"
+  },
+  "drop": null,
+  "extras_rate": 0.27
+ },
+ {
+  "id": "b3-026",
+  "kind": "deli",
+  "name": "Formaggi Lombardi Gourmet",
+  "story": "Family-run cheese corner, buys fresh stock for the weekend rush.",
+  "core": [
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 4,
+    "prob": 0.84
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.33
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 2,
+    "prob": 0.56
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 1,
+    "prob": 0.92
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 1.45,
+   "december": 0.11
+  },
+  "events": [
+   {
+    "date": "2024-12-20",
+    "mult": 2.6
+   },
+   {
+    "date": "2024-12-23",
+    "mult": 4.0
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-12-22",
+    "mult": 2.3
+   }
+  ],
+  "trend": 0.46,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.04
+ },
+ {
+  "id": "b3-027",
+  "kind": "deli",
+  "name": "Gastronomia Benedetti Gourmet",
+  "story": "Gastronomia with hot takeaway, steady demand, Easter bump for colombe.",
+  "core": [
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.94
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 2,
+    "prob": 0.91
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2,
+    "prob": 0.6
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 1.5,
+    "prob": 0.88
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2,
+    "prob": 0.64
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 2,
+    "prob": 0.99
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   0,
+   4,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": -0.6,
+   "december": 0.74
+  },
+  "events": [],
+  "trend": 0.25,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.18
+ },
+ {
+  "id": "b3-028",
+  "kind": "deli",
+  "name": "Salumeria Valente & Co.",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "FOR-RIC",
+    "qty": 5,
+    "prob": 0.66
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 3,
+    "prob": 0.55
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 6,
+    "prob": 0.72
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.73
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2,
+    "prob": 0.78
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 0.5,
+    "prob": 0.63
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 2.5,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 0.57,
+   "december": 0.68
+  },
+  "events": [
+   {
+    "date": "2025-04-18",
+    "mult": 2.1
+   }
+  ],
+  "trend": 0.11,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.23
+ },
+ {
+  "id": "b3-029",
+  "kind": "grocery",
+  "name": "Bottega Monti al Ponte Vecchio",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 6,
+    "prob": 0.79
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 4,
+    "prob": 0.44
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.54
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 2,
+    "prob": 0.82
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 0.5,
+    "prob": 0.72
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 0.5,
+    "prob": 0.49
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 5,
+    "prob": 0.33
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   1,
+   2,
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.19,
+   "december": 0.21
+  },
+  "events": [
+   {
+    "date": "2024-10-23",
+    "mult": 2.9
+   },
+   {
+    "date": "2024-12-12",
+    "mult": 2.7
+   },
+   {
+    "date": "2024-12-13",
+    "mult": 2.9
+   },
+   {
+    "date": "2025-12-21",
+    "mult": 3.7
+   }
+  ],
+  "trend": -0.2,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-PAN",
+   "from": "2025-08-15"
+  },
+  "drop": {
+   "sku": "SAL-SAL",
+   "from": "2025-08-15"
+  },
+  "extras_rate": 0.0
+ },
+ {
+  "id": "b3-030",
+  "kind": "restaurant",
+  "name": "Delicatessen Pellegrini di Via Corso Italia",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 5,
+    "prob": 0.3
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 6,
+    "prob": 0.66
+   },
+   {
+    "sku": "DIS-TOV-33",
+    "qty": 2,
+    "prob": 0.52
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 2,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 3,
+    "prob": 0.44
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   1,
+   3
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.77,
+   "december": 1.45
+  },
+  "events": [
+   {
+    "date": "2024-12-21",
+    "mult": 2.5
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-02-07",
+    "mult": 1.9
+   }
+  ],
+  "trend": 0.25,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-GUA",
+   "from": "2025-07-28"
+  },
+  "drop": {
+   "sku": "SAL-SAL",
+   "from": "2025-07-28"
+  },
+  "extras_rate": 0.41
+ },
+ {
+  "id": "b3-031",
+  "kind": "deli",
+  "name": "Alimentari Pellegrini al Rialto",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "FOR-ASI",
+    "qty": 8,
+    "prob": 0.5
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 2,
+    "prob": 0.7
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 3,
+    "prob": 0.55
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 5,
+    "prob": 0.84
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.79,
+   "december": 1.32
+  },
+  "events": [
+   {
+    "date": "2024-12-11",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.4
+   },
+   {
+    "date": "2026-03-23",
+    "mult": 2.1
+   }
+  ],
+  "trend": -0.09,
+  "churn": null,
+  "adopt": {
+   "sku": "DIS-BIC-200",
+   "from": "2025-08-03"
+  },
+  "drop": null,
+  "extras_rate": 0.44
+ },
+ {
+  "id": "b3-032",
+  "kind": "deli",
+  "name": "Bottega Donati di Via San Lorenzo",
+  "story": "Slow steady shop, same list every week, rarely changes.",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 2,
+    "prob": 0.65
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1.5,
+    "prob": 0.65
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1.5,
+    "prob": 0.47
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 1,
+    "prob": 0.64
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 8,
+    "prob": 0.39
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2,
+    "prob": 0.79
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 3,
+    "prob": 0.59
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.19,
+   "december": 1.13
+  },
+  "events": [
+   {
+    "date": "2025-12-11",
+    "mult": 2.4
+   },
+   {
+    "date": "2025-12-18",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 1.8
+   }
+  ],
+  "trend": 0.47,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-SAL",
+   "from": "2025-06-29"
+  },
+  "drop": {
+   "sku": "SAL-COT",
+   "from": "2025-06-29"
+  },
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b3-033",
+  "kind": "deli",
+  "name": "Delicatessen Lombardi e Figli",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2.5,
+    "prob": 0.56
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 4,
+    "prob": 0.67
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 4,
+    "prob": 0.53
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 6,
+    "prob": 0.84
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2,
+    "prob": 0.49
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": -0.25,
+   "december": 0.49
+  },
+  "events": [
+   {
+    "date": "2024-12-12",
+    "mult": 2.4
+   },
+   {
+    "date": "2025-07-18",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-02-14",
+    "mult": 2.8
+   }
+  ],
+  "trend": -0.03,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.43
+ },
+ {
+  "id": "b3-034",
+  "kind": "deli",
+  "name": "Salumeria Barbieri al Porta Nuova",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 4,
+    "prob": 0.66
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1.5,
+    "prob": 0.87
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 3,
+    "prob": 0.42
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 3,
+    "prob": 0.63
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 3,
+    "prob": 0.38
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 8,
+    "prob": 0.51
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 3,
+    "prob": 0.41
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 3,
+    "prob": 0.72
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   1,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 0.21,
+   "december": 1.11
+  },
+  "events": [
+   {
+    "date": "2024-12-22",
+    "mult": 3.9
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.0
+   },
+   {
+    "date": "2025-12-12",
+    "mult": 3.0
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 1.6
+   }
+  ],
+  "trend": -0.0,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.02
+ },
+ {
+  "id": "b3-035",
+  "kind": "restaurant",
+  "name": "Gastronomia Villa al del Duomo",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "FOR-ASI",
+    "qty": 5,
+    "prob": 0.69
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1.5,
+    "prob": 0.95
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1,
+    "prob": 0.73
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2.5,
+    "prob": 0.91
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 4,
+    "prob": 0.56
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 4,
+    "prob": 0.7
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.12,
+   "december": 0.84
+  },
+  "events": [
+   {
+    "date": "2025-12-18",
+    "mult": 2.6
+   }
+  ],
+  "trend": 0.46,
+  "churn": {
+   "start": "2026-06-26"
+  },
+  "adopt": {
+   "sku": "SAL-BRE",
+   "from": "2025-08-16"
+  },
+  "drop": {
+   "sku": "SAL-SAL",
+   "from": "2025-08-16"
+  },
+  "extras_rate": 0.24
+ },
+ {
+  "id": "b3-036",
+  "kind": "grocery",
+  "name": "Delicatessen Villa di Via del Duomo",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2.5,
+    "prob": 0.39
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3,
+    "prob": 0.48
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 4,
+    "prob": 0.32
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 4,
+    "prob": 0.51
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.96
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": -0.57,
+   "december": 1.36
+  },
+  "events": [
+   {
+    "date": "2025-12-18",
+    "mult": 2.5
+   }
+  ],
+  "trend": 0.25,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "POM-PAS-700",
+   "from": "2025-09-02"
+  },
+  "extras_rate": 0.19
+ },
+ {
+  "id": "b3-037",
+  "kind": "grocery",
+  "name": "Delicatessen Sartori Antica",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "SAL-BRE",
+    "qty": 2,
+    "prob": 0.37
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 4,
+    "prob": 0.65
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 3,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 6,
+    "prob": 0.73
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 1,
+    "prob": 0.85
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.28,
+   "december": 0.52
+  },
+  "events": [
+   {
+    "date": "2024-12-20",
+    "mult": 2.4
+   },
+   {
+    "date": "2024-12-24",
+    "mult": 2.7
+   }
+  ],
+  "trend": 0.54,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-ROS-005",
+   "from": "2025-03-15"
+  },
+  "drop": null,
+  "extras_rate": 0.31
+ },
+ {
+  "id": "b3-038",
+  "kind": "restaurant",
+  "name": "Alimentari Fontana e Figli",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "DIS-TOV-40",
+    "qty": 4,
+    "prob": 0.56
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.82
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 2,
+    "prob": 0.8
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3,
+    "prob": 0.75
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 8,
+    "prob": 0.63
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 0.5,
+    "prob": 0.5
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.17,
+   "december": 0.59
+  },
+  "events": [
+   {
+    "date": "2024-10-26",
+    "mult": 2.0
+   },
+   {
+    "date": "2025-09-23",
+    "mult": 2.1
+   }
+  ],
+  "trend": 0.42,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-GUA",
+   "from": "2025-06-27"
+  },
+  "drop": {
+   "sku": "SAL-SAL",
+   "from": "2025-06-27"
+  },
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b3-039",
+  "kind": "deli",
+  "name": "Delicatessen Testa Gourmet",
+  "story": "Slow steady shop, same list every week, rarely changes.",
+  "core": [
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 4,
+    "prob": 0.72
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.88
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 0.5,
+    "prob": 0.34
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 2,
+    "prob": 0.55
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 3,
+    "prob": 0.31
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 4,
+    "prob": 0.61
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 3,
+    "prob": 0.75
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 5,
+    "prob": 0.37
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   1,
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": -0.14,
+   "december": 0.1
+  },
+  "events": [],
+  "trend": 0.49,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-PRC",
+   "from": "2025-05-07"
+  },
+  "drop": {
+   "sku": "SAL-PAN",
+   "from": "2025-05-07"
+  },
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b3-040",
+  "kind": "deli",
+  "name": "Latteria Donati e Figli",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 1,
+    "prob": 0.88
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.51
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 1,
+    "prob": 0.4
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 8,
+    "prob": 0.35
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 2,
+    "prob": 0.82
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.57,
+   "december": 0.45
+  },
+  "events": [
+   {
+    "date": "2024-12-14",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.2
+   }
+  ],
+  "trend": 0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.0
+ },
+ {
+  "id": "b3-041",
+  "kind": "grocery",
+  "name": "Delicatessen Benedetti & Co.",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 4,
+    "prob": 0.47
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 1.5,
+    "prob": 0.41
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.8
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 3,
+    "prob": 0.9
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   0
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.55,
+   "december": 1.14
+  },
+  "events": [
+   {
+    "date": "2025-12-11",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-12-15",
+    "mult": 3.6
+   }
+  ],
+  "trend": 0.02,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.24
+ },
+ {
+  "id": "b3-042",
+  "kind": "deli",
+  "name": "Delicatessen Caruso Antica",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 4,
+    "prob": 0.34
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 0.5,
+    "prob": 0.66
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 0.5,
+    "prob": 0.95
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 2,
+    "prob": 0.72
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 2,
+    "prob": 0.96
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": -0.33,
+   "december": 1.12
+  },
+  "events": [],
+  "trend": 0.33,
+  "churn": null,
+  "adopt": {
+   "sku": "DIS-SGR-750",
+   "from": "2025-08-21"
+  },
+  "drop": null,
+  "extras_rate": 0.14
+ },
+ {
+  "id": "b3-043",
+  "kind": "grocery",
+  "name": "Salumeria Bruno e Figli",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 8,
+    "prob": 0.34
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 6,
+    "prob": 0.88
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.82
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1,
+   3,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.07,
+   "december": 0.19
+  },
+  "events": [],
+  "trend": -0.24,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-PRO-002",
+   "from": "2025-07-05"
+  },
+  "drop": null,
+  "extras_rate": 0.04
+ },
+ {
+  "id": "b3-044",
+  "kind": "grocery",
+  "name": "Salumeria Valente Antica",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 5,
+    "prob": 0.58
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 8,
+    "prob": 0.61
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 5,
+    "prob": 0.5
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 1.5,
+    "prob": 0.79
+   },
+   {
+    "sku": "DIS-BIC-200",
+    "qty": 4,
+    "prob": 0.78
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.36,
+   "december": 1.01
+  },
+  "events": [
+   {
+    "date": "2025-04-14",
+    "mult": 2.4
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 2.4
+   },
+   {
+    "date": "2025-12-21",
+    "mult": 3.9
+   },
+   {
+    "date": "2026-09-06",
+    "mult": 2.0
+   }
+  ],
+  "trend": 0.05,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b3-045",
+  "kind": "deli",
+  "name": "Salumeria Conti al Rialto",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 1,
+    "prob": 0.56
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 3,
+    "prob": 0.64
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 8,
+    "prob": 0.38
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 6,
+    "prob": 0.48
+   }
+  ],
+  "cadence_days": 21,
+  "weekdays": [
+   4,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.01,
+   "december": 0.85
+  },
+  "events": [
+   {
+    "date": "2025-12-11",
+    "mult": 4.0
+   }
+  ],
+  "trend": 0.35,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b3-046",
+  "kind": "deli",
+  "name": "Salumeria Monti di Via Torre",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "SAL-SAL",
+    "qty": 2.5,
+    "prob": 0.78
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.63
+   },
+   {
+    "sku": "BEV-SUC-20",
+    "qty": 3,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 0.5,
+    "prob": 0.94
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.49,
+   "december": 1.36
+  },
+  "events": [
+   {
+    "date": "2024-12-17",
+    "mult": 3.2
+   },
+   {
+    "date": "2024-12-19",
+    "mult": 2.8
+   },
+   {
+    "date": "2026-03-05",
+    "mult": 2.7
+   }
+  ],
+  "trend": 0.26,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.09
+ },
+ {
+  "id": "b3-047",
+  "kind": "deli",
+  "name": "Gastronomia Barbieri al Bel Vedere",
+  "story": "Gastronomia with hot takeaway, steady demand, Easter bump for colombe.",
+  "core": [
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 5,
+    "prob": 0.96
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 1,
+    "prob": 0.74
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 8,
+    "prob": 0.96
+   }
+  ],
+  "cadence_days": 28,
+  "weekdays": [
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.73,
+   "december": 0.83
+  },
+  "events": [
+   {
+    "date": "2025-02-04",
+    "mult": 2.7
+   },
+   {
+    "date": "2025-02-23",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 1.9
+   },
+   {
+    "date": "2025-12-14",
+    "mult": 3.5
+   }
+  ],
+  "trend": 0.04,
+  "churn": {
+   "start": "2025-08-15"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.5
+ },
+ {
+  "id": "b3-048",
+  "kind": "deli",
+  "name": "Delicatessen Costa Gourmet",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "BEV-GAZ-1L",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4,
+    "prob": 0.43
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 6,
+    "prob": 0.36
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 4,
+    "prob": 0.95
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 5,
+    "prob": 0.79
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   0,
+   3,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.49,
+   "december": 1.16
+  },
+  "events": [
+   {
+    "date": "2024-12-14",
+    "mult": 3.3
+   },
+   {
+    "date": "2025-12-22",
+    "mult": 2.0
+   }
+  ],
+  "trend": 0.08,
+  "churn": null,
+  "adopt": {
+   "sku": "DIS-DET-5L",
+   "from": "2025-08-04"
+  },
+  "drop": null,
+  "extras_rate": 0.03
+ },
+ {
+  "id": "b3-049",
+  "kind": "grocery",
+  "name": "Salumeria Rinaldi Antica",
+  "story": "Panettone and gift-box peak each December, quiet in summer.",
+  "core": [
+   {
+    "sku": "FOR-ASI",
+    "qty": 2,
+    "prob": 0.68
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 1,
+    "prob": 0.48
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 3,
+    "prob": 0.71
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4,
+    "prob": 0.88
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1,
+    "prob": 0.72
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   1,
+   2
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": 0.79,
+   "december": 1.02
+  },
+  "events": [
+   {
+    "date": "2025-12-18",
+    "mult": 2.2
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 1.8
+   }
+  ],
+  "trend": 0.02,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.45
+ },
+ {
+  "id": "b3-050",
+  "kind": "bar",
+  "name": "Delicatessen Greco al Santa Croce",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 4,
+    "prob": 0.57
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 0.5,
+    "prob": 0.79
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 4,
+    "prob": 0.45
+   },
+   {
+    "sku": "DIS-TOV-40",
+    "qty": 4,
+    "prob": 0.96
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 3,
+    "prob": 0.95
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 4,
+    "prob": 0.58
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 5,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 8,
+    "prob": 0.6
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.32,
+   "december": 0.03
+  },
+  "events": [
+   {
+    "date": "2024-12-14",
+    "mult": 3.9
+   },
+   {
+    "date": "2024-12-21",
+    "mult": 3.3
+   },
+   {
+    "date": "2025-06-09",
+    "mult": 2.1
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 2.1
+   }
+  ],
+  "trend": -0.07,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.38
+ },
+ {
+  "id": "b3-051",
+  "kind": "deli",
+  "name": "Alimentari Caruso al del Duomo",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 3,
+    "prob": 0.32
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4,
+    "prob": 0.53
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 3,
+    "prob": 0.67
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1,
+    "prob": 0.61
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.91,
+   "december": 0.3
+  },
+  "events": [],
+  "trend": 0.36,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b3-052",
+  "kind": "deli",
+  "name": "Latteria Ferraro e Figli",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1,
+    "prob": 0.51
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 8,
+    "prob": 0.45
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 2,
+    "prob": 0.79
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 4,
+    "prob": 0.9
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   2,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": -0.3,
+   "december": 0.91
+  },
+  "events": [],
+  "trend": 0.48,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.39
+ },
+ {
+  "id": "b3-053",
+  "kind": "deli",
+  "name": "Formaggi Valente & Co.",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "SAL-COT",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 0.5,
+    "prob": 0.87
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 0.5,
+    "prob": 0.75
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 3,
+    "prob": 0.78
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   0,
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": 0.58,
+   "december": 0.57
+  },
+  "events": [
+   {
+    "date": "2025-08-05",
+    "mult": 1.9
+   },
+   {
+    "date": "2025-12-10",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 1.6
+   }
+  ],
+  "trend": -0.4,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.45
+ },
+ {
+  "id": "b3-054",
+  "kind": "deli",
+  "name": "Formaggi Costa & Co.",
+  "story": "Family-run cheese corner, buys fresh stock for the weekend rush.",
+  "core": [
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 4,
+    "prob": 0.87
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1.5,
+    "prob": 0.38
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 2,
+    "prob": 0.39
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   1,
+   2
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.42,
+   "december": 0.79
+  },
+  "events": [
+   {
+    "date": "2024-12-20",
+    "mult": 2.3
+   },
+   {
+    "date": "2025-12-11",
+    "mult": 2.8
+   }
+  ],
+  "trend": -0.17,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.1
+ },
+ {
+  "id": "b3-055",
+  "kind": "deli",
+  "name": "Latteria Ferraro & Co.",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3,
+    "prob": 0.71
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 1,
+    "prob": 0.7
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 3,
+    "prob": 0.46
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 0.5,
+    "prob": 0.37
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 4,
+    "prob": 0.81
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 3,
+    "prob": 0.74
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 3,
+    "prob": 0.32
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   1,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": 0.96,
+   "december": 0.68
+  },
+  "events": [
+   {
+    "date": "2025-12-11",
+    "mult": 2.7
+   },
+   {
+    "date": "2025-12-13",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-12-20",
+    "mult": 2.0
+   }
+  ],
+  "trend": -0.15,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-COT",
+   "from": "2025-06-10"
+  },
+  "drop": {
+   "sku": "SAL-PRC",
+   "from": "2025-06-10"
+  },
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b3-056",
+  "kind": "deli",
+  "name": "Gastronomia Villa Gourmet",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "FOR-ASI",
+    "qty": 4,
+    "prob": 0.7
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 4,
+    "prob": 0.92
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1.5,
+    "prob": 0.76
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 2,
+    "prob": 0.52
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": -0.45,
+   "december": 0.88
+  },
+  "events": [
+   {
+    "date": "2024-12-10",
+    "mult": 3.5
+   }
+  ],
+  "trend": -0.25,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b3-057",
+  "kind": "deli",
+  "name": "Latteria Longo e Figli",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "SAL-SPE",
+    "qty": 2,
+    "prob": 0.66
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 0.5,
+    "prob": 0.51
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 3,
+    "prob": 0.74
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 3,
+    "prob": 0.54
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 5,
+    "prob": 0.33
+   },
+   {
+    "sku": "CAF-ORZ-500",
+    "qty": 2,
+    "prob": 0.38
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3,
+    "prob": 0.64
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 0.24,
+   "december": 0.96
+  },
+  "events": [],
+  "trend": 0.42,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b3-058",
+  "kind": "deli",
+  "name": "Formaggi Greco & Co.",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 3,
+    "prob": 0.45
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 3,
+    "prob": 0.47
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 4,
+    "prob": 0.31
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 3,
+    "prob": 0.84
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 5,
+    "prob": 0.5
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 3,
+    "prob": 0.58
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.85
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   1,
+   2,
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.23,
+   "december": 0.5
+  },
+  "events": [
+   {
+    "date": "2024-12-21",
+    "mult": 2.9
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.2
+   }
+  ],
+  "trend": 0.28,
+  "churn": null,
+  "adopt": {
+   "sku": "PAS-RIS-1K",
+   "from": "2025-05-05"
+  },
+  "drop": null,
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b3-059",
+  "kind": "deli",
+  "name": "Salumeria Caruso Antica",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2,
+    "prob": 0.87
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 1.5,
+    "prob": 0.36
+   },
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 1,
+    "prob": 0.62
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.37
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 8,
+    "prob": 0.62
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.74
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 1.5,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 3,
+    "prob": 0.66
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 1.14,
+   "december": 0.8
+  },
+  "events": [
+   {
+    "date": "2024-12-11",
+    "mult": 3.6
+   },
+   {
+    "date": "2024-12-20",
+    "mult": 2.2
+   },
+   {
+    "date": "2025-12-10",
+    "mult": 3.9
+   },
+   {
+    "date": "2025-12-20",
+    "mult": 3.2
+   }
+  ],
+  "trend": -0.2,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "OLI-EVO-5L",
+   "from": "2025-12-02"
+  },
+  "extras_rate": 0.06
+ },
+ {
+  "id": "b3-060",
+  "kind": "deli",
+  "name": "Formaggi Rinaldi Gourmet",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 1.5,
+    "prob": 0.32
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 2,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 5,
+    "prob": 0.44
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2.5,
+    "prob": 0.62
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 4,
+    "prob": 0.37
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2.5,
+    "prob": 0.69
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 3,
+    "prob": 0.43
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": 0.98,
+   "december": 0.72
+  },
+  "events": [
+   {
+    "date": "2024-11-26",
+    "mult": 2.6
+   },
+   {
+    "date": "2024-12-22",
+    "mult": 2.2
+   },
+   {
+    "date": "2025-12-14",
+    "mult": 2.2
+   }
+  ],
+  "trend": -0.06,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b3-061",
+  "kind": "deli",
+  "name": "Alimentari Ferrari di Via Pineta",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "POM-CON-800",
+    "qty": 4,
+    "prob": 0.86
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 0.5,
+    "prob": 0.78
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 3,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 3,
+    "prob": 0.49
+   },
+   {
+    "sku": "BEV-SUC-AC",
+    "qty": 2,
+    "prob": 0.61
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1,
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.4,
+   "december": 0.26
+  },
+  "events": [],
+  "trend": -0.01,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.23
+ },
+ {
+  "id": "b3-062",
+  "kind": "restaurant",
+  "name": "Latteria Caruso & Co.",
+  "story": "Gastronomia with hot takeaway, steady demand, Easter bump for colombe.",
+  "core": [
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.44
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 4,
+    "prob": 0.85
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 2.5,
+    "prob": 0.98
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "prob": 0.33
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   3
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": 1.33,
+   "december": 0.42
+  },
+  "events": [
+   {
+    "date": "2026-05-23",
+    "mult": 2.0
+   }
+  ],
+  "trend": -0.24,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.05
+ },
+ {
+  "id": "b3-063",
+  "kind": "deli",
+  "name": "Latteria Amato Gourmet",
+  "story": "Family-run cheese corner, buys fresh stock for the weekend rush.",
+  "core": [
+   {
+    "sku": "FOR-TAL",
+    "qty": 2.5,
+    "prob": 0.85
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 2,
+    "prob": 0.75
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 6,
+    "prob": 0.55
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 4,
+    "prob": 0.91
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1.5,
+    "prob": 0.35
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": -0.04,
+   "december": 1.02
+  },
+  "events": [
+   {
+    "date": "2025-04-18",
+    "mult": 1.8
+   },
+   {
+    "date": "2025-12-15",
+    "mult": 3.6
+   },
+   {
+    "date": "2026-09-19",
+    "mult": 2.3
+   }
+  ],
+  "trend": 0.04,
+  "churn": null,
+  "adopt": {
+   "sku": "DIS-ALU-150",
+   "from": "2025-09-14"
+  },
+  "drop": {
+   "sku": "FOR-GOR-DOL",
+   "from": "2026-01-12"
+  },
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b3-064",
+  "kind": "deli",
+  "name": "Gastronomia Testa di Via Corso Italia",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 8,
+    "prob": 0.63
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 4,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 6,
+    "prob": 0.98
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1,
+    "prob": 0.79
+   },
+   {
+    "sku": "VIN-BIA-004",
+    "qty": 2,
+    "prob": 0.83
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "prob": 0.7
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.85
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   2,
+   5
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": -0.24,
+   "december": 0.48
+  },
+  "events": [],
+  "trend": 0.14,
+  "churn": {
+   "start": "2026-05-31"
+  },
+  "adopt": {
+   "sku": "FOR-PEC",
+   "from": "2025-04-19"
+  },
+  "drop": null,
+  "extras_rate": 0.29
+ },
+ {
+  "id": "b3-065",
+  "kind": "deli",
+  "name": "Alimentari Villa di Via Via Roma",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "FOR-RIC",
+    "qty": 1.5,
+    "prob": 0.38
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 3,
+    "prob": 0.86
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 0.5,
+    "prob": 0.76
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1.5,
+    "prob": 0.32
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.44
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.43,
+   "december": 0.93
+  },
+  "events": [
+   {
+    "date": "2025-07-23",
+    "mult": 2.4
+   },
+   {
+    "date": "2025-12-22",
+    "mult": 3.3
+   },
+   {
+    "date": "2026-01-04",
+    "mult": 2.5
+   },
+   {
+    "date": "2026-07-31",
+    "mult": 2.5
+   }
+  ],
+  "trend": -0.08,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b3-066",
+  "kind": "deli",
+  "name": "Latteria Barbieri Antica",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 4,
+    "prob": 0.52
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1,
+    "prob": 0.59
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 1,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.82
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   },
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 0.27,
+   "december": 0.0
+  },
+  "events": [],
+  "trend": -0.35,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-PAN",
+   "from": "2025-06-04"
+  },
+  "drop": {
+   "sku": "SAL-BRE",
+   "from": "2025-06-04"
+  },
+  "extras_rate": 0.08
+ },
+ {
+  "id": "b3-067",
+  "kind": "deli",
+  "name": "Bottega Donati di Via Torre",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "SAL-GUA",
+    "qty": 2.5,
+    "prob": 0.77
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2,
+    "prob": 0.59
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 4,
+    "prob": 0.62
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 0.5,
+    "prob": 0.76
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 2,
+    "prob": 0.62
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.3,
+   "december": 1.15
+  },
+  "events": [
+   {
+    "date": "2025-02-01",
+    "mult": 1.7
+   },
+   {
+    "date": "2025-12-11",
+    "mult": 3.2
+   },
+   {
+    "date": "2025-12-16",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 2.0
+   }
+  ],
+  "trend": 0.04,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-PRC",
+   "from": "2025-07-09"
+  },
+  "drop": {
+   "sku": "SAL-BRE",
+   "from": "2025-07-09"
+  },
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b3-068",
+  "kind": "deli",
+  "name": "Salumeria Marchetti di Via Campo",
+  "story": "Small deli in a tourist area, quieter in winter, busy in summer.",
+  "core": [
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 4,
+    "prob": 0.43
+   },
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 1,
+    "prob": 0.82
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1.5,
+    "prob": 0.66
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 1,
+    "prob": 0.61
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 4,
+    "prob": 0.77
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1,
+    "prob": 0.45
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.98,
+   "december": 1.14
+  },
+  "events": [],
+  "trend": 0.11,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b3-069",
+  "kind": "deli",
+  "name": "Delicatessen Longo di Via Campo",
+  "story": "Small deli in a tourist area, quieter in winter, busy in summer.",
+  "core": [
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 0.5,
+    "prob": 0.48
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 8,
+    "prob": 0.72
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 4,
+    "prob": 0.68
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 1.5,
+    "prob": 0.76
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 4,
+    "prob": 0.83
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 2.5,
+    "prob": 0.93
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2,
+    "prob": 0.41
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 4,
+    "prob": 0.69
+   }
+  ],
+  "cadence_days": 21,
+  "weekdays": [
+   2,
+   3
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.31,
+   "december": 0.67
+  },
+  "events": [
+   {
+    "date": "2025-07-27",
+    "mult": 2.7
+   },
+   {
+    "date": "2026-03-27",
+    "mult": 2.5
+   }
+  ],
+  "trend": 0.39,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-BRE",
+   "from": "2025-08-19"
+  },
+  "drop": {
+   "sku": "SAL-GUA",
+   "from": "2025-08-19"
+  },
+  "extras_rate": 0.19
+ },
+ {
+  "id": "b3-070",
+  "kind": "deli",
+  "name": "Formaggi Monti & Co.",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "SAL-MOR",
+    "qty": 3,
+    "prob": 0.95
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 3,
+    "prob": 0.3
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2,
+    "prob": 0.73
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 1.5,
+    "prob": 0.78
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": 0.28,
+   "december": 0.82
+  },
+  "events": [],
+  "trend": 0.07,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-BIA-004",
+   "from": "2026-06-25"
+  },
+  "drop": null,
+  "extras_rate": 0.5
+ },
+ {
+  "id": "b3-071",
+  "kind": "deli",
+  "name": "Bottega Monti Gourmet",
+  "story": "Panettone and gift-box peak each December, quiet in summer.",
+  "core": [
+   {
+    "sku": "POM-PAS-700",
+    "qty": 3,
+    "prob": 0.57
+   },
+   {
+    "sku": "DIS-BIC-200",
+    "qty": 1,
+    "prob": 0.43
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 3,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 5,
+    "prob": 0.9
+   },
+   {
+    "sku": "DIS-SGR-750",
+    "qty": 2,
+    "prob": 0.72
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.93
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 8,
+    "prob": 0.79
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 1.06,
+   "december": 0.01
+  },
+  "events": [
+   {
+    "date": "2024-12-11",
+    "mult": 3.4
+   },
+   {
+    "date": "2024-12-16",
+    "mult": 1.8
+   }
+  ],
+  "trend": 0.23,
+  "churn": {
+   "start": "2026-05-12"
+  },
+  "adopt": {
+   "sku": "DIS-TOV-40",
+   "from": "2026-06-13"
+  },
+  "drop": null,
+  "extras_rate": 0.29
+ },
+ {
+  "id": "b3-072",
+  "kind": "restaurant",
+  "name": "Gastronomia Bianchi e Figli",
+  "story": "Slow steady shop, same list every week, rarely changes.",
+  "core": [
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 0.5,
+    "prob": 0.42
+   },
+   {
+    "sku": "BEV-TON-20",
+    "qty": 4,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 2,
+    "prob": 0.78
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 3,
+    "prob": 0.49
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 4,
+    "prob": 0.6
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   0,
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.91,
+   "december": 0.7
+  },
+  "events": [],
+  "trend": -0.09,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.2
+ },
+ {
+  "id": "b3-073",
+  "kind": "deli",
+  "name": "Delicatessen Ferrari di Via Porta Nuova",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 4,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 5,
+    "prob": 0.71
+   },
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 3,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 6,
+    "prob": 0.32
+   },
+   {
+    "sku": "VIN-PRO-002",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 3,
+    "prob": 0.67
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 1.03,
+   "december": 1.12
+  },
+  "events": [
+   {
+    "date": "2025-12-08",
+    "mult": 2.4
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 2.1
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 2.2
+   }
+  ],
+  "trend": -0.16,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.05
+ },
+ {
+  "id": "b3-074",
+  "kind": "deli",
+  "name": "Delicatessen Villa Antica",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 5,
+    "prob": 0.39
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 0.5,
+    "prob": 0.62
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 3,
+    "prob": 0.93
+   },
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 1,
+    "prob": 0.53
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   4
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.44,
+   "december": 0.23
+  },
+  "events": [
+   {
+    "date": "2024-12-11",
+    "mult": 2.2
+   },
+   {
+    "date": "2024-12-14",
+    "mult": 3.1
+   },
+   {
+    "date": "2025-08-04",
+    "mult": 2.7
+   }
+  ],
+  "trend": -0.48,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b3-075",
+  "kind": "grocery",
+  "name": "Latteria Greco di Via Bel Vedere",
+  "story": "Small deli in a tourist area, quieter in winter, busy in summer.",
+  "core": [
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 1.5,
+    "prob": 0.63
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 1,
+    "prob": 0.44
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "PAS-RIS-1K",
+    "qty": 3,
+    "prob": 0.71
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.43
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 1,
+    "prob": 0.9
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 3,
+    "prob": 0.68
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.94,
+   "december": 1.3
+  },
+  "events": [
+   {
+    "date": "2024-12-18",
+    "mult": 2.6
+   },
+   {
+    "date": "2024-12-21",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.1
+   }
+  ],
+  "trend": 0.57,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.49
+ },
+ {
+  "id": "b3-076",
+  "kind": "deli",
+  "name": "Latteria Sartori Gourmet",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 4,
+    "prob": 0.67
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 3,
+    "prob": 0.8
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1.5,
+    "prob": 0.54
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 0.5,
+    "prob": 0.52
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 3,
+    "prob": 0.6
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 1,
+    "prob": 0.83
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 3,
+    "prob": 0.9
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 3,
+    "prob": 0.58
+   }
+  ],
+  "cadence_days": 21,
+  "weekdays": [
+   0,
+   5
+  ],
+  "closed": [
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 0.37,
+   "december": 0.1
+  },
+  "events": [],
+  "trend": 0.32,
+  "churn": {
+   "start": "2026-04-01"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.17
+ },
+ {
+  "id": "b3-077",
+  "kind": "deli",
+  "name": "Bottega Sartori e Figli",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 8,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 6,
+    "prob": 0.62
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "prob": 0.49
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2.5,
+    "prob": 0.32
+   },
+   {
+    "sku": "DIS-TOV-33",
+    "qty": 1,
+    "prob": 0.5
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 8,
+    "prob": 0.77
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": -0.29,
+   "december": 0.57
+  },
+  "events": [
+   {
+    "date": "2024-12-10",
+    "mult": 3.6
+   },
+   {
+    "date": "2024-12-21",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-12-22",
+    "mult": 3.4
+   },
+   {
+    "date": "2026-02-12",
+    "mult": 2.1
+   }
+  ],
+  "trend": 0.38,
+  "churn": null,
+  "adopt": null,
+  "drop": {
+   "sku": "FOR-MOZ-FIO",
+   "from": "2025-04-01"
+  },
+  "extras_rate": 0.44
+ },
+ {
+  "id": "b3-078",
+  "kind": "bar",
+  "name": "Alimentari Marchetti & Co.",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 6,
+    "prob": 0.54
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2,
+    "prob": 0.86
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 3,
+    "prob": 0.32
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 1,
+    "prob": 0.67
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 3,
+    "prob": 0.62
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 8,
+    "prob": 0.93
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   0
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.81,
+   "december": 0.75
+  },
+  "events": [
+   {
+    "date": "2024-12-21",
+    "mult": 2.6
+   },
+   {
+    "date": "2025-04-19",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-10-20",
+    "mult": 2.9
+   }
+  ],
+  "trend": 0.18,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.0
+ },
+ {
+  "id": "b3-079",
+  "kind": "deli",
+  "name": "Alimentari Monti Gourmet",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2.5,
+    "prob": 0.76
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2.5,
+    "prob": 0.5
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 8,
+    "prob": 0.43
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 2,
+    "prob": 0.62
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 8,
+    "prob": 0.55
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 3,
+    "prob": 0.55
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.48,
+   "december": 1.07
+  },
+  "events": [
+   {
+    "date": "2024-12-12",
+    "mult": 3.3
+   },
+   {
+    "date": "2024-12-16",
+    "mult": 1.8
+   },
+   {
+    "date": "2024-12-21",
+    "mult": 2.8
+   },
+   {
+    "date": "2025-12-21",
+    "mult": 3.8
+   }
+  ],
+  "trend": -0.47,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.36
+ },
+ {
+  "id": "b3-080",
+  "kind": "grocery",
+  "name": "Latteria Rossi Antica",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 2,
+    "prob": 0.66
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1.5,
+    "prob": 0.73
+   },
+   {
+    "sku": "ACQ-FRIZ-50",
+    "qty": 4,
+    "prob": 0.79
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 2,
+    "prob": 0.9
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 4,
+    "prob": 0.78
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3,
+    "prob": 0.45
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.46,
+   "december": 0.28
+  },
+  "events": [
+   {
+    "date": "2025-12-22",
+    "mult": 2.0
+   }
+  ],
+  "trend": 0.48,
+  "churn": {
+   "start": "2026-02-03"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.24
+ },
+ {
+  "id": "b3-081",
+  "kind": "grocery",
+  "name": "Gastronomia Barbieri & Co.",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 2,
+    "prob": 0.45
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 1,
+    "prob": 0.54
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 3,
+    "prob": 0.82
+   },
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 1,
+    "prob": 0.68
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 3,
+    "prob": 0.58
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 6,
+    "prob": 0.61
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 1,
+    "prob": 0.88
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   0
+  ],
+  "closed": [],
+  "season": {
+   "summer": 1.12,
+   "december": 0.87
+  },
+  "events": [
+   {
+    "date": "2025-04-18",
+    "mult": 1.8
+   },
+   {
+    "date": "2025-12-12",
+    "mult": 3.7
+   },
+   {
+    "date": "2025-12-20",
+    "mult": 3.3
+   }
+  ],
+  "trend": -0.15,
+  "churn": null,
+  "adopt": {
+   "sku": "DOL-CRO-SUR",
+   "from": "2025-12-27"
+  },
+  "drop": null,
+  "extras_rate": 0.36
+ },
+ {
+  "id": "b3-082",
+  "kind": "deli",
+  "name": "Salumeria Orlando & Co.",
+  "story": "Small deli in a tourist area, quieter in winter, busy in summer.",
+  "core": [
+   {
+    "sku": "SAL-MOR",
+    "qty": 1,
+    "prob": 0.71
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 1,
+    "prob": 0.72
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.45
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 4,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 1,
+    "prob": 0.42
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 6,
+    "prob": 0.32
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   1,
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   },
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 0.61,
+   "december": 1.33
+  },
+  "events": [
+   {
+    "date": "2024-12-18",
+    "mult": 3.5
+   },
+   {
+    "date": "2024-12-21",
+    "mult": 2.2
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 2.5
+   },
+   {
+    "date": "2025-12-15",
+    "mult": 3.6
+   }
+  ],
+  "trend": 0.57,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-SPE",
+   "from": "2025-08-09"
+  },
+  "drop": {
+   "sku": "SAL-MOR",
+   "from": "2025-08-09"
+  },
+  "extras_rate": 0.22
+ },
+ {
+  "id": "b3-083",
+  "kind": "grocery",
+  "name": "Latteria Donati Gourmet",
+  "story": "Panettone and gift-box peak each December, quiet in summer.",
+  "core": [
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "prob": 0.98
+   },
+   {
+    "sku": "VIN-ROT-001",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 1,
+    "prob": 0.6
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.55
+   }
+  ],
+  "cadence_days": 21,
+  "weekdays": [
+   0,
+   5
+  ],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.19,
+   "december": 0.72
+  },
+  "events": [
+   {
+    "date": "2025-04-14",
+    "mult": 2.4
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 1.6
+   },
+   {
+    "date": "2025-12-14",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-12-20",
+    "mult": 2.7
+   }
+  ],
+  "trend": -0.27,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.46
+ },
+ {
+  "id": "b3-084",
+  "kind": "deli",
+  "name": "Latteria Longo & Co.",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 2,
+    "prob": 0.48
+   },
+   {
+    "sku": "BEV-SUC-AC",
+    "qty": 2,
+    "prob": 0.85
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 2,
+    "prob": 0.97
+   },
+   {
+    "sku": "DOL-BIS-CAF",
+    "qty": 1,
+    "prob": 0.85
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "prob": 0.59
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 8,
+    "prob": 0.91
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 1.5,
+    "prob": 0.44
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3,
+    "prob": 0.53
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 6,
+    "prob": 0.53
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   2,
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.41,
+   "december": 0.89
+  },
+  "events": [
+   {
+    "date": "2024-12-18",
+    "mult": 3.6
+   }
+  ],
+  "trend": 0.58,
+  "churn": null,
+  "adopt": {
+   "sku": "SAL-SAL",
+   "from": "2025-07-30"
+  },
+  "drop": {
+   "sku": "SAL-PRC",
+   "from": "2025-07-30"
+  },
+  "extras_rate": 0.41
+ },
+ {
+  "id": "b3-085",
+  "kind": "grocery",
+  "name": "Bottega Marchetti Gourmet",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 3,
+    "prob": 0.31
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 4,
+    "prob": 0.6
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2,
+    "prob": 0.31
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 6,
+    "prob": 0.8
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 2,
+    "prob": 0.52
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 2,
+    "prob": 0.86
+   }
+  ],
+  "cadence_days": 5,
+  "weekdays": [
+   1,
+   5
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": 0.57,
+   "december": 0.51
+  },
+  "events": [
+   {
+    "date": "2024-12-18",
+    "mult": 3.4
+   },
+   {
+    "date": "2025-12-15",
+    "mult": 2.3
+   },
+   {
+    "date": "2025-12-19",
+    "mult": 2.6
+   }
+  ],
+  "trend": -0.42,
+  "churn": {
+   "start": "2026-01-10"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.13
+ },
+ {
+  "id": "b3-086",
+  "kind": "deli",
+  "name": "Delicatessen Bruno Antica",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 6,
+    "prob": 0.97
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 3,
+    "prob": 0.98
+   },
+   {
+    "sku": "DIS-BIC-200",
+    "qty": 3,
+    "prob": 0.87
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 4,
+    "prob": 0.35
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 4,
+    "prob": 0.62
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2,
+    "prob": 0.95
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 0.5,
+    "prob": 0.33
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 1.5,
+    "prob": 0.93
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   2,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-06",
+    "to": "01-06"
+   }
+  ],
+  "season": {
+   "summer": -0.52,
+   "december": 1.0
+  },
+  "events": [
+   {
+    "date": "2025-09-15",
+    "mult": 1.7
+   },
+   {
+    "date": "2025-12-23",
+    "mult": 2.5
+   },
+   {
+    "date": "2026-01-09",
+    "mult": 1.9
+   }
+  ],
+  "trend": 0.1,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-ROT-001",
+   "from": "2025-07-17"
+  },
+  "drop": null,
+  "extras_rate": 0.41
+ },
+ {
+  "id": "b3-087",
+  "kind": "deli",
+  "name": "Salumeria Ferraro e Figli",
+  "story": "Slow steady shop, same list every week, rarely changes.",
+  "core": [
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 4,
+    "prob": 0.85
+   },
+   {
+    "sku": "PAS-FUS-500",
+    "qty": 2,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 0.5,
+    "prob": 0.58
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2,
+    "prob": 0.86
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2,
+    "prob": 0.76
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.76
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [
+   1,
+   4,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.16,
+   "december": 1.1
+  },
+  "events": [
+   {
+    "date": "2024-12-11",
+    "mult": 2.5
+   },
+   {
+    "date": "2024-12-18",
+    "mult": 3.9
+   },
+   {
+    "date": "2025-01-25",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 2.5
+   }
+  ],
+  "trend": -0.09,
+  "churn": {
+   "start": "2025-06-05"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.24
+ },
+ {
+  "id": "b3-088",
+  "kind": "deli",
+  "name": "Formaggi Marchetti Antica",
+  "story": "Family-run cheese corner, buys fresh stock for the weekend rush.",
+  "core": [
+   {
+    "sku": "SAL-COT",
+    "qty": 2.5,
+    "prob": 0.61
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 1.5,
+    "prob": 0.74
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2.5,
+    "prob": 0.98
+   },
+   {
+    "sku": "DIS-DET-5L",
+    "qty": 2,
+    "prob": 0.32
+   }
+  ],
+  "cadence_days": 3,
+  "weekdays": [
+   0,
+   1,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": -0.48,
+   "december": 0.58
+  },
+  "events": [
+   {
+    "date": "2026-04-02",
+    "mult": 1.7
+   }
+  ],
+  "trend": 0.32,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.19
+ },
+ {
+  "id": "b3-089",
+  "kind": "deli",
+  "name": "Alimentari Fontana Gourmet",
+  "story": "Gastronomia with hot takeaway, steady demand, Easter bump for colombe.",
+  "core": [
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1.5,
+    "prob": 0.85
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 3,
+    "prob": 0.55
+   },
+   {
+    "sku": "CAF-DEC-500",
+    "qty": 1,
+    "prob": 0.91
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.38
+   },
+   {
+    "sku": "POM-CON-800",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2,
+    "prob": 0.89
+   },
+   {
+    "sku": "SAL-PAN",
+    "qty": 6,
+    "prob": 0.52
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   3
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": -0.34,
+   "december": 0.32
+  },
+  "events": [
+   {
+    "date": "2024-12-22",
+    "mult": 2.9
+   },
+   {
+    "date": "2025-04-18",
+    "mult": 1.7
+   },
+   {
+    "date": "2025-12-22",
+    "mult": 2.1
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 1.9
+   }
+  ],
+  "trend": 0.37,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.34
+ },
+ {
+  "id": "b3-090",
+  "kind": "deli",
+  "name": "Latteria Greco al Ponte Vecchio",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "SAL-SPE",
+    "qty": 4,
+    "prob": 0.33
+   },
+   {
+    "sku": "DIS-SAC-70",
+    "qty": 4,
+    "prob": 0.33
+   },
+   {
+    "sku": "CAF-ZUC-1K",
+    "qty": 1,
+    "prob": 0.94
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 5,
+    "prob": 0.44
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": -0.45,
+   "december": 0.43
+  },
+  "events": [
+   {
+    "date": "2025-04-18",
+    "mult": 1.7
+   },
+   {
+    "date": "2026-07-18",
+    "mult": 1.7
+   }
+  ],
+  "trend": -0.06,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.11
+ },
+ {
+  "id": "b3-091",
+  "kind": "deli",
+  "name": "Delicatessen Caruso di Via Colle",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "BEV-COL-33",
+    "qty": 1,
+    "prob": 0.78
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 2,
+    "prob": 0.54
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "qty": 3,
+    "prob": 0.64
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 2,
+    "prob": 0.51
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "prob": 0.4
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 3,
+    "prob": 0.91
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 5,
+    "prob": 0.77
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 3,
+    "prob": 0.48
+   }
+  ],
+  "cadence_days": 7,
+  "weekdays": [
+   0,
+   3,
+   4
+  ],
+  "closed": [
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 0.72,
+   "december": 0.71
+  },
+  "events": [
+   {
+    "date": "2025-04-18",
+    "mult": 1.7
+   }
+  ],
+  "trend": 0.06,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-ROS-007",
+   "from": "2026-02-23"
+  },
+  "drop": null,
+  "extras_rate": 0.24
+ },
+ {
+  "id": "b3-092",
+  "kind": "deli",
+  "name": "Alimentari Amato al Bel Vedere",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "SAL-PRC",
+    "qty": 8,
+    "prob": 0.34
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 0.5,
+    "prob": 0.87
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 2,
+    "prob": 0.66
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 4,
+    "prob": 0.54
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 1,
+    "prob": 0.77
+   },
+   {
+    "sku": "POM-CIL-400",
+    "qty": 3,
+    "prob": 0.93
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2,
+    "prob": 0.45
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.81
+   },
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 1,
+    "prob": 0.95
+   }
+  ],
+  "cadence_days": 21,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "12-25",
+    "to": "12-26"
+   }
+  ],
+  "season": {
+   "summer": 0.03,
+   "december": 1.12
+  },
+  "events": [
+   {
+    "date": "2024-12-13",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 1.9
+   },
+   {
+    "date": "2026-04-02",
+    "mult": 1.8
+   }
+  ],
+  "trend": -0.23,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.32
+ },
+ {
+  "id": "b3-093",
+  "kind": "deli",
+  "name": "Bottega Marchetti al del Duomo",
+  "story": "Orders on Fridays for weekend tastings, prefers local-sized packs.",
+  "core": [
+   {
+    "sku": "SAL-PAN",
+    "qty": 8,
+    "prob": 0.92
+   },
+   {
+    "sku": "SAL-SAL",
+    "qty": 1.5,
+    "prob": 0.53
+   },
+   {
+    "sku": "SAL-GUA",
+    "qty": 2,
+    "prob": 0.74
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 1,
+    "prob": 0.75
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 6,
+    "prob": 0.44
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 1,
+    "prob": 0.72
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   1,
+   5
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   },
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": -0.13,
+   "december": 0.96
+  },
+  "events": [
+   {
+    "date": "2024-12-19",
+    "mult": 2.8
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 2.0
+   },
+   {
+    "date": "2026-07-12",
+    "mult": 1.8
+   }
+  ],
+  "trend": 0.27,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-ROS-007",
+   "from": "2025-02-10"
+  },
+  "drop": null,
+  "extras_rate": 0.45
+ },
+ {
+  "id": "b3-094",
+  "kind": "deli",
+  "name": "Delicatessen Rinaldi Antica",
+  "story": "New location, still testing the range, orders in small amounts.",
+  "core": [
+   {
+    "sku": "SAL-PRC",
+    "qty": 1.5,
+    "prob": 0.93
+   },
+   {
+    "sku": "BIR-ANA-33",
+    "qty": 2,
+    "prob": 0.55
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 0.5,
+    "prob": 0.56
+   },
+   {
+    "sku": "VIN-ROS-007",
+    "qty": 2,
+    "prob": 0.67
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 4,
+    "prob": 0.97
+   },
+   {
+    "sku": "SAL-COT",
+    "qty": 4,
+    "prob": 0.41
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 4,
+    "prob": 0.88
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "prob": 0.67
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   3,
+   4,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.36,
+   "december": 0.27
+  },
+  "events": [],
+  "trend": 0.21,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.49
+ },
+ {
+  "id": "b3-095",
+  "kind": "deli",
+  "name": "Delicatessen Rossi & Co.",
+  "story": "Panettone and gift-box peak each December, quiet in summer.",
+  "core": [
+   {
+    "sku": "BIR-BIA-33",
+    "qty": 3,
+    "prob": 0.35
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 1,
+    "prob": 0.34
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 1,
+    "prob": 0.86
+   },
+   {
+    "sku": "DIS-PEL-300",
+    "qty": 4,
+    "prob": 0.4
+   },
+   {
+    "sku": "DIS-ALU-150",
+    "qty": 4,
+    "prob": 0.98
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.35
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3,
+    "prob": 0.85
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 8,
+    "prob": 0.58
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": 0.21,
+   "december": 0.48
+  },
+  "events": [],
+  "trend": -0.38,
+  "churn": null,
+  "adopt": {
+   "sku": "DOL-BIS-CAF",
+   "from": "2025-06-09"
+  },
+  "drop": null,
+  "extras_rate": 0.04
+ },
+ {
+  "id": "b3-096",
+  "kind": "deli",
+  "name": "Salumeria Ferrari di Via Torre",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 2,
+    "prob": 0.39
+   },
+   {
+    "sku": "FOR-PEC",
+    "qty": 5,
+    "prob": 0.97
+   },
+   {
+    "sku": "VIN-SPU-001",
+    "qty": 3,
+    "prob": 0.61
+   },
+   {
+    "sku": "ACE-VIN-1L",
+    "qty": 4,
+    "prob": 0.92
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 4,
+    "prob": 0.83
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 0.5,
+    "prob": 0.84
+   },
+   {
+    "sku": "ACQ-NAT-50",
+    "qty": 1,
+    "prob": 0.31
+   }
+  ],
+  "cadence_days": 6,
+  "weekdays": [],
+  "closed": [],
+  "season": {
+   "summer": 1.28,
+   "december": 0.81
+  },
+  "events": [
+   {
+    "date": "2024-12-21",
+    "mult": 2.5
+   },
+   {
+    "date": "2025-04-14",
+    "mult": 1.6
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 2.1
+   }
+  ],
+  "trend": -0.36,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.43
+ },
+ {
+  "id": "b3-097",
+  "kind": "deli",
+  "name": "Alimentari Conti e Figli",
+  "story": "Family-run cheese corner, buys fresh stock for the weekend rush.",
+  "core": [
+   {
+    "sku": "FOR-ASI",
+    "qty": 2.5,
+    "prob": 0.95
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 6,
+    "prob": 0.9
+   },
+   {
+    "sku": "BIR-ROS-33",
+    "qty": 3,
+    "prob": 0.56
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 4,
+    "prob": 0.39
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "prob": 0.36
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2.5,
+    "prob": 0.56
+   },
+   {
+    "sku": "DIS-TOV-33",
+    "qty": 1,
+    "prob": 0.69
+   },
+   {
+    "sku": "DIS-ROT-6",
+    "qty": 3,
+    "prob": 0.88
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4,
+    "prob": 0.51
+   }
+  ],
+  "cadence_days": 4,
+  "weekdays": [
+   2,
+   3,
+   4
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.52,
+   "december": 1.16
+  },
+  "events": [
+   {
+    "date": "2024-12-23",
+    "mult": 2.3
+   },
+   {
+    "date": "2026-03-30",
+    "mult": 1.7
+   }
+  ],
+  "trend": -0.01,
+  "churn": {
+   "start": "2025-08-24"
+  },
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.35
+ },
+ {
+  "id": "b3-098",
+  "kind": "deli",
+  "name": "Delicatessen Gallo di Via Vittoria",
+  "story": "Orders big before Christmas for gift baskets, weekly small top-up otherwise.",
+  "core": [
+   {
+    "sku": "SAL-MOR",
+    "qty": 0.5,
+    "prob": 0.4
+   },
+   {
+    "sku": "DIS-GUA-M",
+    "qty": 1,
+    "prob": 0.89
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4,
+    "prob": 0.9
+   },
+   {
+    "sku": "FOR-ASI",
+    "qty": 8,
+    "prob": 0.86
+   },
+   {
+    "sku": "CAF-GRA-1K",
+    "qty": 2,
+    "prob": 0.31
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 5,
+    "prob": 0.71
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   0,
+   1,
+   2
+  ],
+  "closed": [
+   {
+    "from": "08-10",
+    "to": "08-25"
+   }
+  ],
+  "season": {
+   "summer": -0.04,
+   "december": 0.44
+  },
+  "events": [
+   {
+    "date": "2024-12-10",
+    "mult": 1.8
+   },
+   {
+    "date": "2024-12-21",
+    "mult": 3.1
+   },
+   {
+    "date": "2025-12-12",
+    "mult": 2.8
+   },
+   {
+    "date": "2025-12-14",
+    "mult": 3.9
+   }
+  ],
+  "trend": 0.05,
+  "churn": null,
+  "adopt": {
+   "sku": "FOR-MOZ-BUF",
+   "from": "2025-10-25"
+  },
+  "drop": null,
+  "extras_rate": 0.18
+ },
+ {
+  "id": "b3-099",
+  "kind": "deli",
+  "name": "Gastronomia Rinaldi Gourmet",
+  "story": "Busy lunch counter, orders twice a week, cured meats sold by the etto.",
+  "core": [
+   {
+    "sku": "PAS-TAG-250",
+    "qty": 4,
+    "prob": 0.77
+   },
+   {
+    "sku": "DOL-CRO-SUR",
+    "qty": 1,
+    "prob": 0.97
+   },
+   {
+    "sku": "SAL-FIN-1K",
+    "qty": 4,
+    "prob": 0.85
+   },
+   {
+    "sku": "FOR-RIC",
+    "qty": 6,
+    "prob": 0.69
+   }
+  ],
+  "cadence_days": 14,
+  "weekdays": [
+   3,
+   5
+  ],
+  "closed": [
+   {
+    "from": "01-01",
+    "to": "01-02"
+   }
+  ],
+  "season": {
+   "summer": 1.39,
+   "december": 1.33
+  },
+  "events": [
+   {
+    "date": "2026-04-02",
+    "mult": 1.7
+   }
+  ],
+  "trend": -0.5,
+  "churn": null,
+  "adopt": null,
+  "drop": null,
+  "extras_rate": 0.37
+ },
+ {
+  "id": "b3-100",
+  "kind": "deli",
+  "name": "Salumeria Benedetti & Co.",
+  "story": "Long-standing customer, orders by phone reminder every ten days.",
+  "core": [
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 1,
+    "prob": 0.93
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 4,
+    "prob": 0.92
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "prob": 0.41
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "qty": 0.5,
+    "prob": 0.62
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 6,
+    "prob": 0.81
+   },
+   {
+    "sku": "SAL-BRE",
+    "qty": 1,
+    "prob": 0.65
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 6,
+    "prob": 0.74
+   }
+  ],
+  "cadence_days": 10,
+  "weekdays": [
+   0,
+   3,
+   5
+  ],
+  "closed": [],
+  "season": {
+   "summer": 0.96,
+   "december": 0.14
+  },
+  "events": [
+   {
+    "date": "2024-11-25",
+    "mult": 2.2
+   },
+   {
+    "date": "2025-12-14",
+    "mult": 2.1
+   },
+   {
+    "date": "2025-12-16",
+    "mult": 3.6
+   },
+   {
+    "date": "2025-12-20",
+    "mult": 3.6
+   }
+  ],
+  "trend": 0.29,
+  "churn": null,
+  "adopt": {
+   "sku": "VIN-PRO-002",
+   "from": "2025-04-15"
+  },
+  "drop": null,
+  "extras_rate": 0.16
+ }
+]

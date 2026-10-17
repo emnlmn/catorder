@@ -7,7 +7,7 @@ import type { Context } from "hono";
 import type { DatabaseSync } from "node:sqlite";
 import { cacheDir } from "./cache.ts";
 import { ROOT } from "./config.ts";
-import { connect, getCatalog, getCustomer, historyOrders, row, rows } from "./db.ts";
+import { connect, getCatalog, getCustomer, historyOrders, nowIso, row, rows } from "./db.ts";
 import { loadData } from "./load.ts";
 import { aggregate } from "./metrics.ts";
 import { ChatModel, MockModel, Transcriber } from "./modelClient.ts";
@@ -269,6 +269,28 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
     const body = await jsonObject(c, false);
     if (!body) return err(c, 422, INVALID);
     return c.json(orders.patchLine(conn, c.req.param("id"), body as PatchLineBody));
+  });
+
+  app.post("/api/orders/:id/lines", async (c) => {
+    const body = await jsonObject(c, false);
+    if (!body) return err(c, 422, INVALID);
+    return c.json(orders.addLine(conn, c.req.param("id"), body));
+  });
+
+  app.post("/api/suggestions/feedback", async (c) => {
+    const b = await jsonObject(c, false);
+    const num = (x: unknown) => (typeof x === "number" && Number.isFinite(x) ? x : null);
+    if (!b || (b.action !== "added" && b.action !== "dismissed") || typeof b.sku !== "string"
+      || typeof b.customer_id !== "string" || (b.order_id != null && typeof b.order_id !== "string")) return err(c, 422, INVALID);
+    conn.prepare("INSERT INTO suggestion_feedback (customer_id, order_id, sku, qty, p, action, at) VALUES (?,?,?,?,?,?,?)")
+      .run(b.customer_id, (b.order_id as string | null) ?? null, b.sku, num(b.qty), num(b.p), b.action, nowIso());
+    return c.json({ ok: true });
+  });
+
+  app.get("/api/suggestions/feedback/count", (c) => {
+    const n = (a: string) => row<{ n: number }>(conn, "SELECT COUNT(*) AS n FROM suggestion_feedback WHERE action=?", a)!.n;
+    const added = n("added"), dismissed = n("dismissed");
+    return c.json({ added, dismissed, total: added + dismissed });
   });
 
   app.post("/api/orders/:id/confirm", async (c) => {

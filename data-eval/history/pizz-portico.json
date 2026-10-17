@@ -1,0 +1,395 @@
+[
+ {
+  "date": "2026-05-04",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 3
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-05-14",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-05-25",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-06-03",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-06-13",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-06-24",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-07-03",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 3
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-07-14",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-07-24",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-08-03",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 6
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 4
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-08-17",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-09-04",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-09-28",
+  "lines": [
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 2
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 1
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 3
+   }
+  ]
+ }
+]

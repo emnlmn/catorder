@@ -101,7 +101,7 @@ export interface Candidate {
 export type FlagKind =
   | "unknown_product" | "ambiguous_product" | "illegible" | "quantity_missing" | "pack_mismatch"
   | "converted" | "unusual_quantity" | "discount_beyond_terms" | "price_below_terms"
-  | "delivery_in_past" | "no_history" | "not_in_order" | "discount_as_agreed";
+  | "delivery_in_past" | "no_history" | "not_in_order" | "discount_as_agreed" | "suggested";
 export type FlagLevel = "line" | "order";
 export type Severity = "high" | "medium" | "info";
 

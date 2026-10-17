@@ -33,8 +33,8 @@ def ordinal(s):
 
 
 def split_ids(ids, seed=7):
-    """Deterministic customer split 70/15/15. Demo customers (no 'syn-' prefix) stay out of all splits."""
-    syn = sorted(i for i in ids if i.startswith("syn-"))
+    """Deterministic customer split 70/15/15. Demo customers (no syn-/pf- prefix) stay out of all splits."""
+    syn = sorted(i for i in ids if i.startswith(("syn-", "pf-")))
     rank = sorted(syn, key=lambda i: hashlib.md5(f"{seed}{i}".encode()).hexdigest())
     n = len(rank)
     a, b = int(.7 * n), int(.85 * n)

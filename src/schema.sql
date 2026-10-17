@@ -61,3 +61,8 @@ CREATE TABLE IF NOT EXISTS replies (
 CREATE TABLE IF NOT EXISTS order_messages (
   order_id TEXT NOT NULL, message_id TEXT NOT NULL, pos INTEGER NOT NULL, start INTEGER NOT NULL, end INTEGER NOT NULL,
   PRIMARY KEY (order_id, message_id));
+
+-- a seller's answer to a forecast suggestion (added to the order, or dismissed): labelled data for the next training run
+CREATE TABLE IF NOT EXISTS suggestion_feedback (
+  id INTEGER PRIMARY KEY, customer_id TEXT, order_id TEXT, sku TEXT, qty REAL, p REAL,
+  action TEXT CHECK (action IN ('added','dismissed')), at TEXT);

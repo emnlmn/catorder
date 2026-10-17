@@ -1,0 +1,8 @@
+{
+ "id": "em-001",
+ "customer_id": "deli-mulino",
+ "channel": "email",
+ "received_at": "2026-10-16T17:45:00+02:00",
+ "sender": "Rina",
+ "text": "Oggetto: ordine sabato\n\nbuongiorno marta,\nper sabato mi servono 6 kg di mozzarella fiordilatte. grazie, rina\n\n--- messaggio inoltrato ---\nDa: Salumeria Mulino Vecchio\nData: 9 ottobre\n> 4 kg prosciutto cotto\n> 3 kg prosciutto crudo\n> 4 kg grana\n> 3 kg mozzarella fiordilatte"
+}
