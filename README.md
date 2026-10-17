@@ -47,12 +47,16 @@ flowchart LR
 
 ### Flow 1: order handling
 
+![A bar writes "il solito per martedi, mi raccomando lo sconto 8%": CatOrder drafts six lines for Tuesday, each citing the message, and flags that the agreed discount is 5%](assets/app-order.png)
+
 1. **Intake.** A message arrives on WhatsApp (live, through Twilio) or by email. Voice notes are transcribed and photos are read into text. The original always stays next to the text it became.
 2. **Reading.** Gemma, served on AMD Instinct through AMD Token Factory, extracts each request: product and quantity, "the usual", a change to the usual, a delivery date, a price or discount request. Each line carries its source words.
 3. **Checking, in code.** The source words must be in the message or the line is dropped. Products are matched to the catalogue. Vague products get candidates from the catalogue and the customer's past orders. "The usual" is computed from history. Unusual quantities are flagged, and discounts are compared with the agreed terms ("with the usual 8%" when the contract says 5%).
 4. **Draft order.** The operator sees certain lines, lines to check (with candidates), flags and "Usually also takes" suggestions from the forecasting model, then fixes and confirms. The order is exported to the ERP, and Gemma drafts the WhatsApp reply (a confirmation, or a question about a doubtful line) for the operator to edit and send. Nothing goes to the customer or the ERP without a person.
 
 ### Flow 2: forecasting
+
+![Forecast page: The Porch Pizzeria is 34 days late; the other customers' next orders are expected on 22 and 30 October](assets/app-forecast.png)
 
 `catorder-nbr` is a 122k-parameter PyTorch model: a GRU over each customer's last 16 orders with four heads. It was trained on an **AMD Radeon Pro W7900D with ROCm** in 169 s, on two years of synthetic history for 905 customers. For each customer it predicts:
 
@@ -73,19 +77,19 @@ How it is calculated, inputs and training are in [`model/README.md`](model/READM
 | Customer going silent | noticed when they're gone | on the Forecast page, with days overdue |
 | Customer data | sent to closed APIs, or kept manual | open models on AMD |
 
-What it is worth, as our assumptions (not measured): 70 orders by message a day × 4 minutes ≈ **4.7 hours of order desk time a day**, about one full-time person. 4 minutes is on the low side: vendors of order automation for food distributors report 5–8 minutes per order typed by hand ([Pepper](https://www.usepepper.com/case-studies/carolina-food-service-streamlines-order-entry-in-every-format-with-peppers-order-agent)) and 7–8 minutes for a 40-line order ([Choco](https://choco.com/us/stories/suppliers/orderagent-the-ai-order-processing-engine-thats-powering-the-future-of-food-distribution)). We found no independent time study. One wrong line delivered costs €30–80. At €199 a month per order desk, halving the typing and catching one wrong line a day pays for itself many times over. `PRODUCT.md` has the business case, the competition and go-to-market.
+What it is worth, as our assumptions (not measured): 70 orders by message a day × 4 minutes ≈ **4.7 hours of order desk time a day**, about one full-time person. 4 minutes is on the low side: vendors of order automation for food distributors report 5–8 minutes per order typed by hand ([Pepper](https://www.usepepper.com/case-studies/carolina-food-service-streamlines-order-entry-in-every-format-with-peppers-order-agent)) and 7–8 minutes for a 40-line order ([Choco](https://choco.com/us/stories/suppliers/orderagent-the-ai-order-processing-engine-thats-powering-the-future-of-food-distribution)). We found no independent time study. One wrong line delivered costs €30–80. At €149 a month (Starter, order reading) or €299 (Pro, with forecasts and buying lists), halving the typing and catching one wrong line a week pays for itself. `PRODUCT.md` has the business case, the competition and go-to-market.
 
 ## Results at a glance
 
 - **Reading orders** (Gemma-4-31B-IT on AMD Token Factory, 237 WhatsApp and email messages never used to tune the prompt): **232/237 orders entirely right (98%)**, 99.7% line precision, 99.6% line recall, 102/105 problems flagged, zero lines without verified source words. Wrong answers reviewed by hand.
-- **Forecasting** (135 held-out customers): basket F1 **0.823** vs 0.803 for the strongest simple baseline, basket recall **0.898** vs 0.850, next-date error 2.81 days.
+- **Forecasting** (135 held-out customers): basket F1 **0.823** vs 0.803 for the strongest simple baseline, basket recall **0.898** vs 0.850. Next-date error 2.81 days, a tie with the simple method; on churn ranking the simple method is ahead.
 - All data is synthetic. Full tables and caveats are in [Numbers](#numbers).
 
 ## Where AMD runs
 
 | Workload | AMD hardware |
 |---|---|
-| Reading messages and photos, drafting replies (Gemma-4-31B-IT) | AMD Instinct via AMD Token Factory (or vLLM on MI300X) |
+| Reading messages and photos, drafting replies (Gemma-4-31B-IT) | AMD Instinct via AMD Token Factory |
 | Training the next-order model (`catorder-nbr`, PyTorch + ROCm) | AMD Radeon Pro W7900D |
 
 `PRODUCT.md` describes the product and `SPEC.md` is the build specification.
@@ -136,14 +140,14 @@ Read from the process environment, or from `.env` (real variables win).
 
 ## Models on AMD
 
-- **AMD Token Factory** (OpenAI-compatible): `MODEL_BASE_URL=https://developer.amd.com.cn/radeon/api/v1`, `MODEL_NAME=Gemma-4-31B-IT` and your `MODEL_API_KEY`. Add `MODEL_HARDWARE="AMD Instinct MI300X via AMD Token Factory"` for the top bar.
+- **AMD Token Factory** (OpenAI-compatible): `MODEL_BASE_URL=https://developer.amd.com.cn/radeon/api/v1`, `MODEL_NAME=Gemma-4-31B-IT` and your `MODEL_API_KEY`. Add `MODEL_HARDWARE="AMD Instinct via AMD Token Factory"` for the top bar.
 - **vLLM on an MI300X**: `vllm serve google/gemma-3-27b-it`, then `MODEL_BASE_URL=http://<host>:8000/v1`. Whisper served the same way reads voice notes via `TRANSCRIBE_*`.
 - **Ollama for development**: `MODEL_BASE_URL=http://localhost:11434/v1`, `MODEL_API_KEY=ollama`, `MODEL_NAME=gemma3:12b`.
 - **Next-order model** (`model/`, PyTorch, not an LLM): trained on an AMD Radeon Pro W7900D with ROCm on 905 synthetic customers. It predicts each customer's next order date, churn risk and basket, and powers the Forecast page and the "Usually also takes" suggestions. Serve it with `python3 model/serve.py` and point `PREDICT_BASE_URL` at it. Data, method and results are in `model/README.md`.
 
 ## Live WhatsApp through the Twilio Sandbox
 
-A real WhatsApp message to Twilio's sandbox number appears in the inbox within seconds and is read like any other. Nothing is ever replied to the customer.
+A real WhatsApp message to Twilio's sandbox number appears in the inbox within seconds and is read like any other (reading takes about half a minute on Token Factory, see [Numbers](#numbers)). Nothing goes back to the customer unless the operator presses Send.
 
 1. Create a Twilio account. Console, Messaging, Try it out, Send a WhatsApp message: it shows the sandbox number and a `join <two-words>` code. Send that code from your phone. The join expires after 72 hours without messages.
 2. Set `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `PUBLIC_URL` and `WHATSAPP_PHONE_MAP` (see `.env.example`). Phone numbers live only in the environment and in the local database (git-ignored), never in a committed file; the number a message came from is kept so the reply can go back to it. A number not in the map is kept under the customer "Numero sconosciuto".
@@ -156,7 +160,7 @@ Replies go back the same way: after a read, "Reply to …" (or "Ask the customer
 
 ## Numbers
 
-**Reading orders.** 237 synthetic WhatsApp and email messages from the Italian order desk, none of them used to write or tune the prompt (`data-eval/`). Expected answers were generated by Claude Sonnet agents; every message the model got wrong was then reviewed by hand. Gemma-4-31B-IT on AMD Instinct via AMD Token Factory, 17 Oct 2026, each message read on its own:
+**Reading orders.** 237 synthetic WhatsApp and email messages from the Italian order desk, none of them used to write or tune the prompt (`data-eval/`). Expected answers were generated by Claude Sonnet agents; every message the model got wrong was then reviewed by hand. Gemma-4-31B-IT on AMD Instinct via AMD Token Factory, 18 Oct 2026, each message read on its own:
 
 | | messages | line precision | line recall | orders right | candidates hit | flags found | false flags | unverified lines |
 |---|---|---|---|---|---|---|---|---|
@@ -166,11 +170,13 @@ Replies go back the same way: after a read, "Reply to …" (or "Ask the customer
 
 An order is right only when every line has the right product and the exact quantity, nothing is extra and the delivery date matches. No message that was not an order produced a line, and every line points to words that are in the message. About 4,100 tokens in and 390 out per message.
 
+Speed, measured separately on 18 Oct: 10 messages read live, one at a time, took 37 s each at the median (19 to 70 s), with one model call per message; one more timed out after 180 s. That is the shared Token Factory endpoint under hackathon load, against 7–8 minutes to type an order by hand.
+
 The five wrong orders: "2 latte" of oil read as two litres of milk; "una cassa e mezza" left without a quantity; a line with its price in the same sentence ("prosciutto cotto a 10 euro al chilo… 5 kg") not read; a delivery day in an email subject ("Oggetto: ordine martedì") missed; "entro mercoledì 21/10" read as the 14th. Most false flags are "ambiguous product", where the desk is asked to confirm a product the answer key resolved.
 
 How the hand review changed the score (from 217/237 to 232/237), all recorded in `eval/match.ts` and as `note` fields in `data-eval/expected.json`: a line left without a quantity and flagged "quantity missing" counts as the expected question, not an extra line; a product missing from the catalogue left for the desk to check is not a wrong line; a removal is judged by the final order; one wrong delivery date in the answer key ("per stasera"); and five readings we accept as reasonable: "una ventina" (three messages) and an ambiguous "5 kg" left for the desk to ask, "per il weekend" read as Saturday.
 
-The set is what Token Factory let us read: of 520 generated messages (`data-eval-complete/`), it rate-limited us at 20 requests a minute and 237 were read in full. Batches 1 and 2 are nearly complete, 3 to 5 are partial. Reproduce from the cached model outputs (`data-eval/cache/`, prompt version 1) with `CATORDER_OFFLINE=1 CATORDER_DATA_DIR=data-eval npm run eval -- --alone`.
+The set is what Token Factory let us read: of 520 generated messages (`data-eval-complete/`), our parallel run hit its rate limit (20 requests a minute) and we stopped it for the deadline with 237 read in full. Batches 1 and 2 are nearly complete, 3 to 5 are partial. The model outputs are cached in `data-eval/cache/` (not committed) and keyed on prompt version 1, the prompt at commit `2d3cdb1`; at that commit, reproduce with `CATORDER_OFFLINE=1 CATORDER_DATA_DIR=data-eval npm run eval -- --alone`.
 
 Next-order model (`model/README.md`), trained on an AMD Radeon Pro W7900D in 169 s on 905 synthetic customers, tested on 135 it never saw, against the strongest simple method (each customer's own top items, median cadence):
 
