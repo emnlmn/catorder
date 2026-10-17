@@ -24,7 +24,10 @@ export function twilioSender(sid: string, token: string, from: string): SendWhat
       body: new URLSearchParams({ From: `whatsapp:${from}`, To: `whatsapp:${to}`, Body: body }),
       signal: AbortSignal.timeout(15_000),
     });
-    if (!r.ok) throw new ReplyError(502, `WhatsApp did not take the message (${r.status}).`);
+    if (!r.ok) {
+      const why = await r.json().then((j: { code?: number; message?: string }) => ` Twilio ${j.code}: ${j.message}`, () => "");
+      throw new ReplyError(502, `WhatsApp did not take the message (${r.status}).${why}`);
+    }
   };
 }
 

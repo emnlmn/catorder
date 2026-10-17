@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "tsx watch src/main.ts",
     "start": "tsx src/main.ts",
+    "db-clean": "sh scripts/db-clean.sh",
     "demo": "CATORDER_MOCK=1 CATORDER_TODAY=2026-10-18 tsx src/main.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
