@@ -1,35 +1,35 @@
 [
- {
-  "kind": "usual",
-  "quote": "Il solito",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "delivery",
-  "quote": "per lunedì",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": "2026-10-19",
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "aggiungi due casse di tonica",
-  "product": "tonica",
-  "sku": "BEV-TON-20",
-  "quantity": "due",
-  "unit": "casse",
-  "op": "add",
-  "value": null,
-  "status": "observed"
- }
+  {
+    "kind": "usual",
+    "quote": "The usual",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "delivery",
+    "quote": "for Monday",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "add two cases of tonic",
+    "product": "tonic",
+    "sku": "BEV-TON-20",
+    "quantity": "two",
+    "unit": "cases",
+    "op": "add",
+    "value": null,
+    "status": "observed"
+  }
 ]

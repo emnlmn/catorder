@@ -1,8 +1,8 @@
 {
- "id": "wa-002",
- "customer_id": "rist-gelsomino",
- "channel": "whatsapp",
- "received_at": "2026-10-15T08:15:00+02:00",
- "sender": "Davide",
- "text": "buongiorno marta, il solito per sabato ma niente acqua frizzante stavolta"
+  "id": "wa-002",
+  "customer_id": "rist-gelsomino",
+  "channel": "whatsapp",
+  "received_at": "2026-10-15T08:15:00+02:00",
+  "sender": "Davide",
+  "text": "morning marta, the usual for saturday but no sparkling water this time"
 }

@@ -1,0 +1,8 @@
+{
+ "id": "g2-006",
+ "customer_id": "bar-ponterosso",
+ "channel": "email",
+ "received_at": "2026-10-14T08:50:00+02:00",
+ "sender": "Giulia",
+ "text": "Oggetto: ordine vino\n\nBuongiorno Marta,\nmi servono 18 bottiglie di Rosso Colline e 6 bottiglie di Rosato Ca' Serena per venerdi.\nGrazie,\nGiulia - Bar Ponte Rosso"
+}

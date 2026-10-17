@@ -1,0 +1,12 @@
+{
+ "id": "groc-nuovoborgo",
+ "name": "Emporio Nuovo Borgo",
+ "kind": "grocer",
+ "context": "Emporio aperto da poche settimane, un solo ordine finora.",
+ "terms": {
+  "discount_pct": 2,
+  "payment_days": 30,
+  "free_delivery_min": 300,
+  "price_overrides": {}
+ }
+}

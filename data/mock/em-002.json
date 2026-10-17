@@ -1,35 +1,35 @@
 [
- {
-  "kind": "delivery",
-  "quote": "per sabato",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": "2026-10-17",
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "12 bottiglie di Roccafiera Rosso Superiore",
-  "product": "Roccafiera Rosso Superiore",
-  "sku": "VIN-ROS-007",
-  "quantity": "12",
-  "unit": "bottiglie",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "10 bottiglie di Punta Calma Vermentino",
-  "product": "Punta Calma Vermentino",
-  "sku": "VIN-BIA-004",
-  "quantity": "10",
-  "unit": "bottiglie",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- }
+  {
+    "kind": "delivery",
+    "quote": "for saturday",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-17",
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "12 bottles of Roccafiera Superior Red",
+    "product": "Roccafiera Superior Red",
+    "sku": "VIN-ROS-007",
+    "quantity": "12",
+    "unit": "bottles",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "10 bottles of Punta Calma Vermentino",
+    "product": "Punta Calma Vermentino",
+    "sku": "VIN-BIA-004",
+    "quantity": "10",
+    "unit": "bottles",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  }
 ]

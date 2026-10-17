@@ -234,7 +234,7 @@ async function run(db: Db, svc: Services, message: Message, step: (s: trace.Step
   const rk = message.channel === "voice" ? "transcribe" : "vision";
   const t = Date.now();
   if (isMedia) step({ kind: rk, status: "run", title: rk === "transcribe"
-    ? `Transcribing the voice note with ${svc.transcriber?.name ?? "the committed transcript"}…` : `Reading the photo with ${svc.chat.name}…` });
+    ? "Transcribing the voice note…" : "Reading the photo…" });
   const reading = await getReading(db, svc, message, runs);
   if (isMedia && reading) {
     const from = reading.source === "model" ? `in ${secs(Date.now() - t)}` : reading.source === "cache" ? "from cache" : "from the committed file";
@@ -254,12 +254,11 @@ async function run(db: Db, svc: Services, message: Message, step: (s: trace.Step
     : force ? { action: "new", quote: null, reason: "set by the operator", by: "rule" }
     : open ? await routeMessage(svc, reading.text, message.received_at, open.draft) : ruleRoute(reading.text, message.received_at, null);
   if (!open && decision.action === "attach") decision = { ...decision, action: "new" };
-  const model = decision.by === "rule" ? " · rule" : ` · ${svc.chat.name}`;
   const q = decision.quote ? `«${decision.quote}» → ` : "";
   step(decision.action === "attach"
-    ? { kind: "route", status: "ok", title: `${q}adds to the open order · ${Math.max(0, Math.round((Date.parse(message.received_at) - Date.parse(open!.draft.lastAt)) / 60000))} min after`, detail: decision.reason + model }
-    : decision.action === "none" ? { kind: "route", status: "warn", title: "Not an order: a question, no products", detail: decision.reason + model }
-    : { kind: "route", status: "ok", title: `${q}Starts a new order`, detail: decision.reason + model });
+    ? { kind: "route", status: "ok", title: `${q}adds to the open order · ${Math.max(0, Math.round((Date.parse(message.received_at) - Date.parse(open!.draft.lastAt)) / 60000))} min after`, detail: decision.reason }
+    : decision.action === "none" ? { kind: "route", status: "warn", title: "Not an order: a question, no products", detail: decision.reason }
+    : { kind: "route", status: "ok", title: `${q}Starts a new order`, detail: decision.reason });
   const attach = decision.action === "attach" && open ? open : null;
   let segments: orders.Segment[] | undefined;
   if (attach) {
@@ -277,7 +276,7 @@ async function run(db: Db, svc: Services, message: Message, step: (s: trace.Step
   const history = historyOrders(db, message.customer_id);
   step({ kind: "context", status: "ok", title: `Loaded ${n(history.length, "past order")} and ${n(catalog.length, "product")} from the ERP` });
   step({ kind: "model", status: "run", title: svc.mock ? "Demo mode: using scripted answers…"
-    : `Asking ${svc.chat.name} on ${svc.hardware ?? "AMD"}…` });
+    : "Asking CatOrder…" });
   let got: Extracted | null;
   if (decision.action === "none") got = { raw: [], usage: { prompt_tokens: 0, completion_tokens: 0 }, ms: 0, cached: true };
   else if (attach && svc.mock) { // mock answers are keyed by message id: one call per message, requests concatenated
@@ -290,8 +289,9 @@ async function run(db: Db, svc: Services, message: Message, step: (s: trace.Step
   } else got = await extract(db, svc, message, customer, catalog, history, reading, runs);
   if (!got) return { order: null, reading, runs: pub(), error: "The model answer could not be used." };
   step(svc.mock ? { kind: "model", status: "ok", title: `Mock answer: ${n(got.raw.length, "request")}`, detail: "No inference in demo mode" }
-    : { kind: "model", status: "ok", title: `${svc.chat.name} proposed ${n(got.raw.length, "request")} in ${secs(got.ms)}${
-      got.cached ? " (cached)" : ""}`, detail: `${(got.usage.prompt_tokens + got.usage.completion_tokens).toLocaleString("en-US")} tokens` });
+    : { kind: "model", status: "ok", title: `Found ${n(got.raw.length, "request")} in ${secs(got.ms)}${
+      got.cached ? " (cached)" : ""}`, // the model and the hardware once, in small print
+      detail: `${(got.usage.prompt_tokens + got.usage.completion_tokens).toLocaleString("en-US")} tokens · ${svc.chat.name} on ${svc.hardware ?? "AMD"}` });
   const { verified, drops } = verifyAll(reading.text, got.raw);
   addRun(db, runs, messageId, "extract", svc.chat.name, {
     usage: got.usage, latencyMs: got.ms, cached: got.cached, proposed: got.raw.length, kept: verified.length,
@@ -331,7 +331,7 @@ function openDraft(db: Db, message: Message): { draft: OpenDraft; ids: string[];
 function traceResult(result: ResolveResult, catalog: ReturnType<typeof getCatalog>, step: (s: trace.StepInput) => void): void {
   const name = (sku: string | null) => catalog.find((p) => p.sku === sku)?.name ?? sku ?? "?";
   const usual = result.lines.filter((l) => l.origin === "usual");
-  if (usual.length) step({ kind: "usual", status: "ok", title: `«il solito» → ${n(usual.length, "line")} from the last orders` });
+  if (usual.length) step({ kind: "usual", status: "ok", title: `«the usual» → ${n(usual.length, "line")} from the last orders` });
   let shown = 0;
   for (const l of result.lines) {
     if (l.origin === "usual" || l.state === "removed") continue;

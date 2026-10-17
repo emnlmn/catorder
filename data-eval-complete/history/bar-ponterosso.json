@@ -1,0 +1,284 @@
+[
+ {
+  "date": "2026-05-07",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-05-21",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-06-04",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 1
+   }
+  ]
+ },
+ {
+  "date": "2026-06-18",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-07-02",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 1
+   }
+  ]
+ },
+ {
+  "date": "2026-07-23",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 1
+   }
+  ]
+ },
+ {
+  "date": "2026-09-03",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 6
+   }
+  ]
+ },
+ {
+  "date": "2026-09-17",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 5
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 2
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 1
+   },
+   {
+    "sku": "BEV-ARA-20",
+    "qty": 1
+   }
+  ]
+ },
+ {
+  "date": "2026-10-01",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "DIS-CUP-CAF",
+    "qty": 1
+   },
+   {
+    "sku": "DIS-TOV-33",
+    "qty": 1
+   }
+  ]
+ },
+ {
+  "date": "2026-10-08",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 6
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 3
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 3
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "VIN-ROS-005",
+    "qty": 6
+   }
+  ]
+ }
+]

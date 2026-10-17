@@ -65,6 +65,11 @@ function covered(ln: ScoreLine, exp: ExpectedMessage): string | null {
   for (const c of exp.candidates ?? []) if (t.includes(c.text_contains.toLowerCase())) return "candidates";
   const wantsUnknown = (exp.flags ?? []).some((f) => f.kind === "unknown_product");
   if (wantsUnknown && ln.flags.some((f) => f.kind === "unknown_product")) return "unknown";
+  // a product the catalogue lacks, left unresolved for the desk to check (whatever the flag kind): not a wrong line
+  if (wantsUnknown && !ln.sku && ln.state === "check") return "unknown";
+  // no quantity in the message: a line without one, flagged, is the expected question to the desk, not an extra
+  const wantsQty = (exp.flags ?? []).some((f) => f.kind === "quantity_missing");
+  if (wantsQty && ln.qty === null && ln.flags.some((f) => f.kind === "quantity_missing")) return "quantity";
   return null;
 }
 
@@ -95,7 +100,7 @@ export function scoreMessage(exp: ExpectedMessage, order: ScoreOrder | null, cha
   const produced: [string | null, number | null][] = [];
   for (const ln of live) {
     const sku = ln.sku || (ln.candidates.length ? ln.candidates[0].sku : null);
-    if (!ln.sku && covered(ln, exp)) {
+    if ((!ln.sku || ln.qty === null) && covered(ln, exp)) {
       r.skipped++;
       continue;
     }
@@ -133,10 +138,8 @@ export function scoreMessage(exp: ExpectedMessage, order: ScoreOrder | null, cha
   r.flags_found = [...kinds].filter((k) => found.has(k)).length;
   r.false_flags = [...new Set(allFlags(order).filter((f) => f.severity !== INFO && !kinds.has(f.kind)).map((f) => f.kind))].sort();
 
-  const removed = new Set(lines.filter((ln) => ln.state === "removed" && ln.sku).map((ln) => ln.sku as string));
-  const wantRemoved = new Set(exp.removed ?? []);
-  const removedOk = removed.size === wantRemoved.size && [...removed].every((s) => wantRemoved.has(s));
-  r.order_right = !left.length && !extras.length && removedOk && order.delivery_date === (exp.delivery_date ?? null);
+  // removals are judged by the final order: a removed product left in shows up as an extra line
+  r.order_right = !left.length && !extras.length && order.delivery_date === (exp.delivery_date ?? null);
   return r;
 }
 

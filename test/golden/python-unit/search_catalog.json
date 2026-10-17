@@ -1,42 +1,32 @@
 {
-  "": [
-    "ACE-VIN-1L",
-    "DIS-ALU-150",
-    "BEV-ARA-20",
-    "FOR-ASI",
-    "VIN-ROS-009",
-    "VIN-BIA-003",
-    "DIS-BIC-200",
-    "DIS-CUP-CAF",
-    "DOL-BIS-CAF",
-    "SAL-BRE",
-    "CAF-DEC-500",
-    "CAF-GRA-1K",
-    "CAF-MIS-1K",
-    "BEV-CHI-20",
-    "BEV-COL-33",
-    "POM-CON-800",
-    "DOL-CRO-SUR",
-    "DIS-DET-5L",
-    "FAR-00-25K",
-    "FAR-00-5K"
-  ],
-  "prosecco": [
-    "VIN-PRO-002",
-    "VIN-PRO-003"
-  ],
-  "farina": [
-    "FAR-00-5K",
-    "FAR-00-25K",
-    "FAR-MAN-5K"
-  ],
-  "acq": [
-    "ACQ-NAT-1L"
-  ],
-  "rosso": [
-    "VIN-ROS-005",
-    "VIN-ROS-007",
-    "BIR-ROS-33"
-  ],
-  "xyz": []
+ "": [
+  "FAR-00-25K",
+  "FAR-00-5K",
+  "FAR-MAN-5K",
+  "FAR-SEM-5K",
+  "SAL-SPE",
+  "DIS-ALU-150",
+  "CAF-MIS-1K",
+  "CAF-DEC-500",
+  "CAF-GRA-1K",
+  "CAF-ORZ-500",
+  "VIN-ROS-009",
+  "OLI-EVO-1L",
+  "OLI-EVO-5L",
+  "VIN-ROT-001",
+  "SAL-SAL",
+  "DIS-TOV-33",
+  "DIS-TOV-40",
+  "DIS-ROT-6",
+  "SAL-BRE",
+  "DIS-PEL-300"
+ ],
+ "prosecco": [
+  "VIN-PRO-002",
+  "VIN-PRO-003"
+ ],
+ "farina": [],
+ "acq": [],
+ "rosso": [],
+ "xyz": []
 }

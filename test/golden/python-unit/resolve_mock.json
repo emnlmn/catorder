@@ -1,3126 +1,3041 @@
 {
-  "em-001": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "per sabato",
-        "quote_start": 42,
-        "quote_end": 52,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-17",
-        "date": "2026-10-17",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "6 kg di mozzarella fiordilatte",
-        "quote_start": 64,
-        "quote_end": 94,
-        "product": "mozzarella fiordilatte",
-        "sku": "FOR-MOZ-FIO",
-        "qty": 6,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "mozzarella fiordilatte",
-          "sku": "FOR-MOZ-FIO",
-          "qty": 6,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "FOR-MOZ-FIO",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "FOR-MOZ-BUF",
-              "score": 0.541,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "6 kg di mozzarella fiordilatte",
-          "quote_start": 64,
-          "quote_end": 94,
-          "proposed_sku": "FOR-MOZ-FIO",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-17"
-    }
+ "em-001": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "per sabato",
+    "quote_start": 42,
+    "quote_end": 52,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-17",
+    "date": "2026-10-17",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "6 kg di mozzarella fiordilatte",
+    "quote_start": 64,
+    "quote_end": 94,
+    "product": "mozzarella fiordilatte",
+    "sku": "FOR-MOZ-FIO",
+    "qty": 6,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
   },
-  "em-002": {
-    "verified": [
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "mozzarella fiordilatte",
+     "sku": "FOR-MOZ-FIO",
+     "qty": 6,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
       {
-        "kind": "delivery",
-        "quote": "per sabato",
-        "quote_start": 18,
-        "quote_end": 28,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-17",
-        "date": "2026-10-17",
-        "status": "observed"
+       "sku": "FOR-MOZ-FIO",
+       "score": 1.25,
+       "why": "in their last 6 orders"
       },
       {
-        "kind": "item",
-        "quote": "12 bottiglie di Roccafiera Rosso Superiore",
-        "quote_start": 37,
-        "quote_end": 79,
-        "product": "Roccafiera Rosso Superiore",
-        "sku": "VIN-ROS-007",
-        "qty": 12,
-        "unit_text": "bottiglie",
-        "unit": "piece",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "10 bottiglie di Punta Calma Vermentino",
-        "quote_start": 82,
-        "quote_end": 120,
-        "product": "Punta Calma Vermentino",
-        "sku": "VIN-BIA-004",
-        "qty": 10,
-        "unit_text": "bottiglie",
-        "unit": "piece",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
+       "sku": "FOR-MOZ-BUF",
+       "score": 0.541,
+       "why": "name match"
       }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "Roccafiera Rosso Superiore",
-          "sku": "VIN-ROS-007",
-          "qty": 2,
-          "unit_text": "bottiglie",
-          "candidates": [
-            {
-              "sku": "VIN-ROS-007",
-              "score": 1.123,
-              "why": "name match"
-            },
-            {
-              "sku": "VIN-ROS-005",
-              "score": 0.403,
-              "why": "name match"
-            }
-          ],
-          "flags": [
-            {
-              "kind": "converted",
-              "level": "line",
-              "severity": "info",
-              "message": "12 bottiglie = 2 cases (case of 6 × 75 cl)."
-            }
-          ],
-          "quote": "12 bottiglie di Roccafiera Rosso Superiore",
-          "quote_start": 37,
-          "quote_end": 79,
-          "proposed_sku": "VIN-ROS-007",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "Punta Calma Vermentino",
-          "sku": "VIN-BIA-004",
-          "qty": 10,
-          "unit_text": "bottiglie",
-          "candidates": [
-            {
-              "sku": "VIN-BIA-004",
-              "score": 1.1,
-              "why": "name match"
-            }
-          ],
-          "flags": [
-            {
-              "kind": "pack_mismatch",
-              "level": "line",
-              "severity": "medium",
-              "message": "10 bottiglie of a product sold in case of 6 × 75 cl."
-            }
-          ],
-          "quote": "10 bottiglie di Punta Calma Vermentino",
-          "quote_start": 82,
-          "quote_end": 120,
-          "proposed_sku": "VIN-BIA-004",
-          "proposed_qty": 10,
-          "edited": 0,
-          "state": "flag",
-          "pos": 1
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-17"
+     ],
+     "flags": [],
+     "quote": "6 kg di mozzarella fiordilatte",
+     "quote_start": 64,
+     "quote_end": 94,
+     "proposed_sku": "FOR-MOZ-FIO",
+     "proposed_qty": 6,
+     "edited": 0
     }
-  },
-  "ph-001": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "x lunedi",
-        "quote_start": 0,
-        "quote_end": 8,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-19",
-        "date": "2026-10-19",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "caffe 4 cs",
-        "quote_start": 9,
-        "quote_end": 19,
-        "product": "caffe",
-        "sku": null,
-        "qty": 4,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "acqua nat 6 cs",
-        "quote_start": 20,
-        "quote_end": 34,
-        "product": "acqua nat",
-        "sku": "ACQ-NAT-1L",
-        "qty": 6,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "acqua friz 4 cs",
-        "quote_start": 35,
-        "quote_end": 50,
-        "product": "acqua friz",
-        "sku": "ACQ-FRIZ-1L",
-        "qty": 4,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "cola 3 cs",
-        "quote_start": 51,
-        "quote_end": 60,
-        "product": "cola",
-        "sku": "BEV-COL-33",
-        "qty": 3,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "lager 2 cs",
-        "quote_start": 61,
-        "quote_end": 71,
-        "product": "lager",
-        "sku": "BIR-LAG-33",
-        "qty": 2,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "tovaglioli 33 2 cs",
-        "quote_start": 72,
-        "quote_end": 90,
-        "product": "tovaglioli 33",
-        "sku": null,
-        "qty": 2,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "bicchierini 1 cs",
-        "quote_start": 91,
-        "quote_end": 107,
-        "product": "bicchierini",
-        "sku": "DIS-CUP-CAF",
-        "qty": 1,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "caffe",
-          "sku": "CAF-MIS-1K",
-          "qty": 4,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "CAF-MIS-1K",
-              "score": 1.15,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "DIS-CUP-CAF",
-              "score": 0.877,
-              "why": "in their last 3 orders"
-            },
-            {
-              "sku": "CAF-DEC-500",
-              "score": 0.727,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "caffe 4 cs",
-          "quote_start": 9,
-          "quote_end": 19,
-          "proposed_sku": "CAF-MIS-1K",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "acqua nat",
-          "sku": "ACQ-NAT-1L",
-          "qty": 6,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "ACQ-NAT-1L",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "ACQ-NAT-50",
-              "score": 0.889,
-              "why": "name match"
-            },
-            {
-              "sku": "ACQ-FRIZ-1L",
-              "score": 0.738,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "acqua nat 6 cs",
-          "quote_start": 20,
-          "quote_end": 34,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        },
-        {
-          "origin": "message",
-          "product_text": "acqua friz",
-          "sku": "ACQ-FRIZ-1L",
-          "qty": 4,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "ACQ-FRIZ-1L",
-              "score": 1.35,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "ACQ-FRIZ-50",
-              "score": 1,
-              "why": "name match"
-            },
-            {
-              "sku": "ACQ-NAT-1L",
-              "score": 0.538,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "acqua friz 4 cs",
-          "quote_start": 35,
-          "quote_end": 50,
-          "proposed_sku": "ACQ-FRIZ-1L",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 2
-        },
-        {
-          "origin": "message",
-          "product_text": "cola",
-          "sku": "BEV-COL-33",
-          "qty": 3,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "BEV-COL-33",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "cola 3 cs",
-          "quote_start": 51,
-          "quote_end": 60,
-          "proposed_sku": "BEV-COL-33",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 3
-        },
-        {
-          "origin": "message",
-          "product_text": "lager",
-          "sku": "BIR-LAG-33",
-          "qty": 2,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "BIR-LAG-33",
-              "score": 1.25,
-              "why": "in their last 5 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "lager 2 cs",
-          "quote_start": 61,
-          "quote_end": 71,
-          "proposed_sku": "BIR-LAG-33",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 4
-        },
-        {
-          "origin": "message",
-          "product_text": "tovaglioli 33",
-          "sku": "DIS-TOV-33",
-          "qty": 2,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "DIS-TOV-33",
-              "score": 1.15,
-              "why": "in 1 of their last orders"
-            },
-            {
-              "sku": "DIS-TOV-40",
-              "score": 0.846,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "tovaglioli 33 2 cs",
-          "quote_start": 72,
-          "quote_end": 90,
-          "proposed_sku": "DIS-TOV-33",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 5
-        },
-        {
-          "origin": "message",
-          "product_text": "bicchierini",
-          "sku": "DIS-CUP-CAF",
-          "qty": 1,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "DIS-CUP-CAF",
-              "score": 1.25,
-              "why": "in their last 3 orders"
-            },
-            {
-              "sku": "DIS-BIC-200",
-              "score": 0.99,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "bicchierini 1 cs",
-          "quote_start": 91,
-          "quote_end": 107,
-          "proposed_sku": "DIS-CUP-CAF",
-          "proposed_qty": 1,
-          "edited": 0,
-          "state": "ok",
-          "pos": 6
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-19"
-    }
-  },
-  "ph-002": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "x lunedi",
-        "quote_start": 12,
-        "quote_end": 20,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-19",
-        "date": "2026-10-19",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "pelati 3 cs",
-        "quote_start": 21,
-        "quote_end": 32,
-        "product": "pelati",
-        "sku": "POM-PEL-2.5",
-        "qty": 3,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "spaghetti 4 cs",
-        "quote_start": 33,
-        "quote_end": 47,
-        "product": "spaghetti",
-        "sku": "PAS-SPA-500",
-        "qty": 4,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "farina [?] 5kg x4",
-        "quote_start": 48,
-        "quote_end": 65,
-        "product": "farina [?] 5kg",
-        "sku": null,
-        "qty": 4,
-        "unit_text": null,
-        "unit": null,
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "mozzarella 4 kg",
-        "quote_start": 66,
-        "quote_end": 81,
-        "product": "mozzarella",
-        "sku": null,
-        "qty": 4,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "olio 5lt x2",
-        "quote_start": 82,
-        "quote_end": 93,
-        "product": "olio 5lt",
-        "sku": "OLI-EVO-5L",
-        "qty": 2,
-        "unit_text": null,
-        "unit": null,
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "acqua nat 5 cs",
-        "quote_start": 94,
-        "quote_end": 108,
-        "product": "acqua nat",
-        "sku": "ACQ-NAT-1L",
-        "qty": 5,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "pelati",
-          "sku": "POM-PEL-2.5",
-          "qty": 3,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "POM-PEL-2.5",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "pelati 3 cs",
-          "quote_start": 21,
-          "quote_end": 32,
-          "proposed_sku": "POM-PEL-2.5",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "spaghetti",
-          "sku": "PAS-SPA-500",
-          "qty": 4,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "PAS-SPA-500",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "spaghetti 4 cs",
-          "quote_start": 33,
-          "quote_end": 47,
-          "proposed_sku": "PAS-SPA-500",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        },
-        {
-          "origin": "message",
-          "product_text": "farina [?] 5kg",
-          "sku": "FAR-00-5K",
-          "qty": 4,
-          "unit_text": null,
-          "candidates": [
-            {
-              "sku": "FAR-00-5K",
-              "score": 1.15,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "FAR-MAN-5K",
-              "score": 0.827,
-              "why": "name match"
-            },
-            {
-              "sku": "FAR-00-25K",
-              "score": 0.752,
-              "why": "name match"
-            }
-          ],
-          "flags": [
-            {
-              "kind": "illegible",
-              "level": "line",
-              "severity": "medium",
-              "message": "Part of this line could not be read in the photo."
-            }
-          ],
-          "quote": "farina [?] 5kg x4",
-          "quote_start": 48,
-          "quote_end": 65,
-          "proposed_sku": "FAR-00-5K",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "check",
-          "pos": 2
-        },
-        {
-          "origin": "message",
-          "product_text": "mozzarella",
-          "sku": "FOR-MOZ-FIO",
-          "qty": 4,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "FOR-MOZ-FIO",
-              "score": 1.15,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "FOR-MOZ-BUF",
-              "score": 0.769,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "mozzarella 4 kg",
-          "quote_start": 66,
-          "quote_end": 81,
-          "proposed_sku": "FOR-MOZ-FIO",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 3
-        },
-        {
-          "origin": "message",
-          "product_text": "olio 5lt",
-          "sku": "OLI-EVO-5L",
-          "qty": 2,
-          "unit_text": null,
-          "candidates": [
-            {
-              "sku": "OLI-EVO-5L",
-              "score": 1.35,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "OLI-EVO-1L",
-              "score": 0.6,
-              "why": "name match"
-            },
-            {
-              "sku": "DIS-DET-5L",
-              "score": 0.42,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "olio 5lt x2",
-          "quote_start": 82,
-          "quote_end": 93,
-          "proposed_sku": "OLI-EVO-5L",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 4
-        },
-        {
-          "origin": "message",
-          "product_text": "acqua nat",
-          "sku": "ACQ-NAT-1L",
-          "qty": 5,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "ACQ-NAT-1L",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "ACQ-NAT-50",
-              "score": 0.889,
-              "why": "name match"
-            },
-            {
-              "sku": "ACQ-FRIZ-1L",
-              "score": 0.738,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "acqua nat 5 cs",
-          "quote_start": 94,
-          "quote_end": 108,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 5,
-          "edited": 0,
-          "state": "ok",
-          "pos": 5
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-19"
-    }
-  },
-  "ph-003": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "x giovedi",
-        "quote_start": 0,
-        "quote_end": 9,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-15",
-        "date": "2026-10-15",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "cotto 4 kg",
-        "quote_start": 10,
-        "quote_end": 20,
-        "product": "cotto",
-        "sku": "SAL-COT",
-        "qty": 4,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "crudo 3 kg",
-        "quote_start": 21,
-        "quote_end": 31,
-        "product": "crudo",
-        "sku": "SAL-PRC",
-        "qty": 3,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "speck 2 kg",
-        "quote_start": 32,
-        "quote_end": 42,
-        "product": "speck",
-        "sku": "SAL-SPE",
-        "qty": 2,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "taleggio 2 kg",
-        "quote_start": 43,
-        "quote_end": 56,
-        "product": "taleggio",
-        "sku": "FOR-TAL",
-        "qty": 2,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "gorgonzola 2 kg",
-        "quote_start": 57,
-        "quote_end": 72,
-        "product": "gorgonzola",
-        "sku": "FOR-GOR-DOL",
-        "qty": 2,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "mozzarella fiordilatte 3 kg",
-        "quote_start": 73,
-        "quote_end": 100,
-        "product": "mozzarella fiordilatte",
-        "sku": "FOR-MOZ-FIO",
-        "qty": 3,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "mortadella 2 kg",
-        "quote_start": 101,
-        "quote_end": 116,
-        "product": "mortadella",
-        "sku": "SAL-MOR",
-        "qty": 2,
-        "unit_text": "kg",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "cotto",
-          "sku": "SAL-COT",
-          "qty": 4,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "SAL-COT",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "BEV-CHI-20",
-              "score": 0.592,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "cotto 4 kg",
-          "quote_start": 10,
-          "quote_end": 20,
-          "proposed_sku": "SAL-COT",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "crudo",
-          "sku": "SAL-PRC",
-          "qty": 3,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "SAL-PRC",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "crudo 3 kg",
-          "quote_start": 21,
-          "quote_end": 31,
-          "proposed_sku": "SAL-PRC",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        },
-        {
-          "origin": "message",
-          "product_text": "speck",
-          "sku": "SAL-SPE",
-          "qty": 2,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "SAL-SPE",
-              "score": 1.25,
-              "why": "in their last 5 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "speck 2 kg",
-          "quote_start": 32,
-          "quote_end": 42,
-          "proposed_sku": "SAL-SPE",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 2
-        },
-        {
-          "origin": "message",
-          "product_text": "taleggio",
-          "sku": "FOR-TAL",
-          "qty": 2,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "FOR-TAL",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "taleggio 2 kg",
-          "quote_start": 43,
-          "quote_end": 56,
-          "proposed_sku": "FOR-TAL",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 3
-        },
-        {
-          "origin": "message",
-          "product_text": "gorgonzola",
-          "sku": "FOR-GOR-DOL",
-          "qty": 2,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "FOR-GOR-DOL",
-              "score": 1.25,
-              "why": "in their last 5 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "gorgonzola 2 kg",
-          "quote_start": 57,
-          "quote_end": 72,
-          "proposed_sku": "FOR-GOR-DOL",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 4
-        },
-        {
-          "origin": "message",
-          "product_text": "mozzarella fiordilatte",
-          "sku": "FOR-MOZ-FIO",
-          "qty": 3,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "FOR-MOZ-FIO",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "FOR-MOZ-BUF",
-              "score": 0.541,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "mozzarella fiordilatte 3 kg",
-          "quote_start": 73,
-          "quote_end": 100,
-          "proposed_sku": "FOR-MOZ-FIO",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 5
-        },
-        {
-          "origin": "message",
-          "product_text": "mortadella",
-          "sku": "SAL-MOR",
-          "qty": 2,
-          "unit_text": "kg",
-          "candidates": [
-            {
-              "sku": "SAL-MOR",
-              "score": 1.25,
-              "why": "in 1 of their last orders"
-            }
-          ],
-          "flags": [],
-          "quote": "mortadella 2 kg",
-          "quote_start": 101,
-          "quote_end": 116,
-          "proposed_sku": "SAL-MOR",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 6
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-15"
-    }
-  },
-  "ph-004": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "x martedi",
-        "quote_start": 12,
-        "quote_end": 21,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-20",
-        "date": "2026-10-20",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "acqua nat 1l 6 cs",
-        "quote_start": 22,
-        "quote_end": 39,
-        "product": "acqua nat 1l",
-        "sku": "ACQ-NAT-1L",
-        "qty": 6,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "cola 3 cs",
-        "quote_start": 40,
-        "quote_end": 49,
-        "product": "cola",
-        "sku": "BEV-COL-33",
-        "qty": 3,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "penne 3 cs",
-        "quote_start": 50,
-        "quote_end": 60,
-        "product": "penne",
-        "sku": "PAS-PEN-500",
-        "qty": 3,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "passata 2 cs",
-        "quote_start": 61,
-        "quote_end": 73,
-        "product": "passata",
-        "sku": "POM-PAS-700",
-        "qty": 2,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "caffe 2 cs",
-        "quote_start": 74,
-        "quote_end": 84,
-        "product": "caffe",
-        "sku": null,
-        "qty": 2,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "olio 1 l 6 pz",
-        "quote_start": 85,
-        "quote_end": 98,
-        "product": "olio 1 l",
-        "sku": "OLI-EVO-1L",
-        "qty": 6,
-        "unit_text": "pz",
-        "unit": "piece",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "acqua nat 1l",
-          "sku": "ACQ-NAT-1L",
-          "qty": 6,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "ACQ-NAT-1L",
-              "score": 1.239,
-              "why": "in their last order"
-            },
-            {
-              "sku": "ACQ-NAT-50",
-              "score": 0.633,
-              "why": "name match"
-            },
-            {
-              "sku": "ACQ-FRIZ-1L",
-              "score": 0.626,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "acqua nat 1l 6 cs",
-          "quote_start": 22,
-          "quote_end": 39,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "cola",
-          "sku": "BEV-COL-33",
-          "qty": 3,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "BEV-COL-33",
-              "score": 1.25,
-              "why": "in their last order"
-            }
-          ],
-          "flags": [],
-          "quote": "cola 3 cs",
-          "quote_start": 40,
-          "quote_end": 49,
-          "proposed_sku": "BEV-COL-33",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        },
-        {
-          "origin": "message",
-          "product_text": "penne",
-          "sku": "PAS-PEN-500",
-          "qty": 3,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "PAS-PEN-500",
-              "score": 1.25,
-              "why": "in their last order"
-            }
-          ],
-          "flags": [],
-          "quote": "penne 3 cs",
-          "quote_start": 50,
-          "quote_end": 60,
-          "proposed_sku": "PAS-PEN-500",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 2
-        },
-        {
-          "origin": "message",
-          "product_text": "passata",
-          "sku": "POM-PAS-700",
-          "qty": 2,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "POM-PAS-700",
-              "score": 1.25,
-              "why": "in their last order"
-            },
-            {
-              "sku": "ACQ-FRIZ-1L",
-              "score": 0.828,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "passata 2 cs",
-          "quote_start": 61,
-          "quote_end": 73,
-          "proposed_sku": "POM-PAS-700",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 3
-        },
-        {
-          "origin": "message",
-          "product_text": "caffe",
-          "sku": "CAF-MIS-1K",
-          "qty": 2,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "CAF-MIS-1K",
-              "score": 1.15,
-              "why": "in their last order"
-            },
-            {
-              "sku": "CAF-DEC-500",
-              "score": 0.727,
-              "why": "name match"
-            },
-            {
-              "sku": "CAF-GRA-1K",
-              "score": 0.727,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "caffe 2 cs",
-          "quote_start": 74,
-          "quote_end": 84,
-          "proposed_sku": "CAF-MIS-1K",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 4
-        },
-        {
-          "origin": "message",
-          "product_text": "olio 1 l",
-          "sku": "OLI-EVO-1L",
-          "qty": 6,
-          "unit_text": "pz",
-          "candidates": [
-            {
-              "sku": "OLI-EVO-1L",
-              "score": 1.35,
-              "why": "in their last order"
-            },
-            {
-              "sku": "OLI-EVO-5L",
-              "score": 0.657,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "olio 1 l 6 pz",
-          "quote_start": 85,
-          "quote_end": 98,
-          "proposed_sku": "OLI-EVO-1L",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 5
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-20"
-    }
-  },
-  "vo-001": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "Per domani",
-        "quote_start": 45,
-        "quote_end": 55,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-16",
-        "date": "2026-10-16",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "tre, anzi quattro casse di pelati",
-        "quote_start": 67,
-        "quote_end": 100,
-        "product": "pelati",
-        "sku": "POM-PEL-2.5",
-        "qty": 4,
-        "unit_text": "casse",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "due chili di grana",
-        "quote_start": 103,
-        "quote_end": 121,
-        "product": "grana",
-        "sku": "FOR-GRA-24",
-        "qty": 2,
-        "unit_text": "chili",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "pelati",
-          "sku": "POM-PEL-2.5",
-          "qty": 4,
-          "unit_text": "casse",
-          "candidates": [
-            {
-              "sku": "POM-PEL-2.5",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "tre, anzi quattro casse di pelati",
-          "quote_start": 67,
-          "quote_end": 100,
-          "proposed_sku": "POM-PEL-2.5",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "grana",
-          "sku": "FOR-GRA-24",
-          "qty": 2,
-          "unit_text": "chili",
-          "candidates": [
-            {
-              "sku": "FOR-GRA-24",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "CAF-GRA-1K",
-              "score": 0.8,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "due chili di grana",
-          "quote_start": 103,
-          "quote_end": 121,
-          "proposed_sku": "FOR-GRA-24",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-16"
-    }
-  },
-  "vo-002": {
-    "verified": [
-      {
-        "kind": "usual",
-        "quote": "Il solito",
-        "quote_start": 41,
-        "quote_end": 50,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "delivery",
-        "quote": "per lunedì",
-        "quote_start": 51,
-        "quote_end": 61,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-19",
-        "date": "2026-10-19",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "aggiungi due casse di tonica",
-        "quote_start": 64,
-        "quote_end": 92,
-        "product": "tonica",
-        "sku": "BEV-TON-20",
-        "qty": 2,
-        "unit_text": "casse",
-        "unit": "case",
-        "op": "add",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "usual",
-          "product_text": "Fonte Brivio naturale 1 l",
-          "sku": "ACQ-NAT-1L",
-          "qty": 6,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "Il solito",
-          "quote_start": 41,
-          "quote_end": 50,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "usual",
-          "product_text": "Fonte Brivio frizzante 1 l",
-          "sku": "ACQ-FRIZ-1L",
-          "qty": 4,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "Il solito",
-          "quote_start": 41,
-          "quote_end": 50,
-          "proposed_sku": "ACQ-FRIZ-1L",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        },
-        {
-          "origin": "usual",
-          "product_text": "Caffè Ardelia Miscela Bar 1 kg",
-          "sku": "CAF-MIS-1K",
-          "qty": 3,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "Il solito",
-          "quote_start": 41,
-          "quote_end": 50,
-          "proposed_sku": "CAF-MIS-1K",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 2
-        },
-        {
-          "origin": "usual",
-          "product_text": "Cola Zeffiro 33cl",
-          "sku": "BEV-COL-33",
-          "qty": 2,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "Il solito",
-          "quote_start": 41,
-          "quote_end": 50,
-          "proposed_sku": "BEV-COL-33",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 3
-        },
-        {
-          "origin": "usual",
-          "product_text": "Tornasco Lager 33cl",
-          "sku": "BIR-LAG-33",
-          "qty": 2,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "Il solito",
-          "quote_start": 41,
-          "quote_end": 50,
-          "proposed_sku": "BIR-LAG-33",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 4
-        },
-        {
-          "origin": "usual",
-          "product_text": "Bicchierini caffè 80cc Linea Pulita",
-          "sku": "DIS-CUP-CAF",
-          "qty": 1,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "Il solito",
-          "quote_start": 41,
-          "quote_end": 50,
-          "proposed_sku": "DIS-CUP-CAF",
-          "proposed_qty": 1,
-          "edited": 0,
-          "state": "ok",
-          "pos": 5
-        },
-        {
-          "origin": "message",
-          "product_text": "tonica",
-          "sku": "BEV-TON-20",
-          "qty": 2,
-          "unit_text": "casse",
-          "candidates": [
-            {
-              "sku": "BEV-TON-20",
-              "score": 1.1,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "aggiungi due casse di tonica",
-          "quote_start": 64,
-          "quote_end": 92,
-          "proposed_sku": "BEV-TON-20",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 6
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-19"
-    }
-  },
-  "vo-003": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "Per martedì",
-        "quote_start": 40,
-        "quote_end": 51,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-20",
-        "date": "2026-10-20",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "tre chili di prosciutto cotto",
-        "quote_start": 63,
-        "quote_end": 92,
-        "product": "prosciutto cotto",
-        "sku": "SAL-COT",
-        "qty": 3,
-        "unit_text": "chili",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "due chili di speck",
-        "quote_start": 94,
-        "quote_end": 112,
-        "product": "speck",
-        "sku": "SAL-SPE",
-        "qty": 2,
-        "unit_text": "chili",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "cinque chili di grana",
-        "quote_start": 115,
-        "quote_end": 136,
-        "product": "grana",
-        "sku": "FOR-GRA-24",
-        "qty": 5,
-        "unit_text": "chili",
-        "unit": "kg",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "prosciutto cotto",
-          "sku": "SAL-COT",
-          "qty": 3,
-          "unit_text": "chili",
-          "candidates": [
-            {
-              "sku": "SAL-COT",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "SAL-PRC",
-              "score": 0.963,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "tre chili di prosciutto cotto",
-          "quote_start": 63,
-          "quote_end": 92,
-          "proposed_sku": "SAL-COT",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "speck",
-          "sku": "SAL-SPE",
-          "qty": 2,
-          "unit_text": "chili",
-          "candidates": [
-            {
-              "sku": "SAL-SPE",
-              "score": 1.25,
-              "why": "in their last 5 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "due chili di speck",
-          "quote_start": 94,
-          "quote_end": 112,
-          "proposed_sku": "SAL-SPE",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        },
-        {
-          "origin": "message",
-          "product_text": "grana",
-          "sku": "FOR-GRA-24",
-          "qty": 5,
-          "unit_text": "chili",
-          "candidates": [
-            {
-              "sku": "FOR-GRA-24",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "CAF-GRA-1K",
-              "score": 0.8,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "cinque chili di grana",
-          "quote_start": 115,
-          "quote_end": 136,
-          "proposed_sku": "FOR-GRA-24",
-          "proposed_qty": 5,
-          "edited": 0,
-          "state": "ok",
-          "pos": 2
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-20"
-    }
-  },
-  "vo-004": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "Per martedì",
-        "quote_start": 49,
-        "quote_end": 60,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-20",
-        "date": "2026-10-20",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "tre casse di spaghetti",
-        "quote_start": 61,
-        "quote_end": 83,
-        "product": "spaghetti",
-        "sku": "PAS-SPA-500",
-        "qty": 3,
-        "unit_text": "casse",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "due casse di passata",
-        "quote_start": 86,
-        "quote_end": 106,
-        "product": "passata",
-        "sku": "POM-PAS-700",
-        "qty": 2,
-        "unit_text": "casse",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "spaghetti",
-          "sku": "PAS-SPA-500",
-          "qty": 3,
-          "unit_text": "casse",
-          "candidates": [
-            {
-              "sku": "PAS-SPA-500",
-              "score": 1.25,
-              "why": "in their last order"
-            }
-          ],
-          "flags": [],
-          "quote": "tre casse di spaghetti",
-          "quote_start": 61,
-          "quote_end": 83,
-          "proposed_sku": "PAS-SPA-500",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "passata",
-          "sku": "POM-PAS-700",
-          "qty": 2,
-          "unit_text": "casse",
-          "candidates": [
-            {
-              "sku": "POM-PAS-700",
-              "score": 1.25,
-              "why": "in their last order"
-            },
-            {
-              "sku": "ACQ-FRIZ-1L",
-              "score": 0.828,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "due casse di passata",
-          "quote_start": 86,
-          "quote_end": 106,
-          "proposed_sku": "POM-PAS-700",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-20"
-    }
-  },
-  "wa-001": {
-    "verified": [
-      {
-        "kind": "usual",
-        "quote": "il solito",
-        "quote_start": 12,
-        "quote_end": 21,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "delivery",
-        "quote": "x venerdi",
-        "quote_start": 22,
-        "quote_end": 31,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-16",
-        "date": "2026-10-16",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "6 cs di quello rosso dell'altra volta",
-        "quote_start": 34,
-        "quote_end": 71,
-        "product": "quello rosso dell'altra volta",
-        "sku": null,
-        "qty": 6,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "add",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "usual",
-          "product_text": "Fonte Brivio naturale 1 l",
-          "sku": "ACQ-NAT-1L",
-          "qty": 6,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 12,
-          "quote_end": 21,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "usual",
-          "product_text": "Fonte Brivio frizzante 1 l",
-          "sku": "ACQ-FRIZ-1L",
-          "qty": 4,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 12,
-          "quote_end": 21,
-          "proposed_sku": "ACQ-FRIZ-1L",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        },
-        {
-          "origin": "usual",
-          "product_text": "Caffè Ardelia Miscela Bar 1 kg",
-          "sku": "CAF-MIS-1K",
-          "qty": 3,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 12,
-          "quote_end": 21,
-          "proposed_sku": "CAF-MIS-1K",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 2
-        },
-        {
-          "origin": "usual",
-          "product_text": "Cola Zeffiro 33cl",
-          "sku": "BEV-COL-33",
-          "qty": 2,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 12,
-          "quote_end": 21,
-          "proposed_sku": "BEV-COL-33",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 3
-        },
-        {
-          "origin": "usual",
-          "product_text": "Tornasco Lager 33cl",
-          "sku": "BIR-LAG-33",
-          "qty": 2,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 12,
-          "quote_end": 21,
-          "proposed_sku": "BIR-LAG-33",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 4
-        },
-        {
-          "origin": "usual",
-          "product_text": "Bicchierini caffè 80cc Linea Pulita",
-          "sku": "DIS-CUP-CAF",
-          "qty": 1,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 12,
-          "quote_end": 21,
-          "proposed_sku": "DIS-CUP-CAF",
-          "proposed_qty": 1,
-          "edited": 0,
-          "state": "ok",
-          "pos": 5
-        },
-        {
-          "origin": "message",
-          "product_text": "quello rosso dell'altra volta",
-          "sku": "VIN-ROS-005",
-          "qty": 6,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "VIN-ROS-005",
-              "score": 0.977,
-              "why": "in their last 2 orders"
-            },
-            {
-              "sku": "VIN-ROS-007",
-              "score": 0.827,
-              "why": "name match"
-            },
-            {
-              "sku": "BIR-ROS-33",
-              "score": 0.8,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "6 cs di quello rosso dell'altra volta",
-          "quote_start": 34,
-          "quote_end": 71,
-          "proposed_sku": "VIN-ROS-005",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 6
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-16"
-    }
-  },
-  "wa-002": {
-    "verified": [
-      {
-        "kind": "usual",
-        "quote": "il solito",
-        "quote_start": 18,
-        "quote_end": 27,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "delivery",
-        "quote": "per sabato",
-        "quote_start": 28,
-        "quote_end": 38,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-17",
-        "date": "2026-10-17",
-        "status": "observed"
-      },
-      {
-        "kind": "remove",
-        "quote": "niente acqua frizzante stavolta",
-        "quote_start": 42,
-        "quote_end": 73,
-        "product": "acqua frizzante",
-        "sku": "ACQ-FRIZ-1L",
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "pos": 0,
-          "origin": "usual",
-          "product_text": "Fonte Brivio naturale 1 l",
-          "sku": "ACQ-NAT-1L",
-          "qty": 5,
-          "unit_text": null,
-          "state": "ok",
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 18,
-          "quote_end": 27,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 5,
-          "edited": 0
-        },
-        {
-          "pos": 1,
-          "origin": "usual",
-          "product_text": "Spaghetti n.5 Lombarelli 500g",
-          "sku": "PAS-SPA-500",
-          "qty": 4,
-          "unit_text": null,
-          "state": "ok",
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 18,
-          "quote_end": 27,
-          "proposed_sku": "PAS-SPA-500",
-          "proposed_qty": 4,
-          "edited": 0
-        },
-        {
-          "pos": 2,
-          "origin": "usual",
-          "product_text": "Pelati Terre Calvani 2,5 kg",
-          "sku": "POM-PEL-2.5",
-          "qty": 3,
-          "unit_text": null,
-          "state": "ok",
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 18,
-          "quote_end": 27,
-          "proposed_sku": "POM-PEL-2.5",
-          "proposed_qty": 3,
-          "edited": 0
-        },
-        {
-          "pos": 3,
-          "origin": "usual",
-          "product_text": "Olio extravergine Ca' Marone 5 l",
-          "sku": "OLI-EVO-5L",
-          "qty": 2,
-          "unit_text": null,
-          "state": "ok",
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 18,
-          "quote_end": 27,
-          "proposed_sku": "OLI-EVO-5L",
-          "proposed_qty": 2,
-          "edited": 0
-        },
-        {
-          "pos": 4,
-          "origin": "usual",
-          "product_text": "Farina 00 Aldarica 5 kg",
-          "sku": "FAR-00-5K",
-          "qty": 4,
-          "unit_text": null,
-          "state": "ok",
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 18,
-          "quote_end": 27,
-          "proposed_sku": "FAR-00-5K",
-          "proposed_qty": 4,
-          "edited": 0
-        },
-        {
-          "pos": 5,
-          "origin": "usual",
-          "product_text": "Mozzarella fiordilatte La Casara",
-          "sku": "FOR-MOZ-FIO",
-          "qty": 4,
-          "unit_text": null,
-          "state": "ok",
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 18,
-          "quote_end": 27,
-          "proposed_sku": "FOR-MOZ-FIO",
-          "proposed_qty": 4,
-          "edited": 0
-        },
-        {
-          "pos": 6,
-          "origin": "usual",
-          "product_text": "Grana Vallesella 24 mesi",
-          "sku": "FOR-GRA-24",
-          "qty": 3,
-          "unit_text": null,
-          "state": "ok",
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 18,
-          "quote_end": 27,
-          "proposed_sku": "FOR-GRA-24",
-          "proposed_qty": 3,
-          "edited": 0
-        },
-        {
-          "pos": 7,
-          "origin": "usual",
-          "product_text": "Barbera Cascina Orsola 75cl",
-          "sku": "VIN-ROS-009",
-          "qty": 2,
-          "unit_text": null,
-          "state": "ok",
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 18,
-          "quote_end": 27,
-          "proposed_sku": "VIN-ROS-009",
-          "proposed_qty": 2,
-          "edited": 0
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-17"
-    }
-  },
-  "wa-003": {
-    "verified": [
-      {
-        "kind": "item",
-        "quote": "4 cs di prosecco",
-        "quote_start": 21,
-        "quote_end": 37,
-        "product": "prosecco",
-        "sku": null,
-        "qty": 4,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "2 cs di aranciata",
-        "quote_start": 40,
-        "quote_end": 57,
-        "product": "aranciata",
-        "sku": "BEV-ARA-20",
-        "qty": 2,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "delivery",
-        "quote": "per lunedi",
-        "quote_start": 58,
-        "quote_end": 68,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-19",
-        "date": "2026-10-19",
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "prosecco",
-          "sku": null,
-          "qty": 4,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "VIN-PRO-002",
-              "score": 0.8,
-              "why": "name match"
-            },
-            {
-              "sku": "VIN-PRO-003",
-              "score": 0.694,
-              "why": "name match"
-            }
-          ],
-          "flags": [
-            {
-              "kind": "ambiguous_product",
-              "level": "line",
-              "severity": "medium",
-              "message": "«prosecco» could be Prosecco Brut Vallecorta 75cl or Prosecco Extra Dry Vallecorta 75cl."
-            }
-          ],
-          "quote": "4 cs di prosecco",
-          "quote_start": 21,
-          "quote_end": 37,
-          "proposed_sku": null,
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "check",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "aranciata",
-          "sku": "BEV-ARA-20",
-          "qty": 2,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "BEV-ARA-20",
-              "score": 1.1,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "2 cs di aranciata",
-          "quote_start": 40,
-          "quote_end": 57,
-          "proposed_sku": "BEV-ARA-20",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-19"
-    }
-  },
-  "wa-004": {
-    "verified": [
-      {
-        "kind": "item",
-        "quote": "2 cs di quella birra artigianale nuova che avete messo",
-        "quote_start": 21,
-        "quote_end": 75,
-        "product": "birra artigianale nuova",
-        "sku": null,
-        "qty": 2,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "3 cs di cola",
-        "quote_start": 79,
-        "quote_end": 91,
-        "product": "cola",
-        "sku": "BEV-COL-33",
-        "qty": 3,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "birra artigianale nuova",
-          "sku": null,
-          "qty": 2,
-          "unit_text": "cs",
-          "candidates": [],
-          "flags": [
-            {
-              "kind": "unknown_product",
-              "level": "line",
-              "severity": "high",
-              "message": "No product in the catalogue matches «birra artigianale nuova»."
-            }
-          ],
-          "quote": "2 cs di quella birra artigianale nuova che avete messo",
-          "quote_start": 21,
-          "quote_end": 75,
-          "proposed_sku": null,
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "flag",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "cola",
-          "sku": "BEV-COL-33",
-          "qty": 3,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "BEV-COL-33",
-              "score": 1.25,
-              "why": "in their last 6 orders"
-            }
-          ],
-          "flags": [],
-          "quote": "3 cs di cola",
-          "quote_start": 79,
-          "quote_end": 91,
-          "proposed_sku": "BEV-COL-33",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        }
-      ],
-      "flags": [],
-      "delivery_date": null
-    }
-  },
-  "wa-005": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "x lunedi",
-        "quote_start": 6,
-        "quote_end": 14,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-19",
-        "date": "2026-10-19",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "60 cs acqua naturale",
-        "quote_start": 15,
-        "quote_end": 35,
-        "product": "acqua naturale",
-        "sku": "ACQ-NAT-1L",
-        "qty": 60,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "acqua naturale",
-          "sku": "ACQ-NAT-1L",
-          "qty": 60,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "ACQ-NAT-1L",
-              "score": 1.35,
-              "why": "in their last 6 orders"
-            },
-            {
-              "sku": "ACQ-NAT-50",
-              "score": 0.796,
-              "why": "name match"
-            },
-            {
-              "sku": "BEV-TON-20",
-              "score": 0.417,
-              "why": "name match"
-            }
-          ],
-          "flags": [
-            {
-              "kind": "unusual_quantity",
-              "level": "line",
-              "severity": "medium",
-              "message": "60 is far from this customer's usual 5 for Fonte Brivio naturale 1 l."
-            }
-          ],
-          "quote": "60 cs acqua naturale",
-          "quote_start": 15,
-          "quote_end": 35,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 60,
-          "edited": 0,
-          "state": "flag",
-          "pos": 0
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-19"
-    }
-  },
-  "wa-006": {
-    "verified": [
-      {
-        "kind": "usual",
-        "quote": "il solito",
-        "quote_start": 11,
-        "quote_end": 20,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "delivery",
-        "quote": "per martedi",
-        "quote_start": 21,
-        "quote_end": 32,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-20",
-        "date": "2026-10-20",
-        "status": "observed"
-      },
-      {
-        "kind": "discount_request",
-        "quote": "lo sconto 8%",
-        "quote_start": 48,
-        "quote_end": 60,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "8%",
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "usual",
-          "product_text": "Fonte Brivio naturale 1 l",
-          "sku": "ACQ-NAT-1L",
-          "qty": 6,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 11,
-          "quote_end": 20,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "usual",
-          "product_text": "Fonte Brivio frizzante 1 l",
-          "sku": "ACQ-FRIZ-1L",
-          "qty": 4,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 11,
-          "quote_end": 20,
-          "proposed_sku": "ACQ-FRIZ-1L",
-          "proposed_qty": 4,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        },
-        {
-          "origin": "usual",
-          "product_text": "Caffè Ardelia Miscela Bar 1 kg",
-          "sku": "CAF-MIS-1K",
-          "qty": 3,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 11,
-          "quote_end": 20,
-          "proposed_sku": "CAF-MIS-1K",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 2
-        },
-        {
-          "origin": "usual",
-          "product_text": "Cola Zeffiro 33cl",
-          "sku": "BEV-COL-33",
-          "qty": 2,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 11,
-          "quote_end": 20,
-          "proposed_sku": "BEV-COL-33",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 3
-        },
-        {
-          "origin": "usual",
-          "product_text": "Tornasco Lager 33cl",
-          "sku": "BIR-LAG-33",
-          "qty": 2,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 11,
-          "quote_end": 20,
-          "proposed_sku": "BIR-LAG-33",
-          "proposed_qty": 2,
-          "edited": 0,
-          "state": "ok",
-          "pos": 4
-        },
-        {
-          "origin": "usual",
-          "product_text": "Bicchierini caffè 80cc Linea Pulita",
-          "sku": "DIS-CUP-CAF",
-          "qty": 1,
-          "unit_text": null,
-          "candidates": [],
-          "flags": [],
-          "quote": "il solito",
-          "quote_start": 11,
-          "quote_end": 20,
-          "proposed_sku": "DIS-CUP-CAF",
-          "proposed_qty": 1,
-          "edited": 0,
-          "state": "ok",
-          "pos": 5
-        }
-      ],
-      "flags": [
-        {
-          "kind": "discount_beyond_terms",
-          "level": "order",
-          "severity": "high",
-          "message": "The customer asks for 8%; the agreed discount is 5%."
-        }
-      ],
-      "delivery_date": "2026-10-20"
-    }
-  },
-  "wa-007": {
-    "verified": [
-      {
-        "kind": "item",
-        "quote": "6 bt di olio",
-        "quote_start": 12,
-        "quote_end": 24,
-        "product": "olio",
-        "sku": "OLI-EVO-1L",
-        "qty": 6,
-        "unit_text": "bt",
-        "unit": "piece",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "delivery",
-        "quote": "x sabato",
-        "quote_start": 25,
-        "quote_end": 33,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-17",
-        "date": "2026-10-17",
-        "status": "observed"
-      },
-      {
-        "kind": "price_request",
-        "quote": "l'olio a 7 euro",
-        "quote_start": 40,
-        "quote_end": 55,
-        "product": "olio",
-        "sku": "OLI-EVO-1L",
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "7 euro",
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "olio",
-          "sku": "OLI-EVO-1L",
-          "qty": 6,
-          "unit_text": "bt",
-          "candidates": [
-            {
-              "sku": "OLI-EVO-1L",
-              "score": 1.25,
-              "why": "in their last 3 orders"
-            },
-            {
-              "sku": "OLI-EVO-5L",
-              "score": 0.8,
-              "why": "name match"
-            },
-            {
-              "sku": "OLI-SEM-10L",
-              "score": 0.727,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "6 bt di olio",
-          "quote_start": 12,
-          "quote_end": 24,
-          "proposed_sku": "OLI-EVO-1L",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        }
-      ],
-      "flags": [
-        {
-          "kind": "price_below_terms",
-          "level": "order",
-          "severity": "high",
-          "message": "The customer expects €7.00 for Olio extravergine Ca' Marone 1 l; the agreed price is €7.90."
-        }
-      ],
-      "delivery_date": "2026-10-17"
-    }
-  },
-  "wa-008": {
-    "verified": [
-      {
-        "kind": "usual",
-        "quote": "il solito",
-        "quote_start": 40,
-        "quote_end": 49,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "delivery",
-        "quote": "per lunedi",
-        "quote_start": 50,
-        "quote_end": 60,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-19",
-        "date": "2026-10-19",
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [],
-      "flags": [
-        {
-          "kind": "no_history",
-          "level": "order",
-          "severity": "medium",
-          "message": "No order history: «the usual» cannot be computed."
-        }
-      ],
-      "delivery_date": "2026-10-19"
-    }
-  },
-  "wa-009": {
-    "verified": [],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [],
-      "flags": [],
-      "delivery_date": null
-    }
-  },
-  "wa-010": {
-    "verified": [
-      {
-        "kind": "delivery",
-        "quote": "per domani",
-        "quote_start": 3,
-        "quote_end": 13,
-        "product": "",
-        "sku": null,
-        "qty": null,
-        "unit_text": null,
-        "unit": null,
-        "op": null,
-        "value": "2026-10-19",
-        "date": "2026-10-19",
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "6 cs di acqua naturale",
-        "quote_start": 22,
-        "quote_end": 44,
-        "product": "acqua naturale",
-        "sku": "ACQ-NAT-1L",
-        "qty": 6,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      },
-      {
-        "kind": "item",
-        "quote": "3 cs di penne",
-        "quote_start": 47,
-        "quote_end": 60,
-        "product": "penne",
-        "sku": "PAS-PEN-500",
-        "qty": 3,
-        "unit_text": "cs",
-        "unit": "case",
-        "op": "set",
-        "value": null,
-        "date": null,
-        "status": "observed"
-      }
-    ],
-    "drops": {
-      "no_quote": 0,
-      "short_quote": 0,
-      "bad_kind": 0
-    },
-    "result": {
-      "lines": [
-        {
-          "origin": "message",
-          "product_text": "acqua naturale",
-          "sku": "ACQ-NAT-1L",
-          "qty": 6,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "ACQ-NAT-1L",
-              "score": 1.35,
-              "why": "in their last order"
-            },
-            {
-              "sku": "ACQ-NAT-50",
-              "score": 0.796,
-              "why": "name match"
-            },
-            {
-              "sku": "BEV-TON-20",
-              "score": 0.417,
-              "why": "name match"
-            }
-          ],
-          "flags": [],
-          "quote": "6 cs di acqua naturale",
-          "quote_start": 22,
-          "quote_end": 44,
-          "proposed_sku": "ACQ-NAT-1L",
-          "proposed_qty": 6,
-          "edited": 0,
-          "state": "ok",
-          "pos": 0
-        },
-        {
-          "origin": "message",
-          "product_text": "penne",
-          "sku": "PAS-PEN-500",
-          "qty": 3,
-          "unit_text": "cs",
-          "candidates": [
-            {
-              "sku": "PAS-PEN-500",
-              "score": 1.25,
-              "why": "in their last order"
-            }
-          ],
-          "flags": [],
-          "quote": "3 cs di penne",
-          "quote_start": 47,
-          "quote_end": 60,
-          "proposed_sku": "PAS-PEN-500",
-          "proposed_qty": 3,
-          "edited": 0,
-          "state": "ok",
-          "pos": 1
-        }
-      ],
-      "flags": [],
-      "delivery_date": "2026-10-19"
-    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-17"
   }
+ },
+ "em-002": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "per sabato",
+    "quote_start": 18,
+    "quote_end": 28,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-17",
+    "date": "2026-10-17",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "12 bottiglie di Roccafiera Rosso Superiore",
+    "quote_start": 37,
+    "quote_end": 79,
+    "product": "Roccafiera Rosso Superiore",
+    "sku": "VIN-ROS-007",
+    "qty": 12,
+    "unit_text": "bottiglie",
+    "unit": "piece",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "10 bottiglie di Punta Calma Vermentino",
+    "quote_start": 82,
+    "quote_end": 120,
+    "product": "Punta Calma Vermentino",
+    "sku": "VIN-BIA-004",
+    "qty": 10,
+    "unit_text": "bottiglie",
+    "unit": "piece",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "Roccafiera Rosso Superiore",
+     "sku": null,
+     "qty": 12,
+     "unit_text": "bottiglie",
+     "state": "check",
+     "candidates": [
+      {
+       "sku": "VIN-ROS-007",
+       "score": 0.721,
+       "why": "name match"
+      }
+     ],
+     "flags": [
+      {
+       "kind": "ambiguous_product",
+       "level": "line",
+       "severity": "medium",
+       "message": "«Roccafiera Rosso Superiore» could be Roccafiera Superior Red 75cl."
+      }
+     ],
+     "quote": "12 bottiglie di Roccafiera Rosso Superiore",
+     "quote_start": 37,
+     "quote_end": 79,
+     "proposed_sku": null,
+     "proposed_qty": 12,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "Punta Calma Vermentino",
+     "sku": "VIN-BIA-004",
+     "qty": 10,
+     "unit_text": "bottiglie",
+     "state": "flag",
+     "candidates": [
+      {
+       "sku": "VIN-BIA-004",
+       "score": 1.1,
+       "why": "name match"
+      }
+     ],
+     "flags": [
+      {
+       "kind": "pack_mismatch",
+       "level": "line",
+       "severity": "medium",
+       "message": "10 bottiglie of a product sold in case of 6 × 75 cl."
+      }
+     ],
+     "quote": "10 bottiglie di Punta Calma Vermentino",
+     "quote_start": 82,
+     "quote_end": 120,
+     "proposed_sku": "VIN-BIA-004",
+     "proposed_qty": 10,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-17"
+  }
+ },
+ "ph-001": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "x lunedi",
+    "quote_start": 0,
+    "quote_end": 8,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "date": "2026-10-19",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "caffe 4 cs",
+    "quote_start": 9,
+    "quote_end": 19,
+    "product": "caffe",
+    "sku": null,
+    "qty": 4,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "acqua nat 6 cs",
+    "quote_start": 20,
+    "quote_end": 34,
+    "product": "acqua nat",
+    "sku": "ACQ-NAT-1L",
+    "qty": 6,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "acqua friz 4 cs",
+    "quote_start": 35,
+    "quote_end": 50,
+    "product": "acqua friz",
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "cola 3 cs",
+    "quote_start": 51,
+    "quote_end": 60,
+    "product": "cola",
+    "sku": "BEV-COL-33",
+    "qty": 3,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "lager 2 cs",
+    "quote_start": 61,
+    "quote_end": 71,
+    "product": "lager",
+    "sku": "BIR-LAG-33",
+    "qty": 2,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "tovaglioli 33 2 cs",
+    "quote_start": 72,
+    "quote_end": 90,
+    "product": "tovaglioli 33",
+    "sku": null,
+    "qty": 2,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "bicchierini 1 cs",
+    "quote_start": 91,
+    "quote_end": 107,
+    "product": "bicchierini",
+    "sku": "DIS-CUP-CAF",
+    "qty": 1,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "caffe",
+     "sku": null,
+     "qty": 4,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «caffe»."
+      }
+     ],
+     "quote": "caffe 4 cs",
+     "quote_start": 9,
+     "quote_end": 19,
+     "proposed_sku": null,
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "acqua nat",
+     "sku": null,
+     "qty": 6,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «acqua nat»."
+      }
+     ],
+     "quote": "acqua nat 6 cs",
+     "quote_start": 20,
+     "quote_end": 34,
+     "proposed_sku": null,
+     "proposed_qty": 6,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "message",
+     "product_text": "acqua friz",
+     "sku": null,
+     "qty": 4,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «acqua friz»."
+      }
+     ],
+     "quote": "acqua friz 4 cs",
+     "quote_start": 35,
+     "quote_end": 50,
+     "proposed_sku": null,
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 3,
+     "origin": "message",
+     "product_text": "cola",
+     "sku": "BEV-COL-33",
+     "qty": 3,
+     "unit_text": "cs",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "BEV-COL-33",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "cola 3 cs",
+     "quote_start": 51,
+     "quote_end": 60,
+     "proposed_sku": "BEV-COL-33",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 4,
+     "origin": "message",
+     "product_text": "lager",
+     "sku": "BIR-LAG-33",
+     "qty": 2,
+     "unit_text": "cs",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "BIR-LAG-33",
+       "score": 1.25,
+       "why": "in their last 5 orders"
+      },
+      {
+       "sku": "DIS-TOV-40",
+       "score": 0.471,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "lager 2 cs",
+     "quote_start": 61,
+     "quote_end": 71,
+     "proposed_sku": "BIR-LAG-33",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 5,
+     "origin": "message",
+     "product_text": "tovaglioli 33",
+     "sku": null,
+     "qty": 2,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «tovaglioli 33»."
+      }
+     ],
+     "quote": "tovaglioli 33 2 cs",
+     "quote_start": 72,
+     "quote_end": 90,
+     "proposed_sku": null,
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 6,
+     "origin": "message",
+     "product_text": "bicchierini",
+     "sku": null,
+     "qty": 1,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «bicchierini»."
+      }
+     ],
+     "quote": "bicchierini 1 cs",
+     "quote_start": 91,
+     "quote_end": 107,
+     "proposed_sku": null,
+     "proposed_qty": 1,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-19"
+  }
+ },
+ "ph-002": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "x lunedi",
+    "quote_start": 12,
+    "quote_end": 20,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "date": "2026-10-19",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "pelati 3 cs",
+    "quote_start": 21,
+    "quote_end": 32,
+    "product": "pelati",
+    "sku": "POM-PEL-2.5",
+    "qty": 3,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "spaghetti 4 cs",
+    "quote_start": 33,
+    "quote_end": 47,
+    "product": "spaghetti",
+    "sku": "PAS-SPA-500",
+    "qty": 4,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "farina [?] 5kg x4",
+    "quote_start": 48,
+    "quote_end": 65,
+    "product": "farina [?] 5kg",
+    "sku": null,
+    "qty": 4,
+    "unit_text": null,
+    "unit": null,
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "mozzarella 4 kg",
+    "quote_start": 66,
+    "quote_end": 81,
+    "product": "mozzarella",
+    "sku": null,
+    "qty": 4,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "olio 5lt x2",
+    "quote_start": 82,
+    "quote_end": 93,
+    "product": "olio 5lt",
+    "sku": "OLI-EVO-5L",
+    "qty": 2,
+    "unit_text": null,
+    "unit": null,
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "acqua nat 5 cs",
+    "quote_start": 94,
+    "quote_end": 108,
+    "product": "acqua nat",
+    "sku": "ACQ-NAT-1L",
+    "qty": 5,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "pelati",
+     "sku": null,
+     "qty": 3,
+     "unit_text": "cs",
+     "state": "check",
+     "candidates": [
+      {
+       "sku": "DIS-BIC-200",
+       "score": 0.543,
+       "why": "name match"
+      }
+     ],
+     "flags": [
+      {
+       "kind": "ambiguous_product",
+       "level": "line",
+       "severity": "medium",
+       "message": "«pelati» could be Linea Pulita Plastic Cups 200cc."
+      }
+     ],
+     "quote": "pelati 3 cs",
+     "quote_start": 21,
+     "quote_end": 32,
+     "proposed_sku": null,
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "spaghetti",
+     "sku": "PAS-SPA-500",
+     "qty": 4,
+     "unit_text": "cs",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "PAS-SPA-500",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "spaghetti 4 cs",
+     "quote_start": 33,
+     "quote_end": 47,
+     "proposed_sku": "PAS-SPA-500",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "message",
+     "product_text": "farina [?] 5kg",
+     "sku": null,
+     "qty": 4,
+     "unit_text": null,
+     "state": "check",
+     "candidates": [
+      {
+       "sku": "FAR-00-5K",
+       "score": 0.416,
+       "why": "in their last 6 orders"
+      }
+     ],
+     "flags": [
+      {
+       "kind": "ambiguous_product",
+       "level": "line",
+       "severity": "medium",
+       "message": "«farina [?] 5kg» could be Aldarica 00 Flour 5 kg."
+      },
+      {
+       "kind": "illegible",
+       "level": "line",
+       "severity": "medium",
+       "message": "Part of this line could not be read in the photo."
+      }
+     ],
+     "quote": "farina [?] 5kg x4",
+     "quote_start": 48,
+     "quote_end": 65,
+     "proposed_sku": null,
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 3,
+     "origin": "message",
+     "product_text": "mozzarella",
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "FOR-MOZ-FIO",
+       "score": 1.15,
+       "why": "in their last 6 orders"
+      },
+      {
+       "sku": "FOR-MOZ-BUF",
+       "score": 0.769,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "mozzarella 4 kg",
+     "quote_start": 66,
+     "quote_end": 81,
+     "proposed_sku": "FOR-MOZ-FIO",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 4,
+     "origin": "message",
+     "product_text": "olio 5lt",
+     "sku": "OLI-EVO-5L",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "OLI-EVO-5L",
+       "score": 1.15,
+       "why": "in their last 6 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "olio 5lt x2",
+     "quote_start": 82,
+     "quote_end": 93,
+     "proposed_sku": "OLI-EVO-5L",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 5,
+     "origin": "message",
+     "product_text": "acqua nat",
+     "sku": null,
+     "qty": 5,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «acqua nat»."
+      }
+     ],
+     "quote": "acqua nat 5 cs",
+     "quote_start": 94,
+     "quote_end": 108,
+     "proposed_sku": null,
+     "proposed_qty": 5,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-19"
+  }
+ },
+ "ph-003": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "x giovedi",
+    "quote_start": 0,
+    "quote_end": 9,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-15",
+    "date": "2026-10-15",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "cotto 4 kg",
+    "quote_start": 10,
+    "quote_end": 20,
+    "product": "cotto",
+    "sku": "SAL-COT",
+    "qty": 4,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "crudo 3 kg",
+    "quote_start": 21,
+    "quote_end": 31,
+    "product": "crudo",
+    "sku": "SAL-PRC",
+    "qty": 3,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "speck 2 kg",
+    "quote_start": 32,
+    "quote_end": 42,
+    "product": "speck",
+    "sku": "SAL-SPE",
+    "qty": 2,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "taleggio 2 kg",
+    "quote_start": 43,
+    "quote_end": 56,
+    "product": "taleggio",
+    "sku": "FOR-TAL",
+    "qty": 2,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "gorgonzola 2 kg",
+    "quote_start": 57,
+    "quote_end": 72,
+    "product": "gorgonzola",
+    "sku": "FOR-GOR-DOL",
+    "qty": 2,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "mozzarella fiordilatte 3 kg",
+    "quote_start": 73,
+    "quote_end": 100,
+    "product": "mozzarella fiordilatte",
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "mortadella 2 kg",
+    "quote_start": 101,
+    "quote_end": 116,
+    "product": "mortadella",
+    "sku": "SAL-MOR",
+    "qty": 2,
+    "unit_text": "kg",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "cotto",
+     "sku": "SAL-COT",
+     "qty": 4,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "SAL-COT",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      },
+      {
+       "sku": "BEV-CHI-20",
+       "score": 0.592,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "cotto 4 kg",
+     "quote_start": 10,
+     "quote_end": 20,
+     "proposed_sku": "SAL-COT",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "crudo",
+     "sku": "SAL-PRC",
+     "qty": 3,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "SAL-PRC",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "crudo 3 kg",
+     "quote_start": 21,
+     "quote_end": 31,
+     "proposed_sku": "SAL-PRC",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "message",
+     "product_text": "speck",
+     "sku": "SAL-SPE",
+     "qty": 2,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "SAL-SPE",
+       "score": 1.25,
+       "why": "in their last 5 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "speck 2 kg",
+     "quote_start": 32,
+     "quote_end": 42,
+     "proposed_sku": "SAL-SPE",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 3,
+     "origin": "message",
+     "product_text": "taleggio",
+     "sku": "FOR-TAL",
+     "qty": 2,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "FOR-TAL",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "taleggio 2 kg",
+     "quote_start": 43,
+     "quote_end": 56,
+     "proposed_sku": "FOR-TAL",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 4,
+     "origin": "message",
+     "product_text": "gorgonzola",
+     "sku": "FOR-GOR-DOL",
+     "qty": 2,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "FOR-GOR-DOL",
+       "score": 1.25,
+       "why": "in their last 5 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "gorgonzola 2 kg",
+     "quote_start": 57,
+     "quote_end": 72,
+     "proposed_sku": "FOR-GOR-DOL",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 5,
+     "origin": "message",
+     "product_text": "mozzarella fiordilatte",
+     "sku": "FOR-MOZ-FIO",
+     "qty": 3,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "FOR-MOZ-FIO",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      },
+      {
+       "sku": "FOR-MOZ-BUF",
+       "score": 0.541,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "mozzarella fiordilatte 3 kg",
+     "quote_start": 73,
+     "quote_end": 100,
+     "proposed_sku": "FOR-MOZ-FIO",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 6,
+     "origin": "message",
+     "product_text": "mortadella",
+     "sku": "SAL-MOR",
+     "qty": 2,
+     "unit_text": "kg",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "SAL-MOR",
+       "score": 1.25,
+       "why": "in 1 of their last orders"
+      }
+     ],
+     "flags": [],
+     "quote": "mortadella 2 kg",
+     "quote_start": 101,
+     "quote_end": 116,
+     "proposed_sku": "SAL-MOR",
+     "proposed_qty": 2,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-15"
+  }
+ },
+ "ph-004": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "x martedi",
+    "quote_start": 12,
+    "quote_end": 21,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-20",
+    "date": "2026-10-20",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "acqua nat 1l 6 cs",
+    "quote_start": 22,
+    "quote_end": 39,
+    "product": "acqua nat 1l",
+    "sku": "ACQ-NAT-1L",
+    "qty": 6,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "cola 3 cs",
+    "quote_start": 40,
+    "quote_end": 49,
+    "product": "cola",
+    "sku": "BEV-COL-33",
+    "qty": 3,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "penne 3 cs",
+    "quote_start": 50,
+    "quote_end": 60,
+    "product": "penne",
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "passata 2 cs",
+    "quote_start": 61,
+    "quote_end": 73,
+    "product": "passata",
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "caffe 2 cs",
+    "quote_start": 74,
+    "quote_end": 84,
+    "product": "caffe",
+    "sku": null,
+    "qty": 2,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "olio 1 l 6 pz",
+    "quote_start": 85,
+    "quote_end": 98,
+    "product": "olio 1 l",
+    "sku": "OLI-EVO-1L",
+    "qty": 6,
+    "unit_text": "pz",
+    "unit": "piece",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "acqua nat 1l",
+     "sku": null,
+     "qty": 6,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «acqua nat 1l»."
+      }
+     ],
+     "quote": "acqua nat 1l 6 cs",
+     "quote_start": 22,
+     "quote_end": 39,
+     "proposed_sku": null,
+     "proposed_qty": 6,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "cola",
+     "sku": "BEV-COL-33",
+     "qty": 3,
+     "unit_text": "cs",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "BEV-COL-33",
+       "score": 1.25,
+       "why": "in their last order"
+      }
+     ],
+     "flags": [],
+     "quote": "cola 3 cs",
+     "quote_start": 40,
+     "quote_end": 49,
+     "proposed_sku": "BEV-COL-33",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "message",
+     "product_text": "penne",
+     "sku": "PAS-PEN-500",
+     "qty": 3,
+     "unit_text": "cs",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "PAS-PEN-500",
+       "score": 1.25,
+       "why": "in their last order"
+      }
+     ],
+     "flags": [],
+     "quote": "penne 3 cs",
+     "quote_start": 50,
+     "quote_end": 60,
+     "proposed_sku": "PAS-PEN-500",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 3,
+     "origin": "message",
+     "product_text": "passata",
+     "sku": "POM-PAS-700",
+     "qty": 2,
+     "unit_text": "cs",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "POM-PAS-700",
+       "score": 1.25,
+       "why": "in their last order"
+      },
+      {
+       "sku": "PAS-TAG-250",
+       "score": 0.778,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "passata 2 cs",
+     "quote_start": 61,
+     "quote_end": 73,
+     "proposed_sku": "POM-PAS-700",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 4,
+     "origin": "message",
+     "product_text": "caffe",
+     "sku": null,
+     "qty": 2,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «caffe»."
+      }
+     ],
+     "quote": "caffe 2 cs",
+     "quote_start": 74,
+     "quote_end": 84,
+     "proposed_sku": null,
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 5,
+     "origin": "message",
+     "product_text": "olio 1 l",
+     "sku": null,
+     "qty": 6,
+     "unit_text": "pz",
+     "state": "check",
+     "candidates": [
+      {
+       "sku": "OLI-EVO-1L",
+       "score": 0.564,
+       "why": "in their last order"
+      }
+     ],
+     "flags": [
+      {
+       "kind": "ambiguous_product",
+       "level": "line",
+       "severity": "medium",
+       "message": "«olio 1 l» could be Ca' Marone Extra Virgin Olive Oil 1 l."
+      }
+     ],
+     "quote": "olio 1 l 6 pz",
+     "quote_start": 85,
+     "quote_end": 98,
+     "proposed_sku": null,
+     "proposed_qty": 6,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-20"
+  }
+ },
+ "vo-001": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "Per domani",
+    "quote_start": 45,
+    "quote_end": 55,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-16",
+    "date": "2026-10-16",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "tre, anzi quattro casse di pelati",
+    "quote_start": 67,
+    "quote_end": 100,
+    "product": "pelati",
+    "sku": "POM-PEL-2.5",
+    "qty": 4,
+    "unit_text": "casse",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "due chili di grana",
+    "quote_start": 103,
+    "quote_end": 121,
+    "product": "grana",
+    "sku": "FOR-GRA-24",
+    "qty": 2,
+    "unit_text": "chili",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "pelati",
+     "sku": null,
+     "qty": 4,
+     "unit_text": "casse",
+     "state": "check",
+     "candidates": [
+      {
+       "sku": "DIS-BIC-200",
+       "score": 0.543,
+       "why": "name match"
+      }
+     ],
+     "flags": [
+      {
+       "kind": "ambiguous_product",
+       "level": "line",
+       "severity": "medium",
+       "message": "«pelati» could be Linea Pulita Plastic Cups 200cc."
+      }
+     ],
+     "quote": "tre, anzi quattro casse di pelati",
+     "quote_start": 67,
+     "quote_end": 100,
+     "proposed_sku": null,
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "grana",
+     "sku": "FOR-GRA-24",
+     "qty": 2,
+     "unit_text": "chili",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "FOR-GRA-24",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      },
+      {
+       "sku": "CAF-GRA-1K",
+       "score": 0.635,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "due chili di grana",
+     "quote_start": 103,
+     "quote_end": 121,
+     "proposed_sku": "FOR-GRA-24",
+     "proposed_qty": 2,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-16"
+  }
+ },
+ "vo-002": {
+  "verified": [
+   {
+    "kind": "usual",
+    "quote": "Il solito",
+    "quote_start": 41,
+    "quote_end": 50,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "delivery",
+    "quote": "per lunedì",
+    "quote_start": 51,
+    "quote_end": 61,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "date": "2026-10-19",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "aggiungi due casse di tonica",
+    "quote_start": 64,
+    "quote_end": 92,
+    "product": "tonica",
+    "sku": "BEV-TON-20",
+    "qty": 2,
+    "unit_text": "casse",
+    "unit": "case",
+    "op": "add",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "usual",
+     "product_text": "Fonte Brivio still water 1 l",
+     "sku": "ACQ-NAT-1L",
+     "qty": 6,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "Il solito",
+     "quote_start": 41,
+     "quote_end": 50,
+     "proposed_sku": "ACQ-NAT-1L",
+     "proposed_qty": 6,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "usual",
+     "product_text": "Fonte Brivio sparkling water 1 l",
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "Il solito",
+     "quote_start": 41,
+     "quote_end": 50,
+     "proposed_sku": "ACQ-FRIZ-1L",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "usual",
+     "product_text": "Ardelia Bar Blend Coffee 1 kg",
+     "sku": "CAF-MIS-1K",
+     "qty": 3,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "Il solito",
+     "quote_start": 41,
+     "quote_end": 50,
+     "proposed_sku": "CAF-MIS-1K",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 3,
+     "origin": "usual",
+     "product_text": "Zeffiro Cola 33cl",
+     "sku": "BEV-COL-33",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "Il solito",
+     "quote_start": 41,
+     "quote_end": 50,
+     "proposed_sku": "BEV-COL-33",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 4,
+     "origin": "usual",
+     "product_text": "Tornasco Lager 33cl",
+     "sku": "BIR-LAG-33",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "Il solito",
+     "quote_start": 41,
+     "quote_end": 50,
+     "proposed_sku": "BIR-LAG-33",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 5,
+     "origin": "usual",
+     "product_text": "Linea Pulita Coffee Cups 80cc",
+     "sku": "DIS-CUP-CAF",
+     "qty": 1,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "Il solito",
+     "quote_start": 41,
+     "quote_end": 50,
+     "proposed_sku": "DIS-CUP-CAF",
+     "proposed_qty": 1,
+     "edited": 0
+    },
+    {
+     "pos": 6,
+     "origin": "message",
+     "product_text": "tonica",
+     "sku": "BEV-TON-20",
+     "qty": 2,
+     "unit_text": "casse",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "BEV-TON-20",
+       "score": 1.092,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "aggiungi due casse di tonica",
+     "quote_start": 64,
+     "quote_end": 92,
+     "proposed_sku": "BEV-TON-20",
+     "proposed_qty": 2,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-19"
+  }
+ },
+ "vo-003": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "Per martedì",
+    "quote_start": 40,
+    "quote_end": 51,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-20",
+    "date": "2026-10-20",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "tre chili di prosciutto cotto",
+    "quote_start": 63,
+    "quote_end": 92,
+    "product": "prosciutto cotto",
+    "sku": "SAL-COT",
+    "qty": 3,
+    "unit_text": "chili",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "due chili di speck",
+    "quote_start": 94,
+    "quote_end": 112,
+    "product": "speck",
+    "sku": "SAL-SPE",
+    "qty": 2,
+    "unit_text": "chili",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "cinque chili di grana",
+    "quote_start": 115,
+    "quote_end": 136,
+    "product": "grana",
+    "sku": "FOR-GRA-24",
+    "qty": 5,
+    "unit_text": "chili",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "prosciutto cotto",
+     "sku": "SAL-COT",
+     "qty": 3,
+     "unit_text": "chili",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "SAL-COT",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      },
+      {
+       "sku": "SAL-PRC",
+       "score": 0.963,
+       "why": "in their last 6 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "tre chili di prosciutto cotto",
+     "quote_start": 63,
+     "quote_end": 92,
+     "proposed_sku": "SAL-COT",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "speck",
+     "sku": "SAL-SPE",
+     "qty": 2,
+     "unit_text": "chili",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "SAL-SPE",
+       "score": 1.25,
+       "why": "in their last 5 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "due chili di speck",
+     "quote_start": 94,
+     "quote_end": 112,
+     "proposed_sku": "SAL-SPE",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "message",
+     "product_text": "grana",
+     "sku": "FOR-GRA-24",
+     "qty": 5,
+     "unit_text": "chili",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "FOR-GRA-24",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      },
+      {
+       "sku": "CAF-GRA-1K",
+       "score": 0.635,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "cinque chili di grana",
+     "quote_start": 115,
+     "quote_end": 136,
+     "proposed_sku": "FOR-GRA-24",
+     "proposed_qty": 5,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-20"
+  }
+ },
+ "vo-004": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "Per martedì",
+    "quote_start": 49,
+    "quote_end": 60,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-20",
+    "date": "2026-10-20",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "tre casse di spaghetti",
+    "quote_start": 61,
+    "quote_end": 83,
+    "product": "spaghetti",
+    "sku": "PAS-SPA-500",
+    "qty": 3,
+    "unit_text": "casse",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "due casse di passata",
+    "quote_start": 86,
+    "quote_end": 106,
+    "product": "passata",
+    "sku": "POM-PAS-700",
+    "qty": 2,
+    "unit_text": "casse",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "spaghetti",
+     "sku": "PAS-SPA-500",
+     "qty": 3,
+     "unit_text": "casse",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "PAS-SPA-500",
+       "score": 1.25,
+       "why": "in their last order"
+      }
+     ],
+     "flags": [],
+     "quote": "tre casse di spaghetti",
+     "quote_start": 61,
+     "quote_end": 83,
+     "proposed_sku": "PAS-SPA-500",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "passata",
+     "sku": "POM-PAS-700",
+     "qty": 2,
+     "unit_text": "casse",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "POM-PAS-700",
+       "score": 1.25,
+       "why": "in their last order"
+      },
+      {
+       "sku": "PAS-TAG-250",
+       "score": 0.778,
+       "why": "name match"
+      }
+     ],
+     "flags": [],
+     "quote": "due casse di passata",
+     "quote_start": 86,
+     "quote_end": 106,
+     "proposed_sku": "POM-PAS-700",
+     "proposed_qty": 2,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-20"
+  }
+ },
+ "wa-001": {
+  "verified": [
+   {
+    "kind": "usual",
+    "quote": "il solito",
+    "quote_start": 12,
+    "quote_end": 21,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "delivery",
+    "quote": "x venerdi",
+    "quote_start": 22,
+    "quote_end": 31,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-16",
+    "date": "2026-10-16",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "6 cs di quello rosso dell'altra volta",
+    "quote_start": 34,
+    "quote_end": 71,
+    "product": "quello rosso dell'altra volta",
+    "sku": null,
+    "qty": 6,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "add",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "usual",
+     "product_text": "Fonte Brivio still water 1 l",
+     "sku": "ACQ-NAT-1L",
+     "qty": 6,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 12,
+     "quote_end": 21,
+     "proposed_sku": "ACQ-NAT-1L",
+     "proposed_qty": 6,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "usual",
+     "product_text": "Fonte Brivio sparkling water 1 l",
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 12,
+     "quote_end": 21,
+     "proposed_sku": "ACQ-FRIZ-1L",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "usual",
+     "product_text": "Ardelia Bar Blend Coffee 1 kg",
+     "sku": "CAF-MIS-1K",
+     "qty": 3,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 12,
+     "quote_end": 21,
+     "proposed_sku": "CAF-MIS-1K",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 3,
+     "origin": "usual",
+     "product_text": "Zeffiro Cola 33cl",
+     "sku": "BEV-COL-33",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 12,
+     "quote_end": 21,
+     "proposed_sku": "BEV-COL-33",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 4,
+     "origin": "usual",
+     "product_text": "Tornasco Lager 33cl",
+     "sku": "BIR-LAG-33",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 12,
+     "quote_end": 21,
+     "proposed_sku": "BIR-LAG-33",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 5,
+     "origin": "usual",
+     "product_text": "Linea Pulita Coffee Cups 80cc",
+     "sku": "DIS-CUP-CAF",
+     "qty": 1,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 12,
+     "quote_end": 21,
+     "proposed_sku": "DIS-CUP-CAF",
+     "proposed_qty": 1,
+     "edited": 0
+    },
+    {
+     "pos": 6,
+     "origin": "message",
+     "product_text": "quello rosso dell'altra volta",
+     "sku": null,
+     "qty": 6,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «quello rosso dell'altra volta»."
+      }
+     ],
+     "quote": "6 cs di quello rosso dell'altra volta",
+     "quote_start": 34,
+     "quote_end": 71,
+     "proposed_sku": null,
+     "proposed_qty": 6,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-16"
+  }
+ },
+ "wa-002": {
+  "verified": [
+   {
+    "kind": "usual",
+    "quote": "il solito",
+    "quote_start": 18,
+    "quote_end": 27,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "delivery",
+    "quote": "per sabato",
+    "quote_start": 28,
+    "quote_end": 38,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-17",
+    "date": "2026-10-17",
+    "status": "observed"
+   },
+   {
+    "kind": "remove",
+    "quote": "niente acqua frizzante stavolta",
+    "quote_start": 42,
+    "quote_end": 73,
+    "product": "acqua frizzante",
+    "sku": "ACQ-FRIZ-1L",
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "usual",
+     "product_text": "Fonte Brivio still water 1 l",
+     "sku": "ACQ-NAT-1L",
+     "qty": 5,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "ACQ-NAT-1L",
+     "proposed_qty": 5,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "usual",
+     "product_text": "Fonte Brivio sparkling water 1 l",
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 3,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "ACQ-FRIZ-1L",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "usual",
+     "product_text": "Lombarelli Spaghetti no. 5 500g",
+     "sku": "PAS-SPA-500",
+     "qty": 4,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "PAS-SPA-500",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 3,
+     "origin": "usual",
+     "product_text": "Terre Calvani Peeled Tomatoes 2.5 kg",
+     "sku": "POM-PEL-2.5",
+     "qty": 3,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "POM-PEL-2.5",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 4,
+     "origin": "usual",
+     "product_text": "Ca' Marone Extra Virgin Olive Oil 5 l",
+     "sku": "OLI-EVO-5L",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "OLI-EVO-5L",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 5,
+     "origin": "usual",
+     "product_text": "Aldarica 00 Flour 5 kg",
+     "sku": "FAR-00-5K",
+     "qty": 4,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "FAR-00-5K",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 6,
+     "origin": "usual",
+     "product_text": "La Casara Fior di Latte Mozzarella",
+     "sku": "FOR-MOZ-FIO",
+     "qty": 4,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "FOR-MOZ-FIO",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 7,
+     "origin": "usual",
+     "product_text": "Vallesella Grana 24 months",
+     "sku": "FOR-GRA-24",
+     "qty": 3,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "FOR-GRA-24",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 8,
+     "origin": "usual",
+     "product_text": "Barbera Cascina Orsola 75cl",
+     "sku": "VIN-ROS-009",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 18,
+     "quote_end": 27,
+     "proposed_sku": "VIN-ROS-009",
+     "proposed_qty": 2,
+     "edited": 0
+    }
+   ],
+   "flags": [
+    {
+     "kind": "not_in_order",
+     "level": "order",
+     "severity": "info",
+     "message": "The customer asked to remove acqua frizzante; it was not in the order."
+    }
+   ],
+   "delivery_date": "2026-10-17"
+  }
+ },
+ "wa-003": {
+  "verified": [
+   {
+    "kind": "item",
+    "quote": "4 cs di prosecco",
+    "quote_start": 21,
+    "quote_end": 37,
+    "product": "prosecco",
+    "sku": null,
+    "qty": 4,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "2 cs di aranciata",
+    "quote_start": 40,
+    "quote_end": 57,
+    "product": "aranciata",
+    "sku": "BEV-ARA-20",
+    "qty": 2,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "delivery",
+    "quote": "per lunedi",
+    "quote_start": 58,
+    "quote_end": 68,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "date": "2026-10-19",
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "prosecco",
+     "sku": null,
+     "qty": 4,
+     "unit_text": "cs",
+     "state": "check",
+     "candidates": [
+      {
+       "sku": "VIN-PRO-002",
+       "score": 0.8,
+       "why": "name match"
+      },
+      {
+       "sku": "VIN-PRO-003",
+       "score": 0.694,
+       "why": "name match"
+      }
+     ],
+     "flags": [
+      {
+       "kind": "ambiguous_product",
+       "level": "line",
+       "severity": "medium",
+       "message": "«prosecco» could be Vallecorta Prosecco Brut 75cl or Vallecorta Prosecco Extra Dry 75cl."
+      }
+     ],
+     "quote": "4 cs di prosecco",
+     "quote_start": 21,
+     "quote_end": 37,
+     "proposed_sku": null,
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "aranciata",
+     "sku": null,
+     "qty": 2,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «aranciata»."
+      }
+     ],
+     "quote": "2 cs di aranciata",
+     "quote_start": 40,
+     "quote_end": 57,
+     "proposed_sku": null,
+     "proposed_qty": 2,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-19"
+  }
+ },
+ "wa-004": {
+  "verified": [
+   {
+    "kind": "item",
+    "quote": "2 cs di quella birra artigianale nuova che avete messo",
+    "quote_start": 21,
+    "quote_end": 75,
+    "product": "birra artigianale nuova",
+    "sku": null,
+    "qty": 2,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "3 cs di cola",
+    "quote_start": 79,
+    "quote_end": 91,
+    "product": "cola",
+    "sku": "BEV-COL-33",
+    "qty": 3,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "birra artigianale nuova",
+     "sku": null,
+     "qty": 2,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «birra artigianale nuova»."
+      }
+     ],
+     "quote": "2 cs di quella birra artigianale nuova che avete messo",
+     "quote_start": 21,
+     "quote_end": 75,
+     "proposed_sku": null,
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "cola",
+     "sku": "BEV-COL-33",
+     "qty": 3,
+     "unit_text": "cs",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "BEV-COL-33",
+       "score": 1.25,
+       "why": "in their last 6 orders"
+      }
+     ],
+     "flags": [],
+     "quote": "3 cs di cola",
+     "quote_start": 79,
+     "quote_end": 91,
+     "proposed_sku": "BEV-COL-33",
+     "proposed_qty": 3,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": null
+  }
+ },
+ "wa-005": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "x lunedi",
+    "quote_start": 6,
+    "quote_end": 14,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "date": "2026-10-19",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "60 cs acqua naturale",
+    "quote_start": 15,
+    "quote_end": 35,
+    "product": "acqua naturale",
+    "sku": "ACQ-NAT-1L",
+    "qty": 60,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "acqua naturale",
+     "sku": null,
+     "qty": 60,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «acqua naturale»."
+      }
+     ],
+     "quote": "60 cs acqua naturale",
+     "quote_start": 15,
+     "quote_end": 35,
+     "proposed_sku": null,
+     "proposed_qty": 60,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-19"
+  }
+ },
+ "wa-006": {
+  "verified": [
+   {
+    "kind": "usual",
+    "quote": "il solito",
+    "quote_start": 11,
+    "quote_end": 20,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "delivery",
+    "quote": "per martedi",
+    "quote_start": 21,
+    "quote_end": 32,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-20",
+    "date": "2026-10-20",
+    "status": "observed"
+   },
+   {
+    "kind": "discount_request",
+    "quote": "lo sconto 8%",
+    "quote_start": 48,
+    "quote_end": 60,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "8%",
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "usual",
+     "product_text": "Fonte Brivio still water 1 l",
+     "sku": "ACQ-NAT-1L",
+     "qty": 6,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 11,
+     "quote_end": 20,
+     "proposed_sku": "ACQ-NAT-1L",
+     "proposed_qty": 6,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "usual",
+     "product_text": "Fonte Brivio sparkling water 1 l",
+     "sku": "ACQ-FRIZ-1L",
+     "qty": 4,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 11,
+     "quote_end": 20,
+     "proposed_sku": "ACQ-FRIZ-1L",
+     "proposed_qty": 4,
+     "edited": 0
+    },
+    {
+     "pos": 2,
+     "origin": "usual",
+     "product_text": "Ardelia Bar Blend Coffee 1 kg",
+     "sku": "CAF-MIS-1K",
+     "qty": 3,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 11,
+     "quote_end": 20,
+     "proposed_sku": "CAF-MIS-1K",
+     "proposed_qty": 3,
+     "edited": 0
+    },
+    {
+     "pos": 3,
+     "origin": "usual",
+     "product_text": "Zeffiro Cola 33cl",
+     "sku": "BEV-COL-33",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 11,
+     "quote_end": 20,
+     "proposed_sku": "BEV-COL-33",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 4,
+     "origin": "usual",
+     "product_text": "Tornasco Lager 33cl",
+     "sku": "BIR-LAG-33",
+     "qty": 2,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 11,
+     "quote_end": 20,
+     "proposed_sku": "BIR-LAG-33",
+     "proposed_qty": 2,
+     "edited": 0
+    },
+    {
+     "pos": 5,
+     "origin": "usual",
+     "product_text": "Linea Pulita Coffee Cups 80cc",
+     "sku": "DIS-CUP-CAF",
+     "qty": 1,
+     "unit_text": null,
+     "state": "ok",
+     "candidates": [],
+     "flags": [],
+     "quote": "il solito",
+     "quote_start": 11,
+     "quote_end": 20,
+     "proposed_sku": "DIS-CUP-CAF",
+     "proposed_qty": 1,
+     "edited": 0
+    }
+   ],
+   "flags": [
+    {
+     "kind": "discount_beyond_terms",
+     "level": "order",
+     "severity": "high",
+     "message": "The customer asks for 8%; the agreed discount is 5%."
+    }
+   ],
+   "delivery_date": "2026-10-20"
+  }
+ },
+ "wa-007": {
+  "verified": [
+   {
+    "kind": "item",
+    "quote": "6 bt di olio",
+    "quote_start": 12,
+    "quote_end": 24,
+    "product": "olio",
+    "sku": "OLI-EVO-1L",
+    "qty": 6,
+    "unit_text": "bt",
+    "unit": "piece",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "delivery",
+    "quote": "x sabato",
+    "quote_start": 25,
+    "quote_end": 33,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-17",
+    "date": "2026-10-17",
+    "status": "observed"
+   },
+   {
+    "kind": "price_request",
+    "quote": "l'olio a 7 euro",
+    "quote_start": 40,
+    "quote_end": 55,
+    "product": "olio",
+    "sku": "OLI-EVO-1L",
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "7 euro",
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "olio",
+     "sku": null,
+     "qty": 6,
+     "unit_text": "bt",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «olio»."
+      }
+     ],
+     "quote": "6 bt di olio",
+     "quote_start": 12,
+     "quote_end": 24,
+     "proposed_sku": null,
+     "proposed_qty": 6,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-17"
+  }
+ },
+ "wa-008": {
+  "verified": [
+   {
+    "kind": "usual",
+    "quote": "il solito",
+    "quote_start": 40,
+    "quote_end": 49,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "delivery",
+    "quote": "per lunedi",
+    "quote_start": 50,
+    "quote_end": 60,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "date": "2026-10-19",
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [],
+   "flags": [
+    {
+     "kind": "no_history",
+     "level": "order",
+     "severity": "medium",
+     "message": "No order history: «the usual» cannot be computed."
+    }
+   ],
+   "delivery_date": "2026-10-19"
+  }
+ },
+ "wa-009": {
+  "verified": [],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [],
+   "flags": [],
+   "delivery_date": null
+  }
+ },
+ "wa-010": {
+  "verified": [
+   {
+    "kind": "delivery",
+    "quote": "per domani",
+    "quote_start": 3,
+    "quote_end": 13,
+    "product": "",
+    "sku": null,
+    "qty": null,
+    "unit_text": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "date": "2026-10-19",
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "6 cs di acqua naturale",
+    "quote_start": 22,
+    "quote_end": 44,
+    "product": "acqua naturale",
+    "sku": "ACQ-NAT-1L",
+    "qty": 6,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   },
+   {
+    "kind": "item",
+    "quote": "3 cs di penne",
+    "quote_start": 47,
+    "quote_end": 60,
+    "product": "penne",
+    "sku": "PAS-PEN-500",
+    "qty": 3,
+    "unit_text": "cs",
+    "unit": "case",
+    "op": "set",
+    "value": null,
+    "date": null,
+    "status": "observed"
+   }
+  ],
+  "drops": {
+   "no_quote": 0,
+   "short_quote": 0,
+   "bad_kind": 0
+  },
+  "result": {
+   "lines": [
+    {
+     "pos": 0,
+     "origin": "message",
+     "product_text": "acqua naturale",
+     "sku": null,
+     "qty": 6,
+     "unit_text": "cs",
+     "state": "flag",
+     "candidates": [],
+     "flags": [
+      {
+       "kind": "unknown_product",
+       "level": "line",
+       "severity": "high",
+       "message": "No product in the catalogue matches «acqua naturale»."
+      }
+     ],
+     "quote": "6 cs di acqua naturale",
+     "quote_start": 22,
+     "quote_end": 44,
+     "proposed_sku": null,
+     "proposed_qty": 6,
+     "edited": 0
+    },
+    {
+     "pos": 1,
+     "origin": "message",
+     "product_text": "penne",
+     "sku": "PAS-PEN-500",
+     "qty": 3,
+     "unit_text": "cs",
+     "state": "ok",
+     "candidates": [
+      {
+       "sku": "PAS-PEN-500",
+       "score": 1.25,
+       "why": "in their last order"
+      }
+     ],
+     "flags": [],
+     "quote": "3 cs di penne",
+     "quote_start": 47,
+     "quote_end": 60,
+     "proposed_sku": "PAS-PEN-500",
+     "proposed_qty": 3,
+     "edited": 0
+    }
+   ],
+   "flags": [],
+   "delivery_date": "2026-10-19"
+  }
+ }
 }

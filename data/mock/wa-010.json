@@ -1,35 +1,35 @@
 [
- {
-  "kind": "delivery",
-  "quote": "per domani",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": "2026-10-19",
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "6 cs di acqua naturale",
-  "product": "acqua naturale",
-  "sku": "ACQ-NAT-1L",
-  "quantity": "6",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "3 cs di penne",
-  "product": "penne",
-  "sku": "PAS-PEN-500",
-  "quantity": "3",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- }
+  {
+    "kind": "delivery",
+    "quote": "for tomorrow",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "6 cs of still water",
+    "product": "still water",
+    "sku": "ACQ-NAT-1L",
+    "quantity": "6",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "3 cs of penne",
+    "product": "penne",
+    "sku": "PAS-PEN-500",
+    "quantity": "3",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  }
 ]

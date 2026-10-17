@@ -1,0 +1,12 @@
+{
+ "id": "pizz-portico",
+ "name": "Pizzeria Al Portico",
+ "kind": "restaurant",
+ "context": "Pizzeria cliente da maggio. Ordinava ogni settimana e mezza, da fine agosto ordina sempre meno.",
+ "terms": {
+  "discount_pct": 3,
+  "payment_days": 30,
+  "free_delivery_min": 300,
+  "price_overrides": {}
+ }
+}

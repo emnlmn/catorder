@@ -1,8 +1,8 @@
 {
- "id": "wa-007",
- "customer_id": "deli-mulino",
- "channel": "whatsapp",
- "received_at": "2026-10-16T18:20:00+02:00",
- "sender": "Rina",
- "text": "ciao marta, 6 bt di olio x sabato. pero l'olio a 7 euro come l'altra volta eh"
+  "id": "wa-007",
+  "customer_id": "deli-mulino",
+  "channel": "whatsapp",
+  "received_at": "2026-10-16T18:20:00+02:00",
+  "sender": "Rina",
+  "text": "hi marta, 6 btl of oil for sat. but oil at 7 euro like last time eh"
 }

@@ -157,3 +157,11 @@ describe("fixWeightQty", () => {
     expect([r.qty, r.unit]).toEqual([0.2, "kg"]);
   });
 });
+
+describe("English lexicon", () => {
+  it("units and weekdays", () => {
+    expect(parseUnit("pcs")).toBe("piece");
+    expect(parseUnit("cartons")).toBe("case");
+    expect(relativeDate("the usual for friday", "2026-10-16")).toBe("2026-10-23");
+  });
+});

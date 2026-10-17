@@ -1,35 +1,35 @@
 [
- {
-  "kind": "item",
-  "quote": "4 cs di prosecco",
-  "product": "prosecco",
-  "sku": null,
-  "quantity": "4",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "2 cs di aranciata",
-  "product": "aranciata",
-  "sku": "BEV-ARA-20",
-  "quantity": "2",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "delivery",
-  "quote": "per lunedi",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": "2026-10-19",
-  "status": "observed"
- }
+  {
+    "kind": "item",
+    "quote": "4 cs of prosecco",
+    "product": "prosecco",
+    "sku": null,
+    "quantity": "4",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "2 cs of orangeade",
+    "product": "orangeade",
+    "sku": "BEV-ARA-20",
+    "quantity": "2",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "delivery",
+    "quote": "for monday",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "status": "observed"
+  }
 ]

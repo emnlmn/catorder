@@ -1,8 +1,8 @@
-x lunedi
-caffe 4 cs
-acqua nat 6 cs
-acqua friz 4 cs
+for mon
+coffee 4 cs
+still water 6 cs
+sparkling water 4 cs
 cola 3 cs
 lager 2 cs
-tovaglioli 33 2 cs
-bicchierini 1 cs
+napkins 33 2 cs
+coffee cups 1 cs

@@ -1,563 +1,563 @@
 {
- "messages": {
-  "wa-001": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 6
+  "messages": {
+    "wa-001": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 6
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 4
+        },
+        {
+          "sku": "CAF-MIS-1K",
+          "qty": 3
+        },
+        {
+          "sku": "BEV-COL-33",
+          "qty": 2
+        },
+        {
+          "sku": "BIR-LAG-33",
+          "qty": 2
+        },
+        {
+          "sku": "DIS-CUP-CAF",
+          "qty": 1
+        },
+        {
+          "sku": "VIN-ROS-005",
+          "qty": 6
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-16",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "that red from last time"
+      ]
     },
-    {
-     "sku": "ACQ-FRIZ-1L",
-     "qty": 4
+    "wa-002": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 5
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 4
+        },
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 3
+        },
+        {
+          "sku": "OLI-EVO-5L",
+          "qty": 2
+        },
+        {
+          "sku": "FAR-00-5K",
+          "qty": 4
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 4
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 3
+        },
+        {
+          "sku": "VIN-ROS-009",
+          "qty": 2
+        }
+      ],
+      "removed": [
+        "ACQ-FRIZ-1L"
+      ],
+      "delivery_date": "2026-10-17",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "no sparkling water this time"
+      ]
     },
-    {
-     "sku": "CAF-MIS-1K",
-     "qty": 3
+    "wa-003": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "BEV-ARA-20",
+          "qty": 2
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-19",
+      "candidates": [
+        {
+          "text_contains": "prosecco",
+          "skus": [
+            "VIN-PRO-002",
+            "VIN-PRO-003"
+          ]
+        }
+      ],
+      "flags": [
+        {
+          "kind": "ambiguous_product"
+        }
+      ],
+      "quotes": [
+        "4 cs of prosecco"
+      ]
     },
-    {
-     "sku": "BEV-COL-33",
-     "qty": 2
+    "wa-004": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "BEV-COL-33",
+          "qty": 3
+        }
+      ],
+      "removed": [],
+      "delivery_date": null,
+      "candidates": [],
+      "flags": [
+        {
+          "kind": "unknown_product"
+        }
+      ],
+      "quotes": [
+        "that new craft beer you guys added"
+      ]
     },
-    {
-     "sku": "BIR-LAG-33",
-     "qty": 2
+    "wa-005": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 60
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-19",
+      "candidates": [],
+      "flags": [
+        {
+          "kind": "unusual_quantity"
+        }
+      ],
+      "quotes": [
+        "60 cs still water"
+      ]
     },
-    {
-     "sku": "DIS-CUP-CAF",
-     "qty": 1
+    "wa-006": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 6
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 4
+        },
+        {
+          "sku": "CAF-MIS-1K",
+          "qty": 3
+        },
+        {
+          "sku": "BEV-COL-33",
+          "qty": 2
+        },
+        {
+          "sku": "BIR-LAG-33",
+          "qty": 2
+        },
+        {
+          "sku": "DIS-CUP-CAF",
+          "qty": 1
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-20",
+      "candidates": [],
+      "flags": [
+        {
+          "kind": "discount_beyond_terms"
+        }
+      ],
+      "quotes": [
+        "the 8% discount"
+      ]
     },
-    {
-     "sku": "VIN-ROS-005",
-     "qty": 6
+    "wa-007": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "OLI-EVO-1L",
+          "qty": 6
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-17",
+      "candidates": [],
+      "flags": [
+        {
+          "kind": "price_below_terms"
+        }
+      ],
+      "quotes": [
+        "oil at 7 euro"
+      ]
+    },
+    "wa-008": {
+      "order": true,
+      "lines": [],
+      "removed": [],
+      "delivery_date": "2026-10-19",
+      "candidates": [],
+      "flags": [
+        {
+          "kind": "no_history"
+        }
+      ],
+      "quotes": [
+        "the usual"
+      ]
+    },
+    "wa-009": {
+      "order": false,
+      "lines": [],
+      "flags": []
+    },
+    "wa-010": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 6
+        },
+        {
+          "sku": "PAS-PEN-500",
+          "qty": 3
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-19",
+      "candidates": [],
+      "flags": [],
+      "quotes": []
+    },
+    "vo-001": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 4
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 2
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-16",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "three, no, four cases of peeled tomatoes"
+      ]
+    },
+    "vo-002": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 6
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 4
+        },
+        {
+          "sku": "CAF-MIS-1K",
+          "qty": 3
+        },
+        {
+          "sku": "BEV-COL-33",
+          "qty": 2
+        },
+        {
+          "sku": "BIR-LAG-33",
+          "qty": 2
+        },
+        {
+          "sku": "DIS-CUP-CAF",
+          "qty": 1
+        },
+        {
+          "sku": "BEV-TON-20",
+          "qty": 2
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-19",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "add two cases of tonic"
+      ]
+    },
+    "vo-003": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "SAL-COT",
+          "qty": 3
+        },
+        {
+          "sku": "SAL-SPE",
+          "qty": 2
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 5
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-20",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "three kilos of cooked ham"
+      ]
+    },
+    "vo-004": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 3
+        },
+        {
+          "sku": "POM-PAS-700",
+          "qty": 2
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-20",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "two cases of passata"
+      ]
+    },
+    "ph-001": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "CAF-MIS-1K",
+          "qty": 4
+        },
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 6
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 4
+        },
+        {
+          "sku": "BEV-COL-33",
+          "qty": 3
+        },
+        {
+          "sku": "BIR-LAG-33",
+          "qty": 2
+        },
+        {
+          "sku": "DIS-TOV-33",
+          "qty": 2
+        },
+        {
+          "sku": "DIS-CUP-CAF",
+          "qty": 1
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-19",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "napkins 33 2 cs"
+      ]
+    },
+    "ph-002": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 3
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 4
+        },
+        {
+          "sku": "FAR-00-5K",
+          "qty": 4
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 4
+        },
+        {
+          "sku": "OLI-EVO-5L",
+          "qty": 2
+        },
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 5
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-19",
+      "candidates": [
+        {
+          "text_contains": "flour",
+          "skus": [
+            "FAR-00-5K"
+          ]
+        }
+      ],
+      "flags": [
+        {
+          "kind": "illegible"
+        }
+      ],
+      "quotes": [
+        "flour [?] 5kg x4"
+      ]
+    },
+    "ph-003": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "SAL-COT",
+          "qty": 4
+        },
+        {
+          "sku": "SAL-PRC",
+          "qty": 3
+        },
+        {
+          "sku": "SAL-SPE",
+          "qty": 2
+        },
+        {
+          "sku": "FOR-TAL",
+          "qty": 2
+        },
+        {
+          "sku": "FOR-GOR-DOL",
+          "qty": 2
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 3
+        },
+        {
+          "sku": "SAL-MOR",
+          "qty": 2
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-15",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "fior di latte mozzarella 3 kg"
+      ]
+    },
+    "ph-004": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 6
+        },
+        {
+          "sku": "BEV-COL-33",
+          "qty": 3
+        },
+        {
+          "sku": "PAS-PEN-500",
+          "qty": 3
+        },
+        {
+          "sku": "POM-PAS-700",
+          "qty": 2
+        },
+        {
+          "sku": "CAF-MIS-1K",
+          "qty": 2
+        },
+        {
+          "sku": "OLI-EVO-1L",
+          "qty": 6
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-20",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "coffee 2 cs"
+      ]
+    },
+    "em-001": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 6
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-17",
+      "candidates": [],
+      "flags": [],
+      "quotes": [
+        "6 kg of fior di latte mozzarella"
+      ]
+    },
+    "em-002": {
+      "order": true,
+      "lines": [
+        {
+          "sku": "VIN-ROS-007",
+          "qty": 2
+        },
+        {
+          "sku": "VIN-BIA-004",
+          "qty": 10
+        }
+      ],
+      "removed": [],
+      "delivery_date": "2026-10-17",
+      "candidates": [],
+      "flags": [
+        {
+          "kind": "pack_mismatch"
+        }
+      ],
+      "quotes": [
+        "10 bottles of Punta Calma Vermentino"
+      ]
     }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-16",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "quello rosso dell'altra volta"
-   ]
-  },
-  "wa-002": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 5
-    },
-    {
-     "sku": "PAS-SPA-500",
-     "qty": 4
-    },
-    {
-     "sku": "POM-PEL-2.5",
-     "qty": 3
-    },
-    {
-     "sku": "OLI-EVO-5L",
-     "qty": 2
-    },
-    {
-     "sku": "FAR-00-5K",
-     "qty": 4
-    },
-    {
-     "sku": "FOR-MOZ-FIO",
-     "qty": 4
-    },
-    {
-     "sku": "FOR-GRA-24",
-     "qty": 3
-    },
-    {
-     "sku": "VIN-ROS-009",
-     "qty": 2
-    }
-   ],
-   "removed": [
-    "ACQ-FRIZ-1L"
-   ],
-   "delivery_date": "2026-10-17",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "niente acqua frizzante stavolta"
-   ]
-  },
-  "wa-003": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "BEV-ARA-20",
-     "qty": 2
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-19",
-   "candidates": [
-    {
-     "text_contains": "prosecco",
-     "skus": [
-      "VIN-PRO-002",
-      "VIN-PRO-003"
-     ]
-    }
-   ],
-   "flags": [
-    {
-     "kind": "ambiguous_product"
-    }
-   ],
-   "quotes": [
-    "4 cs di prosecco"
-   ]
-  },
-  "wa-004": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "BEV-COL-33",
-     "qty": 3
-    }
-   ],
-   "removed": [],
-   "delivery_date": null,
-   "candidates": [],
-   "flags": [
-    {
-     "kind": "unknown_product"
-    }
-   ],
-   "quotes": [
-    "quella birra artigianale nuova che avete messo"
-   ]
-  },
-  "wa-005": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 60
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-19",
-   "candidates": [],
-   "flags": [
-    {
-     "kind": "unusual_quantity"
-    }
-   ],
-   "quotes": [
-    "60 cs acqua naturale"
-   ]
-  },
-  "wa-006": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 6
-    },
-    {
-     "sku": "ACQ-FRIZ-1L",
-     "qty": 4
-    },
-    {
-     "sku": "CAF-MIS-1K",
-     "qty": 3
-    },
-    {
-     "sku": "BEV-COL-33",
-     "qty": 2
-    },
-    {
-     "sku": "BIR-LAG-33",
-     "qty": 2
-    },
-    {
-     "sku": "DIS-CUP-CAF",
-     "qty": 1
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-20",
-   "candidates": [],
-   "flags": [
-    {
-     "kind": "discount_beyond_terms"
-    }
-   ],
-   "quotes": [
-    "lo sconto 8%"
-   ]
-  },
-  "wa-007": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "OLI-EVO-1L",
-     "qty": 6
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-17",
-   "candidates": [],
-   "flags": [
-    {
-     "kind": "price_below_terms"
-    }
-   ],
-   "quotes": [
-    "l'olio a 7 euro"
-   ]
-  },
-  "wa-008": {
-   "order": true,
-   "lines": [],
-   "removed": [],
-   "delivery_date": "2026-10-19",
-   "candidates": [],
-   "flags": [
-    {
-     "kind": "no_history"
-    }
-   ],
-   "quotes": [
-    "il solito"
-   ]
-  },
-  "wa-009": {
-   "order": false,
-   "lines": [],
-   "flags": []
-  },
-  "wa-010": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 6
-    },
-    {
-     "sku": "PAS-PEN-500",
-     "qty": 3
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-19",
-   "candidates": [],
-   "flags": [],
-   "quotes": []
-  },
-  "vo-001": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "POM-PEL-2.5",
-     "qty": 4
-    },
-    {
-     "sku": "FOR-GRA-24",
-     "qty": 2
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-16",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "tre, anzi quattro casse di pelati"
-   ]
-  },
-  "vo-002": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 6
-    },
-    {
-     "sku": "ACQ-FRIZ-1L",
-     "qty": 4
-    },
-    {
-     "sku": "CAF-MIS-1K",
-     "qty": 3
-    },
-    {
-     "sku": "BEV-COL-33",
-     "qty": 2
-    },
-    {
-     "sku": "BIR-LAG-33",
-     "qty": 2
-    },
-    {
-     "sku": "DIS-CUP-CAF",
-     "qty": 1
-    },
-    {
-     "sku": "BEV-TON-20",
-     "qty": 2
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-19",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "aggiungi due casse di tonica"
-   ]
-  },
-  "vo-003": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "SAL-COT",
-     "qty": 3
-    },
-    {
-     "sku": "SAL-SPE",
-     "qty": 2
-    },
-    {
-     "sku": "FOR-GRA-24",
-     "qty": 5
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-20",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "tre chili di prosciutto cotto"
-   ]
-  },
-  "vo-004": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "PAS-SPA-500",
-     "qty": 3
-    },
-    {
-     "sku": "POM-PAS-700",
-     "qty": 2
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-20",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "due casse di passata"
-   ]
-  },
-  "ph-001": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "CAF-MIS-1K",
-     "qty": 4
-    },
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 6
-    },
-    {
-     "sku": "ACQ-FRIZ-1L",
-     "qty": 4
-    },
-    {
-     "sku": "BEV-COL-33",
-     "qty": 3
-    },
-    {
-     "sku": "BIR-LAG-33",
-     "qty": 2
-    },
-    {
-     "sku": "DIS-TOV-33",
-     "qty": 2
-    },
-    {
-     "sku": "DIS-CUP-CAF",
-     "qty": 1
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-19",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "tovaglioli 33 2 cs"
-   ]
-  },
-  "ph-002": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "POM-PEL-2.5",
-     "qty": 3
-    },
-    {
-     "sku": "PAS-SPA-500",
-     "qty": 4
-    },
-    {
-     "sku": "FAR-00-5K",
-     "qty": 4
-    },
-    {
-     "sku": "FOR-MOZ-FIO",
-     "qty": 4
-    },
-    {
-     "sku": "OLI-EVO-5L",
-     "qty": 2
-    },
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 5
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-19",
-   "candidates": [
-    {
-     "text_contains": "farina",
-     "skus": [
-      "FAR-00-5K"
-     ]
-    }
-   ],
-   "flags": [
-    {
-     "kind": "illegible"
-    }
-   ],
-   "quotes": [
-    "farina [?] 5kg x4"
-   ]
-  },
-  "ph-003": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "SAL-COT",
-     "qty": 4
-    },
-    {
-     "sku": "SAL-PRC",
-     "qty": 3
-    },
-    {
-     "sku": "SAL-SPE",
-     "qty": 2
-    },
-    {
-     "sku": "FOR-TAL",
-     "qty": 2
-    },
-    {
-     "sku": "FOR-GOR-DOL",
-     "qty": 2
-    },
-    {
-     "sku": "FOR-MOZ-FIO",
-     "qty": 3
-    },
-    {
-     "sku": "SAL-MOR",
-     "qty": 2
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-15",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "mozzarella fiordilatte 3 kg"
-   ]
-  },
-  "ph-004": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "ACQ-NAT-1L",
-     "qty": 6
-    },
-    {
-     "sku": "BEV-COL-33",
-     "qty": 3
-    },
-    {
-     "sku": "PAS-PEN-500",
-     "qty": 3
-    },
-    {
-     "sku": "POM-PAS-700",
-     "qty": 2
-    },
-    {
-     "sku": "CAF-MIS-1K",
-     "qty": 2
-    },
-    {
-     "sku": "OLI-EVO-1L",
-     "qty": 6
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-20",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "caffe 2 cs"
-   ]
-  },
-  "em-001": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "FOR-MOZ-FIO",
-     "qty": 6
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-17",
-   "candidates": [],
-   "flags": [],
-   "quotes": [
-    "6 kg di mozzarella fiordilatte"
-   ]
-  },
-  "em-002": {
-   "order": true,
-   "lines": [
-    {
-     "sku": "VIN-ROS-007",
-     "qty": 2
-    },
-    {
-     "sku": "VIN-BIA-004",
-     "qty": 10
-    }
-   ],
-   "removed": [],
-   "delivery_date": "2026-10-17",
-   "candidates": [],
-   "flags": [
-    {
-     "kind": "pack_mismatch"
-    }
-   ],
-   "quotes": [
-    "10 bottiglie di Punta Calma Vermentino"
-   ]
   }
- }
 }

@@ -1,8 +1,8 @@
-nuovo borgo
-x martedi
-acqua nat 1l 6 cs
+new village
+for tue
+still water 1l 6 cs
 cola 3 cs
 penne 3 cs
 passata 2 cs
-caffe 2 cs
-olio 1 l 6 pz
+coffee 2 cs
+oil 1 l 6 pc

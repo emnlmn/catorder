@@ -1,4 +1,4 @@
-// tsx eval/runEval.ts [--channels whatsapp,photo] [--repeat 3] [--refresh]   (SPEC §18)
+// tsx eval/runEval.ts [--channels whatsapp,photo] [--repeat 3] [--refresh] [--concurrency 5] [--alone]   (SPEC §18)
 import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, relative } from "node:path";
@@ -32,7 +32,7 @@ export function runStats(runs: Run[]) {
   };
 }
 
-export async function evaluate(channels: Set<string> | null = null, repeat = 1, refresh = false) {
+export async function evaluate(channels: Set<string> | null = null, repeat = 1, refresh = false, concurrency = 1, alone = false) {
   process.env.CATORDER_TODAY = process.env.CATORDER_TODAY || TODAY;
   const cfg = loadConfig();
   const expected: Record<string, ExpectedMessage> =
@@ -48,15 +48,24 @@ export async function evaluate(channels: Set<string> | null = null, repeat = 1, 
       const db = connect(join(tmp, `eval${i}.db`));
       loadData(db, cfg.dataDir);
       const chan = new Map(rows<{ id: string; channel: string }>(db, "SELECT id, channel FROM messages").map((r) => [r.id, r.channel]));
-      for (const mid of Object.keys(expected).sort()) {
-        if (channels && !channels.has(chan.get(mid) ?? "")) continue;
-        const out = await readMessage(db, svc, mid);
-        const res = scoreMessage(expected[mid], out.order, chan.get(mid) ?? "");
-        res.id = mid;
-        res.run = i;
-        results.push(res);
-        perMsgRuns.set(mid, [...(perMsgRuns.get(mid) ?? []), ...out.runs]);
-      }
+      const queue = Object.keys(expected).sort().filter((mid) => !channels || channels.has(chan.get(mid) ?? ""));
+      // ponytail: N reads in flight on one sqlite handle; the db calls are sync, only the model calls overlap
+      await Promise.all(Array.from({ length: concurrency }, async () => {
+        for (let mid; (mid = queue.shift()); ) {
+          // --alone: every message on its own fresh db, so no open draft and no routing decide what it is scored on
+          const own = alone ? connect(":memory:") : db;
+          if (alone) loadData(own, cfg.dataDir);
+          const out = await readMessage(own, svc, mid, alone ? "new" : undefined);
+          if (alone) own.close();
+          const res = scoreMessage(expected[mid], out.order, chan.get(mid) ?? "");
+          res.id = mid;
+          res.run = i;
+          results.push(res);
+          perMsgRuns.set(mid, [...(perMsgRuns.get(mid) ?? []), ...out.runs]);
+          if (concurrency > 1) console.error(`${results.length} ${mid}${out.runs.some((r) => !r.cached) ? "" : " (cache)"}${out.runs.filter((r) => r.error).map((r) => " ERR " + r.error!.slice(0, 100)).join("")}`);
+        }
+      }));
+      results.sort((a, b) => (a.run as number) - (b.run as number) || String(a.id).localeCompare(String(b.id)));
       for (const [k, v] of Object.entries(aggregate(db).dropped)) dropped[k] = (dropped[k] ?? 0) + v;
       db.close();
     }
@@ -102,10 +111,10 @@ export function table(rep: Report): string {
 export async function main(argv = process.argv.slice(2)): Promise<void> {
   const { values: a } = parseArgs({
     args: argv,
-    options: { channels: { type: "string", default: "" }, repeat: { type: "string", default: "1" }, refresh: { type: "boolean", default: false } },
+    options: { channels: { type: "string", default: "" }, repeat: { type: "string", default: "1" }, refresh: { type: "boolean", default: false }, concurrency: { type: "string", default: "1" }, alone: { type: "boolean", default: false } },
   });
   const chans = new Set((a.channels as string).split(",").filter(Boolean));
-  const rep = await evaluate(chans.size ? chans : null, Number(a.repeat), !!a.refresh);
+  const rep = await evaluate(chans.size ? chans : null, Number(a.repeat), !!a.refresh, Number(a.concurrency), !!a.alone);
   const label = rep.label || `${rep.model} ${rep.hardware}`.trim();
   console.log(`CatOrder eval, ${rep.today}, ${rep.overall.messages} message reads: ${label}\n`);
   console.log(table(rep));

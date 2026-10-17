@@ -1,1083 +1,1114 @@
 [
- {
-  "sku": "VIN-ROS-005",
-  "name": "Rosso Colline 75cl",
-  "aliases": [
-   "rosso colline",
-   "colline rosso",
-   "colline",
-   "rosso della casa"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 41.4
- },
- {
-  "sku": "VIN-ROS-007",
-  "name": "Roccafiera Rosso Superiore 75cl",
-  "aliases": [
-   "roccafiera",
-   "rosso roccafiera",
-   "rosso superiore"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 52.8
- },
- {
-  "sku": "VIN-ROS-009",
-  "name": "Barbera Cascina Orsola 75cl",
-  "aliases": [
-   "barbera",
-   "barbera orsola",
-   "cascina orsola"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 46.2
- },
- {
-  "sku": "VIN-BIA-003",
-  "name": "Bianco Fiorito Vallecorta 75cl",
-  "aliases": [
-   "bianco fiorito",
-   "fiorito",
-   "bianco vallecorta"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 38.4
- },
- {
-  "sku": "VIN-BIA-004",
-  "name": "Vermentino Punta Calma 75cl",
-  "aliases": [
-   "vermentino",
-   "punta calma",
-   "punta calma vermentino"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 47.4
- },
- {
-  "sku": "VIN-PRO-002",
-  "name": "Prosecco Brut Vallecorta 75cl",
-  "aliases": [
-   "prosecco brut",
-   "brut vallecorta",
-   "vallecorta brut"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 34.8
- },
- {
-  "sku": "VIN-PRO-003",
-  "name": "Prosecco Extra Dry Vallecorta 75cl",
-  "aliases": [
-   "prosecco extra dry",
-   "extra dry vallecorta",
-   "vallecorta extra dry"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 34.8
- },
- {
-  "sku": "VIN-SPU-001",
-  "name": "Spumante Metodo Classico Terrealte 75cl",
-  "aliases": [
-   "spumante",
-   "metodo classico",
-   "terrealte"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 71.4
- },
- {
-  "sku": "VIN-ROT-001",
-  "name": "Rosato Ca' Serena 75cl",
-  "aliases": [
-   "rosato",
-   "ca serena",
-   "serena rosato"
-  ],
-  "category": "wine",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 75 cl",
-  "list_price": 36.0
- },
- {
-  "sku": "BIR-LAG-33",
-  "name": "Tornasco Lager 33cl",
-  "aliases": [
-   "lager",
-   "tornasco lager",
-   "bionda",
-   "bionda tornasco"
-  ],
-  "category": "beer",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 33 cl",
-  "list_price": 28.8
- },
- {
-  "sku": "BIR-ROS-33",
-  "name": "Tornasco Rossa 33cl",
-  "aliases": [
-   "tornasco rossa",
-   "rossa",
-   "doppio malto"
-  ],
-  "category": "beer",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 33 cl",
-  "list_price": 31.2
- },
- {
-  "sku": "BIR-BIA-33",
-  "name": "Tornasco Bianca 33cl",
-  "aliases": [
-   "tornasco bianca",
-   "weiss",
-   "bianca tornasco"
-  ],
-  "category": "beer",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 33 cl",
-  "list_price": 31.2
- },
- {
-  "sku": "BIR-ANA-33",
-  "name": "Tornasco Zero Analcolica 33cl",
-  "aliases": [
-   "analcolica",
-   "tornasco zero",
-   "zero alcol"
-  ],
-  "category": "beer",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 33 cl",
-  "list_price": 26.4
- },
- {
-  "sku": "ACQ-NAT-1L",
-  "name": "Fonte Brivio naturale 1 l",
-  "aliases": [
-   "acqua naturale",
-   "acqua nat",
-   "naturale",
-   "acqua liscia",
-   "brivio nat"
-  ],
-  "category": "water",
-  "sell_unit": "case",
-  "pack_size": 12,
-  "pack_label": "case of 12 × 1 l",
-  "list_price": 5.4
- },
- {
-  "sku": "ACQ-FRIZ-1L",
-  "name": "Fonte Brivio frizzante 1 l",
-  "aliases": [
-   "acqua frizzante",
-   "acqua friz",
-   "frizzante",
-   "gasata",
-   "brivio friz"
-  ],
-  "category": "water",
-  "sell_unit": "case",
-  "pack_size": 12,
-  "pack_label": "case of 12 × 1 l",
-  "list_price": 5.4
- },
- {
-  "sku": "ACQ-NAT-50",
-  "name": "Fonte Brivio naturale 50cl",
-  "aliases": [
-   "naturale 50",
-   "acqua nat 50",
-   "naturale 50cl",
-   "brivio nat 50"
-  ],
-  "category": "water",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 50 cl",
-  "list_price": 6.6
- },
- {
-  "sku": "ACQ-FRIZ-50",
-  "name": "Fonte Brivio frizzante 50cl",
-  "aliases": [
-   "frizzante 50",
-   "acqua friz 50",
-   "frizzante 50cl",
-   "brivio friz 50"
-  ],
-  "category": "water",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 50 cl",
-  "list_price": 6.6
- },
- {
-  "sku": "BEV-COL-33",
-  "name": "Cola Zeffiro 33cl",
-  "aliases": [
-   "cola",
-   "zeffiro cola",
-   "cola lattina"
-  ],
-  "category": "soft drink",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 33 cl cans",
-  "list_price": 14.4
- },
- {
-  "sku": "BEV-ARA-20",
-  "name": "Aranciata Dolcevita 20cl",
-  "aliases": [
-   "aranciata",
-   "arancia",
-   "aranciata vetro"
-  ],
-  "category": "soft drink",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 20 cl",
-  "list_price": 15.6
- },
- {
-  "sku": "BEV-CHI-20",
-  "name": "Chinotto Valsorda 20cl",
-  "aliases": [
-   "chinotto",
-   "chinotto valsorda"
-  ],
-  "category": "soft drink",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 20 cl",
-  "list_price": 16.8
- },
- {
-  "sku": "BEV-TON-20",
-  "name": "Tonica Lunaria 20cl",
-  "aliases": [
-   "tonica",
-   "lunaria tonica",
-   "acqua tonica"
-  ],
-  "category": "soft drink",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 20 cl",
-  "list_price": 15.0
- },
- {
-  "sku": "BEV-SUC-20",
-  "name": "Succo di pera Terrazza 20cl",
-  "aliases": [
-   "succo pera",
-   "succo di pera",
-   "pera"
-  ],
-  "category": "soft drink",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 20 cl",
-  "list_price": 17.4
- },
- {
-  "sku": "BEV-SUC-AC",
-  "name": "Succo ACE Terrazza 20cl",
-  "aliases": [
-   "succo ace",
-   "ace"
-  ],
-  "category": "soft drink",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 20 cl",
-  "list_price": 17.4
- },
- {
-  "sku": "BEV-GAZ-1L",
-  "name": "Gazzosa Valsorda 1 l",
-  "aliases": [
-   "gazzosa"
-  ],
-  "category": "soft drink",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 1 l",
-  "list_price": 8.4
- },
- {
-  "sku": "BEV-LAT-1L",
-  "name": "Latte UHT intero Prato Alto 1 l",
-  "aliases": [
-   "latte",
-   "latte uht",
-   "latte intero"
-  ],
-  "category": "dairy",
-  "sell_unit": "case",
-  "pack_size": 12,
-  "pack_label": "case of 12 × 1 l",
-  "list_price": 13.2
- },
- {
-  "sku": "CAF-MIS-1K",
-  "name": "Caffè Ardelia Miscela Bar 1 kg",
-  "aliases": [
-   "caffe",
-   "caffe miscela",
-   "miscela bar",
-   "caffe ardelia"
-  ],
-  "category": "coffee",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 1 kg bags",
-  "list_price": 84.0
- },
- {
-  "sku": "CAF-GRA-1K",
-  "name": "Caffè Ardelia Gran Crema in grani 1 kg",
-  "aliases": [
-   "caffe grani",
-   "caffe in grani",
-   "grani",
-   "gran crema"
-  ],
-  "category": "coffee",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 1 kg bags",
-  "list_price": 90.0
- },
- {
-  "sku": "CAF-DEC-500",
-  "name": "Caffè Ardelia Decaffeinato 500g",
-  "aliases": [
-   "decaffeinato",
-   "decaf",
-   "caffe deca"
-  ],
-  "category": "coffee",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 500 g",
-  "list_price": 50.4
- },
- {
-  "sku": "CAF-ORZ-500",
-  "name": "Orzo solubile Ardelia 500g",
-  "aliases": [
-   "orzo",
-   "orzo solubile"
-  ],
-  "category": "coffee",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 500 g",
-  "list_price": 32.4
- },
- {
-  "sku": "CAF-ZUC-1K",
-  "name": "Zucchero bustine Dolcelume 1000 pz",
-  "aliases": [
-   "zucchero",
-   "bustine zucchero",
-   "zucchero bustine"
-  ],
-  "category": "coffee",
-  "sell_unit": "case",
-  "pack_size": 4,
-  "pack_label": "case of 4 × 1000 sachets",
-  "list_price": 36.0
- },
- {
-  "sku": "OLI-EVO-1L",
-  "name": "Olio extravergine Ca' Marone 1 l",
-  "aliases": [
-   "olio",
-   "olio evo",
-   "olio 1 l",
-   "olio 1l",
-   "evo 1 l"
-  ],
-  "category": "oil",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "bottle 1 l",
-  "list_price": 8.9
- },
- {
-  "sku": "OLI-EVO-5L",
-  "name": "Olio extravergine Ca' Marone 5 l",
-  "aliases": [
-   "olio 5 l",
-   "olio 5lt",
-   "olio 5 lt",
-   "olio latta",
-   "latta olio",
-   "evo 5 l"
-  ],
-  "category": "oil",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "tin 5 l",
-  "list_price": 41.5
- },
- {
-  "sku": "OLI-SEM-10L",
-  "name": "Olio di semi di arachide Solara 10 l",
-  "aliases": [
-   "olio di semi",
-   "olio semi",
-   "olio arachide",
-   "olio frittura"
-  ],
-  "category": "oil",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "tin 10 l",
-  "list_price": 19.8
- },
- {
-  "sku": "ACE-VIN-1L",
-  "name": "Aceto di vino bianco Solara 1 l",
-  "aliases": [
-   "aceto",
-   "aceto bianco"
-  ],
-  "category": "pantry",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 1 l",
-  "list_price": 7.8
- },
- {
-  "sku": "SAL-FIN-1K",
-  "name": "Sale fino Saline Rosse 1 kg",
-  "aliases": [
-   "sale",
-   "sale fino"
-  ],
-  "category": "pantry",
-  "sell_unit": "case",
-  "pack_size": 20,
-  "pack_label": "case of 20 × 1 kg",
-  "list_price": 9.6
- },
- {
-  "sku": "POM-PEL-2.5",
-  "name": "Pelati Terre Calvani 2,5 kg",
-  "aliases": [
-   "pelati",
-   "pelati 2,5",
-   "pomodori pelati"
-  ],
-  "category": "tomatoes",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 × 2.5 kg tins",
-  "list_price": 17.4
- },
- {
-  "sku": "POM-PAS-700",
-  "name": "Passata Terre Calvani 700g",
-  "aliases": [
-   "passata",
-   "passata di pomodoro",
-   "passata 700"
-  ],
-  "category": "tomatoes",
-  "sell_unit": "case",
-  "pack_size": 12,
-  "pack_label": "case of 12 × 700 g",
-  "list_price": 13.2
- },
- {
-  "sku": "POM-CIL-400",
-  "name": "Pomodorini ciliegino Terre Calvani 400g",
-  "aliases": [
-   "ciliegino",
-   "ciliegini",
-   "pomodorini"
-  ],
-  "category": "tomatoes",
-  "sell_unit": "case",
-  "pack_size": 12,
-  "pack_label": "case of 12 × 400 g",
-  "list_price": 15.6
- },
- {
-  "sku": "POM-CON-800",
-  "name": "Concentrato di pomodoro Terre Calvani 800g",
-  "aliases": [
-   "concentrato",
-   "doppio concentrato"
-  ],
-  "category": "tomatoes",
-  "sell_unit": "case",
-  "pack_size": 12,
-  "pack_label": "case of 12 × 800 g",
-  "list_price": 21.0
- },
- {
-  "sku": "PAS-SPA-500",
-  "name": "Spaghetti n.5 Lombarelli 500g",
-  "aliases": [
-   "spaghetti",
-   "spaghetti n5",
-   "spaghetti 5"
-  ],
-  "category": "pasta",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 500 g",
-  "list_price": 17.28
- },
- {
-  "sku": "PAS-PEN-500",
-  "name": "Penne rigate Lombarelli 500g",
-  "aliases": [
-   "penne",
-   "penne rigate"
-  ],
-  "category": "pasta",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 500 g",
-  "list_price": 17.28
- },
- {
-  "sku": "PAS-RIG-500",
-  "name": "Rigatoni Lombarelli 500g",
-  "aliases": [
-   "rigatoni"
-  ],
-  "category": "pasta",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 500 g",
-  "list_price": 17.28
- },
- {
-  "sku": "PAS-FUS-500",
-  "name": "Fusilli Lombarelli 500g",
-  "aliases": [
-   "fusilli"
-  ],
-  "category": "pasta",
-  "sell_unit": "case",
-  "pack_size": 24,
-  "pack_label": "case of 24 × 500 g",
-  "list_price": 17.28
- },
- {
-  "sku": "PAS-TAG-250",
-  "name": "Tagliatelle all'uovo Lombarelli 250g",
-  "aliases": [
-   "tagliatelle",
-   "tagliatelle uovo"
-  ],
-  "category": "pasta",
-  "sell_unit": "case",
-  "pack_size": 12,
-  "pack_label": "case of 12 × 250 g",
-  "list_price": 22.8
- },
- {
-  "sku": "PAS-RIS-1K",
-  "name": "Riso Carnaroli Lombarelli 1 kg",
-  "aliases": [
-   "riso",
-   "riso carnaroli",
-   "carnaroli"
-  ],
-  "category": "pasta",
-  "sell_unit": "case",
-  "pack_size": 10,
-  "pack_label": "case of 10 × 1 kg",
-  "list_price": 24.5
- },
- {
-  "sku": "FAR-00-5K",
-  "name": "Farina 00 Aldarica 5 kg",
-  "aliases": [
-   "farina",
-   "farina 00",
-   "farina 00 5kg",
-   "00"
-  ],
-  "category": "flour",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "sack 5 kg",
-  "list_price": 4.8
- },
- {
-  "sku": "FAR-00-25K",
-  "name": "Farina 00 Aldarica 25 kg",
-  "aliases": [
-   "farina 25 kg",
-   "farina 00 25kg",
-   "sacco farina"
-  ],
-  "category": "flour",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "sack 25 kg",
-  "list_price": 19.5
- },
- {
-  "sku": "FAR-MAN-5K",
-  "name": "Farina Manitoba Aldarica 5 kg",
-  "aliases": [
-   "manitoba",
-   "farina manitoba"
-  ],
-  "category": "flour",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "sack 5 kg",
-  "list_price": 6.4
- },
- {
-  "sku": "FAR-SEM-5K",
-  "name": "Semola rimacinata Aldarica 5 kg",
-  "aliases": [
-   "semola",
-   "semola rimacinata"
-  ],
-  "category": "flour",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "sack 5 kg",
-  "list_price": 5.6
- },
- {
-  "sku": "FOR-GRA-24",
-  "name": "Grana Vallesella 24 mesi",
-  "aliases": [
-   "grana",
-   "grana 24 mesi",
-   "parmigiano"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "wheel portions, sold by kg",
-  "list_price": 16.8
- },
- {
-  "sku": "FOR-MOZ-FIO",
-  "name": "Mozzarella fiordilatte La Casara",
-  "aliases": [
-   "mozzarella",
-   "fiordilatte",
-   "mozzarella fiordilatte"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 7.2
- },
- {
-  "sku": "FOR-MOZ-BUF",
-  "name": "Mozzarella di bufala La Casara",
-  "aliases": [
-   "bufala",
-   "mozzarella bufala",
-   "mozzarella di bufala"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 12.9
- },
- {
-  "sku": "FOR-PRO-DOL",
-  "name": "Provolone dolce Ronco Alto",
-  "aliases": [
-   "provolone",
-   "provolone dolce"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 10.4
- },
- {
-  "sku": "FOR-TAL",
-  "name": "Taleggio Valle Oscura",
-  "aliases": [
-   "taleggio"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 11.8
- },
- {
-  "sku": "FOR-GOR-DOL",
-  "name": "Gorgonzola dolce Ronco Alto",
-  "aliases": [
-   "gorgonzola",
-   "gorgonzola dolce"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 10.9
- },
- {
-  "sku": "FOR-RIC",
-  "name": "Ricotta vaccina La Casara",
-  "aliases": [
-   "ricotta"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 5.8
- },
- {
-  "sku": "FOR-ASI",
-  "name": "Asiago Prealpi",
-  "aliases": [
-   "asiago"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 12.2
- },
- {
-  "sku": "FOR-PEC",
-  "name": "Pecorino Monte Orso",
-  "aliases": [
-   "pecorino"
-  ],
-  "category": "cheese",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 14.6
- },
- {
-  "sku": "SAL-PRC",
-  "name": "Prosciutto crudo 14 mesi Fornasetta",
-  "aliases": [
-   "crudo",
-   "prosciutto crudo",
-   "prosciutto 14 mesi"
-  ],
-  "category": "cured meat",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 21.5
- },
- {
-  "sku": "SAL-COT",
-  "name": "Prosciutto cotto Fonteluce",
-  "aliases": [
-   "cotto",
-   "prosciutto cotto"
-  ],
-  "category": "cured meat",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 12.8
- },
- {
-  "sku": "SAL-SPE",
-  "name": "Speck Alpe Verde",
-  "aliases": [
-   "speck"
-  ],
-  "category": "cured meat",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 14.2
- },
- {
-  "sku": "SAL-MOR",
-  "name": "Mortadella Valbruna",
-  "aliases": [
-   "mortadella"
-  ],
-  "category": "cured meat",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 8.9
- },
- {
-  "sku": "SAL-SAL",
-  "name": "Salame nostrano Campolungo",
-  "aliases": [
-   "salame",
-   "salame nostrano"
-  ],
-  "category": "cured meat",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 13.4
- },
- {
-  "sku": "SAL-BRE",
-  "name": "Bresaola Cima Verde",
-  "aliases": [
-   "bresaola"
-  ],
-  "category": "cured meat",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 26.0
- },
- {
-  "sku": "SAL-PAN",
-  "name": "Pancetta arrotolata Valbruna",
-  "aliases": [
-   "pancetta"
-  ],
-  "category": "cured meat",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 11.9
- },
- {
-  "sku": "SAL-GUA",
-  "name": "Guanciale stagionato Valbruna",
-  "aliases": [
-   "guanciale"
-  ],
-  "category": "cured meat",
-  "sell_unit": "kg",
-  "pack_size": 1,
-  "pack_label": "sold by kg",
-  "list_price": 13.6
- },
- {
-  "sku": "DIS-CUP-CAF",
-  "name": "Bicchierini caffè 80cc Linea Pulita",
-  "aliases": [
-   "bicchierini",
-   "bicchierini caffe",
-   "bicchierini 80cc"
-  ],
-  "category": "disposables",
-  "sell_unit": "case",
-  "pack_size": 10,
-  "pack_label": "case of 10 sleeves × 100",
-  "list_price": 9.8
- },
- {
-  "sku": "DIS-BIC-200",
-  "name": "Bicchieri plastica 200cc Linea Pulita",
-  "aliases": [
-   "bicchieri plastica",
-   "bicchieri 200cc",
-   "bicchieri"
-  ],
-  "category": "disposables",
-  "sell_unit": "case",
-  "pack_size": 20,
-  "pack_label": "case of 20 sleeves × 50",
-  "list_price": 12.4
- },
- {
-  "sku": "DIS-TOV-33",
-  "name": "Tovaglioli 33x33 Candida",
-  "aliases": [
-   "tovaglioli 33",
-   "tovaglioli 33x33",
-   "tovaglioli"
-  ],
-  "category": "disposables",
-  "sell_unit": "case",
-  "pack_size": 20,
-  "pack_label": "case of 20 packs × 100",
-  "list_price": 18.9
- },
- {
-  "sku": "DIS-TOV-40",
-  "name": "Tovaglioli 40x40 2 veli Candida",
-  "aliases": [
-   "tovaglioli 40",
-   "tovaglioli 40x40",
-   "tovaglioli grandi"
-  ],
-  "category": "disposables",
-  "sell_unit": "case",
-  "pack_size": 20,
-  "pack_label": "case of 20 packs × 100",
-  "list_price": 24.6
- },
- {
-  "sku": "DIS-ROT-6",
-  "name": "Rotolo asciugamani Candida",
-  "aliases": [
-   "rotoli asciugamani",
-   "carta asciugamani",
-   "scottex"
-  ],
-  "category": "cleaning",
-  "sell_unit": "case",
-  "pack_size": 6,
-  "pack_label": "case of 6 rolls",
-  "list_price": 14.4
- },
- {
-  "sku": "DIS-SAC-70",
-  "name": "Sacchi spazzatura 70x110 Linea Pulita",
-  "aliases": [
-   "sacchi",
-   "sacchi spazzatura",
-   "sacchi neri"
-  ],
-  "category": "cleaning",
-  "sell_unit": "case",
-  "pack_size": 10,
-  "pack_label": "case of 10 rolls",
-  "list_price": 22.0
- },
- {
-  "sku": "DIS-DET-5L",
-  "name": "Detersivo piatti Limonetta 5 l",
-  "aliases": [
-   "detersivo piatti",
-   "detersivo",
-   "piatti 5 l"
-  ],
-  "category": "cleaning",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "tank 5 l",
-  "list_price": 6.9
- },
- {
-  "sku": "DIS-SGR-750",
-  "name": "Sgrassatore Forza Cucina 750ml",
-  "aliases": [
-   "sgrassatore"
-  ],
-  "category": "cleaning",
-  "sell_unit": "case",
-  "pack_size": 12,
-  "pack_label": "case of 12 × 750 ml",
-  "list_price": 21.6
- },
- {
-  "sku": "DIS-GUA-M",
-  "name": "Guanti nitrile M Linea Pulita",
-  "aliases": [
-   "guanti",
-   "guanti nitrile",
-   "guanti m"
-  ],
-  "category": "cleaning",
-  "sell_unit": "case",
-  "pack_size": 10,
-  "pack_label": "case of 10 boxes × 100",
-  "list_price": 38.0
- },
- {
-  "sku": "DIS-PEL-300",
-  "name": "Pellicola alimentare 300 m",
-  "aliases": [
-   "pellicola",
-   "pellicola alimentare"
-  ],
-  "category": "disposables",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "roll 300 m",
-  "list_price": 8.2
- },
- {
-  "sku": "DIS-ALU-150",
-  "name": "Alluminio rotolo 150 m",
-  "aliases": [
-   "alluminio",
-   "carta alluminio"
-  ],
-  "category": "disposables",
-  "sell_unit": "piece",
-  "pack_size": 1,
-  "pack_label": "roll 150 m",
-  "list_price": 9.4
- },
- {
-  "sku": "DOL-BIS-CAF",
-  "name": "Biscotti da caffè Forno Lia",
-  "aliases": [
-   "biscotti",
-   "biscottini",
-   "biscotti caffe"
-  ],
-  "category": "sweets",
-  "sell_unit": "case",
-  "pack_size": 100,
-  "pack_label": "case of 100 single packs",
-  "list_price": 12.0
- },
- {
-  "sku": "DOL-CRO-SUR",
-  "name": "Cornetti vuoti surgelati Forno Lia",
-  "aliases": [
-   "cornetti",
-   "brioche",
-   "cornetti surgelati"
-  ],
-  "category": "sweets",
-  "sell_unit": "case",
-  "pack_size": 60,
-  "pack_label": "case of 60 pieces",
-  "list_price": 21.0
- }
+  {
+    "sku": "VIN-ROS-005",
+    "name": "Colline red wine 75cl",
+    "aliases": [
+      "colline red",
+      "colline",
+      "house red",
+      "red wine",
+      "red"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 41.4
+  },
+  {
+    "sku": "VIN-ROS-007",
+    "name": "Roccafiera Superior Red 75cl",
+    "aliases": [
+      "roccafiera",
+      "roccafiera red",
+      "superior red",
+      "roccafiera superior red"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 52.8
+  },
+  {
+    "sku": "VIN-ROS-009",
+    "name": "Barbera Cascina Orsola 75cl",
+    "aliases": [
+      "barbera",
+      "barbera orsola",
+      "cascina orsola"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 46.2
+  },
+  {
+    "sku": "VIN-BIA-003",
+    "name": "Fiorito white wine Vallecorta 75cl",
+    "aliases": [
+      "fiorito white",
+      "fiorito",
+      "vallecorta white",
+      "house white",
+      "white wine"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 38.4
+  },
+  {
+    "sku": "VIN-BIA-004",
+    "name": "Punta Calma Vermentino 75cl",
+    "aliases": [
+      "vermentino",
+      "punta calma",
+      "punta calma vermentino"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 47.4
+  },
+  {
+    "sku": "VIN-PRO-002",
+    "name": "Vallecorta Prosecco Brut 75cl",
+    "aliases": [
+      "prosecco brut",
+      "brut vallecorta",
+      "vallecorta brut"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 34.8
+  },
+  {
+    "sku": "VIN-PRO-003",
+    "name": "Vallecorta Prosecco Extra Dry 75cl",
+    "aliases": [
+      "prosecco extra dry",
+      "extra dry vallecorta",
+      "vallecorta extra dry"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 34.8
+  },
+  {
+    "sku": "VIN-SPU-001",
+    "name": "Terrealte Classic Method sparkling wine 75cl",
+    "aliases": [
+      "sparkling wine",
+      "classic method",
+      "terrealte",
+      "spumante"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 71.4
+  },
+  {
+    "sku": "VIN-ROT-001",
+    "name": "Ca' Serena rosé 75cl",
+    "aliases": [
+      "rose",
+      "rosé",
+      "ca serena",
+      "serena rose"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 36.0
+  },
+  {
+    "sku": "BIR-LAG-33",
+    "name": "Tornasco Lager 33cl",
+    "aliases": [
+      "lager",
+      "tornasco lager",
+      "blonde",
+      "blonde tornasco"
+    ],
+    "category": "beer",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 33 cl",
+    "list_price": 28.8
+  },
+  {
+    "sku": "BIR-ROS-33",
+    "name": "Tornasco Red Ale 33cl",
+    "aliases": [
+      "tornasco red",
+      "red ale",
+      "red beer",
+      "double malt"
+    ],
+    "category": "beer",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 33 cl",
+    "list_price": 31.2
+  },
+  {
+    "sku": "BIR-BIA-33",
+    "name": "Tornasco Wheat Beer 33cl",
+    "aliases": [
+      "tornasco wheat",
+      "wheat beer",
+      "weiss",
+      "white beer"
+    ],
+    "category": "beer",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 33 cl",
+    "list_price": 31.2
+  },
+  {
+    "sku": "BIR-ANA-33",
+    "name": "Tornasco Zero alcohol-free 33cl",
+    "aliases": [
+      "alcohol free",
+      "non alcoholic",
+      "tornasco zero",
+      "zero alcohol"
+    ],
+    "category": "beer",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 33 cl",
+    "list_price": 26.4
+  },
+  {
+    "sku": "ACQ-NAT-1L",
+    "name": "Fonte Brivio still water 1 l",
+    "aliases": [
+      "still water",
+      "still",
+      "water",
+      "plain water",
+      "brivio still",
+      "flat water"
+    ],
+    "category": "water",
+    "sell_unit": "case",
+    "pack_size": 12,
+    "pack_label": "case of 12 × 1 l",
+    "list_price": 5.4
+  },
+  {
+    "sku": "ACQ-FRIZ-1L",
+    "name": "Fonte Brivio sparkling water 1 l",
+    "aliases": [
+      "sparkling water",
+      "sparkling",
+      "fizzy water",
+      "fizzy",
+      "brivio sparkling"
+    ],
+    "category": "water",
+    "sell_unit": "case",
+    "pack_size": 12,
+    "pack_label": "case of 12 × 1 l",
+    "list_price": 5.4
+  },
+  {
+    "sku": "ACQ-NAT-50",
+    "name": "Fonte Brivio still water 50cl",
+    "aliases": [
+      "still 50",
+      "still water 50",
+      "still water 50cl",
+      "brivio still 50"
+    ],
+    "category": "water",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 50 cl",
+    "list_price": 6.6
+  },
+  {
+    "sku": "ACQ-FRIZ-50",
+    "name": "Fonte Brivio sparkling water 50cl",
+    "aliases": [
+      "sparkling 50",
+      "sparkling water 50",
+      "sparkling water 50cl",
+      "brivio sparkling 50"
+    ],
+    "category": "water",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 50 cl",
+    "list_price": 6.6
+  },
+  {
+    "sku": "BEV-COL-33",
+    "name": "Zeffiro Cola 33cl",
+    "aliases": [
+      "cola",
+      "zeffiro cola",
+      "cola can"
+    ],
+    "category": "soft drink",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 33 cl cans",
+    "list_price": 14.4
+  },
+  {
+    "sku": "BEV-ARA-20",
+    "name": "Dolcevita Orangeade 20cl",
+    "aliases": [
+      "orangeade",
+      "orange soda",
+      "orange",
+      "orangeade glass"
+    ],
+    "category": "soft drink",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 20 cl",
+    "list_price": 15.6
+  },
+  {
+    "sku": "BEV-CHI-20",
+    "name": "Valsorda Chinotto 20cl",
+    "aliases": [
+      "chinotto",
+      "chinotto valsorda"
+    ],
+    "category": "soft drink",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 20 cl",
+    "list_price": 16.8
+  },
+  {
+    "sku": "BEV-TON-20",
+    "name": "Lunaria Tonic 20cl",
+    "aliases": [
+      "tonic",
+      "lunaria tonic",
+      "tonic water"
+    ],
+    "category": "soft drink",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 20 cl",
+    "list_price": 15.0
+  },
+  {
+    "sku": "BEV-SUC-20",
+    "name": "Terrazza Pear Juice 20cl",
+    "aliases": [
+      "pear juice",
+      "pear"
+    ],
+    "category": "soft drink",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 20 cl",
+    "list_price": 17.4
+  },
+  {
+    "sku": "BEV-SUC-AC",
+    "name": "Terrazza ACE Juice 20cl",
+    "aliases": [
+      "ace juice",
+      "ace"
+    ],
+    "category": "soft drink",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 20 cl",
+    "list_price": 17.4
+  },
+  {
+    "sku": "BEV-GAZ-1L",
+    "name": "Valsorda Gazzosa 1 l",
+    "aliases": [
+      "gazzosa",
+      "lemon soda"
+    ],
+    "category": "soft drink",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 1 l",
+    "list_price": 8.4
+  },
+  {
+    "sku": "BEV-LAT-1L",
+    "name": "Prato Alto UHT Whole Milk 1 l",
+    "aliases": [
+      "milk",
+      "uht milk",
+      "whole milk"
+    ],
+    "category": "dairy",
+    "sell_unit": "case",
+    "pack_size": 12,
+    "pack_label": "case of 12 × 1 l",
+    "list_price": 13.2
+  },
+  {
+    "sku": "CAF-MIS-1K",
+    "name": "Ardelia Bar Blend Coffee 1 kg",
+    "aliases": [
+      "coffee",
+      "coffee blend",
+      "bar blend",
+      "ardelia coffee"
+    ],
+    "category": "coffee",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 1 kg bags",
+    "list_price": 84.0
+  },
+  {
+    "sku": "CAF-GRA-1K",
+    "name": "Ardelia Gran Crema Coffee Beans 1 kg",
+    "aliases": [
+      "coffee beans",
+      "beans",
+      "gran crema"
+    ],
+    "category": "coffee",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 1 kg bags",
+    "list_price": 90.0
+  },
+  {
+    "sku": "CAF-DEC-500",
+    "name": "Ardelia Decaf Coffee 500g",
+    "aliases": [
+      "decaf",
+      "decaffeinated",
+      "decaf coffee"
+    ],
+    "category": "coffee",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 500 g",
+    "list_price": 50.4
+  },
+  {
+    "sku": "CAF-ORZ-500",
+    "name": "Ardelia Instant Barley 500g",
+    "aliases": [
+      "barley",
+      "instant barley"
+    ],
+    "category": "coffee",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 500 g",
+    "list_price": 32.4
+  },
+  {
+    "sku": "CAF-ZUC-1K",
+    "name": "Dolcelume Sugar Sachets 1000 pcs",
+    "aliases": [
+      "sugar",
+      "sugar sachets",
+      "sugar packets"
+    ],
+    "category": "coffee",
+    "sell_unit": "case",
+    "pack_size": 4,
+    "pack_label": "case of 4 × 1000 sachets",
+    "list_price": 36.0
+  },
+  {
+    "sku": "OLI-EVO-1L",
+    "name": "Ca' Marone Extra Virgin Olive Oil 1 l",
+    "aliases": [
+      "oil",
+      "olive oil",
+      "evo oil",
+      "oil 1 l",
+      "oil 1l",
+      "evo 1 l"
+    ],
+    "category": "oil",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "bottle 1 l",
+    "list_price": 8.9
+  },
+  {
+    "sku": "OLI-EVO-5L",
+    "name": "Ca' Marone Extra Virgin Olive Oil 5 l",
+    "aliases": [
+      "oil 5 l",
+      "oil 5l",
+      "oil 5lt",
+      "oil tin",
+      "tin of oil",
+      "evo 5 l"
+    ],
+    "category": "oil",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "tin 5 l",
+    "list_price": 41.5
+  },
+  {
+    "sku": "OLI-SEM-10L",
+    "name": "Solara Peanut Oil 10 l",
+    "aliases": [
+      "peanut oil",
+      "frying oil",
+      "seed oil"
+    ],
+    "category": "oil",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "tin 10 l",
+    "list_price": 19.8
+  },
+  {
+    "sku": "ACE-VIN-1L",
+    "name": "Solara White Wine Vinegar 1 l",
+    "aliases": [
+      "vinegar",
+      "white vinegar"
+    ],
+    "category": "pantry",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 1 l",
+    "list_price": 7.8
+  },
+  {
+    "sku": "SAL-FIN-1K",
+    "name": "Saline Rosse Fine Salt 1 kg",
+    "aliases": [
+      "salt",
+      "fine salt"
+    ],
+    "category": "pantry",
+    "sell_unit": "case",
+    "pack_size": 20,
+    "pack_label": "case of 20 × 1 kg",
+    "list_price": 9.6
+  },
+  {
+    "sku": "POM-PEL-2.5",
+    "name": "Terre Calvani Peeled Tomatoes 2.5 kg",
+    "aliases": [
+      "peeled tomatoes",
+      "whole peeled tomatoes",
+      "peeled tomatoes 2.5",
+      "tinned tomatoes"
+    ],
+    "category": "tomatoes",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 2.5 kg tins",
+    "list_price": 17.4
+  },
+  {
+    "sku": "POM-PAS-700",
+    "name": "Terre Calvani Passata 700g",
+    "aliases": [
+      "passata",
+      "tomato passata",
+      "passata 700"
+    ],
+    "category": "tomatoes",
+    "sell_unit": "case",
+    "pack_size": 12,
+    "pack_label": "case of 12 × 700 g",
+    "list_price": 13.2
+  },
+  {
+    "sku": "POM-CIL-400",
+    "name": "Terre Calvani Cherry Tomatoes 400g",
+    "aliases": [
+      "cherry tomatoes",
+      "cherry"
+    ],
+    "category": "tomatoes",
+    "sell_unit": "case",
+    "pack_size": 12,
+    "pack_label": "case of 12 × 400 g",
+    "list_price": 15.6
+  },
+  {
+    "sku": "POM-CON-800",
+    "name": "Terre Calvani Tomato Paste 800g",
+    "aliases": [
+      "tomato paste",
+      "double concentrate",
+      "paste"
+    ],
+    "category": "tomatoes",
+    "sell_unit": "case",
+    "pack_size": 12,
+    "pack_label": "case of 12 × 800 g",
+    "list_price": 21.0
+  },
+  {
+    "sku": "PAS-SPA-500",
+    "name": "Lombarelli Spaghetti no. 5 500g",
+    "aliases": [
+      "spaghetti",
+      "spaghetti no5",
+      "spaghetti 5"
+    ],
+    "category": "pasta",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 500 g",
+    "list_price": 17.28
+  },
+  {
+    "sku": "PAS-PEN-500",
+    "name": "Lombarelli Penne Rigate 500g",
+    "aliases": [
+      "penne",
+      "penne rigate"
+    ],
+    "category": "pasta",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 500 g",
+    "list_price": 17.28
+  },
+  {
+    "sku": "PAS-RIG-500",
+    "name": "Lombarelli Rigatoni 500g",
+    "aliases": [
+      "rigatoni"
+    ],
+    "category": "pasta",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 500 g",
+    "list_price": 17.28
+  },
+  {
+    "sku": "PAS-FUS-500",
+    "name": "Lombarelli Fusilli 500g",
+    "aliases": [
+      "fusilli"
+    ],
+    "category": "pasta",
+    "sell_unit": "case",
+    "pack_size": 24,
+    "pack_label": "case of 24 × 500 g",
+    "list_price": 17.28
+  },
+  {
+    "sku": "PAS-TAG-250",
+    "name": "Lombarelli Egg Tagliatelle 250g",
+    "aliases": [
+      "tagliatelle",
+      "egg tagliatelle",
+      "egg pasta"
+    ],
+    "category": "pasta",
+    "sell_unit": "case",
+    "pack_size": 12,
+    "pack_label": "case of 12 × 250 g",
+    "list_price": 22.8
+  },
+  {
+    "sku": "PAS-RIS-1K",
+    "name": "Lombarelli Carnaroli Rice 1 kg",
+    "aliases": [
+      "rice",
+      "carnaroli rice",
+      "carnaroli"
+    ],
+    "category": "pasta",
+    "sell_unit": "case",
+    "pack_size": 10,
+    "pack_label": "case of 10 × 1 kg",
+    "list_price": 24.5
+  },
+  {
+    "sku": "FAR-00-5K",
+    "name": "Aldarica 00 Flour 5 kg",
+    "aliases": [
+      "flour",
+      "flour 00",
+      "00 flour",
+      "flour 00 5kg",
+      "00"
+    ],
+    "category": "flour",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "sack 5 kg",
+    "list_price": 4.8
+  },
+  {
+    "sku": "FAR-00-25K",
+    "name": "Aldarica 00 Flour 25 kg",
+    "aliases": [
+      "flour 25 kg",
+      "flour 00 25kg",
+      "00 flour 25 kg",
+      "sack of flour"
+    ],
+    "category": "flour",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "sack 25 kg",
+    "list_price": 19.5
+  },
+  {
+    "sku": "FAR-MAN-5K",
+    "name": "Aldarica Manitoba Flour 5 kg",
+    "aliases": [
+      "manitoba",
+      "manitoba flour"
+    ],
+    "category": "flour",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "sack 5 kg",
+    "list_price": 6.4
+  },
+  {
+    "sku": "FAR-SEM-5K",
+    "name": "Aldarica Re-milled Semolina 5 kg",
+    "aliases": [
+      "semolina",
+      "durum semolina",
+      "re-milled semolina"
+    ],
+    "category": "flour",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "sack 5 kg",
+    "list_price": 5.6
+  },
+  {
+    "sku": "FOR-GRA-24",
+    "name": "Vallesella Grana 24 months",
+    "aliases": [
+      "grana",
+      "grana 24 months",
+      "parmesan"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "wheel portions, sold by kg",
+    "list_price": 16.8
+  },
+  {
+    "sku": "FOR-MOZ-FIO",
+    "name": "La Casara Fior di Latte Mozzarella",
+    "aliases": [
+      "mozzarella",
+      "fior di latte",
+      "fiordilatte",
+      "fior di latte mozzarella",
+      "fiordilatte mozzarella"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 7.2
+  },
+  {
+    "sku": "FOR-MOZ-BUF",
+    "name": "La Casara Buffalo Mozzarella",
+    "aliases": [
+      "buffalo",
+      "buffalo mozzarella",
+      "mozzarella di bufala"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 12.9
+  },
+  {
+    "sku": "FOR-PRO-DOL",
+    "name": "Ronco Alto Mild Provolone",
+    "aliases": [
+      "provolone",
+      "mild provolone"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 10.4
+  },
+  {
+    "sku": "FOR-TAL",
+    "name": "Valle Oscura Taleggio",
+    "aliases": [
+      "taleggio"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 11.8
+  },
+  {
+    "sku": "FOR-GOR-DOL",
+    "name": "Ronco Alto Sweet Gorgonzola",
+    "aliases": [
+      "gorgonzola",
+      "sweet gorgonzola",
+      "mild gorgonzola"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 10.9
+  },
+  {
+    "sku": "FOR-RIC",
+    "name": "La Casara Cow's Milk Ricotta",
+    "aliases": [
+      "ricotta"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 5.8
+  },
+  {
+    "sku": "FOR-ASI",
+    "name": "Prealpi Asiago",
+    "aliases": [
+      "asiago"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 12.2
+  },
+  {
+    "sku": "FOR-PEC",
+    "name": "Monte Orso Pecorino",
+    "aliases": [
+      "pecorino"
+    ],
+    "category": "cheese",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 14.6
+  },
+  {
+    "sku": "SAL-PRC",
+    "name": "Fornasetta Prosciutto Crudo 14 months",
+    "aliases": [
+      "crudo",
+      "prosciutto crudo",
+      "prosciutto",
+      "parma ham",
+      "cured ham",
+      "ham 14 months"
+    ],
+    "category": "cured meat",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 21.5
+  },
+  {
+    "sku": "SAL-COT",
+    "name": "Fonteluce Cooked Ham",
+    "aliases": [
+      "cooked ham",
+      "cotto",
+      "prosciutto cotto",
+      "ham"
+    ],
+    "category": "cured meat",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 12.8
+  },
+  {
+    "sku": "SAL-SPE",
+    "name": "Alpe Verde Speck",
+    "aliases": [
+      "speck"
+    ],
+    "category": "cured meat",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 14.2
+  },
+  {
+    "sku": "SAL-MOR",
+    "name": "Valbruna Mortadella",
+    "aliases": [
+      "mortadella"
+    ],
+    "category": "cured meat",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 8.9
+  },
+  {
+    "sku": "SAL-SAL",
+    "name": "Campolungo Country Salami",
+    "aliases": [
+      "salami",
+      "country salami"
+    ],
+    "category": "cured meat",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 13.4
+  },
+  {
+    "sku": "SAL-BRE",
+    "name": "Cima Verde Bresaola",
+    "aliases": [
+      "bresaola"
+    ],
+    "category": "cured meat",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 26.0
+  },
+  {
+    "sku": "SAL-PAN",
+    "name": "Valbruna Rolled Pancetta",
+    "aliases": [
+      "pancetta",
+      "rolled pancetta"
+    ],
+    "category": "cured meat",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 11.9
+  },
+  {
+    "sku": "SAL-GUA",
+    "name": "Valbruna Cured Guanciale",
+    "aliases": [
+      "guanciale",
+      "cured guanciale"
+    ],
+    "category": "cured meat",
+    "sell_unit": "kg",
+    "pack_size": 1,
+    "pack_label": "sold by kg",
+    "list_price": 13.6
+  },
+  {
+    "sku": "DIS-CUP-CAF",
+    "name": "Linea Pulita Coffee Cups 80cc",
+    "aliases": [
+      "coffee cups",
+      "espresso cups",
+      "cups 80cc",
+      "small cups"
+    ],
+    "category": "disposables",
+    "sell_unit": "case",
+    "pack_size": 10,
+    "pack_label": "case of 10 sleeves × 100",
+    "list_price": 9.8
+  },
+  {
+    "sku": "DIS-BIC-200",
+    "name": "Linea Pulita Plastic Cups 200cc",
+    "aliases": [
+      "plastic cups",
+      "cups 200cc",
+      "cups"
+    ],
+    "category": "disposables",
+    "sell_unit": "case",
+    "pack_size": 20,
+    "pack_label": "case of 20 sleeves × 50",
+    "list_price": 12.4
+  },
+  {
+    "sku": "DIS-TOV-33",
+    "name": "Candida Napkins 33x33",
+    "aliases": [
+      "napkins 33",
+      "napkins 33x33",
+      "napkins"
+    ],
+    "category": "disposables",
+    "sell_unit": "case",
+    "pack_size": 20,
+    "pack_label": "case of 20 packs × 100",
+    "list_price": 18.9
+  },
+  {
+    "sku": "DIS-TOV-40",
+    "name": "Candida Napkins 40x40 2-ply",
+    "aliases": [
+      "napkins 40",
+      "napkins 40x40",
+      "big napkins",
+      "large napkins"
+    ],
+    "category": "disposables",
+    "sell_unit": "case",
+    "pack_size": 20,
+    "pack_label": "case of 20 packs × 100",
+    "list_price": 24.6
+  },
+  {
+    "sku": "DIS-ROT-6",
+    "name": "Candida Paper Towel Roll",
+    "aliases": [
+      "paper towels",
+      "paper towel rolls",
+      "kitchen roll",
+      "hand towel rolls"
+    ],
+    "category": "cleaning",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 rolls",
+    "list_price": 14.4
+  },
+  {
+    "sku": "DIS-SAC-70",
+    "name": "Linea Pulita Bin Bags 70x110",
+    "aliases": [
+      "bin bags",
+      "trash bags",
+      "black bags",
+      "garbage bags"
+    ],
+    "category": "cleaning",
+    "sell_unit": "case",
+    "pack_size": 10,
+    "pack_label": "case of 10 rolls",
+    "list_price": 22.0
+  },
+  {
+    "sku": "DIS-DET-5L",
+    "name": "Limonetta Dish Soap 5 l",
+    "aliases": [
+      "dish soap",
+      "washing up liquid",
+      "dish soap 5 l"
+    ],
+    "category": "cleaning",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "tank 5 l",
+    "list_price": 6.9
+  },
+  {
+    "sku": "DIS-SGR-750",
+    "name": "Forza Cucina Degreaser 750ml",
+    "aliases": [
+      "degreaser"
+    ],
+    "category": "cleaning",
+    "sell_unit": "case",
+    "pack_size": 12,
+    "pack_label": "case of 12 × 750 ml",
+    "list_price": 21.6
+  },
+  {
+    "sku": "DIS-GUA-M",
+    "name": "Linea Pulita Nitrile Gloves M",
+    "aliases": [
+      "gloves",
+      "nitrile gloves",
+      "gloves m"
+    ],
+    "category": "cleaning",
+    "sell_unit": "case",
+    "pack_size": 10,
+    "pack_label": "case of 10 boxes × 100",
+    "list_price": 38.0
+  },
+  {
+    "sku": "DIS-PEL-300",
+    "name": "Cling Film 300 m",
+    "aliases": [
+      "cling film",
+      "cling wrap",
+      "food wrap"
+    ],
+    "category": "disposables",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "roll 300 m",
+    "list_price": 8.2
+  },
+  {
+    "sku": "DIS-ALU-150",
+    "name": "Aluminium Foil Roll 150 m",
+    "aliases": [
+      "aluminium foil",
+      "foil",
+      "tin foil"
+    ],
+    "category": "disposables",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "roll 150 m",
+    "list_price": 9.4
+  },
+  {
+    "sku": "DOL-BIS-CAF",
+    "name": "Forno Lia Coffee Biscuits",
+    "aliases": [
+      "biscuits",
+      "cookies",
+      "coffee biscuits"
+    ],
+    "category": "sweets",
+    "sell_unit": "case",
+    "pack_size": 100,
+    "pack_label": "case of 100 single packs",
+    "list_price": 12.0
+  },
+  {
+    "sku": "DOL-CRO-SUR",
+    "name": "Forno Lia Frozen Unfilled Croissants",
+    "aliases": [
+      "croissants",
+      "frozen croissants",
+      "pastries"
+    ],
+    "category": "sweets",
+    "sell_unit": "case",
+    "pack_size": 60,
+    "pack_label": "case of 60 pieces",
+    "list_price": 21.0
+  }
 ]

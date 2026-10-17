@@ -33,10 +33,18 @@ export class ChatModel implements ChatLike {
   async generate(messages: ChatMessage[]): Promise<[string, Usage]> {
     const body: Record<string, unknown> = { model: this.name, messages, temperature: 0, max_tokens: 2048 };
     if (this.reasoningEffort) body.reasoning_effort = this.reasoningEffort;
-    const data = await post(`${this.baseUrl}/chat/completions`, this.timeoutS, {
+    const call = () => post(`${this.baseUrl}/chat/completions`, this.timeoutS, {
       headers: { Authorization: `Bearer ${this.apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
+    // Token Factory allows 20 requests a minute: a 429 waits out the window, up to 5 times
+    let data;
+    for (let i = 0; ; i++) {
+      try { data = await call(); break; } catch (e) {
+        if (!(e instanceof ModelError) || e.status !== 429 || i >= 5) throw e;
+        await new Promise((r) => setTimeout(r, 30_000 + Math.random() * 15_000));
+      }
+    }
     const text = data?.choices?.[0]?.message?.content;
     if (data?.choices?.[0]?.message === undefined) throw new ModelError(200, JSON.stringify(data));
     const u = data.usage ?? {};

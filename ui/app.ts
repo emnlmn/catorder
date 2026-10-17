@@ -17,7 +17,7 @@ interface Run { stage?: string; cached: boolean; latency_ms: number | null; toke
 interface Reading { kind: string; source: string; text: string }
 interface Health { model?: string; transcribe_model?: string; hardware?: string; mock?: boolean }
 interface Who { id: string; name: string }
-interface Summary { id: string; customer: Who; channel: string; received_at: string; preview: string; order: { id: string; status: string; clean: boolean } | null }
+interface Summary { id: string; sender?: string | null; customer: Who; channel: string; received_at: string; preview: string; order: { id: string; status: string; clean: boolean } | null }
 interface Detail {
   message: { id: string; sender?: string; customer_id?: string; customer?: Who; channel: string; received_at: string; text: string | null; media_url?: string | null };
   order: Order | null;
@@ -26,6 +26,8 @@ interface Detail {
 // the answer to the customer: drafted by the model, edited and sent by the operator; via demo = no WhatsApp number, nothing delivered
 interface Reply { id: string; message_id: string; text: string; status: 'draft' | 'sent'; via: 'whatsapp' | 'demo' | null; model: string; created_at: string; sent_at: string | null }
 interface CustInfo { terms: { discount_pct?: number; payment_days?: number }; recent_orders: { date: string }[] }
+interface Cust { id: string; name: string; phone?: string | null; terms: { discount_pct?: number; payment_days?: number; free_delivery_min?: number }; order_count: number; recent_orders: { date: string; lines?: { qty: number }[] }[] }
+interface Pred { next_order_date: string; days_overdue: number }
 interface Product { sku: string; name: string; pack_label: string }
 interface ReadResult { order: Order | null; reading?: Reading | null; runs?: Run[]; error?: string }
 interface Step { at: number; kind: string; status: 'run' | 'ok' | 'warn'; title: string; detail?: string; fresh?: boolean }
@@ -51,6 +53,7 @@ const S = {
   find: null as string | null, row: null as string | null, // the line whose catalogue search replaces the answer buttons / whose row was clicked: its quantity overrides the queue
   thread: {} as Record<string, Past[]>, more: new Set<string>(), trace: {} as Record<string, Trace>,
   revealed: new Set<string>(), queue: { order: '', n: 0 },
+  cust: null as string | null, all: null as Cust[] | null, q: '', view: 'list' as 'list' | 'chat' | 'detail', done: new Set<string>(), // the customer open without messages; every ERP customer; the search box; the narrow-screen step; orders confirmed here (their ERP import stays on the right)
   drafting: null as string | null, later: new Set<string>(), typed: {} as Record<string, string>, // the message whose reply is being written; drafts put off with Later
 };
 const CUST: Record<string, CustInfo | null> = {}; // per customer id; null = the fetch failed, no line
@@ -151,7 +154,8 @@ const ICONS: Record<string, string> = {
   voice: '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>',
   photo: '<svg viewBox="0 0 24 24"><path d="M4 7h4l2-3h4l2 3h4v13H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
   email: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
-  arrow: '<svg viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>',
+  search: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>',
+  back: '<svg viewBox="0 0 24 24"><path d="M19 12H5M11.5 5.5 5 12l6.5 6.5"/></svg>',
   check: '<svg viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7"/></svg>',
   alert: '<svg viewBox="0 0 24 24"><path d="M12 7v6M12 17h.01"/></svg>',
   draft: '<svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></svg>',
@@ -194,10 +198,15 @@ async function boot(): Promise<void> {
   try { S.health = await api<Health>('/health'); } catch (e) { toast(errMsg(e)); }
   $('modelText').textContent = engine(' · ');
   $('model').classList.toggle('quiet', !!S.health.mock || !S.health.hardware); // the live dot only where something really runs
-  await loadMessages();
-  const want = new URLSearchParams(location.search).get('m');
+  await Promise.all([loadMessages(), loadCustomers()]);
+  const qs = new URLSearchParams(location.search), want = qs.get('m'), wc = qs.get('c');
   if (want && S.messages.some((m) => m.id === want)) await select(want);
+  else if (wc && S.all && S.all.some((c) => c.id === wc)) selectCust(wc);
   settled = true;
+}
+async function loadCustomers(): Promise<void> {
+  try { S.all = (await api<Cust[]>('/customers')).filter((c) => c.id !== 'unknown-sender'); } catch { S.all = null; } // the list then shows only the chats
+  renderInbox();
 }
 const isLive = (id: string): boolean => id.startsWith('wa-live-');
 // live messages lead, as the server lists them; then newest first (instants: the stored times carry different offsets)
@@ -237,7 +246,7 @@ setInterval(() => { void pollDetail(); }, 2000);
 let keepId = ''; // a bubble clicked inside the open chat: the conversation stays where it is, only the order side changes
 async function select(id: string, keep = false): Promise<void> {
   document.body.classList.remove('idle');
-  S.sel = id; S.ack = new Set(); S.find = S.row = null;
+  S.sel = id; S.cust = null; S.ack = new Set(); S.find = S.row = null; setView('chat');
   remember(id);
   keepId = keep ? id : '';
   if (!keep) window.scrollTo(0, 0);
@@ -247,15 +256,25 @@ async function select(id: string, keep = false): Promise<void> {
 // the open chat lives in ?m=, so a refresh reopens it
 function remember(id: string | null): void {
   const u = new URL(location.href);
+  u.searchParams.delete('c');
   if (id) u.searchParams.set('m', id); else u.searchParams.delete('m');
   history.replaceState(null, '', u);
 }
 function goWaiting(): void {
   remember(null);
   document.body.classList.add('idle');
-  S.sel = null; S.detail = null; S.find = S.row = null;
+  S.sel = null; S.cust = null; S.detail = null; S.find = S.row = null; setView('list');
   renderInbox(); renderScreen();
 }
+// a customer who never wrote: the chat is empty, the card is on the right; ?c= keeps it over a refresh
+function selectCust(id: string): void {
+  const u = new URL(location.href); u.searchParams.delete('m'); u.searchParams.set('c', id); history.replaceState(null, '', u);
+  S.sel = null; S.detail = null; S.cust = id; S.find = S.row = null; setView('chat');
+  document.body.classList.remove('idle');
+  renderInbox(); renderScreen();
+}
+// narrow screens show one column at a time: list, chat, detail
+function setView(v: 'list' | 'chat' | 'detail'): void { S.view = v; document.body.dataset.v = v; }
 async function loadDetail(): Promise<void> {
   const id = S.sel;
   try {
@@ -275,41 +294,56 @@ async function refresh(): Promise<void> { await loadMessages(); await loadDetail
 const STATE_WORD = { unread: 'New', clean: 'Ready', check: 'Check', confirmed: 'Confirmed' };
 // one row per customer, like a chat app: the conversation, its latest message and how many messages still need the operator
 const readingMsg = (m: Summary): boolean => S.busy === m.id || isReading(m.id, !!m.order, m.received_at);
-const todoMsg = (m: Summary): boolean => readingMsg(m) || ['unread', 'check', 'clean'].includes(orderState(m.order));
+const todoMsg = (m: Summary): boolean => readingMsg(m) || orderState(m.order) === 'unread'; // unread = CatOrder has not read it yet; a read draft is no longer news
 function chats(): Summary[][] {
   const by = new Map<string, Summary[]>();
   for (const m of S.messages) { const k = m.customer.id; if (!by.has(k)) by.set(k, []); by.get(k)!.push(m); } // newest first within each, newest chat first
   return [...by.values()];
 }
+const UNKNOWN = 'unknown-sender';
 const selCustomer = (): string | undefined => S.messages.find((m) => m.id === S.sel)?.customer.id;
 function inboxRow(ms: Summary[]): HTMLElement {
-  const last = ms[0], here = last.customer.id === selCustomer(), todo = ms.filter(todoMsg);
+  const last = ms[0], unk = last.customer.id === UNKNOWN, here = unk ? ms.some((m) => m.id === S.sel) : last.customer.id === selCustomer(), todo = ms.filter(todoMsg);
   const busy = ms.find(readingMsg), target = busy || todo[0] || last;
-  const st = busy ? h('span', { class: 'st' }, 'Reading', dots())
+  const st = unk ? h('span', { class: 'st' }, 'New number') : busy ? h('span', { class: 'st' }, 'Reading', dots())
     : todo.length ? h('span', { class: 'badge', title: todo.length + (todo.length === 1 ? ' message' : ' messages') + ' to handle' }, String(todo.length))
     : h('span', { class: 'st done' }, STATE_WORD[orderState(last.order)]);
-  return h('button', { type: 'button', class: 'irow' + (here ? ' sel' : ''), 'data-id': last.customer.id, 'aria-current': here ? 'true' : null, onclick: () => { toggleInbox(false); void select(target.id); } },
-    h('span', { class: 'ic av', 'aria-hidden': 'true' }, initials(last.customer.name)),
-    h('span', { class: 'who' }, last.customer.name),
+  const name = unk ? last.sender || 'New number' : last.customer.name;
+  return h('button', { type: 'button', class: 'irow' + (here ? ' sel' : ''), 'data-id': unk ? last.id : last.customer.id, 'aria-current': here ? 'true' : null, onclick: () => { void select(target.id); } },
+    h('span', { class: 'ic av', 'aria-hidden': 'true' }, unk ? '?' : initials(name)),
+    h('span', { class: 'who' }, name),
     h('span', { class: 'time' }, fmtShort(last.received_at)),
     h('span', { class: 'pv' }, glyph('pic', last.channel, CHANNEL[last.channel] || last.channel), last.preview || CHANNEL[last.channel] || ''),
     st);
 }
+function custRow(c: Cust): HTMLElement {
+  const here = S.cust === c.id;
+  return h('button', { type: 'button', class: 'irow quiet' + (here ? ' sel' : ''), 'data-id': c.id, 'aria-current': here ? 'true' : null, onclick: () => selectCust(c.id) },
+    h('span', { class: 'ic av', 'aria-hidden': 'true' }, initials(c.name)),
+    h('span', { class: 'who' }, c.name),
+    h('span', { class: 'pv' }, 'No messages yet'));
+}
 const initials = (n: string): string => n.split(/\s+/).filter((w) => /^[A-ZÀ-Ý]/.test(w)).slice(0, 2).map((w) => w[0]).join('') || n[0];
 const fmtShort = (iso: string): string => { const d = new Date(iso); return d.toDateString() === new Date().toDateString() ? fmtClock(iso) : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }); };
+// everything stays in the list: new numbers, chats to handle, the other chats (newest first), then customers who never wrote
 function renderInbox(): void {
-  const cs = chats(), box = $('inbox');
-  $('inboxCount').textContent = String(cs.filter((ms) => ms.some(todoMsg)).length || '');
+  const box = $('inbox'), q = S.q.trim().toLowerCase(), unk: Summary[][] = [], todo: Summary[][] = [], rest: Summary[][] = [];
+  const phones = new Map((S.all || []).map((c) => [c.id, c.phone || '']));
+  const hit = (name: string, extra = ''): boolean => !q || (name + ' ' + extra).toLowerCase().includes(q);
+  for (const ms of chats()) {
+    if (ms[0].customer.id === UNKNOWN) { for (const m of ms) if (hit('New number', m.sender || '')) unk.push([m]); continue; }
+    if (hit(ms[0].customer.name, phones.get(ms[0].customer.id))) (ms.some(todoMsg) ? todo : rest).push(ms);
+  }
+  rest.sort((a, b) => Date.parse(b[0].received_at) - Date.parse(a[0].received_at));
+  const wrote = new Set(S.messages.map((m) => m.customer.id));
+  const quiet = (S.all || []).filter((c) => !wrote.has(c.id) && hit(c.name, c.phone || ''));
+  const rows = [...unk.map(inboxRow), ...todo.map(inboxRow), ...rest.map(inboxRow), ...quiet.map(custRow)];
+  $('inboxCount').textContent = String(unk.length + todo.length || '');
   const kept = box.contains(document.activeElement) ? (document.activeElement as HTMLElement).dataset.id : undefined;
-  box.replaceChildren(...(cs.length ? cs.map(inboxRow) : [h('p', { class: 'empty' }, 'No messages.')]));
+  box.replaceChildren(...(rows.length ? rows : [h('p', { class: 'empty' }, q ? 'No chat matches.' : 'No chats yet.')]));
   if (kept) (box.querySelector('[data-id="' + kept + '"]') as HTMLElement | null)?.focus({ preventScroll: true }); // a poll must not drop the keyboard's place
 }
-function renderMessages(): void { document.body.classList.toggle('idle', !S.sel); renderInbox(); if (!S.sel) renderScreen(); }
-function toggleInbox(open: boolean = !S.open): void {
-  S.open = open;
-  $('inbox').hidden = !open;
-  $('inboxBtn').setAttribute('aria-expanded', String(open));
-}
+function renderMessages(): void { document.body.classList.toggle('idle', !S.sel); renderInbox(); if (!S.sel && !S.cust) renderScreen(); }
 
 /* ---------- screens ---------- */
 let lastAsked = '', lastMsg = '', arrival = false;
@@ -320,7 +354,7 @@ function renderScreen(): void {
   const pin = same && !!old && old.scrollHeight - old.scrollTop - old.clientHeight < 48, top = old ? old.scrollTop : 0;
   lastMsg = d ? d.message.id : ''; if (same) keepId = '';
   const ae = document.activeElement, typing = ae instanceof HTMLTextAreaElement && ae.closest('.out.draft') ? [ae.dataset.reply, ae.selectionStart, ae.selectionEnd] as const : null; // a re-render must not take the draft from under the cursor
-  $('screen').replaceChildren(...((d ? [orderScreen(d, asked)] : waiting()) as Node[]));
+  $('screen').replaceChildren(...((d ? [orderScreen(d, asked)] : S.cust ? [custScreen(S.cust)] : waiting()) as Node[]));
   paintBand(b);
   if (typing) { const t = draftBox(typing[0]); if (t) { t.focus({ preventScroll: true }); t.setSelectionRange(typing[1], typing[2]); } }
   fitBand();
@@ -332,15 +366,14 @@ function renderScreen(): void {
 }
 function waiting(): Kid[] {
   const wa = 'https://wa.me/14155238886?text=' + encodeURIComponent(JOIN);
-  return [
+  return [h('div', { class: 'scr solo' }, h('section', { class: 'conv' },
     h('div', { class: 'wait' },
       h('img', { class: 'hero', src: 'logo.png', alt: 'CatOrder' }),
       h('h1', { class: 'toon' }, 'Send an order on WhatsApp'),
       h('a', { class: 'join', href: wa, target: '_blank', rel: 'noopener' },
         h('img', { src: 'join-qr.svg', alt: 'QR code that opens WhatsApp with “' + JOIN + '”' })),
       h('a', { class: 'num toon', href: wa, target: '_blank', rel: 'noopener' }, h('img', { class: 'wa', src: 'whatsapp.svg', alt: 'WhatsApp' }), WHATSAPP),
-      h('ol', { class: 'steps' }, h('li', {}, h('span', {}, 'Scan the code or message the number')), h('li', {}, h('span', {}, 'First time? Send ', h('b', {}, JOIN))), h('li', {}, h('span', {}, 'Send an order: text, voice note or photo')))),
-  ];
+      h('ol', { class: 'steps' }, h('li', {}, h('span', {}, 'Scan the code or message the number')), h('li', {}, h('span', {}, 'First time? Send ', h('b', {}, JOIN))), h('li', {}, h('span', {}, 'Send an order: text, voice note or photo'))))))];
 }
 
 function highlighted(text: string, ls: Line[], asked: string | undefined, fresh: boolean): Kid[] {
@@ -459,6 +492,12 @@ function audioFor(id: string, url: string | null | undefined): HTMLAudioElement 
   a.addEventListener('play', () => { for (const [k, o] of Object.entries(audios)) if (k !== id) o.pause(); });
   for (const ev of ['play', 'pause', 'ended']) a.addEventListener(ev, () => {
     for (const b of document.querySelectorAll<HTMLElement>('.vm-b[data-vm="' + id + '"]')) b.replaceChildren(glyph('', audios[id].paused ? 'play' : 'pause'));
+  });
+  // the small waveform in the thread fills as the note plays, like the big one
+  for (const ev of ['timeupdate', 'seeked', 'ended']) a.addEventListener(ev, () => {
+    const o = audios[id], played = isFinite(o.duration) && o.duration ? o.currentTime / o.duration : 0;
+    for (const b of document.querySelectorAll<HTMLElement>('.vm-b[data-vm="' + id + '"]'))
+      [...b.parentElement!.querySelectorAll('.vm-w i')].forEach((w, i, all) => w.classList.toggle('on', (i + 0.5) / all.length <= played));
   });
   a.addEventListener('ended', () => { audios[id].currentTime = 0; });
   if (url) void loadPeaks(id, url);
@@ -601,7 +640,7 @@ function threadEl(m: Detail['message'], o: Order | null, open: (solo: boolean) =
 }
 // our side of the chat, on the right: the reply being written, the draft to edit, or what was sent
 function replyEl(r: Reply | null | undefined, msgId: string): HTMLElement | false {
-  if (S.drafting === msgId) return h('div', { class: 'msg out rise', role: 'status' }, h('span', { class: 'think-b' }, cat(true), 'Writing the reply', scribble('write')));
+  if (S.drafting === msgId) return h('div', { class: 'msg out rise', role: 'status' }, h('span', { class: 'think-b' }, cat(true), 'Writing the reply'));
   if (!r) return false;
   if (r.status === 'draft') {
     const ta = h('textarea', { class: 'said', rows: 2, 'data-reply': r.id, 'aria-label': 'Reply to the customer, not sent yet',
@@ -650,12 +689,11 @@ function showTrace(id: string): void {
 // CatOrder's own pills carry the cat; at work, the sparks of the logo flicker by its ear
 const cat = (on: boolean): HTMLElement => h('span', { class: 'cat' + (on ? ' on' : ''), 'aria-hidden': 'true' }, h('img', { src: 'logo.png', alt: '' }), h('i'), h('i'), h('i'));
 // three little lines of text: reading, the green highlighter runs over them as it does over the customer's words; writing, they fill in
-const scribble = (how: 'read' | 'write'): HTMLElement => h('span', { class: 'rl ' + how, 'aria-hidden': 'true' }, h('i'), h('i'), h('i'));
 const dots = (): HTMLElement => h('span', { class: 'dots', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'));
 // before the first step arrives (or with no trace at all) CatOrder still answers in the chat: a bubble that it is reading
 function thinking(id = 'trace'): HTMLElement {
   return h('section', { id: id || null, class: 'think rise', role: 'status', 'aria-label': 'CatOrder is reading the message' },
-    h('span', { class: 'think-b' }, cat(true), 'Reading the message', scribble('read')));
+    h('span', { class: 'think-b' }, cat(true), 'Reading the message'));
 }
 function traceEl(id: string): HTMLElement | false {
   const t = S.trace[id], d = S.detail;
@@ -670,7 +708,7 @@ function traceEl(id: string): HTMLElement | false {
       s.at >= 100 && h('span', { class: 'tm' }, secs(s.at)));
   });
   return h('section', { id: S.sel === id ? 'trace' : null, 'data-trace': id, class: 'trace', 'aria-label': 'What CatOrder did' },
-    !t.done && h('p', { class: 'th toon' }, cat(true), 'CatOrder is reading', scribble('read')),
+    !t.done && h('p', { class: 'th toon' }, cat(true), 'CatOrder is reading'),
     t.done && h('button', { type: 'button', class: 'tsum', 'aria-expanded': String(open), onclick: () => { t.open = !t.open; paintTrace(id, false); showTrace(id); } }, cat(false), (ms >= 100 ? 'Read in ' + secs(ms) + ' · ' : '') + t.steps.length + ' steps · ', h('u', {}, open ? 'Hide steps' : 'Show steps')),
     open && h('ol', { class: 'tl' }, rows),
     t.done && last.kind === 'error' && S.sel === id && !S.busy && h('button', { type: 'button', class: 'pick', style: 'margin-top:10px', onclick: doRead }, 'Retry'));
@@ -720,20 +758,50 @@ function clearBtn(cid: string): HTMLElement {
   return b;
 }
 // a number we do not know: pick the customer once, every message from it (now and later) follows
-let custChoices: Who[] | null = null;
-function whoIsIt(m: Detail['message']): HTMLElement {
-  if (!custChoices) { custChoices = []; api<Who[]>('/customers').then((cs) => { custChoices = cs.filter((c) => c.id !== 'unknown-sender'); renderScreen(); }, () => { custChoices = null; }); }
+function whoPanel(m: Detail['message']): HTMLElement {
   const pick = async (c: Who): Promise<void> => {
     if (S.busy) return;
     try { await send('POST', '/messages/' + m.id + '/assign', { customer_id: c.id }); } catch (e) { toast(errMsg(e)); return; }
     toast('This number is now ' + c.name + '.');
     await loadMessages();
     await loadDetail();
+    void loadCustomers();
     if (S.detail && S.detail.order) void doRead(); // read again as that customer: "the usual" now has a history
   };
-  return h('header', { class: 'conv-h who' },
-    h('h1', { class: 'toon' }, 'Who is ' + (m.sender || 'this number') + '?'),
-    h('div', { class: 'who-l' }, (custChoices || []).map((c) => h('button', { type: 'button', class: 'who-b', onclick: () => { void pick(c); } }, c.name))));
+  return h('aside', { class: 'panel who-p', 'aria-label': 'Who is this?' },
+    backBtn('chat'),
+    h('header', { class: 'panel-h' }, h('h2', { class: 'toon' }, 'Who is this?')),
+    h('p', { class: 'none' }, 'Link ' + (senderOf(m) || 'this number') + ' to a customer. CatOrder reads the order once it is linked.'),
+    h('div', { class: 'who-l' }, (S.all || []).map((c) => h('button', { type: 'button', class: 'who-b', onclick: () => { void pick(c); } }, c.name))));
+}
+const senderOf = (m: Detail['message']): string | null | undefined => m.sender || S.messages.find((x) => x.id === m.id)?.sender;
+const backBtn = (to: 'list' | 'chat'): HTMLElement => h('button', { type: 'button', class: 'bk', onclick: () => { if (to === 'list') goWaiting(); else setView('chat'); } }, '‹ ' + (to === 'list' ? 'Chats' : 'Chat'));
+// the customer card: terms, when they are due, their last orders; it is the right column whenever there is no order to handle
+const PRED: Record<string, Pred | null | undefined> = {}; // undefined = not asked, null = no answer (no history, model away): the line is left out
+function custCard(id: string, name: string): HTMLElement {
+  const c = (S.all || []).find((x) => x.id === id), t = (c && c.terms) || {}, last = c ? c.recent_orders.slice(0, 5) : [];
+  if (PRED[id] === undefined && c && c.order_count >= 2 && !FIX) { PRED[id] = null; api<Pred>('/customers/' + id + '/prediction').then((p) => { PRED[id] = p; if (S.cust === id || (S.detail && S.detail.message.customer_id === id)) renderScreen(); }, () => {}); }
+  const p = PRED[id], due = p && (p.days_overdue > 0 ? p.days_overdue + (p.days_overdue === 1 ? ' day' : ' days') + ' late' : fmtDay(p.next_order_date));
+  const kv = (k: string, v: Kid): HTMLElement | false => !!v && h('div', { class: 'kv' }, h('dt', {}, k), h('dd', {}, v));
+  return h('aside', { class: 'panel card', 'aria-label': 'Customer' },
+    backBtn('chat'),
+    h('header', { class: 'panel-h' }, h('h2', { class: 'toon' }, name)),
+    h('dl', {},
+      kv('WhatsApp', c && c.phone), kv('Discount', t.discount_pct ? t.discount_pct + '%' : ''), kv('Payment', t.payment_days ? t.payment_days + ' days' : ''),
+      kv('Free delivery from', t.free_delivery_min ? eur(t.free_delivery_min) : ''), kv(p && p.days_overdue > 0 ? 'Next order' : 'Next order expected', due)),
+    h('h3', { class: 'sub' }, 'Last orders'),
+    last.length ? h('ul', { class: 'lo' }, last.map((o) => h('li', {}, h('span', {}, fmtDay(o.date)), h('span', {}, (o.lines || []).length + ((o.lines || []).length === 1 ? ' line' : ' lines'))))) : h('p', { class: 'none' }, c ? 'No orders yet.' : 'Loading…'),
+    c && h('a', { class: 'more', href: 'orders.html?c=' + encodeURIComponent(id) }, 'All orders'));
+}
+// a customer with no messages yet
+function custScreen(id: string): HTMLElement {
+  const c = (S.all || []).find((x) => x.id === id), name = c ? c.name : id;
+  return h('div', { class: 'scr' },
+    h('section', { class: 'conv' },
+      h('header', { class: 'conv-h' }, backBtn('list'), h('h1', { class: 'toon' }, name), c && c.phone && h('div', { class: 'meta cust' }, c.phone), h('button', { type: 'button', class: 'dtl', onclick: () => setView('detail') }, 'Details')),
+      h('div', { class: 'blank' }, h('span', { class: 'ic av', 'aria-hidden': 'true' }, initials(name)), h('h2', { class: 'toon' }, 'No messages yet'),
+        c && c.phone && h('p', { class: 'num2' }, c.phone), h('p', {}, 'When they write, CatOrder reads the order here.'))),
+    custCard(id, name));
 }
 function orderScreen(d: Detail, asked?: string): HTMLElement {
   const m = d.message, o = d.order, who = m.customer as Who;
@@ -765,17 +833,19 @@ function orderScreen(d: Detail, asked?: string): HTMLElement {
   const routeBtn = !o || o.status !== 'draft' ? null
     : nMsgs > 1 ? { to: 'new', label: 'Start a new order with this message' }
     : prior && o.message_ids ? { to: 'attach', label: 'Add to the previous order' } : null;
+  const unk = m.customer_id === UNKNOWN, showOrder = !o || o.status !== 'confirmed' || S.done.has(o.id); // nothing left to do on a confirmed order: the customer card takes the column
   const delivery = o && o.delivery_date && 'Deliver ' + fmtDay(o.delivery_date);
   const total = o && orderTotal(o);
   return h('div', { class: 'scr' },
     h('section', { class: 'conv' },
-      m.customer_id === 'unknown-sender' && m.id.startsWith('wa-live-') ? whoIsIt(m)
-      : h('header', { class: 'conv-h' },
-        h('h1', { class: 'toon' }, who.name),
-        m.customer_id && h('div', { class: 'meta cust' }, custLine(m.customer_id)),
+      h('header', { class: 'conv-h' }, backBtn('list'),
+        h('h1', { class: 'toon' }, unk ? senderOf(m) || 'New number' : who.name),
+        m.customer_id && h('div', { class: 'meta cust' }, unk ? 'New number' : custLine(m.customer_id)),
+        h('button', { type: 'button', class: 'dtl', onclick: () => setView('detail') }, 'Details'),
         m.customer_id && clearBtn(m.customer_id)),
       threadEl(m, o, open)),
-    h('aside', { class: 'panel', 'aria-label': 'Order' },
+    unk ? whoPanel(m) : !showOrder ? custCard(m.customer_id as string, who.name) : h('aside', { class: 'panel', 'aria-label': 'Order' },
+      backBtn('chat'),
       h('header', { class: 'panel-h' },
         h('h2', { class: 'toon' }, 'Order', nMsgs > 1 && h('span', { class: 'nmsg' }, ' · ' + nMsgs + ' messages')),
         h('span', { class: 'pill ' + pill.toLowerCase() }, pill)),
@@ -845,19 +915,23 @@ const CHECK_KINDS = ['ambiguous_product', 'illegible', 'quantity_missing'];
 const pick = (label: string, on: () => unknown, extra: Attrs = {}): HTMLElement => h('button', { type: 'button', class: 'pick', onclick: on, ...extra }, label);
 // a suggestion: the product to pick, and under it why CatOrder offers it; the eye marks one this customer already orders
 const sug = (name: string, why: string, on: () => unknown, theirs = false, extra: Attrs = {}): HTMLElement =>
-  h('button', { type: 'button', class: 'pick sug', onclick: on, ...extra }, h('span', { class: 'sn' }, name), why && h('span', { class: 'sw' }, theirs && h('i', { class: 'eye' }), why));
-const alt = (label: string, on: () => unknown): HTMLElement => h('button', { type: 'button', class: 'alt', onclick: on }, label);
+  h('button', { type: 'button', class: 'pick sug', onclick: on, ...extra }, h('span', { class: 'sn' }, name), why && h('span', { class: 'why' }, theirs && h('i', { class: 'eye' }), why));
+// a side road out of the question (search, ask, back): a quiet button beside it, never one of the answers
+const alt = (label: string, on: () => unknown, icon?: string): HTMLElement => h('button', { type: 'button', class: 'alt', onclick: on }, icon && glyph('ai', icon), label);
+// the shortcut that presses the band's main action, shown on it
+const SEND_KEY = (/Mac|iP(hone|ad)/.test(navigator.platform) ? '⌘' : 'Ctrl ') + '↵';
 const exportLink = (o: Order, fmt: string): HTMLElement => h('a', { class: 'pick', href: '/api/orders/' + o.id + '/export?format=' + fmt, download: '', onclick: (e: Event) => (e.target as HTMLElement).closest('dialog')?.close() }, fmt === 'csv' ? 'CSV · spreadsheet' : 'JSON · for the ERP');
 // one Export button; the format is chosen in a native modal dialog
 const exportMenu = (o: Order): HTMLElement => {
   const dlg = h('dialog', { class: 'xmenu' }, h('p', null, 'Export as'), exportLink(o, 'csv'), exportLink(o, 'json'), pick('Cancel', () => (dlg as HTMLDialogElement).close(), { class: 'pick quiet' })) as HTMLDialogElement;
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
-  return h('span', { style: 'display:contents' }, pick('Export', () => dlg.showModal()), dlg);
+  return h('span', { style: 'display:contents' }, pick('Export', () => dlg.showModal(), { class: 'pick quiet' }), dlg);
 };
 function back(): void { S.find = S.row = null; renderScreen(); }
 function bandOf(d: Detail | null): Band | null {
   if (!d) return null;
   const m = d.message, o = d.order;
+  if (m.customer_id === UNKNOWN) return { key: 'link', q: 'Who is this?', sub: 'Reading starts once the number is linked to a customer.', ctl: () => pick('Choose customer', () => setView('detail')) };
   if (S.busy === m.id || (!o && isReading(m.id, false, m.received_at))) return { key: 'reading', q: 'Reading…', sub: engine(' on ') };
   if (!o) {
     const err = S.failed[m.id];
@@ -869,14 +943,15 @@ function bandOf(d: Detail | null): Band | null {
   if (o.status === 'confirmed') {
     const sent = r && r.status === 'sent', first = (m.customer as Who).name;
     return { key: 'confirmed' + (sent ? ':sent' : ''), icon: 'check', q: sent ? 'Confirmed and answered.' : 'Confirmed.',
-      ctl: () => [!sent && pick(r ? 'Back to the reply' : 'Reply to ' + first, () => (r ? (S.later.delete(r.id), renderScreen()) : doDraft())), exportMenu(o), pick('Done', goWaiting)] };
+      // the main action ends the row: the reply while there is none sent, then Done
+      ctl: () => [exportMenu(o), pick('Done', goWaiting, sent ? {} : { class: 'pick quiet' }), !sent && pick(r ? 'Back to the reply' : 'Reply to ' + first, () => (r ? (S.later.delete(r.id), renderScreen()) : doDraft()))] };
   }
   const editing = lines(o).find((l) => l.id === S.row);
   if (editing) return rowStep(editing); // not part of the queue: no counter
   const steps = pending(o), total = orderTotal(o);
   // the queue ends in Ready, or in "Nothing to order" once no line is left (it is also the only step of an order with no lines and no flags)
   steps.push(lines(o).some((l) => l.state !== 'removed')
-    ? { key: 'ready', q: 'Ready.', ctl: () => pick('Confirm order' + (total === null ? '' : ' · ' + eur(total)), doConfirm) }
+    ? { key: 'ready', q: 'Ready.', ctl: () => pick('Confirm order' + (total === null ? '' : ' · ' + eur(total)), doConfirm, { 'data-k': SEND_KEY }) }
     : { key: 'empty', q: 'Nothing to order in this message.', ctl: () => pick('Done', goWaiting) });
   if (S.queue.order !== o.id) S.queue = { order: o.id, n: 0 };
   S.queue.n = Math.max(S.queue.n, steps.length); // "n of m": m is what the order asked when it loaded, it does not shrink while answering
@@ -920,7 +995,6 @@ function lineStep(l: Line, msg: string): Band {
   const finding = S.find === l.id;
   const cands = (l.candidates || []).slice(0, 3);
   const kind = l.sku === null && cands.length ? 'which' : l.sku !== null && (l.qty === null || l.qty <= 0) ? 'qty' : cands.length ? 'which' : 'other';
-  const flag = (l.flags || []).find((f) => sev(f) !== 'info' && f.kind !== 'ambiguous_product');
   const missing = kind === 'other' && hasFlag(l, 'unknown_product');
   const q = kind === 'which' ? 'Which ' + l.product_text + '?' : kind === 'qty' ? 'How many ' + l.product_text + '?' : missing ? '«' + l.product_text + '» is not in your catalogue.' : msg;
   const find = (): void => { S.find = l.id; renderScreen(); };
@@ -932,11 +1006,11 @@ function lineStep(l: Line, msg: string): Band {
     if (finding) return searchBox(l);
     if (kind === 'qty') return qtyForm(l);
     // no candidate: the closest products in the catalogue are offered straight away, searching is the fallback
-    if (!cands.length) return [fill(h('div', { class: 'results inline' }), l, l.product_text, find), hasFlag(l, 'unknown_product') && pick('Remove line', () => patch(l.id, { removed: true }))];
+    if (!cands.length) return [fill(h('div', { class: 'results inline' }), l, l.product_text, find), hasFlag(l, 'unknown_product') && pick('Remove line', () => patch(l.id, { removed: true }), { class: 'pick quiet' })];
     return asCands();
   };
-  const alts = (): Kid => (finding ? alt('Back', back) : [(kind === 'which' || missing) && alt('Search the catalogue', find), alt('Ask the customer', doDraft)]);
-  return { key: 'line:' + l.id + ':' + kind + (finding ? ':find' : ''), q, sub: kind === 'which' && flag ? flag.message : missing && !finding ? 'Closest in the catalogue. Pick one or remove the line; CatOrder never guesses.' : undefined, line: l.id, ctl, alt: alts };
+  const alts = (): Kid => (finding ? alt('Back', back, 'back') : [(kind === 'which' || missing) && alt('Search catalogue', find, 'search'), alt('Ask the customer', doDraft, 'whatsapp')]);
+  return { key: 'line:' + l.id + ':' + kind + (finding ? ':find' : ''), q, sub: missing && !finding ? 'Closest in the catalogue. Pick one or remove the line; CatOrder never guesses.' : undefined, line: l.id, ctl, alt: alts };
 }
 function flagStep(f: Flag, label: string, l?: Line): Band {
   return { key: 'flag:' + f.kind, q: f.message, line: l && l.id, ctl: () => pick(label, () => { S.ack.add(f.kind); renderScreen(); }) };
@@ -947,17 +1021,19 @@ function rowStep(l: Line): Band {
   const out = l.state === 'removed';
   return {
     key: 'row:' + l.id, q: 'How many ' + lineName(l) + '?', line: l.id,
-    ctl: () => [qtyForm(l, true), pick(out ? 'Restore' : 'Remove line', () => patch(l.id, { removed: !out }))],
-    alt: () => alt('Back', back),
+    ctl: () => qtyForm(l, true),
+    alt: () => [alt('Back', back, 'back'), alt(out ? 'Restore' : 'Remove line', () => patch(l.id, { removed: !out }))], // removing is a side road, not a second button
   };
 }
 function qtyForm(l: Line, editing = false): Kid {
-  const inp = h('input', { type: 'number', class: 'field', min: 0, step: 'any', inputMode: 'decimal', 'aria-label': 'Quantity', value: editing && l.qty !== null ? l.qty : null, placeholder: ({ case: 'cases', piece: 'pieces', kg: 'kg' } as Record<string, string>)[l.sell_unit || ''], onkeydown: (e: KeyboardEvent) => {
+  const unit = ({ case: 'cases', piece: 'pieces', kg: 'kg' } as Record<string, string>)[l.sell_unit || ''];
+  const inp = h('input', { type: 'number', class: 'field', min: 0, step: 'any', inputMode: 'decimal', 'aria-label': 'Quantity' + (unit ? ' in ' + unit : ''), value: editing && l.qty !== null ? l.qty : null, onkeydown: (e: KeyboardEvent) => {
     if (e.key === 'Enter') set();
     else if (e.key === 'Escape' && editing) { e.stopPropagation(); back(); }
   } }) as HTMLInputElement;
   const set = (): void => { const v = Number(inp.value); if (inp.value === '' || !(v > 0)) inp.focus(); else void patch(l.id, { qty: v }); };
-  return [inp, pick('Set', set)];
+  // one row: the number, its unit always visible (not a placeholder that vanishes on typing), then Set
+  return h('div', { class: 'qrow' }, h('label', { class: 'qin' }, inp, unit && h('span', { class: 'unit', 'aria-hidden': 'true' }, unit)), pick('Set', set));
 }
 function searchBox(l: Line): Kid {
   const res = h('div', { class: 'results' });
@@ -977,9 +1053,9 @@ function fill(res: HTMLElement, l: Line, q: string, none?: () => void): HTMLElem
   q = q.trim().toLowerCase();
   if (!q) { res.replaceChildren(); return res; }
   if (!found.has(q)) found.set(q, api<Product[]>('/catalog?q=' + encodeURIComponent(q)).catch((e) => { found.delete(q); toast(errMsg(e)); return []; }));
-  void found.get(q)!.then((ps) => res.replaceChildren(...(ps.length || !none
-    ? ps.slice(0, 3).map((p) => sug(p.name, p.pack_label, () => patch(l.id, { sku: p.sku }))) // ponytail: three fit the band, a longer query narrows them
-    : [pick('Find the product', none)])));
+  void found.get(q)!.then((ps) => res.replaceChildren(...(ps.length
+    ? ps.slice(0, 3).map((p) => sug(p.name, p.pack_label, () => patch(l.id, { sku: p.sku }), false, { title: p.name })) // ponytail: three fit the band, a longer query narrows them
+    : none ? [pick('Find the product', none)] : [h('p', { class: 'nofind' }, 'Nothing in the catalogue matches «' + q + '». Try fewer words.')])));
   return res;
 }
 let lastKey = '';
@@ -988,14 +1064,16 @@ function paintBand(b: Band | null): void {
   el.hidden = !b;
   if (!b) { lastKey = ''; el.replaceChildren(); return; }
   const inside = el.contains(document.activeElement);
-  el.replaceChildren(h('div', { class: 'in' + (settled && b.key !== lastKey ? (arrival ? ' lift' : ' fade') : '') },
-    glyph('arrow', b.icon || 'arrow'),
-    h('div', { class: 'words' + (b.q.length <= 16 ? ' short' : '') },
-      h('p', { class: 'q toon' + (b.q.length <= 32 ? '' : b.q.length <= 60 ? ' mid' : ' long') }, b.q), // a flag sentence is not a headline
-      b.sub && h('p', { class: 'sub' }, b.sub),
-      b.alt && h('div', { class: 'alts' }, b.alt())),
-    b.ctl && h('div', { class: 'ctl' }, b.ctl()),
-    (b.of || 0) > 1 && b.key !== 'ready' && h('span', { class: 'step' }, 'Check ' + b.n + ' of ' + b.of)));
+  const counted = (b.of || 0) > 1 && b.key !== 'ready', at = b.n || 0;
+  const prog = counted && h('div', { class: 'prog', 'aria-hidden': 'true' }, // the queue along the top edge: answered, the one asked now (green: look here), still to come
+    Array.from({ length: b.of || 0 }, (_, i) => h('i', { class: i + 1 < at ? 'done' : i + 1 === at ? 'now' : null })));
+  el.replaceChildren(...[prog, h('div', { class: 'in' + (settled && b.key !== lastKey ? (arrival ? ' lift' : ' fade') : '') },
+    b.icon && glyph('mark ' + b.icon, b.icon),
+    h('div', { class: 'words' },
+      h('p', { class: 'q' + (b.q.length <= 32 ? '' : b.q.length <= 60 ? ' mid' : ' long') }, b.q), // a flag sentence is not a headline
+      (b.sub || counted) && h('p', { class: 'sub' }, counted && h('span', { class: 'step' }, b.n + ' of ' + b.of), counted && b.sub && ' · ', b.sub)),
+    b.alt && h('div', { class: 'alts' }, b.alt()),
+    b.ctl && h('div', { class: 'ctl' }, b.ctl()))].filter((n): n is HTMLElement => !!n));
   lastKey = b.key;
   el.querySelectorAll<HTMLElement>('.pick').forEach((p, i) => { if (i < 9) p.setAttribute('aria-keyshortcuts', String(i + 1)); });
   // an input gets the cursor; after an action the cursor stays in the band but never lands on a button, so a second Enter confirms nothing
@@ -1067,12 +1145,13 @@ async function doSend(r: Reply): Promise<void> {
 function replyStep(r: Reply): Band {
   const by = r.model === 'template' ? 'Written from the order in demo mode' : 'Drafted by ' + r.model;
   return { key: 'reply:' + r.id, icon: 'send', q: 'Send this reply?', sub: by + ' · edit it in the chat first if you like',
-    ctl: () => pick('Send on WhatsApp', () => doSend(r)),
+    ctl: () => pick('Send on WhatsApp', () => doSend(r), { 'data-k': SEND_KEY }),
     alt: () => [alt('Write it again', async () => { if (await saveReply(r)) void doDraft(); }), alt('Later', () => { void saveReply(r); S.later.add(r.id); renderScreen(); })] };
 }
 async function doConfirm(): Promise<void> {
   const o = S.detail && S.detail.order;
   if (S.busy || !o || o.status !== 'draft' || pending(o).length || !lines(o).some((l) => l.state !== 'removed')) return;
+  S.done.add(o.id);
   await write(() => send('POST', '/orders/' + o.id + '/confirm', { acknowledged: [...S.ack] }));
   // the ERP import lands below the lines: bring it into view above the band
   requestAnimationFrame(() => document.querySelector('.erp')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'end' }));
@@ -1081,10 +1160,11 @@ async function doConfirm(): Promise<void> {
 /* ---------- keyboard and pointer ---------- */
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    if (S.open) { toggleInbox(false); $('inboxBtn').focus(); } else if (S.sel) goWaiting();
+    if (S.sel || S.cust) goWaiting();
     return;
   }
-  if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); void doConfirm(); return; }
+  // ⌘↵ presses whatever main action carries the hint (Confirm, Send); the draft textarea handles its own and marks it handled
+  if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { if (!e.defaultPrevented) { e.preventDefault(); $('band').querySelector<HTMLElement>('[data-k]')?.click(); } return; }
   const t = e.target as HTMLElement | null;
   if (e.metaKey || e.ctrlKey || e.altKey || (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
   if (e.key === 'j' || e.key === 'k') {
@@ -1098,10 +1178,8 @@ document.addEventListener('keydown', (e) => {
     $('band').querySelectorAll<HTMLElement>('.pick')[Number(e.key) - 1]?.click();
   }
 });
-const outside = (e: Event): void => { if (S.open && !(e.target as Element).closest('.inbox-wrap, #inboxBtn')) toggleInbox(false); };
-document.addEventListener('click', outside);
-document.addEventListener('focusin', outside);
-$('inboxBtn').addEventListener('click', () => (matchMedia('(min-width:701px)').matches ? goWaiting() : toggleInbox()));
+$('inboxBtn').addEventListener('click', goWaiting);
+$('find').addEventListener('input', (e) => { S.q = (e.target as HTMLInputElement).value; renderInbox(); });
 $('home').addEventListener('click', goWaiting);
 // the page leaves room for the band, whatever height its question and buttons give it
 const fitBand = (): void => document.documentElement.style.setProperty('--band-h', $('band').offsetHeight + 'px');

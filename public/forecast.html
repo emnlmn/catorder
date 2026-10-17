@@ -7,49 +7,63 @@
 <link rel="icon" href="logo.png">
 <link rel="stylesheet" href="app.css">
 <style>
-.ref{align-self:stretch;width:100%;box-sizing:border-box;padding:26px 40px 40px;font-size:15px}
+.ref{align-self:stretch;width:100%;box-sizing:border-box;padding:26px clamp(24px,3.5vw,64px) 40px;font-size:15px}
 .ref h1{margin:0 0 6px;font-size:29px;line-height:1.1}
 .ref .lede{margin:0 0 22px;color:var(--muted)}
 .ref h2{margin:28px 0 4px;font-size:16px}
-.tl{position:relative;margin-top:14px;--name:220px;--when:118px}
-.tl .row{border-top:1px solid var(--line)}
-.tl summary{display:grid;grid-template-columns:var(--name) 1fr var(--when);align-items:center;gap:16px;min-height:52px;padding:0 8px;margin:0 -8px;border-radius:8px;cursor:pointer;list-style:none}
+/* timeline in the shared .dt-box: header row carries the scale, Today is a dashed line through every row */
+.tl{container-type:inline-size;margin-top:12px}
+.tl .hd,.tl summary{display:grid;grid-template-columns:28px minmax(120px,220px) minmax(0,1fr) 120px;align-items:center;gap:0 16px;padding:0 16px 0 12px}
+.tl .hd{min-height:38px;background:var(--wash);border-bottom:1px solid var(--line);font-size:13px;font-weight:500;color:var(--muted)}
+.tl .hd .track{height:38px}
+.tl .hd .from{position:absolute;left:0;top:50%;transform:translateY(-50%);white-space:nowrap}
+.tl .hd .now{position:absolute;top:50%;transform:translate(-50%,-50%);padding:1px 6px;border-radius:4px;background:var(--wash);color:var(--ink);white-space:nowrap}
+.tl .hd .when{font-weight:500}
+.tl .row+.row{border-top:1px solid var(--line)}
+.tl summary{min-height:56px;cursor:pointer;list-style:none}
 .tl summary::-webkit-details-marker{display:none}
-.tl summary:hover{background:var(--wash)}
-.tl .who{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tl .who::before{content:"";display:inline-block;width:6px;height:6px;margin:0 10px 2px 0;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(-45deg);transition:transform .2s}
-.tl details[open] .who::before{transform:rotate(45deg)}
-.tl .track{position:relative;height:20px}
-.tl .gap,.tl .over{position:absolute;top:9px;height:2px;transform-origin:left;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
+.tl summary:hover,.tl details[open] summary{background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
+.tl .chev{display:grid;place-items:center;width:28px;height:28px;color:var(--muted)}
+.tl .chev svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .16s ease-out}
+.tl details[open] .chev{color:var(--ink)}
+.tl details[open] .chev svg{transform:rotate(90deg)}
+.tl .who{min-width:0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tl .track{position:relative;height:56px}
+.tl .today{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed var(--line-strong);pointer-events:none}
+.tl .gap,.tl .over{position:absolute;top:27px;height:2px;transform-origin:left;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
 .tl .gap{background:var(--ink)}
-.tl .over{top:6px;height:8px;border-radius:4px;background:var(--eye)}
-.tl .dot,.tl .next{position:absolute;top:4px;width:12px;height:12px;margin-left:-6px;border-radius:50%;box-sizing:border-box}
+.tl .over{top:24px;height:8px;border-radius:4px;background:var(--eye)}
+.tl .dot,.tl .next{position:absolute;top:22px;width:12px;height:12px;margin-left:-6px;border-radius:50%;box-sizing:border-box}
 .tl .dot{background:var(--ink)}
 .tl .next{background:var(--paper);border:2px solid var(--ink)}
-.tl .when{text-align:right;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
-.tl .when.late{background:var(--eye);justify-self:end;padding:1px 8px;border-radius:6px}
-.tl .basket{position:relative;z-index:1;margin:10px 0 16px calc(var(--name) + 16px);padding:4px 0;background:var(--paper)}
+.tl .when{justify-self:end;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tl .when.late{padding:2px 8px;border-radius:6px;background:var(--eye);font-size:14px}
+.tl .basket{padding:4px 16px 18px calc(12px + 28px + 16px);background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
 .tl .why{margin:0;font-size:13px;color:var(--muted)}
-.tl .items{margin:8px 0 0;padding:0;list-style:none;columns:3 240px;column-gap:32px}
+.tl .items{margin:8px 0 0;padding:0;list-style:none;columns:3 220px;column-gap:32px}
 .tl .items li{padding:3px 0;break-inside:avoid}
 .tl .items b{display:inline-block;min-width:3ch;margin-right:6px;font-variant-numeric:tabular-nums}
-.tl .today{position:absolute;top:-22px;bottom:26px;width:0;border-left:1px dashed var(--muted);pointer-events:none}
-.tl .today span{position:absolute;top:0;left:6px;font-size:12px;color:var(--muted);white-space:nowrap}
-.tl .axis{display:flex;justify-content:space-between;margin:0 calc(var(--when) + 16px) 0 calc(var(--name) + 16px);padding-top:6px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
-.key{display:flex;gap:18px;margin:4px 0 0;font-size:13px;color:var(--muted)}
+/* narrow box: name and date on one line, the track full width under them */
+@container (max-width:620px){
+  .tl .hd,.tl summary{grid-template-columns:28px minmax(0,1fr) auto;grid-template-areas:"c who when" ". track track";padding:0 12px}
+  .tl summary{padding-top:10px}
+  .tl .hd{grid-template-areas:"c track track"}
+  .tl .hd>.who,.tl .hd>.when{display:none}
+  .tl .chev{grid-area:c}.tl .who{grid-area:who}.tl .when{grid-area:when}.tl .track{grid-area:track}
+  .tl summary .track{height:36px}
+  .tl summary .gap{top:17px}.tl summary .over{top:14px}.tl summary .dot,.tl summary .next{top:12px}
+  .tl .basket{padding-left:52px}
+}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 0;font-size:13px;color:var(--muted)}
 .key i{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%;vertical-align:-1px;background:var(--ink)}
 .key i.o{background:var(--paper);border:2px solid var(--ink);box-sizing:border-box}
 .key i.l{width:16px;height:8px;border-radius:4px;background:var(--eye)}
 @keyframes grow{from{transform:scaleX(0)}}
 @media (prefers-reduced-motion:reduce){.tl .gap,.tl .over{animation:none}}
-.q{position:relative;width:40%}
+.dt .q{width:40%}
+@container (max-width:640px){.dt td.q{display:none}}
 .q .bar{display:block;height:8px;border-radius:4px;background:color-mix(in srgb,var(--eye) 70%,var(--paper));width:var(--w);transform-origin:left;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
-th,td{padding:9px 10px;text-align:left;border-bottom:1px solid color-mix(in srgb,var(--ink) 15%,var(--paper))}
-th{border-bottom:1px solid var(--line);font-weight:600}
-.n{text-align:right;white-space:nowrap}
 .none{color:var(--muted)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .about{margin:36px 0 0;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 .about p{margin:0}
 .head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin:0 0 6px}
@@ -63,7 +77,7 @@ th{border-bottom:1px solid var(--line);font-weight:600}
 .mb .amd{color:var(--paper);font-weight:600}
 .syn{padding:7px 11px;border:1px solid var(--line-strong);border-radius:999px;font-size:13px;line-height:1;color:var(--muted);white-space:nowrap}
 @media (max-width:700px){.mb>span:last-child{display:none}}
-@media (max-width:700px){.ref{padding:18px 16px 32px}.ref h1{font-size:22px}.tl{--name:96px;--when:64px}.tl summary{gap:10px}.tl .who::before{display:none}.tl .basket{margin-left:0}.tl .axis{margin-left:calc(var(--name) + 10px);margin-right:calc(var(--when) + 10px)}}
+@media (max-width:700px){.ref{padding:18px 16px 32px}.ref h1{font-size:22px}}
 </style>
 </head>
 <body>
@@ -73,10 +87,9 @@ th{border-bottom:1px solid var(--line);font-weight:600}
     <span class="brand toon">CatOrder</span>
   </a>
   <nav class="nav" aria-label="Sections">
-    <a class="navi" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4M6 5h12l2 8v6H4v-6z"/></svg><span>Inbox</span></a>
+    <a class="navi" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4M6 5h12l2 8v6H4v-6z"/></svg><span>Chats</span></a>
     <a class="navi on" href="forecast.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 16l4-5 4 3 6-8"/></svg><span>Forecast</span></a>
     <hr class="sep">
-    <a class="navi" href="customers.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M21 19v-1a4 4 0 0 0-3-3.9M15 4.1a3.5 3.5 0 0 1 0 6.8"/></svg><span>Customers</span></a>
     <a class="navi" href="orders.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/></svg><span>Orders</span></a>
     <a class="navi" href="catalog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg><span>Catalog</span></a>
   </nav>
@@ -108,13 +121,13 @@ const draw = ([f, cs]) => {
   const lateDays = (p) => p.days_since_last - Math.round(p.expected_gap_days);
   document.getElementById('out').innerHTML = (rows.length ? `<h2>Who orders next</h2>
 <p class="key"><span><i></i>Last order</span><span><i class="o"></i>Next order expected</span><span><i class="l"></i>Late</span></p>
-<div class="tl"><div class="today" style="left:calc(var(--name) + 16px + (100% - var(--name) - var(--when) - 32px) * ${((t0 - lo) / (hi - lo)).toFixed(4)})"><span>Today</span></div>` +
+<div class="tl dt-box"><div class="hd" aria-hidden="true"><span></span><span class="who">Customer</span><span class="track"><span class="from">${day(iso(lo + DAY))}</span><span class="today" style="left:${x(t0)}"></span><span class="now" style="left:${x(t0)}">Today</span></span><span class="when">Next order</span></div>` +
     rows.map(({ p, last, next }) => {
       const late = p.days_overdue > 0;
-      return `<details class="row"><summary><span class="who">${esc(name[p.customer_id])}</span><span class="track" aria-hidden="true">${span('gap', last, next)}${late ? span('over', next, t0) : ''}<i class="dot" style="left:${x(last)}"></i><i class="next" style="left:${x(next)}"></i></span><span class="when${late ? ' late' : ''}">${late ? `${lateDays(p)} days late` : day(p.next_order_date)}</span></summary>
+      return `<details class="row"><summary><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span><span class="who">${esc(name[p.customer_id])}</span><span class="track" aria-hidden="true">${span('gap', last, next)}<i class="today" style="left:${x(t0)}"></i>${late ? span('over', next, t0) : ''}<i class="dot" style="left:${x(last)}"></i><i class="next" style="left:${x(next)}"></i></span><span class="when${late ? ' late' : ''}">${late ? `${lateDays(p)} days late` : day(p.next_order_date)}</span></summary>
 <div class="basket"><p class="why">Usually orders every ${Math.round(p.expected_gap_days)} days · last order ${p.days_since_last} days ago · likely order:</p><ul class="items">${p.basket.map((b) => `<li><b>${b.qty} ×</b>${esc(b.name)}</li>`).join('')}</ul></div></details>`;
-    }).join('') + `<div class="axis"><span>${day(iso(lo + DAY))}</span><span>${day(iso(hi - DAY))}</span></div></div>` : `<p class="none">No forecast yet.</p>`) +
-    `<h2>Expected demand, next 7 days</h2>` + (f.demand_7d.length ? `<table><tr><th>Product</th><th><span class="sr">Share</span></th><th class="n">Qty</th><th class="n">Customers</th></tr>${f.demand_7d.map((d) => `<tr><td>${esc(d.name)}</td><td class="q" aria-hidden="true"><span class="bar" style="--w:${(d.qty / f.demand_7d[0].qty * 100).toFixed(1)}%"></span></td><td class="n">${d.qty}</td><td class="n">${d.customers}</td></tr>`).join('')}</table>` : `<p class="none">No orders expected in the next 7 days.</p>`) +
+    }).join('') + `</div>` : `<p class="none">No forecast yet.</p>`) +
+    `<h2>Expected demand, next 7 days</h2>` + (f.demand_7d.length ? `<div class="dt-box" style="margin-top:12px"><table class="dt"><thead><tr><th scope="col">Product</th><th><span class="sr">Share</span></th><th scope="col" class="n">Qty</th><th scope="col" class="n">Customers</th></tr></thead><tbody>${f.demand_7d.map((d) => `<tr><td class="lead b">${esc(d.name)}</td><td class="q" aria-hidden="true"><span class="bar" style="--w:${(d.qty / f.demand_7d[0].qty * 100).toFixed(1)}%"></span></td><td class="n b" data-l="Qty">${d.qty}</td><td class="n mu" data-l="Customers">${d.customers}</td></tr>`).join('')}</tbody></table></div>` : `<p class="none">No orders expected in the next 7 days.</p>`) +
     (f.failed.length ? `<p class="none">Could not forecast: ${f.failed.map((id) => esc(name[id] || id)).join(', ')}</p>` : '');
 };
 Promise.all([fetch('/api/predictions').then((r) => r.json()), fetch('/api/customers').then((r) => r.json())]).then(draw)

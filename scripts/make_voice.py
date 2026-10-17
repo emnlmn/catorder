@@ -17,18 +17,14 @@ def call(path, body=None):
 
 def fallback(text, out):
     aiff = out.with_suffix(".aiff")
-    subprocess.run(["say", "-v", "Alice", "-o", str(aiff), text], check=True)
+    subprocess.run(["say", "-v", "Samantha", "-o", str(aiff), text], check=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(aiff), str(out)], check=True)
     aiff.unlink()
 
 def main():
     scripts = sorted(M.glob("vo-*.script.txt"))
-    voices = []
-    if KEY:
-        try:
-            voices = [v["voice_id"] for v in json.loads(call("/voices"))["voices"]]
-        except Exception as e:  # ponytail: any API failure falls back to say, no retries
-            print("voice list failed:", type(e).__name__)
+    # English voices (Rachel, Adam, Antoni, Bella); fixed ids, the key may lack voices_read
+    voices = ["21m00Tcm4TlvDq8ikWAM", "pNInz6obpgDQGcFmaJgB", "ErXwobaYiN019PkySvjV", "EXAVITQu4vr4xnSDxMaL"] if KEY else []
     chars = 0
     for i, f in enumerate(scripts):
         out = f.with_name(f.name.split(".")[0] + ".mp3")
@@ -38,7 +34,7 @@ def main():
         try:
             if not voices:
                 raise RuntimeError("no voices")
-            out.write_bytes(call(f"/text-to-speech/{voices[i % len(voices)]}", {"text": text, "model_id": "eleven_multilingual_v2"}))
+            out.write_bytes(call(f"/text-to-speech/{voices[i % len(voices)]}", {"text": text, "model_id": "eleven_turbo_v2_5"}))
             chars += len(text)
             print("elevenlabs", out.name)
         except Exception as e:

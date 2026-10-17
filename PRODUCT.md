@@ -50,7 +50,7 @@ The customer will not change. The order desk has to.
 | | |
 |---|---|
 | Orders by message at one distributor | 70 a day |
-| Time to read and retype one | 4 minutes, more for photos and voice notes |
+| Time to read and retype one | 4 minutes, more for photos and voice notes (conservative: Pepper and Choco report 5–8 minutes for food distributors, vendor figures) |
 | Order desk time spent retyping | 4.7 hours a day, about one full-time person |
 | One wrong line delivered | a second trip, a credit note, a customer annoyed: €30 to €80 |
 | CatOrder | €199 a month per order desk |

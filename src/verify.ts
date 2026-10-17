@@ -17,12 +17,12 @@ const NUMBER_WORDS: Record<string, number> = {
   quindici: 15, fifteen: 15, sedici: 16, sixteen: 16, diciassette: 17, seventeen: 17,
   diciotto: 18, eighteen: 18, diciannove: 19, nineteen: 19, venti: 20, twenty: 20,
   trenta: 30, quaranta: 40, cinquanta: 50, sessanta: 60, cento: 100,
-  mezza: 0.5, mezzo: 0.5, mezzi: 0.5, half: 0.5, "un paio": 2,
+  mezza: 0.5, mezzo: 0.5, mezzi: 0.5, half: 0.5, "un paio": 2, a: 1, an: 1, couple: 2, dozen: 12,
 };
 const UNITS: Record<SellUnit, string[]> = {
-  case: ["cassa", "casse", "cs", "cartone", "cartoni", "cf", "confezione", "confezioni", "case", "cases"],
-  piece: ["bottiglia", "bottiglie", "bt", "pezzi", "pezzo", "pz", "lattine", "lattina", "pieces", "piece", "bottles", "bottle"],
-  kg: ["kg", "chili", "chilo", "kili", "kilo"],
+  case: ["cassa", "casse", "cs", "cartone", "cartoni", "cf", "confezione", "confezioni", "case", "cases", "ctn", "carton", "cartons", "box", "boxes"],
+  piece: ["bottiglia", "bottiglie", "bt", "pezzi", "pezzo", "pz", "lattine", "lattina", "pieces", "piece", "bottles", "bottle", "btl", "btls", "pcs", "pc", "cans", "can"],
+  kg: ["kg", "chili", "chilo", "kili", "kilo", "kilos", "kgs"],
 };
 const UNIT_MAP = new Map<string, SellUnit>(
   (Object.entries(UNITS) as [SellUnit, string[]][]).flatMap(([u, ws]) => ws.map((w) => [w, u] as const)),

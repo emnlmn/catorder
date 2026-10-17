@@ -10,7 +10,7 @@
   const WORD = { whatsapp: 'WhatsApp', voice: 'Voice note', photo: 'Photo', email: 'Email' };
   const short = (iso) => { const d = new Date(iso); return d.toDateString() === new Date().toDateString() ? d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }); };
   const initials = (n) => n.split(/\s+/).filter((w) => /^[A-ZÀ-Ý]/.test(w)).slice(0, 2).map((w) => w[0]).join('') || n[0];
-  const todo = (m) => !m.order || !(m.order.status === 'confirmed');
+  const todo = (m) => !m.order;
   const side = document.querySelector('.side');
   const wrap = document.createElement('div');
   wrap.className = 'inbox-wrap';
@@ -22,15 +22,21 @@
   const count = document.createElement('span');
   count.className = 'count';
   side.querySelector('.navi').append(count);
-  fetch('/api/messages').then((r) => r.json()).then((ms) => {
+  Promise.all([fetch('/api/messages').then((r) => r.json()), fetch('/api/customers').then((r) => r.json()).catch(() => [])]).then(([ms, erp]) => {
     const by = new Map();
     for (const m of ms) { if (!by.has(m.customer.id)) by.set(m.customer.id, []); by.get(m.customer.id).push(m); }
-    const cs = [...by.values()];
-    count.textContent = cs.filter((g) => g.some(todo)).length || '';
-    wrap.firstChild.innerHTML = cs.map((g) => {
+    const gs = [...by.values()];
+    const unk = gs.filter((g) => g[0].customer.id === 'unknown-sender');
+    const known = gs.filter((g) => g[0].customer.id !== 'unknown-sender');
+    const row = (g, name) => {
       const last = g[0], t = g.filter(todo), target = t[0] || last;
-      return `<a class="irow" href="./?m=${encodeURIComponent(target.id)}"><span class="ic av" aria-hidden="true">${esc(initials(last.customer.name))}</span><span class="who">${esc(last.customer.name)}</span><span class="time">${short(last.received_at)}</span><span class="pv"><span class="pic" aria-hidden="true"><svg viewBox="0 0 24 24">${PIC[last.channel] || ''}</svg></span>${esc(last.preview || WORD[last.channel] || '')}</span>${t.length ? `<span class="badge">${t.length}</span>` : ''}</a>`;
-    }).join('') || '<p class="empty">No messages.</p>';
+      return `<a class="irow" href="./?m=${encodeURIComponent(target.id)}"><span class="ic av" aria-hidden="true">${esc(initials(name))}</span><span class="who">${esc(name)}</span><span class="time">${short(last.received_at)}</span><span class="pv"><span class="pic" aria-hidden="true"><svg viewBox="0 0 24 24">${PIC[last.channel] || ''}</svg></span>${esc(last.preview || WORD[last.channel] || '')}</span>${t.length ? `<span class="badge">${t.length}</span>` : ''}</a>`;
+    };
+    const newest = (g, h) => (g[0].received_at < h[0].received_at ? 1 : -1);
+    const todos = known.filter((g) => g.some(todo)).sort(newest), rest = known.filter((g) => !g.some(todo)).sort(newest);
+    count.textContent = todos.length || '';
+    const quiet = erp.filter((c) => c.id !== 'unknown-sender' && !by.has(c.id)).map((c) => `<a class="irow quiet" href="./?c=${encodeURIComponent(c.id)}"><span class="ic av" aria-hidden="true">${esc(initials(c.name))}</span><span class="who">${esc(c.name)}</span><span class="pv">No messages yet</span></a>`);
+    wrap.firstChild.innerHTML = [...unk.map((g) => row(g, 'New number')), ...todos.map((g) => row(g, g[0].customer.name)), ...rest.map((g) => row(g, g[0].customer.name)), ...quiet].join('') || '<p class="empty">No chats yet</p>';
   }).catch(() => {});
   fetch('/api/health').then((r) => r.json()).then((h) => {
     document.getElementById('modelText').textContent = h.mock ? 'Demo mode · scripted answers, no model call' : [h.model, h.hardware].filter(Boolean).join(' · ');

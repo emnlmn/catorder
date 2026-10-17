@@ -4,16 +4,16 @@ import type { Services } from "./read.ts";
 export interface OpenDraft { orderId: string; lastAt: string; texts: string[]; lines: { name: string; qty: number | null }[] }
 export interface RouteDecision { action: "attach" | "new" | "none"; quote: string | null; reason: string; by: "model" | "rule" }
 
-const CONT = /\b(anche|aggiung\w*|togli\w*|anzi|invece|pure|in più|e poi|ancora)\b/i;
-const NEW = /\b(altro|nuovo|un secondo)\s+ordine\b/i;
-const NOT_ORDER = /\?\s*$|^\s*(grazie|ok|perfetto)\b/i;
+const CONT = /\b(anche|aggiung\w*|togli\w*|anzi|invece|pure|in più|e poi|ancora|also|add\w*|remove|actually|sorry i meant|instead|and also|make that|no sparkling)\b/i;
+const NEW = /\b(altro|nuovo|un secondo)\s+ordine\b|\b(another|new|a second|separate)\s+order\b/i;
+const NOT_ORDER = /\?\s*$|^\s*(grazie|ok|perfetto|thanks|thank you|perfect|great)\b/i;
 
-const SYSTEM = `You route a customer's new WhatsApp message (Italian, informal) for a food and beverage distributor.
+const SYSTEM = `You route a customer's new WhatsApp message (informal, usually English, sometimes Italian) for a food and beverage distributor.
 Given the customer's open draft order (messages, lines, minutes since its last message) and the NEW message, answer only JSON:
 {"action":"attach|new|none","quote":"exact words from the NEW message that justify it, or null","reason":"<12 words"}
-attach = continues or changes the open order ("e anche i tovaglioli", "togli il prosciutto", "anzi 6").
-new = a separate order ("altro ordine", "nuovo ordine", "per la settimana prossima invece").
-none = no order content ("a che ora passate?", "grazie").
+attach = continues or changes the open order ("and also the napkins", "take out the ham", "actually 6"; Italian: "e anche i tovaglioli", "anzi 6").
+new = a separate order ("another order", "new order", "for next week instead").
+none = no order content ("what time do you deliver?", "thanks").
 With no open draft, attach is impossible.`;
 
 const minutesSince = (open: OpenDraft, at: string) => (Date.parse(at) - Date.parse(open.lastAt)) / 60000;
@@ -30,7 +30,7 @@ export function ruleRoute(text: string, receivedAt: string, open: OpenDraft | nu
 }
 
 export async function routeMessage(svc: Services, text: string, receivedAt: string, open: OpenDraft | null): Promise<RouteDecision> {
-  if (svc.mock) return ruleRoute(text, receivedAt, open);
+  if (svc.mock || svc.offline) return ruleRoute(text, receivedAt, open); // offline never calls a model
   try {
     const mins = open ? Math.round(minutesSince(open, receivedAt)) : null;
     const ctx = open

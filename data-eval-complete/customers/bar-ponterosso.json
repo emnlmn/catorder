@@ -1,0 +1,12 @@
+{
+ "id": "bar-ponterosso",
+ "name": "Bar Ponte Rosso",
+ "kind": "bar",
+ "context": "Bar di paese, apre alle 6. Ordina il lunedì e il giovedì, quasi sempre il solito.",
+ "terms": {
+  "discount_pct": 5,
+  "payment_days": 30,
+  "free_delivery_min": 250,
+  "price_overrides": {}
+ }
+}

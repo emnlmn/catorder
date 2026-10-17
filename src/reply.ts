@@ -31,7 +31,7 @@ export function twilioSender(sid: string, token: string, from: string, contentSi
   };
 }
 
-export const REPLY_SYSTEM = `You write the WhatsApp reply from a food and beverage distributor's order desk to a customer who just sent an order. Write in the customer's language (usually Italian), informal but professional, like a person who knows them: short, 2 to 5 lines, no lists unless the order is long, at most one emoji, no signature.
+export const REPLY_SYSTEM = `You write the WhatsApp reply from a food and beverage distributor's order desk to a customer who just sent an order. Write in the customer's language (usually English, sometimes Italian), informal but professional, like a person who knows them: short, 2 to 5 lines, no lists unless the order is long, at most one emoji, no signature.
 
 Say only what the data below says. Never invent prices, availability, delivery dates or products.
 - If the order is confirmed: confirm it in one line, naming the products briefly, and the delivery day if there is one.
@@ -67,10 +67,10 @@ function templateReply(o: Order): string {
   const open = live.filter((l) => !l.sku || l.state === "check" || l.state === "flag");
   if (open.length) {
     const l = open[0], opts = l.candidates.map((c) => c.name).filter(Boolean);
-    return opts.length ? `Ciao! Per «${l.product_text}» intendi ${opts.join(" o ")}?` : `Ciao! «${l.product_text}» purtroppo non lo trattiamo. Il resto lo preparo.`;
+    return opts.length ? `Hi! By «${l.product_text}» do you mean ${opts.join(" or ")}?` : `Hi! Sorry, we don't carry «${l.product_text}». I'll get the rest ready.`;
   }
-  const names = live.slice(0, 3).map((l) => l.name).join(", ") + (live.length > 3 ? ` e altri ${live.length - 3}` : "");
-  return `Ciao! Ordine ricevuto: ${names}.${o.delivery_date ? ` Consegna ${new Date(o.delivery_date).toLocaleDateString("it-IT", { weekday: "long", day: "numeric" })}.` : ""} Grazie!`;
+  const names = live.slice(0, 3).map((l) => l.name).join(", ") + (live.length > 3 ? ` and ${live.length - 3} more` : "");
+  return `Hi! Order received: ${names}.${o.delivery_date ? ` Delivery on ${new Date(o.delivery_date).toLocaleDateString("en-GB", { weekday: "long", day: "numeric" })}.` : ""} Thanks!`;
 }
 
 export function latestReply(db: Db, messageId: string): Reply | null {

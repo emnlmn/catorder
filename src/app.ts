@@ -133,6 +133,7 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
         id: m.id, customer: { id: m.customer_id, name: m.cname }, channel: m.channel, received_at: m.received_at,
         preview: preview({ channel: m.channel as string, text: m.text }),
         order: v ? { id: v.id, status: v.status, clean: v.clean, message_ids: v.message_ids } : null,
+        ...(m.customer_id === "unknown-sender" ? { sender: row<{ number: string }>(conn, "SELECT number FROM senders WHERE message_id=?", m.id as string)?.number ?? null } : {}),
       } as MessageSummary);
     }
     return c.json(out);
@@ -225,6 +226,8 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
       const hist = historyOrders(conn, id); // raw ERP history: "the usual" is worked out only when a message asks for it
       return {
         id: cu.id, name: cu.name, kind: cu.kind, context: cu.context, terms: cu.terms, order_count: hist.length,
+        phone: Object.entries(cfg.whatsappPhoneMap ?? {}).find(([, cid]) => cid === id)?.[0]
+          ?? row<{ number: string }>(conn, "SELECT s.number FROM senders s JOIN messages m ON m.id=s.message_id WHERE m.customer_id=? LIMIT 1", id)?.number ?? null,
         recent_orders: lastOrders(hist).map((o) => ({ date: o.date, lines: o.lines.map((ln) => ({ ...ln, name: products[ln.sku].name })) })),
       };
     }));

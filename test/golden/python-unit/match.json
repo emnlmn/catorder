@@ -1,1270 +1,708 @@
 [
-  {
-    "customer": "bar-ponterosso",
-    "text": "prosecco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.694,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "quello rosso dell'altra volta",
-    "guess": null,
-    "sku": "VIN-ROS-005",
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.977,
-        "why": "in their last 2 orders"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "rosso",
-    "guess": null,
-    "sku": "VIN-ROS-005",
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.977,
-        "why": "in their last 2 orders"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "acqua frizzante",
-    "guess": null,
-    "sku": "ACQ-FRIZ-1L",
-    "candidates": [
-      {
-        "sku": "ACQ-FRIZ-1L",
-        "score": 1.25,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "ACQ-FRIZ-50",
-        "score": 0.82,
-        "why": "name match"
-      },
-      {
-        "sku": "ACQ-NAT-1L",
-        "score": 0.405,
-        "why": "in their last 6 orders"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "acqua naturale 1l",
-    "guess": null,
-    "sku": "ACQ-NAT-1L",
-    "candidates": [
-      {
-        "sku": "ACQ-NAT-1L",
-        "score": 1.179,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "ACQ-NAT-50",
-        "score": 0.54,
-        "why": "name match"
-      },
-      {
-        "sku": "ACQ-FRIZ-1L",
-        "score": 0.467,
-        "why": "in their last 6 orders"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "farina",
-    "guess": null,
+ {
+  "customer": "bar-ponterosso",
+  "text": "prosecco",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.8,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.694,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "quello rosso dell'altra volta",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "rosso",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "acqua frizzante",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "acqua naturale 1l",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "farina",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "farina 00",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
     "sku": "FAR-00-5K",
-    "candidates": [
-      {
-        "sku": "FAR-00-5K",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-00-25K",
-        "score": 0.75,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-MAN-5K",
-        "score": 0.727,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "farina 00",
-    "guess": null,
-    "sku": "FAR-00-5K",
-    "candidates": [
-      {
-        "sku": "FAR-00-5K",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-00-25K",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-MAN-5K",
-        "score": 0.545,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "birra artigianale nuova",
-    "guess": null,
-    "sku": null,
-    "candidates": [],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "proseco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.688,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.568,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "caffe",
-    "guess": null,
-    "sku": "CAF-MIS-1K",
-    "candidates": [
-      {
-        "sku": "CAF-MIS-1K",
-        "score": 1.15,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "DIS-CUP-CAF",
-        "score": 0.877,
-        "why": "in their last 3 orders"
-      },
-      {
-        "sku": "CAF-DEC-500",
-        "score": 0.727,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "cola",
-    "guess": null,
+    "score": 0.4,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "birra artigianale nuova",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "proseco",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.688,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.568,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "caffe",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "cola",
+  "guess": null,
+  "sku": "BEV-COL-33",
+  "candidates": [
+   {
     "sku": "BEV-COL-33",
-    "candidates": [
-      {
-        "sku": "BEV-COL-33",
-        "score": 1.15,
-        "why": "in their last 6 orders"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "aranciata",
-    "guess": null,
-    "sku": "BEV-ARA-20",
-    "candidates": [
-      {
-        "sku": "BEV-ARA-20",
-        "score": 1.15,
-        "why": "in their last 2 orders"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "bicchierini",
-    "guess": null,
-    "sku": "DIS-CUP-CAF",
-    "candidates": [
-      {
-        "sku": "DIS-CUP-CAF",
-        "score": 1.15,
-        "why": "in their last 3 orders"
-      },
-      {
-        "sku": "DIS-BIC-200",
-        "score": 0.99,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "mozzarella",
-    "guess": null,
+    "score": 1.15,
+    "why": "in their last 6 orders"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "aranciata",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "bicchierini",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "mozzarella",
+  "guess": null,
+  "sku": "FOR-MOZ-FIO",
+  "candidates": [
+   {
     "sku": "FOR-MOZ-FIO",
-    "candidates": [
-      {
-        "sku": "FOR-MOZ-FIO",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "FOR-MOZ-BUF",
-        "score": 0.769,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "vino bianco",
-    "guess": null,
-    "sku": "ACE-VIN-1L",
-    "candidates": [
-      {
-        "sku": "ACE-VIN-1L",
-        "score": 0.808,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-BIA-003",
-        "score": 0.622,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-BIA-33",
-        "score": 0.417,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "prosecco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.694,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "quello rosso dell'altra volta",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "rosso",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "acqua frizzante",
-    "guess": null,
-    "sku": "ACQ-FRIZ-1L",
-    "candidates": [
-      {
-        "sku": "ACQ-FRIZ-1L",
-        "score": 1.1,
-        "why": "name match"
-      },
-      {
-        "sku": "ACQ-FRIZ-50",
-        "score": 0.82,
-        "why": "name match"
-      },
-      {
-        "sku": "BEV-TON-20",
-        "score": 0.4,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "acqua naturale 1l",
-    "guess": null,
-    "sku": "ACQ-NAT-1L",
-    "candidates": [
-      {
-        "sku": "ACQ-NAT-1L",
-        "score": 1.029,
-        "why": "name match"
-      },
-      {
-        "sku": "ACQ-NAT-50",
-        "score": 0.54,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "farina",
-    "guess": null,
+    "score": 1,
+    "why": "name match"
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "score": 0.769,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "vino bianco",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "prosecco",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.8,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.694,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "quello rosso dell'altra volta",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "rosso",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "acqua frizzante",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "acqua naturale 1l",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "farina",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "farina 00",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
     "sku": "FAR-00-5K",
-    "candidates": [
-      {
-        "sku": "FAR-00-5K",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-00-25K",
-        "score": 0.75,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-MAN-5K",
-        "score": 0.727,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "farina 00",
-    "guess": null,
-    "sku": "FAR-00-5K",
-    "candidates": [
-      {
-        "sku": "FAR-00-5K",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-00-25K",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-MAN-5K",
-        "score": 0.545,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "birra artigianale nuova",
-    "guess": null,
-    "sku": null,
-    "candidates": [],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "proseco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.688,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.568,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "caffe",
-    "guess": null,
-    "sku": "CAF-MIS-1K",
-    "candidates": [
-      {
-        "sku": "CAF-MIS-1K",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "CAF-DEC-500",
-        "score": 0.727,
-        "why": "name match"
-      },
-      {
-        "sku": "CAF-GRA-1K",
-        "score": 0.727,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "cola",
-    "guess": null,
+    "score": 0.4,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "birra artigianale nuova",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "proseco",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.688,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.568,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "caffe",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "cola",
+  "guess": null,
+  "sku": "BEV-COL-33",
+  "candidates": [
+   {
     "sku": "BEV-COL-33",
-    "candidates": [
-      {
-        "sku": "BEV-COL-33",
-        "score": 1.0,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "aranciata",
-    "guess": null,
-    "sku": "BEV-ARA-20",
-    "candidates": [
-      {
-        "sku": "BEV-ARA-20",
-        "score": 1.0,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "bicchierini",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "DIS-CUP-CAF",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "DIS-BIC-200",
-        "score": 0.99,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "mozzarella",
-    "guess": null,
+    "score": 1,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "aranciata",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "bicchierini",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "mozzarella",
+  "guess": null,
+  "sku": "FOR-MOZ-FIO",
+  "candidates": [
+   {
     "sku": "FOR-MOZ-FIO",
-    "candidates": [
-      {
-        "sku": "FOR-MOZ-FIO",
-        "score": 1.15,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "FOR-MOZ-BUF",
-        "score": 0.769,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "deli-mulino",
-    "text": "vino bianco",
-    "guess": null,
-    "sku": "ACE-VIN-1L",
-    "candidates": [
-      {
-        "sku": "ACE-VIN-1L",
-        "score": 0.808,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-BIA-003",
-        "score": 0.622,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-BIA-33",
-        "score": 0.417,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "prosecco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.694,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "quello rosso dell'altra volta",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "rosso",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "acqua frizzante",
-    "guess": null,
-    "sku": "ACQ-FRIZ-1L",
-    "candidates": [
-      {
-        "sku": "ACQ-FRIZ-1L",
-        "score": 1.1,
-        "why": "name match"
-      },
-      {
-        "sku": "ACQ-FRIZ-50",
-        "score": 0.82,
-        "why": "name match"
-      },
-      {
-        "sku": "ACQ-NAT-1L",
-        "score": 0.405,
-        "why": "in their last order"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "acqua naturale 1l",
-    "guess": null,
-    "sku": "ACQ-NAT-1L",
-    "candidates": [
-      {
-        "sku": "ACQ-NAT-1L",
-        "score": 1.179,
-        "why": "in their last order"
-      },
-      {
-        "sku": "ACQ-NAT-50",
-        "score": 0.54,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "farina",
-    "guess": null,
+    "score": 1.15,
+    "why": "in their last 6 orders"
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "score": 0.769,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "deli-mulino",
+  "text": "vino bianco",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "prosecco",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.8,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.694,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "quello rosso dell'altra volta",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "rosso",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "acqua frizzante",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "acqua naturale 1l",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "farina",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "farina 00",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
     "sku": "FAR-00-5K",
-    "candidates": [
-      {
-        "sku": "FAR-00-5K",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-00-25K",
-        "score": 0.75,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-MAN-5K",
-        "score": 0.727,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "farina 00",
-    "guess": null,
-    "sku": "FAR-00-5K",
-    "candidates": [
-      {
-        "sku": "FAR-00-5K",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-00-25K",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-MAN-5K",
-        "score": 0.545,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "birra artigianale nuova",
-    "guess": null,
-    "sku": null,
-    "candidates": [],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "proseco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.688,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.568,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "caffe",
-    "guess": null,
-    "sku": "CAF-MIS-1K",
-    "candidates": [
-      {
-        "sku": "CAF-MIS-1K",
-        "score": 1.15,
-        "why": "in their last order"
-      },
-      {
-        "sku": "CAF-DEC-500",
-        "score": 0.727,
-        "why": "name match"
-      },
-      {
-        "sku": "CAF-GRA-1K",
-        "score": 0.727,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "cola",
-    "guess": null,
+    "score": 0.4,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "birra artigianale nuova",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "proseco",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.688,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.568,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "caffe",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "cola",
+  "guess": null,
+  "sku": "BEV-COL-33",
+  "candidates": [
+   {
     "sku": "BEV-COL-33",
-    "candidates": [
-      {
-        "sku": "BEV-COL-33",
-        "score": 1.15,
-        "why": "in their last order"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "aranciata",
-    "guess": null,
-    "sku": "BEV-ARA-20",
-    "candidates": [
-      {
-        "sku": "BEV-ARA-20",
-        "score": 1.0,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "bicchierini",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "DIS-CUP-CAF",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "DIS-BIC-200",
-        "score": 0.99,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "mozzarella",
-    "guess": null,
+    "score": 1.15,
+    "why": "in their last order"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "aranciata",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "bicchierini",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "mozzarella",
+  "guess": null,
+  "sku": "FOR-MOZ-FIO",
+  "candidates": [
+   {
     "sku": "FOR-MOZ-FIO",
-    "candidates": [
-      {
-        "sku": "FOR-MOZ-FIO",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "FOR-MOZ-BUF",
-        "score": 0.769,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "groc-nuovoborgo",
-    "text": "vino bianco",
-    "guess": null,
-    "sku": "ACE-VIN-1L",
-    "candidates": [
-      {
-        "sku": "ACE-VIN-1L",
-        "score": 0.808,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-BIA-003",
-        "score": 0.622,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-BIA-33",
-        "score": 0.417,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "prosecco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.694,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "quello rosso dell'altra volta",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "rosso",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.827,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "acqua frizzante",
-    "guess": null,
-    "sku": "ACQ-FRIZ-1L",
-    "candidates": [
-      {
-        "sku": "ACQ-FRIZ-1L",
-        "score": 1.25,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "ACQ-FRIZ-50",
-        "score": 0.82,
-        "why": "name match"
-      },
-      {
-        "sku": "ACQ-NAT-1L",
-        "score": 0.405,
-        "why": "in their last 6 orders"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "acqua naturale 1l",
-    "guess": null,
-    "sku": "ACQ-NAT-1L",
-    "candidates": [
-      {
-        "sku": "ACQ-NAT-1L",
-        "score": 1.179,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "ACQ-NAT-50",
-        "score": 0.54,
-        "why": "name match"
-      },
-      {
-        "sku": "ACQ-FRIZ-1L",
-        "score": 0.467,
-        "why": "in their last 6 orders"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "farina",
-    "guess": null,
+    "score": 1,
+    "why": "name match"
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "score": 0.769,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "groc-nuovoborgo",
+  "text": "vino bianco",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "prosecco",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.8,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.694,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "quello rosso dell'altra volta",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "rosso",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "acqua frizzante",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "acqua naturale 1l",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "farina",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "farina 00",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
     "sku": "FAR-00-5K",
-    "candidates": [
-      {
-        "sku": "FAR-00-5K",
-        "score": 1.15,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "FAR-00-25K",
-        "score": 0.75,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-MAN-5K",
-        "score": 0.727,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "farina 00",
-    "guess": null,
-    "sku": "FAR-00-5K",
-    "candidates": [
-      {
-        "sku": "FAR-00-5K",
-        "score": 1.15,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "FAR-00-25K",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "FAR-MAN-5K",
-        "score": 0.545,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "birra artigianale nuova",
-    "guess": null,
-    "sku": null,
-    "candidates": [],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "proseco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.688,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.568,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "caffe",
-    "guess": null,
-    "sku": "CAF-MIS-1K",
-    "candidates": [
-      {
-        "sku": "CAF-MIS-1K",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "CAF-DEC-500",
-        "score": 0.727,
-        "why": "name match"
-      },
-      {
-        "sku": "CAF-GRA-1K",
-        "score": 0.727,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "cola",
-    "guess": null,
+    "score": 0.55,
+    "why": "in their last 6 orders"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "birra artigianale nuova",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "proseco",
+  "guess": null,
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.688,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.568,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "caffe",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "cola",
+  "guess": null,
+  "sku": "BEV-COL-33",
+  "candidates": [
+   {
     "sku": "BEV-COL-33",
-    "candidates": [
-      {
-        "sku": "BEV-COL-33",
-        "score": 1.0,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "aranciata",
-    "guess": null,
-    "sku": "BEV-ARA-20",
-    "candidates": [
-      {
-        "sku": "BEV-ARA-20",
-        "score": 1.0,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "bicchierini",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "DIS-CUP-CAF",
-        "score": 1.0,
-        "why": "name match"
-      },
-      {
-        "sku": "DIS-BIC-200",
-        "score": 0.99,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "mozzarella",
-    "guess": null,
+    "score": 1,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "aranciata",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "bicchierini",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "mozzarella",
+  "guess": null,
+  "sku": "FOR-MOZ-FIO",
+  "candidates": [
+   {
     "sku": "FOR-MOZ-FIO",
-    "candidates": [
-      {
-        "sku": "FOR-MOZ-FIO",
-        "score": 1.15,
-        "why": "in their last 6 orders"
-      },
-      {
-        "sku": "FOR-MOZ-BUF",
-        "score": 0.769,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "rist-gelsomino",
-    "text": "vino bianco",
-    "guess": null,
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "ACE-VIN-1L",
-        "score": 0.808,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-BIA-003",
-        "score": 0.772,
-        "why": "in their last 2 orders"
-      },
-      {
-        "sku": "BIR-BIA-33",
-        "score": 0.417,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "prosecco",
-    "guess": "VIN-PRO-003",
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.794,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "prosecco",
-    "guess": "NOT-A-SKU",
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-PRO-002",
-        "score": 0.8,
-        "why": "name match"
-      },
-      {
-        "sku": "VIN-PRO-003",
-        "score": 0.694,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": true
-  },
-  {
-    "customer": "bar-ponterosso",
-    "text": "rosso",
-    "guess": "VIN-ROS-007",
-    "sku": null,
-    "candidates": [
-      {
-        "sku": "VIN-ROS-005",
-        "score": 0.977,
-        "why": "in their last 2 orders"
-      },
-      {
-        "sku": "VIN-ROS-007",
-        "score": 0.927,
-        "why": "name match"
-      },
-      {
-        "sku": "BIR-ROS-33",
-        "score": 0.8,
-        "why": "name match"
-      }
-    ],
-    "guess_ignored": false
-  }
+    "score": 1.15,
+    "why": "in their last 6 orders"
+   },
+   {
+    "sku": "FOR-MOZ-BUF",
+    "score": 0.769,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "rist-gelsomino",
+  "text": "vino bianco",
+  "guess": null,
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "prosecco",
+  "guess": "VIN-PRO-003",
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.8,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.794,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": false
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "prosecco",
+  "guess": "NOT-A-SKU",
+  "sku": null,
+  "candidates": [
+   {
+    "sku": "VIN-PRO-002",
+    "score": 0.8,
+    "why": "name match"
+   },
+   {
+    "sku": "VIN-PRO-003",
+    "score": 0.694,
+    "why": "name match"
+   }
+  ],
+  "guess_ignored": true
+ },
+ {
+  "customer": "bar-ponterosso",
+  "text": "rosso",
+  "guess": "VIN-ROS-007",
+  "sku": null,
+  "candidates": [],
+  "guess_ignored": false
+ }
 ]

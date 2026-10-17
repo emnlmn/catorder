@@ -1,8 +1,8 @@
 {
- "id": "wa-008",
- "customer_id": "groc-nuovoborgo",
- "channel": "whatsapp",
- "received_at": "2026-10-16T08:40:00+02:00",
- "sender": "Anwar",
- "text": "buongiorno, sono anwar del nuovo borgo. il solito per lunedi grazie"
+  "id": "wa-008",
+  "customer_id": "groc-nuovoborgo",
+  "channel": "whatsapp",
+  "received_at": "2026-10-16T08:40:00+02:00",
+  "sender": "Anwar",
+  "text": "morning, anwar from new village here. the usual for monday thanks"
 }

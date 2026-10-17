@@ -1,35 +1,35 @@
 [
- {
-  "kind": "delivery",
-  "quote": "Per martedì",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": "2026-10-20",
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "tre casse di spaghetti",
-  "product": "spaghetti",
-  "sku": "PAS-SPA-500",
-  "quantity": "tre",
-  "unit": "casse",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "due casse di passata",
-  "product": "passata",
-  "sku": "POM-PAS-700",
-  "quantity": "due",
-  "unit": "casse",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- }
+  {
+    "kind": "delivery",
+    "quote": "For Tuesday",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-20",
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "three cases of spaghetti",
+    "product": "spaghetti",
+    "sku": "PAS-SPA-500",
+    "quantity": "three",
+    "unit": "cases",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "two cases of passata",
+    "product": "passata",
+    "sku": "POM-PAS-700",
+    "quantity": "two",
+    "unit": "cases",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  }
 ]

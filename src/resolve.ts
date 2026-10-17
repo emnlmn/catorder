@@ -7,10 +7,10 @@ import type {
 } from "./types.ts";
 
 const STOP_WORDS = new Set(["di", "del", "della", "quello", "quella", "il", "la", "le", "i", "gli", "da", "the", "of",
-  "dell", "dello", "dei", "degli", "delle", "altra", "volta", "solito", "sempre", "quel", "e", "un", "una"]);
-const COLOUR = new Set(["rosso", "bianco", "rosato"]);
+  "dell", "dello", "dei", "degli", "delle", "altra", "volta", "solito", "sempre", "quel", "e", "un", "una", "that", "usual", "same", "last", "time", "as", "always", "from", "one", "of"]);
+const COLOUR = new Set(["rosso", "bianco", "rosato", "red", "white", "rose"]);
 const FIZZ_GROUP: Record<string, string> = {
-  frizzante: "fizz", friz: "fizz", gasata: "fizz", naturale: "still", liscia: "still",
+  frizzante: "fizz", friz: "fizz", gasata: "fizz", naturale: "still", liscia: "still", sparkling: "fizz", fizzy: "fizz", still: "still", plain: "still", flat: "still",
 };
 const FORMAT_RE = /^(?:\d+(?:[.,]\d+)?(?:cl|l|lt|ml|kg|g)|\d[.,]\d+)$/;
 const CHECK_KINDS = new Set<string>(["ambiguous_product", "illegible", "quantity_missing"]);

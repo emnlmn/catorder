@@ -1,8 +1,8 @@
 {
- "id": "em-002",
- "customer_id": "rist-gelsomino",
- "channel": "email",
- "received_at": "2026-10-15T15:20:00+02:00",
- "sender": "Davide",
- "text": "Buongiorno Marta,\nper sabato ordino: 12 bottiglie di Roccafiera Rosso Superiore e 10 bottiglie di Punta Calma Vermentino.\nCordiali saluti,\nDavide - Il Gelsomino"
+  "id": "em-002",
+  "customer_id": "rist-gelsomino",
+  "channel": "email",
+  "received_at": "2026-10-15T15:20:00+02:00",
+  "sender": "Davide",
+  "text": "Good morning Marta,\nfor saturday I'd like to order: 12 bottles of Roccafiera Superior Red and 10 bottles of Punta Calma Vermentino.\nKind regards,\nDavide - The Jasmine"
 }

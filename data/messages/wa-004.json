@@ -1,8 +1,8 @@
 {
- "id": "wa-004",
- "customer_id": "bar-ponterosso",
- "channel": "whatsapp",
- "received_at": "2026-10-15T19:30:00+02:00",
- "sender": "Giulia",
- "text": "ciao marta! mi mandi 2 cs di quella birra artigianale nuova che avete messo? e 3 cs di cola"
+  "id": "wa-004",
+  "customer_id": "bar-ponterosso",
+  "channel": "whatsapp",
+  "received_at": "2026-10-15T19:30:00+02:00",
+  "sender": "Giulia",
+  "text": "hi marta! can u send 2 cs of that new craft beer you guys added? and 3 cs of cola"
 }

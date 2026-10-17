@@ -1,35 +1,35 @@
 [
- {
-  "kind": "usual",
-  "quote": "il solito",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "delivery",
-  "quote": "per sabato",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": "2026-10-17",
-  "status": "observed"
- },
- {
-  "kind": "remove",
-  "quote": "niente acqua frizzante stavolta",
-  "product": "acqua frizzante",
-  "sku": "ACQ-FRIZ-1L",
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": null,
-  "status": "observed"
- }
+  {
+    "kind": "usual",
+    "quote": "the usual",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "delivery",
+    "quote": "for saturday",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-17",
+    "status": "observed"
+  },
+  {
+    "kind": "remove",
+    "quote": "no sparkling water this time",
+    "product": "sparkling water",
+    "sku": "ACQ-FRIZ-1L",
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": null,
+    "status": "observed"
+  }
 ]

@@ -1,12 +1,12 @@
 {
- "id": "pizz-portico",
- "name": "Pizzeria Al Portico",
- "kind": "restaurant",
- "context": "Pizzeria cliente da maggio. Ordinava ogni settimana e mezza; da agosto ordina sempre meno e da inizio settembre non si è più sentita.",
- "terms": {
-  "discount_pct": 3,
-  "payment_days": 30,
-  "free_delivery_min": 300,
-  "price_overrides": {}
- }
+  "id": "pizz-portico",
+  "name": "The Porch Pizzeria",
+  "kind": "restaurant",
+  "context": "Pizzeria, customer since May. Used to order every week and a half; ordering less and less since August, and silent since early September.",
+  "terms": {
+    "discount_pct": 3,
+    "payment_days": 30,
+    "free_delivery_min": 300,
+    "price_overrides": {}
+  }
 }

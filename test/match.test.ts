@@ -28,12 +28,27 @@ describe("scoreMessage", () => {
     expect(s.line_recall).toBe(0.5);
   });
 
-  it("order entirely right needs removed and date", () => {
+  it("order entirely right is judged on the final lines and the date", () => {
     const exp = { ...EXP, removed: ["Z"], delivery_date: "2026-10-19" };
     const good = order([line("A", 2), line("B", 1), line("Z", 3, { state: "removed" })], [], "2026-10-19");
     expect(scoreMessage(exp, good).order_right).toBe(true);
-    expect(scoreMessage(exp, order([line("A", 2), line("B", 1)], [], "2026-10-19")).order_right).toBe(false);
+    expect(scoreMessage(exp, order([line("A", 2), line("B", 1)], [], "2026-10-19")).order_right).toBe(true);
+    expect(scoreMessage(exp, order([line("A", 2), line("B", 1), line("Z", 3)], [], "2026-10-19")).order_right).toBe(false);
     expect(scoreMessage(exp, { ...good, delivery_date: "2026-10-20" }).order_right).toBe(false);
+  });
+
+  it("a flagged line without quantity is the expected question, not an extra", () => {
+    const exp = { ...EXP, flags: [{ kind: "quantity_missing" }] };
+    const ask = line("C", null, { state: "check", flags: [flag("quantity_missing")] });
+    const r = scoreMessage(exp, order([line("A", 2), line("B", 1), ask]));
+    expect([r.produced, r.skipped, r.flags_found, r.order_right]).toEqual([2, 1, 1, true]);
+    expect(scoreMessage(EXP, order([line("A", 2), line("B", 1), ask])).extras).toEqual(["C"]);
+  });
+
+  it("an unresolved line is not held against the order when an unknown product was expected", () => {
+    const exp = { ...EXP, flags: [{ kind: "unknown_product" }] };
+    const r = scoreMessage(exp, order([line("A", 2), line("B", 1), line(null, 2, { state: "check", cands: ["Z"] })]));
+    expect([r.skipped, r.extras.length, r.order_right]).toEqual([1, 0, true]);
   });
 
   it("a check line counts with its top candidate", () => {

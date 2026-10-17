@@ -1,90 +1,90 @@
 [
- {
-  "kind": "delivery",
-  "quote": "x lunedi",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": "2026-10-19",
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "caffe 4 cs",
-  "product": "caffe",
-  "sku": null,
-  "quantity": "4",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "acqua nat 6 cs",
-  "product": "acqua nat",
-  "sku": "ACQ-NAT-1L",
-  "quantity": "6",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "acqua friz 4 cs",
-  "product": "acqua friz",
-  "sku": "ACQ-FRIZ-1L",
-  "quantity": "4",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "cola 3 cs",
-  "product": "cola",
-  "sku": "BEV-COL-33",
-  "quantity": "3",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "lager 2 cs",
-  "product": "lager",
-  "sku": "BIR-LAG-33",
-  "quantity": "2",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "tovaglioli 33 2 cs",
-  "product": "tovaglioli 33",
-  "sku": null,
-  "quantity": "2",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "bicchierini 1 cs",
-  "product": "bicchierini",
-  "sku": "DIS-CUP-CAF",
-  "quantity": "1",
-  "unit": "cs",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- }
+  {
+    "kind": "delivery",
+    "quote": "for mon",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-19",
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "coffee 4 cs",
+    "product": "coffee",
+    "sku": null,
+    "quantity": "4",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "still water 6 cs",
+    "product": "still water",
+    "sku": "ACQ-NAT-1L",
+    "quantity": "6",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "sparkling water 4 cs",
+    "product": "sparkling water",
+    "sku": "ACQ-FRIZ-1L",
+    "quantity": "4",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "cola 3 cs",
+    "product": "cola",
+    "sku": "BEV-COL-33",
+    "quantity": "3",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "lager 2 cs",
+    "product": "lager",
+    "sku": "BIR-LAG-33",
+    "quantity": "2",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "napkins 33 2 cs",
+    "product": "napkins 33",
+    "sku": null,
+    "quantity": "2",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "coffee cups 1 cs",
+    "product": "coffee cups",
+    "sku": "DIS-CUP-CAF",
+    "quantity": "1",
+    "unit": "cs",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  }
 ]

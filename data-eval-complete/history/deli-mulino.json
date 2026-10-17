@@ -1,0 +1,278 @@
+[
+ {
+  "date": "2026-05-12",
+  "lines": [
+   {
+    "sku": "SAL-COT",
+    "qty": 4
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 6
+   }
+  ]
+ },
+ {
+  "date": "2026-05-26",
+  "lines": [
+   {
+    "sku": "SAL-COT",
+    "qty": 4
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-06-03",
+  "lines": [
+   {
+    "sku": "SAL-COT",
+    "qty": 4
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 6
+   }
+  ]
+ },
+ {
+  "date": "2026-06-24",
+  "lines": [
+   {
+    "sku": "SAL-COT",
+    "qty": 4
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "FOR-PRO-DOL",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-07-15",
+  "lines": [
+   {
+    "sku": "SAL-COT",
+    "qty": 4
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 6
+   }
+  ]
+ },
+ {
+  "date": "2026-09-09",
+  "lines": [
+   {
+    "sku": "SAL-COT",
+    "qty": 4
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "SAL-MOR",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-09-30",
+  "lines": [
+   {
+    "sku": "SAL-COT",
+    "qty": 4
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 5
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 6
+   }
+  ]
+ },
+ {
+  "date": "2026-10-09",
+  "lines": [
+   {
+    "sku": "SAL-COT",
+    "qty": 4
+   },
+   {
+    "sku": "SAL-PRC",
+    "qty": 3
+   },
+   {
+    "sku": "SAL-SPE",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-TAL",
+    "qty": 2
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 3
+   },
+   {
+    "sku": "FOR-GOR-DOL",
+    "qty": 2
+   }
+  ]
+ }
+]

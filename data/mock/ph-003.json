@@ -1,90 +1,90 @@
 [
- {
-  "kind": "delivery",
-  "quote": "x giovedi",
-  "product": null,
-  "sku": null,
-  "quantity": null,
-  "unit": null,
-  "op": null,
-  "value": "2026-10-15",
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "cotto 4 kg",
-  "product": "cotto",
-  "sku": "SAL-COT",
-  "quantity": "4",
-  "unit": "kg",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "crudo 3 kg",
-  "product": "crudo",
-  "sku": "SAL-PRC",
-  "quantity": "3",
-  "unit": "kg",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "speck 2 kg",
-  "product": "speck",
-  "sku": "SAL-SPE",
-  "quantity": "2",
-  "unit": "kg",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "taleggio 2 kg",
-  "product": "taleggio",
-  "sku": "FOR-TAL",
-  "quantity": "2",
-  "unit": "kg",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "gorgonzola 2 kg",
-  "product": "gorgonzola",
-  "sku": "FOR-GOR-DOL",
-  "quantity": "2",
-  "unit": "kg",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "mozzarella fiordilatte 3 kg",
-  "product": "mozzarella fiordilatte",
-  "sku": "FOR-MOZ-FIO",
-  "quantity": "3",
-  "unit": "kg",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- },
- {
-  "kind": "item",
-  "quote": "mortadella 2 kg",
-  "product": "mortadella",
-  "sku": "SAL-MOR",
-  "quantity": "2",
-  "unit": "kg",
-  "op": "set",
-  "value": null,
-  "status": "observed"
- }
+  {
+    "kind": "delivery",
+    "quote": "for thu",
+    "product": null,
+    "sku": null,
+    "quantity": null,
+    "unit": null,
+    "op": null,
+    "value": "2026-10-15",
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "cooked ham 4 kg",
+    "product": "cooked ham",
+    "sku": "SAL-COT",
+    "quantity": "4",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "crudo 3 kg",
+    "product": "crudo",
+    "sku": "SAL-PRC",
+    "quantity": "3",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "speck 2 kg",
+    "product": "speck",
+    "sku": "SAL-SPE",
+    "quantity": "2",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "taleggio 2 kg",
+    "product": "taleggio",
+    "sku": "FOR-TAL",
+    "quantity": "2",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "gorgonzola 2 kg",
+    "product": "gorgonzola",
+    "sku": "FOR-GOR-DOL",
+    "quantity": "2",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "fior di latte mozzarella 3 kg",
+    "product": "fior di latte mozzarella",
+    "sku": "FOR-MOZ-FIO",
+    "quantity": "3",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  },
+  {
+    "kind": "item",
+    "quote": "mortadella 2 kg",
+    "product": "mortadella",
+    "sku": "SAL-MOR",
+    "quantity": "2",
+    "unit": "kg",
+    "op": "set",
+    "value": null,
+    "status": "observed"
+  }
 ]

@@ -1,12 +1,12 @@
 {
- "id": "rist-gelsomino",
- "name": "Ristorante Il Gelsomino",
- "kind": "restaurant",
- "context": "Ristorante di cucina del territorio, menu stagionale. Ordina il giovedì per il fine settimana.",
- "terms": {
-  "discount_pct": 0,
-  "payment_days": 60,
-  "free_delivery_min": 400,
-  "price_overrides": {}
- }
+  "id": "rist-gelsomino",
+  "name": "The Jasmine Restaurant",
+  "kind": "restaurant",
+  "context": "Restaurant serving local cuisine, seasonal menu. Orders on Thursday for the weekend.",
+  "terms": {
+    "discount_pct": 0,
+    "payment_days": 60,
+    "free_delivery_min": 400,
+    "price_overrides": {}
+  }
 }
