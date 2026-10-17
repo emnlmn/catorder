@@ -239,6 +239,14 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .erp th:nth-child(n+3), .erp td:nth-child(n+3) { text-align: right; }
 .erp-t td { font-weight: 700; border-top: 1px solid #000; }
 .erp-n { padding: 4px 10px; font-size: 11px; color: #666; }
+/* narrow screen: the table must fit its box; the SKU stays on one line, the product name takes the slack */
+.erp { overflow-x: auto; }
+.erp td:first-child, .erp td:nth-child(n+3), .erp th { white-space: nowrap; }
+@media (max-width:560px) {
+  .erp { font-size: 12px; }
+  .erp th, .erp td { padding: 4px 5px; }
+  .erp td:first-child { font-size: 11px; }
+}
 
 /* conversation thread + live trace */
 .thread{display:flex;flex-direction:column;gap:6px;margin:14px 0 6px}

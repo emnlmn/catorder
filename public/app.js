@@ -619,7 +619,7 @@ function erp(o, name) {
     for (const ch of o.id)
         n = (n * 31 + ch.charCodeAt(0)) % 9000;
     const ls = lines(o).filter((l) => l.state !== 'removed'), total = orderTotal(o), price = (x) => (x === null || x === undefined ? '–' : eur(x));
-    return h('div', { class: 'erp' }, h('div', { class: 'erp-h' }, 'ERP · Order no. ' + (1000 + n) + ' created'), h('div', { class: 'erp-c' }, name), h('table', {}, h('tr', {}, ['SKU', 'Product', 'Qty', 'Unit price', 'Total'].map((x) => h('th', {}, x))), ls.map((l) => h('tr', {}, h('td', {}, l.sku || ''), h('td', {}, lineName(l)), h('td', {}, l.qty === null ? '?' : num(l.qty)), h('td', {}, price(l.unit_price)), h('td', {}, price(lineTotal(l))))), h('tr', { class: 'erp-t' }, h('td', { colspan: 4 }, 'Total'), h('td', {}, price(total)))), h('div', { class: 'erp-n' }, 'Demo: simulated ERP import'));
+    return h('div', { class: 'erp' }, h('div', { class: 'erp-h' }, 'ERP · Order no. ' + (1000 + n) + ' created'), h('div', { class: 'erp-c' }, name), h('table', {}, h('tr', {}, ['SKU', 'Product', 'Qty', 'Price', 'Total'].map((x) => h('th', {}, x))), ls.map((l) => h('tr', {}, h('td', {}, l.sku || ''), h('td', {}, lineName(l)), h('td', {}, l.qty === null ? '?' : num(l.qty)), h('td', {}, price(l.unit_price)), h('td', {}, price(lineTotal(l))))), h('tr', { class: 'erp-t' }, h('td', { colspan: 4 }, 'Total'), h('td', {}, price(total)))), h('div', { class: 'erp-n' }, 'Demo: simulated ERP import'));
 }
 /* ---------- conversation and live trace ---------- */
 async function loadThread(cid) {
@@ -680,7 +680,7 @@ function miniVoice(p) {
 }
 function bubble(p, o = null, solo = true) {
     const media = p.channel === 'whatsapp' ? '' : CHANNEL[p.channel] || '';
-    return h('div', { class: 'msg', 'data-msg': p.id }, h('div', { class: 'bub' }, p.channel === 'voice' && p.media_url ? miniVoice(p) : media && h('b', { class: 'bl' }, media), p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order, 1, p.id), !p.order && isReading(p.id, false, p.received_at) && thinking('')); // a live message landing under another open order: show it is being read
+    return h('div', { class: 'msg', 'data-msg': p.id }, h('div', { class: 'bub' }, p.channel === 'voice' && p.media_url ? miniVoice(p) : p.channel === 'photo' && !p.text && isReading(p.id, !!p.order, p.received_at) ? h('b', { class: 'bl' }, cat(true), 'Reading the photo') : media && h('b', { class: 'bl' }, media), p.channel === 'photo' && p.media_url && h('a', { class: 'photo', href: p.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: p.media_url, alt: 'Photo of a list' })), p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order, 1, p.id), !p.order && isReading(p.id, false, p.received_at) && thinking('')); // a live message landing under another open order: show it is being read
 }
 // the whole conversation, oldest first; the open message is its full self (quotes lit, player, photo), the rest are one click away
 function threadEl(m, o, open) {
@@ -941,7 +941,7 @@ function orderScreen(d, asked) {
     const pill = reading ? 'Reading' : PILL[orderState(o && { id: o.id, status: o.status, clean: !!o.clean })];
     const open = (solo) => [
         h('div', { class: 'msg sel', 'data-msg': m.id }, h('div', { class: 'bub' }, m.channel === 'voice' && m.media_url && h('div', { class: 'bl' }, player(m)), m.channel === 'photo' && m.media_url && h('a', { class: 'photo', href: m.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: m.media_url, alt: 'Photo of a list sent by ' + who.name })), text ? streamIn(h('p', { class: 'said' + (m.channel === 'voice' ? ' tx' : '') }, m.channel === 'email' ? greyQuoted(words) : words), awaited.delete(m.id))
-            : m.channel === 'voice' && reading && (awaited.add(m.id), h('p', { class: 'said tx wait' }, 'Transcribing', dots())), stamp(m.channel, m.received_at)), solo && chip(mine.order)),
+            : m.channel === 'voice' && reading && (awaited.add(m.id), h('p', { class: 'said tx wait' }, 'Transcribing', dots())), !text && m.channel === 'photo' && reading && h('p', { class: 'said tx wait' }, cat(true), 'Reading the photo'), stamp(m.channel, m.received_at)), solo && chip(mine.order)),
         traceEl(m.id) || h('div', { id: 'trace', 'data-trace': m.id, hidden: true }),
         replyEl(d.reply, m.id),
     ];

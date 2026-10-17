@@ -535,7 +535,7 @@ function erp(o: Order, name: string): HTMLElement {
     h('div', { class: 'erp-h' }, 'ERP · Order no. ' + (1000 + n) + ' created'),
     h('div', { class: 'erp-c' }, name),
     h('table', {},
-      h('tr', {}, ['SKU', 'Product', 'Qty', 'Unit price', 'Total'].map((x) => h('th', {}, x))),
+      h('tr', {}, ['SKU', 'Product', 'Qty', 'Price', 'Total'].map((x) => h('th', {}, x))),
       ls.map((l) => h('tr', {}, h('td', {}, l.sku || ''), h('td', {}, lineName(l)), h('td', {}, l.qty === null ? '?' : num(l.qty)), h('td', {}, price(l.unit_price)), h('td', {}, price(lineTotal(l))))),
       h('tr', { class: 'erp-t' }, h('td', { colspan: 4 }, 'Total'), h('td', {}, price(total)))),
     h('div', { class: 'erp-n' }, 'Demo: simulated ERP import'));
@@ -594,7 +594,8 @@ function bubble(p: Past, o: Order | null = null, solo = true): HTMLElement {
   const media = p.channel === 'whatsapp' ? '' : CHANNEL[p.channel] || '';
   return h('div', { class: 'msg', 'data-msg': p.id },
     h('div', { class: 'bub' },
-      p.channel === 'voice' && p.media_url ? miniVoice(p) : media && h('b', { class: 'bl' }, media),
+      p.channel === 'voice' && p.media_url ? miniVoice(p) : p.channel === 'photo' && !p.text && isReading(p.id, !!p.order, p.received_at) ? h('b', { class: 'bl' }, cat(true), 'Reading the photo') : media && h('b', { class: 'bl' }, media),
+      p.channel === 'photo' && p.media_url && h('a', { class: 'photo', href: p.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: p.media_url, alt: 'Photo of a list' })),
       p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text),
       stamp(p.channel, p.received_at)),
     solo && chip(p.order, 1, p.id),
@@ -825,6 +826,7 @@ function orderScreen(d: Detail, asked?: string): HTMLElement {
         m.channel === 'photo' && m.media_url && h('a', { class: 'photo', href: m.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: m.media_url, alt: 'Photo of a list sent by ' + who.name })),
         text ? streamIn(h('p', { class: 'said' + (m.channel === 'voice' ? ' tx' : '') }, m.channel === 'email' ? greyQuoted(words) : words), awaited.delete(m.id))
           : m.channel === 'voice' && reading && (awaited.add(m.id), h('p', { class: 'said tx wait' }, 'Transcribing', dots())),
+        !text && m.channel === 'photo' && reading && h('p', { class: 'said tx wait' }, cat(true), 'Reading the photo'),
         stamp(m.channel, m.received_at)),
       solo && chip(mine.order)),
     traceEl(m.id) || h('div', { id: 'trace', 'data-trace': m.id, hidden: true }),
