@@ -1,0 +1,8 @@
+{
+ "id": "vo-002",
+ "customer_id": "bar-ponterosso",
+ "channel": "voice",
+ "received_at": "2026-10-16T07:20:00+02:00",
+ "sender": "Giulia",
+ "media": "vo-002.mp3"
+}

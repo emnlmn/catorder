@@ -1,0 +1,316 @@
+{
+  "customer": {
+    "id": "deli-mulino",
+    "name": "Salumeria Mulino Vecchio",
+    "kind": "deli",
+    "context": "Salumeria e gastronomia, compra a peso. Ordina il martedì e il venerdì."
+  },
+  "terms": {
+    "discount_pct": 3,
+    "payment_days": 30,
+    "free_delivery_min": 200,
+    "price_overrides": {
+      "OLI-EVO-1L": 7.9,
+      "SAL-COT": 11.9
+    }
+  },
+  "usual": [
+    {
+      "sku": "SAL-COT",
+      "name": "Prosciutto cotto Fonteluce",
+      "qty": 4.0
+    },
+    {
+      "sku": "SAL-PRC",
+      "name": "Prosciutto crudo 14 mesi Fornasetta",
+      "qty": 3.0
+    },
+    {
+      "sku": "SAL-SPE",
+      "name": "Speck Alpe Verde",
+      "qty": 2.0
+    },
+    {
+      "sku": "FOR-GRA-24",
+      "name": "Grana Vallesella 24 mesi",
+      "qty": 4.0
+    },
+    {
+      "sku": "FOR-TAL",
+      "name": "Taleggio Valle Oscura",
+      "qty": 2.0
+    },
+    {
+      "sku": "FOR-MOZ-FIO",
+      "name": "Mozzarella fiordilatte La Casara",
+      "qty": 3.0
+    },
+    {
+      "sku": "FOR-GOR-DOL",
+      "name": "Gorgonzola dolce Ronco Alto",
+      "qty": 2.0
+    },
+    {
+      "sku": "OLI-EVO-1L",
+      "name": "Olio extravergine Ca' Marone 1 l",
+      "qty": 6.0
+    }
+  ],
+  "recent_orders": [
+    {
+      "date": "2026-10-09",
+      "lines": [
+        {
+          "sku": "SAL-COT",
+          "qty": 4.0,
+          "name": "Prosciutto cotto Fonteluce"
+        },
+        {
+          "sku": "SAL-PRC",
+          "qty": 3.0,
+          "name": "Prosciutto crudo 14 mesi Fornasetta"
+        },
+        {
+          "sku": "SAL-SPE",
+          "qty": 2.0,
+          "name": "Speck Alpe Verde"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 4.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "FOR-TAL",
+          "qty": 2.0,
+          "name": "Taleggio Valle Oscura"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 3.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "FOR-GOR-DOL",
+          "qty": 2.0,
+          "name": "Gorgonzola dolce Ronco Alto"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "lines": [
+        {
+          "sku": "SAL-COT",
+          "qty": 4.0,
+          "name": "Prosciutto cotto Fonteluce"
+        },
+        {
+          "sku": "SAL-PRC",
+          "qty": 3.0,
+          "name": "Prosciutto crudo 14 mesi Fornasetta"
+        },
+        {
+          "sku": "SAL-SPE",
+          "qty": 2.0,
+          "name": "Speck Alpe Verde"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 5.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "FOR-TAL",
+          "qty": 2.0,
+          "name": "Taleggio Valle Oscura"
+        },
+        {
+          "sku": "FOR-GOR-DOL",
+          "qty": 2.0,
+          "name": "Gorgonzola dolce Ronco Alto"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 3.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "OLI-EVO-1L",
+          "qty": 6.0,
+          "name": "Olio extravergine Ca' Marone 1 l"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "lines": [
+        {
+          "sku": "SAL-COT",
+          "qty": 4.0,
+          "name": "Prosciutto cotto Fonteluce"
+        },
+        {
+          "sku": "SAL-PRC",
+          "qty": 3.0,
+          "name": "Prosciutto crudo 14 mesi Fornasetta"
+        },
+        {
+          "sku": "SAL-SPE",
+          "qty": 2.0,
+          "name": "Speck Alpe Verde"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 4.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "FOR-TAL",
+          "qty": 2.0,
+          "name": "Taleggio Valle Oscura"
+        },
+        {
+          "sku": "FOR-GOR-DOL",
+          "qty": 2.0,
+          "name": "Gorgonzola dolce Ronco Alto"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 3.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "SAL-MOR",
+          "qty": 2.0,
+          "name": "Mortadella Valbruna"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "lines": [
+        {
+          "sku": "SAL-COT",
+          "qty": 4.0,
+          "name": "Prosciutto cotto Fonteluce"
+        },
+        {
+          "sku": "SAL-PRC",
+          "qty": 3.0,
+          "name": "Prosciutto crudo 14 mesi Fornasetta"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 4.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "FOR-TAL",
+          "qty": 2.0,
+          "name": "Taleggio Valle Oscura"
+        },
+        {
+          "sku": "FOR-GOR-DOL",
+          "qty": 2.0,
+          "name": "Gorgonzola dolce Ronco Alto"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 3.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "OLI-EVO-1L",
+          "qty": 6.0,
+          "name": "Olio extravergine Ca' Marone 1 l"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "lines": [
+        {
+          "sku": "SAL-COT",
+          "qty": 4.0,
+          "name": "Prosciutto cotto Fonteluce"
+        },
+        {
+          "sku": "SAL-PRC",
+          "qty": 3.0,
+          "name": "Prosciutto crudo 14 mesi Fornasetta"
+        },
+        {
+          "sku": "SAL-SPE",
+          "qty": 2.0,
+          "name": "Speck Alpe Verde"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 4.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "FOR-TAL",
+          "qty": 2.0,
+          "name": "Taleggio Valle Oscura"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 3.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "FOR-PRO-DOL",
+          "qty": 2.0,
+          "name": "Provolone dolce Ronco Alto"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-03",
+      "lines": [
+        {
+          "sku": "SAL-COT",
+          "qty": 4.0,
+          "name": "Prosciutto cotto Fonteluce"
+        },
+        {
+          "sku": "SAL-PRC",
+          "qty": 3.0,
+          "name": "Prosciutto crudo 14 mesi Fornasetta"
+        },
+        {
+          "sku": "SAL-SPE",
+          "qty": 2.0,
+          "name": "Speck Alpe Verde"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 4.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "FOR-TAL",
+          "qty": 2.0,
+          "name": "Taleggio Valle Oscura"
+        },
+        {
+          "sku": "FOR-GOR-DOL",
+          "qty": 2.0,
+          "name": "Gorgonzola dolce Ronco Alto"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 3.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "OLI-EVO-1L",
+          "qty": 6.0,
+          "name": "Olio extravergine Ca' Marone 1 l"
+        }
+      ]
+    }
+  ]
+}

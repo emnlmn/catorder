@@ -1,0 +1,21 @@
+{
+  "runs": 20,
+  "cached": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "mean_latency_ms": 0.0,
+  "cost_usd": null,
+  "requests_proposed": 72,
+  "requests_kept": 72,
+  "dropped": {
+    "no_quote": 0,
+    "short_quote": 0,
+    "schema": 0,
+    "bad_kind": 0
+  },
+  "errors": 0,
+  "lines": 73,
+  "lines_edited": 1,
+  "edit_rate": 0.0136986301369863,
+  "orders_confirmed": 1
+}

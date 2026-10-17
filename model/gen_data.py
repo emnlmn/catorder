@@ -1,0 +1,130 @@
+"""Synthetic order histories for CatOrder (deterministic). Writes model/data/histories.json."""
+import json, math, random, glob, os, datetime as dt
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+REPO = ROOT.parent
+START, END = dt.date(2025, 10, 1), dt.date(2026, 10, 17)
+SEED = 20261017
+N_CUSTOMERS = 400
+SUMMER_CATS = {"water", "beer", "soft drink"}
+
+KIND_POOLS = {  # category -> weight of being part of a core basket
+    "bar": {"water": 3, "soft drink": 4, "beer": 3, "coffee": 4, "disposables": 3, "sweets": 2, "wine": 1, "dairy": 1},
+    "restaurant": {"pasta": 3, "tomatoes": 2, "oil": 2, "flour": 2, "cheese": 3, "wine": 3, "water": 3, "beer": 1,
+                   "cured meat": 1, "cleaning": 2, "coffee": 1, "pantry": 1},
+    "deli": {"cured meat": 5, "cheese": 5, "oil": 2, "wine": 2, "pantry": 1, "tomatoes": 1, "pasta": 1, "disposables": 1},
+    "grocery": {"water": 2, "pasta": 3, "tomatoes": 2, "oil": 2, "soft drink": 2, "beer": 2, "coffee": 2, "sweets": 1,
+                "pantry": 1, "wine": 2, "flour": 1, "dairy": 1, "cleaning": 1},
+}
+KIND_W = {"bar": 0.3, "restaurant": 0.3, "deli": 0.2, "grocery": 0.2}
+
+
+def snap_qty(x, unit):
+    if unit == "kg":
+        return max(0.5, round(x * 2) / 2)
+    return max(1, int(round(x)))
+
+
+def season(d):  # 0..1 bump over Jun-Aug
+    doy = d.timetuple().tm_yday
+    return max(0.0, math.exp(-((doy - 200) / 38.0) ** 2))
+
+
+def gen_customer(rng, kind, catalog, by_cat):
+    pool = KIND_POOLS[kind]
+    cats = list(pool)
+    core = {}
+    ncore = rng.randint(4, 9)
+    guard = 0
+    while len(core) < ncore and guard < 200:
+        guard += 1
+        cat = rng.choices(cats, [pool[c] for c in cats])[0]
+        p = rng.choice(by_cat[cat])
+        if p["sku"] in core:
+            continue
+        u = p["sell_unit"]
+        base = rng.choice([0.5, 1, 1.5, 2, 3, 4]) if u == "kg" else rng.choice([1, 1, 2, 2, 3, 4, 6, 8])
+        prob = rng.uniform(0.85, 0.99) if rng.random() < 0.75 else rng.uniform(0.35, 0.7)
+        core[p["sku"]] = (base, prob, cat, u)
+    cadence = rng.uniform(5, 28)
+    wd = rng.sample(range(0, 6), rng.choice([1, 1, 2]))
+    churn_at = None
+    if rng.random() < 0.12:
+        churn_at = START + dt.timedelta(days=int(rng.uniform(0.3, 0.88) * (END - START).days))
+    adopt = None
+    if rng.random() < 0.25:
+        cand = [p for p in catalog if p["sku"] not in core]
+        p = rng.choice(cand)
+        adopt = (p["sku"], p["sell_unit"], START + dt.timedelta(days=rng.randint(60, 300)),
+                 1 if p["sell_unit"] != "kg" else 1.0)
+    extras_rate = rng.uniform(0.1, 0.5)
+    seas = rng.uniform(0.3, 0.9)
+
+    d = START + dt.timedelta(days=rng.randint(0, 40))
+    orders, stretch, n_after = [], 1.0, 0
+    adopted_orders = 0
+    while d <= END:
+        lines = {}
+        s = season(d)
+        for sku, (base, prob, cat, u) in core.items():
+            mult = 1 + seas * s if cat in SUMMER_CATS else 1.0
+            if rng.random() < min(0.99, prob * (1 + 0.1 * s if cat in SUMMER_CATS else 1)):
+                q = base * mult * math.exp(rng.gauss(0, 0.18))
+                lines[sku] = snap_qty(q, u)
+        if adopt and d >= adopt[2]:
+            adopted_orders += 1
+            if rng.random() < min(0.9, 0.25 * adopted_orders):
+                lines[adopt[0]] = snap_qty(adopt[3] * math.exp(rng.gauss(0, 0.2)), adopt[1])
+        if rng.random() < extras_rate:
+            for p in rng.sample(catalog, rng.choice([1, 1, 2])):
+                lines.setdefault(p["sku"], snap_qty(1, p["sell_unit"]))
+        if not lines:
+            lines[next(iter(core))] = snap_qty(core[next(iter(core))][0], core[next(iter(core))][3])
+        orders.append({"date": d.isoformat(), "lines": [{"sku": k, "qty": v} for k, v in lines.items()]})
+        gap = cadence * math.exp(rng.gauss(0, 0.15))
+        if churn_at and d >= churn_at:
+            n_after += 1
+            stretch *= 1.35
+            gap *= stretch
+            if n_after > rng.randint(2, 4):
+                break
+        nxt = d + dt.timedelta(days=max(2, round(gap)))
+        if wd:  # snap to nearest preferred weekday within +-3 days
+            best = min((nxt + dt.timedelta(days=k) for k in range(-3, 4)
+                        if (nxt + dt.timedelta(days=k)).weekday() in wd),
+                       key=lambda x: abs((x - nxt).days), default=nxt)
+            nxt = best
+        if nxt <= d:
+            nxt = d + dt.timedelta(days=1)
+        d = nxt
+    return orders
+
+
+def main():
+    rng = random.Random(SEED)
+    catalog = json.load(open(REPO / "data" / "catalog.json"))
+    by_cat = {}
+    for p in catalog:
+        by_cat.setdefault(p["category"], []).append(p)
+    out = {}
+    kinds = list(KIND_W)
+    for i in range(N_CUSTOMERS):
+        kind = rng.choices(kinds, [KIND_W[k] for k in kinds])[0]
+        orders = gen_customer(rng, kind, catalog, by_cat)
+        if len(orders) >= 2:
+            out[f"syn-{i:04d}"] = {"kind": kind, "orders": orders}
+    for f in sorted(glob.glob(str(REPO / "data" / "customers" / "*.json"))):
+        c = json.load(open(f))
+        hp = REPO / "data" / "history" / f"{c['id']}.json"
+        if hp.exists():
+            out[c["id"]] = {"kind": c["kind"], "orders": json.load(open(hp))}
+    (ROOT / "data").mkdir(exist_ok=True)
+    path = ROOT / "data" / "histories.json"
+    json.dump(out, open(path, "w"))
+    n = sum(len(v["orders"]) for v in out.values())
+    print(f"{len(out)} customers, {n} orders -> {path} ({path.stat().st_size/1e6:.1f} MB)")
+
+
+if __name__ == "__main__":
+    main()

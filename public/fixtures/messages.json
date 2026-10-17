@@ -1,0 +1,68 @@
+[
+ {
+  "id": "wa-001",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "whatsapp",
+  "received_at": "2026-10-16T21:40:00",
+  "preview": "ciao marta, 4 cs acqua naturale 1l per domani grazie",
+  "order": null
+ },
+ {
+  "id": "wa-002",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "whatsapp",
+  "received_at": "2026-10-16T22:05:00",
+  "preview": "buongiorno, mi servono 3 cs di prosecco",
+  "order": null
+ },
+ {
+  "id": "wa-003",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "whatsapp",
+  "received_at": "2026-10-17T06:50:00",
+  "preview": "il solito x venerdi + 6 cs di quello rosso dell'altra volta,",
+  "order": null
+ },
+ {
+  "id": "ph-001",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "photo",
+  "received_at": "2026-10-16T18:10:00",
+  "preview": "Photo of a list",
+  "order": null
+ },
+ {
+  "id": "vo-001",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "voice",
+  "received_at": "2026-10-16T08:12:00",
+  "preview": "Voice note · 0:42",
+  "order": null
+ },
+ {
+  "id": "wa-004",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "whatsapp",
+  "received_at": "2026-10-17T07:02:00",
+  "preview": "a che ora passate domani?",
+  "order": null
+ }
+]

@@ -1,0 +1,79 @@
+[
+ {
+  "kind": "delivery",
+  "quote": "x lunedi",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": "2026-10-19",
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "pelati 3 cs",
+  "product": "pelati",
+  "sku": "POM-PEL-2.5",
+  "quantity": "3",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "spaghetti 4 cs",
+  "product": "spaghetti",
+  "sku": "PAS-SPA-500",
+  "quantity": "4",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "farina [?] 5kg x4",
+  "product": "farina [?] 5kg",
+  "sku": null,
+  "quantity": "4",
+  "unit": null,
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "mozzarella 4 kg",
+  "product": "mozzarella",
+  "sku": null,
+  "quantity": "4",
+  "unit": "kg",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "olio 5lt x2",
+  "product": "olio 5lt",
+  "sku": "OLI-EVO-5L",
+  "quantity": "2",
+  "unit": null,
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "acqua nat 5 cs",
+  "product": "acqua nat",
+  "sku": "ACQ-NAT-1L",
+  "quantity": "5",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ }
+]

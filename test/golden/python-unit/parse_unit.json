@@ -1,0 +1,46 @@
+[
+  {
+    "in": "casse",
+    "out": "case"
+  },
+  {
+    "in": "cs",
+    "out": "case"
+  },
+  {
+    "in": "CS.",
+    "out": "case"
+  },
+  {
+    "in": "bt",
+    "out": "piece"
+  },
+  {
+    "in": "kg",
+    "out": "kg"
+  },
+  {
+    "in": "chili",
+    "out": "kg"
+  },
+  {
+    "in": "pz",
+    "out": "piece"
+  },
+  {
+    "in": "bottles",
+    "out": "piece"
+  },
+  {
+    "in": "boh",
+    "out": null
+  },
+  {
+    "in": null,
+    "out": null
+  },
+  {
+    "in": "Cartoni",
+    "out": "case"
+  }
+]

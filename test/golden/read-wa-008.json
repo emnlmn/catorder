@@ -1,0 +1,41 @@
+{
+  "order": {
+    "id": "58fb25ee54ca4c2f9391cb5a722ccd53",
+    "message_id": "wa-008",
+    "customer_id": "groc-nuovoborgo",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "buongiorno, sono anwar del nuovo borgo. il solito per lunedi grazie",
+    "delivery_date": "2026-10-19",
+    "flags": [
+      {
+        "kind": "no_history",
+        "level": "order",
+        "severity": "medium",
+        "message": "No order history: «the usual» cannot be computed."
+      }
+    ],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [],
+    "total": 0.0,
+    "clean": false
+  },
+  "reading": {
+    "kind": "original",
+    "source": "message",
+    "text": "buongiorno, sono anwar del nuovo borgo. il solito per lunedi grazie"
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

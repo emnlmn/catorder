@@ -1,0 +1,62 @@
+{
+  "customer": {
+    "id": "groc-nuovoborgo",
+    "name": "Emporio Nuovo Borgo",
+    "kind": "grocer",
+    "context": "Emporio aperto da poche settimane, un solo ordine finora."
+  },
+  "terms": {
+    "discount_pct": 2,
+    "payment_days": 30,
+    "free_delivery_min": 300,
+    "price_overrides": {}
+  },
+  "usual": [],
+  "recent_orders": [
+    {
+      "date": "2026-09-24",
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 4.0,
+          "name": "Fonte Brivio naturale 1 l"
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 3.0,
+          "name": "Spaghetti n.5 Lombarelli 500g"
+        },
+        {
+          "sku": "PAS-PEN-500",
+          "qty": 3.0,
+          "name": "Penne rigate Lombarelli 500g"
+        },
+        {
+          "sku": "POM-PAS-700",
+          "qty": 2.0,
+          "name": "Passata Terre Calvani 700g"
+        },
+        {
+          "sku": "OLI-EVO-1L",
+          "qty": 6.0,
+          "name": "Olio extravergine Ca' Marone 1 l"
+        },
+        {
+          "sku": "BIR-LAG-33",
+          "qty": 2.0,
+          "name": "Tornasco Lager 33cl"
+        },
+        {
+          "sku": "BEV-COL-33",
+          "qty": 2.0,
+          "name": "Cola Zeffiro 33cl"
+        },
+        {
+          "sku": "CAF-MIS-1K",
+          "qty": 2.0,
+          "name": "Caffè Ardelia Miscela Bar 1 kg"
+        }
+      ]
+    }
+  ]
+}

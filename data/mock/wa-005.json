@@ -1,0 +1,24 @@
+[
+ {
+  "kind": "delivery",
+  "quote": "x lunedi",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": "2026-10-19",
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "60 cs acqua naturale",
+  "product": "acqua naturale",
+  "sku": "ACQ-NAT-1L",
+  "quantity": "60",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ }
+]

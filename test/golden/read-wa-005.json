@@ -1,0 +1,88 @@
+{
+  "order": {
+    "id": "55ddf3da15bd4fd6909f35366caa5910",
+    "message_id": "wa-005",
+    "customer_id": "rist-gelsomino",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "marta x lunedi 60 cs acqua naturale 💧 per la sagra, grazie",
+    "delivery_date": "2026-10-19",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "e745fd2f36d543aca9cd5c4f86c617e9",
+        "order_id": "55ddf3da15bd4fd6909f35366caa5910",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "acqua naturale",
+        "sku": "ACQ-NAT-1L",
+        "qty": 60.0,
+        "unit_text": "cs",
+        "state": "flag",
+        "candidates": [
+          {
+            "sku": "ACQ-NAT-1L",
+            "score": 1.35,
+            "why": "in their last 6 orders",
+            "name": "Fonte Brivio naturale 1 l",
+            "pack_label": "case of 12 × 1 l"
+          },
+          {
+            "sku": "ACQ-NAT-50",
+            "score": 0.796,
+            "why": "name match",
+            "name": "Fonte Brivio naturale 50cl",
+            "pack_label": "case of 24 × 50 cl"
+          },
+          {
+            "sku": "BEV-TON-20",
+            "score": 0.417,
+            "why": "name match",
+            "name": "Tonica Lunaria 20cl",
+            "pack_label": "case of 24 × 20 cl"
+          }
+        ],
+        "flags": [
+          {
+            "kind": "unusual_quantity",
+            "level": "line",
+            "severity": "medium",
+            "message": "60 is far from this customer's usual 5 for Fonte Brivio naturale 1 l."
+          }
+        ],
+        "quote": "60 cs acqua naturale",
+        "quote_start": 15,
+        "quote_end": 35,
+        "proposed_sku": "ACQ-NAT-1L",
+        "proposed_qty": 60.0,
+        "edited": 0,
+        "name": "Fonte Brivio naturale 1 l",
+        "pack_label": "case of 12 × 1 l",
+        "sell_unit": "case",
+        "unit_price": 5.4,
+        "line_total": 324.0
+      }
+    ],
+    "total": 324.0,
+    "clean": false
+  },
+  "reading": {
+    "kind": "original",
+    "source": "message",
+    "text": "marta x lunedi 60 cs acqua naturale 💧 per la sagra, grazie"
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "model": "mock (hand-written answers)",
+  "transcribe_model": "",
+  "hardware": "no inference",
+  "offline": false,
+  "vision": false,
+  "mock": true,
+  "today": "2026-10-18",
+  "prompt_version": "1"
+}

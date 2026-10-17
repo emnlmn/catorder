@@ -1,0 +1,119 @@
+{
+  "message": {
+    "id": "em-002",
+    "customer_id": "rist-gelsomino",
+    "channel": "email",
+    "received_at": "2026-10-15T15:20:00+02:00",
+    "sender": "Davide",
+    "text": "Buongiorno Marta,\nper sabato ordino: 12 bottiglie di Roccafiera Rosso Superiore e 10 bottiglie di Punta Calma Vermentino.\nCordiali saluti,\nDavide - Il Gelsomino",
+    "media": null,
+    "sha256": "4362bdc0bdefe88bd88edbd7559f8e2b6ec6067f6596a8bb1cce752207aa7dbe",
+    "customer": {
+      "id": "rist-gelsomino",
+      "name": "Ristorante Il Gelsomino"
+    },
+    "media_url": null
+  },
+  "order": {
+    "id": "d8d960e4c6be43a0b9b40e511ad14ed3",
+    "message_id": "em-002",
+    "customer_id": "rist-gelsomino",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "Buongiorno Marta,\nper sabato ordino: 12 bottiglie di Roccafiera Rosso Superiore e 10 bottiglie di Punta Calma Vermentino.\nCordiali saluti,\nDavide - Il Gelsomino",
+    "delivery_date": "2026-10-17",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:44",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "1568ad8c131240f4add5e5d45ee0b3d9",
+        "order_id": "d8d960e4c6be43a0b9b40e511ad14ed3",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "Roccafiera Rosso Superiore",
+        "sku": "VIN-ROS-007",
+        "qty": 2.0,
+        "unit_text": "bottiglie",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "VIN-ROS-007",
+            "score": 1.123,
+            "why": "name match",
+            "name": "Roccafiera Rosso Superiore 75cl",
+            "pack_label": "case of 6 × 75 cl"
+          },
+          {
+            "sku": "VIN-ROS-005",
+            "score": 0.403,
+            "why": "name match",
+            "name": "Rosso Colline 75cl",
+            "pack_label": "case of 6 × 75 cl"
+          }
+        ],
+        "flags": [
+          {
+            "kind": "converted",
+            "level": "line",
+            "severity": "info",
+            "message": "12 bottiglie = 2 cases (case of 6 × 75 cl)."
+          }
+        ],
+        "quote": "12 bottiglie di Roccafiera Rosso Superiore",
+        "quote_start": 37,
+        "quote_end": 79,
+        "proposed_sku": "VIN-ROS-007",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Roccafiera Rosso Superiore 75cl",
+        "pack_label": "case of 6 × 75 cl",
+        "sell_unit": "case",
+        "unit_price": 52.8,
+        "line_total": 105.6
+      },
+      {
+        "id": "13f3888dfa924208808071f9c9d89fb1",
+        "order_id": "d8d960e4c6be43a0b9b40e511ad14ed3",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "Punta Calma Vermentino",
+        "sku": "VIN-BIA-004",
+        "qty": 10.0,
+        "unit_text": "bottiglie",
+        "state": "flag",
+        "candidates": [
+          {
+            "sku": "VIN-BIA-004",
+            "score": 1.1,
+            "why": "name match",
+            "name": "Vermentino Punta Calma 75cl",
+            "pack_label": "case of 6 × 75 cl"
+          }
+        ],
+        "flags": [
+          {
+            "kind": "pack_mismatch",
+            "level": "line",
+            "severity": "medium",
+            "message": "10 bottiglie of a product sold in case of 6 × 75 cl."
+          }
+        ],
+        "quote": "10 bottiglie di Punta Calma Vermentino",
+        "quote_start": 82,
+        "quote_end": 120,
+        "proposed_sku": "VIN-BIA-004",
+        "proposed_qty": 10.0,
+        "edited": 0,
+        "name": "Vermentino Punta Calma 75cl",
+        "pack_label": "case of 6 × 75 cl",
+        "sell_unit": "case",
+        "unit_price": 47.4,
+        "line_total": 474.0
+      }
+    ],
+    "total": 579.6,
+    "clean": false
+  }
+}

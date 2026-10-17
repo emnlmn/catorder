@@ -1,0 +1,8 @@
+.git
+.env
+*.db
+HANDOFF.md
+.serena
+node_modules
+eval/results
+public/app.js

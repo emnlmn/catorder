@@ -1,0 +1,79 @@
+[
+ {
+  "kind": "delivery",
+  "quote": "x martedi",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": "2026-10-20",
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "acqua nat 1l 6 cs",
+  "product": "acqua nat 1l",
+  "sku": "ACQ-NAT-1L",
+  "quantity": "6",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "cola 3 cs",
+  "product": "cola",
+  "sku": "BEV-COL-33",
+  "quantity": "3",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "penne 3 cs",
+  "product": "penne",
+  "sku": "PAS-PEN-500",
+  "quantity": "3",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "passata 2 cs",
+  "product": "passata",
+  "sku": "POM-PAS-700",
+  "quantity": "2",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "caffe 2 cs",
+  "product": "caffe",
+  "sku": null,
+  "quantity": "2",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "olio 1 l 6 pz",
+  "product": "olio 1 l",
+  "sku": "OLI-EVO-1L",
+  "quantity": "6",
+  "unit": "pz",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ }
+]

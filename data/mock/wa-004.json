@@ -1,0 +1,24 @@
+[
+ {
+  "kind": "item",
+  "quote": "2 cs di quella birra artigianale nuova che avete messo",
+  "product": "birra artigianale nuova",
+  "sku": null,
+  "quantity": "2",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "3 cs di cola",
+  "product": "cola",
+  "sku": "BEV-COL-33",
+  "quantity": "3",
+  "unit": "cs",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ }
+]

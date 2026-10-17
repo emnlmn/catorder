@@ -1,0 +1,101 @@
+{
+  "bar-ponterosso": [
+    {
+      "sku": "ACQ-NAT-1L",
+      "qty": 6.0
+    },
+    {
+      "sku": "ACQ-FRIZ-1L",
+      "qty": 4.0
+    },
+    {
+      "sku": "CAF-MIS-1K",
+      "qty": 3.0
+    },
+    {
+      "sku": "BEV-COL-33",
+      "qty": 2.0
+    },
+    {
+      "sku": "BIR-LAG-33",
+      "qty": 2.0
+    },
+    {
+      "sku": "DIS-CUP-CAF",
+      "qty": 1.0
+    }
+  ],
+  "deli-mulino": [
+    {
+      "sku": "SAL-COT",
+      "qty": 4.0
+    },
+    {
+      "sku": "SAL-PRC",
+      "qty": 3.0
+    },
+    {
+      "sku": "SAL-SPE",
+      "qty": 2.0
+    },
+    {
+      "sku": "FOR-GRA-24",
+      "qty": 4.0
+    },
+    {
+      "sku": "FOR-TAL",
+      "qty": 2.0
+    },
+    {
+      "sku": "FOR-MOZ-FIO",
+      "qty": 3.0
+    },
+    {
+      "sku": "FOR-GOR-DOL",
+      "qty": 2.0
+    },
+    {
+      "sku": "OLI-EVO-1L",
+      "qty": 6.0
+    }
+  ],
+  "groc-nuovoborgo": [],
+  "rist-gelsomino": [
+    {
+      "sku": "ACQ-NAT-1L",
+      "qty": 5.0
+    },
+    {
+      "sku": "ACQ-FRIZ-1L",
+      "qty": 3.0
+    },
+    {
+      "sku": "PAS-SPA-500",
+      "qty": 4.0
+    },
+    {
+      "sku": "POM-PEL-2.5",
+      "qty": 3.0
+    },
+    {
+      "sku": "OLI-EVO-5L",
+      "qty": 2.0
+    },
+    {
+      "sku": "FAR-00-5K",
+      "qty": 4.0
+    },
+    {
+      "sku": "FOR-MOZ-FIO",
+      "qty": 4.0
+    },
+    {
+      "sku": "FOR-GRA-24",
+      "qty": 3.0
+    },
+    {
+      "sku": "VIN-ROS-009",
+      "qty": 2.0
+    }
+  ]
+}

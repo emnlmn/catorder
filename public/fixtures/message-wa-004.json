@@ -1,0 +1,15 @@
+{
+ "message": {
+  "id": "wa-004",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "whatsapp",
+  "received_at": "2026-10-17T07:02:00",
+  "sender": "Bar Aurora",
+  "text": "a che ora passate domani?",
+  "media_url": null
+ },
+ "order": null
+}

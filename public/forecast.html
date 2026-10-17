@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CatOrder · Forecast</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="app.css">
+<style>
+.ref{align-self:stretch;width:100%;max-width:900px;padding:26px 40px 40px;font-size:15px}
+.ref h1{margin:0 0 6px;font-size:29px;line-height:1.1}
+.ref .lede{margin:0 0 22px;color:var(--muted)}
+.ref h2{margin:28px 0 4px;font-size:16px}
+.late{padding:18px 0;border-top:1px solid var(--line)}
+.late h3{margin:0;font-size:17px;line-height:1.2}
+.late h3 b{background:#A0E249;padding:0 6px;border-radius:6px}
+.late p{margin:8px 0 0;color:var(--muted)}
+.due{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid color-mix(in srgb,var(--ink) 15%,var(--paper))}
+.due .when{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.basket{margin:6px 0 0;color:var(--muted);font-size:15px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:9px 10px;text-align:left;border-bottom:1px solid color-mix(in srgb,var(--ink) 15%,var(--paper))}
+th{border-bottom:1px solid var(--line);font-weight:600}
+.n{text-align:right;white-space:nowrap}
+.none{color:var(--muted)}
+@media (max-width:700px){.ref{padding:18px 16px 32px}.ref h1{font-size:22px}}
+</style>
+</head>
+<body>
+<aside class="side">
+  <a class="home" href="./" title="Back to the start" style="text-decoration:none;color:inherit">
+    <img class="logo" src="logo.png" alt="">
+    <span class="brand toon">CatOrder</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a class="navi" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4M6 5h12l2 8v6H4v-6z"/></svg><span>Inbox</span></a>
+    <a class="navi" href="customers.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M21 19v-1a4 4 0 0 0-3-3.9M15 4.1a3.5 3.5 0 0 1 0 6.8"/></svg><span>Customers</span></a>
+    <a class="navi" href="orders.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/></svg><span>Orders</span></a>
+    <a class="navi on" href="forecast.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 16l4-5 4 3 6-8"/></svg><span>Forecast</span></a>
+    <a class="navi" href="catalog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg><span>Catalog</span></a>
+  </nav>
+</aside>
+<main class="ref">
+  <h1 class="toon">Forecast</h1>
+  <p class="lede" id="lede">Who orders next, and what.</p>
+  <div id="out">Loading…</div>
+</main>
+<script>
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const day = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+const basket = (p) => p.basket.map((b) => `${b.qty} × ${esc(b.name)}`).join(' · ');
+const draw = ([f, cs]) => {
+  const name = Object.fromEntries(cs.map((c) => [c.id, c.name]));
+  const any = f.customers[0];
+  if (any) document.getElementById('lede').textContent = `Predicted by ${any.model} on ${any.device || 'unknown device'} · today ${day(f.today)}`;
+  const late = f.customers.filter((p) => p.days_overdue > 0);
+  const soon = f.customers.filter((p) => p.days_overdue === 0);
+  document.getElementById('out').innerHTML =
+    `<h2>Late</h2>` + (late.length ? late.map((p) => `<article class="late">
+<h3>${esc(name[p.customer_id])} usually orders every ${Math.round(p.expected_gap_days)} days. <b>It’s been ${p.days_since_last}.</b></h3>
+<p>Their next order would be: ${basket(p)}</p></article>`).join('') : `<p class="none">Nobody is late.</p>`) +
+    `<h2>Coming up</h2>` + (soon.length ? soon.map((p) => `<div class="due"><div><b>${esc(name[p.customer_id])}</b><p class="basket">${basket(p)}</p></div><span class="when">${day(p.next_order_date)}</span></div>`).join('') : `<p class="none">No orders expected.</p>`) +
+    `<h2>Next 7 days, by product</h2>` + (f.demand_7d.length ? `<table><tr><th>Product</th><th class="n">Qty</th><th class="n">Customers</th></tr>${f.demand_7d.map((d) => `<tr><td>${esc(d.name)}</td><td class="n">${d.qty}</td><td class="n">${d.customers}</td></tr>`).join('')}</table>` : `<p class="none">No demand expected.</p>`) +
+    (f.failed.length ? `<p class="none">No forecast for: ${f.failed.map((id) => esc(name[id] || id)).join(', ')}</p>` : '');
+};
+Promise.all([fetch('/api/predictions').then((r) => r.json()), fetch('/api/customers').then((r) => r.json())]).then(draw)
+  .catch(() => { document.getElementById('out').textContent = 'Could not load the forecast. Reload the page.'; });
+</script>
+</body>
+</html>

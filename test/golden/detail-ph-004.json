@@ -1,0 +1,268 @@
+{
+  "message": {
+    "id": "ph-004",
+    "customer_id": "groc-nuovoborgo",
+    "channel": "photo",
+    "received_at": "2026-10-17T16:00:00+02:00",
+    "sender": "Anwar",
+    "text": null,
+    "media": "ph-004.jpg",
+    "sha256": "3a3ea29f314fd833c89d5931feb2d5cd8b6e7f76e96ccdaef7919076061e3069",
+    "customer": {
+      "id": "groc-nuovoborgo",
+      "name": "Emporio Nuovo Borgo"
+    },
+    "media_url": "/media/ph-004.jpg"
+  },
+  "order": {
+    "id": "73c329a69170451ba732329f1ee39ed1",
+    "message_id": "ph-004",
+    "customer_id": "groc-nuovoborgo",
+    "status": "draft",
+    "reading_kind": "transcription",
+    "reading_source": "file",
+    "reading": "nuovo borgo\nx martedi\nacqua nat 1l 6 cs\ncola 3 cs\npenne 3 cs\npassata 2 cs\ncaffe 2 cs\nolio 1 l 6 pz",
+    "delivery_date": "2026-10-20",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "d734a26f05f44cd7aa3b02d903594957",
+        "order_id": "73c329a69170451ba732329f1ee39ed1",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "acqua nat 1l",
+        "sku": "ACQ-NAT-1L",
+        "qty": 6.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "ACQ-NAT-1L",
+            "score": 1.239,
+            "why": "in their last order",
+            "name": "Fonte Brivio naturale 1 l",
+            "pack_label": "case of 12 × 1 l"
+          },
+          {
+            "sku": "ACQ-NAT-50",
+            "score": 0.633,
+            "why": "name match",
+            "name": "Fonte Brivio naturale 50cl",
+            "pack_label": "case of 24 × 50 cl"
+          },
+          {
+            "sku": "ACQ-FRIZ-1L",
+            "score": 0.626,
+            "why": "name match",
+            "name": "Fonte Brivio frizzante 1 l",
+            "pack_label": "case of 12 × 1 l"
+          }
+        ],
+        "flags": [],
+        "quote": "acqua nat 1l 6 cs",
+        "quote_start": 22,
+        "quote_end": 39,
+        "proposed_sku": "ACQ-NAT-1L",
+        "proposed_qty": 6.0,
+        "edited": 0,
+        "name": "Fonte Brivio naturale 1 l",
+        "pack_label": "case of 12 × 1 l",
+        "sell_unit": "case",
+        "unit_price": 5.29,
+        "line_total": 31.74
+      },
+      {
+        "id": "fb0579b5f5054b46871ef5776e3fafed",
+        "order_id": "73c329a69170451ba732329f1ee39ed1",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "cola",
+        "sku": "BEV-COL-33",
+        "qty": 3.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "BEV-COL-33",
+            "score": 1.25,
+            "why": "in their last order",
+            "name": "Cola Zeffiro 33cl",
+            "pack_label": "case of 24 × 33 cl cans"
+          }
+        ],
+        "flags": [],
+        "quote": "cola 3 cs",
+        "quote_start": 40,
+        "quote_end": 49,
+        "proposed_sku": "BEV-COL-33",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Cola Zeffiro 33cl",
+        "pack_label": "case of 24 × 33 cl cans",
+        "sell_unit": "case",
+        "unit_price": 14.11,
+        "line_total": 42.33
+      },
+      {
+        "id": "1660098a4d6e4577a9a7b59b42ff2720",
+        "order_id": "73c329a69170451ba732329f1ee39ed1",
+        "pos": 2,
+        "origin": "message",
+        "product_text": "penne",
+        "sku": "PAS-PEN-500",
+        "qty": 3.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "PAS-PEN-500",
+            "score": 1.25,
+            "why": "in their last order",
+            "name": "Penne rigate Lombarelli 500g",
+            "pack_label": "case of 24 × 500 g"
+          }
+        ],
+        "flags": [],
+        "quote": "penne 3 cs",
+        "quote_start": 50,
+        "quote_end": 60,
+        "proposed_sku": "PAS-PEN-500",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Penne rigate Lombarelli 500g",
+        "pack_label": "case of 24 × 500 g",
+        "sell_unit": "case",
+        "unit_price": 16.93,
+        "line_total": 50.79
+      },
+      {
+        "id": "a2211ac813374c5cb56960c76e40675c",
+        "order_id": "73c329a69170451ba732329f1ee39ed1",
+        "pos": 3,
+        "origin": "message",
+        "product_text": "passata",
+        "sku": "POM-PAS-700",
+        "qty": 2.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "POM-PAS-700",
+            "score": 1.25,
+            "why": "in their last order",
+            "name": "Passata Terre Calvani 700g",
+            "pack_label": "case of 12 × 700 g"
+          },
+          {
+            "sku": "ACQ-FRIZ-1L",
+            "score": 0.828,
+            "why": "name match",
+            "name": "Fonte Brivio frizzante 1 l",
+            "pack_label": "case of 12 × 1 l"
+          }
+        ],
+        "flags": [],
+        "quote": "passata 2 cs",
+        "quote_start": 61,
+        "quote_end": 73,
+        "proposed_sku": "POM-PAS-700",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Passata Terre Calvani 700g",
+        "pack_label": "case of 12 × 700 g",
+        "sell_unit": "case",
+        "unit_price": 12.94,
+        "line_total": 25.88
+      },
+      {
+        "id": "d10158a947cf4398acc3d88ed83c5f8d",
+        "order_id": "73c329a69170451ba732329f1ee39ed1",
+        "pos": 4,
+        "origin": "message",
+        "product_text": "caffe",
+        "sku": "CAF-MIS-1K",
+        "qty": 2.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "CAF-MIS-1K",
+            "score": 1.15,
+            "why": "in their last order",
+            "name": "Caffè Ardelia Miscela Bar 1 kg",
+            "pack_label": "case of 6 × 1 kg bags"
+          },
+          {
+            "sku": "CAF-DEC-500",
+            "score": 0.727,
+            "why": "name match",
+            "name": "Caffè Ardelia Decaffeinato 500g",
+            "pack_label": "case of 6 × 500 g"
+          },
+          {
+            "sku": "CAF-GRA-1K",
+            "score": 0.727,
+            "why": "name match",
+            "name": "Caffè Ardelia Gran Crema in grani 1 kg",
+            "pack_label": "case of 6 × 1 kg bags"
+          }
+        ],
+        "flags": [],
+        "quote": "caffe 2 cs",
+        "quote_start": 74,
+        "quote_end": 84,
+        "proposed_sku": "CAF-MIS-1K",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Caffè Ardelia Miscela Bar 1 kg",
+        "pack_label": "case of 6 × 1 kg bags",
+        "sell_unit": "case",
+        "unit_price": 82.32,
+        "line_total": 164.64
+      },
+      {
+        "id": "05b9d0e7b88248bf8061d794024bd282",
+        "order_id": "73c329a69170451ba732329f1ee39ed1",
+        "pos": 5,
+        "origin": "message",
+        "product_text": "olio 1 l",
+        "sku": "OLI-EVO-1L",
+        "qty": 6.0,
+        "unit_text": "pz",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "OLI-EVO-1L",
+            "score": 1.35,
+            "why": "in their last order",
+            "name": "Olio extravergine Ca' Marone 1 l",
+            "pack_label": "bottle 1 l"
+          },
+          {
+            "sku": "OLI-EVO-5L",
+            "score": 0.657,
+            "why": "name match",
+            "name": "Olio extravergine Ca' Marone 5 l",
+            "pack_label": "tin 5 l"
+          }
+        ],
+        "flags": [],
+        "quote": "olio 1 l 6 pz",
+        "quote_start": 85,
+        "quote_end": 98,
+        "proposed_sku": "OLI-EVO-1L",
+        "proposed_qty": 6.0,
+        "edited": 0,
+        "name": "Olio extravergine Ca' Marone 1 l",
+        "pack_label": "bottle 1 l",
+        "sell_unit": "piece",
+        "unit_price": 8.72,
+        "line_total": 52.32
+      }
+    ],
+    "total": 367.7,
+    "clean": true
+  }
+}

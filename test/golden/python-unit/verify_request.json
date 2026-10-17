@@ -1,0 +1,206 @@
+{
+  "reading": "Ciao Marta, mi mandi  6 cs di “Prosecco” – grazie! 3 anzi 4 kg farina",
+  "cases": [
+    {
+      "req": {
+        "kind": "item",
+        "quote": "6 cs di \"prosecco\"",
+        "product": "prosecco",
+        "sku": null,
+        "quantity": "6",
+        "unit": "cs",
+        "op": "set",
+        "value": null,
+        "status": "observed"
+      },
+      "out": [
+        "ok",
+        {
+          "kind": "item",
+          "quote": "6 cs di “Prosecco”",
+          "quote_start": 22,
+          "quote_end": 40,
+          "product": "prosecco",
+          "sku": null,
+          "qty": 6.0,
+          "unit_text": "cs",
+          "unit": "case",
+          "op": "set",
+          "value": null,
+          "date": null,
+          "status": "observed"
+        }
+      ]
+    },
+    {
+      "req": {
+        "kind": "item",
+        "quote": "3 anzi 4 kg farina",
+        "product": "farina",
+        "sku": "X",
+        "quantity": "4",
+        "unit": "kg",
+        "op": null,
+        "value": null,
+        "status": "observed"
+      },
+      "out": [
+        "ok",
+        {
+          "kind": "item",
+          "quote": "3 anzi 4 kg farina",
+          "quote_start": 51,
+          "quote_end": 69,
+          "product": "farina",
+          "sku": "X",
+          "qty": 4.0,
+          "unit_text": "kg",
+          "unit": "kg",
+          "op": null,
+          "value": null,
+          "date": null,
+          "status": "observed"
+        }
+      ]
+    },
+    {
+      "req": {
+        "kind": "item",
+        "quote": "mi mandi",
+        "product": "prosecco",
+        "sku": null,
+        "quantity": "sei",
+        "unit": null,
+        "op": "add",
+        "value": null,
+        "status": "observed"
+      },
+      "out": [
+        "ok",
+        {
+          "kind": "item",
+          "quote": "mi mandi",
+          "quote_start": 12,
+          "quote_end": 20,
+          "product": "prosecco",
+          "sku": null,
+          "qty": 6.0,
+          "unit_text": null,
+          "unit": null,
+          "op": "add",
+          "value": null,
+          "date": null,
+          "status": "inferred"
+        }
+      ]
+    },
+    {
+      "req": {
+        "kind": "delivery",
+        "quote": "grazie!",
+        "product": null,
+        "sku": null,
+        "quantity": null,
+        "unit": null,
+        "op": null,
+        "value": "2026-10-20",
+        "status": "inferred"
+      },
+      "out": [
+        "ok",
+        {
+          "kind": "delivery",
+          "quote": "grazie!",
+          "quote_start": 43,
+          "quote_end": 50,
+          "product": "",
+          "sku": null,
+          "qty": null,
+          "unit_text": null,
+          "unit": null,
+          "op": null,
+          "value": "2026-10-20",
+          "date": "2026-10-20",
+          "status": "inferred"
+        }
+      ]
+    },
+    {
+      "req": {
+        "kind": "delivery",
+        "quote": "grazie!",
+        "value": "venerdi",
+        "status": "observed"
+      },
+      "out": [
+        "ok",
+        {
+          "kind": "delivery",
+          "quote": "grazie!",
+          "quote_start": 43,
+          "quote_end": 50,
+          "product": "",
+          "sku": null,
+          "qty": null,
+          "unit_text": null,
+          "unit": null,
+          "op": null,
+          "value": "venerdi",
+          "date": null,
+          "status": "observed"
+        }
+      ]
+    },
+    {
+      "req": {
+        "kind": "bogus",
+        "quote": "grazie",
+        "status": "observed"
+      },
+      "out": [
+        "drop",
+        "bad_kind"
+      ]
+    },
+    {
+      "req": {
+        "kind": "item",
+        "quote": 5,
+        "status": "observed"
+      },
+      "out": [
+        "drop",
+        "bad_kind"
+      ]
+    },
+    {
+      "req": {
+        "kind": "item",
+        "quote": "zz",
+        "status": "observed"
+      },
+      "out": [
+        "drop",
+        "short_quote"
+      ]
+    },
+    {
+      "req": {
+        "kind": "item",
+        "quote": "not there",
+        "status": "observed"
+      },
+      "out": [
+        "drop",
+        "no_quote"
+      ]
+    },
+    {
+      "req": "string",
+      "out": [
+        "drop",
+        "bad_kind"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "in": "6",
+    "out": 6.0
+  },
+  {
+    "in": "6,5",
+    "out": 6.5
+  },
+  {
+    "in": "0.5",
+    "out": 0.5
+  },
+  {
+    "in": "sei",
+    "out": 6.0
+  },
+  {
+    "in": "mezza",
+    "out": 0.5
+  },
+  {
+    "in": "un paio",
+    "out": 2.0
+  },
+  {
+    "in": "venti",
+    "out": 20.0
+  },
+  {
+    "in": "trenta",
+    "out": 30.0
+  },
+  {
+    "in": "12 bottiglie",
+    "out": 12.0
+  },
+  {
+    "in": "boh",
+    "out": null
+  },
+  {
+    "in": null,
+    "out": null
+  },
+  {
+    "in": "Dodici",
+    "out": 12.0
+  },
+  {
+    "in": " 3 ",
+    "out": 3.0
+  }
+]

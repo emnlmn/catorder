@@ -1,0 +1,106 @@
+{
+  "order": {
+    "id": "ea1c1a164ade4fc585b80822590701a7",
+    "message_id": "vo-004",
+    "customer_id": "groc-nuovoborgo",
+    "status": "draft",
+    "reading_kind": "transcript",
+    "reading_source": "file",
+    "reading": "Buongiorno, sono Anwar dell'Emporio Nuovo Borgo. Per martedì tre casse di spaghetti e due casse di passata. Grazie.",
+    "delivery_date": "2026-10-20",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "4d3efbf05fd248d7b8437b5e4fbce933",
+        "order_id": "ea1c1a164ade4fc585b80822590701a7",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "spaghetti",
+        "sku": "PAS-SPA-500",
+        "qty": 3.0,
+        "unit_text": "casse",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "PAS-SPA-500",
+            "score": 1.25,
+            "why": "in their last order",
+            "name": "Spaghetti n.5 Lombarelli 500g",
+            "pack_label": "case of 24 × 500 g"
+          }
+        ],
+        "flags": [],
+        "quote": "tre casse di spaghetti",
+        "quote_start": 61,
+        "quote_end": 83,
+        "proposed_sku": "PAS-SPA-500",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Spaghetti n.5 Lombarelli 500g",
+        "pack_label": "case of 24 × 500 g",
+        "sell_unit": "case",
+        "unit_price": 16.93,
+        "line_total": 50.79
+      },
+      {
+        "id": "e2813aef754d4bfdac9d6f08ffd11b52",
+        "order_id": "ea1c1a164ade4fc585b80822590701a7",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "passata",
+        "sku": "POM-PAS-700",
+        "qty": 2.0,
+        "unit_text": "casse",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "POM-PAS-700",
+            "score": 1.25,
+            "why": "in their last order",
+            "name": "Passata Terre Calvani 700g",
+            "pack_label": "case of 12 × 700 g"
+          },
+          {
+            "sku": "ACQ-FRIZ-1L",
+            "score": 0.828,
+            "why": "name match",
+            "name": "Fonte Brivio frizzante 1 l",
+            "pack_label": "case of 12 × 1 l"
+          }
+        ],
+        "flags": [],
+        "quote": "due casse di passata",
+        "quote_start": 86,
+        "quote_end": 106,
+        "proposed_sku": "POM-PAS-700",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Passata Terre Calvani 700g",
+        "pack_label": "case of 12 × 700 g",
+        "sell_unit": "case",
+        "unit_price": 12.94,
+        "line_total": 25.88
+      }
+    ],
+    "total": 76.67,
+    "clean": true
+  },
+  "reading": {
+    "kind": "transcript",
+    "source": "file",
+    "text": "Buongiorno, sono Anwar dell'Emporio Nuovo Borgo. Per martedì tre casse di spaghetti e due casse di passata. Grazie."
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

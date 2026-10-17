@@ -1,0 +1,273 @@
+{
+  "order": {
+    "id": "98a6fd1642c94a41b61468ac46035dbb",
+    "message_id": "ph-003",
+    "customer_id": "deli-mulino",
+    "status": "draft",
+    "reading_kind": "transcription",
+    "reading_source": "file",
+    "reading": "x giovedi\ncotto 4 kg\ncrudo 3 kg\nspeck 2 kg\ntaleggio 2 kg\ngorgonzola 2 kg\nmozzarella fiordilatte 3 kg\nmortadella 2 kg",
+    "delivery_date": "2026-10-15",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:44",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "894bdf48a41e4a6b95503fd103f7f384",
+        "order_id": "98a6fd1642c94a41b61468ac46035dbb",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "cotto",
+        "sku": "SAL-COT",
+        "qty": 4.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "SAL-COT",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Prosciutto cotto Fonteluce",
+            "pack_label": "sold by kg"
+          },
+          {
+            "sku": "BEV-CHI-20",
+            "score": 0.592,
+            "why": "name match",
+            "name": "Chinotto Valsorda 20cl",
+            "pack_label": "case of 24 × 20 cl"
+          }
+        ],
+        "flags": [],
+        "quote": "cotto 4 kg",
+        "quote_start": 10,
+        "quote_end": 20,
+        "proposed_sku": "SAL-COT",
+        "proposed_qty": 4.0,
+        "edited": 0,
+        "name": "Prosciutto cotto Fonteluce",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 11.9,
+        "line_total": 47.6
+      },
+      {
+        "id": "6f3e121073cb40a7bb426d3c51cffa12",
+        "order_id": "98a6fd1642c94a41b61468ac46035dbb",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "crudo",
+        "sku": "SAL-PRC",
+        "qty": 3.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "SAL-PRC",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Prosciutto crudo 14 mesi Fornasetta",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "crudo 3 kg",
+        "quote_start": 21,
+        "quote_end": 31,
+        "proposed_sku": "SAL-PRC",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Prosciutto crudo 14 mesi Fornasetta",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 20.86,
+        "line_total": 62.58
+      },
+      {
+        "id": "4d6f437c32784959a8089656758ffa6e",
+        "order_id": "98a6fd1642c94a41b61468ac46035dbb",
+        "pos": 2,
+        "origin": "message",
+        "product_text": "speck",
+        "sku": "SAL-SPE",
+        "qty": 2.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "SAL-SPE",
+            "score": 1.25,
+            "why": "in their last 5 orders",
+            "name": "Speck Alpe Verde",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "speck 2 kg",
+        "quote_start": 32,
+        "quote_end": 42,
+        "proposed_sku": "SAL-SPE",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Speck Alpe Verde",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 13.77,
+        "line_total": 27.54
+      },
+      {
+        "id": "148f4055a7284b499d93520c9b35cdcb",
+        "order_id": "98a6fd1642c94a41b61468ac46035dbb",
+        "pos": 3,
+        "origin": "message",
+        "product_text": "taleggio",
+        "sku": "FOR-TAL",
+        "qty": 2.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "FOR-TAL",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Taleggio Valle Oscura",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "taleggio 2 kg",
+        "quote_start": 43,
+        "quote_end": 56,
+        "proposed_sku": "FOR-TAL",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Taleggio Valle Oscura",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 11.45,
+        "line_total": 22.9
+      },
+      {
+        "id": "d7df71d9c1d74047a0ab476b1ca04d4b",
+        "order_id": "98a6fd1642c94a41b61468ac46035dbb",
+        "pos": 4,
+        "origin": "message",
+        "product_text": "gorgonzola",
+        "sku": "FOR-GOR-DOL",
+        "qty": 2.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "FOR-GOR-DOL",
+            "score": 1.25,
+            "why": "in their last 5 orders",
+            "name": "Gorgonzola dolce Ronco Alto",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "gorgonzola 2 kg",
+        "quote_start": 57,
+        "quote_end": 72,
+        "proposed_sku": "FOR-GOR-DOL",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Gorgonzola dolce Ronco Alto",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 10.57,
+        "line_total": 21.14
+      },
+      {
+        "id": "275d51d71bdb48b7acae2d059e8d333e",
+        "order_id": "98a6fd1642c94a41b61468ac46035dbb",
+        "pos": 5,
+        "origin": "message",
+        "product_text": "mozzarella fiordilatte",
+        "sku": "FOR-MOZ-FIO",
+        "qty": 3.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "FOR-MOZ-FIO",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Mozzarella fiordilatte La Casara",
+            "pack_label": "sold by kg"
+          },
+          {
+            "sku": "FOR-MOZ-BUF",
+            "score": 0.541,
+            "why": "name match",
+            "name": "Mozzarella di bufala La Casara",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "mozzarella fiordilatte 3 kg",
+        "quote_start": 73,
+        "quote_end": 100,
+        "proposed_sku": "FOR-MOZ-FIO",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Mozzarella fiordilatte La Casara",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 6.98,
+        "line_total": 20.94
+      },
+      {
+        "id": "bb219043a1b84cd5b11f16c2712c304a",
+        "order_id": "98a6fd1642c94a41b61468ac46035dbb",
+        "pos": 6,
+        "origin": "message",
+        "product_text": "mortadella",
+        "sku": "SAL-MOR",
+        "qty": 2.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "SAL-MOR",
+            "score": 1.25,
+            "why": "in 1 of their last orders",
+            "name": "Mortadella Valbruna",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "mortadella 2 kg",
+        "quote_start": 101,
+        "quote_end": 116,
+        "proposed_sku": "SAL-MOR",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Mortadella Valbruna",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 8.63,
+        "line_total": 17.26
+      }
+    ],
+    "total": 219.96,
+    "clean": true
+  },
+  "reading": {
+    "kind": "transcription",
+    "source": "file",
+    "text": "x giovedi\ncotto 4 kg\ncrudo 3 kg\nspeck 2 kg\ntaleggio 2 kg\ngorgonzola 2 kg\nmozzarella fiordilatte 3 kg\nmortadella 2 kg"
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

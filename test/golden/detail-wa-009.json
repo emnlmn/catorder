@@ -1,0 +1,33 @@
+{
+  "message": {
+    "id": "wa-009",
+    "customer_id": "deli-mulino",
+    "channel": "whatsapp",
+    "received_at": "2026-10-14T16:05:00+02:00",
+    "sender": "Rina",
+    "text": "ciao marta, a che ora passate domani?",
+    "media": null,
+    "sha256": "4b05c038c06255dea5c8d8782844f43c59a76866ad236b233f2776ca5959470d",
+    "customer": {
+      "id": "deli-mulino",
+      "name": "Salumeria Mulino Vecchio"
+    },
+    "media_url": null
+  },
+  "order": {
+    "id": "cea68e252573472b9f7a2097a975c766",
+    "message_id": "wa-009",
+    "customer_id": "deli-mulino",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "ciao marta, a che ora passate domani?",
+    "delivery_date": null,
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [],
+    "total": 0.0,
+    "clean": true
+  }
+}

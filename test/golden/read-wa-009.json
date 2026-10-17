@@ -1,0 +1,34 @@
+{
+  "order": {
+    "id": "cea68e252573472b9f7a2097a975c766",
+    "message_id": "wa-009",
+    "customer_id": "deli-mulino",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "ciao marta, a che ora passate domani?",
+    "delivery_date": null,
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [],
+    "total": 0.0,
+    "clean": true
+  },
+  "reading": {
+    "kind": "original",
+    "source": "message",
+    "text": "ciao marta, a che ora passate domani?"
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

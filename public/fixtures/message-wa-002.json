@@ -1,0 +1,80 @@
+{
+ "message": {
+  "id": "wa-002",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "whatsapp",
+  "received_at": "2026-10-16T22:05:00",
+  "sender": "Bar Aurora",
+  "text": "buongiorno, mi servono 3 cs di prosecco",
+  "media_url": null
+ },
+ "order": {
+  "id": "o2",
+  "message_id": "wa-002",
+  "customer_id": "c1",
+  "status": "draft",
+  "reading_kind": "original",
+  "reading_source": "message",
+  "reading": "buongiorno, mi servono 3 cs di prosecco",
+  "delivery_date": null,
+  "flags": [
+   {
+    "kind": "delivery_in_past",
+    "level": "order",
+    "severity": "medium",
+    "message": "The delivery date 2026-10-14 is before the message."
+   }
+  ],
+  "clean": false,
+  "created_at": "2026-10-17T07:30:00",
+  "confirmed_at": null,
+  "lines": [
+   {
+    "id": "l2",
+    "pos": 0,
+    "origin": "message",
+    "product_text": "prosecco",
+    "sku": null,
+    "qty": 3,
+    "unit_text": null,
+    "state": "check",
+    "candidates": [
+     {
+      "sku": "VIN-PRO-002",
+      "score": 0.62,
+      "why": "in their last 3 orders",
+      "name": "Prosecco Valdoro brut"
+     },
+     {
+      "sku": "VIN-PRO-003",
+      "score": 0.6,
+      "why": "in their last 2 orders",
+      "name": "Prosecco Valdoro extra dry"
+     }
+    ],
+    "flags": [
+     {
+      "kind": "ambiguous_product",
+      "level": "line",
+      "severity": "medium",
+      "message": "«prosecco» could be Prosecco Valdoro brut, Prosecco Valdoro extra dry."
+     }
+    ],
+    "quote": "3 cs di prosecco",
+    "quote_start": 23,
+    "quote_end": 39,
+    "proposed_sku": null,
+    "proposed_qty": 3,
+    "edited": 0,
+    "name": "prosecco",
+    "pack_label": null,
+    "sell_unit": null,
+    "unit_price": null,
+    "line_total": null
+   }
+  ]
+ }
+}

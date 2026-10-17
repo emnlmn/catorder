@@ -1,0 +1,39 @@
+[
+ {
+  "date": "2026-09-24",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 4
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-PEN-500",
+    "qty": 3
+   },
+   {
+    "sku": "POM-PAS-700",
+    "qty": 2
+   },
+   {
+    "sku": "OLI-EVO-1L",
+    "qty": 6
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   },
+   {
+    "sku": "BEV-COL-33",
+    "qty": 2
+   },
+   {
+    "sku": "CAF-MIS-1K",
+    "qty": 2
+   }
+  ]
+ }
+]

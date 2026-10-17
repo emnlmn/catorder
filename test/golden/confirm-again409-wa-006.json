@@ -1,0 +1,6 @@
+{
+  "status": 409,
+  "body": {
+    "error": "Only a draft order can be confirmed."
+  }
+}

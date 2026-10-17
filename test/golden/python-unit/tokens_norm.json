@@ -1,0 +1,142 @@
+[
+  {
+    "in": "prosecco",
+    "tokens": [
+      "prosecco"
+    ],
+    "norm": "prosecco"
+  },
+  {
+    "in": "quello rosso dell'altra volta",
+    "tokens": [
+      "quello",
+      "rosso",
+      "dell",
+      "altra",
+      "volta"
+    ],
+    "norm": "rosso"
+  },
+  {
+    "in": "rosso",
+    "tokens": [
+      "rosso"
+    ],
+    "norm": "rosso"
+  },
+  {
+    "in": "acqua frizzante",
+    "tokens": [
+      "acqua",
+      "frizzante"
+    ],
+    "norm": "acqua frizzante"
+  },
+  {
+    "in": "acqua naturale 1l",
+    "tokens": [
+      "acqua",
+      "naturale",
+      "1l"
+    ],
+    "norm": "acqua naturale 1l"
+  },
+  {
+    "in": "farina",
+    "tokens": [
+      "farina"
+    ],
+    "norm": "farina"
+  },
+  {
+    "in": "farina 00",
+    "tokens": [
+      "farina",
+      "00"
+    ],
+    "norm": "farina 00"
+  },
+  {
+    "in": "birra artigianale nuova",
+    "tokens": [
+      "birra",
+      "artigianale",
+      "nuova"
+    ],
+    "norm": "birra artigianale nuova"
+  },
+  {
+    "in": "proseco",
+    "tokens": [
+      "proseco"
+    ],
+    "norm": "proseco"
+  },
+  {
+    "in": "caffe",
+    "tokens": [
+      "caffe"
+    ],
+    "norm": "caffe"
+  },
+  {
+    "in": "cola",
+    "tokens": [
+      "cola"
+    ],
+    "norm": "cola"
+  },
+  {
+    "in": "aranciata",
+    "tokens": [
+      "aranciata"
+    ],
+    "norm": "aranciata"
+  },
+  {
+    "in": "bicchierini",
+    "tokens": [
+      "bicchierini"
+    ],
+    "norm": "bicchierini"
+  },
+  {
+    "in": "mozzarella",
+    "tokens": [
+      "mozzarella"
+    ],
+    "norm": "mozzarella"
+  },
+  {
+    "in": "vino bianco",
+    "tokens": [
+      "vino",
+      "bianco"
+    ],
+    "norm": "vino bianco"
+  },
+  {
+    "in": "Caffè 1 kg",
+    "tokens": [
+      "caffe",
+      "1kg"
+    ],
+    "norm": "caffe 1kg"
+  },
+  {
+    "in": "Acqua 1,5 L",
+    "tokens": [
+      "acqua",
+      "1,5l"
+    ],
+    "norm": "acqua 1,5l"
+  },
+  {
+    "in": "75 cl rosso",
+    "tokens": [
+      "75cl",
+      "rosso"
+    ],
+    "norm": "75cl rosso"
+  }
+]

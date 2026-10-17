@@ -1,0 +1,40 @@
+{
+  "message": {
+    "id": "wa-008",
+    "customer_id": "groc-nuovoborgo",
+    "channel": "whatsapp",
+    "received_at": "2026-10-16T08:40:00+02:00",
+    "sender": "Anwar",
+    "text": "buongiorno, sono anwar del nuovo borgo. il solito per lunedi grazie",
+    "media": null,
+    "sha256": "5d0ca49edec8394bfcc1cfa5590031195b05318aa4d529da3ceb4c216d6aec90",
+    "customer": {
+      "id": "groc-nuovoborgo",
+      "name": "Emporio Nuovo Borgo"
+    },
+    "media_url": null
+  },
+  "order": {
+    "id": "58fb25ee54ca4c2f9391cb5a722ccd53",
+    "message_id": "wa-008",
+    "customer_id": "groc-nuovoborgo",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "buongiorno, sono anwar del nuovo borgo. il solito per lunedi grazie",
+    "delivery_date": "2026-10-19",
+    "flags": [
+      {
+        "kind": "no_history",
+        "level": "order",
+        "severity": "medium",
+        "message": "No order history: «the usual» cannot be computed."
+      }
+    ],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [],
+    "total": 0.0,
+    "clean": false
+  }
+}

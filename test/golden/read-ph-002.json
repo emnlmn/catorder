@@ -1,0 +1,283 @@
+{
+  "order": {
+    "id": "c3e66058488d4326a7e433e808665ce0",
+    "message_id": "ph-002",
+    "customer_id": "rist-gelsomino",
+    "status": "draft",
+    "reading_kind": "transcription",
+    "reading_source": "file",
+    "reading": "gelsomino - x lunedi\npelati 3 cs\nspaghetti 4 cs\nfarina [?] 5kg x4\nmozzarella 4 kg\nolio 5lt x2\nacqua nat 5 cs",
+    "delivery_date": "2026-10-19",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:44",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "3443ff669b5d489a89f85ed0bc686337",
+        "order_id": "c3e66058488d4326a7e433e808665ce0",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "pelati",
+        "sku": "POM-PEL-2.5",
+        "qty": 3.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "POM-PEL-2.5",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Pelati Terre Calvani 2,5 kg",
+            "pack_label": "case of 6 × 2.5 kg tins"
+          }
+        ],
+        "flags": [],
+        "quote": "pelati 3 cs",
+        "quote_start": 21,
+        "quote_end": 32,
+        "proposed_sku": "POM-PEL-2.5",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Pelati Terre Calvani 2,5 kg",
+        "pack_label": "case of 6 × 2.5 kg tins",
+        "sell_unit": "case",
+        "unit_price": 17.4,
+        "line_total": 52.2
+      },
+      {
+        "id": "fb9364f7fac04d83b633631f3d369891",
+        "order_id": "c3e66058488d4326a7e433e808665ce0",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "spaghetti",
+        "sku": "PAS-SPA-500",
+        "qty": 4.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "PAS-SPA-500",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Spaghetti n.5 Lombarelli 500g",
+            "pack_label": "case of 24 × 500 g"
+          }
+        ],
+        "flags": [],
+        "quote": "spaghetti 4 cs",
+        "quote_start": 33,
+        "quote_end": 47,
+        "proposed_sku": "PAS-SPA-500",
+        "proposed_qty": 4.0,
+        "edited": 0,
+        "name": "Spaghetti n.5 Lombarelli 500g",
+        "pack_label": "case of 24 × 500 g",
+        "sell_unit": "case",
+        "unit_price": 17.28,
+        "line_total": 69.12
+      },
+      {
+        "id": "0abf00f3b0954c3093704b0016e4d3e6",
+        "order_id": "c3e66058488d4326a7e433e808665ce0",
+        "pos": 2,
+        "origin": "message",
+        "product_text": "farina [?] 5kg",
+        "sku": "FAR-00-5K",
+        "qty": 4.0,
+        "unit_text": null,
+        "state": "check",
+        "candidates": [
+          {
+            "sku": "FAR-00-5K",
+            "score": 1.15,
+            "why": "in their last 6 orders",
+            "name": "Farina 00 Aldarica 5 kg",
+            "pack_label": "sack 5 kg"
+          },
+          {
+            "sku": "FAR-MAN-5K",
+            "score": 0.827,
+            "why": "name match",
+            "name": "Farina Manitoba Aldarica 5 kg",
+            "pack_label": "sack 5 kg"
+          },
+          {
+            "sku": "FAR-00-25K",
+            "score": 0.752,
+            "why": "name match",
+            "name": "Farina 00 Aldarica 25 kg",
+            "pack_label": "sack 25 kg"
+          }
+        ],
+        "flags": [
+          {
+            "kind": "illegible",
+            "level": "line",
+            "severity": "medium",
+            "message": "Part of this line could not be read in the photo."
+          }
+        ],
+        "quote": "farina [?] 5kg x4",
+        "quote_start": 48,
+        "quote_end": 65,
+        "proposed_sku": "FAR-00-5K",
+        "proposed_qty": 4.0,
+        "edited": 0,
+        "name": "Farina 00 Aldarica 5 kg",
+        "pack_label": "sack 5 kg",
+        "sell_unit": "piece",
+        "unit_price": 4.8,
+        "line_total": 19.2
+      },
+      {
+        "id": "5a511a270d9b4cde892e102ca3af1d43",
+        "order_id": "c3e66058488d4326a7e433e808665ce0",
+        "pos": 3,
+        "origin": "message",
+        "product_text": "mozzarella",
+        "sku": "FOR-MOZ-FIO",
+        "qty": 4.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "FOR-MOZ-FIO",
+            "score": 1.15,
+            "why": "in their last 6 orders",
+            "name": "Mozzarella fiordilatte La Casara",
+            "pack_label": "sold by kg"
+          },
+          {
+            "sku": "FOR-MOZ-BUF",
+            "score": 0.769,
+            "why": "name match",
+            "name": "Mozzarella di bufala La Casara",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "mozzarella 4 kg",
+        "quote_start": 66,
+        "quote_end": 81,
+        "proposed_sku": "FOR-MOZ-FIO",
+        "proposed_qty": 4.0,
+        "edited": 0,
+        "name": "Mozzarella fiordilatte La Casara",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 7.2,
+        "line_total": 28.8
+      },
+      {
+        "id": "f6520e9ae9794d3cb5107f1b3858f718",
+        "order_id": "c3e66058488d4326a7e433e808665ce0",
+        "pos": 4,
+        "origin": "message",
+        "product_text": "olio 5lt",
+        "sku": "OLI-EVO-5L",
+        "qty": 2.0,
+        "unit_text": null,
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "OLI-EVO-5L",
+            "score": 1.35,
+            "why": "in their last 6 orders",
+            "name": "Olio extravergine Ca' Marone 5 l",
+            "pack_label": "tin 5 l"
+          },
+          {
+            "sku": "OLI-EVO-1L",
+            "score": 0.6,
+            "why": "name match",
+            "name": "Olio extravergine Ca' Marone 1 l",
+            "pack_label": "bottle 1 l"
+          },
+          {
+            "sku": "DIS-DET-5L",
+            "score": 0.42,
+            "why": "name match",
+            "name": "Detersivo piatti Limonetta 5 l",
+            "pack_label": "tank 5 l"
+          }
+        ],
+        "flags": [],
+        "quote": "olio 5lt x2",
+        "quote_start": 82,
+        "quote_end": 93,
+        "proposed_sku": "OLI-EVO-5L",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Olio extravergine Ca' Marone 5 l",
+        "pack_label": "tin 5 l",
+        "sell_unit": "piece",
+        "unit_price": 41.5,
+        "line_total": 83.0
+      },
+      {
+        "id": "21b4696aa900481093db8ada9448b2ea",
+        "order_id": "c3e66058488d4326a7e433e808665ce0",
+        "pos": 5,
+        "origin": "message",
+        "product_text": "acqua nat",
+        "sku": "ACQ-NAT-1L",
+        "qty": 5.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "ACQ-NAT-1L",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Fonte Brivio naturale 1 l",
+            "pack_label": "case of 12 × 1 l"
+          },
+          {
+            "sku": "ACQ-NAT-50",
+            "score": 0.889,
+            "why": "name match",
+            "name": "Fonte Brivio naturale 50cl",
+            "pack_label": "case of 24 × 50 cl"
+          },
+          {
+            "sku": "ACQ-FRIZ-1L",
+            "score": 0.738,
+            "why": "in their last 6 orders",
+            "name": "Fonte Brivio frizzante 1 l",
+            "pack_label": "case of 12 × 1 l"
+          }
+        ],
+        "flags": [],
+        "quote": "acqua nat 5 cs",
+        "quote_start": 94,
+        "quote_end": 108,
+        "proposed_sku": "ACQ-NAT-1L",
+        "proposed_qty": 5.0,
+        "edited": 0,
+        "name": "Fonte Brivio naturale 1 l",
+        "pack_label": "case of 12 × 1 l",
+        "sell_unit": "case",
+        "unit_price": 5.4,
+        "line_total": 27.0
+      }
+    ],
+    "total": 279.32,
+    "clean": false
+  },
+  "reading": {
+    "kind": "transcription",
+    "source": "file",
+    "text": "gelsomino - x lunedi\npelati 3 cs\nspaghetti 4 cs\nfarina [?] 5kg x4\nmozzarella 4 kg\nolio 5lt x2\nacqua nat 5 cs"
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

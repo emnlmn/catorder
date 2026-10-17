@@ -1,0 +1,222 @@
+[
+  {
+    "id": "wa-010",
+    "customer": {
+      "id": "groc-nuovoborgo",
+      "name": "Emporio Nuovo Borgo"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-18T10:15:00+02:00",
+    "preview": "ok per domani allora: 6 cs di acqua naturale e 3 cs di penne 👍",
+    "order": null
+  },
+  {
+    "id": "wa-006",
+    "customer": {
+      "id": "bar-ponterosso",
+      "name": "Bar Ponte Rosso"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-17T21:10:00+02:00",
+    "preview": "ciao marta il solito per martedi. mi raccomando lo sconto 8% eh 😉",
+    "order": null
+  },
+  {
+    "id": "ph-004",
+    "customer": {
+      "id": "groc-nuovoborgo",
+      "name": "Emporio Nuovo Borgo"
+    },
+    "channel": "photo",
+    "received_at": "2026-10-17T16:00:00+02:00",
+    "preview": "Photo",
+    "order": null
+  },
+  {
+    "id": "vo-004",
+    "customer": {
+      "id": "groc-nuovoborgo",
+      "name": "Emporio Nuovo Borgo"
+    },
+    "channel": "voice",
+    "received_at": "2026-10-17T12:30:00+02:00",
+    "preview": "Voice note",
+    "order": null
+  },
+  {
+    "id": "vo-003",
+    "customer": {
+      "id": "deli-mulino",
+      "name": "Salumeria Mulino Vecchio"
+    },
+    "channel": "voice",
+    "received_at": "2026-10-17T07:05:00+02:00",
+    "preview": "Voice note",
+    "order": null
+  },
+  {
+    "id": "wa-007",
+    "customer": {
+      "id": "deli-mulino",
+      "name": "Salumeria Mulino Vecchio"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-16T18:20:00+02:00",
+    "preview": "ciao marta, 6 bt di olio x sabato. pero l'olio a 7 euro come l'altra volta eh",
+    "order": null
+  },
+  {
+    "id": "em-001",
+    "customer": {
+      "id": "deli-mulino",
+      "name": "Salumeria Mulino Vecchio"
+    },
+    "channel": "email",
+    "received_at": "2026-10-16T17:45:00+02:00",
+    "preview": "Oggetto: ordine sabato buongiorno marta, per sabato mi servono 6 kg di mozzarella fiordila",
+    "order": null
+  },
+  {
+    "id": "ph-002",
+    "customer": {
+      "id": "rist-gelsomino",
+      "name": "Ristorante Il Gelsomino"
+    },
+    "channel": "photo",
+    "received_at": "2026-10-16T10:25:00+02:00",
+    "preview": "Photo",
+    "order": null
+  },
+  {
+    "id": "wa-003",
+    "customer": {
+      "id": "groc-nuovoborgo",
+      "name": "Emporio Nuovo Borgo"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-16T09:02:00+02:00",
+    "preview": "buongiorno, mi manda 4 cs di prosecco e 2 cs di aranciata per lunedi, grazie. anwar",
+    "order": null
+  },
+  {
+    "id": "wa-008",
+    "customer": {
+      "id": "groc-nuovoborgo",
+      "name": "Emporio Nuovo Borgo"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-16T08:40:00+02:00",
+    "preview": "buongiorno, sono anwar del nuovo borgo. il solito per lunedi grazie",
+    "order": null
+  },
+  {
+    "id": "wa-005",
+    "customer": {
+      "id": "rist-gelsomino",
+      "name": "Ristorante Il Gelsomino"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-16T07:50:00+02:00",
+    "preview": "marta x lunedi 60 cs acqua naturale 💧 per la sagra, grazie",
+    "order": null
+  },
+  {
+    "id": "vo-002",
+    "customer": {
+      "id": "bar-ponterosso",
+      "name": "Bar Ponte Rosso"
+    },
+    "channel": "voice",
+    "received_at": "2026-10-16T07:20:00+02:00",
+    "preview": "Voice note",
+    "order": null
+  },
+  {
+    "id": "wa-004",
+    "customer": {
+      "id": "bar-ponterosso",
+      "name": "Bar Ponte Rosso"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-15T19:30:00+02:00",
+    "preview": "ciao marta! mi mandi 2 cs di quella birra artigianale nuova che avete messo? e 3 cs di col",
+    "order": null
+  },
+  {
+    "id": "em-002",
+    "customer": {
+      "id": "rist-gelsomino",
+      "name": "Ristorante Il Gelsomino"
+    },
+    "channel": "email",
+    "received_at": "2026-10-15T15:20:00+02:00",
+    "preview": "Buongiorno Marta, per sabato ordino: 12 bottiglie di Roccafiera Rosso Superiore e 10 botti",
+    "order": null
+  },
+  {
+    "id": "ph-001",
+    "customer": {
+      "id": "bar-ponterosso",
+      "name": "Bar Ponte Rosso"
+    },
+    "channel": "photo",
+    "received_at": "2026-10-15T11:10:00+02:00",
+    "preview": "Photo",
+    "order": null
+  },
+  {
+    "id": "wa-002",
+    "customer": {
+      "id": "rist-gelsomino",
+      "name": "Ristorante Il Gelsomino"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-15T08:15:00+02:00",
+    "preview": "buongiorno marta, il solito per sabato ma niente acqua frizzante stavolta",
+    "order": null
+  },
+  {
+    "id": "vo-001",
+    "customer": {
+      "id": "rist-gelsomino",
+      "name": "Ristorante Il Gelsomino"
+    },
+    "channel": "voice",
+    "received_at": "2026-10-15T06:55:00+02:00",
+    "preview": "Voice note",
+    "order": null
+  },
+  {
+    "id": "wa-001",
+    "customer": {
+      "id": "bar-ponterosso",
+      "name": "Bar Ponte Rosso"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-14T22:41:00+02:00",
+    "preview": "ciao marta, il solito x venerdi + 6 cs di quello rosso dell'altra volta 🙏",
+    "order": null
+  },
+  {
+    "id": "wa-009",
+    "customer": {
+      "id": "deli-mulino",
+      "name": "Salumeria Mulino Vecchio"
+    },
+    "channel": "whatsapp",
+    "received_at": "2026-10-14T16:05:00+02:00",
+    "preview": "ciao marta, a che ora passate domani?",
+    "order": null
+  },
+  {
+    "id": "ph-003",
+    "customer": {
+      "id": "deli-mulino",
+      "name": "Salumeria Mulino Vecchio"
+    },
+    "channel": "photo",
+    "received_at": "2026-10-14T10:40:00+02:00",
+    "preview": "Photo",
+    "order": null
+  }
+]

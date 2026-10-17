@@ -1,0 +1,53 @@
+{
+ "message": {
+  "id": "vo-001",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "voice",
+  "received_at": "2026-10-16T08:12:00",
+  "sender": "Bar Aurora",
+  "text": null,
+  "media_url": "/static/fixtures/vo-001.wav"
+ },
+ "order": {
+  "id": "o5",
+  "message_id": "vo-001",
+  "customer_id": "c1",
+  "status": "draft",
+  "reading_kind": "transcript",
+  "reading_source": "file",
+  "reading": "ciao marta sono Luca del bar, mi servono tre, anzi quattro casse di acqua naturale per giovedi",
+  "delivery_date": "2026-10-22",
+  "flags": [],
+  "clean": true,
+  "created_at": "2026-10-17T07:30:00",
+  "confirmed_at": null,
+  "lines": [
+   {
+    "id": "l10",
+    "pos": 0,
+    "origin": "message",
+    "product_text": "acqua naturale",
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "unit_text": null,
+    "state": "ok",
+    "candidates": [],
+    "flags": [],
+    "quote": "anzi quattro casse di acqua naturale",
+    "quote_start": 46,
+    "quote_end": 82,
+    "proposed_sku": "ACQ-NAT-1L",
+    "proposed_qty": 4,
+    "edited": 0,
+    "name": "Fonte Brivio naturale 1 l",
+    "pack_label": "case of 12 × 1 l",
+    "sell_unit": "case",
+    "unit_price": 6.17,
+    "line_total": 24.68
+   }
+  ]
+ }
+}

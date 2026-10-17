@@ -1,0 +1,46 @@
+# DigitalOcean App Platform: builds the Dockerfile on every push to main.
+# Secrets (MODEL_API_KEY, TWILIO_*) are set in the DO console or with doctl, never here.
+name: catorder
+region: fra
+services:
+  - name: web
+    dockerfile_path: Dockerfile
+    github:
+      repo: emnlmn/catorder
+      branch: main
+      deploy_on_push: true
+    http_port: 7860
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    health_check:
+      http_path: /api/health
+    envs:
+      - key: MODEL_BASE_URL
+        value: https://developer.amd.com.cn/radeon/api/v1
+      - key: MODEL_NAME
+        value: Gemma-4-31B-IT
+      - key: MODEL_VISION
+        value: "1"
+      - key: MODEL_TIMEOUT_S
+        value: "180"
+      - key: MODEL_HARDWARE
+        value: AMD Instinct via AMD Token Factory
+      - key: CATORDER_TODAY
+        value: "2026-10-18"
+      - key: MODEL_API_KEY
+        type: SECRET
+      - key: PUBLIC_URL
+        value: https://catorder.shop
+      - key: TWILIO_ACCOUNT_SID
+        type: SECRET
+      - key: TWILIO_AUTH_TOKEN
+        type: SECRET
+      - key: WHATSAPP_PHONE_MAP
+        type: SECRET
+domains:
+  - domain: catorder.shop
+    type: PRIMARY
+    zone: catorder.shop
+  - domain: www.catorder.shop
+    type: ALIAS
+    zone: catorder.shop

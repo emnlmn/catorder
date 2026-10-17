@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "item",
+  "quote": "6 bt di olio",
+  "product": "olio",
+  "sku": "OLI-EVO-1L",
+  "quantity": "6",
+  "unit": "bt",
+  "op": "set",
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "delivery",
+  "quote": "x sabato",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": "2026-10-17",
+  "status": "observed"
+ },
+ {
+  "kind": "price_request",
+  "quote": "l'olio a 7 euro",
+  "product": "olio",
+  "sku": "OLI-EVO-1L",
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": "7 euro",
+  "status": "observed"
+ }
+]

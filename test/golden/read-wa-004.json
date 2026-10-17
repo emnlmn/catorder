@@ -1,0 +1,98 @@
+{
+  "order": {
+    "id": "d57d5b011b974e5386c5e99a4c87f7b0",
+    "message_id": "wa-004",
+    "customer_id": "bar-ponterosso",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "ciao marta! mi mandi 2 cs di quella birra artigianale nuova che avete messo? e 3 cs di cola",
+    "delivery_date": null,
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "f3dfaff07668430185dd3781cca8c50b",
+        "order_id": "d57d5b011b974e5386c5e99a4c87f7b0",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "birra artigianale nuova",
+        "sku": null,
+        "qty": 2.0,
+        "unit_text": "cs",
+        "state": "flag",
+        "candidates": [],
+        "flags": [
+          {
+            "kind": "unknown_product",
+            "level": "line",
+            "severity": "high",
+            "message": "No product in the catalogue matches «birra artigianale nuova»."
+          }
+        ],
+        "quote": "2 cs di quella birra artigianale nuova che avete messo",
+        "quote_start": 21,
+        "quote_end": 75,
+        "proposed_sku": null,
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": null,
+        "pack_label": null,
+        "sell_unit": null,
+        "unit_price": null,
+        "line_total": null
+      },
+      {
+        "id": "67d82426c9bb47b58047396d653ae11a",
+        "order_id": "d57d5b011b974e5386c5e99a4c87f7b0",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "cola",
+        "sku": "BEV-COL-33",
+        "qty": 3.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "BEV-COL-33",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Cola Zeffiro 33cl",
+            "pack_label": "case of 24 × 33 cl cans"
+          }
+        ],
+        "flags": [],
+        "quote": "3 cs di cola",
+        "quote_start": 79,
+        "quote_end": 91,
+        "proposed_sku": "BEV-COL-33",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Cola Zeffiro 33cl",
+        "pack_label": "case of 24 × 33 cl cans",
+        "sell_unit": "case",
+        "unit_price": 13.68,
+        "line_total": 41.04
+      }
+    ],
+    "total": 41.04,
+    "clean": false
+  },
+  "reading": {
+    "kind": "original",
+    "source": "message",
+    "text": "ciao marta! mi mandi 2 cs di quella birra artigianale nuova che avete messo? e 3 cs di cola"
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

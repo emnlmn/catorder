@@ -1,0 +1,30 @@
+[
+  {
+    "sku": "VIN-PRO-002",
+    "name": "Prosecco Brut Vallecorta 75cl",
+    "aliases": [
+      "prosecco brut",
+      "brut vallecorta",
+      "vallecorta brut"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 34.8
+  },
+  {
+    "sku": "VIN-PRO-003",
+    "name": "Prosecco Extra Dry Vallecorta 75cl",
+    "aliases": [
+      "prosecco extra dry",
+      "extra dry vallecorta",
+      "vallecorta extra dry"
+    ],
+    "category": "wine",
+    "sell_unit": "case",
+    "pack_size": 6,
+    "pack_label": "case of 6 × 75 cl",
+    "list_price": 34.8
+  }
+]

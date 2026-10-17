@@ -1,0 +1,15 @@
+{
+ "id": "deli-mulino",
+ "name": "Salumeria Mulino Vecchio",
+ "kind": "deli",
+ "context": "Salumeria e gastronomia, compra a peso. Ordina il martedì e il venerdì.",
+ "terms": {
+  "discount_pct": 3,
+  "payment_days": 30,
+  "free_delivery_min": 200,
+  "price_overrides": {
+   "OLI-EVO-1L": 7.9,
+   "SAL-COT": 11.9
+  }
+ }
+}

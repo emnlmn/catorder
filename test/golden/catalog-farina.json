@@ -1,0 +1,44 @@
+[
+  {
+    "sku": "FAR-00-5K",
+    "name": "Farina 00 Aldarica 5 kg",
+    "aliases": [
+      "farina",
+      "farina 00",
+      "farina 00 5kg",
+      "00"
+    ],
+    "category": "flour",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "sack 5 kg",
+    "list_price": 4.8
+  },
+  {
+    "sku": "FAR-00-25K",
+    "name": "Farina 00 Aldarica 25 kg",
+    "aliases": [
+      "farina 25 kg",
+      "farina 00 25kg",
+      "sacco farina"
+    ],
+    "category": "flour",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "sack 25 kg",
+    "list_price": 19.5
+  },
+  {
+    "sku": "FAR-MAN-5K",
+    "name": "Farina Manitoba Aldarica 5 kg",
+    "aliases": [
+      "manitoba",
+      "farina manitoba"
+    ],
+    "category": "flour",
+    "sell_unit": "piece",
+    "pack_size": 1,
+    "pack_label": "sack 5 kg",
+    "list_price": 6.4
+  }
+]

@@ -1,0 +1,53 @@
+{
+ "message": {
+  "id": "wa-001",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "whatsapp",
+  "received_at": "2026-10-16T21:40:00",
+  "sender": "Bar Aurora",
+  "text": "ciao marta, 4 cs acqua naturale 1l per domani grazie",
+  "media_url": null
+ },
+ "order": {
+  "id": "o1",
+  "message_id": "wa-001",
+  "customer_id": "c1",
+  "status": "draft",
+  "reading_kind": "original",
+  "reading_source": "message",
+  "reading": "ciao marta, 4 cs acqua naturale 1l per domani grazie",
+  "delivery_date": "2026-10-17",
+  "flags": [],
+  "clean": true,
+  "created_at": "2026-10-17T07:30:00",
+  "confirmed_at": null,
+  "lines": [
+   {
+    "id": "l1",
+    "pos": 0,
+    "origin": "message",
+    "product_text": "acqua naturale 1l",
+    "sku": "ACQ-NAT-1L",
+    "qty": 4,
+    "unit_text": null,
+    "state": "ok",
+    "candidates": [],
+    "flags": [],
+    "quote": "4 cs acqua naturale 1l",
+    "quote_start": 12,
+    "quote_end": 34,
+    "proposed_sku": "ACQ-NAT-1L",
+    "proposed_qty": 4,
+    "edited": 0,
+    "name": "Fonte Brivio naturale 1 l",
+    "pack_label": "case of 12 × 1 l",
+    "sell_unit": "case",
+    "unit_price": 6.17,
+    "line_total": 24.68
+   }
+  ]
+ }
+}

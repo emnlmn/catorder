@@ -1,0 +1,7 @@
+order_id,customer_id,delivery_date,sku,name,qty,sell_unit,unit_price,line_total
+5b44c8f1f69d42d9ae6409200b0f40f2,bar-ponterosso,2026-10-20,ACQ-NAT-1L,Fonte Brivio naturale 1 l,6,case,5.13,30.78
+5b44c8f1f69d42d9ae6409200b0f40f2,bar-ponterosso,2026-10-20,ACQ-FRIZ-1L,Fonte Brivio frizzante 1 l,4,case,5.13,20.52
+5b44c8f1f69d42d9ae6409200b0f40f2,bar-ponterosso,2026-10-20,CAF-MIS-1K,Caffè Ardelia Miscela Bar 1 kg,3,case,79.80,239.40
+5b44c8f1f69d42d9ae6409200b0f40f2,bar-ponterosso,2026-10-20,BEV-COL-33,Cola Zeffiro 33cl,2,case,13.68,27.36
+5b44c8f1f69d42d9ae6409200b0f40f2,bar-ponterosso,2026-10-20,BIR-LAG-33,Tornasco Lager 33cl,2,case,27.36,54.72
+5b44c8f1f69d42d9ae6409200b0f40f2,bar-ponterosso,2026-10-20,DIS-CUP-CAF,Bicchierini caffè 80cc Linea Pulita,1,case,9.31,9.31

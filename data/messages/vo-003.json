@@ -1,0 +1,8 @@
+{
+ "id": "vo-003",
+ "customer_id": "deli-mulino",
+ "channel": "voice",
+ "received_at": "2026-10-17T07:05:00+02:00",
+ "sender": "Rina",
+ "media": "vo-003.mp3"
+}

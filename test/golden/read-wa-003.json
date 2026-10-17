@@ -1,0 +1,113 @@
+{
+  "order": {
+    "id": "8f81f5db05494b2db994c607f16e8cd9",
+    "message_id": "wa-003",
+    "customer_id": "groc-nuovoborgo",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "buongiorno, mi manda 4 cs di prosecco e 2 cs di aranciata per lunedi, grazie. anwar",
+    "delivery_date": "2026-10-19",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "5cd8b9c01bd348f6bc0854ad11c21fbf",
+        "order_id": "8f81f5db05494b2db994c607f16e8cd9",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "prosecco",
+        "sku": null,
+        "qty": 4.0,
+        "unit_text": "cs",
+        "state": "check",
+        "candidates": [
+          {
+            "sku": "VIN-PRO-002",
+            "score": 0.8,
+            "why": "name match",
+            "name": "Prosecco Brut Vallecorta 75cl",
+            "pack_label": "case of 6 × 75 cl"
+          },
+          {
+            "sku": "VIN-PRO-003",
+            "score": 0.694,
+            "why": "name match",
+            "name": "Prosecco Extra Dry Vallecorta 75cl",
+            "pack_label": "case of 6 × 75 cl"
+          }
+        ],
+        "flags": [
+          {
+            "kind": "ambiguous_product",
+            "level": "line",
+            "severity": "medium",
+            "message": "«prosecco» could be Prosecco Brut Vallecorta 75cl or Prosecco Extra Dry Vallecorta 75cl."
+          }
+        ],
+        "quote": "4 cs di prosecco",
+        "quote_start": 21,
+        "quote_end": 37,
+        "proposed_sku": null,
+        "proposed_qty": 4.0,
+        "edited": 0,
+        "name": null,
+        "pack_label": null,
+        "sell_unit": null,
+        "unit_price": null,
+        "line_total": null
+      },
+      {
+        "id": "2ad0ff4b450e41e8be25078b6d6a67f1",
+        "order_id": "8f81f5db05494b2db994c607f16e8cd9",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "aranciata",
+        "sku": "BEV-ARA-20",
+        "qty": 2.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "BEV-ARA-20",
+            "score": 1.1,
+            "why": "name match",
+            "name": "Aranciata Dolcevita 20cl",
+            "pack_label": "case of 24 × 20 cl"
+          }
+        ],
+        "flags": [],
+        "quote": "2 cs di aranciata",
+        "quote_start": 40,
+        "quote_end": 57,
+        "proposed_sku": "BEV-ARA-20",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Aranciata Dolcevita 20cl",
+        "pack_label": "case of 24 × 20 cl",
+        "sell_unit": "case",
+        "unit_price": 15.29,
+        "line_total": 30.58
+      }
+    ],
+    "total": 30.58,
+    "clean": false
+  },
+  "reading": {
+    "kind": "original",
+    "source": "message",
+    "text": "buongiorno, mi manda 4 cs di prosecco e 2 cs di aranciata per lunedi, grazie. anwar"
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

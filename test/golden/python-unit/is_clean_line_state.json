@@ -1,0 +1,51 @@
+[
+  {
+    "flags": [],
+    "state": "ok"
+  },
+  {
+    "flags": [
+      {
+        "kind": "converted",
+        "level": "line",
+        "severity": "info",
+        "message": "12 bt = 2 cases (x)."
+      }
+    ],
+    "state": "ok"
+  },
+  {
+    "flags": [
+      {
+        "kind": "unknown_product",
+        "level": "line",
+        "severity": "high",
+        "message": "No product in the catalogue matches «x»."
+      }
+    ],
+    "state": "flag"
+  },
+  {
+    "flags": [
+      {
+        "kind": "quantity_missing",
+        "level": "line",
+        "severity": "medium",
+        "message": "No quantity for «x»."
+      }
+    ],
+    "state": "check"
+  },
+  {
+    "flags": [
+      {
+        "kind": "pack_mismatch",
+        "level": "line",
+        "severity": "medium",
+        "message": "2 cs of a product sold in kg.",
+        "check": true
+      }
+    ],
+    "state": "check"
+  }
+]

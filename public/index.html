@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CatOrder</title>
+<link rel="icon" href="logo.png">
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<aside class="side">
+  <button id="home" class="home" type="button" title="Back to the start">
+    <img class="logo" src="logo.png" alt="">
+    <span class="brand toon">CatOrder</span>
+  </button>
+  <nav class="nav" aria-label="Sections">
+    <button id="inboxBtn" class="navi on" type="button" aria-expanded="false" aria-controls="inbox"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4M6 5h12l2 8v6H4v-6z"/></svg><span>Inbox</span><span id="inboxCount" class="count"></span></button>
+    <a class="navi" href="customers.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M21 19v-1a4 4 0 0 0-3-3.9M15 4.1a3.5 3.5 0 0 1 0 6.8"/></svg><span>Customers</span></a>
+    <a class="navi" href="orders.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/></svg><span>Orders</span></a>
+    <a class="navi" href="forecast.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 16l4-5 4 3 6-8"/></svg><span>Forecast</span></a>
+    <a class="navi" href="catalog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg><span>Catalog</span></a>
+  </nav>
+  <div class="inbox-wrap"><div id="inbox" class="inbox" role="region" aria-label="Messages" hidden></div></div>
+  <span id="model" class="model"><i class="eye" aria-hidden="true"></i><span id="modelText"></span></span>
+</aside>
+<main id="screen"></main>
+<div id="band" class="band" role="status" aria-live="polite" tabindex="-1" hidden></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>

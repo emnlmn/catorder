@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "usual",
+  "quote": "il solito",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "delivery",
+  "quote": "x venerdi",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": "2026-10-16",
+  "status": "observed"
+ },
+ {
+  "kind": "item",
+  "quote": "6 cs di quello rosso dell'altra volta",
+  "product": "quello rosso dell'altra volta",
+  "sku": null,
+  "quantity": "6",
+  "unit": "cs",
+  "op": "add",
+  "value": null,
+  "status": "observed"
+ }
+]

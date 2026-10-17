@@ -1,0 +1,106 @@
+{
+  "order": {
+    "id": "3bbb5d4d7f36434594ce1ed8d49f591b",
+    "message_id": "vo-001",
+    "customer_id": "rist-gelsomino",
+    "status": "draft",
+    "reading_kind": "transcript",
+    "reading_source": "file",
+    "reading": "Marta buongiorno, sono Davide del Gelsomino. Per domani mi servono tre, anzi quattro casse di pelati e due chili di grana. Grazie, a domani.",
+    "delivery_date": "2026-10-16",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "0c41b7913c8d44528ab91a6de8ff0aa9",
+        "order_id": "3bbb5d4d7f36434594ce1ed8d49f591b",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "pelati",
+        "sku": "POM-PEL-2.5",
+        "qty": 4.0,
+        "unit_text": "casse",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "POM-PEL-2.5",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Pelati Terre Calvani 2,5 kg",
+            "pack_label": "case of 6 × 2.5 kg tins"
+          }
+        ],
+        "flags": [],
+        "quote": "tre, anzi quattro casse di pelati",
+        "quote_start": 67,
+        "quote_end": 100,
+        "proposed_sku": "POM-PEL-2.5",
+        "proposed_qty": 4.0,
+        "edited": 0,
+        "name": "Pelati Terre Calvani 2,5 kg",
+        "pack_label": "case of 6 × 2.5 kg tins",
+        "sell_unit": "case",
+        "unit_price": 17.4,
+        "line_total": 69.6
+      },
+      {
+        "id": "727d252764b542fb83b1da16b5b61734",
+        "order_id": "3bbb5d4d7f36434594ce1ed8d49f591b",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "grana",
+        "sku": "FOR-GRA-24",
+        "qty": 2.0,
+        "unit_text": "chili",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "FOR-GRA-24",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Grana Vallesella 24 mesi",
+            "pack_label": "wheel portions, sold by kg"
+          },
+          {
+            "sku": "CAF-GRA-1K",
+            "score": 0.8,
+            "why": "name match",
+            "name": "Caffè Ardelia Gran Crema in grani 1 kg",
+            "pack_label": "case of 6 × 1 kg bags"
+          }
+        ],
+        "flags": [],
+        "quote": "due chili di grana",
+        "quote_start": 103,
+        "quote_end": 121,
+        "proposed_sku": "FOR-GRA-24",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Grana Vallesella 24 mesi",
+        "pack_label": "wheel portions, sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 16.8,
+        "line_total": 33.6
+      }
+    ],
+    "total": 103.2,
+    "clean": true
+  },
+  "reading": {
+    "kind": "transcript",
+    "source": "file",
+    "text": "Marta buongiorno, sono Davide del Gelsomino. Per domani mi servono tre, anzi quattro casse di pelati e due chili di grana. Grazie, a domani."
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

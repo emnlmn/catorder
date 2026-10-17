@@ -1,0 +1,37 @@
+[
+ {
+  "sku": "VIN-ROS-007",
+  "name": "Rosso Colline 75cl",
+  "pack_label": "case of 6 × 75 cl",
+  "sell_unit": "case",
+  "list_price": 42
+ },
+ {
+  "sku": "VIN-PRO-002",
+  "name": "Prosecco Valdoro brut",
+  "pack_label": "case of 6 × 75 cl",
+  "sell_unit": "case",
+  "list_price": 39
+ },
+ {
+  "sku": "VIN-PRO-003",
+  "name": "Prosecco Valdoro extra dry",
+  "pack_label": "case of 6 × 75 cl",
+  "sell_unit": "case",
+  "list_price": 39
+ },
+ {
+  "sku": "ACQ-NAT-1L",
+  "name": "Fonte Brivio naturale 1 l",
+  "pack_label": "case of 12 × 1 l",
+  "sell_unit": "case",
+  "list_price": 6.5
+ },
+ {
+  "sku": "ACQ-FRIZ-1L",
+  "name": "Fonte Brivio frizzante 1 l",
+  "pack_label": "case of 12 × 1 l",
+  "sell_unit": "case",
+  "list_price": 6.5
+ }
+]

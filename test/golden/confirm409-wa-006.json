@@ -1,0 +1,9 @@
+{
+  "status": 409,
+  "body": {
+    "error": "The order cannot be confirmed yet.",
+    "reasons": [
+      "Flag not acknowledged: discount_beyond_terms."
+    ]
+  }
+}

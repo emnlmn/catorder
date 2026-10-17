@@ -1,0 +1,314 @@
+{
+  "message": {
+    "id": "ph-001",
+    "customer_id": "bar-ponterosso",
+    "channel": "photo",
+    "received_at": "2026-10-15T11:10:00+02:00",
+    "sender": "Giulia",
+    "text": null,
+    "media": "ph-001.jpg",
+    "sha256": "25e4e33f277bbf1c3188f34ec7f5c2bafdb20501c97b548d0fd7d2b63de11cc9",
+    "customer": {
+      "id": "bar-ponterosso",
+      "name": "Bar Ponte Rosso"
+    },
+    "media_url": "/media/ph-001.jpg"
+  },
+  "order": {
+    "id": "23397ed1a4d64e20a58f1eaf4182ae6c",
+    "message_id": "ph-001",
+    "customer_id": "bar-ponterosso",
+    "status": "draft",
+    "reading_kind": "transcription",
+    "reading_source": "file",
+    "reading": "x lunedi\ncaffe 4 cs\nacqua nat 6 cs\nacqua friz 4 cs\ncola 3 cs\nlager 2 cs\ntovaglioli 33 2 cs\nbicchierini 1 cs",
+    "delivery_date": "2026-10-19",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:44",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "2165f9c1a3294bb9bc7c246bcba8c598",
+        "order_id": "23397ed1a4d64e20a58f1eaf4182ae6c",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "caffe",
+        "sku": "CAF-MIS-1K",
+        "qty": 4.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "CAF-MIS-1K",
+            "score": 1.15,
+            "why": "in their last 6 orders",
+            "name": "Caffè Ardelia Miscela Bar 1 kg",
+            "pack_label": "case of 6 × 1 kg bags"
+          },
+          {
+            "sku": "DIS-CUP-CAF",
+            "score": 0.877,
+            "why": "in their last 3 orders",
+            "name": "Bicchierini caffè 80cc Linea Pulita",
+            "pack_label": "case of 10 sleeves × 100"
+          },
+          {
+            "sku": "CAF-DEC-500",
+            "score": 0.727,
+            "why": "name match",
+            "name": "Caffè Ardelia Decaffeinato 500g",
+            "pack_label": "case of 6 × 500 g"
+          }
+        ],
+        "flags": [],
+        "quote": "caffe 4 cs",
+        "quote_start": 9,
+        "quote_end": 19,
+        "proposed_sku": "CAF-MIS-1K",
+        "proposed_qty": 4.0,
+        "edited": 0,
+        "name": "Caffè Ardelia Miscela Bar 1 kg",
+        "pack_label": "case of 6 × 1 kg bags",
+        "sell_unit": "case",
+        "unit_price": 79.8,
+        "line_total": 319.2
+      },
+      {
+        "id": "1672ff5bad5e46b5a0feab756b621494",
+        "order_id": "23397ed1a4d64e20a58f1eaf4182ae6c",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "acqua nat",
+        "sku": "ACQ-NAT-1L",
+        "qty": 6.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "ACQ-NAT-1L",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Fonte Brivio naturale 1 l",
+            "pack_label": "case of 12 × 1 l"
+          },
+          {
+            "sku": "ACQ-NAT-50",
+            "score": 0.889,
+            "why": "name match",
+            "name": "Fonte Brivio naturale 50cl",
+            "pack_label": "case of 24 × 50 cl"
+          },
+          {
+            "sku": "ACQ-FRIZ-1L",
+            "score": 0.738,
+            "why": "in their last 6 orders",
+            "name": "Fonte Brivio frizzante 1 l",
+            "pack_label": "case of 12 × 1 l"
+          }
+        ],
+        "flags": [],
+        "quote": "acqua nat 6 cs",
+        "quote_start": 20,
+        "quote_end": 34,
+        "proposed_sku": "ACQ-NAT-1L",
+        "proposed_qty": 6.0,
+        "edited": 0,
+        "name": "Fonte Brivio naturale 1 l",
+        "pack_label": "case of 12 × 1 l",
+        "sell_unit": "case",
+        "unit_price": 5.13,
+        "line_total": 30.78
+      },
+      {
+        "id": "11fe1c26741a4ea8bbc2f14f9254357e",
+        "order_id": "23397ed1a4d64e20a58f1eaf4182ae6c",
+        "pos": 2,
+        "origin": "message",
+        "product_text": "acqua friz",
+        "sku": "ACQ-FRIZ-1L",
+        "qty": 4.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "ACQ-FRIZ-1L",
+            "score": 1.35,
+            "why": "in their last 6 orders",
+            "name": "Fonte Brivio frizzante 1 l",
+            "pack_label": "case of 12 × 1 l"
+          },
+          {
+            "sku": "ACQ-FRIZ-50",
+            "score": 1.0,
+            "why": "name match",
+            "name": "Fonte Brivio frizzante 50cl",
+            "pack_label": "case of 24 × 50 cl"
+          },
+          {
+            "sku": "ACQ-NAT-1L",
+            "score": 0.538,
+            "why": "in their last 6 orders",
+            "name": "Fonte Brivio naturale 1 l",
+            "pack_label": "case of 12 × 1 l"
+          }
+        ],
+        "flags": [],
+        "quote": "acqua friz 4 cs",
+        "quote_start": 35,
+        "quote_end": 50,
+        "proposed_sku": "ACQ-FRIZ-1L",
+        "proposed_qty": 4.0,
+        "edited": 0,
+        "name": "Fonte Brivio frizzante 1 l",
+        "pack_label": "case of 12 × 1 l",
+        "sell_unit": "case",
+        "unit_price": 5.13,
+        "line_total": 20.52
+      },
+      {
+        "id": "c02646c28e244d82a1647fa50deee6f9",
+        "order_id": "23397ed1a4d64e20a58f1eaf4182ae6c",
+        "pos": 3,
+        "origin": "message",
+        "product_text": "cola",
+        "sku": "BEV-COL-33",
+        "qty": 3.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "BEV-COL-33",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Cola Zeffiro 33cl",
+            "pack_label": "case of 24 × 33 cl cans"
+          }
+        ],
+        "flags": [],
+        "quote": "cola 3 cs",
+        "quote_start": 51,
+        "quote_end": 60,
+        "proposed_sku": "BEV-COL-33",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Cola Zeffiro 33cl",
+        "pack_label": "case of 24 × 33 cl cans",
+        "sell_unit": "case",
+        "unit_price": 13.68,
+        "line_total": 41.04
+      },
+      {
+        "id": "0d5240da00be4281a8512744dfb6c1be",
+        "order_id": "23397ed1a4d64e20a58f1eaf4182ae6c",
+        "pos": 4,
+        "origin": "message",
+        "product_text": "lager",
+        "sku": "BIR-LAG-33",
+        "qty": 2.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "BIR-LAG-33",
+            "score": 1.25,
+            "why": "in their last 5 orders",
+            "name": "Tornasco Lager 33cl",
+            "pack_label": "case of 24 × 33 cl"
+          }
+        ],
+        "flags": [],
+        "quote": "lager 2 cs",
+        "quote_start": 61,
+        "quote_end": 71,
+        "proposed_sku": "BIR-LAG-33",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Tornasco Lager 33cl",
+        "pack_label": "case of 24 × 33 cl",
+        "sell_unit": "case",
+        "unit_price": 27.36,
+        "line_total": 54.72
+      },
+      {
+        "id": "ad74be276314422e906a9bac3b2553c5",
+        "order_id": "23397ed1a4d64e20a58f1eaf4182ae6c",
+        "pos": 5,
+        "origin": "message",
+        "product_text": "tovaglioli 33",
+        "sku": "DIS-TOV-33",
+        "qty": 2.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "DIS-TOV-33",
+            "score": 1.15,
+            "why": "in 1 of their last orders",
+            "name": "Tovaglioli 33x33 Candida",
+            "pack_label": "case of 20 packs × 100"
+          },
+          {
+            "sku": "DIS-TOV-40",
+            "score": 0.846,
+            "why": "name match",
+            "name": "Tovaglioli 40x40 2 veli Candida",
+            "pack_label": "case of 20 packs × 100"
+          }
+        ],
+        "flags": [],
+        "quote": "tovaglioli 33 2 cs",
+        "quote_start": 72,
+        "quote_end": 90,
+        "proposed_sku": "DIS-TOV-33",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Tovaglioli 33x33 Candida",
+        "pack_label": "case of 20 packs × 100",
+        "sell_unit": "case",
+        "unit_price": 17.95,
+        "line_total": 35.9
+      },
+      {
+        "id": "c4db6837b7f7409a8d5a4c753b6a8395",
+        "order_id": "23397ed1a4d64e20a58f1eaf4182ae6c",
+        "pos": 6,
+        "origin": "message",
+        "product_text": "bicchierini",
+        "sku": "DIS-CUP-CAF",
+        "qty": 1.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "DIS-CUP-CAF",
+            "score": 1.25,
+            "why": "in their last 3 orders",
+            "name": "Bicchierini caffè 80cc Linea Pulita",
+            "pack_label": "case of 10 sleeves × 100"
+          },
+          {
+            "sku": "DIS-BIC-200",
+            "score": 0.99,
+            "why": "name match",
+            "name": "Bicchieri plastica 200cc Linea Pulita",
+            "pack_label": "case of 20 sleeves × 50"
+          }
+        ],
+        "flags": [],
+        "quote": "bicchierini 1 cs",
+        "quote_start": 91,
+        "quote_end": 107,
+        "proposed_sku": "DIS-CUP-CAF",
+        "proposed_qty": 1.0,
+        "edited": 0,
+        "name": "Bicchierini caffè 80cc Linea Pulita",
+        "pack_label": "case of 10 sleeves × 100",
+        "sell_unit": "case",
+        "unit_price": 9.31,
+        "line_total": 9.31
+      }
+    ],
+    "total": 511.47,
+    "clean": true
+  }
+}

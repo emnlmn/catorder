@@ -1,0 +1,378 @@
+{
+  "customer": {
+    "id": "rist-gelsomino",
+    "name": "Ristorante Il Gelsomino",
+    "kind": "restaurant",
+    "context": "Ristorante di cucina del territorio, menu stagionale. Ordina il giovedì per il fine settimana."
+  },
+  "terms": {
+    "discount_pct": 0,
+    "payment_days": 60,
+    "free_delivery_min": 400,
+    "price_overrides": {}
+  },
+  "usual": [
+    {
+      "sku": "ACQ-NAT-1L",
+      "name": "Fonte Brivio naturale 1 l",
+      "qty": 5.0
+    },
+    {
+      "sku": "ACQ-FRIZ-1L",
+      "name": "Fonte Brivio frizzante 1 l",
+      "qty": 3.0
+    },
+    {
+      "sku": "PAS-SPA-500",
+      "name": "Spaghetti n.5 Lombarelli 500g",
+      "qty": 4.0
+    },
+    {
+      "sku": "POM-PEL-2.5",
+      "name": "Pelati Terre Calvani 2,5 kg",
+      "qty": 3.0
+    },
+    {
+      "sku": "OLI-EVO-5L",
+      "name": "Olio extravergine Ca' Marone 5 l",
+      "qty": 2.0
+    },
+    {
+      "sku": "FAR-00-5K",
+      "name": "Farina 00 Aldarica 5 kg",
+      "qty": 4.0
+    },
+    {
+      "sku": "FOR-MOZ-FIO",
+      "name": "Mozzarella fiordilatte La Casara",
+      "qty": 4.0
+    },
+    {
+      "sku": "FOR-GRA-24",
+      "name": "Grana Vallesella 24 mesi",
+      "qty": 3.0
+    },
+    {
+      "sku": "VIN-ROS-009",
+      "name": "Barbera Cascina Orsola 75cl",
+      "qty": 2.0
+    }
+  ],
+  "recent_orders": [
+    {
+      "date": "2026-10-08",
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 5.0,
+          "name": "Fonte Brivio naturale 1 l"
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 3.0,
+          "name": "Fonte Brivio frizzante 1 l"
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 4.0,
+          "name": "Spaghetti n.5 Lombarelli 500g"
+        },
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 3.0,
+          "name": "Pelati Terre Calvani 2,5 kg"
+        },
+        {
+          "sku": "OLI-EVO-5L",
+          "qty": 2.0,
+          "name": "Olio extravergine Ca' Marone 5 l"
+        },
+        {
+          "sku": "FAR-00-5K",
+          "qty": 4.0,
+          "name": "Farina 00 Aldarica 5 kg"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 4.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 3.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "VIN-ROS-009",
+          "qty": 2.0,
+          "name": "Barbera Cascina Orsola 75cl"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 5.0,
+          "name": "Fonte Brivio naturale 1 l"
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 3.0,
+          "name": "Fonte Brivio frizzante 1 l"
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 4.0,
+          "name": "Spaghetti n.5 Lombarelli 500g"
+        },
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 3.0,
+          "name": "Pelati Terre Calvani 2,5 kg"
+        },
+        {
+          "sku": "OLI-EVO-5L",
+          "qty": 2.0,
+          "name": "Olio extravergine Ca' Marone 5 l"
+        },
+        {
+          "sku": "FAR-00-5K",
+          "qty": 4.0,
+          "name": "Farina 00 Aldarica 5 kg"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 4.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 3.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "VIN-ROS-009",
+          "qty": 3.0,
+          "name": "Barbera Cascina Orsola 75cl"
+        },
+        {
+          "sku": "PAS-RIG-500",
+          "qty": 2.0,
+          "name": "Rigatoni Lombarelli 500g"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 5.0,
+          "name": "Fonte Brivio naturale 1 l"
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 2.0,
+          "name": "Fonte Brivio frizzante 1 l"
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 4.0,
+          "name": "Spaghetti n.5 Lombarelli 500g"
+        },
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 4.0,
+          "name": "Pelati Terre Calvani 2,5 kg"
+        },
+        {
+          "sku": "OLI-EVO-5L",
+          "qty": 2.0,
+          "name": "Olio extravergine Ca' Marone 5 l"
+        },
+        {
+          "sku": "FAR-00-5K",
+          "qty": 4.0,
+          "name": "Farina 00 Aldarica 5 kg"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 4.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 3.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "VIN-ROS-009",
+          "qty": 2.0,
+          "name": "Barbera Cascina Orsola 75cl"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 5.0,
+          "name": "Fonte Brivio naturale 1 l"
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 3.0,
+          "name": "Fonte Brivio frizzante 1 l"
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 4.0,
+          "name": "Spaghetti n.5 Lombarelli 500g"
+        },
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 3.0,
+          "name": "Pelati Terre Calvani 2,5 kg"
+        },
+        {
+          "sku": "OLI-EVO-5L",
+          "qty": 2.0,
+          "name": "Olio extravergine Ca' Marone 5 l"
+        },
+        {
+          "sku": "FAR-00-5K",
+          "qty": 4.0,
+          "name": "Farina 00 Aldarica 5 kg"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 4.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 3.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "VIN-ROS-009",
+          "qty": 2.0,
+          "name": "Barbera Cascina Orsola 75cl"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 5.0,
+          "name": "Fonte Brivio naturale 1 l"
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 3.0,
+          "name": "Fonte Brivio frizzante 1 l"
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 4.0,
+          "name": "Spaghetti n.5 Lombarelli 500g"
+        },
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 3.0,
+          "name": "Pelati Terre Calvani 2,5 kg"
+        },
+        {
+          "sku": "OLI-EVO-5L",
+          "qty": 2.0,
+          "name": "Olio extravergine Ca' Marone 5 l"
+        },
+        {
+          "sku": "FAR-00-5K",
+          "qty": 4.0,
+          "name": "Farina 00 Aldarica 5 kg"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 5.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 3.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "VIN-BIA-003",
+          "qty": 3.0,
+          "name": "Bianco Fiorito Vallecorta 75cl"
+        },
+        {
+          "sku": "BIR-LAG-33",
+          "qty": 2.0,
+          "name": "Tornasco Lager 33cl"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "lines": [
+        {
+          "sku": "ACQ-NAT-1L",
+          "qty": 5.0,
+          "name": "Fonte Brivio naturale 1 l"
+        },
+        {
+          "sku": "ACQ-FRIZ-1L",
+          "qty": 3.0,
+          "name": "Fonte Brivio frizzante 1 l"
+        },
+        {
+          "sku": "PAS-SPA-500",
+          "qty": 4.0,
+          "name": "Spaghetti n.5 Lombarelli 500g"
+        },
+        {
+          "sku": "POM-PEL-2.5",
+          "qty": 3.0,
+          "name": "Pelati Terre Calvani 2,5 kg"
+        },
+        {
+          "sku": "OLI-EVO-5L",
+          "qty": 2.0,
+          "name": "Olio extravergine Ca' Marone 5 l"
+        },
+        {
+          "sku": "FAR-00-5K",
+          "qty": 4.0,
+          "name": "Farina 00 Aldarica 5 kg"
+        },
+        {
+          "sku": "FOR-MOZ-FIO",
+          "qty": 4.0,
+          "name": "Mozzarella fiordilatte La Casara"
+        },
+        {
+          "sku": "FOR-GRA-24",
+          "qty": 3.0,
+          "name": "Grana Vallesella 24 mesi"
+        },
+        {
+          "sku": "VIN-BIA-003",
+          "qty": 3.0,
+          "name": "Bianco Fiorito Vallecorta 75cl"
+        },
+        {
+          "sku": "BIR-LAG-33",
+          "qty": 2.0,
+          "name": "Tornasco Lager 33cl"
+        }
+      ]
+    }
+  ]
+}

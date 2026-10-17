@@ -1,0 +1,49 @@
+{
+  "bar-ponterosso": [
+    "ACQ-NAT-1L",
+    "ACQ-FRIZ-1L",
+    "CAF-MIS-1K",
+    "BEV-COL-33",
+    "BIR-LAG-33",
+    "VIN-ROS-005",
+    "DIS-CUP-CAF",
+    "DIS-TOV-33",
+    "BEV-ARA-20"
+  ],
+  "deli-mulino": [
+    "SAL-COT",
+    "SAL-PRC",
+    "SAL-SPE",
+    "FOR-GRA-24",
+    "FOR-TAL",
+    "FOR-MOZ-FIO",
+    "FOR-GOR-DOL",
+    "OLI-EVO-1L",
+    "SAL-MOR",
+    "FOR-PRO-DOL"
+  ],
+  "groc-nuovoborgo": [
+    "ACQ-NAT-1L",
+    "PAS-SPA-500",
+    "PAS-PEN-500",
+    "POM-PAS-700",
+    "OLI-EVO-1L",
+    "BIR-LAG-33",
+    "BEV-COL-33",
+    "CAF-MIS-1K"
+  ],
+  "rist-gelsomino": [
+    "ACQ-NAT-1L",
+    "ACQ-FRIZ-1L",
+    "PAS-SPA-500",
+    "POM-PEL-2.5",
+    "OLI-EVO-5L",
+    "FAR-00-5K",
+    "FOR-MOZ-FIO",
+    "FOR-GRA-24",
+    "VIN-ROS-009",
+    "PAS-RIG-500",
+    "VIN-BIA-003",
+    "BIR-LAG-33"
+  ]
+}

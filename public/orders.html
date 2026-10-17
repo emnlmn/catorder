@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CatOrder · Orders</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="app.css">
+<style>
+.ref{align-self:stretch;width:100%;max-width:900px;padding:26px 40px 40px;font-size:15px}
+.ref h1{margin:0 0 6px;font-size:29px;line-height:1.1}
+.ref .lede{margin:0 0 18px;color:var(--muted)}
+.cust{padding:18px 0;border-top:1px solid var(--line)}
+.cust h2{margin:0;font-size:14px}
+.cust .kind{color:var(--muted);text-transform:capitalize}
+.terms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 24px;margin:14px 0 0}
+.terms div{display:flex;flex-direction:column}
+.terms dt{font-size:14px;color:var(--muted)}
+.terms dd{margin:0;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.cust-f{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin-top:14px;font-size:15px;color:var(--muted)}
+.cust-f a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--eye);text-decoration-thickness:3px;text-underline-offset:4px}
+.cust p{margin:8px 0 0}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:9px 10px;text-align:left;vertical-align:top;border-bottom:1px solid color-mix(in srgb,var(--ink) 15%,var(--paper))}
+th{border-bottom:1px solid var(--line);font-weight:600}
+td.sku{color:var(--muted);white-space:nowrap}
+.n{text-align:right;white-space:nowrap}
+@media (max-width:700px){.ref{padding:18px 16px 32px}.ref h1{font-size:22px}.terms{grid-template-columns:1fr 1fr}}
+
+.sync{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:0 0 4px}
+.sync .live{display:flex;align-items:center;gap:8px;font-weight:600}
+.dot{flex:none;width:10px;height:10px;border-radius:50%;background:#A0E249;box-shadow:inset 0 0 0 2px var(--ink);animation:pulse 2.4s ease-in-out infinite}
+.sync .last{color:var(--muted);font-variant-numeric:tabular-nums}
+.sync button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.sync button:hover{background:color-mix(in srgb,var(--ink) 8%,#fff)}
+.sync button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sync button.busy svg{animation:spin .8s linear infinite}
+.sync button:disabled{cursor:default}
+@keyframes spin{to{transform:rotate(360deg)}}
+.src{margin:0 0 22px;color:var(--muted);font-size:15px}
+.src .ok{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chips button{min-height:38px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:15px;font-weight:600}
+.chips button:hover{background:color-mix(in srgb,var(--ink) 8%,var(--paper))}
+.chips button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.ord{border-top:1px solid color-mix(in srgb,var(--ink) 15%,var(--paper))}
+.ord:last-child{border-bottom:1px solid color-mix(in srgb,var(--ink) 15%,var(--paper))}
+.ord summary{display:grid;grid-template-columns:20px 120px minmax(0,1fr) 90px 100px;align-items:center;gap:14px;min-height:52px;padding:6px 8px;cursor:pointer;list-style:none;font-variant-numeric:tabular-nums}
+.ord summary::-webkit-details-marker{display:none}
+.ord summary:hover{background:color-mix(in srgb,var(--ink) 5%,var(--paper))}
+.ord summary svg{width:16px;height:16px;transition:transform .15s ease-out}
+.ord[open] summary svg{transform:rotate(90deg)}
+.ord time{color:var(--muted)}
+.ord .who{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ord .cnt{color:var(--muted)}
+.ord .tot{text-align:right;font-weight:600}
+.ord table{margin:0 0 14px;font-size:15px}
+.ord td,.ord th{padding:6px 8px}
+.hint{margin:10px 0 0;font-size:14px;color:var(--muted)}
+@media (max-width:700px){.ord summary{grid-template-columns:16px minmax(0,1fr) auto;grid-template-areas:"i who tot" "i d cnt";gap:0 10px}.ord summary svg{grid-area:i}.ord .who{grid-area:who}.ord time{grid-area:d}.ord .cnt{grid-area:cnt;text-align:right}.ord .tot{grid-area:tot}}
+</style>
+
+</head>
+<body>
+<aside class="side">
+  <a class="home" href="./" title="Back to the start" style="text-decoration:none;color:inherit">
+    <img class="logo" src="logo.png" alt="">
+    <span class="brand toon">CatOrder</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a class="navi" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4M6 5h12l2 8v6H4v-6z"/></svg><span>Inbox</span></a>
+    <a class="navi" href="customers.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M21 19v-1a4 4 0 0 0-3-3.9M15 4.1a3.5 3.5 0 0 1 0 6.8"/></svg><span>Customers</span></a>
+    <a class="navi on" href="orders.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/></svg><span>Orders</span></a>
+    <a class="navi" href="forecast.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 16l4-5 4 3 6-8"/></svg><span>Forecast</span></a>
+    <a class="navi" href="catalog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg><span>Catalog</span></a>
+  </nav>
+</aside>
+<main class="ref">
+  <h1 class="toon">Orders</h1>
+  <p class="lede">Past orders, read from your ERP. When a message says “il solito”, CatOrder works it out from this history.</p>
+  <div class="sync">
+    <span class="live"><span class="dot"></span>Synced with your ERP · live</span>
+    <span class="last" id="last">Last sync: just now</span>
+    <button id="syncBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg><span id="syncTxt">Sync now</span></button>
+  </div>
+  <p class="src">Source: ERP · read-only <span class="ok" id="note"></span></p>
+  <div class="chips" id="chips" role="group" aria-label="Customer"></div>
+  <div id="out">Loading…</div>
+</main>
+<script>
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const eur = (n) => '€' + Number(n).toFixed(2);
+let at = Date.now();
+const ago = () => { const m = Math.floor((Date.now() - at) / 60000); return m < 1 ? 'just now' : m + ' min ago'; };
+const tick = () => { document.getElementById('last').textContent = 'Last sync: ' + ago(); };
+setInterval(tick, 15000);
+const day = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const CHEV = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+let all = [], pick = new URLSearchParams(location.search).get('c') || '';
+const value = (o) => o.lines.reduce((s, l) => s + l.qty * l.list_price, 0);
+const draw = () => {
+  const names = [...new Map(all.map((o) => [o.customer.id, o.customer.name]))];
+  document.getElementById('chips').innerHTML = [['', 'All customers'], ...names].map(([id, n]) =>
+    `<button type="button" data-c="${esc(id)}" aria-pressed="${id === pick}">${esc(n)}</button>`).join('');
+  const os = all.filter((o) => !pick || o.customer.id === pick);
+  window.count = all.length;
+  document.getElementById('out').innerHTML = os.length ? os.map((o) => `<details class="ord"><summary>${CHEV}<time>${esc(day(o.date))}</time><span class="who">${esc(o.customer.name)}</span><span class="cnt">${o.lines.length} ${o.lines.length === 1 ? "line" : "lines"}</span><span class="tot">${eur(value(o))}</span></summary>
+<div class="tbl"><table><tr><th class="n">Qty</th><th>Product</th><th>SKU</th><th class="n">List price</th><th class="n">Total</th></tr>${o.lines.map((l) => `<tr><td class="n">${l.qty}</td><td>${esc(l.name)}</td><td class="sku">${esc(l.sku)}</td><td class="n">${eur(l.list_price)}</td><td class="n">${eur(l.qty * l.list_price)}</td></tr>`).join('')}</table></div></details>`).join('')
+    + '<p class="hint">Totals at list price, before the customer\'s discount.</p>' : '<p>No orders for this customer yet.</p>';
+};
+document.getElementById('chips').onclick = (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  pick = b.dataset.c; history.replaceState(null, '', pick ? '?c=' + encodeURIComponent(pick) : location.pathname); draw();
+};
+const load = () => fetch('/api/history').then((r) => r.json()).then((d) => { all = d; draw(); });
+load().catch(() => { document.getElementById('out').textContent = 'Could not load the data. Reload the page.'; });
+document.getElementById('syncBtn').onclick = async (e) => {
+  const b = e.currentTarget, t = document.getElementById('syncTxt');
+  b.disabled = true; b.classList.add('busy'); t.textContent = 'Syncing…'; document.getElementById('note').textContent = '';
+  try { await Promise.all([load(), new Promise((r) => setTimeout(r, 1200))]); at = Date.now(); tick();
+    document.getElementById('note').textContent = '· ' + window.count + ' orders · up to date'; } catch (_) { document.getElementById('note').textContent = '· sync failed'; }
+  b.disabled = false; b.classList.remove('busy'); t.textContent = 'Sync now';
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "reading": "Ciao Marta, mi mandi  6 cs di “Prosecco” – grazie! 3 anzi 4 kg farina",
+  "cases": [
+    {
+      "quote": "6 cs di \"prosecco\"",
+      "out": [
+        22,
+        40
+      ]
+    },
+    {
+      "quote": "6 CS DI “PROSECCO”",
+      "out": [
+        22,
+        40
+      ]
+    },
+    {
+      "quote": "mi mandi 6",
+      "out": [
+        12,
+        23
+      ]
+    },
+    {
+      "quote": "ab",
+      "out": "short"
+    },
+    {
+      "quote": "non c'è",
+      "out": null
+    },
+    {
+      "quote": "3 anzi 4 kg farina",
+      "out": [
+        51,
+        69
+      ]
+    },
+    {
+      "quote": "prosecco - grazie",
+      "out": null
+    }
+  ]
+}

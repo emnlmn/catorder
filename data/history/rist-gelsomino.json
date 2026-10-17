@@ -1,0 +1,436 @@
+[
+ {
+  "date": "2026-05-12",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 3
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-05-28",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 3
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-06-11",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 3
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-06-25",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 3
+   }
+  ]
+ },
+ {
+  "date": "2026-07-09",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 3
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-07-30",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 5
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-BIA-003",
+    "qty": 3
+   },
+   {
+    "sku": "BIR-LAG-33",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-09-10",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-09-24",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 2
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 4
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-10-01",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-RIG-500",
+    "qty": 2
+   }
+  ]
+ },
+ {
+  "date": "2026-10-08",
+  "lines": [
+   {
+    "sku": "ACQ-NAT-1L",
+    "qty": 5
+   },
+   {
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 3
+   },
+   {
+    "sku": "PAS-SPA-500",
+    "qty": 4
+   },
+   {
+    "sku": "POM-PEL-2.5",
+    "qty": 3
+   },
+   {
+    "sku": "OLI-EVO-5L",
+    "qty": 2
+   },
+   {
+    "sku": "FAR-00-5K",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-MOZ-FIO",
+    "qty": 4
+   },
+   {
+    "sku": "FOR-GRA-24",
+    "qty": 3
+   },
+   {
+    "sku": "VIN-ROS-009",
+    "qty": 2
+   }
+  ]
+ }
+]

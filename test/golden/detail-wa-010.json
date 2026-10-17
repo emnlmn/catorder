@@ -1,0 +1,112 @@
+{
+  "message": {
+    "id": "wa-010",
+    "customer_id": "groc-nuovoborgo",
+    "channel": "whatsapp",
+    "received_at": "2026-10-18T10:15:00+02:00",
+    "sender": "Anwar",
+    "text": "ok per domani allora: 6 cs di acqua naturale e 3 cs di penne 👍",
+    "media": null,
+    "sha256": "4f6225d90bd268ac08285ac82bc4f07b94d254ec8d3ecc098e682b1a60a9665b",
+    "customer": {
+      "id": "groc-nuovoborgo",
+      "name": "Emporio Nuovo Borgo"
+    },
+    "media_url": null
+  },
+  "order": {
+    "id": "a66e10a9a1d641cf8af2a29d9af4252e",
+    "message_id": "wa-010",
+    "customer_id": "groc-nuovoborgo",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "ok per domani allora: 6 cs di acqua naturale e 3 cs di penne 👍",
+    "delivery_date": "2026-10-19",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "fb70f3096f364c99ad454b57dfad55db",
+        "order_id": "a66e10a9a1d641cf8af2a29d9af4252e",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "acqua naturale",
+        "sku": "ACQ-NAT-1L",
+        "qty": 6.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "ACQ-NAT-1L",
+            "score": 1.35,
+            "why": "in their last order",
+            "name": "Fonte Brivio naturale 1 l",
+            "pack_label": "case of 12 × 1 l"
+          },
+          {
+            "sku": "ACQ-NAT-50",
+            "score": 0.796,
+            "why": "name match",
+            "name": "Fonte Brivio naturale 50cl",
+            "pack_label": "case of 24 × 50 cl"
+          },
+          {
+            "sku": "BEV-TON-20",
+            "score": 0.417,
+            "why": "name match",
+            "name": "Tonica Lunaria 20cl",
+            "pack_label": "case of 24 × 20 cl"
+          }
+        ],
+        "flags": [],
+        "quote": "6 cs di acqua naturale",
+        "quote_start": 22,
+        "quote_end": 44,
+        "proposed_sku": "ACQ-NAT-1L",
+        "proposed_qty": 6.0,
+        "edited": 0,
+        "name": "Fonte Brivio naturale 1 l",
+        "pack_label": "case of 12 × 1 l",
+        "sell_unit": "case",
+        "unit_price": 5.29,
+        "line_total": 31.74
+      },
+      {
+        "id": "ab6d7385266d4a37a060c66b3b676086",
+        "order_id": "a66e10a9a1d641cf8af2a29d9af4252e",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "penne",
+        "sku": "PAS-PEN-500",
+        "qty": 3.0,
+        "unit_text": "cs",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "PAS-PEN-500",
+            "score": 1.25,
+            "why": "in their last order",
+            "name": "Penne rigate Lombarelli 500g",
+            "pack_label": "case of 24 × 500 g"
+          }
+        ],
+        "flags": [],
+        "quote": "3 cs di penne",
+        "quote_start": 47,
+        "quote_end": 60,
+        "proposed_sku": "PAS-PEN-500",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Penne rigate Lombarelli 500g",
+        "pack_label": "case of 24 × 500 g",
+        "sell_unit": "case",
+        "unit_price": 16.93,
+        "line_total": 50.79
+      }
+    ],
+    "total": 82.53,
+    "clean": true
+  }
+}

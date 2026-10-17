@@ -1,0 +1,73 @@
+{
+  "message": {
+    "id": "em-001",
+    "customer_id": "deli-mulino",
+    "channel": "email",
+    "received_at": "2026-10-16T17:45:00+02:00",
+    "sender": "Rina",
+    "text": "Oggetto: ordine sabato\n\nbuongiorno marta,\nper sabato mi servono 6 kg di mozzarella fiordilatte. grazie, rina\n\n--- messaggio inoltrato ---\nDa: Salumeria Mulino Vecchio\nData: 9 ottobre\n> 4 kg prosciutto cotto\n> 3 kg prosciutto crudo\n> 4 kg grana\n> 3 kg mozzarella fiordilatte",
+    "media": null,
+    "sha256": "20bef073d82c5df762f77d21b9d453090f6ca56cb13423fd4846b48e7bd867c8",
+    "customer": {
+      "id": "deli-mulino",
+      "name": "Salumeria Mulino Vecchio"
+    },
+    "media_url": null
+  },
+  "order": {
+    "id": "f7287fe836ee4668b4a7828ec203def1",
+    "message_id": "em-001",
+    "customer_id": "deli-mulino",
+    "status": "draft",
+    "reading_kind": "original",
+    "reading_source": "message",
+    "reading": "Oggetto: ordine sabato\n\nbuongiorno marta,\nper sabato mi servono 6 kg di mozzarella fiordilatte. grazie, rina\n\n--- messaggio inoltrato ---\nDa: Salumeria Mulino Vecchio\nData: 9 ottobre\n> 4 kg prosciutto cotto\n> 3 kg prosciutto crudo\n> 4 kg grana\n> 3 kg mozzarella fiordilatte",
+    "delivery_date": "2026-10-17",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:44",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "0caa80e19e2942fe81aa17d98a7b42ca",
+        "order_id": "f7287fe836ee4668b4a7828ec203def1",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "mozzarella fiordilatte",
+        "sku": "FOR-MOZ-FIO",
+        "qty": 6.0,
+        "unit_text": "kg",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "FOR-MOZ-FIO",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Mozzarella fiordilatte La Casara",
+            "pack_label": "sold by kg"
+          },
+          {
+            "sku": "FOR-MOZ-BUF",
+            "score": 0.541,
+            "why": "name match",
+            "name": "Mozzarella di bufala La Casara",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "6 kg di mozzarella fiordilatte",
+        "quote_start": 64,
+        "quote_end": 94,
+        "proposed_sku": "FOR-MOZ-FIO",
+        "proposed_qty": 6.0,
+        "edited": 0,
+        "name": "Mozzarella fiordilatte La Casara",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 6.98,
+        "line_total": 41.88
+      }
+    ],
+    "total": 41.88,
+    "clean": true
+  }
+}

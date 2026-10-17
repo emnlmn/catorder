@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "usual",
+  "quote": "il solito",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": null,
+  "status": "observed"
+ },
+ {
+  "kind": "delivery",
+  "quote": "per martedi",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": "2026-10-20",
+  "status": "observed"
+ },
+ {
+  "kind": "discount_request",
+  "quote": "lo sconto 8%",
+  "product": null,
+  "sku": null,
+  "quantity": null,
+  "unit": null,
+  "op": null,
+  "value": "8%",
+  "status": "observed"
+ }
+]

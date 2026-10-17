@@ -1,0 +1,145 @@
+{
+  "order": {
+    "id": "93f09d52a5284f4789ed9ca9246aace0",
+    "message_id": "vo-003",
+    "customer_id": "deli-mulino",
+    "status": "draft",
+    "reading_kind": "transcript",
+    "reading_source": "file",
+    "reading": "Buongiorno Marta, Rina della salumeria. Per martedì mi servono tre chili di prosciutto cotto, due chili di speck e cinque chili di grana. Grazie.",
+    "delivery_date": "2026-10-20",
+    "flags": [],
+    "created_at": "2026-10-17T08:13:45",
+    "confirmed_at": null,
+    "lines": [
+      {
+        "id": "86bb1b98e8d7455eba045033a83877ce",
+        "order_id": "93f09d52a5284f4789ed9ca9246aace0",
+        "pos": 0,
+        "origin": "message",
+        "product_text": "prosciutto cotto",
+        "sku": "SAL-COT",
+        "qty": 3.0,
+        "unit_text": "chili",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "SAL-COT",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Prosciutto cotto Fonteluce",
+            "pack_label": "sold by kg"
+          },
+          {
+            "sku": "SAL-PRC",
+            "score": 0.963,
+            "why": "in their last 6 orders",
+            "name": "Prosciutto crudo 14 mesi Fornasetta",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "tre chili di prosciutto cotto",
+        "quote_start": 63,
+        "quote_end": 92,
+        "proposed_sku": "SAL-COT",
+        "proposed_qty": 3.0,
+        "edited": 0,
+        "name": "Prosciutto cotto Fonteluce",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 11.9,
+        "line_total": 35.7
+      },
+      {
+        "id": "d563518227f94769bbcfcba209e36bde",
+        "order_id": "93f09d52a5284f4789ed9ca9246aace0",
+        "pos": 1,
+        "origin": "message",
+        "product_text": "speck",
+        "sku": "SAL-SPE",
+        "qty": 2.0,
+        "unit_text": "chili",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "SAL-SPE",
+            "score": 1.25,
+            "why": "in their last 5 orders",
+            "name": "Speck Alpe Verde",
+            "pack_label": "sold by kg"
+          }
+        ],
+        "flags": [],
+        "quote": "due chili di speck",
+        "quote_start": 94,
+        "quote_end": 112,
+        "proposed_sku": "SAL-SPE",
+        "proposed_qty": 2.0,
+        "edited": 0,
+        "name": "Speck Alpe Verde",
+        "pack_label": "sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 13.77,
+        "line_total": 27.54
+      },
+      {
+        "id": "6395ad3450b449edb6e14a79d9c1c665",
+        "order_id": "93f09d52a5284f4789ed9ca9246aace0",
+        "pos": 2,
+        "origin": "message",
+        "product_text": "grana",
+        "sku": "FOR-GRA-24",
+        "qty": 5.0,
+        "unit_text": "chili",
+        "state": "ok",
+        "candidates": [
+          {
+            "sku": "FOR-GRA-24",
+            "score": 1.25,
+            "why": "in their last 6 orders",
+            "name": "Grana Vallesella 24 mesi",
+            "pack_label": "wheel portions, sold by kg"
+          },
+          {
+            "sku": "CAF-GRA-1K",
+            "score": 0.8,
+            "why": "name match",
+            "name": "Caffè Ardelia Gran Crema in grani 1 kg",
+            "pack_label": "case of 6 × 1 kg bags"
+          }
+        ],
+        "flags": [],
+        "quote": "cinque chili di grana",
+        "quote_start": 115,
+        "quote_end": 136,
+        "proposed_sku": "FOR-GRA-24",
+        "proposed_qty": 5.0,
+        "edited": 0,
+        "name": "Grana Vallesella 24 mesi",
+        "pack_label": "wheel portions, sold by kg",
+        "sell_unit": "kg",
+        "unit_price": 16.3,
+        "line_total": 81.5
+      }
+    ],
+    "total": 144.74,
+    "clean": true
+  },
+  "reading": {
+    "kind": "transcript",
+    "source": "file",
+    "text": "Buongiorno Marta, Rina della salumeria. Per martedì mi servono tre chili di prosciutto cotto, due chili di speck e cinque chili di grana. Grazie."
+  },
+  "runs": [
+    {
+      "stage": "extract",
+      "cached": false,
+      "latency_ms": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "cost_usd": null,
+      "error": null
+    }
+  ]
+}

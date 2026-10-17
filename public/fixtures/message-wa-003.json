@@ -1,0 +1,112 @@
+{
+ "message": {
+  "id": "wa-003",
+  "customer": {
+   "id": "c1",
+   "name": "Bar Aurora"
+  },
+  "channel": "whatsapp",
+  "received_at": "2026-10-17T06:50:00",
+  "sender": "Bar Aurora",
+  "text": "il solito x venerdi + 6 cs di quello rosso dell'altra volta, niente frizzante stavolta. col solito 8% ok?",
+  "media_url": null
+ },
+ "order": {
+  "id": "o3",
+  "message_id": "wa-003",
+  "customer_id": "c1",
+  "status": "draft",
+  "reading_kind": "original",
+  "reading_source": "message",
+  "reading": "il solito x venerdi + 6 cs di quello rosso dell'altra volta, niente frizzante stavolta. col solito 8% ok?",
+  "delivery_date": "2026-10-23",
+  "flags": [
+   {
+    "kind": "discount_beyond_terms",
+    "level": "order",
+    "severity": "high",
+    "message": "The customer asks for 8%; the agreed discount is 5%."
+   },
+   {
+    "kind": "no_history",
+    "level": "order",
+    "severity": "info",
+    "message": "Example info flag."
+   }
+  ],
+  "clean": false,
+  "created_at": "2026-10-17T07:30:00",
+  "confirmed_at": null,
+  "lines": [
+   {
+    "id": "l3",
+    "pos": 0,
+    "origin": "usual",
+    "product_text": "il solito",
+    "sku": "ACQ-NAT-1L",
+    "qty": 6,
+    "unit_text": null,
+    "state": "ok",
+    "candidates": [],
+    "flags": [],
+    "quote": "il solito",
+    "quote_start": 0,
+    "quote_end": 9,
+    "proposed_sku": "ACQ-NAT-1L",
+    "proposed_qty": 6,
+    "edited": 0,
+    "name": "Fonte Brivio naturale 1 l",
+    "pack_label": "case of 12 × 1 l",
+    "sell_unit": "case",
+    "unit_price": 6.17,
+    "line_total": 37.02
+   },
+   {
+    "id": "l4",
+    "pos": 1,
+    "origin": "message",
+    "product_text": "quello rosso",
+    "sku": "VIN-ROS-007",
+    "qty": 6,
+    "unit_text": null,
+    "state": "ok",
+    "candidates": [],
+    "flags": [],
+    "quote": "6 cs di quello rosso dell'altra volta",
+    "quote_start": 22,
+    "quote_end": 59,
+    "proposed_sku": "VIN-ROS-007",
+    "proposed_qty": 6,
+    "edited": 0,
+    "name": "Rosso Colline 75cl",
+    "pack_label": "case of 6 × 75 cl",
+    "sell_unit": "case",
+    "unit_price": 39.9,
+    "line_total": 239.4
+   },
+   {
+    "id": "l5",
+    "pos": 2,
+    "origin": "usual",
+    "product_text": "frizzante",
+    "sku": "ACQ-FRIZ-1L",
+    "qty": 4,
+    "unit_text": null,
+    "state": "removed",
+    "candidates": [],
+    "flags": [],
+    "quote": "niente frizzante",
+    "quote_start": 61,
+    "quote_end": 77,
+    "proposed_sku": "ACQ-FRIZ-1L",
+    "proposed_qty": 4,
+    "edited": 0,
+    "name": "Fonte Brivio frizzante 1 l",
+    "pack_label": "case of 12 × 1 l",
+    "sell_unit": "case",
+    "unit_price": 6.17,
+    "line_total": 24.68
+   }
+  ]
+ }
+}
