@@ -37,6 +37,23 @@ services:
         type: SECRET
       - key: WHATSAPP_PHONE_MAP
         type: SECRET
+      - key: PREDICT_BASE_URL
+        value: http://predict:8077
+  # the next-order model (model/serve.py, weights trained on an AMD Radeon Pro W7900D), reachable only from web
+  - name: predict
+    dockerfile_path: model/Dockerfile
+    source_dir: model
+    github:
+      repo: emnlmn/catorder
+      branch: main
+      deploy_on_push: true
+    internal_ports:
+      - 8077
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-1gb-fixed
+    health_check:
+      http_path: /health
+      port: 8077
 domains:
   - domain: catorder.shop
     type: PRIMARY

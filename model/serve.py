@@ -69,7 +69,7 @@ class Predictor:
                 "expected_gap_days": round(gap, 2), "days_since_last": since,
                 "days_overdue": max(0, since - round(gap)),
                 "p_churn": round(float(torch.sigmoid(oc["churn"])[0]), 4), "basket": basket,
-                "model": MODEL_NAME, "device": self.dname, "latency_ms": int((time.time() - t0) * 1000)}
+                "model": MODEL_NAME, "device": self.dname, "trained_on": self.meta.get("train", {}).get("device", ""), "latency_ms": int((time.time() - t0) * 1000)}
 
 
 def make_handler(pred, token):

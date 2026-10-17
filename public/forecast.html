@@ -54,7 +54,7 @@ const basket = (p) => p.basket.map((b) => `${b.qty} × ${esc(b.name)}`).join(' �
 const draw = ([f, cs]) => {
   const name = Object.fromEntries(cs.map((c) => [c.id, c.name]));
   const any = f.customers[0];
-  if (any) document.getElementById('lede').textContent = `Predicted by ${any.model} on ${any.device || 'unknown device'} · today ${day(f.today)} · trained on synthetic data`;
+  if (any) document.getElementById('lede').textContent = `Predicted by ${any.model}` + (any.trained_on ? ` · trained on ${any.trained_on}` : '') + ` · served on ${any.device || 'unknown device'} · today ${day(f.today)} · synthetic data`;
   const late = f.customers.filter((p) => p.days_overdue > 0);
   const soon = f.customers.filter((p) => p.days_overdue === 0);
   document.getElementById('out').innerHTML =

@@ -53,6 +53,7 @@ Read from the process environment, or from `.env` (real variables win).
 - **AMD Token Factory** (OpenAI-compatible): `MODEL_BASE_URL=https://developer.amd.com.cn/radeon/api/v1`, `MODEL_NAME=Gemma-4-31B-IT` and your `MODEL_API_KEY`. Add `MODEL_HARDWARE="AMD Instinct MI300X via AMD Token Factory"` for the top bar.
 - **vLLM on an MI300X**: `vllm serve google/gemma-3-27b-it`, then `MODEL_BASE_URL=http://<host>:8000/v1`. Whisper served the same way reads voice notes via `TRANSCRIBE_*`.
 - **Ollama for development**: `MODEL_BASE_URL=http://localhost:11434/v1`, `MODEL_API_KEY=ollama`, `MODEL_NAME=gemma3:12b`.
+- **Next-order model** (`model/`, PyTorch, not an LLM): trained on an AMD Radeon Pro W7900D with ROCm on 905 synthetic customers. It predicts each customer's next order date, churn risk and basket, and powers the Forecast page and the "Usually also takes" suggestions. Serve it with `python3 model/serve.py` and point `PREDICT_BASE_URL` at it. Data, method and results are in `model/README.md`.
 
 ## Live WhatsApp through the Twilio Sandbox
 

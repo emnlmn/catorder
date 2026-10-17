@@ -14,6 +14,7 @@ export interface Prediction {
   basket: PredictedLine[];
   model: string;
   device: string;
+  trained_on: string; // the GPU the weights were trained on
   latency_ms: number;
   cached: boolean;
 }
@@ -33,7 +34,7 @@ export function parsePrediction(text: string, customerId: string, products: Reco
   return {
     customer_id: customerId, next_order_date: d.next_order_date, expected_gap_days: d.expected_gap_days,
     days_since_last: num(d.days_since_last) ? d.days_since_last : 0, days_overdue: num(d.days_overdue) ? d.days_overdue : 0,
-    p_churn: d.p_churn, basket, model: String(d.model ?? "predictor"), device: String(d.device ?? ""),
+    p_churn: d.p_churn, basket, model: String(d.model ?? "predictor"), device: String(d.device ?? ""), trained_on: String(d.trained_on ?? ""),
     latency_ms: num(d.latency_ms) ? d.latency_ms : 0,
   };
 }
