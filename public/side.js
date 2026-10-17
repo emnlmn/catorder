@@ -1,42 +1,16 @@
-// the sidebar's message list and model line on every page but the inbox itself (index.html draws its own from app.js)
+// the sidebar's open-chats count and model line on every page but the inbox itself (index.html draws its own from app.js)
 (() => {
-  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const PIC = {
-    whatsapp: '<path d="M4 5h16v11H9l-5 4z"/>',
-    voice: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
-    photo: '<path d="M4 7h4l2-3h4l2 3h4v13H4z"/><circle cx="12" cy="13" r="3.5"/>',
-    email: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
-  };
-  const WORD = { whatsapp: 'WhatsApp', voice: 'Voice note', photo: 'Photo', email: 'Email' };
-  const short = (iso) => { const d = new Date(iso); return d.toDateString() === new Date().toDateString() ? d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }); };
-  const initials = (n) => n.split(/\s+/).filter((w) => /^[A-ZÀ-Ý]/.test(w)).slice(0, 2).map((w) => w[0]).join('') || n[0];
-  const todo = (m) => !m.order;
   const side = document.querySelector('.side');
-  const wrap = document.createElement('div');
-  wrap.className = 'inbox-wrap';
-  wrap.innerHTML = '<div id="inbox" class="inbox" role="region" aria-label="Messages" hidden></div>';
   const model = document.createElement('span');
   model.id = 'model'; model.className = 'model quiet';
   model.innerHTML = '<i class="eye" aria-hidden="true"></i><span id="modelText"></span>';
-  side.append(wrap, model);
+  side.append(model);
   const count = document.createElement('span');
   count.className = 'count';
   side.querySelector('.navi').append(count);
-  Promise.all([fetch('/api/messages').then((r) => r.json()), fetch('/api/customers').then((r) => r.json()).catch(() => [])]).then(([ms, erp]) => {
-    const by = new Map();
-    for (const m of ms) { if (!by.has(m.customer.id)) by.set(m.customer.id, []); by.get(m.customer.id).push(m); }
-    const gs = [...by.values()];
-    const unk = gs.filter((g) => g[0].customer.id === 'unknown-sender');
-    const known = gs.filter((g) => g[0].customer.id !== 'unknown-sender');
-    const row = (g, name) => {
-      const last = g[0], t = g.filter(todo), target = t[0] || last;
-      return `<a class="irow" href="./?m=${encodeURIComponent(target.id)}"><span class="ic av" aria-hidden="true">${esc(initials(name))}</span><span class="who">${esc(name)}</span><span class="time">${short(last.received_at)}</span><span class="pv"><span class="pic" aria-hidden="true"><svg viewBox="0 0 24 24">${PIC[last.channel] || ''}</svg></span>${esc(last.preview || WORD[last.channel] || '')}</span>${t.length ? `<span class="badge">${t.length}</span>` : ''}</a>`;
-    };
-    const newest = (g, h) => (g[0].received_at < h[0].received_at ? 1 : -1);
-    const todos = known.filter((g) => g.some(todo)).sort(newest), rest = known.filter((g) => !g.some(todo)).sort(newest);
-    count.textContent = todos.length || '';
-    const quiet = erp.filter((c) => c.id !== 'unknown-sender' && !by.has(c.id)).map((c) => `<a class="irow quiet" href="./?c=${encodeURIComponent(c.id)}"><span class="ic av" aria-hidden="true">${esc(initials(c.name))}</span><span class="who">${esc(c.name)}</span><span class="pv">No messages yet</span></a>`);
-    wrap.firstChild.innerHTML = [...unk.map((g) => row(g, 'New number')), ...todos.map((g) => row(g, g[0].customer.name)), ...rest.map((g) => row(g, g[0].customer.name)), ...quiet].join('') || '<p class="empty">No chats yet</p>';
+  fetch('/api/messages').then((r) => r.json()).then((ms) => {
+    // chats with at least one message that has no order yet
+    count.textContent = new Set(ms.filter((m) => !m.order && m.customer.id !== 'unknown-sender').map((m) => m.customer.id)).size || '';
   }).catch(() => {});
   fetch('/api/health').then((r) => r.json()).then((h) => {
     document.getElementById('modelText').textContent = h.mock ? 'Demo mode · scripted answers, no model call' : [h.model, h.hardware].filter(Boolean).join(' · ');

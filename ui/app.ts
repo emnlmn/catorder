@@ -918,8 +918,6 @@ const sug = (name: string, why: string, on: () => unknown, theirs = false, extra
   h('button', { type: 'button', class: 'pick sug', onclick: on, ...extra }, h('span', { class: 'sn' }, name), why && h('span', { class: 'why' }, theirs && h('i', { class: 'eye' }), why));
 // a side road out of the question (search, ask, back): a quiet button beside it, never one of the answers
 const alt = (label: string, on: () => unknown, icon?: string): HTMLElement => h('button', { type: 'button', class: 'alt', onclick: on }, icon && glyph('ai', icon), label);
-// the shortcut that presses the band's main action, shown on it
-const SEND_KEY = (/Mac|iP(hone|ad)/.test(navigator.platform) ? '⌘' : 'Ctrl ') + '↵';
 const exportLink = (o: Order, fmt: string): HTMLElement => h('a', { class: 'pick', href: '/api/orders/' + o.id + '/export?format=' + fmt, download: '', onclick: (e: Event) => (e.target as HTMLElement).closest('dialog')?.close() }, fmt === 'csv' ? 'CSV · spreadsheet' : 'JSON · for the ERP');
 // one Export button; the format is chosen in a native modal dialog
 const exportMenu = (o: Order): HTMLElement => {
@@ -951,7 +949,7 @@ function bandOf(d: Detail | null): Band | null {
   const steps = pending(o), total = orderTotal(o);
   // the queue ends in Ready, or in "Nothing to order" once no line is left (it is also the only step of an order with no lines and no flags)
   steps.push(lines(o).some((l) => l.state !== 'removed')
-    ? { key: 'ready', q: 'Ready.', ctl: () => pick('Confirm order' + (total === null ? '' : ' · ' + eur(total)), doConfirm, { 'data-k': SEND_KEY }) }
+    ? { key: 'ready', q: 'Ready.', ctl: () => pick('Confirm order' + (total === null ? '' : ' · ' + eur(total)), doConfirm, { 'data-main': true }) }
     : { key: 'empty', q: 'Nothing to order in this message.', ctl: () => pick('Done', goWaiting) });
   if (S.queue.order !== o.id) S.queue = { order: o.id, n: 0 };
   S.queue.n = Math.max(S.queue.n, steps.length); // "n of m": m is what the order asked when it loaded, it does not shrink while answering
@@ -1070,8 +1068,8 @@ function paintBand(b: Band | null): void {
   el.replaceChildren(...[prog, h('div', { class: 'in' + (settled && b.key !== lastKey ? (arrival ? ' lift' : ' fade') : '') },
     b.icon && glyph('mark ' + b.icon, b.icon),
     h('div', { class: 'words' },
-      h('p', { class: 'q' + (b.q.length <= 32 ? '' : b.q.length <= 60 ? ' mid' : ' long') }, b.q), // a flag sentence is not a headline
-      (b.sub || counted) && h('p', { class: 'sub' }, counted && h('span', { class: 'step' }, b.n + ' of ' + b.of), counted && b.sub && ' · ', b.sub)),
+      h('p', { class: 'q' + (b.q.length <= 32 ? '' : b.q.length <= 60 ? ' mid' : ' long') }, b.q, counted && h('span', { class: 'step' }, b.n + ' of ' + b.of)), // a flag sentence is not a headline
+      b.sub && h('p', { class: 'sub' }, b.sub)),
     b.alt && h('div', { class: 'alts' }, b.alt()),
     b.ctl && h('div', { class: 'ctl' }, b.ctl()))].filter((n): n is HTMLElement => !!n));
   lastKey = b.key;
@@ -1145,7 +1143,7 @@ async function doSend(r: Reply): Promise<void> {
 function replyStep(r: Reply): Band {
   const by = r.model === 'template' ? 'Written from the order in demo mode' : 'Drafted by ' + r.model;
   return { key: 'reply:' + r.id, icon: 'send', q: 'Send this reply?', sub: by + ' · edit it in the chat first if you like',
-    ctl: () => pick('Send on WhatsApp', () => doSend(r), { 'data-k': SEND_KEY }),
+    ctl: () => pick('Send on WhatsApp', () => doSend(r), { 'data-main': true }),
     alt: () => [alt('Write it again', async () => { if (await saveReply(r)) void doDraft(); }), alt('Later', () => { void saveReply(r); S.later.add(r.id); renderScreen(); })] };
 }
 async function doConfirm(): Promise<void> {
@@ -1163,8 +1161,8 @@ document.addEventListener('keydown', (e) => {
     if (S.sel || S.cust) goWaiting();
     return;
   }
-  // ⌘↵ presses whatever main action carries the hint (Confirm, Send); the draft textarea handles its own and marks it handled
-  if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { if (!e.defaultPrevented) { e.preventDefault(); $('band').querySelector<HTMLElement>('[data-k]')?.click(); } return; }
+  // ⌘↵ presses the band's main action (Confirm, Send); the draft textarea handles its own and marks it handled
+  if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { if (!e.defaultPrevented) { e.preventDefault(); $('band').querySelector<HTMLElement>('[data-main]')?.click(); } return; }
   const t = e.target as HTMLElement | null;
   if (e.metaKey || e.ctrlKey || e.altKey || (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
   if (e.key === 'j' || e.key === 'k') {

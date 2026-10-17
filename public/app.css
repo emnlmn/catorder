@@ -123,35 +123,34 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 /* the band: one decision at a time, docked under the chat and the order.
    Top row: the question and where it stands in the queue, side roads on the right.
    Answers: the main action in a cell as wide as the order column, right under the total it confirms;
-   or, when CatOrder offers products, numbered tiles across the whole width (1-3 pick them) */
-.band{position:fixed;z-index:4;left:0;right:0;bottom:0;max-height:80vh;overflow:auto;padding:14px 20px 14px 28px;background:var(--ink);color:var(--paper);counter-reset:k;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--paper) 25%,var(--ink)) transparent}
-.band .in{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
+   or, when CatOrder offers products, equal tiles across the whole width (keys 1-3 pick them) */
+.band{position:fixed;z-index:4;left:0;right:0;bottom:0;max-height:80vh;overflow:auto;padding:12px 20px 12px 28px;background:var(--ink);color:var(--paper);scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--paper) 25%,var(--ink)) transparent}
+.band .in{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
 .prog{position:absolute;top:0;left:0;right:0;display:flex;gap:2px;height:3px}
 .prog i{flex:1;background:color-mix(in srgb,var(--paper) 14%,var(--ink));transition:background-color .3s cubic-bezier(.2,.7,.2,1)}
 .prog i.done{background:color-mix(in srgb,var(--paper) 45%,var(--ink))}
 .prog i.now{background:var(--eye)}
-.mark{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:8px;background:color-mix(in srgb,var(--paper) 10%,var(--ink))}
-.mark svg{width:18px;height:18px;stroke-width:2}
+.mark{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:color-mix(in srgb,var(--paper) 10%,var(--ink))}
+.mark svg{width:16px;height:16px;stroke-width:2}
 .mark.check{background:var(--eye);color:var(--ink)}
 .band .words{flex:1 1 220px;min-width:0}
-.band .q{margin:0;font-size:18px;font-weight:600;line-height:1.25;letter-spacing:-.015em;text-wrap:balance}
-.band .q.mid{font-size:16px}
-.band .q.long{font-size:15px;font-weight:500;letter-spacing:-.005em}
-.band .sub{margin:3px 0 0;font-size:13px;line-height:1.4;color:var(--muted-on-ink)}
-.band .step{font-variant-numeric:tabular-nums;color:var(--paper)}
+.band .q{margin:0;font-size:17px;font-weight:600;line-height:1.25;letter-spacing:-.015em;text-wrap:balance}
+.band .q.mid{font-size:15px}
+.band .q.long{font-size:14px;font-weight:500;letter-spacing:-.005em}
+.band .sub{margin:2px 0 0;font-size:13px;line-height:1.4;color:var(--muted-on-ink)}
+.band .step{margin-left:10px;font-size:13px;font-weight:400;letter-spacing:0;color:var(--muted-on-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
 .alts{flex:none;display:flex;flex-wrap:wrap;gap:4px}
-.alt{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 12px;border:0;border-radius:8px;background:none;color:color-mix(in srgb,var(--paper) 82%,var(--ink));font-size:14px;font-weight:500;white-space:nowrap;transition:background-color .12s,color .12s}
+.alt{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:0 10px;border:0;border-radius:8px;background:none;color:color-mix(in srgb,var(--paper) 82%,var(--ink));font-size:14px;font-weight:500;white-space:nowrap;transition:background-color .12s,color .12s}
 .alt:hover{background:color-mix(in srgb,var(--paper) 9%,var(--ink));color:var(--paper)}
 .alt .ai{display:grid}
-.alt svg{width:16px;height:16px;stroke-width:2}
+.alt svg{width:15px;height:15px;stroke-width:2}
 /* 300px = the order column less its padding: a lone main action lines up with the order's prices */
 .ctl{flex:none;display:flex;gap:8px;min-width:300px;margin-left:auto;justify-content:flex-end} /* on a tight row it drops under the question and keeps to the right */
 .pick{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border:0;border-radius:8px;background:var(--paper);color:var(--ink);font-size:15px;font-weight:500;text-decoration:none}
 .pick:hover{background:color-mix(in srgb,var(--ink) 12%,var(--paper))}
 .pick:active{transform:translateY(1px)}
-.band .pick:not(.xmenu *){counter-increment:k;gap:10px;padding:0 18px;font-weight:600;letter-spacing:-.005em;white-space:nowrap;box-shadow:none;transition:background-color .12s,box-shadow .12s}
+.band .pick:not(.xmenu *){min-height:40px;padding:0 16px;font-size:14px;font-weight:600;letter-spacing:-.005em;white-space:nowrap;box-shadow:none;transition:background-color .12s,box-shadow .12s}
 .ctl>.pick:not(.quiet){flex:1 1 auto}
-.band .pick[data-k]::after{content:attr(data-k);padding:2px 6px;border-radius:5px;background:color-mix(in srgb,var(--ink) 8%,var(--paper));color:var(--muted);font-size:12px;font-weight:500;letter-spacing:.02em}
 /* quiet buttons and tiles: ink raised a step, a hairline, paper text */
 .band .pick.quiet:not(.xmenu *),.band .pick.sug{background:color-mix(in srgb,var(--paper) 7%,var(--ink));color:var(--paper);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--paper) 14%,var(--ink))}
 .band .pick.quiet:not(.xmenu *):hover,.band .pick.sug:hover{background:color-mix(in srgb,var(--paper) 13%,var(--ink));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--paper) 28%,var(--ink))}
@@ -159,17 +158,13 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .band .in:has(.sug,.results) .ctl{flex:1 1 100%;min-width:0;flex-wrap:wrap;justify-content:flex-start}
 .results{flex:1 1 100%;display:flex;gap:8px;min-width:0}
 .results.inline{display:contents}
-.band .pick.sug{flex:1 1 0;min-width:0;max-width:calc((100% - 16px) / 3);display:grid;grid-template-columns:auto minmax(0,1fr);align-content:center;justify-content:stretch;gap:1px 12px;min-height:54px;padding:8px 14px 8px 12px;font-weight:500;text-align:left;white-space:normal}
-.band .pick.sug::before{content:counter(k);grid-row:1/3;display:grid;place-items:center;width:22px;height:22px;border-radius:6px;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--paper) 24%,var(--ink));color:var(--muted-on-ink);font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
-.band .pick.sug:hover::before{color:var(--paper)}
-.band .in:has(input[type=search]) .pick.sug{grid-template-columns:minmax(0,1fr)} /* the field has the cursor: digits type, they do not pick */
-.band .in:has(input[type=search]) .pick.sug::before{content:none}
-.sug .sn{overflow:hidden;font-size:15px;line-height:1.3;text-overflow:ellipsis;white-space:nowrap}
-.sug .why{display:flex;align-items:center;gap:6px;overflow:hidden;font-size:13px;font-weight:400;line-height:1.35;color:var(--muted-on-ink);white-space:nowrap}
+.band .pick.sug{flex:1 1 0;min-width:0;max-width:calc((100% - 16px) / 3);flex-direction:column;align-items:stretch;justify-content:center;gap:0;min-height:46px;padding:5px 12px;font-weight:500;text-align:left;white-space:normal}
+.sug .sn{overflow:hidden;font-size:14px;line-height:1.3;text-overflow:ellipsis;white-space:nowrap}
+.sug .why{display:flex;align-items:center;gap:6px;overflow:hidden;font-size:12px;font-weight:400;line-height:1.35;color:var(--muted-on-ink);white-space:nowrap}
 .sug .eye{width:7px;height:7px}
-.nofind{display:flex;align-items:center;min-height:54px;margin:0;font-size:14px;color:var(--muted-on-ink)}
+.nofind{display:flex;align-items:center;min-height:46px;margin:0;font-size:14px;color:var(--muted-on-ink)}
 /* fields on ink: the same raised step, a green ring while typing */
-.field{flex:1 1 100%;min-width:0;min-height:44px;padding:0 14px;border:0;border-radius:8px;background:color-mix(in srgb,var(--paper) 7%,var(--ink));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--paper) 18%,var(--ink));color:var(--paper);font-size:15px;outline:none;appearance:none;-moz-appearance:textfield}
+.field{flex:1 1 100%;min-width:0;min-height:40px;padding:0 12px;border:0;border-radius:8px;background:color-mix(in srgb,var(--paper) 7%,var(--ink));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--paper) 18%,var(--ink));color:var(--paper);font-size:14px;outline:none;appearance:none;-moz-appearance:textfield}
 .field::placeholder{color:var(--muted-on-ink);opacity:1}
 .band .field:focus-visible{outline:none}
 .field:focus,.qin:focus-within{box-shadow:inset 0 0 0 1px var(--eye),0 0 0 3px color-mix(in srgb,var(--eye) 22%,transparent)}
@@ -712,24 +707,20 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
 @media (min-width:701px){.band{left:52px}}
 @media (min-width:1001px){.band{left:352px}#toast{left:calc(50% + 176px)}}
 @media (min-width:1600px){
-  .band .q{font-size:20px}.band .q.mid{font-size:17px}.band .q.long{font-size:16px}
-  .band .pick:not(.xmenu *),.field{min-height:48px;font-size:16px}
-  .band .pick.sug{min-height:62px}
+  .band .q{font-size:19px}.band .q.mid{font-size:16px}.band .q.long{font-size:15px}
+  .band .pick:not(.xmenu *),.field{min-height:44px;font-size:15px}
+  .band .pick.sug{min-height:52px}
 }
 /* phone: question, then the answers stacked full width, then the side roads under them */
 @media (max-width:700px){
-  .band{padding-top:16px}
-  .band .in{gap:12px}
+  .band{padding-top:14px}
+  .band .in{gap:10px}
   .band .ctl{order:1;flex:1 1 100%;min-width:0;flex-wrap:wrap}
   .band .alts{order:2;flex-basis:100%;margin:-4px 0 0 -12px}
-  .ctl>.pick{flex:1 1 100%;min-height:48px}
-  .band .pick.sug{flex-basis:100%;max-width:none;min-height:56px}
+  .ctl>.pick{flex:1 1 100%;min-height:44px}
+  .band .pick.sug{flex-basis:100%;max-width:none;min-height:48px}
   .results{flex-wrap:wrap}
   .field{font-size:16px}
-}
-@media (hover:none){ /* no keyboard to press them with */
-  .band .pick[data-k]::after,.band .pick.sug::before{content:none}
-  .band .pick.sug{grid-template-columns:minmax(0,1fr)}
 }
 
 /* photo preview in the chat opens in a lightbox */

@@ -678,14 +678,9 @@ function miniVoice(p) {
     b.append(glyph('', a.paused ? 'play' : 'pause'));
     return h('span', { class: 'vm' }, b, h('span', { class: 'vm-w' }, Array.from({ length: 24 }, (_, i) => h('i', { style: 'height:' + Math.round(pk[Math.floor(i * BARS / 24)] * 100) + '%' }))));
 }
-// a photo stays in the chat as a preview; a click opens it large in a modal (click or Esc closes)
-function photoEl(url, alt) {
-    const dlg = h('dialog', { class: 'lightbox', onclick: () => dlg.close(), onclose: () => dlg.remove() }, h('img', { src: url, alt }));
-    return h('button', { type: 'button', class: 'photo', title: 'Open the photo', onclick: () => { document.body.append(dlg); dlg.showModal(); } }, h('img', { src: url, alt }));
-}
 function bubble(p, o = null, solo = true) {
     const media = p.channel === 'whatsapp' ? '' : CHANNEL[p.channel] || '';
-    return h('div', { class: 'msg', 'data-msg': p.id }, h('div', { class: 'bub' }, p.channel === 'voice' && p.media_url ? miniVoice(p) : p.channel === 'photo' && p.media_url ? photoEl(p.media_url, 'Photo sent by the customer') : media && h('b', { class: 'bl' }, media), (p.text || p.words) && h('span', { class: 'bt' + (p.channel === 'voice' ? ' tx' : '') }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order, 1, p.id), !p.order && isReading(p.id, false, p.received_at) && thinking('')); // a live message landing under another open order: show it is being read
+    return h('div', { class: 'msg', 'data-msg': p.id }, h('div', { class: 'bub' }, p.channel === 'voice' && p.media_url ? miniVoice(p) : media && h('b', { class: 'bl' }, media), p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order, 1, p.id), !p.order && isReading(p.id, false, p.received_at) && thinking('')); // a live message landing under another open order: show it is being read
 }
 // the whole conversation, oldest first; the open message is its full self (quotes lit, player, photo), the rest are one click away
 function threadEl(m, o, open) {
@@ -935,7 +930,7 @@ function orderScreen(d, asked) {
     const mine = pastOf(m, o);
     const pill = reading ? 'Reading' : PILL[orderState(o && { id: o.id, status: o.status, clean: !!o.clean })];
     const open = (solo) => [
-        h('div', { class: 'msg sel', 'data-msg': m.id }, h('div', { class: 'bub' }, m.channel === 'voice' && m.media_url && h('div', { class: 'bl' }, player(m)), m.channel === 'photo' && m.media_url && photoEl(m.media_url, 'Photo of a list sent by ' + who.name), text ? streamIn(h('p', { class: 'said' + (m.channel === 'voice' ? ' tx' : '') }, m.channel === 'email' ? greyQuoted(words) : words), awaited.delete(m.id))
+        h('div', { class: 'msg sel', 'data-msg': m.id }, h('div', { class: 'bub' }, m.channel === 'voice' && m.media_url && h('div', { class: 'bl' }, player(m)), m.channel === 'photo' && m.media_url && h('a', { class: 'photo', href: m.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: m.media_url, alt: 'Photo of a list sent by ' + who.name })), text ? streamIn(h('p', { class: 'said' + (m.channel === 'voice' ? ' tx' : '') }, m.channel === 'email' ? greyQuoted(words) : words), awaited.delete(m.id))
             : m.channel === 'voice' && reading && (awaited.add(m.id), h('p', { class: 'said tx wait' }, 'Transcribing', dots())), stamp(m.channel, m.received_at)), solo && chip(mine.order)),
         traceEl(m.id) || h('div', { id: 'trace', 'data-trace': m.id, hidden: true }),
         replyEl(d.reply, m.id),
@@ -1010,8 +1005,6 @@ const pick = (label, on, extra = {}) => h('button', { type: 'button', class: 'pi
 const sug = (name, why, on, theirs = false, extra = {}) => h('button', { type: 'button', class: 'pick sug', onclick: on, ...extra }, h('span', { class: 'sn' }, name), why && h('span', { class: 'why' }, theirs && h('i', { class: 'eye' }), why));
 // a side road out of the question (search, ask, back): a quiet button beside it, never one of the answers
 const alt = (label, on, icon) => h('button', { type: 'button', class: 'alt', onclick: on }, icon && glyph('ai', icon), label);
-// the shortcut that presses the band's main action, shown on it
-const SEND_KEY = (/Mac|iP(hone|ad)/.test(navigator.platform) ? '⌘' : 'Ctrl ') + '↵';
 const exportLink = (o, fmt) => h('a', { class: 'pick', href: '/api/orders/' + o.id + '/export?format=' + fmt, download: '', onclick: (e) => e.target.closest('dialog')?.close() }, fmt === 'csv' ? 'CSV · spreadsheet' : 'JSON · for the ERP');
 // one Export button; the format is chosen in a native modal dialog
 const exportMenu = (o) => {
@@ -1050,7 +1043,7 @@ function bandOf(d) {
     const steps = pending(o), total = orderTotal(o);
     // the queue ends in Ready, or in "Nothing to order" once no line is left (it is also the only step of an order with no lines and no flags)
     steps.push(lines(o).some((l) => l.state !== 'removed')
-        ? { key: 'ready', q: 'Ready.', ctl: () => pick('Confirm order' + (total === null ? '' : ' · ' + eur(total)), doConfirm, { 'data-k': SEND_KEY }) }
+        ? { key: 'ready', q: 'Ready.', ctl: () => pick('Confirm order' + (total === null ? '' : ' · ' + eur(total)), doConfirm, { 'data-main': true }) }
         : { key: 'empty', q: 'Nothing to order in this message.', ctl: () => pick('Done', goWaiting) });
     if (S.queue.order !== o.id)
         S.queue = { order: o.id, n: 0 };
@@ -1195,8 +1188,8 @@ function paintBand(b) {
     const counted = (b.of || 0) > 1 && b.key !== 'ready', at = b.n || 0;
     const prog = counted && h('div', { class: 'prog', 'aria-hidden': 'true' }, // the queue along the top edge: answered, the one asked now (green: look here), still to come
     Array.from({ length: b.of || 0 }, (_, i) => h('i', { class: i + 1 < at ? 'done' : i + 1 === at ? 'now' : null })));
-    el.replaceChildren(...[prog, h('div', { class: 'in' + (settled && b.key !== lastKey ? (arrival ? ' lift' : ' fade') : '') }, b.icon && glyph('mark ' + b.icon, b.icon), h('div', { class: 'words' }, h('p', { class: 'q' + (b.q.length <= 32 ? '' : b.q.length <= 60 ? ' mid' : ' long') }, b.q), // a flag sentence is not a headline
-        (b.sub || counted) && h('p', { class: 'sub' }, counted && h('span', { class: 'step' }, b.n + ' of ' + b.of), counted && b.sub && ' · ', b.sub)), b.alt && h('div', { class: 'alts' }, b.alt()), b.ctl && h('div', { class: 'ctl' }, b.ctl()))].filter((n) => !!n));
+    el.replaceChildren(...[prog, h('div', { class: 'in' + (settled && b.key !== lastKey ? (arrival ? ' lift' : ' fade') : '') }, b.icon && glyph('mark ' + b.icon, b.icon), h('div', { class: 'words' }, h('p', { class: 'q' + (b.q.length <= 32 ? '' : b.q.length <= 60 ? ' mid' : ' long') }, b.q, counted && h('span', { class: 'step' }, b.n + ' of ' + b.of)), // a flag sentence is not a headline
+        b.sub && h('p', { class: 'sub' }, b.sub)), b.alt && h('div', { class: 'alts' }, b.alt()), b.ctl && h('div', { class: 'ctl' }, b.ctl()))].filter((n) => !!n));
     lastKey = b.key;
     el.querySelectorAll('.pick').forEach((p, i) => { if (i < 9)
         p.setAttribute('aria-keyshortcuts', String(i + 1)); });
@@ -1323,7 +1316,7 @@ async function doSend(r) {
 function replyStep(r) {
     const by = r.model === 'template' ? 'Written from the order in demo mode' : 'Drafted by ' + r.model;
     return { key: 'reply:' + r.id, icon: 'send', q: 'Send this reply?', sub: by + ' · edit it in the chat first if you like',
-        ctl: () => pick('Send on WhatsApp', () => doSend(r), { 'data-k': SEND_KEY }),
+        ctl: () => pick('Send on WhatsApp', () => doSend(r), { 'data-main': true }),
         alt: () => [alt('Write it again', async () => { if (await saveReply(r))
                 void doDraft(); }), alt('Later', () => { void saveReply(r); S.later.add(r.id); renderScreen(); })] };
 }
@@ -1339,17 +1332,15 @@ async function doConfirm() {
 /* ---------- keyboard and pointer ---------- */
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        if (document.querySelector('dialog[open]'))
-            return; // a modal (photo, export) closes itself; the chat stays
         if (S.sel || S.cust)
             goWaiting();
         return;
     }
-    // ⌘↵ presses whatever main action carries the hint (Confirm, Send); the draft textarea handles its own and marks it handled
+    // ⌘↵ presses the band's main action (Confirm, Send); the draft textarea handles its own and marks it handled
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
         if (!e.defaultPrevented) {
             e.preventDefault();
-            $('band').querySelector('[data-k]')?.click();
+            $('band').querySelector('[data-main]')?.click();
         }
         return;
     }

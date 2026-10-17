@@ -12,54 +12,62 @@
 .ref .lede{margin:0 0 22px;color:var(--muted)}
 .ref h2{margin:28px 0 4px;font-size:16px}
 /* timeline in the shared .dt-box: header row carries the scale, Today is a dashed line through every row */
-.tl{container-type:inline-size;margin-top:12px}
-.tl .hd,.tl summary{display:grid;grid-template-columns:28px minmax(120px,220px) minmax(0,1fr) 120px;align-items:center;gap:0 16px;padding:0 16px 0 12px}
-.tl .hd{min-height:38px;background:var(--wash);border-bottom:1px solid var(--line);font-size:13px;font-weight:500;color:var(--muted)}
-.tl .hd .track{height:38px}
-.tl .hd .from{position:absolute;left:0;top:50%;transform:translateY(-50%);white-space:nowrap}
-.tl .hd .now{position:absolute;top:50%;transform:translate(-50%,-50%);padding:1px 6px;border-radius:4px;background:var(--wash);color:var(--ink);white-space:nowrap}
-.tl .hd .when{font-weight:500}
-.tl .row+.row{border-top:1px solid var(--line)}
-.tl summary{min-height:56px;cursor:pointer;list-style:none}
-.tl summary::-webkit-details-marker{display:none}
-.tl summary:hover,.tl details[open] summary{background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
-.tl .chev{display:grid;place-items:center;width:28px;height:28px;color:var(--muted)}
-.tl .chev svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .16s ease-out}
-.tl details[open] .chev{color:var(--ink)}
-.tl details[open] .chev svg{transform:rotate(90deg)}
-.tl .who{min-width:0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tl .track{position:relative;height:56px}
-.tl .today{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed var(--line-strong);pointer-events:none}
-.tl .gap,.tl .over{position:absolute;top:27px;height:2px;transform-origin:left;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
-.tl .gap{background:var(--ink)}
-.tl .over{top:24px;height:8px;border-radius:4px;background:var(--eye)}
-.tl .dot,.tl .next{position:absolute;top:22px;width:12px;height:12px;margin-left:-6px;border-radius:50%;box-sizing:border-box}
-.tl .dot{background:var(--ink)}
-.tl .next{background:var(--paper);border:2px solid var(--ink)}
-.tl .when{justify-self:end;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
-.tl .when.late{padding:2px 8px;border-radius:6px;background:var(--eye);font-size:14px}
-.tl .basket{padding:4px 16px 18px calc(12px + 28px + 16px);background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
-.tl .why{margin:0;font-size:13px;color:var(--muted)}
-.tl .items{margin:8px 0 0;padding:0;list-style:none;columns:3 220px;column-gap:32px}
-.tl .items li{padding:3px 0;break-inside:avoid}
-.tl .items b{display:inline-block;min-width:3ch;margin-right:6px;font-variant-numeric:tabular-nums}
+.ftl{container-type:inline-size;margin-top:12px}
+.ftl .hd,.ftl summary{display:grid;grid-template-columns:28px minmax(120px,220px) minmax(0,1fr) 120px;align-items:center;gap:0 16px;padding:0 16px 0 12px}
+.ftl .hd{min-height:38px;background:var(--wash);border-bottom:1px solid var(--line);font-size:13px;font-weight:500;color:var(--muted)}
+.ftl .hd .track{height:38px}
+.ftl .hd .from{position:absolute;left:0;top:50%;transform:translateY(-50%);white-space:nowrap}
+.ftl .hd .now{position:absolute;top:50%;transform:translate(-50%,-50%);padding:1px 6px;border-radius:4px;background:var(--wash);color:var(--ink);white-space:nowrap}
+.ftl .hd .when{font-weight:500}
+.ftl .fr+.fr{border-top:1px solid var(--line)}
+.ftl summary{min-height:56px;cursor:pointer;list-style:none}
+.ftl summary:focus-visible{outline-offset:-3px}
+.ftl summary::-webkit-details-marker{display:none}
+.ftl .fr:hover,.ftl .fr[open]{background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
+.ftl .chev{display:grid;place-items:center;width:28px;height:28px;color:var(--muted)}
+.ftl .chev svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .16s ease-out}
+.ftl details[open] .chev{color:var(--ink)}
+.ftl details[open] .chev svg{transform:rotate(90deg)}
+.ftl .who{min-width:0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ftl .track{position:relative;height:56px}
+.ftl .today{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed var(--line-strong);pointer-events:none}
+.ftl .gap,.ftl .over{position:absolute;top:27px;height:2px;transform-origin:left;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
+.ftl .gap{background:var(--ink)}
+.ftl .over{top:24px;height:8px;border-radius:4px;background:var(--eye)}
+.ftl .dot,.ftl .next{position:absolute;top:22px;width:12px;height:12px;margin-left:-6px;border-radius:50%;box-sizing:border-box}
+.ftl .dot{background:var(--ink)}
+.ftl .next{background:var(--paper);border:2px solid var(--ink)}
+.ftl .when{justify-self:end;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ftl .when.late{padding:2px 8px;border-radius:6px;background:var(--eye);font-size:14px}
+.ftl .basket{padding:4px 16px 18px calc(12px + 28px + 16px);background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
+.ftl .why{margin:0;font-size:13px;color:var(--muted)}
+.ftl .items{margin:8px 0 0;padding:0;list-style:none;max-width:420px}
+.ftl .items li{display:flex;gap:12px;padding:5px 0;font-size:14px;line-height:1.3}
+.ftl .items li+li{border-top:1px solid var(--line)}
+.ftl .items b{flex:none;width:3ch;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
 /* narrow box: name and date on one line, the track full width under them */
 @container (max-width:620px){
-  .tl .hd,.tl summary{grid-template-columns:28px minmax(0,1fr) auto;grid-template-areas:"c who when" ". track track";padding:0 12px}
-  .tl summary{padding-top:10px}
-  .tl .hd{grid-template-areas:"c track track"}
-  .tl .hd>.who,.tl .hd>.when{display:none}
-  .tl .chev{grid-area:c}.tl .who{grid-area:who}.tl .when{grid-area:when}.tl .track{grid-area:track}
-  .tl summary .track{height:36px}
-  .tl summary .gap{top:17px}.tl summary .over{top:14px}.tl summary .dot,.tl summary .next{top:12px}
-  .tl .basket{padding-left:52px}
+  .ftl .hd,.ftl summary{grid-template-columns:28px minmax(0,1fr) auto;grid-template-areas:"c who when" ". track track";padding:0 12px}
+  .ftl summary{padding-top:10px}
+  .ftl .hd{grid-template-areas:"c track track"}
+  .ftl .hd>.who,.ftl .hd>.when{display:none}
+  .ftl .chev{grid-area:c}.ftl .who{grid-area:who}.ftl .when{grid-area:when}.ftl .track{grid-area:track}
+  .ftl summary .track{height:36px}
+  .ftl summary .gap{top:17px}.ftl summary .over{top:14px}.ftl summary .dot,.ftl summary .next{top:12px}
+  .ftl .basket{padding-left:52px}
 }
+.tabs{display:flex;gap:4px;margin:0 0 16px;border-bottom:1px solid var(--line)}
+.tabs button{margin-bottom:-1px;padding:10px 14px;border:0;border-bottom:2px solid transparent;background:none;font:inherit;font-weight:500;color:var(--muted);cursor:pointer}
+.tabs button span{margin-left:8px;font-size:13px;font-weight:400}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected=true]{color:var(--ink);font-weight:600;border-bottom-color:var(--eye)}
+.pane[hidden]{display:none}
 .key{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 0;font-size:13px;color:var(--muted)}
 .key i{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%;vertical-align:-1px;background:var(--ink)}
 .key i.o{background:var(--paper);border:2px solid var(--ink);box-sizing:border-box}
 .key i.l{width:16px;height:8px;border-radius:4px;background:var(--eye)}
 @keyframes grow{from{transform:scaleX(0)}}
-@media (prefers-reduced-motion:reduce){.tl .gap,.tl .over{animation:none}}
+@media (prefers-reduced-motion:reduce){.ftl .gap,.ftl .over{animation:none}}
 .dt .q{width:40%}
 @container (max-width:640px){.dt td.q{display:none}}
 .q .bar{display:block;height:8px;border-radius:4px;background:color-mix(in srgb,var(--eye) 70%,var(--paper));width:var(--w);transform-origin:left;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
@@ -95,7 +103,7 @@
   </nav>
 </aside>
 <main class="ref">
-  <div class="head"><h1 class="toon">Forecast</h1><div class="badges" id="model" hidden></div></div>
+  <div class="head"><h1 class="toon">Forecast</h1><div class="badges" id="fmodel" hidden></div></div>
   <p class="lede" id="lede">Who should order soon, and what they usually ask for.</p>
   <div id="out">Loading the forecast…</div>
   <footer class="about" id="about" hidden><p id="fb"></p></footer>
@@ -108,7 +116,7 @@ const draw = ([f, cs]) => {
   const name = Object.fromEntries(cs.map((c) => [c.id, c.name]));
   const any = f.customers[0];
   document.getElementById('lede').textContent = `When each customer should order next. Click a name to see what they usually ask for.`;
-  if (any) { const m = document.getElementById('model'); m.innerHTML = `<span class="mb" title="The model that made this forecast"><span><i class="led" aria-hidden="true"></i><b>${esc(any.model)}</b></span>` + (any.trained_on ? `<span>Trained on&nbsp;<span class="amd">${esc(any.trained_on)}</span></span>` : '') + `<span>Runs on ${esc(any.device ? any.device.toUpperCase() : 'unknown device')}</span></span><span class="syn">Synthetic data</span>`; m.hidden = false; }
+  if (any) { const m = document.getElementById('fmodel'); m.innerHTML = `<span class="mb" title="The model that made this forecast"><span><i class="led" aria-hidden="true"></i><b>${esc(any.model)}</b></span>` + (any.trained_on ? `<span>Trained on&nbsp;<span class="amd">${esc(any.trained_on)}</span></span>` : '') + `<span>Runs on ${esc(any.device ? any.device.toUpperCase() : 'unknown device')}</span></span><span class="syn">Synthetic data</span>`; m.hidden = false; }
   const DAY = 86_400_000, t0 = new Date(f.today + 'T12:00:00').getTime();
   const iso = (ms) => new Date(ms).toISOString().slice(0, 10);
   const rows = f.customers.map((p) => {
@@ -119,16 +127,15 @@ const draw = ([f, cs]) => {
   const x = (ms) => ((ms - lo) / (hi - lo) * 100).toFixed(2) + '%';
   const span = (cls, a, b) => `<i class="${cls}" style="left:${x(a)};width:calc(${x(b)} - ${x(a)})"></i>`;
   const lateDays = (p) => p.days_since_last - Math.round(p.expected_gap_days);
-  document.getElementById('out').innerHTML = (rows.length ? `<h2>Who orders next</h2>
-<p class="key"><span><i></i>Last order</span><span><i class="o"></i>Next order expected</span><span><i class="l"></i>Late</span></p>
-<div class="tl dt-box"><div class="hd" aria-hidden="true"><span></span><span class="who">Customer</span><span class="track"><span class="from">${day(iso(lo + DAY))}</span><span class="today" style="left:${x(t0)}"></span><span class="now" style="left:${x(t0)}">Today</span></span><span class="when">Next order</span></div>` +
+  document.getElementById('out').innerHTML = `<div class="tabs" role="tablist"><button type="button" role="tab" id="t-who" aria-selected="true" aria-controls="p-who">Who orders next</button><button type="button" role="tab" id="t-demand" aria-selected="false" aria-controls="p-demand">Expected demand<span>next 7 days</span></button></div><div class="pane" id="p-who">` + (rows.length ? `<p class="key"><span><i></i>Last order</span><span><i class="o"></i>Next order expected</span><span><i class="l"></i>Late</span></p>
+<div class="ftl dt-box"><div class="hd" aria-hidden="true"><span></span><span class="who">Customer</span><span class="track"><span class="from">${day(iso(lo + DAY))}</span><span class="today" style="left:${x(t0)}"></span><span class="now" style="left:${x(t0)}">Today</span></span><span class="when">Next order</span></div>` +
     rows.map(({ p, last, next }) => {
       const late = p.days_overdue > 0;
-      return `<details class="row"><summary><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span><span class="who">${esc(name[p.customer_id])}</span><span class="track" aria-hidden="true">${span('gap', last, next)}<i class="today" style="left:${x(t0)}"></i>${late ? span('over', next, t0) : ''}<i class="dot" style="left:${x(last)}"></i><i class="next" style="left:${x(next)}"></i></span><span class="when${late ? ' late' : ''}">${late ? `${lateDays(p)} days late` : day(p.next_order_date)}</span></summary>
-<div class="basket"><p class="why">Usually orders every ${Math.round(p.expected_gap_days)} days · last order ${p.days_since_last} days ago · likely order:</p><ul class="items">${p.basket.map((b) => `<li><b>${b.qty} ×</b>${esc(b.name)}</li>`).join('')}</ul></div></details>`;
-    }).join('') + `</div>` : `<p class="none">No forecast yet.</p>`) +
-    `<h2>Expected demand, next 7 days</h2>` + (f.demand_7d.length ? `<div class="dt-box" style="margin-top:12px"><table class="dt"><thead><tr><th scope="col">Product</th><th><span class="sr">Share</span></th><th scope="col" class="n">Qty</th><th scope="col" class="n">Customers</th></tr></thead><tbody>${f.demand_7d.map((d) => `<tr><td class="lead b">${esc(d.name)}</td><td class="q" aria-hidden="true"><span class="bar" style="--w:${(d.qty / f.demand_7d[0].qty * 100).toFixed(1)}%"></span></td><td class="n b" data-l="Qty">${d.qty}</td><td class="n mu" data-l="Customers">${d.customers}</td></tr>`).join('')}</tbody></table></div>` : `<p class="none">No orders expected in the next 7 days.</p>`) +
-    (f.failed.length ? `<p class="none">Could not forecast: ${f.failed.map((id) => esc(name[id] || id)).join(', ')}</p>` : '');
+      return `<details class="fr"><summary><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span><span class="who">${esc(name[p.customer_id])}</span><span class="track" aria-hidden="true">${span('gap', last, next)}<i class="today" style="left:${x(t0)}"></i>${late ? span('over', next, t0) : ''}<i class="dot" style="left:${x(last)}"></i><i class="next" style="left:${x(next)}"></i></span><span class="when${late ? ' late' : ''}">${late ? `${lateDays(p)} days late` : day(p.next_order_date)}</span></summary>
+<div class="basket"><p class="why">Usually orders every ${Math.round(p.expected_gap_days)} days · last order ${p.days_since_last} days ago · likely order:</p><ul class="items">${p.basket.map((b) => `<li><b>${b.qty}×</b>${esc(b.name)}</li>`).join('')}</ul></div></details>`;
+    }).join('') + `</div>` : `<p class="none">No forecast yet.</p>`) + `</div><div class="pane" id="p-demand" hidden>` + (f.demand_7d.length ? `<div class="dt-box" style="margin-top:12px"><table class="dt"><thead><tr><th scope="col">Product</th><th><span class="sr">Share</span></th><th scope="col" class="n">Qty</th><th scope="col" class="n">Customers</th></tr></thead><tbody>${f.demand_7d.map((d) => `<tr><td class="lead b">${esc(d.name)}</td><td class="q" aria-hidden="true"><span class="bar" style="--w:${(d.qty / f.demand_7d[0].qty * 100).toFixed(1)}%"></span></td><td class="n b" data-l="Qty">${d.qty}</td><td class="n mu" data-l="Customers">${d.customers}</td></tr>`).join('')}</tbody></table></div>` : `<p class="none">No orders expected in the next 7 days.</p>`) +
+    (f.failed.length ? `<p class="none">Could not forecast: ${f.failed.map((id) => esc(name[id] || id)).join(', ')}</p>` : '') + `</div>`;
+  for (const t of document.querySelectorAll('[role=tab]')) t.onclick = () => { for (const o of document.querySelectorAll('[role=tab]')) { const on = o === t; o.setAttribute('aria-selected', on); document.getElementById(o.getAttribute('aria-controls')).hidden = !on; } };
 };
 Promise.all([fetch('/api/predictions').then((r) => r.json()), fetch('/api/customers').then((r) => r.json())]).then(draw)
   .catch(() => { document.getElementById('out').textContent = 'Could not load the forecast. Reload the page.'; });
