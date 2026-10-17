@@ -30,7 +30,7 @@ async function api(path, opts) {
     }
     catch { /* not json */ }
     if (!r.ok)
-        throw new Error(((j && j.error) || 'Request failed (' + r.status + ').') + (j && j.reasons ? ' ' + j.reasons.join(' ') : ''));
+        throw new Error(((j && j.error) || (r.status === 504 ? 'The server took too long. Try again.' : 'Request failed (' + r.status + ').')) + (j && j.reasons ? ' ' + j.reasons.join(' ') : ''));
     return j;
 }
 const send = (method, path, body) => api(path, { method, body: body === undefined ? undefined : JSON.stringify(body) });
@@ -628,9 +628,10 @@ async function loadThread(cid) {
         if (!Array.isArray(t) || JSON.stringify(t) === JSON.stringify(S.thread[cid]))
             return;
         S.thread[cid] = t;
+        // a stored trace keeps each 'run' frame next to its 'ok': a finished read has no spinner row
         for (const p of t)
             if (p.trace && p.trace.length && !S.trace[p.id])
-                S.trace[p.id] = { steps: p.trace, done: true, open: false, es: null };
+                S.trace[p.id] = { steps: p.trace.filter((x) => x.status !== 'run'), done: true, open: false, es: null };
         if (S.detail && S.detail.message.customer_id === cid)
             renderScreen();
     }
@@ -643,7 +644,9 @@ function chip(o, n = 1, id = '') {
     const st = o.status === 'confirmed' ? 'Confirmed' : o.clean ? 'Draft' : 'Check';
     if (!o.lines && o.status !== 'confirmed')
         return h('p', { class: 'noorder' }, 'No order in this message');
-    return h('button', { type: 'button', class: 'ticket ' + st.toLowerCase(), title: 'Open this order', onclick: id ? () => { void select(id, true); } : null }, glyph('tk-ic', st === 'Confirmed' ? 'check' : st === 'Check' ? 'alert' : 'draft'), h('span', { class: 'tk-t' }, h('b', null, 'Order'), h('span', null, o.lines + (o.lines === 1 ? ' line' : ' lines') + (n > 1 ? ' · from ' + n + ' messages' : ''))), h('span', { class: 'tk-st' }, st === 'Check' ? 'To check' : st));
+    return h('button', { type: 'button', class: 'ticket ' + st.toLowerCase(), title: 'Open this order', onclick: id ? () => { if (o.id)
+            S.done.add(o.id); void select(id, true).then(() => setView('detail')); } : null }, // narrow screens: the order is its own screen; a confirmed one shows its recap, not the customer card
+    glyph('tk-ic', st === 'Confirmed' ? 'check' : st === 'Check' ? 'alert' : 'draft'), h('span', { class: 'tk-t' }, h('b', null, 'Order'), h('span', null, o.lines + (o.lines === 1 ? ' line' : ' lines') + (n > 1 ? ' · from ' + n + ' messages' : ''))), h('span', { class: 'tk-st' }, st === 'Check' ? 'To check' : st));
 }
 const pastOf = (m, o) => ({ id: m.id, channel: m.channel, received_at: m.received_at, text: m.text, media_url: m.media_url || null, order: o ? { id: o.id, status: o.status, lines: lines(o).filter((l) => l.state !== 'removed').length, clean: !!o.clean, message_ids: o.message_ids } : null });
 // WhatsApp-style: the time sits in the bubble, the day once above the messages of that day

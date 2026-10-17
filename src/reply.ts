@@ -86,8 +86,10 @@ export async function draftReply(db: Db, svc: Services, messageId: string): Prom
   let text: string, model: string;
   if (svc.mock) { text = templateReply(o); model = "template"; }
   else {
-    try { [text] = await svc.chat.generate([{ role: "system", content: REPLY_SYSTEM }, { role: "user", content: replyContext(o, cust.name, cust.terms) }]); }
-    catch (e) { throw new ReplyError(502, e instanceof ModelError ? "The model did not answer. Try again." : String(e)); }
+    // the proxy in front answers 504 after ~100 s: give up first, with a message the UI can show (a 429 wait alone is 30 to 45 s)
+    const slow = new Promise<never>((_, no) => setTimeout(() => no(new ModelError(0, "slow")), 70_000).unref());
+    try { [text] = await Promise.race([svc.chat.generate([{ role: "system", content: REPLY_SYSTEM }, { role: "user", content: replyContext(o, cust.name, cust.terms) }]), slow]); }
+    catch (e) { throw new ReplyError(502, e instanceof ModelError ? "The model is slow right now. Try again." : String(e)); }
     text = text.trim().replace(/^["«]|["»]$/g, "");
     model = svc.chat.name;
     if (!text) throw new ReplyError(502, "The model gave an empty reply. Try again.");

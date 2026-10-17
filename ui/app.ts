@@ -67,7 +67,7 @@ async function api<T>(path: string, opts?: ReqOpts): Promise<T> {
   const r = await fetch('/api' + path, opts && { method: opts.method, headers: { 'Content-Type': 'application/json' }, body: opts.body });
   let j: { error?: string; reasons?: string[] } | null = null;
   try { j = await r.json(); } catch { /* not json */ }
-  if (!r.ok) throw new Error(((j && j.error) || 'Request failed (' + r.status + ').') + (j && j.reasons ? ' ' + j.reasons.join(' ') : ''));
+  if (!r.ok) throw new Error(((j && j.error) || (r.status === 504 ? 'The server took too long. Try again.' : 'Request failed (' + r.status + ').')) + (j && j.reasons ? ' ' + j.reasons.join(' ') : ''));
   return j as T;
 }
 const send = <T>(method: string, path: string, body?: unknown): Promise<T> => api<T>(path, { method, body: body === undefined ? undefined : JSON.stringify(body) });
@@ -546,16 +546,17 @@ async function loadThread(cid: string): Promise<void> {
     const t = await api<Past[]>('/customers/' + cid + '/messages');
     if (!Array.isArray(t) || JSON.stringify(t) === JSON.stringify(S.thread[cid])) return;
     S.thread[cid] = t;
-    for (const p of t) if (p.trace && p.trace.length && !S.trace[p.id]) S.trace[p.id] = { steps: p.trace, done: true, open: false, es: null };
+    // a stored trace keeps each 'run' frame next to its 'ok': a finished read has no spinner row
+    for (const p of t) if (p.trace && p.trace.length && !S.trace[p.id]) S.trace[p.id] = { steps: p.trace.filter((x) => x.status !== 'run'), done: true, open: false, es: null };
     if (S.detail && S.detail.message.customer_id === cid) renderScreen();
   } catch { /* no thread: the message screen stays as it was */ }
 }
 // the order a message turned into, docked under it as a ticket stub hooked to its words; a message with no order gets a quiet note
-function chip(o: { status: string; lines: number; clean: boolean } | null, n = 1, id = ''): HTMLElement | false {
+function chip(o: { id?: string; status: string; lines: number; clean: boolean } | null, n = 1, id = ''): HTMLElement | false {
   if (!o) return false;
   const st = o.status === 'confirmed' ? 'Confirmed' : o.clean ? 'Draft' : 'Check';
   if (!o.lines && o.status !== 'confirmed') return h('p', { class: 'noorder' }, 'No order in this message');
-  return h('button', { type: 'button', class: 'ticket ' + st.toLowerCase(), title: 'Open this order', onclick: id ? () => { void select(id, true); } : null },
+  return h('button', { type: 'button', class: 'ticket ' + st.toLowerCase(), title: 'Open this order', onclick: id ? () => { if (o.id) S.done.add(o.id); void select(id, true).then(() => setView('detail')); } : null }, // narrow screens: the order is its own screen; a confirmed one shows its recap, not the customer card
     glyph('tk-ic', st === 'Confirmed' ? 'check' : st === 'Check' ? 'alert' : 'draft'),
     h('span', { class: 'tk-t' }, h('b', null, 'Order'), h('span', null, o.lines + (o.lines === 1 ? ' line' : ' lines') + (n > 1 ? ' · from ' + n + ' messages' : ''))),
     h('span', { class: 'tk-st' }, st === 'Check' ? 'To check' : st));
