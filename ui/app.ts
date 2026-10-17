@@ -723,10 +723,12 @@ function startTrace(id: string, fresh = false, onOpen?: () => void): Promise<voi
     let opened = false;
     const open = (): void => { if (!opened) { opened = true; onOpen?.(); } };
     es.onopen = open; setTimeout(open, 1500);
-    const end = (): void => { es.close(); t.es = null; t.done = true; if (!t.steps.length) delete S.trace[id]; paintTrace(id); res(); };
+    const end = (): void => { es.close(); t.es = null; t.done = true; t.steps = t.steps.filter((x) => x.status !== 'run'); // a finished read has no spinner left (a replayed 'run' frame can land after its 'ok')
+      if (!t.steps.length) delete S.trace[id]; paintTrace(id); res(); };
     es.addEventListener('step', (e) => {
       try {
         const s = JSON.parse((e as MessageEvent).data) as Step;
+        if (s.status === 'run' && t.steps.some((x) => x.kind === s.kind && x.status !== 'run')) return; // late 'run' frame of a step already finished
         const i = t.steps.map((x) => x.kind + x.status).lastIndexOf(s.kind + 'run');
         if (i >= 0 && s.status !== 'run') t.steps[i] = s; else t.steps.push(s);
         s.fresh = i < 0 || s.status === 'run';

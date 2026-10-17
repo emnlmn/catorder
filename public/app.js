@@ -820,11 +820,21 @@ function startTrace(id, fresh = false, onOpen) {
         } };
         es.onopen = open;
         setTimeout(open, 1500);
-        const end = () => { es.close(); t.es = null; t.done = true; if (!t.steps.length)
-            delete S.trace[id]; paintTrace(id); res(); };
+        const end = () => {
+            es.close();
+            t.es = null;
+            t.done = true;
+            t.steps = t.steps.filter((x) => x.status !== 'run'); // a finished read has no spinner left (a replayed 'run' frame can land after its 'ok')
+            if (!t.steps.length)
+                delete S.trace[id];
+            paintTrace(id);
+            res();
+        };
         es.addEventListener('step', (e) => {
             try {
                 const s = JSON.parse(e.data);
+                if (s.status === 'run' && t.steps.some((x) => x.kind === s.kind && x.status !== 'run'))
+                    return; // late 'run' frame of a step already finished
                 const i = t.steps.map((x) => x.kind + x.status).lastIndexOf(s.kind + 'run');
                 if (i >= 0 && s.status !== 'run')
                     t.steps[i] = s;
