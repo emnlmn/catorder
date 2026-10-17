@@ -48,9 +48,10 @@ td.sku{color:var(--muted);white-space:nowrap}
   </a>
   <nav class="nav" aria-label="Sections">
     <a class="navi" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4M6 5h12l2 8v6H4v-6z"/></svg><span>Inbox</span></a>
+    <a class="navi" href="forecast.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 16l4-5 4 3 6-8"/></svg><span>Forecast</span></a>
+    <hr class="sep">
     <a class="navi" href="customers.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M21 19v-1a4 4 0 0 0-3-3.9M15 4.1a3.5 3.5 0 0 1 0 6.8"/></svg><span>Customers</span></a>
     <a class="navi" href="orders.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/></svg><span>Orders</span></a>
-    <a class="navi" href="forecast.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 16l4-5 4 3 6-8"/></svg><span>Forecast</span></a>
     <a class="navi on" href="catalog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg><span>Catalog</span></a>
   </nav>
 </aside>
@@ -87,5 +88,6 @@ document.getElementById('syncBtn').onclick = async (e) => {
   b.disabled = false; b.classList.remove('busy'); t.textContent = 'Sync now';
 };
 </script>
+<script src="side.js"></script>
 </body>
 </html>

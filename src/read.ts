@@ -205,15 +205,18 @@ export async function readMessage(db: Db, svc: Services, messageId: string, forc
     message = db.prepare("SELECT * FROM messages WHERE id=?").get(last) as unknown as Message;
   trace.begin(messageId);
   const step = (s: trace.StepInput) => trace.push(messageId, s);
+  const keep = () => db.prepare("INSERT OR REPLACE INTO traces (message_id, steps) VALUES (?,?)").run(messageId, JSON.stringify(trace.snapshot(messageId).steps));
   try {
     const out = await run(db, svc, message, step, force);
     if (out.error) step({ kind: "error", status: "warn", title: out.error });
     trace.finish(messageId, { order_id: out.order?.id ?? null, ...(out.error ? { error: out.error } : {}) });
+    keep();
     return out;
   } catch (e) {
     const error = e instanceof ReadError ? e.message : "The read failed.";
     step({ kind: "error", status: "warn", title: error });
     trace.finish(messageId, { order_id: null, error });
+    keep();
     throw e;
   }
 }

@@ -19,7 +19,7 @@ interface Health { model?: string; transcribe_model?: string; hardware?: string;
 interface Who { id: string; name: string }
 interface Summary { id: string; customer: Who; channel: string; received_at: string; preview: string; order: { id: string; status: string; clean: boolean } | null }
 interface Detail {
-  message: { id: string; customer_id?: string; customer?: Who; channel: string; received_at: string; text: string | null; media_url?: string | null };
+  message: { id: string; sender?: string; customer_id?: string; customer?: Who; channel: string; received_at: string; text: string | null; media_url?: string | null };
   order: Order | null;
   reply?: Reply | null;
 }
@@ -30,7 +30,8 @@ interface Product { sku: string; name: string; pack_label: string }
 interface ReadResult { order: Order | null; reading?: Reading | null; runs?: Run[]; error?: string }
 interface Step { at: number; kind: string; status: 'run' | 'ok' | 'warn'; title: string; detail?: string; fresh?: boolean }
 interface Trace { steps: Step[]; done: boolean; open: boolean; es: EventSource | null }
-interface Past { id: string; channel: string; received_at: string; text: string | null; media_url: string | null; order: { id: string; status: string; lines: number; clean: boolean; message_ids?: string[] } | null; reply?: Reply | null }
+interface Past { id: string; channel: string; received_at: string; text: string | null; media_url: string | null; order: { id: string; status: string; lines: number; clean: boolean; message_ids?: string[] } | null; reply?: Reply | null;
+  words?: { text: string; quotes: Pick<Line, 'id' | 'quote' | 'quote_start' | 'quote_end'>[] } | null; trace?: Step[] | null }
 interface ReqOpts { method?: string; body?: string }
 type Attrs = Record<string, unknown>;
 type Kid = Node | string | number | false | null | undefined | Kid[];
@@ -219,7 +220,8 @@ async function pollInbox(): Promise<void> {
     const fresh = next.find((m) => isLive(m.id) && !S.messages.some((x) => x.id === m.id));
     if (sameList(next, S.messages) && !S.messages.some((m) => isReading(m.id, !!m.order, m.received_at))) return; // nothing new: no re-render, no flicker
     const cid = S.detail && S.detail.message.customer_id;
-    const grew = !!cid && next.filter((m) => m.customer.id === cid).length !== S.messages.filter((m) => m.customer.id === cid).length;
+    const mine = (l: Summary[]): string => JSON.stringify(l.filter((m) => m.customer.id === cid));
+    const grew = !!cid && mine(next) !== mine(S.messages); // a new message, or one of them just got its order
     S.messages = next; renderMessages();
     if (grew && cid) void loadThread(cid);
     if (fresh && !S.sel) void select(fresh.id); // a live message lands while the waiting screen is up: show it
@@ -234,13 +236,23 @@ setInterval(() => { void pollInbox(); }, 3000);
 setInterval(() => { void pollDetail(); }, 2000);
 let keepId = ''; // a bubble clicked inside the open chat: the conversation stays where it is, only the order side changes
 async function select(id: string, keep = false): Promise<void> {
+  document.body.classList.remove('idle');
   S.sel = id; S.ack = new Set(); S.find = S.row = null;
+  remember(id);
   keepId = keep ? id : '';
   if (!keep) window.scrollTo(0, 0);
   renderInbox();
   await loadDetail();
 }
+// the open chat lives in ?m=, so a refresh reopens it
+function remember(id: string | null): void {
+  const u = new URL(location.href);
+  if (id) u.searchParams.set('m', id); else u.searchParams.delete('m');
+  history.replaceState(null, '', u);
+}
 function goWaiting(): void {
+  remember(null);
+  document.body.classList.add('idle');
   S.sel = null; S.detail = null; S.find = S.row = null;
   renderInbox(); renderScreen();
 }
@@ -290,9 +302,9 @@ function renderInbox(): void {
   $('inboxCount').textContent = String(cs.filter((ms) => ms.some(todoMsg)).length || '');
   const kept = box.contains(document.activeElement) ? (document.activeElement as HTMLElement).dataset.id : undefined;
   box.replaceChildren(...(cs.length ? cs.map(inboxRow) : [h('p', { class: 'empty' }, 'No messages.')]));
-  if (kept) (box.querySelector('[data-id="' + kept + '"]') as HTMLElement | null)?.focus(); // a poll must not drop the keyboard's place
+  if (kept) (box.querySelector('[data-id="' + kept + '"]') as HTMLElement | null)?.focus({ preventScroll: true }); // a poll must not drop the keyboard's place
 }
-function renderMessages(): void { renderInbox(); if (!S.sel) renderScreen(); }
+function renderMessages(): void { document.body.classList.toggle('idle', !S.sel); renderInbox(); if (!S.sel) renderScreen(); }
 function toggleInbox(open: boolean = !S.open): void {
   S.open = open;
   $('inbox').hidden = !open;
@@ -307,10 +319,10 @@ function renderScreen(): void {
   const old = document.getElementById('msgs'), same = !!d && (d.message.id === lastMsg || d.message.id === keepId), y = window.scrollY;
   const pin = same && !!old && old.scrollHeight - old.scrollTop - old.clientHeight < 48, top = old ? old.scrollTop : 0;
   lastMsg = d ? d.message.id : ''; if (same) keepId = '';
-  const ae = document.activeElement, typing = ae instanceof HTMLTextAreaElement && ae.closest('.out.draft') ? [ae.selectionStart, ae.selectionEnd] : null; // a re-render must not take the draft from under the cursor
+  const ae = document.activeElement, typing = ae instanceof HTMLTextAreaElement && ae.closest('.out.draft') ? [ae.dataset.reply, ae.selectionStart, ae.selectionEnd] as const : null; // a re-render must not take the draft from under the cursor
   $('screen').replaceChildren(...((d ? [orderScreen(d, asked)] : waiting()) as Node[]));
   paintBand(b);
-  if (typing) { const t = document.querySelector<HTMLTextAreaElement>('.out.draft textarea'); if (t) { t.focus(); t.setSelectionRange(typing[0], typing[1]); } }
+  if (typing) { const t = draftBox(typing[0]); if (t) { t.focus({ preventScroll: true }); t.setSelectionRange(typing[1], typing[2]); } }
   fitBand();
   const box = document.getElementById('msgs');
   if (same && box && !pin) { box.scrollTop = top; window.scrollTo(0, y); } else if (same && box) { box.scrollTop = box.scrollHeight; window.scrollTo(0, y); } else scrollMsgs();
@@ -327,8 +339,7 @@ function waiting(): Kid[] {
       h('a', { class: 'join', href: wa, target: '_blank', rel: 'noopener' },
         h('img', { src: 'join-qr.svg', alt: 'QR code that opens WhatsApp with “' + JOIN + '”' })),
       h('a', { class: 'num toon', href: wa, target: '_blank', rel: 'noopener' }, h('img', { class: 'wa', src: 'whatsapp.svg', alt: 'WhatsApp' }), WHATSAPP),
-      h('p', {}, 'A text, a voice note or a photo of a list.'),
-      h('p', { class: 'first' }, 'First time? Send ', h('b', {}, JOIN))),
+      h('ol', { class: 'steps' }, h('li', {}, h('span', {}, 'Scan the code or message the number')), h('li', {}, h('span', {}, 'First time? Send ', h('b', {}, JOIN))), h('li', {}, h('span', {}, 'Send an order: text, voice note or photo')))),
   ];
 }
 
@@ -346,7 +357,8 @@ function highlighted(text: string, ls: Line[], asked: string | undefined, fresh:
     const l = g[0], ids = g.map((x) => x.id);
     if (l.quote_start < pos) continue;
     if (l.quote_start > pos) out.push(text.slice(pos, l.quote_start));
-    out.push(h('span', { class: asked && ids.includes(asked) ? 'now' + (fresh ? ' wipe' : '') : null, 'data-line': ids.join(' '), onmouseenter: () => ids.forEach((i) => link(i, true)), onmouseleave: () => ids.forEach((i) => link(i, false)) }, l.quote));
+    out.push(h('span', { class: asked && ids.includes(asked) ? 'now' + (fresh ? ' wipe' : '') : null, 'data-line': ids.join(' '), onmouseenter: () => ids.forEach((i) => link(i, true)), onmouseleave: () => ids.forEach((i) => link(i, false)),
+      onclick: () => document.querySelector('.panel .row[data-line="' + ids[0] + '"]')?.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }) }, l.quote));
     pos = l.quote_end;
   }
   if (pos < text.length) out.push(text.slice(pos));
@@ -484,6 +496,7 @@ async function loadThread(cid: string): Promise<void> {
     const t = await api<Past[]>('/customers/' + cid + '/messages');
     if (!Array.isArray(t) || JSON.stringify(t) === JSON.stringify(S.thread[cid])) return;
     S.thread[cid] = t;
+    for (const p of t) if (p.trace && p.trace.length && !S.trace[p.id]) S.trace[p.id] = { steps: p.trace, done: true, open: false, es: null };
     if (S.detail && S.detail.message.customer_id === cid) renderScreen();
   } catch { /* no thread: the message screen stays as it was */ }
 }
@@ -514,18 +527,26 @@ let curAsked = '';
 const unfolded = new Set<string>(); // orders whose long thread the operator opened
 function segWords(p: Past, o: Order | null): Kid[] | null {
   const sg = o && p.order && p.order.id === o.id && (o.segments || []).find((x) => x.message_id === p.id);
-  if (!o || !sg) return null;
+  if (!o || !sg) return p.words ? highlighted(p.words.text, p.words.quotes as Line[], undefined, false) : null;
   const ls = lines(o).filter((l) => l.quote_start >= sg.start && l.quote_end <= sg.end).map((l) => ({ ...l, quote_start: l.quote_start - sg.start, quote_end: l.quote_end - sg.start }));
   return highlighted(o.reading.slice(sg.start, sg.end), ls, curAsked, false);
+}
+// a voice note that is not open still shows what it is: a small play mark and its own shape, so nobody has to click to find out
+function miniVoice(p: Past): HTMLElement {
+  if (!peaks[p.id] && p.media_url) void loadPeaks(p.id, p.media_url);
+  const pk = peaks[p.id] || seededPeaks(p.id);
+  return h('span', { class: 'vm', 'aria-label': 'Voice note', role: 'img' }, glyph('vm-b', 'play'),
+    h('span', { class: 'vm-w' }, Array.from({ length: 24 }, (_, i) => h('i', { style: 'height:' + Math.round(pk[Math.floor(i * BARS / 24)] * 100) + '%' }))));
 }
 function bubble(p: Past, o: Order | null = null, solo = true): HTMLElement {
   const media = p.channel === 'whatsapp' ? '' : CHANNEL[p.channel] || '';
   return h('div', { class: 'msg', 'data-msg': p.id },
-    h('button', { type: 'button', class: 'bub', title: 'Open this message', onclick: () => { void select(p.id, true); } },
-      media && h('b', { class: 'bl' }, media),
+    h('div', { class: 'bub' },
+      p.channel === 'voice' && p.media_url ? miniVoice(p) : media && h('b', { class: 'bl' }, media),
       p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text),
       stamp(p.channel, p.received_at)),
-    solo && chip(p.order, 1, p.id));
+    solo && chip(p.order, 1, p.id),
+    !p.order && isReading(p.id, false, p.received_at) && thinking('')); // a live message landing under another open order: show it is being read
 }
 // the whole conversation, oldest first; the open message is its full self (quotes lit, player, photo), the rest are one click away
 function threadEl(m: Detail['message'], o: Order | null, open: (solo: boolean) => Kid[]): HTMLElement {
@@ -548,7 +569,7 @@ function threadEl(m: Detail['message'], o: Order | null, open: (solo: boolean) =
   return h('div', { id: 'msgs', class: 'msgs', role: 'log', 'aria-label': 'Conversation' },
     groups.map((g) => {
       const solo = g.length === 1, ord = g[g.length - 1].order;
-      const item = (p: Past): Kid[] => [day(p), ...(p.id === m.id ? open(solo) : [bubble(p, o, solo), p.reply && p.reply.status === 'sent' && replyEl(p.reply, p.id)])];
+      const item = (p: Past): Kid[] => [day(p), ...(p.id === m.id ? open(solo) : [bubble(p, o, solo), traceEl(p.id), replyEl(p.reply, p.id)])];
       if (solo) return g.map(item);
       // a long order folds to its first and last two messages (and the open one); the fold says how many it holds
       const oid = ord ? ord.id : '', keep = (i: number): boolean => g.length <= 5 || unfolded.has(oid) || i < 2 || i >= g.length - 2 || g[i].id === m.id;
@@ -567,10 +588,10 @@ function threadEl(m: Detail['message'], o: Order | null, open: (solo: boolean) =
 }
 // our side of the chat, on the right: the reply being written, the draft to edit, or what was sent
 function replyEl(r: Reply | null | undefined, msgId: string): HTMLElement | false {
-  if (S.drafting === msgId) return h('div', { class: 'msg out rise', role: 'status' }, h('span', { class: 'think-b' }, 'Writing the reply', dots()));
+  if (S.drafting === msgId) return h('div', { class: 'msg out rise', role: 'status' }, h('span', { class: 'think-b' }, cat(true), 'Writing the reply', scribble('write')));
   if (!r) return false;
   if (r.status === 'draft') {
-    const ta = h('textarea', { class: 'said', rows: 2, 'aria-label': 'Reply to the customer, not sent yet',
+    const ta = h('textarea', { class: 'said', rows: 2, 'data-reply': r.id, 'aria-label': 'Reply to the customer, not sent yet',
       oninput: () => { S.typed[r.id] = ta.value; },
       onkeydown: (e: KeyboardEvent) => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); void doSend(r); } } }) as HTMLTextAreaElement;
     ta.value = S.typed[r.id] ?? r.text;
@@ -591,18 +612,42 @@ function scrollMsgs(smooth = false): void {
 }
 const quoted = (s: string): Kid[] => s.split(/(«[^»]*»)/).map((x) => (x.startsWith('«') ? h('b', {}, x) : x));
 const secs = (ms: number): string => (ms / 1000).toFixed(1) + ' s';
-function paintTrace(id: string): void { if (S.sel === id) { const o = document.getElementById('trace'); if (o) { o.replaceWith(traceEl(id) || h('div', { id: 'trace', hidden: true })); scrollMsgs(true); } } }
+function paintTrace(id: string, scroll = true): void {
+  const o = S.sel === id ? document.getElementById('trace') : document.querySelector('[data-trace="' + id + '"]');
+  if (!o) return;
+  const box = document.getElementById('msgs'), atEnd = !!box && box.scrollHeight - box.scrollTop - box.clientHeight < 48; // someone reading further up is left there
+  const n = traceEl(id) || h('div', { id: S.sel === id ? 'trace' : null, 'data-trace': id, hidden: true });
+  o.replaceWith(n);
+  if (scroll && atEnd && S.sel === id) reveal(n);
+}
+// something just grew in the chat (steps opened, a draft written): it moves down only as far as needed to show it,
+// never so far that its top leaves the view, and never up
+function reveal(el: Element | null | undefined): void {
+  const box = document.getElementById('msgs');
+  if (!el || !box) return;
+  const b = box.getBoundingClientRect(), r = el.getBoundingClientRect();
+  const down = Math.min(r.bottom + 16 - b.bottom, r.top - 12 - b.top);
+  if (down > 0) box.scrollBy({ top: down, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+}
+function showTrace(id: string): void {
+  const tr = document.querySelector<HTMLElement>('[data-trace="' + id + '"]');
+  tr?.querySelector<HTMLElement>('.tsum')?.focus({ preventScroll: true });
+  reveal(tr);
+}
+// CatOrder's own pills carry the cat; at work, the sparks of the logo flicker by its ear
+const cat = (on: boolean): HTMLElement => h('span', { class: 'cat' + (on ? ' on' : ''), 'aria-hidden': 'true' }, h('img', { src: 'logo.png', alt: '' }), h('i'), h('i'), h('i'));
+// three little lines of text: reading, the green highlighter runs over them as it does over the customer's words; writing, they fill in
+const scribble = (how: 'read' | 'write'): HTMLElement => h('span', { class: 'rl ' + how, 'aria-hidden': 'true' }, h('i'), h('i'), h('i'));
 const dots = (): HTMLElement => h('span', { class: 'dots', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'));
 // before the first step arrives (or with no trace at all) CatOrder still answers in the chat: a bubble that it is reading
-function thinking(): HTMLElement {
-  return h('section', { id: 'trace', class: 'think rise', role: 'status', 'aria-label': 'CatOrder is reading the message' },
-    h('img', { class: 'think-cat', src: 'logo.png', alt: '' }),
-    h('span', { class: 'think-b' }, 'Reading the message', dots()));
+function thinking(id = 'trace'): HTMLElement {
+  return h('section', { id: id || null, class: 'think rise', role: 'status', 'aria-label': 'CatOrder is reading the message' },
+    h('span', { class: 'think-b' }, cat(true), 'Reading the message', scribble('read')));
 }
 function traceEl(id: string): HTMLElement | false {
   const t = S.trace[id], d = S.detail;
   const reading = S.busy === id || (!!d && d.message.id === id && !d.order && isReading(id, false, d.message.received_at));
-  if (!t || !t.steps.length) return reading ? thinking() : false;
+  if (!t || !t.steps.length) return reading ? thinking(S.sel === id ? 'trace' : '') : false;
   const last = t.steps[t.steps.length - 1], ms = last ? last.at : 0, open = !t.done || t.open;
   const rows = t.steps.map((s) => {
     const fresh = s.fresh; s.fresh = false;
@@ -611,9 +656,9 @@ function traceEl(id: string): HTMLElement | false {
       h('span', { class: 'tw' }, h('span', { class: 'tt' }, quoted(s.title)), s.detail && h('span', { class: 'td' }, s.detail)),
       s.at >= 100 && h('span', { class: 'tm' }, secs(s.at)));
   });
-  return h('section', { id: 'trace', class: 'trace', 'aria-label': 'What CatOrder did' },
-    !t.done && h('p', { class: 'th toon' }, 'CatOrder is reading', dots()),
-    t.done && h('button', { type: 'button', class: 'tsum', 'aria-expanded': String(open), onclick: () => { t.open = !t.open; paintTrace(id); } }, (ms >= 100 ? 'Read in ' + secs(ms) + ' · ' : '') + t.steps.length + ' steps · ', h('u', {}, open ? 'Hide steps' : 'Show steps')),
+  return h('section', { id: S.sel === id ? 'trace' : null, 'data-trace': id, class: 'trace', 'aria-label': 'What CatOrder did' },
+    !t.done && h('p', { class: 'th toon' }, cat(true), 'CatOrder is reading', scribble('read')),
+    t.done && h('button', { type: 'button', class: 'tsum', 'aria-expanded': String(open), onclick: () => { t.open = !t.open; paintTrace(id, false); showTrace(id); } }, cat(false), (ms >= 100 ? 'Read in ' + secs(ms) + ' · ' : '') + t.steps.length + ' steps · ', h('u', {}, open ? 'Hide steps' : 'Show steps')),
     open && h('ol', { class: 'tl' }, rows));
 }
 // opened BEFORE the read is posted; resolves when the server says done/idle or the stream fails
@@ -649,6 +694,22 @@ function startTrace(id: string, fresh = false, onOpen?: () => void): Promise<voi
   });
 }
 const PILL: Record<string, string> = { unread: 'New', clean: 'Ready', check: 'Check', confirmed: 'Confirmed' };
+// a number we do not know: pick the customer once, every message from it (now and later) follows
+let custChoices: Who[] | null = null;
+function whoIsIt(m: Detail['message']): HTMLElement {
+  if (!custChoices) { custChoices = []; api<Who[]>('/customers').then((cs) => { custChoices = cs.filter((c) => c.id !== 'unknown-sender'); renderScreen(); }, () => { custChoices = null; }); }
+  const pick = async (c: Who): Promise<void> => {
+    if (S.busy) return;
+    try { await send('POST', '/messages/' + m.id + '/assign', { customer_id: c.id }); } catch (e) { toast(errMsg(e)); return; }
+    toast('This number is now ' + c.name + '.');
+    await loadMessages();
+    await loadDetail();
+    if (S.detail && S.detail.order) void doRead(); // read again as that customer: "the usual" now has a history
+  };
+  return h('header', { class: 'conv-h who' },
+    h('h1', { class: 'toon' }, 'Who is ' + (m.sender || 'this number') + '?'),
+    h('div', { class: 'who-l' }, (custChoices || []).map((c) => h('button', { type: 'button', class: 'who-b', onclick: () => { void pick(c); } }, c.name))));
+}
 function orderScreen(d: Detail, asked?: string): HTMLElement {
   const m = d.message, o = d.order, who = m.customer as Who;
   const rd: Reading | undefined = o ? { kind: o.reading_kind, source: o.reading_source, text: o.reading } : S.reading[m.id];
@@ -671,7 +732,7 @@ function orderScreen(d: Detail, asked?: string): HTMLElement {
           : m.channel === 'voice' && reading && (awaited.add(m.id), h('p', { class: 'said tx wait' }, 'Transcribing', dots())),
         stamp(m.channel, m.received_at)),
       solo && chip(mine.order)),
-    traceEl(m.id) || h('div', { id: 'trace', hidden: true }),
+    traceEl(m.id) || h('div', { id: 'trace', 'data-trace': m.id, hidden: true }),
     replyEl(d.reply, m.id),
   ];
   const nMsgs = o && o.message_ids ? o.message_ids.length : 1;
@@ -683,7 +744,8 @@ function orderScreen(d: Detail, asked?: string): HTMLElement {
   const total = o && orderTotal(o);
   return h('div', { class: 'scr' },
     h('section', { class: 'conv' },
-      h('header', { class: 'conv-h' },
+      m.customer_id === 'unknown-sender' && m.id.startsWith('wa-live-') ? whoIsIt(m)
+      : h('header', { class: 'conv-h' },
         h('h1', { class: 'toon' }, who.name),
         m.customer_id && h('div', { class: 'meta cust' }, custLine(m.customer_id))),
       threadEl(m, o, open)),
@@ -956,8 +1018,11 @@ async function doDraft(): Promise<void> {
   try { const r = await send<Reply>('POST', '/messages/' + id + '/reply'); S.later.delete(r.id); delete S.typed[r.id]; if (S.detail && S.detail.message.id === id) S.detail.reply = r; }
   catch (e) { toast(errMsg(e)); }
   S.drafting = null; renderScreen();
-  requestAnimationFrame(() => document.querySelector<HTMLTextAreaElement>('.out.draft textarea')?.focus());
+  // the new draft, not the first one in the chat (older messages keep theirs); the chat follows it down, never up
+  const r = S.detail && S.detail.message.id === id ? S.detail.reply : null;
+  requestAnimationFrame(() => { const t = draftBox(r && r.id); t?.focus({ preventScroll: true }); reveal(t && t.closest('.msg')); });
 }
+const draftBox = (id: string | null | undefined): HTMLTextAreaElement | null => (id ? document.querySelector<HTMLTextAreaElement>('textarea[data-reply="' + id + '"]') : null);
 // what the operator typed in the draft is saved before anything else happens to it
 async function saveReply(r: Reply): Promise<boolean> {
   const t = S.typed[r.id];
@@ -1010,7 +1075,7 @@ document.addEventListener('keydown', (e) => {
 const outside = (e: Event): void => { if (S.open && !(e.target as Element).closest('.inbox-wrap, #inboxBtn')) toggleInbox(false); };
 document.addEventListener('click', outside);
 document.addEventListener('focusin', outside);
-$('inboxBtn').addEventListener('click', () => toggleInbox());
+$('inboxBtn').addEventListener('click', () => (matchMedia('(min-width:701px)').matches ? goWaiting() : toggleInbox()));
 $('home').addEventListener('click', goWaiting);
 // the page leaves room for the band, whatever height its question and buttons give it
 const fitBand = (): void => document.documentElement.style.setProperty('--band-h', $('band').offsetHeight + 'px');

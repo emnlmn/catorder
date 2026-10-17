@@ -58,6 +58,9 @@ CREATE TABLE IF NOT EXISTS replies (
   via TEXT CHECK (via IN ('whatsapp','demo')),           -- demo: no WhatsApp number, nothing was delivered
   model TEXT NOT NULL, created_at TEXT NOT NULL, sent_at TEXT);
 
+-- the steps of the latest read of a message, so what CatOrder did stays in the chat after the live stream ends
+CREATE TABLE IF NOT EXISTS traces (message_id TEXT PRIMARY KEY REFERENCES messages(id), steps TEXT NOT NULL);
+
 CREATE TABLE IF NOT EXISTS order_messages (
   order_id TEXT NOT NULL, message_id TEXT NOT NULL, pos INTEGER NOT NULL, start INTEGER NOT NULL, end INTEGER NOT NULL,
   PRIMARY KEY (order_id, message_id));
@@ -66,3 +69,6 @@ CREATE TABLE IF NOT EXISTS order_messages (
 CREATE TABLE IF NOT EXISTS suggestion_feedback (
   id INTEGER PRIMARY KEY, customer_id TEXT, order_id TEXT, sku TEXT, qty REAL, p REAL,
   action TEXT CHECK (action IN ('added','dismissed')), at TEXT);
+
+-- a number the operator assigned to a customer from the inbox; wins over WHATSAPP_PHONE_MAP; never committed
+CREATE TABLE IF NOT EXISTS phones (number TEXT PRIMARY KEY, customer_id TEXT NOT NULL REFERENCES customers(id));

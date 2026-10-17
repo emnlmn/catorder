@@ -72,6 +72,20 @@ export function parseQuantity(raw: unknown): number | null {
   return m ? parseFloat(m[1]!.replace(",", ".")) : null;
 }
 
+/** Weight phrasings the model reads loosely: "2 etti" -> 0.2 kg, "2 kg e mezzo" -> 2.5, "mezzo chilo" -> 0.5.
+ *  Only applied when the model's qty is the bare number (or missing); otherwise it already did the arithmetic. */
+export function fixWeightQty(quote: string, qty: number | null): { qty: number; unit: SellUnit } | null {
+  const q = quote.toLowerCase();
+  const num = (t: string) => parseQuantity(t);
+  let m = /(\d+(?:[.,]\d+)?)\s*(?:etti|etto|hg)\b/.exec(q);
+  if (m && qty === num(m[1]!)) return { qty: Math.round(qty! * 100) / 1000, unit: "kg" };
+  m = /\b(\d+(?:[.,]\d+)?|un|uno|una)\s*(?:kg|chili|chilo)?\s+e\s+mezz[oa]\b/.exec(q);
+  if (m && (qty === null || qty === num(m[1]!))) return { qty: num(m[1]!)! + 0.5, unit: "kg" };
+  if (/\bmezzo\s+(?:chilo|kg)\b/.test(q) && (qty === null || qty === 0.5 || qty === 1)) return { qty: 0.5, unit: "kg" };
+  if (qty === null && /\b(?:un|uno)\s+(?:chilo|kg)\b/.test(q)) return { qty: 1, unit: "kg" };
+  return null;
+}
+
 export function parseUnit(raw: unknown): SellUnit | null {
   const s = String(raw || "").trim().toLowerCase().replace(/\.+$/, "");
   return UNIT_MAP.get(s) ?? null;
@@ -142,7 +156,9 @@ export function verifyRequest(reading: string, req: unknown): VerifyResult {
   if (loc === null) return drop("no_quote");
   const [start, end] = loc;
   const quote = reading.slice(start, end);
-  const qty = parseQuantity(r.quantity);
+  const parsed = parseQuantity(r.quantity);
+  const fix = r.kind === "item" ? fixWeightQty(quote, parsed) : null;
+  const qty = fix ? fix.qty : parsed;
   const request: VerifiedRequest = {
     kind: r.kind as RequestKind,
     quote,
@@ -152,11 +168,11 @@ export function verifyRequest(reading: string, req: unknown): VerifyResult {
     sku: (r.sku as string) || null,
     qty,
     unit_text: (r.unit as string | null | undefined) ?? null,
-    unit: parseUnit(r.unit),
+    unit: fix ? fix.unit : parseUnit(r.unit),
     op: r.op === "add" || r.op === "set" ? r.op : null,
     value: (r.value as string | null | undefined) ?? null,
     date: r.kind === "delivery" ? parseDate(r.value) : null,
-    status: settleStatus(r.status as "observed" | "inferred", r.quantity, qty, quote),
+    status: settleStatus(r.status as "observed" | "inferred", r.quantity, parsed, quote),
   };
   return { ok: true, request };
 }

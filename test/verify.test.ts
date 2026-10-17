@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { locate, parseDate, parseQuantity, parseUnit, relativeDate, settleStatus, verifyRequest } from "../src/verify.ts";
+import { fixWeightQty, locate, parseDate, parseQuantity, parseUnit, relativeDate, settleStatus, verifyRequest } from "../src/verify.ts";
 import { golden } from "./parity.ts";
 
 function v(reading: string, extra: Record<string, unknown>) {
@@ -132,5 +132,28 @@ describe("relativeDate", () => {
   });
   it("returns null without a relative day", () => {
     expect(relativeDate("il 24", "2026-10-14")).toBeNull();
+  });
+});
+
+describe("fixWeightQty", () => {
+  it("etti, e mezzo and mezzo chilo become kg quantities", () => {
+    expect(fixWeightQty("2 etti di bresaola", 2)).toEqual({ qty: 0.2, unit: "kg" });
+    expect(fixWeightQty("3 etti di salame", 3)).toEqual({ qty: 0.3, unit: "kg" });
+    expect(fixWeightQty("2 kg e mezzo di taleggio", 2)).toEqual({ qty: 2.5, unit: "kg" });
+    expect(fixWeightQty("un kg e mezzo di gorgonzola", null)).toEqual({ qty: 1.5, unit: "kg" });
+    expect(fixWeightQty("mezzo chilo di pecorino", null)).toEqual({ qty: 0.5, unit: "kg" });
+    expect(fixWeightQty("un chilo di pecorino", null)).toEqual({ qty: 1, unit: "kg" });
+    expect(fixWeightQty("mezzo kg di provolone", 1)).toEqual({ qty: 0.5, unit: "kg" });
+  });
+
+  it("leaves already-correct and unrelated quantities alone", () => {
+    expect(fixWeightQty("2 etti di bresaola", 0.2)).toBeNull();
+    expect(fixWeightQty("2 kg di asiago e mezzo kg di provolone", 2)).toBeNull();
+    expect(fixWeightQty("6 cs acqua", 6)).toBeNull();
+  });
+
+  it("applies through verifyRequest", () => {
+    const r = okReq(v("2 etti di bresaola x giovedi", { quote: "2 etti di bresaola", quantity: 2, unit: "etti" }));
+    expect([r.qty, r.unit]).toEqual([0.2, "kg"]);
   });
 });

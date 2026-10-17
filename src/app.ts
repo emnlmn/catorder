@@ -19,7 +19,7 @@ import { searchCatalog } from "./resolve.ts";
 import { ReplyError, draftReply, editReply, latestReply, sendReply, twilioSender } from "./reply.ts";
 import type { SendWhatsApp } from "./reply.ts";
 import * as trace from "./trace.ts";
-import { EMPTY_TWIML, downloadMedia, ensureUnknownSender, rateLimited, storeWhatsApp, validSignature } from "./twilio.ts";
+import { EMPTY_TWIML, assignNumber, downloadMedia, ensureUnknownSender, rateLimited, storeWhatsApp, validSignature } from "./twilio.ts";
 import type { Download } from "./twilio.ts";
 import { computeUsual, lastOrders } from "./usual.ts";
 import { Predictor, demand } from "./predict.ts";
@@ -184,6 +184,12 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
 
   app.post("/api/messages/:id/read", async (c) => c.json(await readMessage(conn, services, c.req.param("id"))));
 
+  app.post("/api/messages/:id/assign", async (c) => {
+    const { customer_id } = await c.req.json().catch(() => ({})) as { customer_id?: string };
+    if (!customer_id || customer_id === "unknown-sender" || !getCustomer(conn, customer_id)) return err(c, 400, "Pick a customer.");
+    return assignNumber(conn, c.req.param("id"), customer_id) ? c.json({ ok: true }) : err(c, 404, "That message has no phone number.");
+  });
+
   app.post("/api/messages/:id/route", async (c) => {
     const body = await c.req.json().catch(() => ({})) as { to?: string };
     if (body.to !== "new" && body.to !== "attach") return err(c, 400, "to must be \"new\" or \"attach\".");
@@ -218,10 +224,16 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
     return c.json(rows<Record<string, string | null>>(conn, "SELECT * FROM messages WHERE customer_id=? ORDER BY received_at, id", id).map((m) => {
       const oid = orders.latestOrderId(conn, m.id as string);
       const v = oid ? orders.orderView(conn, oid) : null;
+      const sg = v?.segments.find((x) => x.message_id === m.id);
+      const tr = row<{ steps: string }>(conn, "SELECT steps FROM traces WHERE message_id=?", m.id as string);
       return {
         id: m.id, channel: m.channel, received_at: m.received_at, text: m.text, media_url: m.media ? `/media/${m.media}` : null,
         order: v ? { id: v.id, status: v.status, lines: v.lines.filter((l) => l.state !== "removed").length, clean: v.clean, message_ids: v.message_ids } : null,
         reply: latestReply(conn, m.id as string),
+        // the words this message gave its order, so every bubble shows what was taken from it
+        words: v && sg ? { text: v.reading.slice(sg.start, sg.end), quotes: v.lines.filter((l) => l.state !== "removed" && l.quote_start >= sg.start && l.quote_end <= sg.end)
+          .map((l) => ({ id: l.id, quote: l.quote, quote_start: l.quote_start - sg.start, quote_end: l.quote_end - sg.start })) } : null,
+        trace: tr ? JSON.parse(tr.steps) : null,
       };
     }));
   });
@@ -352,7 +364,10 @@ export function createApp(cfg: Config, svc?: Services, download: Download = down
     const full = resolve(PUBLIC_DIR, rel || ".");
     if (full !== PUBLIC_DIR && !full.startsWith(PUBLIC_DIR + "/")) return err(c, 404, "Not Found");
     const target = rel === "" || rel.endsWith("/") ? join(full, "index.html") : full;
-    return sendFile(target) ?? err(c, 404, "Not Found");
+    const res = sendFile(target);
+    if (!res) return err(c, 404, "Not Found");
+    res.headers.set("Cache-Control", "no-cache"); // revalidate: a stale app.css next to a new page is a bug the operator cannot see
+    return res;
   });
 
   return app;

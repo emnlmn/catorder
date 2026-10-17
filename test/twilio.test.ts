@@ -99,6 +99,16 @@ describe("POST /webhook/whatsapp", () => {
     expect((await t.app.request("/api/customers/unknown-sender")).status).toBe(200);
   });
 
+  it("assigns an unknown number to a customer: its messages move and the next one follows", async () => {
+    const t = setup();
+    const from = { From: "whatsapp:+15005550999" };
+    await t.post(msg("SM6", from));
+    const r = await t.app.request("/api/messages/wa-live-SM6/assign", { method: "POST", body: JSON.stringify({ customer_id: "deli-mulino" }) });
+    expect(r.status).toBe(200);
+    await t.post(msg("SM7", from));
+    for (const id of ["SM6", "SM7"]) expect((await t.json("/api/messages/wa-live-" + id)).message.customer.id).toBe("deli-mulino");
+    expect((await t.app.request("/api/messages/wa-live-SM6/assign", { method: "POST", body: JSON.stringify({ customer_id: "unknown-sender" }) })).status).toBe(400);
+  });
   it("sends the operator's reply back to the number the message came from, even an unknown one", async () => {
     const sent: [string, string][] = [];
     const t = setup({ send: async (to, body) => { sent.push([to, body]); } });

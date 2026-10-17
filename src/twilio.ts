@@ -109,10 +109,22 @@ export async function storeWhatsApp(db: Db, p: URLSearchParams, cfg: TwilioConfi
   const id = "wa-live-" + p.get("MessageSid");
   if (db.prepare("SELECT 1 FROM messages WHERE id=?").get(id)) return null;
   const number = (p.get("From") ?? "").replace(/^whatsapp:/, "");
-  const customer = cfg.phoneMap[number] ?? UNKNOWN_SENDER;
+  const customer = (db.prepare("SELECT customer_id c FROM phones WHERE number=?").get(number) as { c: string } | undefined)?.c
+    ?? cfg.phoneMap[number] ?? UNKNOWN_SENDER;
   const m = await toStored(p, id, cfg, download);
   db.prepare("INSERT OR IGNORE INTO messages VALUES (?,?,?,?,?,?,?,?)").run(id, customer, m.channel, isoOffset(),
     p.get("ProfileName") || maskNumber(number), m.text, m.media, createHash("sha256").update(m.blob).digest("hex"));
   if (number) db.prepare("INSERT OR IGNORE INTO senders VALUES (?,?)").run(id, number);
   return id;
+}
+
+/** Assigns the number a message came from to a customer: every unknown message from that number moves, later ones follow. -> false when the message has no number. */
+export function assignNumber(db: Db, messageId: string, customerId: string): boolean {
+  const s = db.prepare("SELECT number FROM senders WHERE message_id=?").get(messageId) as { number: string } | undefined;
+  if (!s) return false;
+  db.prepare("INSERT OR REPLACE INTO phones VALUES (?,?)").run(s.number, customerId);
+  const ids = "SELECT message_id FROM senders WHERE number=?";
+  db.prepare(`UPDATE messages SET customer_id=? WHERE customer_id=? AND id IN (${ids})`).run(customerId, UNKNOWN_SENDER, s.number);
+  db.prepare(`UPDATE orders SET customer_id=? WHERE customer_id=? AND message_id IN (${ids})`).run(customerId, UNKNOWN_SENDER, s.number);
+  return true;
 }
