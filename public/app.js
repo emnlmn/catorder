@@ -13,7 +13,8 @@ const S = {
     thread: {}, more: new Set(), trace: {},
     revealed: new Set(), queue: { order: '', n: 0 },
     cust: null, all: null, q: '', view: 'list', done: new Set(), // the customer open without messages; every ERP customer; the search box; the narrow-screen step; orders confirmed here (their ERP import stays on the right)
-    drafting: null, later: new Set(), typed: {}, // the message whose reply is being written; drafts put off with Later
+    drafting: null, wrote: null, // wrote: the message whose reply was just rewritten, its text blurs in once
+    later: new Set(), typed: {}, // the message whose reply is being written; drafts put off with Later
 };
 const CUST = {}; // per customer id; null = the fetch failed, no line
 let writing = false;
@@ -135,6 +136,7 @@ const ICONS = {
     check: '<svg viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7"/></svg>',
     alert: '<svg viewBox="0 0 24 24"><path d="M12 7v6M12 17h.01"/></svg>',
     draft: '<svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></svg>',
+    refresh: '<svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.6-5.9M20 4v5h-5"/></svg>',
     send: '<svg viewBox="0 0 24 24"><path d="M4 12 20 4l-4 16-4.5-6.5zM11.5 13.5 20 4"/></svg>',
     play: '<svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg>',
     pause: '<svg viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>',
@@ -733,19 +735,28 @@ function threadEl(m, o, open) {
 }
 // our side of the chat, on the right: the reply being written, the draft to edit, or what was sent
 function replyEl(r, msgId) {
-    if (S.drafting === msgId)
+    const busy = S.drafting === msgId;
+    if (busy && !(r && r.status === 'draft'))
         return h('div', { class: 'msg out rise', role: 'status' }, h('span', { class: 'think-b' }, cat(true), 'Writing the reply'));
     if (!r)
         return false;
     if (r.status === 'draft') {
-        const ta = h('textarea', { class: 'said', rows: 2, 'data-reply': r.id, 'aria-label': 'Reply to the customer, not sent yet',
+        const fresh = S.wrote === msgId;
+        if (fresh)
+            S.wrote = null;
+        const ta = h('textarea', { class: 'said' + (fresh ? ' sw' : ''), rows: 2, 'data-reply': r.id, 'aria-label': 'Reply to the customer, not sent yet', readonly: busy || null,
             oninput: () => { S.typed[r.id] = ta.value; },
             onkeydown: (e) => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
                 e.preventDefault();
                 void doSend(r);
             } } });
         ta.value = S.typed[r.id] ?? r.text;
-        return h('div', { class: 'msg out draft' + (S.later.has(r.id) ? ' later' : '') }, h('label', { class: 'bub' }, h('span', { class: 'bl' }, 'Draft reply · not sent'), ta), h('p', { class: 'hint' }, '⌘ Enter sends it'));
+        // the black band asks about the reply of the open message; every other draft (an older message, or put off with Later) carries its own actions
+        const inBand = !!S.detail && S.detail.message.id === msgId && !S.later.has(r.id);
+        const fly = h('button', { type: 'button', class: 'rb go', disabled: busy || null }, glyph('ic', 'send'), 'Send');
+        fly.onclick = async () => { fly.classList.add('flying'); await doSend(r); fly.classList.remove('flying'); };
+        return h('div', { class: 'msg out draft' + (S.later.has(r.id) ? ' later' : '') + (busy ? ' busy' : '') }, h('label', { class: 'bub' }, h('span', { class: 'bl' }, busy ? 'Writing again…' : 'Draft reply · not sent'), ta), inBand ? h('p', { class: 'hint' }, '⌘ Enter sends it')
+            : h('div', { class: 'rbar' }, h('button', { type: 'button', class: 'rb re' + (busy ? ' on' : ''), title: 'Write it again', 'aria-label': 'Write it again', disabled: busy || null, onclick: () => { void doDraft(msgId); } }, glyph('ic', 'refresh')), fly));
     }
     return h('div', { class: 'msg out' }, h('div', { class: 'bub' }, h('span', { class: 'bt' }, r.text), h('span', { class: 'bm' }, r.via === 'whatsapp' ? 'Sent ' + fmtClock(r.sent_at || r.created_at) : 'Demo · not delivered', glyph('ic', 'check'))));
 }
@@ -1125,7 +1136,7 @@ function lineStep(l, msg) {
             return [fill(h('div', { class: 'results inline' }), l, l.product_text, find), hasFlag(l, 'unknown_product') && pick('Remove line', () => patch(l.id, { removed: true }), { class: 'pick quiet' })];
         return asCands();
     };
-    const alts = () => (finding ? alt('Back', back, 'back') : [(kind === 'which' || missing) && alt('Search catalogue', find, 'search'), alt('Ask the customer', doDraft, 'whatsapp')]);
+    const alts = () => (finding ? alt('Back', back, 'back') : [(kind === 'which' || missing) && alt('Search catalogue', find, 'search'), alt('Ask the customer', () => doDraft(), 'whatsapp')]);
     return { key: 'line:' + l.id + ':' + kind + (finding ? ':find' : ''), q, sub: missing && !finding ? 'Closest in the catalogue. Pick one or remove the line; CatOrder never guesses.' : undefined, line: l.id, ctl, alt: alts };
 }
 function flagStep(f, label, l) {
@@ -1276,19 +1287,23 @@ async function write(fn) {
 }
 const patch = (lineId, body) => write(() => send('PATCH', '/lines/' + lineId, body));
 // the model writes the reply from the order as it stands; it lands in the chat as a draft for the operator
-async function doDraft() {
-    const d = S.detail;
-    if (!d || S.drafting || writing)
+async function doDraft(id = S.detail?.message.id) {
+    if (!id || S.drafting || writing)
         return;
-    const id = d.message.id;
     S.drafting = id;
     renderScreen();
+    let r = null;
     try {
-        const r = await send('POST', '/messages/' + id + '/reply');
+        r = await send('POST', '/messages/' + id + '/reply');
         S.later.delete(r.id);
         delete S.typed[r.id];
+        S.wrote = id;
         if (S.detail && S.detail.message.id === id)
             S.detail.reply = r;
+        for (const t of Object.values(S.thread))
+            for (const p of t)
+                if (p.id === id)
+                    p.reply = r;
     }
     catch (e) {
         toast(errMsg(e));
@@ -1296,7 +1311,6 @@ async function doDraft() {
     S.drafting = null;
     renderScreen();
     // the new draft, not the first one in the chat (older messages keep theirs); the chat follows it down, never up
-    const r = S.detail && S.detail.message.id === id ? S.detail.reply : null;
     requestAnimationFrame(() => { const t = draftBox(r && r.id); t?.focus({ preventScroll: true }); reveal(t && t.closest('.msg')); });
 }
 const draftBox = (id) => (id ? document.querySelector('textarea[data-reply="' + id + '"]') : null);

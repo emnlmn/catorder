@@ -736,3 +736,29 @@ button.photo{padding:0;border:0;background:none;cursor:zoom-in}
 .lightbox{padding:0;border:0;background:none;max-width:94vw;max-height:94vh;cursor:zoom-out}
 .lightbox::backdrop{background:rgba(15,23,25,.7)}
 .lightbox img{display:block;max-width:94vw;max-height:94vh;border-radius:10px}
+
+/* the actions of a draft that the black band is not asking about: write it again (icon), send */
+.msg.out .rbar{display:flex;align-items:center;gap:8px;margin:2px 0 0}
+.rb{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:0 14px;border:1px solid var(--line-strong);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:background-color .15s,border-color .15s,transform .15s cubic-bezier(.16,1,.3,1),opacity .15s}
+.rb svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rb .ic{display:grid;overflow:hidden}
+.rb:hover:not(:disabled){border-color:var(--ink)}
+.rb:active:not(:disabled){transform:scale(.96)}
+.rb:focus-visible{outline:0;box-shadow:var(--ring)}
+.rb:disabled{cursor:default;opacity:.5}
+.rb.re{width:36px;padding:0}
+.rb.re:hover:not(:disabled) svg{transform:rotate(-90deg)}
+.rb.re svg{transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.rb.re.on{opacity:1}
+.rb.re.on svg{animation:tspin .8s cubic-bezier(.5,0,.3,1) infinite}
+.rb.go{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.rb.go:hover:not(:disabled){background:color-mix(in srgb,var(--ink) 88%,var(--eye))}
+.rb.go:hover:not(:disabled) .ic{transform:translate(1px,-1px)}
+.rb.go .ic{transition:transform .2s cubic-bezier(.16,1,.3,1)}
+.rb.go.flying .ic{animation:fly .9s cubic-bezier(.5,0,.2,1) infinite}
+@keyframes fly{0%{transform:none;opacity:1}45%{transform:translate(14px,-12px);opacity:0}46%{transform:translate(-14px,12px);opacity:0}100%{transform:none;opacity:1}}
+/* writing again: the old text dims and breathes while the new one comes; it arrives out of blur (.sw) */
+.msg.out.draft.busy .bub{border-color:var(--eye)}
+.msg.out.draft.busy textarea{opacity:.4;animation:pulse 1.2s ease-in-out infinite}
+.msg.out.draft textarea{transition:opacity .2s}
+@media (hover:none){.msg.out .hint{display:none}}
