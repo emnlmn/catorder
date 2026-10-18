@@ -40,8 +40,9 @@ a.irow{text-decoration:none;color:inherit}
 .irow .who{grid-area:who;overflow:hidden;font-weight:500;text-overflow:ellipsis;white-space:nowrap}
 .irow .time{grid-area:time;justify-self:end;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
 .irow .av{display:grid;place-items:center;width:36px;height:36px;border:1.5px solid currentColor;border-radius:6px;font-size:13px;font-weight:600;letter-spacing:.02em}
-.irow .pv{grid-area:pv;display:flex;align-items:center;gap:6px;min-width:0;overflow:hidden;font-size:14px;color:var(--muted);white-space:nowrap;text-overflow:ellipsis}
-.irow .pv .pic svg{width:14px;height:14px}
+.irow .pv{grid-area:pv;display:block;min-width:0;overflow:hidden;font-size:14px;color:var(--muted);white-space:nowrap;text-overflow:ellipsis} /* a block, not a flex row: only a block ellipsizes its text */
+.irow .pv .pic{display:inline-block;margin-right:6px;vertical-align:middle}
+.irow .pv .pic svg{display:block;width:14px;height:14px}
 .irow.sel .pv{color:var(--muted-on-ink)}
 .irow .badge{grid-area:st;justify-self:end;min-width:20px;height:20px;padding:0 5px;box-sizing:border-box;border-radius:6px;background:var(--eye);color:var(--ink);font-size:12px;font-weight:700;line-height:20px;text-align:center}
 .irow .st{justify-self:end;font-size:13px}
@@ -78,14 +79,14 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .col{width:100%;max-width:880px;margin:0 auto;padding:6px 36px 20px}
 .col h1{margin:0;font-size:23px;line-height:1.1}
 .meta{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin-top:8px;font-size:15px;color:var(--muted)}
-.vp{display:flex;align-items:center;gap:12px;width:min(300px,62vw);padding:2px 0}
+.vp{display:flex;align-items:center;gap:12px;width:min(300px,62vw);max-width:100%;padding:2px 0}
 .vp-btn{flex:none;display:grid;place-items:center;width:40px;height:40px;padding:0;border:0;border-radius:50%;background:var(--ink);color:var(--paper);cursor:pointer}
 .vp-btn:hover{background:color-mix(in srgb,var(--ink) 85%,var(--paper))}
 .vp-btn:focus-visible{outline:3px solid var(--eye);outline-offset:2px}
 .vp-btn span{display:grid;place-items:center}
 .vp-btn svg{width:18px;height:18px;fill:currentColor;stroke:none}
 .vp-wave{flex:1;display:flex;align-items:center;gap:2px;height:30px;cursor:pointer}
-.vp-wave i{flex:1;min-width:2px;max-width:4px;height:30%;border-radius:2px;background:color-mix(in srgb,var(--ink) 28%,var(--paper));transition:height .25s ease-out,background-color .12s}
+.vp-wave i{flex:1;min-width:1px;max-width:4px;height:30%;border-radius:2px;background:color-mix(in srgb,var(--ink) 28%,var(--paper));transition:height .25s ease-out,background-color .12s}
 .vp-wave i.on{background:var(--ink)}
 .vp-t{flex:none;min-width:30px;font-size:13px;font-weight:400;font-variant-numeric:tabular-nums;color:var(--muted);text-align:right}
 .orig{display:flex;align-items:flex-start;gap:24px;margin-top:16px}
@@ -114,7 +115,7 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .chk{display:inline-flex;align-items:center;gap:6px;margin-left:12px;padding:1px 10px 1px 3px;border:1px solid var(--line);border-radius:999px;font:600 13px/1.4 Inter,ui-sans-serif,system-ui,sans-serif;vertical-align:middle;white-space:nowrap}
 .chk b{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:12px}
 .erp{scroll-margin-bottom:calc(var(--band-h,0px) + 24px)}
-.trust{grid-column:1/-1;margin:0 0 6px;font-size:14px;color:var(--muted)}
+.trust{grid-column:1/-1;margin:0 0 6px;font-size:14px;color:var(--muted);text-wrap:pretty}
 .trust.need{color:var(--ink);font-weight:600}
 .row.out{color:var(--muted);text-decoration:line-through;text-decoration-thickness:2px}
 .row.now .note,.row.hl .note{color:var(--ink)}
@@ -289,10 +290,11 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .scr{display:block}
 .conv-h{padding:14px 28px 10px;border-bottom:1px solid var(--line)}
 .conv-h h1{margin:0;font-size:20px;line-height:1.1}
-.conv-h .meta{margin-top:2px;font-size:14px}
+.conv-h .meta{margin-top:2px;font-size:14px;text-wrap:pretty}
 .msgs{position:relative;display:flex;flex-direction:column;gap:6px;max-height:60vh;overflow-y:auto;padding:14px 28px 20px}
 .msg{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .msg .bub{display:block;width:auto;max-width:72%;padding:8px 12px 6px;border:1px solid var(--line);border-radius:10px 16px 16px 4px;background:var(--paper);font-size:14px;line-height:1.4;text-align:left}
+.msg .bub:has(.vp){max-width:100%} /* a voice note keeps its player inside the bubble on a narrow column */
 .msg .bt,.msg .said{display:block;margin:0;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere;-webkit-line-clamp:unset}
 .msg .bl{display:block;margin-bottom:4px;font-size:13px;font-weight:600}
 .msg .photo{display:block;margin-bottom:6px}
@@ -349,13 +351,14 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .panel .row{grid-template-columns:minmax(36px,max-content) minmax(0,1fr) auto;margin:0 -10px 3px;padding:4px 10px}
 @supports (grid-template-columns:subgrid){.panel .row{grid-template-columns:subgrid}}
 .panel .row .n{padding-right:10px;font-size:16px}
-.panel .row .what{font-size:14px;line-height:1.3}
+.panel .row .what{font-size:14px;line-height:1.3;text-wrap:pretty}
 .panel .row .pr{padding-left:10px;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;text-align:right}
+.panel .row.now .pr{color:var(--ink)} /* grey on green fails contrast */
 .panel .row.out .pr{display:none}
 .panel .chk{margin:4px 0 0;display:flex;width:max-content;max-width:100%;white-space:normal}
 .panel .trust{margin:0 0 6px}
 .total{display:flex;align-items:baseline;justify-content:space-between;margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
-.total b{font-size:17px;color:var(--ink)}
+.total b{font-size:16px;color:var(--ink)}
 .panel .foot{margin-top:10px;font-size:13px}
 .panel .erp{margin:16px 0 0}
 @media (min-width:701px){
@@ -395,6 +398,7 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
   .conv-h{padding:12px 16px 8px}
   .msgs{max-height:55vh;padding:12px 16px}
   .msg .bub{max-width:88%}
+  .trace{max-width:100%}
   .panel{padding:16px}
 }
 .nmsg{font-size:14px;font-weight:400;color:var(--muted)}
@@ -434,7 +438,7 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 :focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 /* order ticket: the stub a conversation tears off. An elbow hooks it to the words it came from;
    bubbles that built one order share the rail that runs down into it */
-.ticket{--tk:var(--muted);--tk-bg:var(--paper);position:relative;display:inline-grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:12px;align-self:flex-start;min-width:280px;max-width:min(440px,100%);margin:6px 0 18px 26px;padding:10px 18px 10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--tk-bg);color:var(--ink);font-size:13px;line-height:1.3;text-align:left;
+.ticket{--tk:var(--muted);--tk-bg:var(--paper);position:relative;display:inline-grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:12px;align-self:flex-start;min-width:min(280px,calc(100% - 26px));max-width:min(440px,100%);margin:6px 0 18px 26px;padding:10px 18px 10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--tk-bg);color:var(--ink);font-size:13px;line-height:1.3;text-align:left;
   box-shadow:0 1px 2px rgba(15,23,25,.05);transition:border-color .15s,transform .15s cubic-bezier(.2,.7,.2,1)}
 .ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:12px;height:12px;margin-top:-6px;box-sizing:border-box;border:1px solid var(--tk-bd,var(--line));border-radius:50%;background:var(--paper)}
 .ticket::before{left:-7px;clip-path:inset(0 0 0 50%)}
@@ -508,7 +512,7 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
   .inbox{max-height:calc(100dvh - 128px);overscroll-behavior:contain}
   .msgs{max-height:52dvh;overscroll-behavior:contain}
   .conv-h h1,.col h1{overflow-wrap:anywhere}
-  .panel .row{min-height:44px;align-items:center}
+  .panel .row{min-height:44px;align-items:baseline;align-content:center} /* qty and price stay on a wrapped name's first line */
   .field,.msg.out.draft textarea{font-size:16px}
   .band{max-height:70dvh;overscroll-behavior:contain;padding-bottom:max(12px,env(safe-area-inset-bottom));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
   #toast{bottom:calc(var(--band-h,0px) + 16px + env(safe-area-inset-bottom))}
@@ -519,44 +523,54 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .clr:hover{color:var(--ink);border-color:var(--line-strong)}
 .clr.sure{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 @media (max-width:700px){.clr{right:16px;top:12px}}
+/* beside the title: centred on it, and a long name ellipsizes before it reaches the button */
+@media (min-width:701px){.clr{top:9px}.conv-h h1{padding-right:104px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+/* phone: the small text links of a chat get a 44px hit area without moving anything (the .vm-b idiom) */
+@media (max-width:700px){.bk,.dtl,.route,.tsum{position:relative}.bk::after,.dtl::after,.route::after,.tsum::after{content:"";position:absolute;inset:-12px -6px}.clr::after{content:"";position:absolute;inset:-8px -6px}}
 
 /* ── Reference pages (Customers, Orders, Catalog): page frame, toolbar, data table ── */
 main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,3.5vw,64px) 48px;font-size:15px}
 .ref h1{margin:0 0 6px;font-size:29px;line-height:1.1}
-.ref .lede{margin:0 0 24px;max-width:72ch;color:var(--muted)}
+.ref .lede{margin:0 0 24px;max-width:72ch;color:var(--muted);text-wrap:pretty} /* no one-word last line */
 @media (max-width:700px){main.ref{padding:20px 16px 32px}.ref h1{font-size:22px}}
+/* projector: Chats steps up to 16px and fills the width from 1600px, so these pages widen and step up with it instead of stopping at 1280 */
+@media (min-width:1600px){main.ref{max-width:1520px;font-size:16px}}
 
 /* toolbar: count on the left, sync state on the right */
 .bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 12px}
-.bar .cnt{margin-right:auto;font-weight:600;font-variant-numeric:tabular-nums}
+.bar .cnt{margin-right:auto;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
 .bar .cnt span{font-weight:400;color:var(--muted)}
 .bar .sync{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
 .bar .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--eye);box-shadow:0 0 0 3px color-mix(in srgb,var(--eye) 30%,transparent)}
 .bar .dot.off{background:#D9534F;box-shadow:0 0 0 3px color-mix(in srgb,#D9534F 25%,transparent)}
-.bar button{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.bar button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:124px;min-height:36px;padding:0 14px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:600;cursor:pointer} /* min-width: "Syncing…" is wider than "Sync now" and must not move the state text */
 .bar button:hover{background:var(--wash)}
 .bar button:disabled{cursor:default;color:var(--muted)}
 .bar button svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .bar button.busy svg{animation:tspin .8s linear infinite}
+/* phone: the count keeps its own row (the bar was 36px while empty, 68px once filled, and the sync group jumped left), state left and button right, 44px target; the dot's halo starts on the 16px edge */
+@media (max-width:700px){.bar .cnt{flex:1 0 100%}.bar .sync{margin-right:auto}.bar .dot{margin-left:3px}.bar button{min-height:44px}}
 
 /* segmented filter (Orders by customer) */
 .seg{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
 .seg button{min-height:32px;padding:0 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--muted);font:inherit;font-size:14px;font-weight:500;cursor:pointer}
 .seg button:hover{color:var(--ink);border-color:var(--line-strong)}
 .seg button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+/* phone: one scrolling row of 44px chips instead of three to five wrapped rows; the 4px padding leaves room for the focus ring */
+@media (max-width:700px){.seg{flex-wrap:nowrap;overflow-x:auto;margin:-4px -16px 8px;padding:4px 16px;scrollbar-width:none}.seg::-webkit-scrollbar{display:none}.seg button{flex:none;min-height:44px}}
 
 /* data table: one box, sticky header, continuous row lines, numbers right-aligned.
    Each box is a container: below its own width threshold rows become cards. */
 .dt-box{container-type:inline-size;border:1px solid var(--line);border-radius:12px;background:var(--paper);overflow:clip}
 .dt{width:100%;margin-bottom:-1px;border-collapse:separate;border-spacing:0;font-variant-numeric:tabular-nums}
 .dt th{position:sticky;top:0;z-index:1;padding:10px 16px;background:var(--wash);border-bottom:1px solid var(--line);font-size:13px;font-weight:500;color:var(--muted);text-align:left;white-space:nowrap}
-.dt td{padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
+.dt td{padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:middle;text-wrap:pretty}
 .dt tbody tr:hover>td{background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
 .dt .n{text-align:right;white-space:nowrap}
 .dt .b{font-weight:600}
 .dt .mu{color:var(--muted)}
 .dt .nw{white-space:nowrap}
-.dt .code{font:500 12px/1.4 ui-monospace,"SF Mono",Menlo,monospace;color:var(--muted);letter-spacing:.01em}
+.dt .code{font:500 12px/1.4 ui-monospace,"SF Mono",Menlo,monospace;color:var(--muted);letter-spacing:.01em;white-space:nowrap} /* a SKU wraps whole, never at its hyphen */
 .dt td.fit,.dt th.fit{width:1%;white-space:nowrap}
 /* lead cell: square avatar + name + secondary line */
 .dt .who{display:flex;align-items:center;gap:12px}
@@ -588,7 +602,7 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
 .dt tbody.ordg.open tr.sub:last-child>td{padding-bottom:14px;border-bottom:1px solid var(--line)}
 .dt tbody.ordg.open tr.x>td{border-bottom-color:transparent;background:color-mix(in srgb,var(--wash) 50%,var(--paper))}
 .dt tbody tr.sub:hover>td{background:color-mix(in srgb,var(--wash) 50%,var(--paper))}
-.dt-foot{margin:10px 2px 0;font-size:13px;color:var(--muted)}
+.dt-foot{margin:10px 0 0;font-size:13px;color:var(--muted);text-wrap:pretty} /* flush with the table edge, the same note on every page */
 .dt-empty{padding:40px 16px;text-align:center;color:var(--muted)}
 
 /* cards: the table reflows by its box width, not the window */
@@ -598,21 +612,22 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
   .dt tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px;padding:14px 16px;border-bottom:1px solid var(--line)}
   .dt td,.dt td.n,.dt tbody tr:hover>td{padding:0;border:0;background:none;text-align:left;white-space:normal}
   .dt td.lead,.dt td.act{grid-column:1/-1}
-  .dt td.fit{width:auto}
+  .dt td.fit{width:auto;white-space:normal} /* the nowrap of .fit kept a long date from wrapping, so it ran into the next column */
   .dt td[data-l]::before{content:attr(data-l);display:block;margin-bottom:2px;font-size:12px;font-weight:400;color:var(--muted)}
   .dt .go{padding:0;min-height:28px;color:var(--ink);text-decoration:underline;text-decoration-color:var(--eye);text-decoration-thickness:2px;text-underline-offset:4px}
   .dt tr:hover .go,.dt .go:hover{background:none}
   .dt tr.grp{display:block;padding:18px 16px 6px}
   .dt tr.grp>td{padding:0}
-  .dt tr.x{grid-template-columns:28px repeat(3,minmax(0,1fr))}
+  .dt tr.x{grid-template-columns:28px minmax(0,1.5fr) minmax(0,.6fr) minmax(0,1.1fr)} /* date wider than a third: "30 Sept 2026" is 99px */
   .dt tr.x>td.lead{grid-column:2/-1;grid-row:1}
-  .dt tr.x>td:first-child{grid-row:1/3}
+  .dt tr.x>td:first-child{grid-row:1/3;margin-top:-3px} /* the 28px toggle against a 22px name line: lifted so both centre together */
   .dt td.span2{grid-column:span 2}
-  .dt tr.sub{grid-template-columns:28px auto minmax(0,1fr) auto;gap:0 10px;padding:6px 16px;border:0;background:color-mix(in srgb,var(--wash) 50%,var(--paper))}
+  .dt tr.sub{grid-template-columns:28px auto minmax(0,1fr) auto;gap:0 12px;padding:6px 16px;border:0;background:color-mix(in srgb,var(--wash) 50%,var(--paper))}
   .dt tbody.ordg:not(.open) tr.sub{display:none}
   .dt tr.sub>td,.dt tbody.ordg.open tr.sub:last-child>td{padding:0;border:0}
   .dt tr.sub>td.lead{grid-column:auto;padding:0}
   .dt tr.sub .opt{display:none}
+  .dt tr.sub .code{display:block;margin:0} /* the SKU under the name, flush with it, as in the catalog */
   .dt tbody.ordg.open tr.sub:last-child{padding-bottom:14px;border-bottom:1px solid var(--line)}
   .dt tbody.ordg.open tr.x{border-bottom:0;background:color-mix(in srgb,var(--wash) 50%,var(--paper))}
 }
@@ -667,7 +682,7 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
   .conv{display:flex;flex-direction:column;min-width:0;min-height:0}
   .msgs{flex:1;min-height:0;max-height:none}
   #screen{padding-bottom:0;min-height:0}
-  .panel{height:100%;overflow-y:auto;padding:16px 20px 24px;border-top:0;border-left:1px solid var(--line)}
+  .panel{height:100%;overflow-y:auto;padding:12px 20px 24px;border-top:0;border-left:1px solid var(--line)} /* 12px: "Order" sits on the chat title's baseline */
 }
 @media (max-width:1000px){
   .chats{flex:1;width:auto;position:static;height:auto;min-height:100vh;min-height:100dvh;border-right:0}
@@ -734,7 +749,7 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
   .band .in{gap:10px}
   .band .ctl{order:1;flex:1 1 100%;min-width:0;flex-wrap:wrap}
   .band .alts{order:2;flex-basis:100%;margin:-4px 0 0 -12px}
-  .ctl>.pick{flex:1 1 100%;min-height:44px}
+  .ctl>.pick,.band .ctl>.pick:not(.sug,.xmenu *){flex:1 1 100%;min-height:44px}
   .band .pick.sug{flex-basis:100%;max-width:none;min-height:48px}
   .results{flex-wrap:wrap}
   .field{font-size:16px}
@@ -774,6 +789,6 @@ button.photo{padding:0;border:0;background:none;cursor:zoom-in}
 
 /* narrow chat: the page is exactly the screen, its padding is the band (after the phone rule that zeroes it for the tab bar) */
 @media (max-width:1000px){
-  body[data-v=chat]{height:100vh;height:var(--vvh,100dvh);box-sizing:border-box;padding-bottom:var(--band-h,0px);overflow:hidden}
+  body[data-v=chat]{height:100vh;height:var(--vvh,100dvh);box-sizing:border-box;padding-bottom:var(--band-h,0px);overflow:hidden;align-items:stretch} /* from 701px the body is a grid: stretch closes the height chain so the messages scroll */
   .band{bottom:var(--kb,0px)} /* on the keyboard, not behind it */
 }

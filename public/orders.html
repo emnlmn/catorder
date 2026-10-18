@@ -30,22 +30,25 @@
     <button id="syncBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg><span>Sync now</span></button>
   </div>
   <div class="seg" id="seg" role="group" aria-label="Filter by customer"></div>
-  <div id="out" aria-busy="true"></div>
+  <div id="out" aria-busy="true"><div class="dt-box"><p class="dt-empty">Loading…</p></div></div>
 </main>
 <script src="ref.js"></script>
 <script>
 const CHEV = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
-let all = [], pick = new URLSearchParams(location.search).get('c') || '';
+let all = [], pick = new URLSearchParams(location.search).get('c') || '', opened = new Set(); // opened: orders left expanded, so a redraw (a filter, a sync) keeps them open
 const value = (o) => o.lines.reduce((s, l) => s + l.qty * l.list_price, 0);
+const key = (o) => o.customer.id + '|' + o.date, isOpen = (o) => opened.has(key(o));
 const draw = () => {
+  const seg = document.getElementById('seg'), had = seg.contains(document.activeElement) ? document.activeElement.dataset.c : null; // the chips are rebuilt: give the focused one back
   const names = [...new Map(all.map((o) => [o.customer.id, o.customer.name]))];
-  document.getElementById('seg').innerHTML = [['', 'All customers'], ...names].map(([id, n]) =>
+  seg.innerHTML = [['', 'All customers'], ...names].map(([id, n]) =>
     `<button type="button" data-c="${esc(id)}" aria-pressed="${id === pick}">${esc(n)}</button>`).join('');
+  if (had !== null) seg.querySelector(`[data-c="${CSS.escape(had)}"]`)?.focus();
   const os = all.filter((o) => !pick || o.customer.id === pick);
   setCount(os.length, os.length === 1 ? 'order' : 'orders');
   const sub = (l) => `<tr class="sub"><td class="fit"></td><td class="n mu">${l.qty} ×</td><td class="lead">${esc(l.name)} <span class="code">${esc(l.sku)}</span></td><td class="n mu opt">${eur(l.list_price)}</td><td class="n">${eur(l.qty * l.list_price)}</td></tr>`;
   document.getElementById('out').innerHTML = os.length
-    ? `<div class="dt-box"><table class="dt"><thead><tr><th class="fit"><span class="sr">Expand</span></th><th scope="col" class="fit">Date</th><th scope="col">Customer</th><th scope="col" class="n fit">Lines</th><th scope="col" class="n fit">Total</th></tr></thead>${os.map((o, i) => `<tbody class="ordg" id="og${i}"><tr class="x"><td class="fit"><button class="tog" type="button" aria-expanded="false" aria-controls="og${i}" aria-label="Show lines">${CHEV}</button></td><td class="mu fit" data-l="Date">${esc(day(o.date))}</td><td class="lead b">${esc(o.customer.name)}</td><td class="n mu fit" data-l="Lines">${o.lines.length}</td><td class="n b fit" data-l="Total">${eur(value(o))}</td></tr>${o.lines.map(sub).join('')}</tbody>`).join('')}</table></div><p class="dt-foot">Totals at list price, before the customer's discount.</p>`
+    ? `<div class="dt-box"><table class="dt"><thead><tr><th class="fit"><span class="sr">Expand</span></th><th scope="col" class="fit">Date</th><th scope="col">Customer</th><th scope="col" class="n fit">Lines</th><th scope="col" class="n fit">Total</th></tr></thead>${os.map((o, i) => `<tbody class="ordg${isOpen(o) ? ' open' : ''}" id="og${i}" data-k="${esc(key(o))}"><tr class="x"><td class="fit"><button class="tog" type="button" aria-expanded="${isOpen(o)}" aria-controls="og${i}" aria-label="${isOpen(o) ? 'Hide' : 'Show'} lines">${CHEV}</button></td><td class="mu fit" data-l="Date">${esc(day(o.date))}</td><td class="lead b">${esc(o.customer.name)}</td><td class="n mu fit" data-l="Lines">${o.lines.length}</td><td class="n b fit" data-l="Total">${eur(value(o))}</td></tr>${o.lines.map(sub).join('')}</tbody>`).join('')}</table></div><p class="dt-foot">Totals at list price, before the customer’s discount.</p>`
     : '<div class="dt-box"><p class="dt-empty">No orders for this customer yet.</p></div>';
 };
 document.getElementById('seg').onclick = (e) => {
@@ -56,7 +59,7 @@ document.getElementById('out').onclick = (e) => {
   const r = e.target.closest('tr.x'); if (!r) return;
   const b = r.querySelector('.tog'), open = b.getAttribute('aria-expanded') !== 'true';
   b.setAttribute('aria-expanded', open); b.setAttribute('aria-label', open ? 'Hide lines' : 'Show lines');
-  r.parentElement.classList.toggle('open', open);
+  r.parentElement.classList.toggle('open', open); opened[open ? 'add' : 'delete'](r.parentElement.dataset.k);
 };
 sync(() => fetch('/api/history').then((r) => r.json()).then((d) => { all = d; draw(); }));
 </script>

@@ -7,18 +7,16 @@
 <link rel="icon" href="logo.png">
 <link rel="stylesheet" href="app.css">
 <style>
-.ref{align-self:stretch;width:100%;box-sizing:border-box;padding:26px clamp(24px,3.5vw,64px) 40px;font-size:15px}
-.ref h1{margin:0 0 6px;font-size:29px;line-height:1.1}
-.ref .lede{margin:0 0 22px;color:var(--muted)}
-.ref h2{margin:28px 0 4px;font-size:16px}
+/* the page frame (padding, title, lede) is app.css's main.ref; this block only adds what the forecast needs */
 /* timeline in the shared .dt-box: header row carries the scale, Today is a dashed line through every row */
 .ftl{container-type:inline-size;margin-top:12px}
-.ftl .hd,.ftl summary{display:grid;grid-template-columns:28px minmax(120px,220px) minmax(0,1fr) 120px;align-items:center;gap:0 16px;padding:0 16px 0 12px}
-.ftl .hd{min-height:38px;background:var(--wash);border-bottom:1px solid var(--line);font-size:13px;font-weight:500;color:var(--muted)}
-.ftl .hd .track{height:38px}
-.ftl .hd .from{position:absolute;left:0;top:50%;transform:translateY(-50%);white-space:nowrap}
-.ftl .hd .now{position:absolute;top:50%;transform:translate(-50%,-50%);padding:1px 6px;border-radius:4px;background:var(--wash);color:var(--ink);white-space:nowrap}
-.ftl .hd .when{font-weight:500}
+.ftl .hd,.ftl summary{display:grid;grid-template-columns:28px minmax(120px,220px) minmax(0,1fr) 120px;align-items:center;gap:0 16px;padding:0 16px}
+.ftl .hd{min-height:39.5px;background:var(--wash);border-bottom:1px solid var(--line);font-size:13px;font-weight:500;color:var(--muted)}
+/* header 40.5px with its border, like a .dt th; the labels are centred by the flex track, not by a transform (that left them a pixel above Customer) */
+.ftl .hd .track{height:39.5px;display:flex;align-items:center}
+.ftl .hd .from{position:absolute;left:0;white-space:nowrap}
+.ftl .hd .now{position:absolute;transform:translateX(-50%);padding:1px 6px;border-radius:6px;background:var(--wash);color:var(--ink);white-space:nowrap}
+.ftl .hd .who,.ftl .hd .when{font-weight:500}
 .ftl .fr+.fr{border-top:1px solid var(--line)}
 .ftl summary{min-height:56px;cursor:pointer;list-style:none}
 .ftl summary:focus-visible{outline-offset:-3px}
@@ -39,22 +37,22 @@
 .ftl .next{background:var(--paper);border:2px solid var(--ink)}
 .ftl .when{justify-self:end;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
 .ftl .when.late{padding:2px 8px;border-radius:6px;background:var(--eye);font-size:14px}
-.ftl .basket{padding:4px 16px 18px calc(12px + 28px + 16px);background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
+.ftl .basket{padding:4px 16px 18px calc(16px + 28px + 16px);background:color-mix(in srgb,var(--wash) 60%,var(--paper))}
 .ftl .why{margin:0;font-size:13px;color:var(--muted)}
 .ftl .items{margin:8px 0 0;padding:0;list-style:none;max-width:420px}
-.ftl .items li{display:flex;gap:12px;padding:5px 0;font-size:14px;line-height:1.3}
+.ftl .items li{display:flex;gap:12px;padding:5px 0;font-size:14px;line-height:1.3;text-wrap:pretty}
 .ftl .items li+li{border-top:1px solid var(--line)}
 .ftl .items b{flex:none;width:3ch;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
 /* narrow box: name and date on one line, the track full width under them */
 @container (max-width:620px){
-  .ftl .hd,.ftl summary{grid-template-columns:28px minmax(0,1fr) auto;grid-template-areas:"c who when" ". track track";padding:0 12px}
+  .ftl .hd,.ftl summary{grid-template-columns:28px minmax(0,1fr) auto;grid-template-areas:"c who when" ". track track";column-gap:12px} /* chevron at 16px and name at 73px, as in the orders cards */
   .ftl summary{padding-top:10px}
   .ftl .hd{grid-template-areas:"c track track"}
   .ftl .hd>.who,.ftl .hd>.when{display:none}
-  .ftl .chev{grid-area:c}.ftl .who{grid-area:who}.ftl .when{grid-area:when}.ftl .track{grid-area:track}
+  .ftl .chev{grid-area:c}.ftl .who{grid-area:who;white-space:normal;overflow:visible}.ftl .when{grid-area:when}.ftl .track{grid-area:track} /* a long name wraps rather than ending in an ellipsis at 320 */
   .ftl summary .track{height:36px}
   .ftl summary .gap{top:17px}.ftl summary .over{top:14px}.ftl summary .dot,.ftl summary .next{top:12px}
-  .ftl .basket{padding-left:52px}
+  .ftl .basket{padding-left:56px} /* the name column: 16 + 28 + 12 */
 }
 .tabs{display:flex;gap:4px;margin:0 0 16px;border-bottom:1px solid var(--line)}
 .tabs button{margin-bottom:-1px;padding:10px 14px;border:0;border-bottom:2px solid transparent;background:none;font:inherit;font-weight:500;color:var(--muted);cursor:pointer}
@@ -65,14 +63,19 @@
 .key{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 0;font-size:13px;color:var(--muted)}
 .key i{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%;vertical-align:-1px;background:var(--ink)}
 .key i.o{background:var(--paper);border:2px solid var(--ink);box-sizing:border-box}
-.key i.l{width:16px;height:8px;border-radius:4px;background:var(--eye)}
+.key i.l{width:16px;height:8px;vertical-align:0;border-radius:4px;background:var(--eye)} /* its middle on the dots' middle (they sit 1px under the baseline) */
+/* phone: the tabs stay on one line, so "next 7 days" moves from the tab to a line over the table, in the legend's place */
+.cap{display:none}
+@media (max-width:700px){.tabs button{white-space:nowrap}.tabs button span{display:none}.cap{display:block}}
+@media (max-width:340px){.tabs button{padding-left:8px;padding-right:8px}}
 @keyframes grow{from{transform:scaleX(0)}}
 @media (prefers-reduced-motion:reduce){.ftl .gap,.ftl .over{animation:none}}
 .dt .q{width:40%}
+@container (max-width:900px){.dt .q{width:24%}} /* at tablet widths 40% left the product names two lines each */
 @container (max-width:640px){.dt td.q{display:none}}
-.q .bar{display:block;height:8px;border-radius:4px;background:color-mix(in srgb,var(--eye) 70%,var(--paper));width:var(--w);transform-origin:left;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
-.none{color:var(--muted)}
-.about{margin:36px 0 0;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+/* .bar is also the toolbar class: its 12px bottom margin made the share bar ride 6px above the row's middle */
+.q .bar{display:block;height:8px;margin:0;border-radius:4px;background:color-mix(in srgb,var(--eye) 70%,var(--paper));width:var(--w);transform-origin:left;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
+.about{margin:10px 0 0;color:var(--muted);font-size:13px;text-wrap:pretty} /* the same note as the orders footer: 10px under the table, no rule */
 .about p{margin:0}
 .head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin:0 0 6px}
 .ref .head h1{margin:0}
@@ -86,7 +89,9 @@
 .syn{padding:7px 11px;border:1px solid var(--line-strong);border-radius:999px;font-size:13px;line-height:1;color:var(--muted);white-space:nowrap}
 /* phone: model and hardware stack in one dark card instead of one pill wider than the screen */
 @media (max-width:700px){.mb{flex-wrap:wrap;border-radius:12px}.mb>span+span{flex-basis:100%;border-left:0;border-top:1px solid color-mix(in srgb,var(--paper) 18%,var(--ink))}.mb>span:last-child{display:none}}
-@media (max-width:700px){.ref{padding:18px 16px 32px}.ref h1{font-size:22px}}
+/* while the head wraps (<=890px) the badges sit between title and lede: 12px under them like the 12px above; on a phone the pill joins the title row and the dark card gets the full width under it */
+@media (max-width:890px){.head{margin-bottom:12px}}
+@media (max-width:700px){.badges{display:contents}.head .mb{order:1;flex:1 1 100%}}
 </style>
 </head>
 <body>
@@ -105,18 +110,17 @@
 </aside>
 <main class="ref">
   <div class="head"><h1 class="toon">Forecast</h1><div class="badges" id="fmodel" hidden></div></div>
-  <p class="lede" id="lede">Who should order soon, and what they usually ask for.</p>
-  <div id="out">Loading the forecast…</div>
+  <p class="lede" id="lede">When each customer should order next. Click a name to see what they usually ask for.</p>
+  <div id="out"><div class="dt-box"><p class="dt-empty">Loading the forecast…</p></div></div>
   <footer class="about" id="about" hidden><p id="fb"></p></footer>
 </main>
 <script>
-fetch('/api/suggestions/feedback/count').then((r) => r.ok ? r.json() : Promise.reject()).then((c) => { const el = document.getElementById('fb'); if (!c.total) return; document.getElementById('about').hidden = false; el.textContent = `${c.total} ${c.total === 1 ? 'suggestion' : 'suggestions'} you added or dismissed in the Inbox will teach the next version of the model.`;  }).catch(() => {});
+fetch('/api/suggestions/feedback/count').then((r) => r.ok ? r.json() : Promise.reject()).then((c) => { const el = document.getElementById('fb'); if (!c.total) return; document.getElementById('about').hidden = false; el.textContent = `${c.total} ${c.total === 1 ? 'suggestion' : 'suggestions'} you added or dismissed in Chats will teach the next version of the model.`;  }).catch(() => {});
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const day = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
 const draw = ([f, cs]) => {
   const name = Object.fromEntries(cs.map((c) => [c.id, c.name]));
   const any = f.customers[0];
-  document.getElementById('lede').textContent = `When each customer should order next. Click a name to see what they usually ask for.`;
   if (any) { const m = document.getElementById('fmodel'); m.innerHTML = `<span class="mb" title="The model that made this forecast"><span><i class="led" aria-hidden="true"></i><b>${esc(any.model)}</b></span>` + (any.trained_on ? `<span>Trained on&nbsp;<span class="amd">${esc(any.trained_on)}</span></span>` : '') + `<span>Runs on ${esc(any.device ? any.device.toUpperCase() : 'unknown device')}</span></span><span class="syn">Synthetic data</span>`; m.hidden = false; }
   const DAY = 86_400_000, t0 = new Date(f.today + 'T12:00:00').getTime();
   const iso = (ms) => new Date(ms).toISOString().slice(0, 10);
@@ -128,18 +132,21 @@ const draw = ([f, cs]) => {
   const x = (ms) => ((ms - lo) / (hi - lo) * 100).toFixed(2) + '%';
   const span = (cls, a, b) => `<i class="${cls}" style="left:${x(a)};width:calc(${x(b)} - ${x(a)})"></i>`;
   const lateDays = (p) => p.days_since_last - Math.round(p.expected_gap_days);
-  document.getElementById('out').innerHTML = `<div class="tabs" role="tablist"><button type="button" role="tab" id="t-who" aria-selected="true" aria-controls="p-who">Who orders next</button><button type="button" role="tab" id="t-demand" aria-selected="false" aria-controls="p-demand">Expected demand<span>next 7 days</span></button></div><div class="pane" id="p-who">` + (rows.length ? `<p class="key"><span><i></i>Last order</span><span><i class="o"></i>Next order expected</span><span><i class="l"></i>Late</span></p>
+  document.getElementById('out').innerHTML = `<div class="tabs" role="tablist"><button type="button" role="tab" id="t-who" aria-selected="true" aria-controls="p-who">Who orders next</button><button type="button" role="tab" id="t-demand" aria-selected="false" aria-controls="p-demand" tabindex="-1">Expected demand<span>next 7 days</span></button></div><div class="pane" id="p-who" role="tabpanel" aria-labelledby="t-who">` + (rows.length ? `<p class="key"><span><i></i>Last order</span><span><i class="o"></i>Next order expected</span><span><i class="l"></i>Late</span></p>
 <div class="ftl dt-box"><div class="hd" aria-hidden="true"><span></span><span class="who">Customer</span><span class="track"><span class="from">${day(iso(lo + DAY))}</span><span class="today" style="left:${x(t0)}"></span><span class="now" style="left:${x(t0)}">Today</span></span><span class="when">Next order</span></div>` +
     rows.map(({ p, last, next }) => {
       const late = p.days_overdue > 0;
       return `<details class="fr"><summary><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span><span class="who">${esc(name[p.customer_id])}</span><span class="track" aria-hidden="true">${span('gap', last, next)}<i class="today" style="left:${x(t0)}"></i>${late ? span('over', next, t0) : ''}<i class="dot" style="left:${x(last)}"></i><i class="next" style="left:${x(next)}"></i></span><span class="when${late ? ' late' : ''}">${late ? `${lateDays(p)} days late` : day(p.next_order_date)}</span></summary>
 <div class="basket"><p class="why">Usually orders every ${Math.round(p.expected_gap_days)} days · last order ${p.days_since_last} days ago · likely order:</p><ul class="items">${p.basket.map((b) => `<li><b>${b.qty}×</b>${esc(b.name)}</li>`).join('')}</ul></div></details>`;
-    }).join('') + `</div>` : `<p class="none">No forecast yet.</p>`) + `</div><div class="pane" id="p-demand" hidden>` + (f.demand_7d.length ? `<div class="dt-box" style="margin-top:12px"><table class="dt"><thead><tr><th scope="col">Product</th><th><span class="sr">Share</span></th><th scope="col" class="n">Qty</th><th scope="col" class="n">Customers</th></tr></thead><tbody>${f.demand_7d.map((d) => `<tr><td class="lead b">${esc(d.name)}</td><td class="q" aria-hidden="true"><span class="bar" style="--w:${(d.qty / f.demand_7d[0].qty * 100).toFixed(1)}%"></span></td><td class="n b" data-l="Qty">${d.qty}</td><td class="n mu" data-l="Customers">${d.customers}</td></tr>`).join('')}</tbody></table></div>` : `<p class="none">No orders expected in the next 7 days.</p>`) +
-    (f.failed.length ? `<p class="none">Could not forecast: ${f.failed.map((id) => esc(name[id] || id)).join(', ')}</p>` : '') + `</div>`;
-  for (const t of document.querySelectorAll('[role=tab]')) t.onclick = () => { for (const o of document.querySelectorAll('[role=tab]')) { const on = o === t; o.setAttribute('aria-selected', on); document.getElementById(o.getAttribute('aria-controls')).hidden = !on; } };
+    }).join('') + `</div>` : `<div class="dt-box"><p class="dt-empty">No forecast yet.</p></div>`) + `</div><div class="pane" id="p-demand" role="tabpanel" aria-labelledby="t-demand" hidden>` + (f.demand_7d.length ? `<p class="key cap"><span>Quantities expected in the next 7 days</span></p><div class="dt-box" style="margin-top:12px"><table class="dt"><thead><tr><th scope="col">Product</th><th><span class="sr">Share</span></th><th scope="col" class="n">Qty</th><th scope="col" class="n">Customers</th></tr></thead><tbody>${f.demand_7d.map((d) => `<tr><td class="lead b">${esc(d.name)}</td><td class="q" aria-hidden="true"><span class="bar" style="--w:${(d.qty / f.demand_7d[0].qty * 100).toFixed(1)}%"></span></td><td class="n b" data-l="Qty">${d.qty}</td><td class="n mu" data-l="Customers">${d.customers}</td></tr>`).join('')}</tbody></table></div>` : `<div class="dt-box"><p class="dt-empty">No orders expected in the next 7 days.</p></div>`) +
+    (f.failed.length ? `<p class="dt-foot">Could not forecast: ${f.failed.map((id) => esc(name[id] || id)).join(', ')}</p>` : '') + `</div>`;
+  // tabs: one stop in the tab order, arrow keys / Home / End move between them and select
+  const tabs = [...document.querySelectorAll('[role=tab]')];
+  const pick = (t) => { for (const o of tabs) { const on = o === t; o.setAttribute('aria-selected', on); o.tabIndex = on ? 0 : -1; document.getElementById(o.getAttribute('aria-controls')).hidden = !on; } };
+  tabs.forEach((t, i) => { t.onclick = () => pick(t); t.onkeydown = (e) => { const j = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key]; if (j === undefined) return; e.preventDefault(); const n = tabs[(j + tabs.length) % tabs.length]; pick(n); n.focus(); }; });
 };
 Promise.all([fetch('/api/predictions').then((r) => r.json()), fetch('/api/customers').then((r) => r.json())]).then(draw)
-  .catch(() => { document.getElementById('out').textContent = 'Could not load the forecast. Reload the page.'; });
+  .catch(() => { document.getElementById('out').innerHTML = '<div class="dt-box"><p class="dt-empty">Could not load the forecast. Reload the page.</p></div>'; });
 </script>
 <script src="side.js"></script>
 <script src="tabbar.js"></script>
