@@ -674,6 +674,11 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
   body[data-v=chat] .chats,body[data-v=detail] .chats,body[data-v=list] #screen,body[data-v=list] .band{display:none!important}
   .bk,.dtl{display:block}
   body[data-v=chat] .panel,body[data-v=detail] .conv{display:none}
+  /* the chat fills what the band leaves: header on top, messages scroll inside, never under the band however tall its choices are */
+  body[data-v=chat] .shell{min-height:0}
+  body[data-v=chat] #screen{flex:1;min-height:0;padding-bottom:0}
+  body[data-v=chat] .scr,body[data-v=chat] .conv{flex:1;min-height:0;display:flex;flex-direction:column}
+  body[data-v=chat] .msgs{flex:1;min-height:96px;max-height:none}
   .panel{border-left:0}
 }
 
@@ -761,3 +766,6 @@ button.photo{padding:0;border:0;background:none;cursor:zoom-in}
 .msg.out.draft.busy textarea{opacity:.4;animation:pulse 1.2s ease-in-out infinite}
 .msg.out.draft textarea{transition:opacity .2s}
 @media (hover:none){.msg.out .hint{display:none}}
+
+/* narrow chat: the page is exactly the screen, its padding is the band (after the phone rule that zeroes it for the tab bar) */
+@media (max-width:1000px){body[data-v=chat]{height:100vh;height:100dvh;box-sizing:border-box;padding-bottom:var(--band-h,0px)}}

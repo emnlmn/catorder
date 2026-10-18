@@ -695,7 +695,9 @@ function miniVoice(p) {
 }
 function bubble(p, o = null, solo = true) {
     const media = p.channel === 'whatsapp' ? '' : CHANNEL[p.channel] || '';
-    return h('div', { class: 'msg', 'data-msg': p.id }, h('div', { class: 'bub' }, p.channel === 'voice' && p.media_url ? miniVoice(p) : p.channel === 'photo' && !p.text && isReading(p.id, !!p.order, p.received_at) ? h('b', { class: 'bl' }, cat(true), 'Reading the photo') : media && h('b', { class: 'bl' }, media), p.channel === 'photo' && p.media_url && h('a', { class: 'photo', href: p.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: p.media_url, alt: 'Photo of a list' })), p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order, 1, p.id), !p.order && isReading(p.id, false, p.received_at) && thinking('')); // a live message landing under another open order: show it is being read
+    return h('div', { class: 'msg', 'data-msg': p.id }, h('div', { class: 'bub' }, p.channel === 'voice' && p.media_url ? miniVoice(p) : p.channel === 'photo' && !p.text && isReading(p.id, !!p.order, p.received_at) ? h('b', { class: 'bl' }, cat(true), 'Reading the photo') : media && h('b', { class: 'bl' }, media), p.channel === 'photo' && p.media_url && h('a', { class: 'photo', href: p.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: p.media_url, alt: 'Photo of a list' })), p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order, 1, p.id), 
+    // a live message landing under another open order: its steps stream here too, so it can be opened like the selected one
+    !p.order && isReading(p.id, false, p.received_at) && (void startTrace(p.id), traceEl(p.id) || thinking('', p.id)));
 }
 // the whole conversation, oldest first; the open message is its full self (quotes lit, player, photo), the rest are one click away
 function threadEl(m, o, open) {
@@ -776,7 +778,8 @@ function scrollMsgs(smooth = false) {
         return;
     const tr = document.getElementById('trace'), rp = box.querySelector('.msg.sel ~ .msg.out');
     const end = Math.max(sel.offsetTop + sel.offsetHeight, tr && !tr.hidden ? tr.offsetTop + tr.offsetHeight : 0, rp ? rp.offsetTop + rp.offsetHeight : 0);
-    box.scrollTo({ top: Math.max(0, end - box.clientHeight + 24), behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto' });
+    const selTop = sel.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop; // a short box (tall band on a phone) shows the message first, what follows it scrolls
+    box.scrollTo({ top: Math.max(0, Math.min(end - box.clientHeight + 24, selTop - 12)), behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto' });
 }
 const quoted = (s) => s.split(/(«[^»]*»)/).map((x) => (x.startsWith('«') ? h('b', {}, x) : x));
 const secs = (ms) => (ms / 1000).toFixed(1) + ' s';
@@ -811,8 +814,8 @@ const cat = (on) => h('span', { class: 'cat' + (on ? ' on' : ''), 'aria-hidden':
 // three little lines of text: reading, the green highlighter runs over them as it does over the customer's words; writing, they fill in
 const dots = () => h('span', { class: 'dots', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'));
 // before the first step arrives (or with no trace at all) CatOrder still answers in the chat: a bubble that it is reading
-function thinking(id = 'trace') {
-    return h('section', { id: id || null, class: 'think rise', role: 'status', 'aria-label': 'CatOrder is reading the message' }, h('span', { class: 'think-b' }, cat(true), 'Reading the message'));
+function thinking(id = 'trace', tid = '') {
+    return h('section', { id: id || null, 'data-trace': tid || null, class: 'think rise', role: 'status', 'aria-label': 'CatOrder is reading the message' }, h('span', { class: 'think-b' }, cat(true), 'Reading the message'));
 }
 function traceEl(id) {
     const t = S.trace[id], d = S.detail;
