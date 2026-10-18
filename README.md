@@ -12,7 +12,7 @@ Small and mid-size wholesale distributors (food and beverage, horeca, building s
 
 Every morning someone at the order desk reads each message and retypes it into the ERP. That causes two problems:
 
-1. **Order handling is slow and error-prone.** At 70 orders a day and about 4 minutes each, retyping takes roughly one full-time person. "The usual" and "the red one from last time" live in one person's memory. Wrong pack sizes, unwanted items and misread quantities become second deliveries, credit notes and lost customers.
+1. **Order handling is slow and error-prone.** At 70 orders a day and about 4 minutes each, retyping takes most of one person's working day. "The usual" and "the red one from last time" live in one person's memory. Wrong pack sizes, unwanted items and misread quantities become second deliveries, credit notes and lost customers.
 2. **The distributor finds out too late.** No one notices that a bar which orders every Thursday has been silent for two weeks, or that an order is missing the mozzarella the customer always takes. Customers drift to a competitor before anyone calls them.
 
 Only 7% of Italian companies are fully digital in their B2B processes (Politecnico di Milano, Digital B2b observatory, June 2026). The customer is not going to change how they order, so the order desk has to.
@@ -77,7 +77,7 @@ How it is calculated, inputs and training are in [`model/README.md`](model/READM
 | Customer going silent | noticed when they're gone | on the Forecast page, with days overdue |
 | Customer data | sent to closed APIs, or kept manual | open models on AMD |
 
-What it is worth, as our assumptions (not measured): 70 orders by message a day × 4 minutes ≈ **4.7 hours of order desk time a day**, about one full-time person. 4 minutes is on the low side: vendors of order automation for food distributors report 5–8 minutes per order typed by hand ([Pepper](https://www.usepepper.com/case-studies/carolina-food-service-streamlines-order-entry-in-every-format-with-peppers-order-agent)) and 7–8 minutes for a 40-line order ([Choco](https://choco.com/us/stories/suppliers/orderagent-the-ai-order-processing-engine-thats-powering-the-future-of-food-distribution)). We found no independent time study. One wrong line delivered costs €30–80. At €149 a month (Starter, order reading) or €299 (Pro, with forecasts and buying lists), halving the typing and catching one wrong line a week pays for itself. `PRODUCT.md` has the business case, the competition and go-to-market.
+What it is worth, as our assumptions (not measured): 70 orders by message a day × 4 minutes ≈ **4.7 hours of order desk time a day**, most of one person's working day. 4 minutes is on the low side: vendors of order automation for food distributors report 5–8 minutes per order typed by hand ([Pepper](https://www.usepepper.com/case-studies/carolina-food-service-streamlines-order-entry-in-every-format-with-peppers-order-agent)) and 7–8 minutes for a 40-line order ([Choco](https://choco.com/us/stories/suppliers/orderagent-the-ai-order-processing-engine-thats-powering-the-future-of-food-distribution)). We found no independent time study. One wrong line delivered costs €30–80. At €149 a month (Starter, order reading) or €299 (Pro, with forecasts and buying lists), halving the typing and catching one wrong line a week pays for itself. `PRODUCT.md` has the business case, the competition and go-to-market.
 
 ## Results at a glance
 
