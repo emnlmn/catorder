@@ -58,7 +58,7 @@ flowchart LR
 
 ![Forecast page: The Porch Pizzeria is 34 days late; the other customers' next orders are expected on 22 and 30 October](assets/app-forecast.png)
 
-`catorder-nbr` is a 122k-parameter PyTorch model: a GRU over each customer's last 16 orders with four heads. It was trained on an **AMD Radeon Pro W7900D with ROCm** in 169 s, on two years of synthetic history for 905 customers. For each customer it predicts:
+`catorder-nbr` is a 122k-parameter PyTorch model: a GRU over each customer's last 16 orders with four heads. It was trained on an **AMD Radeon Pro W7900D with ROCm** in 169 s, on two years of synthetic history: 630 customers to train, 135 to validate, 135 to test. For each customer it predicts:
 
 - **When** they will order next (date, plus days overdue). This tells the seller who is late and who is coming up.
 - **Whether** they are drifting away (churn risk), so the seller knows whom to call before the customer is lost.
@@ -143,7 +143,7 @@ Read from the process environment, or from `.env` (real variables win).
 - **AMD Token Factory** (OpenAI-compatible): `MODEL_BASE_URL=https://developer.amd.com.cn/radeon/api/v1`, `MODEL_NAME=Gemma-4-31B-IT` and your `MODEL_API_KEY`. Add `MODEL_HARDWARE="AMD Instinct via AMD Token Factory"` for the top bar.
 - **vLLM on an MI300X**: `vllm serve google/gemma-3-27b-it`, then `MODEL_BASE_URL=http://<host>:8000/v1`. Whisper served the same way reads voice notes via `TRANSCRIBE_*`.
 - **Ollama for development**: `MODEL_BASE_URL=http://localhost:11434/v1`, `MODEL_API_KEY=ollama`, `MODEL_NAME=gemma3:12b`.
-- **Next-order model** (`model/`, PyTorch, not an LLM): trained on an AMD Radeon Pro W7900D with ROCm on 905 synthetic customers. It predicts each customer's next order date, churn risk and basket, and powers the Forecast page and the "Usually also takes" suggestions. Serve it with `python3 model/serve.py` and point `PREDICT_BASE_URL` at it. Data, method and results are in `model/README.md`.
+- **Next-order model** (`model/`, PyTorch, not an LLM): trained on an AMD Radeon Pro W7900D with ROCm on 630 synthetic customers (135 more to validate, 135 to test). It predicts each customer's next order date, churn risk and basket, and powers the Forecast page and the "Usually also takes" suggestions. Serve it with `python3 model/serve.py` and point `PREDICT_BASE_URL` at it. Data, method and results are in `model/README.md`.
 
 ## Live WhatsApp through the Twilio Sandbox
 
@@ -178,7 +178,7 @@ How the hand review changed the score (from 217/237 to 232/237), all recorded in
 
 The set is what Token Factory let us read: of 520 generated messages (`data-eval-complete/`), our parallel run hit its rate limit (20 requests a minute) and we stopped it for the deadline with 237 read in full. Batches 1 and 2 are nearly complete, 3 to 5 are partial. The model outputs are cached in `data-eval/cache/` (not committed) and keyed on prompt version 1, the prompt at commit `2d3cdb1`; at that commit, reproduce with `CATORDER_OFFLINE=1 CATORDER_DATA_DIR=data-eval npm run eval -- --alone`.
 
-Next-order model (`model/README.md`), trained on an AMD Radeon Pro W7900D in 169 s on 905 synthetic customers, tested on 135 it never saw, against the strongest simple method (each customer's own top items, median cadence):
+Next-order model (`model/README.md`), trained on an AMD Radeon Pro W7900D in 169 s on 630 synthetic customers (best epoch picked on 135 validation customers), tested on 135 it never saw, against the strongest simple method (each customer's own top items, median cadence):
 
 | | model | simple method |
 |---|---|---|
