@@ -229,6 +229,9 @@ async function pollInbox(): Promise<void> {
   try {
     const next = (await api<Summary[]>('/messages')).sort(newest);
     const fresh = next.find((m) => isLive(m.id) && !S.messages.some((x) => x.id === m.id));
+    // a later message merged into an earlier one's order: the cached thread still points the earlier bubble at the superseded order
+    for (const [tc, t] of Object.entries(S.thread))
+      if (t.some((p) => { const n = next.find((m) => m.id === p.id); return n && (n.order ? n.order.id : null) !== (p.order ? p.order.id : null); })) void loadThread(tc);
     if (sameList(next, S.messages) && !S.messages.some((m) => isReading(m.id, !!m.order, m.received_at))) return; // nothing new: no re-render, no flicker
     const cid = S.detail && S.detail.message.customer_id;
     const mine = (l: Summary[]): string => JSON.stringify(l.filter((m) => m.customer.id === cid));
@@ -975,7 +978,7 @@ function back(): void { S.find = S.row = null; renderScreen(); }
 function bandOf(d: Detail | null): Band | null {
   if (!d) return null;
   const m = d.message, o = d.order;
-  if (m.customer_id === UNKNOWN) return { key: 'link', q: 'Who is this?', sub: 'Reading starts once the number is linked to a customer.', ctl: () => pick('Choose customer', () => setView('detail')) };
+  if (m.customer_id === UNKNOWN) return { key: 'link', q: 'Who is this?', sub: 'Reading starts once the number is linked to a customer.', ctl: () => pick('Choose customer', () => { setView('detail'); document.querySelector<HTMLElement>('.who-p .who-b')?.focus(); }) };
   if (S.busy === m.id || (!o && isReading(m.id, false, m.received_at))) return { key: 'reading', q: 'Reading…', sub: engine(' on ') };
   if (!o) {
     const err = S.failed[m.id];
