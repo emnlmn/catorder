@@ -294,6 +294,6 @@ export interface Config {
   whatsappPhoneMap?: Record<string, string>; // E.164 -> customer id
   whatsappContentSid?: string; // HX… template that carries the reply as {{1}}
   whatsappFrom?: string; // E.164 number replies are sent from
-  predictBaseUrl?: string; // model/serve.py on the MI300X; "" = cached predictions only
+  predictBaseUrl?: string; // model/serve.py (CPU); "" = cached predictions only
   predictToken?: string;
 }

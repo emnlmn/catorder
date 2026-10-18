@@ -51,9 +51,9 @@ The customer will not change. The order desk has to.
 |---|---|
 | Orders by message at one distributor | 70 a day |
 | Time to read and retype one | 4 minutes, more for photos and voice notes (conservative: Pepper and Choco report 5–8 minutes for food distributors, vendor figures) |
-| Order desk time spent retyping | 4.7 hours a day, about one full-time person |
+| Order desk time spent retyping | 4.7 hours a day, most of one person's working day |
 | One wrong line delivered | a second trip, a credit note, a customer annoyed: €30 to €80 |
-| CatOrder | €199 a month per order desk |
+| CatOrder | €149 a month (Starter), €299 with forecasts (Pro) |
 
 If CatOrder halves the typing and catches one wrong line a day, it pays for itself many times over; the bigger gain is that the morning no longer depends on the one person who remembers every customer's usual. We argue this; we will report what the eval measures, not a lift we have not seen.
 
@@ -75,7 +75,7 @@ On a fixed set of synthetic customers, catalogue, order history and messages (te
 
 ## Hackathon scope, and after
 
-**In the hackathon.** One invented distributor with a catalogue of about 80 products, four customers with order histories and agreed terms, about 20 incoming messages (WhatsApp texts in Italian, voice notes, photos of handwritten lists, emails) with planted difficulties; reading on Gemma via AMD Token Factory or vLLM on an MI300X; the draft order with candidates and flags; confirm and export; the eval and its numbers in the README; a public URL.
+**In the hackathon.** One invented distributor with a catalogue of about 80 products, four customers with order histories and agreed terms, about 20 incoming messages (WhatsApp texts in Italian, voice notes, photos of handwritten lists, emails) with planted difficulties; reading on Gemma via AMD Token Factory; the draft order with candidates and flags; confirm and export; the eval and its numbers in the README; a public URL.
 
 **Not in the hackathon.** The WhatsApp Business connection, ERP integration, accounts and permissions, stock availability, delivery planning.
 

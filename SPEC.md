@@ -116,7 +116,7 @@ TRANSCRIBE_MODEL=          # e.g. openai/whisper-large-v3
 MODEL_PRICE_IN_PER_M=0     # USD per 1M tokens, for the cost estimate; 0 = n/a
 MODEL_PRICE_OUT_PER_M=0
 MODEL_TIMEOUT_S=120
-MODEL_HARDWARE=            # shown in the top bar, e.g. "AMD Instinct MI300X via AMD Token Factory"
+MODEL_HARDWARE=            # shown in the top bar, e.g. "AMD Instinct via AMD Token Factory"
 CATORDER_DB=./catorder.db
 CATORDER_TODAY=            # YYYY-MM-DD; empty = real date. Demo and eval use 2026-10-18.
 CATORDER_OFFLINE=0         # 1 = never call a model, serve the cache and committed readings only

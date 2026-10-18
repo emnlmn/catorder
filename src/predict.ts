@@ -1,4 +1,4 @@
-// Client for the predictive model (model/serve.py, PyTorch on an AMD Instinct MI300X): when a customer orders next and what.
+// Client for the predictive model (model/serve.py, PyTorch; trained on an AMD Radeon Pro W7900D, serves on CPU): when a customer orders next and what.
 // The model predicts; code only checks the answer's shape and that every SKU is in the catalogue.
 import { cachedCall, ModelError, sha, type CacheOpts } from "./cache.ts";
 import type { HistoryOrder, Product } from "./types.ts";

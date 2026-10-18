@@ -70,7 +70,7 @@ python3 learning_curve.py        # optional, ~10 min on the W7900D
 PORT=8077 PREDICT_TOKEN=secret python3 serve.py
 ```
 
-The same commands run on an AMD Instinct MI300X in a `rocm/pytorch` container, or on CPU (`MODEL_DEVICE=cpu`). CatOrder reaches the service through `PREDICT_BASE_URL` and `PREDICT_TOKEN`; answers are cached, so the demo survives a stopped service.
+The same commands run on CPU (`MODEL_DEVICE=cpu`). CatOrder reaches the service through `PREDICT_BASE_URL` and `PREDICT_TOKEN`; answers are cached, so the demo survives a stopped service.
 
 ## API
 

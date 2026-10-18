@@ -2,7 +2,7 @@
  "ok": true,
  "model": "Gemma 3 27B",
  "transcribe_model": "Whisper large-v3",
- "hardware": "AMD Instinct MI300X via Token Factory",
+ "hardware": "AMD Instinct via AMD Token Factory",
  "offline": false,
  "vision": true,
  "today": "2026-10-18",
