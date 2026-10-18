@@ -875,3 +875,10 @@ a.photo{cursor:zoom-in}
 @keyframes who-in{from{opacity:0;transform:translateY(8px)}}
 @media (prefers-reduced-motion:reduce){.who-d[open]{animation:none}}
 @media (max-width:700px){.who-q{min-height:44px;font-size:16px}.who-d .who-b{min-height:60px}.who-x{min-height:44px}}
+/* unknown number: Bind to customer is the one action, beside Clear chat in the header */
+.hacts{position:absolute;top:9px;right:28px;display:flex;align-items:center;gap:8px}
+.hacts .clr{position:static}
+.bind{min-height:32px;padding:0 14px;border:1px solid var(--ink);border-radius:8px;background:var(--ink);color:var(--paper);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.bind:hover{background:color-mix(in srgb,var(--ink) 86%,var(--paper))}
+@media (min-width:701px){.conv-h.unk h1{padding-right:260px}}
+@media (max-width:700px){.hacts{position:static;margin-top:10px}.bind,.hacts .clr{min-height:44px}}

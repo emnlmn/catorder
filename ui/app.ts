@@ -815,10 +815,10 @@ const assignTo = async (m: Detail['message'], c: Who): Promise<void> => {
 };
 // the ERP customer list in a modal: type to narrow it, Enter or a tap links the number
 function customerDialog(m: Detail['message']): void {
-  const list = h('div', { class: 'who-l' }), q = h('input', { type: 'search', class: 'who-q', placeholder: 'Search customers', 'aria-label': 'Search customers', autocomplete: 'off' }) as HTMLInputElement;
-  const dlg = h('dialog', { class: 'xmenu who-d', 'aria-label': 'Who is this?' },
-    h('h2', null, 'Who is ' + (senderOf(m) || 'this number') + '?'),
-    h('p', { class: 'who-s' }, 'Later messages from this number follow the customer.'),
+  const list = h('div', { class: 'who-l' }), q = h('input', { type: 'search', class: 'who-q', placeholder: 'Search ERP customers', 'aria-label': 'Search ERP customers', autocomplete: 'off' }) as HTMLInputElement;
+  const dlg = h('dialog', { class: 'xmenu who-d', 'aria-label': 'Bind to customer' },
+    h('h2', null, 'Bind ' + (senderOf(m) || 'this number') + ' to a customer'),
+    h('p', { class: 'who-s' }, 'Not a known customer in the ERP. Pick the one it belongs to; later messages from this number follow.'),
     q, list,
     h('button', { type: 'button', class: 'who-x', onclick: () => (dlg as HTMLDialogElement).close() }, 'Cancel')) as HTMLDialogElement;
   const choose = (c: Cust): void => { dlg.close(); void assignTo(m, c); };
@@ -842,10 +842,10 @@ function customerDialog(m: Detail['message']): void {
 }
 function whoPanel(m: Detail['message']): HTMLElement {
   const pick = (c: Who): Promise<void> => assignTo(m, c);
-  return h('aside', { class: 'panel who-p', 'aria-label': 'Who is this?' },
+  return h('aside', { class: 'panel who-p', 'aria-label': 'Bind to customer' },
     backBtn('chat'),
-    h('header', { class: 'panel-h' }, h('h2', { class: 'toon' }, 'Who is this?')),
-    h('p', { class: 'none' }, 'Link ' + (senderOf(m) || 'this number') + ' to a customer. CatOrder reads the order once it is linked.'),
+    h('header', { class: 'panel-h' }, h('h2', { class: 'toon' }, 'Bind to customer')),
+    h('p', { class: 'none' }, 'This number is not a known customer in the ERP. Bind it to one and CatOrder reads the order.'),
     h('div', { class: 'who-l' }, (S.all || []).map((c) => h('button', { type: 'button', class: 'who-b', onclick: () => { void pick(c); } }, c.name))));
 }
 const senderOf = (m: Detail['message']): string | null | undefined => m.sender || S.messages.find((x) => x.id === m.id)?.sender;
@@ -915,11 +915,12 @@ function orderScreen(d: Detail, asked?: string): HTMLElement {
   const unpriced = !!o && lines(o).some((l) => l.state !== 'removed' && !hasPrice(l)); // a line still to match has no price: the sum is not final
   return h('div', { class: 'scr' },
     h('section', { class: 'conv' },
-      h('header', { class: 'conv-h' }, backBtn('list'),
+      h('header', { class: 'conv-h' + (unk ? ' unk' : '') }, backBtn('list'),
         h('h1', { class: 'toon' }, unk ? senderOf(m) || 'New number' : who.name),
-        m.customer_id && h('div', { class: 'meta cust' }, unk ? 'New number' : custLine(m.customer_id)),
+        m.customer_id && h('div', { class: 'meta cust' }, unk ? 'Not a known customer in the ERP' : custLine(m.customer_id)),
         h('button', { type: 'button', class: 'dtl', onclick: () => setView('detail') }, 'Details'),
-        m.customer_id && clearBtn(m.customer_id)),
+        unk ? h('div', { class: 'hacts' }, h('button', { type: 'button', class: 'bind', onclick: () => customerDialog(m) }, 'Bind to customer'), clearBtn(m.customer_id as string))
+          : m.customer_id && clearBtn(m.customer_id)),
       threadEl(m, o, open)),
     unk ? whoPanel(m) : !showOrder ? custCard(m.customer_id as string, who.name) : h('aside', { class: 'panel', 'aria-label': 'Order' },
       backBtn('chat'),
@@ -1006,7 +1007,7 @@ function back(): void { S.find = S.row = null; renderScreen(); }
 function bandOf(d: Detail | null): Band | null {
   if (!d) return null;
   const m = d.message, o = d.order;
-  if (m.customer_id === UNKNOWN) return { key: 'link', q: 'Who is this?', sub: 'Reading starts once the number is linked to a customer.', ctl: () => pick('Choose customer', () => customerDialog(m)) };
+  if (m.customer_id === UNKNOWN) return { key: 'link', q: 'Unknown number', sub: 'Reading starts once it is bound to a customer.' };
   if (S.busy === m.id || (!o && isReading(m.id, false, m.received_at))) return { key: 'reading', q: 'Reading…', sub: engine(' on ') };
   if (!o) {
     const err = S.failed[m.id];
