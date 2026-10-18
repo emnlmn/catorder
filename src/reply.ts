@@ -11,6 +11,7 @@ export interface Reply {
   model: string; created_at: string; sent_at: string | null;
 }
 
+// 424, not 502: the hosting proxy swaps any 502/504 from the app for its own HTML page, hiding the reason
 export class ReplyError extends Error { constructor(public status: number, msg: string) { super(msg); } }
 
 /** Sends a WhatsApp text. Injected so tests need no network. */
@@ -23,10 +24,10 @@ export function twilioSender(sid: string, token: string, from: string, contentSi
       headers: { authorization: "Basic " + Buffer.from(`${sid}:${token}`).toString("base64"), "content-type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({ From: `whatsapp:${from}`, To: `whatsapp:${to}`, ...(contentSid ? { ContentSid: contentSid, ContentVariables: JSON.stringify({ 1: body }) } : { Body: body }) }),
       signal: AbortSignal.timeout(15_000),
-    });
+    }).catch(() => { throw new ReplyError(424, "WhatsApp did not answer. Try again."); });
     if (!r.ok) {
       const why = await r.json().then((j) => { const e = j as { code?: number; message?: string }; return ` Twilio ${e.code}: ${e.message}`; }, () => "");
-      throw new ReplyError(502, `WhatsApp did not take the message (${r.status}).${why}`);
+      throw new ReplyError(424, `WhatsApp did not take the message (${r.status}).${why}`);
     }
   };
 }
@@ -89,10 +90,10 @@ export async function draftReply(db: Db, svc: Services, messageId: string): Prom
     // the proxy in front answers 504 after ~100 s: give up first, with a message the UI can show (a 429 wait alone is 30 to 45 s)
     const slow = new Promise<never>((_, no) => setTimeout(() => no(new ModelError(0, "slow")), 70_000).unref());
     try { [text] = await Promise.race([svc.chat.generate([{ role: "system", content: REPLY_SYSTEM }, { role: "user", content: replyContext(o, cust.name, cust.terms) }]), slow]); }
-    catch (e) { throw new ReplyError(502, e instanceof ModelError ? "The model is slow right now. Try again." : String(e)); }
+    catch (e) { throw new ReplyError(424, e instanceof ModelError ? "The model is slow right now. Try again." : String(e)); }
     text = text.trim().replace(/^["«]|["»]$/g, "");
     model = svc.chat.name;
-    if (!text) throw new ReplyError(502, "The model gave an empty reply. Try again.");
+    if (!text) throw new ReplyError(424, "The model gave an empty reply. Try again.");
   }
   const prev = latestReply(db, messageId);
   if (prev && prev.status === "draft") {
