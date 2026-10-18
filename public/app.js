@@ -963,15 +963,24 @@ const assignTo = async (m, c) => {
     if (S.detail && S.detail.order)
         void doRead(); // read again as that customer: "the usual" now has a history
 };
-// the ERP customer list in a modal: type to narrow it, tap one to link the number
+// the ERP customer list in a modal: type to narrow it, Enter or a tap links the number
 function customerDialog(m) {
-    const list = h('div', { class: 'who-l' }), q = h('input', { type: 'search', class: 'who-q', placeholder: 'Search customers', 'aria-label': 'Search customers' });
-    const dlg = h('dialog', { class: 'xmenu who-d' }, h('p', null, 'Who is ' + (senderOf(m) || 'this number') + '?'), q, list, h('button', { type: 'button', class: 'pick quiet', onclick: () => dlg.close() }, 'Cancel'));
+    const list = h('div', { class: 'who-l' }), q = h('input', { type: 'search', class: 'who-q', placeholder: 'Search customers', 'aria-label': 'Search customers', autocomplete: 'off' });
+    const dlg = h('dialog', { class: 'xmenu who-d', 'aria-label': 'Who is this?' }, h('h2', null, 'Who is ' + (senderOf(m) || 'this number') + '?'), h('p', { class: 'who-s' }, 'Later messages from this number follow the customer.'), q, list, h('button', { type: 'button', class: 'who-x', onclick: () => dlg.close() }, 'Cancel'));
+    const choose = (c) => { dlg.close(); void assignTo(m, c); };
     const fill = () => {
         const t = q.value.trim().toLowerCase(), cs = (S.all || []).filter((c) => c.name.toLowerCase().includes(t));
-        list.replaceChildren(...(cs.length ? cs.map((c) => h('button', { type: 'button', class: 'who-b', onclick: () => { dlg.close(); void assignTo(m, c); } }, c.name)) : [h('p', { class: 'none' }, S.all ? 'No customer matches.' : 'The customer list did not load.')]));
+        list.replaceChildren(...(cs.length ? cs.map((c) => {
+            const last = c.recent_orders[0], sub = c.order_count ? c.order_count + (c.order_count === 1 ? ' order' : ' orders') + (last ? ' · last ' + fmtDay(last.date) : '') : 'No orders yet';
+            return h('button', { type: 'button', class: 'who-b', onclick: () => choose(c) }, h('span', { class: 'av', 'aria-hidden': 'true' }, initials(c.name)), h('span', { class: 'who-n' }, h('b', null, c.name), h('span', null, sub)));
+        }) : [h('p', { class: 'none' }, S.all ? 'No customer matches “' + q.value.trim() + '”.' : 'The customer list did not load.')]));
     };
     q.addEventListener('input', fill);
+    q.addEventListener('keydown', (e) => { if (e.key === 'Enter') {
+        const t = q.value.trim().toLowerCase(), c = (S.all || []).find((x) => x.name.toLowerCase().includes(t));
+        if (c)
+            choose(c);
+    } });
     dlg.addEventListener('click', (e) => { if (e.target === dlg)
         dlg.close(); });
     dlg.addEventListener('close', () => dlg.remove());
