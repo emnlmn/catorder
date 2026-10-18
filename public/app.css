@@ -500,9 +500,8 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .who-b:hover{background:var(--wash);border-color:var(--ink)}
 /* phone hardening: pinned top bar, a backdrop behind the open inbox, 44px touch targets, 16px fields (iOS zooms smaller ones), notch and home-bar insets */
 @media (max-width:700px){
-  html{scroll-padding-top:104px}
   button,a,.irow{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-  .side{position:sticky;top:0;z-index:7;padding-top:max(12px,env(safe-area-inset-top));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+  .side{position:relative;z-index:7;padding-top:max(12px,env(safe-area-inset-top));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
   .side:has(#inbox:not([hidden]))::before{content:"";position:fixed;inset:0;z-index:-1;background:rgba(15,23,25,.4)}
   .home{min-height:44px}
   .navi{min-width:44px;min-height:44px;justify-content:center}
