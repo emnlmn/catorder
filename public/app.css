@@ -768,4 +768,7 @@ button.photo{padding:0;border:0;background:none;cursor:zoom-in}
 @media (hover:none){.msg.out .hint{display:none}}
 
 /* narrow chat: the page is exactly the screen, its padding is the band (after the phone rule that zeroes it for the tab bar) */
-@media (max-width:1000px){body[data-v=chat]{height:100vh;height:100dvh;box-sizing:border-box;padding-bottom:var(--band-h,0px)}}
+@media (max-width:1000px){
+  body[data-v=chat]{height:100vh;height:var(--vvh,100dvh);box-sizing:border-box;padding-bottom:var(--band-h,0px);overflow:hidden}
+  .band{bottom:var(--kb,0px)} /* on the keyboard, not behind it */
+}

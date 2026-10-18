@@ -1209,5 +1209,21 @@ $('home').addEventListener('click', goWaiting);
 // the page leaves room for the band, whatever height its question and buttons give it
 const fitBand = (): void => document.documentElement.style.setProperty('--band-h', $('band').offsetHeight + 'px');
 new ResizeObserver(fitBand).observe($('band'));
+// iOS keeps the layout viewport when the keyboard opens and scrolls the whole page instead, then leaves it scrolled when it closes.
+// Follow the visual viewport: the page is as tall as what is visible, the band sits on the keyboard, the chat shrinks above it.
+const vv = window.visualViewport;
+const typing = (): boolean => !!document.activeElement && document.activeElement.matches('input, textarea');
+if (vv) {
+  const fitView = (): void => {
+    const root = document.documentElement.style;
+    root.setProperty('--vvh', vv.height + 'px');
+    root.setProperty('--kb', Math.max(0, window.innerHeight - vv.height - vv.offsetTop) + 'px');
+    if (!typing() && window.scrollY) window.scrollTo(0, 0); // the keyboard closed: put back what it pushed away
+  };
+  vv.addEventListener('resize', fitView);
+  vv.addEventListener('scroll', fitView);
+  fitView();
+}
+document.addEventListener('focusout', () => setTimeout(() => { if (!typing() && document.body.dataset.v === 'chat') window.scrollTo(0, 0); }, 60));
 
 void boot();
