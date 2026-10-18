@@ -804,16 +804,33 @@ function clearBtn(cid: string): HTMLElement {
   return b;
 }
 // a number we do not know: pick the customer once, every message from it (now and later) follows
-function whoPanel(m: Detail['message']): HTMLElement {
-  const pick = async (c: Who): Promise<void> => {
-    if (S.busy) return;
-    try { await send('POST', '/messages/' + m.id + '/assign', { customer_id: c.id }); } catch (e) { toast(errMsg(e)); return; }
-    toast('This number is now ' + c.name + '.');
-    await loadMessages();
-    await loadDetail();
-    void loadCustomers();
-    if (S.detail && S.detail.order) void doRead(); // read again as that customer: "the usual" now has a history
+const assignTo = async (m: Detail['message'], c: Who): Promise<void> => {
+  if (S.busy) return;
+  try { await send('POST', '/messages/' + m.id + '/assign', { customer_id: c.id }); } catch (e) { toast(errMsg(e)); return; }
+  toast('This number is now ' + c.name + '.');
+  await loadMessages();
+  await loadDetail();
+  void loadCustomers();
+  if (S.detail && S.detail.order) void doRead(); // read again as that customer: "the usual" now has a history
+};
+// the ERP customer list in a modal: type to narrow it, tap one to link the number
+function customerDialog(m: Detail['message']): void {
+  const list = h('div', { class: 'who-l' }), q = h('input', { type: 'search', class: 'who-q', placeholder: 'Search customers', 'aria-label': 'Search customers' }) as HTMLInputElement;
+  const dlg = h('dialog', { class: 'xmenu who-d' }, h('p', null, 'Who is ' + (senderOf(m) || 'this number') + '?'), q, list, h('button', { type: 'button', class: 'pick quiet', onclick: () => (dlg as HTMLDialogElement).close() }, 'Cancel')) as HTMLDialogElement;
+  const fill = (): void => {
+    const t = q.value.trim().toLowerCase(), cs = (S.all || []).filter((c) => c.name.toLowerCase().includes(t));
+    list.replaceChildren(...(cs.length ? cs.map((c) => h('button', { type: 'button', class: 'who-b', onclick: () => { dlg.close(); void assignTo(m, c); } }, c.name)) : [h('p', { class: 'none' }, S.all ? 'No customer matches.' : 'The customer list did not load.')]));
   };
+  q.addEventListener('input', fill);
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', () => dlg.remove());
+  document.body.append(dlg);
+  fill();
+  dlg.showModal();
+  if (!S.all) void loadCustomers().then(fill); // never loaded: ask again while it is open
+}
+function whoPanel(m: Detail['message']): HTMLElement {
+  const pick = (c: Who): Promise<void> => assignTo(m, c);
   return h('aside', { class: 'panel who-p', 'aria-label': 'Who is this?' },
     backBtn('chat'),
     h('header', { class: 'panel-h' }, h('h2', { class: 'toon' }, 'Who is this?')),
@@ -978,7 +995,7 @@ function back(): void { S.find = S.row = null; renderScreen(); }
 function bandOf(d: Detail | null): Band | null {
   if (!d) return null;
   const m = d.message, o = d.order;
-  if (m.customer_id === UNKNOWN) return { key: 'link', q: 'Who is this?', sub: 'Reading starts once the number is linked to a customer.', ctl: () => pick('Choose customer', () => { setView('detail'); document.querySelector<HTMLElement>('.who-p .who-b')?.focus(); }) };
+  if (m.customer_id === UNKNOWN) return { key: 'link', q: 'Who is this?', sub: 'Reading starts once the number is linked to a customer.', ctl: () => pick('Choose customer', () => customerDialog(m)) };
   if (S.busy === m.id || (!o && isReading(m.id, false, m.received_at))) return { key: 'reading', q: 'Reading…', sub: engine(' on ') };
   if (!o) {
     const err = S.failed[m.id];
