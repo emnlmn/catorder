@@ -246,6 +246,9 @@ async function pollDetail() {
 }
 setInterval(() => { void pollInbox(); }, 3000);
 setInterval(() => { void pollDetail(); }, 2000);
+// the step in progress counts up; the finished ones keep the time they ended at
+setInterval(() => { for (const el of document.querySelectorAll('.tm[data-base]'))
+    el.textContent = secs(Date.now() - Number(el.dataset.base)); }, 100);
 let keepId = ''; // a bubble clicked inside the open chat: the conversation stays where it is, only the order side changes
 async function select(id, keep = false) {
     document.body.classList.remove('idle');
@@ -820,7 +823,7 @@ function traceEl(id) {
     const rows = t.steps.map((s) => {
         const fresh = s.fresh;
         s.fresh = false;
-        return h('li', { class: 'ts ' + s.status + (fresh ? ' rise' : '') }, h('span', { class: 'ti' }, s.status === 'run' ? h('span', { class: 'spin' }) : s.status === 'ok' ? '✓' : '!'), h('span', { class: 'tw' }, h('span', { class: 'tt' }, quoted(s.title)), s.detail && h('span', { class: 'td' }, s.detail)), s.at >= 100 && h('span', { class: 'tm' }, secs(s.at)));
+        return h('li', { class: 'ts ' + s.status + (fresh ? ' rise' : '') }, h('span', { class: 'ti' }, s.status === 'run' ? h('span', { class: 'spin' }) : s.status === 'ok' ? '✓' : '!'), h('span', { class: 'tw' }, h('span', { class: 'tt' }, quoted(s.title)), s.detail && h('span', { class: 'td' }, s.detail)), s.status === 'run' && s.base ? h('span', { class: 'tm', 'data-base': s.base }, secs(Date.now() - s.base)) : s.at >= 100 && h('span', { class: 'tm' }, secs(s.at)));
     });
     return h('section', { id: S.sel === id ? 'trace' : null, 'data-trace': id, class: 'trace', 'aria-label': 'What CatOrder did' }, !t.done && h('p', { class: 'th toon' }, cat(true), 'CatOrder is reading'), t.done && h('button', { type: 'button', class: 'tsum', 'aria-expanded': String(open), onclick: () => { t.open = !t.open; paintTrace(id, false); showTrace(id); } }, cat(false), (ms >= 100 ? 'Read in ' + secs(ms) + ' · ' : '') + t.steps.length + ' steps · ', h('u', {}, open ? 'Hide steps' : 'Show steps')), open && h('ol', { class: 'tl' }, rows), t.done && last.kind === 'error' && S.sel === id && !S.busy && h('button', { type: 'button', class: 'pick', style: 'margin-top:10px', onclick: doRead }, 'Retry'));
 }
@@ -862,6 +865,8 @@ function startTrace(id, fresh = false, onOpen) {
                 else
                     t.steps.push(s);
                 s.fresh = i < 0 || s.status === 'run';
+                if (s.status === 'run')
+                    s.base = Date.now() - s.at;
                 if (t.steps.length === 1)
                     renderScreen();
                 else

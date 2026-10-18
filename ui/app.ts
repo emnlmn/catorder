@@ -30,7 +30,7 @@ interface Cust { id: string; name: string; phone?: string | null; terms: { disco
 interface Pred { next_order_date: string; days_overdue: number }
 interface Product { sku: string; name: string; pack_label: string }
 interface ReadResult { order: Order | null; reading?: Reading | null; runs?: Run[]; error?: string }
-interface Step { at: number; kind: string; status: 'run' | 'ok' | 'warn'; title: string; detail?: string; fresh?: boolean }
+interface Step { at: number; kind: string; status: 'run' | 'ok' | 'warn'; title: string; detail?: string; fresh?: boolean; base?: number } // base: when the read started, in this browser's clock (a running step's time ticks from it)
 interface Trace { steps: Step[]; done: boolean; open: boolean; es: EventSource | null }
 interface Past { id: string; channel: string; received_at: string; text: string | null; media_url: string | null; order: { id: string; status: string; lines: number; clean: boolean; message_ids?: string[] } | null; reply?: Reply | null;
   words?: { text: string; quotes: Pick<Line, 'id' | 'quote' | 'quote_start' | 'quote_end'>[] } | null; trace?: Step[] | null }
@@ -245,6 +245,8 @@ async function pollDetail(): Promise<void> {
 }
 setInterval(() => { void pollInbox(); }, 3000);
 setInterval(() => { void pollDetail(); }, 2000);
+// the step in progress counts up; the finished ones keep the time they ended at
+setInterval(() => { for (const el of document.querySelectorAll<HTMLElement>('.tm[data-base]')) el.textContent = secs(Date.now() - Number(el.dataset.base)); }, 100);
 let keepId = ''; // a bubble clicked inside the open chat: the conversation stays where it is, only the order side changes
 async function select(id: string, keep = false): Promise<void> {
   document.body.classList.remove('idle');
@@ -722,7 +724,7 @@ function traceEl(id: string): HTMLElement | false {
     return h('li', { class: 'ts ' + s.status + (fresh ? ' rise' : '') },
       h('span', { class: 'ti' }, s.status === 'run' ? h('span', { class: 'spin' }) : s.status === 'ok' ? '✓' : '!'),
       h('span', { class: 'tw' }, h('span', { class: 'tt' }, quoted(s.title)), s.detail && h('span', { class: 'td' }, s.detail)),
-      s.at >= 100 && h('span', { class: 'tm' }, secs(s.at)));
+      s.status === 'run' && s.base ? h('span', { class: 'tm', 'data-base': s.base }, secs(Date.now() - s.base)) : s.at >= 100 && h('span', { class: 'tm' }, secs(s.at)));
   });
   return h('section', { id: S.sel === id ? 'trace' : null, 'data-trace': id, class: 'trace', 'aria-label': 'What CatOrder did' },
     !t.done && h('p', { class: 'th toon' }, cat(true), 'CatOrder is reading'),
@@ -749,6 +751,7 @@ function startTrace(id: string, fresh = false, onOpen?: () => void): Promise<voi
         const i = t.steps.map((x) => x.kind + x.status).lastIndexOf(s.kind + 'run');
         if (i >= 0 && s.status !== 'run') t.steps[i] = s; else t.steps.push(s);
         s.fresh = i < 0 || s.status === 'run';
+        if (s.status === 'run') s.base = Date.now() - s.at;
         if (t.steps.length === 1) renderScreen(); else paintTrace(id);
       } catch { /* a bad frame is skipped */ }
     });
