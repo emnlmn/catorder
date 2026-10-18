@@ -68,7 +68,7 @@ async function api<T>(path: string, opts?: ReqOpts): Promise<T> {
   const r = await fetch('/api' + path, opts && { method: opts.method, headers: { 'Content-Type': 'application/json' }, body: opts.body });
   let j: { error?: string; reasons?: string[] } | null = null;
   try { j = await r.json(); } catch { /* not json */ }
-  if (!r.ok) throw new Error(((j && j.error) || (r.status === 504 ? 'The server took too long. Try again.' : 'Request failed (' + r.status + ').')) + (j && j.reasons ? ' ' + j.reasons.join(' ') : ''));
+  if (!r.ok) throw Object.assign(new Error(((j && j.error) || (r.status === 504 ? 'The server took too long. Try again.' : 'Request failed (' + r.status + ').')) + (j && j.reasons ? ' ' + j.reasons.join(' ') : '')), { status: r.status });
   return j as T;
 }
 const send = <T>(method: string, path: string, body?: unknown): Promise<T> => api<T>(path, { method, body: body === undefined ? undefined : JSON.stringify(body) });
@@ -287,7 +287,11 @@ async function loadDetail(): Promise<void> {
     S.detail = d;
     if (d.message.customer_id) void loadThread(d.message.customer_id);
     if (id && !d.order && S.busy !== id && isReading(id, false, d.message.received_at)) void startTrace(id);
-  } catch (e) { toast(errMsg(e)); if (!S.detail || S.detail.message.id !== id) S.detail = null; }
+  } catch (e) {
+    // the message is gone (chat cleared, or the server was redeployed and lost it): leave it instead of reading it forever
+    if ((e as { status?: number }).status === 404 && S.sel === id) { toast('This message is no longer here.'); goWaiting(); void loadMessages(); return; }
+    toast(errMsg(e)); if (!S.detail || S.detail.message.id !== id) S.detail = null;
+  }
   renderScreen();
 }
 async function refresh(): Promise<void> { await loadMessages(); await loadDetail(); }

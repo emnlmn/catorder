@@ -31,7 +31,7 @@ async function api(path, opts) {
     }
     catch { /* not json */ }
     if (!r.ok)
-        throw new Error(((j && j.error) || (r.status === 504 ? 'The server took too long. Try again.' : 'Request failed (' + r.status + ').')) + (j && j.reasons ? ' ' + j.reasons.join(' ') : ''));
+        throw Object.assign(new Error(((j && j.error) || (r.status === 504 ? 'The server took too long. Try again.' : 'Request failed (' + r.status + ').')) + (j && j.reasons ? ' ' + j.reasons.join(' ') : '')), { status: r.status });
     return j;
 }
 const send = (method, path, body) => api(path, { method, body: body === undefined ? undefined : JSON.stringify(body) });
@@ -315,6 +315,13 @@ async function loadDetail() {
             void startTrace(id);
     }
     catch (e) {
+        // the message is gone (chat cleared, or the server was redeployed and lost it): leave it instead of reading it forever
+        if (e.status === 404 && S.sel === id) {
+            toast('This message is no longer here.');
+            goWaiting();
+            void loadMessages();
+            return;
+        }
         toast(errMsg(e));
         if (!S.detail || S.detail.message.id !== id)
             S.detail = null;

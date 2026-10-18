@@ -112,8 +112,10 @@ export async function storeWhatsApp(db: Db, p: URLSearchParams, cfg: TwilioConfi
   const customer = (db.prepare("SELECT customer_id c FROM phones WHERE number=?").get(number) as { c: string } | undefined)?.c
     ?? cfg.phoneMap[number] ?? UNKNOWN_SENDER;
   const m = await toStored(p, id, cfg, download);
-  db.prepare("INSERT OR IGNORE INTO messages VALUES (?,?,?,?,?,?,?,?)").run(id, customer, m.channel, isoOffset(),
-    p.get("ProfileName") || maskNumber(number), m.text, m.media, createHash("sha256").update(m.blob).digest("hex"));
+  // Twilio retries a webhook it thinks timed out: both copies pass the check above while the media downloads, only the first insert reads it
+  const added = db.prepare("INSERT OR IGNORE INTO messages VALUES (?,?,?,?,?,?,?,?)").run(id, customer, m.channel, isoOffset(),
+    p.get("ProfileName") || maskNumber(number), m.text, m.media, createHash("sha256").update(m.blob).digest("hex")).changes;
+  if (!added) return null;
   if (number) db.prepare("INSERT OR IGNORE INTO senders VALUES (?,?)").run(id, number);
   return id;
 }
