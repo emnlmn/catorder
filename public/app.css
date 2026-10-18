@@ -797,3 +797,57 @@ button.photo{padding:0;border:0;background:none;cursor:zoom-in}
   body[data-v=chat]{height:100vh;height:var(--vvh,100dvh);box-sizing:border-box;padding-bottom:var(--band-h,0px);overflow:hidden;align-items:stretch} /* from 701px the body is a grid: stretch closes the height chain so the messages scroll */
   .band{bottom:var(--kb,0px)} /* on the keyboard, not behind it */
 }
+
+/* chat polish: last in the file so it wins the cascade */
+/* the open message is marked in the thread: the band and the panel are about it; ink, not the accent (green means confirmed on a ticket) */
+.msg.sel>.bub{border-color:var(--line-strong);box-shadow:0 0 0 3px color-mix(in srgb,var(--ink) 7%,transparent)}
+.msg.sel>.ticket{border-color:var(--line-strong)}
+/* the toast is as wide as its text (fixed + left:50% left it half the screen) and has an edge of its own over the ink bubbles */
+#toast{width:max-content;box-shadow:0 0 0 1px color-mix(in srgb,var(--paper) 22%,var(--ink)),0 10px 28px rgba(15,23,25,.32)}
+/* a photo opens in the lightbox: the zoom cursor on its link */
+a.photo{cursor:zoom-in}
+/* the band's answer cell is the order column: 340 less 2x20 padding less the 1px border */
+@media (min-width:1001px){.band .ctl{min-width:299px}}
+/* projector: the reading surfaces step up with the 16px body, the order column grows with them and the band's answer cell follows (the list stays 14px: its 300px and the band's 352px depend on it) */
+@media (min-width:1600px){
+  .scr{grid-template-columns:minmax(0,1fr) 380px}
+  .band .ctl{min-width:339px}
+  .conv-h h1,.panel h2{font-size:22px}
+  .conv-h .meta,.deliver,.trust,.panel .row .what,.panel .row .pr,.sugs-h,.sugrow{font-size:15px}
+  .panel .row .n{font-size:17px}
+  .total{font-size:16px}
+  .msg .bub,.msg .bt,.msg .said{font-size:15px}
+  .bm{font-size:13px}
+  .msg .tx{font-size:14px}
+  .day,.msg .bl{font-size:12px}
+  .ticket{font-size:14px}.tk-t b{font-size:15px}.tk-st{font-size:13px}
+  .tsum{font-size:14px}.trace .tt{font-size:15px}.trace .td{font-size:14px}
+}
+/* the ERP recap fits the 300px panel: the phone's 12px and 11px, not 13px (the Product column had 63px) */
+@media (min-width:1001px){.panel .erp{font-size:12px}.panel .erp td:first-child{font-size:11px}}
+/* a phone chat is exactly one screen tall, so its app header could never scroll away: the 67px go to the messages */
+@media (max-width:700px){body[data-v=chat] .side{display:none}}
+/* one header rule runs across the conversation and the panel (order, customer card, unknown number), the titles on one baseline with or without a pill */
+@media (min-width:1001px){
+  .conv-h{min-height:70px;box-sizing:border-box}
+  .panel{padding-top:0}
+  .panel-h{align-items:flex-start;height:70px;margin:0 -20px 10px;padding:14px 20px 0;border-bottom:1px solid var(--line)}
+  .panel-h .pill{margin-top:-2px}
+}
+@media (min-width:1600px){.conv-h{min-height:74px}.panel-h{height:74px}} /* the 22px titles make the header 4px taller */
+/* the open rail covers the whole chat list: it was 300px over a list that ends at 352px, so cut-off times showed beside it (only here: the other pages have no list beside the rail) */
+@media (min-width:1001px){body:has(.chats) .side:hover,body:has(.chats) .side:focus-within{width:352px}}
+/* the band's question stays larger than its buttons: 17, 16 and 15px, not 17, 15 and 14 */
+.band .q.mid{font-size:16px}
+.band .q.long{font-size:15px;font-weight:600;letter-spacing:-.01em}
+@media (min-width:1600px){.band .q.mid{font-size:17px}.band .q.long{font-size:16px}}
+/* landscape phone: the three tiles in one row instead of two thirds of the screen */
+@media (max-width:700px) and (max-height:480px){.band .in:has(.sug,.results) .ctl{flex-wrap:nowrap}.band .pick.sug{flex:1 1 0;min-width:0;min-height:46px}}
+/* the panel never sits under another block: its top hairline doubled the header's on a phone and floated at the top edge of a tablet */
+.panel{border-top:0}
+/* closed rail: the separator stops 8px short of the edge like it starts 8px from it */
+@media (min-width:701px){.nav .sep{transition:width .18s ease-out}.side:not(:hover):not(:focus-within) .nav .sep{width:36px}}
+/* the search field's native clear button was the only blue pixel in the app */
+.sfind::-webkit-search-cancel-button{filter:grayscale(1) contrast(.6)}
+/* phone: the quantity field, Set and the catalogue field are 44px like the other band controls */
+@media (max-width:700px){.band .qrow .pick,.band .field{min-height:44px}}

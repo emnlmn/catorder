@@ -315,7 +315,7 @@ function inboxRow(ms: Summary[]): HTMLElement {
   const busy = ms.find(readingMsg), target = busy || todo[0] || last;
   const st = unk ? h('span', { class: 'st' }, 'New number') : busy ? h('span', { class: 'st' }, 'Reading', dots())
     : todo.length ? h('span', { class: 'badge', title: todo.length + (todo.length === 1 ? ' message' : ' messages') + ' to handle' }, String(todo.length))
-    : h('span', { class: 'st done' }, STATE_WORD[orderState(last.order)]);
+    : h('span', { class: 'st' + (orderState(last.order) === 'check' ? '' : ' done') }, STATE_WORD[orderState(last.order)]); // Check still needs Marta: ink and weight 500 like New and Reading, not the muted word of a finished state
   const name = unk ? last.sender || 'New number' : last.customer.name;
   return h('button', { type: 'button', class: 'irow' + (here ? ' sel' : ''), 'data-id': unk ? last.id : last.customer.id, 'aria-current': here ? 'true' : null, onclick: () => { void select(target.id); } },
     h('span', { class: 'ic av', 'aria-hidden': 'true' }, unk ? '?' : initials(name)),
@@ -355,19 +355,28 @@ function renderMessages(): void { document.body.classList.toggle('idle', !S.sel)
 
 /* ---------- screens ---------- */
 let lastAsked = '', lastMsg = '', arrival = false;
+let placed = '', placedAt = 0; // the chat (and whether its thread was in) the scroll was last placed for
 function renderScreen(): void {
   const d = S.detail, b = bandOf(d), asked = b && b.line ? b.line : '';
   // a re-render of the same chat (a message lands, a thread loads) keeps the scroll: pinned to the newest message if the reader was at the bottom
   const old = document.getElementById('msgs'), same = !!d && (d.message.id === lastMsg || d.message.id === keepId), y = window.scrollY;
   const pin = same && !!old && old.scrollHeight - old.scrollTop - old.clientHeight < 48, top = old ? old.scrollTop : 0;
-  lastMsg = d ? d.message.id : ''; if (same) keepId = '';
+  const kept = !!d && d.message.id === keepId; // a ticket clicked inside the open chat: the conversation stays where it is
+  lastMsg = d ? d.message.id : ''; if (same) keepId = ''; if (!d) placed = '';
   const ae = document.activeElement, typing = ae instanceof HTMLTextAreaElement && ae.closest('.out.draft') ? [ae.dataset.reply, ae.selectionStart, ae.selectionEnd] as const : null; // a re-render must not take the draft from under the cursor
   $('screen').replaceChildren(...((d ? [orderScreen(d, asked)] : S.cust ? [custScreen(S.cust)] : waiting()) as Node[]));
   paintBand(b);
   if (typing) { const t = draftBox(typing[0]); if (t) { t.focus({ preventScroll: true }); t.setSelectionRange(typing[1], typing[2]); } }
   fitBand();
   const box = document.getElementById('msgs');
-  if (same && box && !pin) { box.scrollTop = top; window.scrollTo(0, y); } else if (same && box) { box.scrollTop = box.scrollHeight; window.scrollTo(0, y); } else scrollMsgs();
+  // first paint of a chat, and again when its thread lands (until then the box held one message): put the OPEN message in view, not the newest.
+  // later re-renders keep the reader's place; pinned to the bottom is only for a message that lands while the reader is already there. No window.scrollTo here: iOS jumps with the keyboard open
+  const key = d ? d.message.id + (d.message.customer_id && S.thread[d.message.customer_id] ? ':thread' : '') : '', fresh = !!box && !!key && key !== placed;
+  if (fresh) { placed = key; placedAt = performance.now(); }
+  if (fresh && !kept) {
+    scrollMsgs();
+    for (const im of box!.querySelectorAll('img')) if (!im.complete) im.addEventListener('load', () => { if (placed === key && performance.now() - placedAt < 2500) scrollMsgs(); }, { once: true }); // a photo that decodes late pushes the message down
+  } else if (same && box && !pin) { box.scrollTop = top; window.scrollTo(0, y); } else if (same && box) { box.scrollTop = box.scrollHeight; window.scrollTo(0, y); } else scrollMsgs();
   // a new question about a line that sits below the fold: bring the line up, clear of the band (not on the first paint of a page opened on a message)
   if (settled && asked && asked !== lastAsked) document.querySelector('.row.now')?.scrollIntoView({ block: 'nearest' });
   lastAsked = asked;
@@ -559,6 +568,14 @@ async function loadThread(cid: string): Promise<void> {
     if (S.detail && S.detail.message.customer_id === cid) renderScreen();
   } catch { /* no thread: the message screen stays as it was */ }
 }
+// a photo opens in the page (a dialog styled by the .lightbox rules), not in a bare browser tab; ⌘/ctrl-click still opens the tab
+const lightbox = (src: string, alt: string): void => {
+  const d = h('dialog', { class: 'lightbox' }, h('img', { src, alt })) as HTMLDialogElement;
+  d.addEventListener('click', () => d.close());
+  d.addEventListener('close', () => d.remove());
+  document.body.append(d); d.showModal();
+};
+const photoLink = (src: string, alt: string): HTMLElement => h('a', { class: 'photo', href: src, target: '_blank', rel: 'noopener', title: 'Open the photo', onclick: (e: MouseEvent) => { if (e.metaKey || e.ctrlKey) return; e.preventDefault(); lightbox(src, alt); } }, h('img', { src, alt }));
 // the order a message turned into, docked under it as a ticket stub hooked to its words; a message with no order gets a quiet note
 function chip(o: { id?: string; status: string; lines: number; clean: boolean } | null, n = 1, id = ''): HTMLElement | false {
   if (!o) return false;
@@ -566,10 +583,10 @@ function chip(o: { id?: string; status: string; lines: number; clean: boolean } 
   if (!o.lines && o.status !== 'confirmed') return h('p', { class: 'noorder' }, 'No order in this message');
   return h('button', { type: 'button', class: 'ticket ' + st.toLowerCase(), title: 'Open this order', onclick: id ? () => { if (o.id) S.done.add(o.id); void select(id, true).then(() => setView('detail')); } : null }, // narrow screens: the order is its own screen; a confirmed one shows its recap, not the customer card
     glyph('tk-ic', st === 'Confirmed' ? 'check' : st === 'Check' ? 'alert' : 'draft'),
-    h('span', { class: 'tk-t' }, h('b', null, 'Order'), h('span', null, o.lines + (o.lines === 1 ? ' line' : ' lines') + (n > 1 ? ' · from ' + n + ' messages' : ''))),
+    h('span', { class: 'tk-t' }, h('b', null, 'Order'), h('span', null, o.lines + (o.lines === 1 ? ' line' : ' lines') + (n > 1 ? ' · ' + n + ' messages' : ''))),
     h('span', { class: 'tk-st' }, st === 'Check' ? 'Check' : st === 'Draft' ? 'Ready' : st)); // the chat list's and the status pill's words; the class above keeps the stub's look
 }
-const pastOf = (m: Detail['message'], o: Order | null): Past => ({ id: m.id, channel: m.channel, received_at: m.received_at, text: m.text, media_url: m.media_url || null, order: o ? { id: o.id, status: o.status, lines: lines(o).filter((l) => l.state !== 'removed').length, clean: !!o.clean, message_ids: o.message_ids } : null });
+const pastOf = (m: Detail['message'], o: Order | null): Past => ({ id: m.id, channel: m.channel, received_at: m.received_at, text: m.text, media_url: m.media_url || null, order: o ? { id: o.id, status: o.status, lines: lines(o).filter((l) => l.state !== 'removed').length, clean: !!o.clean || (o.status === 'draft' && !pending(o).length), message_ids: o.message_ids } : null }); // the open message only: everything the band asked is answered, so its ticket says Ready like the band
 // WhatsApp-style: the time sits in the bubble, the day once above the messages of that day
 const stamp = (_channel: string, at: string): HTMLElement => h('span', { class: 'bm' }, fmtClock(at));
 function dayLabel(iso: string): string {
@@ -604,7 +621,7 @@ function bubble(p: Past, o: Order | null = null, solo = true): HTMLElement {
   return h('div', { class: 'msg', 'data-msg': p.id },
     h('div', { class: 'bub' },
       p.channel === 'voice' && p.media_url ? miniVoice(p) : p.channel === 'photo' && !p.text && isReading(p.id, !!p.order, p.received_at) ? h('b', { class: 'bl' }, cat(true), 'Reading the photo') : media && h('b', { class: 'bl' }, media),
-      p.channel === 'photo' && p.media_url && h('a', { class: 'photo', href: p.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: p.media_url, alt: 'Photo of a list' })),
+      p.channel === 'photo' && p.media_url && photoLink(p.media_url, 'Photo of a list'),
       p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text),
       stamp(p.channel, p.received_at)),
     solo && chip(p.order, 1, p.id),
@@ -680,7 +697,8 @@ function scrollMsgs(smooth = false): void {
   const box = document.getElementById('msgs'), sel = box && box.querySelector<HTMLElement>('.msg.sel');
   if (!box || !sel) return;
   const tr = document.getElementById('trace'), rp = box.querySelector<HTMLElement>('.msg.sel ~ .msg.out');
-  const end = Math.max(sel.offsetTop + sel.offsetHeight, tr && !tr.hidden ? tr.offsetTop + tr.offsetHeight : 0, rp ? rp.offsetTop + rp.offsetHeight : 0);
+  const bt = box.getBoundingClientRect().top, rel = (e: Element): number => e.getBoundingClientRect().bottom - bt + box.scrollTop; // offsetTop is relative to the order group (.og) for a message in a multi-message order, not to the box
+  const end = Math.max(rel(sel), tr && !tr.hidden ? rel(tr) : 0, rp ? rel(rp) : 0);
   const selTop = sel.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop; // a short box (tall band on a phone) shows the message first, what follows it scrolls
   box.scrollTo({ top: Math.max(0, Math.min(end - box.clientHeight + 24, selTop - 12)), behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto' });
 }
@@ -840,12 +858,13 @@ function orderScreen(d: Detail, asked?: string): HTMLElement {
   const infos = flagsOf(o).filter((f) => sev(f) === 'info');
   const reading = S.busy === m.id || (!o && isReading(m.id, false, m.received_at));
   const mine = pastOf(m, o);
-  const pill = reading ? 'Reading' : PILL[orderState(o && { id: o.id, status: o.status, clean: !!o.clean })];
+  const answered = !!o && o.status === 'draft' && !pending(o).length && lines(o).some((l) => l.state !== 'removed'); // everything the band asked is answered: it says Ready, so does the pill
+  const pill = reading ? 'Reading' : answered ? 'Ready' : PILL[orderState(o && { id: o.id, status: o.status, clean: !!o.clean })];
   const open = (solo: boolean): Kid[] => [
     h('div', { class: 'msg sel', 'data-msg': m.id },
       h('div', { class: 'bub' },
         m.channel === 'voice' && m.media_url && h('div', { class: 'bl' }, player(m)),
-        m.channel === 'photo' && m.media_url && h('a', { class: 'photo', href: m.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: m.media_url, alt: 'Photo of a list sent by ' + who.name })),
+        m.channel === 'photo' && m.media_url && photoLink(m.media_url, 'Photo of a list sent by ' + who.name),
         text ? streamIn(h('p', { class: 'said' + (m.channel === 'voice' ? ' tx' : '') }, m.channel === 'email' ? greyQuoted(words) : words), awaited.delete(m.id))
           : m.channel === 'voice' && reading && (awaited.add(m.id), h('p', { class: 'said tx wait' }, 'Transcribing', dots())),
         !text && m.channel === 'photo' && reading && h('p', { class: 'said tx wait' }, cat(true), 'Reading the photo'),
@@ -862,6 +881,7 @@ function orderScreen(d: Detail, asked?: string): HTMLElement {
   const unk = m.customer_id === UNKNOWN, showOrder = !o || o.status !== 'confirmed' || S.done.has(o.id); // nothing left to do on a confirmed order: the customer card takes the column
   const delivery = o && o.delivery_date && 'Deliver ' + fmtDay(o.delivery_date);
   const total = o && orderTotal(o);
+  const unpriced = !!o && lines(o).some((l) => l.state !== 'removed' && !hasPrice(l)); // a line still to match has no price: the sum is not final
   return h('div', { class: 'scr' },
     h('section', { class: 'conv' },
       h('header', { class: 'conv-h' }, backBtn('list'),
@@ -880,7 +900,7 @@ function orderScreen(d: Detail, asked?: string): HTMLElement {
         delivery && h('p', { class: 'deliver' }, delivery),
         list(o, asked, fresh),
         o.status === 'draft' && m.customer_id && suggestions(o, m.customer_id),
-        !!total && h('p', { class: 'total' }, h('span', {}, 'Total'), h('b', { class: 'toon' }, eur(total))),
+        !!total && h('p', { class: 'total' }, h('span', {}, unpriced ? 'Total so far' : 'Total'), h('b', { class: 'toon' }, eur(total))),
         h('div', { class: 'foot' }, infos.map((f) => h('p', {}, f.message))),
         o.status === 'confirmed' && erp(o, who.name),
       ] : h('p', { class: 'none' }, reading ? 'Reading the message…' : 'Not read yet.')));
@@ -929,7 +949,7 @@ function list(o: Order, asked: string | undefined, fresh: boolean): HTMLElement 
     // a doubtful line is settled in the band, which already asks about it; the row only points there
     return draft ? h('button', { ...attrs, type: 'button', title: doubt ? 'Settle this line below' : out ? 'Restore or change this line' : 'Change the quantity or remove this line', onclick: () => doubt ? $('band').focus() : editRow(l) }, cells) : h('div', attrs, cells);
   };
-  const live = ls.filter((l) => l.state !== 'removed'), need = live.filter((l) => l.state === 'flag').length;
+  const live = ls.filter((l) => l.state !== 'removed'), need = live.filter((l) => l.state === 'flag' || l.state === 'check').length; // the band asks about both
   return h('section', { class: 'list', 'aria-label': 'Draft order' },
     draft && live.length > 0 && h('p', { class: 'trust' + (need ? ' need' : '') }, need
       ? need + (need === 1 ? ' line' : ' lines') + ' to check before you can confirm'
@@ -1062,14 +1082,15 @@ function qtyForm(l: Line, editing = false): Kid {
 function searchBox(l: Line): Kid {
   const res = h('div', { class: 'results' });
   let tm: ReturnType<typeof setTimeout> | undefined;
-  // opens on the customer's own words, already searched; typing replaces them (the band selects the field)
-  const inp = h('input', { type: 'search', class: 'field', placeholder: 'Product name', 'aria-label': 'Search the catalogue', autocomplete: 'off', value: l.product_text,
+  // opens already searched on CatOrder's best guess (the customer's "farina" finds nothing in an English catalogue), or on the customer's own words when it has none; typing replaces them (the band selects the field)
+  const first = (l.candidates && l.candidates[0] && l.candidates[0].name) || l.product_text;
+  const inp = h('input', { type: 'search', class: 'field', placeholder: 'Product name', 'aria-label': 'Search the catalogue', autocomplete: 'off', value: first,
     onkeydown: (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); back(); } },
     oninput: () => {
       clearTimeout(tm);
       tm = setTimeout(() => fill(res, l, (inp as HTMLInputElement).value), 180);
     } });
-  return [inp, fill(res, l, l.product_text)];
+  return [inp, fill(res, l, first)];
 }
 const found = new Map<string, Promise<Product[]>>(); // ponytail: per-page cache, the catalogue does not change under the band
 // three catalogue products for a query, as suggestions in `res`; with none, `none` offers a way on
@@ -1186,6 +1207,7 @@ async function doConfirm(): Promise<void> {
 /* ---------- keyboard and pointer ---------- */
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
+    if (document.querySelector('dialog[open]') || (e.target as HTMLElement | null)?.closest('textarea, input')) return; // the Export menu and the photo close themselves; a reply being typed is not a request to leave the chat
     if (S.sel || S.cust) goWaiting();
     return;
   }
@@ -1209,7 +1231,7 @@ $('find').addEventListener('input', (e) => { S.q = (e.target as HTMLInputElement
 $('home').addEventListener('click', goWaiting);
 // the page leaves room for the band, whatever height its question and buttons give it
 const fitBand = (): void => document.documentElement.style.setProperty('--band-h', $('band').offsetHeight + 'px');
-new ResizeObserver(fitBand).observe($('band'));
+new ResizeObserver(() => { fitBand(); if (placed && performance.now() - placedAt < 2500) scrollMsgs(); }).observe($('band')); // the band's tiles arrive after the first paint and shrink the box: the open message is placed again
 // iOS keeps the layout viewport when the keyboard opens and scrolls the whole page instead, then leaves it scrolled when it closes.
 // Follow the visual viewport: the page is as tall as what is visible, the band sits on the keyboard, the chat shrinks above it.
 const vv = window.visualViewport;
