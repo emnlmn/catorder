@@ -14,7 +14,8 @@ async function post(url: string, timeoutS: number, init: RequestInit): Promise<a
   try {
     r = await fetch(url, { ...init, method: "POST", signal: AbortSignal.timeout(timeoutS * 1000) });
   } catch (e) {
-    throw new ModelError(0, String(e));
+    const c = (e as { cause?: { code?: string; message?: string } }).cause; // "fetch failed" alone says nothing: the socket error is in the cause
+    throw new ModelError(0, String(e) + (c ? ` (${[c.code, c.message].filter(Boolean).join(" ")})` : ""));
   }
   const text = await r.text();
   if (r.status >= 300) throw new ModelError(r.status, text);
@@ -41,8 +42,12 @@ export class ChatModel implements ChatLike {
     let data;
     for (let i = 0; ; i++) {
       try { data = await call(); break; } catch (e) {
-        if (!(e instanceof ModelError) || e.status !== 429 || i >= 5) throw e;
-        await new Promise((r) => setTimeout(r, 30_000 + Math.random() * 15_000));
+        if (!(e instanceof ModelError)) throw e;
+        // a dropped connection is tried once more after 2 s; a timeout is not (it already waited the whole budget)
+        const dropped = e.status === 0 && !/TimeoutError|aborted/i.test(e.body) && i < 1;
+        if (!dropped && (e.status !== 429 || i >= 5)) throw e;
+        console.error("model call failed, retrying:", e.message.slice(0, 300));
+        await new Promise((r) => setTimeout(r, dropped ? 2_000 : 30_000 + Math.random() * 15_000));
       }
     }
     const text = data?.choices?.[0]?.message?.content;

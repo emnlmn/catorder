@@ -96,6 +96,7 @@ async function liveReading(svc: Services, message: Message, kind: ReadingKind, r
     c = await cachedCall(svc, stage, model, sha(data), "", fn);
   } catch (e) {
     if (!(e instanceof ModelError)) throw e;
+    console.error(stage, "failed for", message.id, e.message.slice(0, 300));
     addRun(db, runs, message.id, stage, model, { error: String(e.message) });
     return null;
   }
