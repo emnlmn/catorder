@@ -696,8 +696,9 @@ function miniVoice(p) {
 function bubble(p, o = null, solo = true) {
     const media = p.channel === 'whatsapp' ? '' : CHANNEL[p.channel] || '';
     return h('div', { class: 'msg', 'data-msg': p.id }, h('div', { class: 'bub' }, p.channel === 'voice' && p.media_url ? miniVoice(p) : p.channel === 'photo' && !p.text && isReading(p.id, !!p.order, p.received_at) ? h('b', { class: 'bl' }, cat(true), 'Reading the photo') : media && h('b', { class: 'bl' }, media), p.channel === 'photo' && p.media_url && h('a', { class: 'photo', href: p.media_url, target: '_blank', rel: 'noopener', title: 'Open the photo' }, h('img', { src: p.media_url, alt: 'Photo of a list' })), p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text), stamp(p.channel, p.received_at)), solo && chip(p.order, 1, p.id), 
-    // a live message landing under another open order: its steps stream here too, so it can be opened like the selected one
-    !p.order && isReading(p.id, false, p.received_at) && (void startTrace(p.id), traceEl(p.id) || thinking('', p.id)));
+    // a live message landing under another open order: its steps stream in, and the thread draws them right after this bubble;
+    // until the first one arrives, this placeholder stands in (only one element may carry its data-trace, or paintTrace updates the wrong one)
+    !p.order && isReading(p.id, false, p.received_at) && (void startTrace(p.id), !(S.trace[p.id] && S.trace[p.id].steps.length) && thinking('', p.id)));
 }
 // the whole conversation, oldest first; the open message is its full self (quotes lit, player, photo), the rest are one click away
 function threadEl(m, o, open) {

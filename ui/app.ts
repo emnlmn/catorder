@@ -608,8 +608,9 @@ function bubble(p: Past, o: Order | null = null, solo = true): HTMLElement {
       p.text && h('span', { class: 'bt' }, segWords(p, o) || p.text),
       stamp(p.channel, p.received_at)),
     solo && chip(p.order, 1, p.id),
-    // a live message landing under another open order: its steps stream here too, so it can be opened like the selected one
-    !p.order && isReading(p.id, false, p.received_at) && (void startTrace(p.id), traceEl(p.id) || thinking('', p.id)));
+    // a live message landing under another open order: its steps stream in, and the thread draws them right after this bubble;
+    // until the first one arrives, this placeholder stands in (only one element may carry its data-trace, or paintTrace updates the wrong one)
+    !p.order && isReading(p.id, false, p.received_at) && (void startTrace(p.id), !(S.trace[p.id] && S.trace[p.id].steps.length) && thinking('', p.id)));
 }
 // the whole conversation, oldest first; the open message is its full self (quotes lit, player, photo), the rest are one click away
 function threadEl(m: Detail['message'], o: Order | null, open: (solo: boolean) => Kid[]): HTMLElement {
