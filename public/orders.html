@@ -61,5 +61,6 @@ document.getElementById('out').onclick = (e) => {
 sync(() => fetch('/api/history').then((r) => r.json()).then((d) => { all = d; draw(); }));
 </script>
 <script src="side.js"></script>
+<script src="tabbar.js"></script>
 </body>
 </html>

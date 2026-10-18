@@ -84,7 +84,8 @@
 .mb .led{width:8px;height:8px;border-radius:50%;background:var(--eye);box-shadow:0 0 0 3px color-mix(in srgb,var(--eye) 30%,transparent)}
 .mb .amd{color:var(--paper);font-weight:600}
 .syn{padding:7px 11px;border:1px solid var(--line-strong);border-radius:999px;font-size:13px;line-height:1;color:var(--muted);white-space:nowrap}
-@media (max-width:700px){.mb>span:last-child{display:none}}
+/* phone: model and hardware stack in one dark card instead of one pill wider than the screen */
+@media (max-width:700px){.mb{flex-wrap:wrap;border-radius:12px}.mb>span+span{flex-basis:100%;border-left:0;border-top:1px solid color-mix(in srgb,var(--paper) 18%,var(--ink))}.mb>span:last-child{display:none}}
 @media (max-width:700px){.ref{padding:18px 16px 32px}.ref h1{font-size:22px}}
 </style>
 </head>
@@ -141,5 +142,6 @@ Promise.all([fetch('/api/predictions').then((r) => r.json()), fetch('/api/custom
   .catch(() => { document.getElementById('out').textContent = 'Could not load the forecast. Reload the page.'; });
 </script>
 <script src="side.js"></script>
+<script src="tabbar.js"></script>
 </body>
 </html>

@@ -682,20 +682,25 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
   .panel{border-left:0}
 }
 
-/* phone: the sections leave the header for a bottom tab bar, icon over label; it steps aside inside a chat, where the black band owns the bottom */
+/* phone: the sections float in a glass dock over the page, icon over label, as iOS and Material tab bars do.
+   It slides away while you scroll down and comes back when you scroll up, near the top, at the end of the page,
+   on a new view, or when the keyboard reaches it (public/tabbar.js); it stays out of the way while you type.
+   Inside a chat it steps aside: the black band owns the bottom */
 @media (max-width:700px){
   .side{flex-wrap:nowrap;padding-bottom:10px}
-  .nav{position:fixed;z-index:8;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px max(8px,env(safe-area-inset-left)) max(6px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-right));border-top:1px solid var(--line);background:var(--paper)}
+  .nav{position:fixed;z-index:8;left:0;right:0;bottom:calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:min(calc(100% - 24px),420px);margin:0 auto;padding:4px;border:1px solid color-mix(in srgb,var(--ink) 9%,transparent);border-radius:999px;background:color-mix(in srgb,var(--paper) 82%,transparent);-webkit-backdrop-filter:blur(20px) saturate(1.8);backdrop-filter:blur(20px) saturate(1.8);box-shadow:0 12px 32px -10px rgba(15,23,25,.24),0 2px 8px -2px rgba(15,23,25,.08);transition:transform .34s cubic-bezier(.2,.9,.25,1),opacity .24s ease-out}
+  .nav.away:not(:focus-within),body:has(:is(input,textarea):focus) .nav{transform:translateY(calc(100% + 16px + env(safe-area-inset-bottom)));opacity:0;pointer-events:none;transition:transform .22s cubic-bezier(.5,0,.75,0),opacity .22s ease-in}
   .nav .sep{display:none}
-  .navi{position:relative;isolation:isolate;flex-direction:column;justify-content:center;gap:4px;min-width:0;min-height:54px;padding:0;border-radius:10px;background:none!important;box-shadow:none!important;color:var(--muted);font-size:12px;font-weight:500;line-height:1}
+  .navi,.navi:hover{position:relative;flex-direction:column;justify-content:center;gap:3px;min-width:0;min-height:52px;padding:0;border-radius:999px;background:none;box-shadow:none;color:var(--muted);font-size:11px;font-weight:500;line-height:1;letter-spacing:.01em;transition:background-color .2s}
   .navi span:not(.count){display:block}
-  .navi svg{width:22px;height:22px}
-  .navi.on{color:var(--ink);font-weight:600}
-  .navi.on::before{content:"";position:absolute;z-index:-1;top:4px;left:50%;width:56px;height:28px;transform:translateX(-50%);border-radius:999px;background:color-mix(in srgb,var(--eye) 50%,var(--paper))}
-  .navi:active::before{content:"";position:absolute;z-index:-1;top:4px;left:50%;width:56px;height:28px;transform:translateX(-50%);border-radius:999px;background:color-mix(in srgb,var(--ink) 8%,var(--paper))}
-  .navi .count{position:absolute;top:2px;left:calc(50% + 6px);min-width:18px;height:18px;margin:0;padding:0 5px;box-sizing:border-box;border-radius:9px;background:var(--ink);color:var(--paper);font-size:11px;font-weight:600;line-height:18px;text-align:center}
+  .navi svg{width:22px;height:22px;transition:transform .2s cubic-bezier(.2,.9,.25,1)}
+  .navi:active svg{transform:scale(.88)}
+  .navi.on{background:color-mix(in srgb,var(--ink) 7%,transparent);color:var(--ink);font-weight:600}
+  .navi .count{position:absolute;top:4px;left:calc(50% + 6px);min-width:18px;height:18px;margin:0;padding:0 5px;box-sizing:border-box;border-radius:9px;background:var(--eye);color:var(--ink);font-size:11px;font-weight:600;line-height:18px;text-align:center;box-shadow:0 0 0 2px var(--paper)}
   .navi .count:empty{display:none}
-  body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.nav{background:var(--paper)}}
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+  body:not(:is([data-v=chat],[data-v=detail])) #toast{bottom:calc(84px + env(safe-area-inset-bottom))}
   body:is([data-v=chat],[data-v=detail]){padding-bottom:0}
   body:is([data-v=chat],[data-v=detail]) .nav{display:none}
 }
