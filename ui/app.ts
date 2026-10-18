@@ -567,7 +567,7 @@ function chip(o: { id?: string; status: string; lines: number; clean: boolean } 
   return h('button', { type: 'button', class: 'ticket ' + st.toLowerCase(), title: 'Open this order', onclick: id ? () => { if (o.id) S.done.add(o.id); void select(id, true).then(() => setView('detail')); } : null }, // narrow screens: the order is its own screen; a confirmed one shows its recap, not the customer card
     glyph('tk-ic', st === 'Confirmed' ? 'check' : st === 'Check' ? 'alert' : 'draft'),
     h('span', { class: 'tk-t' }, h('b', null, 'Order'), h('span', null, o.lines + (o.lines === 1 ? ' line' : ' lines') + (n > 1 ? ' · from ' + n + ' messages' : ''))),
-    h('span', { class: 'tk-st' }, st === 'Check' ? 'To check' : st));
+    h('span', { class: 'tk-st' }, st === 'Check' ? 'Check' : st === 'Draft' ? 'Ready' : st)); // the chat list's and the status pill's words; the class above keeps the stub's look
 }
 const pastOf = (m: Detail['message'], o: Order | null): Past => ({ id: m.id, channel: m.channel, received_at: m.received_at, text: m.text, media_url: m.media_url || null, order: o ? { id: o.id, status: o.status, lines: lines(o).filter((l) => l.state !== 'removed').length, clean: !!o.clean, message_ids: o.message_ids } : null });
 // WhatsApp-style: the time sits in the bubble, the day once above the messages of that day
@@ -733,7 +733,7 @@ function traceEl(id: string): HTMLElement | false {
     !t.done && h('p', { class: 'th toon' }, cat(true), 'CatOrder is reading'),
     t.done && h('button', { type: 'button', class: 'tsum', 'aria-expanded': String(open), onclick: () => { t.open = !t.open; paintTrace(id, false); showTrace(id); } }, cat(false), (ms >= 100 ? 'Read in ' + secs(ms) + ' · ' : '') + t.steps.length + ' steps · ', h('u', {}, open ? 'Hide steps' : 'Show steps')),
     open && h('ol', { class: 'tl' }, rows),
-    t.done && last.kind === 'error' && S.sel === id && !S.busy && h('button', { type: 'button', class: 'pick', style: 'margin-top:10px', onclick: doRead }, 'Retry'));
+    t.done && last.kind === 'error' && S.sel === id && !S.busy && h('button', { type: 'button', class: 'pick', onclick: doRead }, 'Retry'));
 }
 // opened BEFORE the read is posted; resolves when the server says done/idle or the stream fails
 // fresh: skip a finished read and wait for the next one; onOpen fires once the stream is listening (or after 1.5 s)

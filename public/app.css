@@ -12,10 +12,11 @@ button{cursor:pointer}
 .band:focus{outline:none}
 svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .toon{font-family:inherit;font-weight:600;letter-spacing:-.02em}
+b,strong{font-weight:600} /* the heaviest weight in use: the default "bolder" gave 700 and 900 */
 /* sidebar: brand, sections, the inbox always open; on a phone it folds into a top bar */
 body{display:grid;grid-template-columns:260px minmax(0,1fr);align-items:start;padding-bottom:0}
 .side{position:sticky;top:0;display:flex;flex-direction:column;gap:20px;height:100vh;height:100dvh;padding:18px 12px 14px;border-right:1px solid var(--line);font-size:14px}
-.home{display:inline-flex;flex:none;align-items:center;gap:12px;padding:0 10px;border:0;border-radius:8px;background:none}
+.home{display:inline-flex;flex:none;align-items:center;gap:12px;padding:0 10px;border:0;border-radius:8px;background:none;color:inherit;text-decoration:none} /* a link on the other pages, a button here */
 .logo{display:block;width:34px;height:34px;border:1px solid var(--line);border-radius:24%}
 .brand{font-size:16px;line-height:1}
 .nav{display:flex;flex-direction:column;gap:6px}
@@ -42,7 +43,7 @@ a.irow{text-decoration:none;color:inherit}
 .irow .av{display:grid;place-items:center;width:36px;height:36px;border:1.5px solid currentColor;border-radius:6px;font-size:13px;font-weight:600;letter-spacing:.02em}
 .irow .pv{grid-area:pv;display:block;min-width:0;overflow:hidden;font-size:14px;color:var(--muted);white-space:nowrap;text-overflow:ellipsis} /* a block, not a flex row: only a block ellipsizes its text */
 .irow .pv .pic{display:inline-block;margin-right:6px;vertical-align:middle}
-.irow .pv .pic svg{display:block;width:14px;height:14px}
+.irow .pv .pic svg{display:block;width:14px;height:14px;stroke-width:2} /* the 2px stroke of every other small icon */
 .irow.sel .pv{color:var(--muted-on-ink)}
 .irow .badge{grid-area:st;justify-self:end;min-width:20px;height:20px;padding:0 5px;box-sizing:border-box;border-radius:6px;background:var(--eye);color:var(--ink);font-size:12px;font-weight:700;line-height:20px;text-align:center}
 .irow .st{justify-self:end;font-size:13px}
@@ -54,15 +55,15 @@ a.irow{text-decoration:none;color:inherit}
 .empty{margin:0;padding:12px;font-size:14px;color:var(--muted)}
 /* waiting */
 #screen{padding-bottom:var(--band-h,0px);flex:1;align-self:stretch;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;min-width:0}
-.wait{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 40px;text-align:center}
+div.wait{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 40px;text-align:center} /* the div only: the "transcribing" paragraphs are .wait too and must not centre */
 .hero{display:block;width:112px;height:112px;margin-bottom:22px;border:1px solid var(--line);border-radius:24%}
 .wait h1{margin:0;font-size:33px;line-height:1.1}
 .num{display:inline-flex;align-items:center;gap:22px;margin-top:26px;padding:18px 40px 20px;border-radius:12px;background:var(--ink);color:var(--paper);font-size:46px;line-height:1;white-space:nowrap}
 .eye{width:18px;height:18px;border-radius:50%;background:var(--eye);flex:none}
 .wait .eye{animation:pulse 2.4s ease-in-out infinite}
 .wait p{margin:22px 0 0;color:var(--muted)}
-.join{display:block;margin-top:28px;border-radius:14px}
-.join img{display:block;width:clamp(200px,32vh,300px);aspect-ratio:1;padding:6px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.join{display:block;margin-top:28px;border-radius:12px}
+.join img{display:block;width:clamp(200px,32vh,300px);aspect-ratio:1;padding:6px;background:var(--paper);border:1px solid var(--line);border-radius:12px}
 .wait .join+.num{margin-top:20px;font-size:32px;padding:14px 30px 16px;gap:16px}
 .wait .num .eye{width:14px;height:14px}
 a.num{text-decoration:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
@@ -82,13 +83,13 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .vp{display:flex;align-items:center;gap:12px;width:min(300px,62vw);max-width:100%;padding:2px 0}
 .vp-btn{flex:none;display:grid;place-items:center;width:40px;height:40px;padding:0;border:0;border-radius:50%;background:var(--ink);color:var(--paper);cursor:pointer}
 .vp-btn:hover{background:color-mix(in srgb,var(--ink) 85%,var(--paper))}
-.vp-btn:focus-visible{outline:3px solid var(--eye);outline-offset:2px}
+.vp-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px} /* ink on the white bubble: lime has 1.6:1 there */
 .vp-btn span{display:grid;place-items:center}
 .vp-btn svg{width:18px;height:18px;fill:currentColor;stroke:none}
 .vp-wave{flex:1;display:flex;align-items:center;gap:2px;height:30px;cursor:pointer}
 .vp-wave i{flex:1;min-width:1px;max-width:4px;height:30%;border-radius:2px;background:color-mix(in srgb,var(--ink) 28%,var(--paper));transition:height .25s ease-out,background-color .12s}
 .vp-wave i.on{background:var(--ink)}
-.vp-t{flex:none;min-width:30px;font-size:13px;font-weight:400;font-variant-numeric:tabular-nums;color:var(--muted);text-align:right}
+.vp-t{flex:none;min-width:30px;font-size:13px;font-weight:400;letter-spacing:0;text-transform:none;font-variant-numeric:tabular-nums;color:var(--muted);text-align:right} /* not the bubble label's uppercase and tracking it sits in */
 .orig{display:flex;align-items:flex-start;gap:24px;margin-top:16px}
 .photo{flex:none;border-radius:8px}
 .photo img{display:block;max-width:100%;max-height:200px;border:1px solid var(--line);border-radius:8px}
@@ -108,11 +109,11 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 :where(button.row){justify-self:stretch;width:auto;border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer}
 .row.first{margin-top:14px}
 .row .n{padding-right:12px;font-size:14px;line-height:1.2}
-.row .n small{font:500 14px Inter,ui-sans-serif,system-ui,sans-serif}
+.row .n small{font-size:14px;font-weight:500} /* longhands: the font shorthand reset cv11 and ss01 */
 .row .what{min-width:0;overflow-wrap:anywhere}
 .row .note{display:block;font-size:14px;line-height:1.35;color:var(--muted)}
 .row.doubt .what{font-weight:600}
-.chk{display:inline-flex;align-items:center;gap:6px;margin-left:12px;padding:1px 10px 1px 3px;border:1px solid var(--line);border-radius:999px;font:600 13px/1.4 Inter,ui-sans-serif,system-ui,sans-serif;vertical-align:middle;white-space:nowrap}
+.chk{display:inline-flex;align-items:center;gap:6px;margin-left:12px;padding:1px 10px 1px 3px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:600;line-height:1.4;vertical-align:middle;white-space:nowrap}
 .chk b{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:12px}
 .erp{scroll-margin-bottom:calc(var(--band-h,0px) + 24px)}
 .trust{grid-column:1/-1;margin:0 0 6px;font-size:14px;color:var(--muted);text-wrap:pretty}
@@ -141,7 +142,7 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .band .sub{margin:2px 0 0;font-size:13px;line-height:1.4;color:var(--muted-on-ink)}
 .band .step{margin-left:10px;font-size:13px;font-weight:400;letter-spacing:0;color:var(--muted-on-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
 .alts{flex:none;display:flex;flex-wrap:wrap;gap:4px}
-.alt{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:0 10px;border:0;border-radius:8px;background:none;color:color-mix(in srgb,var(--paper) 82%,var(--ink));font-size:14px;font-weight:500;white-space:nowrap;transition:background-color .12s,color .12s}
+.alt{display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:0 10px;border:0;border-radius:8px;background:none;color:color-mix(in srgb,var(--paper) 82%,var(--ink));font-size:14px;font-weight:500;white-space:nowrap;transition:background-color .12s,color .12s}
 .alt:hover{background:color-mix(in srgb,var(--paper) 9%,var(--ink));color:var(--paper)}
 .alt .ai{display:grid}
 .alt svg{width:15px;height:15px;stroke-width:2}
@@ -192,7 +193,7 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 @media (prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}}
 @media (max-width:900px){.orig{display:block}.photo{display:inline-block;margin-bottom:16px}.orig .said{margin-top:0}}
 @media (max-width:700px){
-  .col,.wait{padding-left:16px;padding-right:16px}
+  .col,div.wait{padding-left:16px;padding-right:16px}
   body{display:flex;align-items:stretch}
   .side{position:relative;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px;height:auto;padding:12px 16px;border-right:0;border-bottom:1px solid var(--line)}
   .home{padding:0;margin-right:auto}
@@ -252,13 +253,13 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 /* conversation thread + live trace */
 .thread{display:flex;flex-direction:column;gap:6px;margin:14px 0 6px}
 .past{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
-.bub{display:block;text-align:left;max-width:min(520px,92%);background:#fff;color:var(--ink,#0F1719);border:2px solid var(--ink,#0F1719);border-radius:10px 14px 14px 4px;padding:8px 12px;font:inherit}
-.bh{display:flex;align-items:center;gap:8px;font-size:12px;color:#5a6366}
+.bub{display:block;text-align:left;max-width:min(520px,92%);background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:10px 14px 14px 4px;padding:8px 12px;font:inherit}
+.bh{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
 .bh .ic{width:15px;height:15px;display:inline-flex}.bh .ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
-.bh b{color:var(--ink,#0F1719)}
+.bh b{color:var(--ink)}
 .bt{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-line;margin-top:3px;font-size:14px}
-.bnote{font-size:12px;color:#5a6366;padding:0 4px 4px 12px}
-.earlier{align-self:flex-start;background:none;border:2px solid var(--ink,#0F1719);border-radius:999px;padding:3px 12px;font:inherit;font-size:12px;cursor:pointer}
+.bnote{font-size:12px;color:var(--muted);padding:0 4px 4px 12px}
+.earlier{align-self:flex-start;background:none;border:2px solid var(--ink);border-radius:999px;padding:3px 12px;font:inherit;font-size:12px;cursor:pointer}
 .trace{margin:16px 0}
 .think{display:flex;align-items:flex-end;gap:10px;margin:18px 0}
 .think-b{display:inline-flex;align-items:baseline;gap:10px;padding:10px 16px;border-radius:12px 18px 18px 4px;background:var(--ink);color:var(--paper);font-size:14px;font-weight:500}
@@ -272,18 +273,18 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .th{font-size:15px;margin:0 0 8px}
 .tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
 .ts{display:flex;align-items:flex-start;gap:10px;padding:5px 0}
-.ti{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--ink,#0F1719);background:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;line-height:1}
-.ts.ok .ti{background:#A0E249}
-.ts.warn .ti{background:#fff}
-.spin{width:10px;height:10px;border-radius:50%;border:2px solid var(--ink,#0F1719);border-right-color:transparent;animation:tspin .7s linear infinite}
+.ti{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--ink);background:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;line-height:1}
+.ts.ok .ti{background:var(--eye)}
+.ts.warn .ti{background:var(--paper)}
+.spin{width:10px;height:10px;border-radius:50%;border:2px solid var(--ink);border-right-color:transparent;animation:tspin .7s linear infinite}
 @keyframes tspin{to{transform:rotate(360deg)}}
 .tw{flex:1;display:flex;flex-direction:column;min-width:0}
-.tt{font-size:15px}.td{font-size:13px;color:#5a6366}
-.tm{flex:none;font-size:12px;color:#5a6366;font-variant-numeric:tabular-nums;padding-top:3px}
+.tt{font-size:15px}.td{font-size:13px;color:var(--muted)}
+.tm{flex:none;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
 .ts.rise{animation:trise .35s cubic-bezier(.16,1,.3,1) both}
 @keyframes trise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.tsum{background:none;border:0;padding:4px 0;font:inherit;font-size:13px;color:#5a6366;cursor:pointer}
-.tsum u{color:var(--ink,#0F1719)}
+.tsum{background:none;border:0;padding:4px 0;font:inherit;font-size:13px;color:var(--muted);cursor:pointer}
+.tsum u{color:var(--ink)}
 .tsum+.tl{margin-top:6px}
 
 /* message screen: conversation in the middle, order on the right */
@@ -298,7 +299,7 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .msg .bt,.msg .said{display:block;margin:0;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere;-webkit-line-clamp:unset}
 .msg .bl{display:block;margin-bottom:4px;font-size:13px;font-weight:600}
 .msg .photo{display:block;margin-bottom:6px}
-.msg .photo img{max-height:160px;border-width:2px}
+.msg .photo img{max-height:160px}
 .bm{display:flex;align-items:center;justify-content:flex-start;gap:5px;margin-top:4px;font-size:12px;line-height:1;font-variant-numeric:tabular-nums;color:var(--muted)}
 .day{align-self:center;margin:12px 0 4px;padding:2px 10px;border-radius:8px;background:color-mix(in srgb,var(--ink) 7%,var(--paper));font-size:12px;font-weight:600;color:var(--muted)}
 .day:first-child{margin-top:0}
@@ -312,7 +313,6 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .msg.out.draft textarea{display:block;width:100%;min-height:3em;margin:0;padding:0;border:0;background:none;color:inherit;font:inherit;font-size:14px;line-height:1.4;resize:none;field-sizing:content;outline:none}
 .msg.out.later{opacity:.55}
 .msg.out .hint{margin:0 4px;font-size:12px;color:var(--muted)}
-.msg.out .think-b{border-radius:12px 18px 4px 18px}
 /* CatOrder's own voice: ink bubbles on the right */
 .trace{align-self:flex-end;max-width:80%;margin:6px 0 10px;padding:10px 14px;border-radius:10px 16px 4px 16px;background:var(--ink);color:var(--paper)}
 .think{align-self:flex-end;flex-direction:row-reverse;margin:6px 0 10px}
@@ -324,6 +324,7 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .trace .td,.trace .tm,.trace .tsum{color:var(--muted-on-ink)}
 .trace .tsum{padding:0}
 .trace .tsum u{color:var(--paper)}
+.trace .pick{min-height:36px;padding:0 14px;margin-top:10px;font-size:14px} /* retry: the size of the draft buttons, not the 44px dialog button */
 /* the cat in CatOrder's pills; .on = at work */
 .cat{position:relative;flex:none;display:inline-block;width:22px;height:22px;margin-right:12px;vertical-align:-6px}
 .cat img{display:block;width:100%;height:100%;border-radius:24%;background:var(--paper)}
@@ -343,10 +344,10 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .panel-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .panel h2{margin:0;font-size:20px;line-height:1.1}
 .pill{padding:2px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600;line-height:1.5}
-.pill.confirmed,.pill.ready{background:var(--eye)}
-.pill.check{background:var(--ink);color:var(--paper)}
+.pill.confirmed,.pill.ready{background:var(--eye);border-color:transparent} /* a filled pill has no outline */
+.pill.check{background:var(--ink);color:var(--paper);border-color:transparent}
 .deliver{margin:0 0 6px;font-size:14px;color:var(--muted)}
-.none{margin:16px 0;font-size:16px;color:var(--muted)}
+.none{margin:16px 0;font-size:14px;color:var(--muted)} /* the panel's text size: 16px read bigger than the order lines */
 .panel .list{grid-template-columns:minmax(36px,max-content) minmax(0,1fr) auto;margin-top:6px}
 .panel .row{grid-template-columns:minmax(36px,max-content) minmax(0,1fr) auto;margin:0 -10px 3px;padding:4px 10px}
 @supports (grid-template-columns:subgrid){.panel .row{grid-template-columns:subgrid}}
@@ -407,10 +408,10 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .xmenu{width:min(320px,calc(100vw - 32px));padding:20px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
 .xmenu::backdrop{background:rgba(15,23,25,.45)}
 .xmenu p{margin:0 0 12px;font-size:15px;font-weight:600}
-.xmenu .pick{display:flex;width:100%;margin-top:8px;border:1px solid var(--line)}
+.xmenu .pick{display:flex;width:100%;margin-top:8px;border:1px solid var(--line);box-shadow:none} /* the base .pick hairline would double the border */
 .xmenu .pick.quiet{border-color:transparent;color:var(--muted)}
 /* voice transcript under the waveform; streams in word by word the first time it shows */
-.msg .tx{margin-top:8px;padding-top:8px;border-top:1px solid color-mix(in srgb,var(--ink) 14%,var(--paper));font-size:13px;line-height:1.45}
+.msg .tx{margin-top:8px;padding-top:8px;border-top:1px solid color-mix(in srgb,var(--ink) 14%,var(--paper));font-size:13px;line-height:1.4}
 .msg .tx.wait{color:var(--muted)}
 .sw{animation:sw .38s cubic-bezier(.2,.7,.2,1) both}
 @keyframes sw{from{opacity:0;filter:blur(5px)}to{opacity:1;filter:none}}
@@ -429,10 +430,10 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .conv-h{background:var(--paper)}
 .conv-h h1{font-weight:600;letter-spacing:-.02em}
 .day{background:none;font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:11px}
-.msg .bub{border:1px solid var(--line);background:var(--paper);box-shadow:0 1px 2px rgba(15,23,25,.04)}
+.msg .bub{border:1px solid var(--line);background:var(--paper);box-shadow:0 1px 2px rgba(15,23,25,.05)}
 .msg.out .bub{border-color:var(--ink)}
 .msg.out.draft .bub{border:1px dashed var(--line-strong)}
-.msg .bl{font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-size:11px}
+.msg .bl{font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-size:11px}
 .pick{font-weight:500;box-shadow:inset 0 0 0 1px var(--line)}
 .xmenu{box-shadow:0 12px 32px rgba(15,23,25,.18)}
 :focus-visible{outline:2px solid var(--ink);outline-offset:2px}
@@ -450,16 +451,16 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 .tk-t{display:flex;flex-direction:column;min-width:0}
 .tk-t b{font-size:14px;font-weight:600}
 .tk-t span{color:var(--muted);font-variant-numeric:tabular-nums}
-.tk-st{align-self:stretch;display:grid;place-items:center;min-width:92px;padding-left:16px;border-left:1.5px dashed var(--line);white-space:nowrap;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--tk);text-align:center}
+.tk-st{align-self:stretch;display:grid;place-items:center;min-width:92px;padding-left:16px;border-left:1px dashed var(--line);white-space:nowrap;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--tk);text-align:center}
 .ticket.confirmed{--tk:#3F7A12;--tk-bg:color-mix(in srgb,var(--eye) 14%,var(--paper));border-color:color-mix(in srgb,var(--eye) 70%,var(--line))}
 .ticket.confirmed .tk-ic{background:var(--eye);color:var(--ink)}
 .ticket.check{--tk:var(--ink)}
 .ticket.draft{border-style:dashed}
-.ticket.draft .tk-ic{background:none;color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line-strong)}
+.ticket.draft .tk-ic{background:none;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line-strong)}
 /* the hook: from the bubble's foot into the ticket's side; the ticket's mask would clip it, so it hangs off the message (or the group) behind the bubbles */
 .msg:has(> .ticket){position:relative}
 .msg > .ticket{margin-top:2px}
-.msg:has(> .ticket)::before,.og::before{content:"";position:absolute;left:12px;width:14px;border:1.5px solid var(--line-strong);border-top:0;border-right:0;border-bottom-left-radius:10px;pointer-events:none}
+.msg:has(> .ticket)::before,.og::before{content:"";position:absolute;left:12px;width:14px;border:1px solid var(--line-strong);border-top:0;border-right:0;border-bottom-left-radius:10px;pointer-events:none}
 .msg:has(> .ticket)::before{bottom:48px;height:40px}
 .og{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
 .og::before{top:28px;bottom:48px}
@@ -480,11 +481,11 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 /* suggestions from the forecast model: quiet rows under the order, the green eye marks where to look */
 .sugs{margin:14px 0 0;padding-top:10px;border-top:1px solid var(--line)}
 .sugs-h{margin:0 0 4px;font-size:13px;color:var(--muted)}
-.sugrow{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:15px}
+.sugrow{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:14px;text-wrap:pretty} /* the size of the order lines above it; pretty keeps "1 l" together at the new width */
 .sugrow .what{flex:1;display:flex;align-items:center;gap:8px;min-width:0}
 .sugrow .eye{width:10px;height:10px}
-.sug-add{font:inherit;font-size:14px;padding:3px 12px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);color:var(--ink);cursor:pointer}
-.sug-add:hover{background:#A0E249}
+.sug-add{font:inherit;font-size:14px;font-weight:500;min-height:32px;padding:0 12px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);cursor:pointer} /* the same button as the unknown-number list, 32px */
+.sug-add:hover{background:var(--wash);border-color:var(--ink)}
 .sug-x{font:inherit;font-size:18px;line-height:1;padding:2px 8px;border:0;background:none;color:var(--muted);cursor:pointer}
 .sug-x:hover{color:var(--ink)}
 
@@ -527,6 +528,8 @@ a.num:hover,a.num:focus-visible{transform:translateY(-3px);box-shadow:0 6px 0 va
 @media (min-width:701px){.clr{top:9px}.conv-h h1{padding-right:104px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
 /* phone: the small text links of a chat get a 44px hit area without moving anything (the .vm-b idiom) */
 @media (max-width:700px){.bk,.dtl,.route,.tsum{position:relative}.bk::after,.dtl::after,.route::after,.tsum::after{content:"";position:absolute;inset:-12px -6px}.clr::after{content:"";position:absolute;inset:-8px -6px}}
+/* phone: the band's side roads and a suggestion's Add and × get 44px hit areas too; the × reaches left only as far as the 8px gap, so the pair never overlap (Add's -7px/-1px: insets count from its padding box, inside the 1px border) */
+@media (max-width:700px){.alt,.sug-add,.sug-x{position:relative}.alt::after{content:"";position:absolute;inset:-6px 0}.sug-add::after{content:"";position:absolute;inset:-7px -1px}.sug-x::after{content:"";position:absolute;inset:-11px -8px}}
 
 /* ── Reference pages (Customers, Orders, Catalog): page frame, toolbar, data table ── */
 main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,3.5vw,64px) 48px;font-size:15px}
@@ -543,7 +546,7 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
 .bar .sync{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
 .bar .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--eye);box-shadow:0 0 0 3px color-mix(in srgb,var(--eye) 30%,transparent)}
 .bar .dot.off{background:#D9534F;box-shadow:0 0 0 3px color-mix(in srgb,#D9534F 25%,transparent)}
-.bar button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:124px;min-height:36px;padding:0 14px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:600;cursor:pointer} /* min-width: "Syncing…" is wider than "Sync now" and must not move the state text */
+.bar button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:124px;min-height:36px;padding:0 14px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer} /* min-width: "Syncing…" is wider than "Sync now" and must not move the state text */
 .bar button:hover{background:var(--wash)}
 .bar button:disabled{cursor:default;color:var(--muted)}
 .bar button svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -652,6 +655,7 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
 @media (min-width:701px){.shell{grid-column:2}}
 .chats{flex:none;width:300px;box-sizing:border-box;display:flex;flex-direction:column;gap:10px;position:sticky;top:0;height:100vh;height:100dvh;padding:14px 10px 10px;border-right:1px solid var(--line);font-size:14px}
 .sfind{flex:none;width:100%;box-sizing:border-box;min-height:36px;padding:0 12px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px}
+@media (max-width:700px){.sfind{font-size:16px}} /* iOS zooms the page into a focused field smaller than 16px; after .sfind so it wins */
 .sfind::placeholder{color:var(--muted)}
 .chats .inbox{position:static;flex:1;min-height:0;margin:0 -6px;padding:8px 6px 6px;max-height:none;border:0;border-radius:0;background:none;scrollbar-width:thin}
 .irow.quiet .who{font-weight:400;color:var(--muted)}
@@ -662,14 +666,14 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
 .panel>.bk{margin-bottom:10px}
 .blank{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:40px 24px;text-align:center;color:var(--muted)}
 .blank p{margin:0}
-.blank h2{margin:10px 0 0;font-size:22px;line-height:1.1;color:var(--ink)}
-.blank .av{display:grid;place-items:center;width:56px;height:56px;border:1.5px solid var(--line-strong);border-radius:10px;font-size:18px;font-weight:600;color:var(--muted)}
+.blank h2{margin:10px 0 0;font-size:20px;line-height:1.1;color:var(--ink)} /* the chat title's size: it sat above this heading at 20px */
+.blank .av{display:grid;place-items:center;width:56px;height:56px;border:1px solid var(--line-strong);border-radius:10px;font-size:18px;font-weight:600;color:var(--muted)}
 .blank .num2{font-size:16px;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
 .card dl{margin:4px 0 18px}
 .card .kv{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .card dt{color:var(--muted)}
 .card dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-nums}
-.card .sub{margin:0 0 6px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.card .sub{margin:0 0 6px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .card .lo{margin:0 0 12px;padding:0;list-style:none}
 .card .lo li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
 .card .lo li span:last-child{color:var(--muted)}
@@ -683,6 +687,8 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
   .msgs{flex:1;min-height:0;max-height:none}
   #screen{padding-bottom:0;min-height:0}
   .panel{height:100%;overflow-y:auto;padding:12px 20px 24px;border-top:0;border-left:1px solid var(--line)} /* 12px: "Order" sits on the chat title's baseline */
+  .panel-h{min-height:27px} /* the status pill makes it 27px: without one (the customer card) the title sat 2px high */
+  .panel .erp th,.panel .erp td{padding:4px 5px} /* the panel is 300px wide from here up: the recap fits it as it does on a phone, no clipped Total */
 }
 @media (max-width:1000px){
   .chats{flex:1;width:auto;position:static;height:auto;min-height:100vh;min-height:100dvh;border-right:0}
@@ -749,7 +755,7 @@ main.ref{align-self:stretch;width:100%;max-width:1280px;padding:28px clamp(24px,
   .band .in{gap:10px}
   .band .ctl{order:1;flex:1 1 100%;min-width:0;flex-wrap:wrap}
   .band .alts{order:2;flex-basis:100%;margin:-4px 0 0 -12px}
-  .ctl>.pick,.band .ctl>.pick:not(.sug,.xmenu *){flex:1 1 100%;min-height:44px}
+  .ctl>.pick,.band .ctl>.pick:not(.sug,.xmenu *),.band .results.inline>.pick:not(.sug),.band .ctl>span>.pick{flex:1 1 100%;min-height:44px} /* the last two: buttons inside display:contents wrappers (Find the product, Export) that ".ctl>" never matched */
   .band .pick.sug{flex-basis:100%;max-width:none;min-height:48px}
   .results{flex-wrap:wrap}
   .field{font-size:16px}
@@ -763,12 +769,11 @@ button.photo{padding:0;border:0;background:none;cursor:zoom-in}
 
 /* the actions of a draft that the black band is not asking about: write it again (icon), send */
 .msg.out .rbar{display:flex;align-items:center;gap:8px;margin:2px 0 0}
-.rb{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:0 14px;border:1px solid var(--line-strong);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:background-color .15s,border-color .15s,transform .15s cubic-bezier(.16,1,.3,1),opacity .15s}
+.rb{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:0 14px;border:1px solid var(--line-strong);border-radius:8px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:background-color .15s,border-color .15s,transform .15s cubic-bezier(.16,1,.3,1),opacity .15s}
 .rb svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .rb .ic{display:grid;overflow:hidden}
 .rb:hover:not(:disabled){border-color:var(--ink)}
 .rb:active:not(:disabled){transform:scale(.96)}
-.rb:focus-visible{outline:0;box-shadow:var(--ring)}
 .rb:disabled{cursor:default;opacity:.5}
 .rb.re{width:36px;padding:0}
 .rb.re:hover:not(:disabled) svg{transform:rotate(-90deg)}
